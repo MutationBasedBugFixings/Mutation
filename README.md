@@ -1,79 +1,34 @@
----
+# Mutation-Based Bug Fixing Experiments
 
-# **README.md**
+This repository contains a small, self-contained toolkit for running
+**mutation-based experiments on Defects4J projects** and analysing the
+resulting patches.
 
-# Mutation-Based Bug Fixing & Bug Injection
+The workflow is:
 
-*A Unified Experimental Infrastructure for Defects4J Mutation Analysis*
+1. Export **developer patches** (buggy vs fixed diffs).
+2. Run **MAJOR + PIT** mutation analysis on Defects4J bugs.
+3. Summarise mutation results per project / per bug.
+4. Analyse **plausible mutants per operator**.
+5. (Optional) Evaluate generated patches vs developer patches.
 
-This repository contains the full experimental pipeline used in the paper:
-
-
-It provides **fully automated tools** to:
-
-* run **MAJOR** and **PIT** mutation engines on **Defects4J** projects
-* extract **developer patches** (diffs)
-* compute **operator–patch mappings**
-* aggregate **mutation results (per-bug and per-project)**
-* perform **APR patch extraction & summarization**
-* compute **plausible vs correct mutant patches**
-* support **RQ1–RQ4** of the paper with reproducible data
-
-The infrastructure has been tested on **15 Defects4J projects**, **771 bugs**, and produced over **700K mutants**.
+All functionality lives in the `scripts/` directory.
 
 ---
 
-# 🧩 **1. Repository Structure**
+## 1. Environment & Dependencies
 
-```
-Mutation/
-│
-├── scripts/
-│   ├── run_one_project_both.py          # MAJOR + PIT execution
-│   ├── export_dev_patches_all.py        # export developer patches (diffs)
-│   ├── scan_mutation_logs.py            # summary of mutants (project/bug)
-│   ├── operator_usage_parser.py         # compute operator-level plausible usage
-│   ├── apr_scan_combined.py             # combine APR + mutation summaries
-│   └── utils/                           # shared helpers
-│
-├── logs/                                # mutation engine outputs
-│   ├── Lang-1/
-│   │   ├── mutants.log
-│   │   ├── kill.csv
-│   │   ├── major_summary.csv
-│   │   └── pit_summary.csv
-│   └── ...
-│
-├── results/
-│   ├── mutation_summary_by_project.csv
-│   ├── mutation_summary_by_bug.csv
-│   ├── apr_summary_by_project.csv
-│   ├── supervisor_table.csv
-│   └── dev_patches/
-│       ├── Lang/Lang-1.diff
-│       └── ...
-│
-├── d4j_work/ / d4j_work_mockito/        # temporary checkouts
-└── README.md
-```
+### Requirements
 
----
+- Linux (tested on Ubuntu-like systems)
+- Python ≥ 3.8
+- Java 8 (for MAJOR compilation)
+- Java 11 (for Defects4J CLI and PIT runtime)
+- [Defects4J](https://github.com/rjust/defects4j) installed and working
 
-# ⚙️ **2. Environment Setup**
+### Environment variables
 
-### **Requirements**
-
-* Ubuntu 20.04 / 22.04 (recommended)
-* Python ≥ 3.8
-* Java 8 (for MAJOR compiler)
-* Java 11 (for Defects4J + PIT)
-* Defects4J ≥ 2.0.0
-* MAJOR (included in D4J mutation wrapper)
-* Maven + Ant available on PATH
-
-### **Environment Variables**
-
-Set these in your `~/.bashrc` or `env_java.sh`:
+Set these before running the scripts (adapt paths to your machine):
 
 ```bash
 export D4J_HOME=/home1/yourname/tools_and_libs/defects4j
@@ -81,251 +36,238 @@ export EXPERIMENT_ROOT=/home1/yourname/my_mutation_experiments
 
 export JAVA11_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export JAVA8_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-export MAJOR_JAVA_HOME=$JAVA8_HOME
-```
+export MAJOR_JAVA_HOME="$JAVA8_HOME"
+````
 
-Confirm environment:
+Check that Defects4J works:
 
 ```bash
-java -version
 $D4J_HOME/framework/bin/defects4j info -p Lang -b 1
 ```
 
 ---
 
-# 🚀 **3. Running Mutations (MAJOR + PIT)**
+## 2. Scripts Overview
 
-The main pipeline script is:
+All scripts live in `scripts/`:
 
-```
-scripts/run_one_project_both_final.py
-```
+* **`run_one_project_both_final.py`**
+  Runs **MAJOR** and **PIT** for a given Defects4J project (and set of bugs)
+  on the **fixed** revision, with support for parallelism and memory tuning.
+  Produces `mutants.log`, `kill.csv` and per-bug summary CSVs.
 
-### **Run on a single project**
+* **`export_dev_patches.py`**
+  Exports **developer patches** as unified diffs (`diff -ruN`) between
+  buggy and fixed revisions for each bug.
+
+* **`summarize_mutation_by_project.py`**
+  Scans the mutation logs and builds **CSV summaries**:
+
+  * per-project mutation statistics
+  * per-bug mutation statistics
+
+* **`compute_patches.py`**
+  Reads `kill.csv` and `mutants.log` for each bug and computes:
+
+  * number of mutants
+  * number of *plausible* mutants (status = `LIVE`)
+  * aggregate per-project counts
+  * per-operator plausible usage counts
+
+* **`evaluate_patches.py`**
+  Helper script for further analysis/evaluation of patches
+  (for example, comparing generated patches against developer patches).
+  Run with `-h` to see its current options.
+
+---
+
+## 3. Typical Workflow
+
+### Step 1 – Export developer patches
+
+This uses Defects4J checkouts (buggy vs fixed) and writes `.diff` files.
 
 ```bash
-python3 scripts/run_one_project_both_final.py Lang --jobs 4 --threads 8 --forks 2 --jvm-xmx 8g
+cd scripts
+
+# List available Defects4J projects detected under $D4J_HOME/framework/projects
+python3 export_dev_patches.py --list
+
+# Export all diffs for one or more projects
+python3 export_dev_patches.py Lang
+python3 export_dev_patches.py Lang Mockito --force  # overwrite existing diffs
 ```
 
-### **Run on a specific bug**
+Output (example):
 
-```bash
-python3 scripts/run_one_project_both_final.py Lang 2 --threads 6 --forks 2
-```
-
-### **Run on selected bugs**
-
-```bash
-python3 scripts/run_one_project_both_final.py Lang --bugs 1,5,9,12
-```
-
-### **Features**
-
-* Automatic JDK switching
-* JDK8 compilation for MAJOR
-* JDK11 runtime for PIT
-* Skips bugs already processed
-* Parallel bug execution (`--jobs`)
-* Multi-threaded PIT execution (`--threads`, `--forks`)
-* Writes:
-
-  * `mutants.log`
-  * `kill.csv`
-  * `major_summary.csv`
-  * `pit_summary.csv`
-
-All results saved under:
-
-```
-logs/<Project>-<Bug>/
+```text
+$EXPERIMENT_ROOT/results/dev_patches/Lang/Lang-1.diff
+$EXPERIMENT_ROOT/results/dev_patches/Lang/Lang-2.diff
+...
 ```
 
 ---
 
-# 📝 **4. Exporting Developer Patches (Diffs)**
+### Step 2 – Run MAJOR + PIT on a project
 
-Script:
-
-```
-scripts/export_dev_patches_all.py
-```
-
-### **List available projects**
+This script checks out the **fixed** revision of each bug, compiles it,
+and then runs both mutation engines.
 
 ```bash
-python3 scripts/export_dev_patches_all.py --list
+cd scripts
+
+# Run on all bugs of a project
+python3 run_one_project_both_final.py Lang --jobs 4 --threads 8 --forks 2 --jvm-xmx 8g
+
+# Run on a single bug
+python3 run_one_project_both_final.py Lang 2 --threads 6 --forks 2
+
+# Run on a selected subset of bugs
+python3 run_one_project_both_final.py Lang --bugs 1,5,9,12
 ```
 
-### **Export diffs for a project**
+Key options (from the script):
 
-```bash
-python3 scripts/export_dev_patches_all.py Lang
-```
+* `project` (positional) – Defects4J project name (e.g., `Lang`, `Math`)
+* `bug_id` (optional positional) – single bug id
+* `--list-bugs` – print all active Defects4J bug IDs for that project
+* `--bugs` – comma-separated list of bug IDs
+* `--jobs` – number of bugs to run in parallel (process-level)
+* `--threads` – PIT worker threads
+* `--forks` – PIT fork count
+* `--jvm-xmx` – heap size for Java processes (e.g., `8g`)
 
-Diffs stored in:
+Outputs for each bug go under:
 
-```
-results/dev_patches/<Project>/<Project>-<Bug>.diff
+```text
+$EXPERIMENT_ROOT/logs/<Project>-<Bug>/
+  ├── mutants.log
+  ├── kill.csv
+  ├── major_summary.csv
+  └── pit_summary.csv
 ```
 
 ---
 
-# 📊 **5. Summarizing Mutation Results**
+### Step 3 – Summarise mutation results
 
-Script:
-
-```
-scripts/summarize_mutation_by_project.py
-```
-
-### **Compute per-project and per-bug summaries**
+Once the mutation runs have completed, summarise across bugs/projects:
 
 ```bash
-python3 scripts/run_one_project_both_final.py logs/
+cd scripts
+
+# Basic usage: log root typically $EXPERIMENT_ROOT/logs
+python3 summarize_mutation_by_project.py $EXPERIMENT_ROOT/logs --outdir $EXPERIMENT_ROOT/results
 ```
 
-Outputs written to:
+This writes CSVs such as:
 
-```
-results/mutation_summary_by_project.csv
-results/mutation_summary_by_bug.csv
-```
+* `mutation_summary_by_project.csv`
+* `mutation_summary_by_bug.csv`
 
-Each row includes:
+containing, for each engine:
 
-* mutants_total
-* killed
-* survived
-* kill_rate
-* engine (MAJOR or PIT)
+* project, bug
+* total mutants
+* killed, survived
+* kill rate
 
 ---
 
-# 🧪 **6. Operator-Level Plausible Patch Statistics**
+### Step 4 – Compute plausible mutants per operator
 
-Script:
-
-```
-scripts/operator_usage_parser.py
-```
-
-### **Compute operator-level usage (RQ4)**
+This script looks at `kill.csv` (`LIVE` status) and `mutants.log`
+(operator encoded per mutant ID).
 
 ```bash
-python3 scripts/operator_usage_parser.py --logs-root logs/
+cd scripts
+
+# Process a single logs root
+python3 compute_patches.py --logs-root $EXPERIMENT_ROOT/logs
+
+# Or process all logs_* directories under the current folder
+python3 compute_patches.py --all-projects
 ```
 
-Outputs:
+Outputs (per project) under `results/<Project>/`, for example:
 
-```
-results/<Project>/operator_usage.csv
-```
+* `per_bug_summary.csv` – mutants & plausible counts per bug
+* `per_project_summary.csv` – aggregated per-project numbers
+* `operator_usage.csv` – **operator → plausible mutant count**
 
-This file maps:
-
-```
-Operator → Count of plausible (LIVE) mutants
-```
-
-Used in the paper’s RQ4 analysis.
+These files were used for the operator-level RQ analysis in the paper.
 
 ---
 
-Used for combining:
+### Step 5 – Evaluate patches (optional / custom analysis)
 
-* mutation stats
-* APR generated patches
-* plausible/correct APR patches
+The `evaluate_patches.py` script is meant for follow-up analysis, e.g.:
 
-### Example:
+* comparing generated patches with developer patches
+* filtering by plausibility / correctness
+* exporting additional tables for the paper
+
+Run:
 
 ```bash
-python3 scripts/apr_scan_combined.py logs/ --apr-root apr_results/ --gen-pattern "*.patch"
+cd scripts
+python3 evaluate_patches.py -h
 ```
 
-Outputs:
-
-```
-mutation_table.csv
-apr_summary_by_project.csv
-```
-
-Used to compare APR vs mutation-based patch generation.
+to see the available options in your current version.
 
 ---
 
-# 📦 **8. Reproducing Experiments (TOSEM Artifact Guide)**
+## 4. Reproducing the Paper’s Main Numbers (High-Level)
 
-To fully reproduce the paper:
-
-### **Step 1 — Prepare environment**
-
-Install JDK8, JDK11, Defects4J, Ant, Maven.
-
-### **Step 2 — Run mutation pipeline**
-
-```bash
-python3 scripts/run_one_project_both.py <Project> --jobs 4
-```
-
-### **Step 3 — Export developer diffs**
-
-```bash
-python3 scripts/export_dev_patches_all.py <Project>
-```
-
-### **Step 4 — Generate mutation summaries**
-
-```bash
-python3 scripts/evaluate_patches.py logs/
-```
-
-### **Step 5 — Operator-level analysis**
-
-```bash
-python3 scripts/summarize_mutation_by_projects.py --logs-root logs/
-```
-
-### **Step 6 — APR + mutation merge**
-
-```bash
-python3 scripts/compute_patches.py logs/ --apr-root apr/
-```
-
-### **Step 7 — Use CSVs for RQ1–RQ4**
-
-* mutation_summary_by_project.csv
-* mutation_summary_by_bug.csv
-* operator_usage.csv
-* dev_patches/*.diff
-* mutant_table.csv
+1. Configure Java + Defects4J and set environment variables.
+2. Export developer diffs:
+   `python3 export_dev_patches.py <Project>`
+3. Run mutation analysis:
+   `python3 run_one_project_both_final.py <Project> --jobs N`
+4. Summarise mutation results:
+   `python3 summarize_mutation_by_project.py $EXPERIMENT_ROOT/logs`
+5. Compute plausible mutants and operator usage:
+   `python3 compute_patches.py --logs-root $EXPERIMENT_ROOT/logs`
+6. (Optional) Use `evaluate_patches.py` to replicate specific tables/figures.
 
 ---
 
-# 🧪 **9. Tested Projects (Defects4J v2.0.x)**
-
-| Project         | Bugs |
-| --------------- | ---- |
-| Cli             | 39   |
-| Closure         | 174  |
-| Codec           | 18   |
-| Collections     | 28   |
-| Compress        | 47   |
-| Csv             | 7    |
-| Gson            | 18   |
-| JacksonCore     | 26   |
-| JacksonDatabind | 112  |
-| JacksonXml      | 6    |
-| JxPath          | 22   |
-| Jsoup           | 93   |
-| Lang            | 65   |
-| Math            | 106  |
-| Time            | 27   |
-
-
-Total: **771 bugs**
-
-
-
-
+🧩 5. Repository Structure
+Mutation/
+│
+├── scripts/
+│   ├── run_one_project_both_final.py     # Run MAJOR + PIT mutation analysis
+│   ├── export_dev_patches.py             # Export developer patches (diffs)
+│   ├── summarize_mutation_by_project.py  # Summaries of mutation results
+│   ├── compute_patches.py                # Operator-level plausible usage & per-bug stats
+│   ├── evaluate_patches.py               # Optional: evaluate or compare patches
+│   └── README.md                          # (This file)
+│
+├── logs/                                  # Mutation engine outputs (created automatically)
+│   ├── Lang-1/
+│   │   ├── mutants.log
+│   │   ├── kill.csv
+│   │   ├── major_summary.csv
+│   │   └── pit_summary.csv
+│   └── <Project>-<Bug>/ ...
+│
+├── results/                               # Aggregated experiment results
+│   ├── mutation_summary_by_project.csv
+│   ├── mutation_summary_by_bug.csv
+│   ├── <Project>/                         # Per-project summaries
+│   │   ├── per_bug_summary.csv
+│   │   ├── per_project_summary.csv
+│   │   └── operator_usage.csv
+│   └── dev_patches/
+│       ├── Lang/Lang-1.diff
+│       ├── Lang/Lang-2.diff
+│       └── ...
+│
+├── d4j_work/                              # Temporary Defects4J checkout dirs
+│   ├── Lang-1-fixed/
+│   ├── Lang-1-buggy/
+│   └── ...
+│
+└── (optional) d4j_work_diff/              # Used by export_dev_patches.py
 
