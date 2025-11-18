@@ -234,6 +234,7 @@ to see the available options in your current version.
 ---
 
 🧩 5. Repository Structure
+```
 Mutation/
 │
 ├── scripts/
@@ -270,4 +271,4 @@ Mutation/
 │   └── ...
 │
 └── (optional) d4j_work_diff/              # Used by export_dev_patches.py
-
+```
