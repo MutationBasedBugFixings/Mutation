@@ -1,0 +1,104 @@
+1:LVR:FALSE:TRUE:org.apache.commons.cli.PosixParser@init():51:1590:false |==> true
+2:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.PosixParser@init():51:1577:eatTheRest = false; |==> <NO-OP>
+3:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@init():52:1605:tokens.clear(); |==> <NO-OP>
+4:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.PosixParser@init():53:1629:currentOption = null; |==> <NO-OP>
+5:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):97:3924:init(); |==> <NO-OP>
+6:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):98:3940:this.options = options; |==> <NO-OP>
+7:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):111:4342:token.startsWith("--") |==> false
+8:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):111:4342:token.startsWith("--") |==> true
+9:LVR:NEG:0:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):113:4406:-1 |==> 0
+10:LVR:NEG:POS:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):113:4406:-1 |==> 1
+11:ROR:!=(int,int):<(int,int):org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):113:4384:token.indexOf('=') != -1 |==> token.indexOf('=') < -1
+12:ROR:!=(int,int):TRUE(int,int):org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):113:4403:token.indexOf('=') != -1 |==> true
+13:LVR:0:POS:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):115:4475:0 |==> 1
+14:LVR:0:NEG:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):115:4475:0 |==> -1
+15:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):115:4448:tokens.add(token.substring(0, token.indexOf('='))); |==> <NO-OP>
+16:LVR:POS:0:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):116:4568:1 |==> 0
+17:LVR:POS:NEG:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):116:4568:1 |==> -1
+18:AOR:+(int,int):%(int,int):org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):116:4547:token.indexOf('=') + 1 |==> token.indexOf('=') % 1
+19:AOR:+(int,int):*(int,int):org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):116:4547:token.indexOf('=') + 1 |==> token.indexOf('=') * 1
+20:AOR:+(int,int):-(int,int):org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):116:4547:token.indexOf('=') + 1 |==> token.indexOf('=') - 1
+21:AOR:+(int,int):/(int,int):org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):116:4547:token.indexOf('=') + 1 |==> token.indexOf('=') / 1
+22:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):116:4520:tokens.add(token.substring(token.indexOf('=') + 1, token.length())); |==> <NO-OP>
+23:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):121:4714:tokens.add(token); |==> <NO-OP>
+24:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):126:4826:"-".equals(token) |==> false
+25:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):126:4826:"-".equals(token) |==> true
+26:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):128:4865:processSingleHyphen(token); |==> <NO-OP>
+27:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):130:4944:token.startsWith("-") |==> false
+28:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):130:4944:token.startsWith("-") |==> true
+29:LVR:POS:0:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):134:5051:2 |==> 0
+30:LVR:POS:NEG:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):134:5051:2 |==> -2
+31:ROR:==(int,int):<=(int,int):org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):134:5036:tokenLength == 2 |==> tokenLength <= 2
+32:ROR:==(int,int):>=(int,int):org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):134:5036:tokenLength == 2 |==> tokenLength >= 2
+33:ROR:==(int,int):FALSE(int,int):org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):134:5048:tokenLength == 2 |==> false
+34:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):136:5092:processOptionToken(token, stopAtNonOption); |==> <NO-OP>
+35:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):138:5196:options.hasOption(token) |==> false
+36:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):138:5196:options.hasOption(token) |==> true
+37:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):139:5224:tokens.add(token); |==> <NO-OP>
+38:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):144:5357:burstToken(token, stopAtNonOption); |==> <NO-OP>
+39:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):149:5476:stopAtNonOption |==> false
+40:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):149:5476:stopAtNonOption |==> true
+41:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):151:5531:process(token); |==> <NO-OP>
+42:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):155:5624:tokens.add(token); |==> <NO-OP>
+43:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@flatten(org.apache.commons.cli.Options,java.lang.String[],boolean):159:5688:gobble(iter); |==> <NO-OP>
+44:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.cli.PosixParser@gobble(java.util.Iterator):172:5988:eatTheRest |==> false
+45:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.cli.PosixParser@gobble(java.util.Iterator):172:5988:eatTheRest |==> true
+46:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@gobble(java.util.Iterator):176:6075:tokens.add(iter.next()); |==> <NO-OP>
+47:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.cli.PosixParser@process(java.lang.String):196:6824:currentOption != null |==> true
+48:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.cli.PosixParser@process(java.lang.String):196:6809:(currentOption != null) && currentOption.hasArg() |==> (currentOption != null) == currentOption.hasArg()
+49:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.cli.PosixParser@process(java.lang.String):196:6833:(currentOption != null) && currentOption.hasArg() |==> false
+50:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.PosixParser@process(java.lang.String):196:6809:(currentOption != null) && currentOption.hasArg() |==> (currentOption != null)
+51:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.PosixParser@process(java.lang.String):196:6836:(currentOption != null) && currentOption.hasArg() |==> currentOption.hasArg()
+52:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.PosixParser@process(java.lang.String):198:6906:currentOption.hasArg() |==> false
+53:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.PosixParser@process(java.lang.String):198:6906:currentOption.hasArg() |==> true
+54:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@process(java.lang.String):200:6940:tokens.add(value); |==> <NO-OP>
+55:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.PosixParser@process(java.lang.String):201:6975:currentOption = null; |==> <NO-OP>
+56:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.PosixParser@process(java.lang.String):203:7053:currentOption.hasArgs() |==> false
+57:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.PosixParser@process(java.lang.String):203:7053:currentOption.hasArgs() |==> true
+58:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@process(java.lang.String):205:7087:tokens.add(value); |==> <NO-OP>
+59:LVR:TRUE:FALSE:org.apache.commons.cli.PosixParser@process(java.lang.String):210:7178:true |==> false
+60:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.PosixParser@process(java.lang.String):210:7165:eatTheRest = true; |==> <NO-OP>
+61:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@process(java.lang.String):211:7196:tokens.add("--"); |==> <NO-OP>
+62:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@process(java.lang.String):212:7226:tokens.add(value); |==> <NO-OP>
+63:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@processSingleHyphen(java.lang.String):224:7487:tokens.add(hyphen); |==> <NO-OP>
+64:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.PosixParser@processOptionToken(java.lang.String,boolean):241:8151:this.options.hasOption(token) |==> false
+65:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.PosixParser@processOptionToken(java.lang.String,boolean):241:8151:this.options.hasOption(token) |==> true
+66:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.PosixParser@processOptionToken(java.lang.String,boolean):243:8182:currentOption = this.options.getOption(token); |==> <NO-OP>
+67:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@processOptionToken(java.lang.String,boolean):244:8241:tokens.add(token); |==> <NO-OP>
+68:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.cli.PosixParser@processOptionToken(java.lang.String,boolean):246:8287:stopAtNonOption |==> false
+69:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.cli.PosixParser@processOptionToken(java.lang.String,boolean):246:8287:stopAtNonOption |==> true
+70:LVR:TRUE:FALSE:org.apache.commons.cli.PosixParser@processOptionToken(java.lang.String,boolean):248:8339:true |==> false
+71:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.PosixParser@processOptionToken(java.lang.String,boolean):248:8326:eatTheRest = true; |==> <NO-OP>
+72:LVR:POS:0:org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):282:9808:1 |==> 0
+73:LVR:POS:NEG:org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):282:9808:1 |==> -1
+74:ROR:<(int,int):!=(int,int):org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):282:9811:i < tokenLength |==> i != tokenLength
+75:ROR:<(int,int):<=(int,int):org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):282:9811:i < tokenLength |==> i <= tokenLength
+76:ROR:<(int,int):FALSE(int,int):org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):282:9813:i < tokenLength |==> false
+77:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):287:9972:hasOption |==> false
+78:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):287:9972:hasOption |==> true
+79:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):289:10013:tokens.add("-" + ch); |==> <NO-OP>
+80:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):290:10051:currentOption = options.getOption(ch); |==> <NO-OP>
+81:LVR:POS:0:org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):292:10161:1 |==> 0
+82:LVR:POS:NEG:org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):292:10161:1 |==> -1
+83:AOR:+(int,int):%(int,int):org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):292:10157:i + 1 |==> i % 1
+84:AOR:+(int,int):*(int,int):org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):292:10157:i + 1 |==> i * 1
+85:AOR:+(int,int):-(int,int):org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):292:10157:i + 1 |==> i - 1
+86:AOR:+(int,int):/(int,int):org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):292:10157:i + 1 |==> i / 1
+87:ROR:!=(int,int):<(int,int):org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):292:10138:token.length() != (i + 1) |==> token.length() < (i + 1)
+88:ROR:!=(int,int):>(int,int):org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):292:10138:token.length() != (i + 1) |==> token.length() > (i + 1)
+89:ROR:!=(int,int):TRUE(int,int):org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):292:10153:token.length() != (i + 1) |==> true
+90:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):292:10111:currentOption.hasArg() && (token.length() != (i + 1)) |==> currentOption.hasArg() == (token.length() != (i + 1))
+91:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):292:10134:currentOption.hasArg() && (token.length() != (i + 1)) |==> false
+92:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):292:10111:currentOption.hasArg() && (token.length() != (i + 1)) |==> currentOption.hasArg()
+93:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):292:10137:currentOption.hasArg() && (token.length() != (i + 1)) |==> (token.length() != (i + 1))
+94:LVR:POS:0:org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):294:10235:1 |==> 0
+95:LVR:POS:NEG:org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):294:10235:1 |==> -1
+96:AOR:+(int,int):%(int,int):org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):294:10231:i + 1 |==> i % 1
+97:AOR:+(int,int):*(int,int):org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):294:10231:i + 1 |==> i * 1
+98:AOR:+(int,int):-(int,int):org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):294:10231:i + 1 |==> i - 1
+99:AOR:+(int,int):/(int,int):org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):294:10231:i + 1 |==> i / 1
+100:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):294:10204:tokens.add(token.substring(i + 1)); |==> <NO-OP>
+101:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):299:10321:stopAtNonOption |==> false
+102:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):299:10321:stopAtNonOption |==> true
+103:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):301:10368:process(token.substring(i)); |==> <NO-OP>
+104:STD:<CALL>:<NO-OP>:org.apache.commons.cli.PosixParser@burstToken(java.lang.String,boolean):305:10458:tokens.add("-" + ch); |==> <NO-OP>

@@ -1,0 +1,60 @@
+1:STD:<CALL>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@addOption(org.apache.commons.cli2.Option):66:2600:options.add(option); |==> <NO-OP>
+2:STD:<CALL>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@addOption(org.apache.commons.cli2.Option):67:2629:nameToOption.put(option.getPreferredName(), option); |==> <NO-OP>
+3:STD:<CALL>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@addOption(org.apache.commons.cli2.Option):70:2770:nameToOption.put(i.next(), option); |==> <NO-OP>
+4:STD:<CALL>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@addValue(org.apache.commons.cli2.Option,java.lang.Object):77:2970:addOption(option); |==> <NO-OP>
+5:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@addValue(org.apache.commons.cli2.Option,java.lang.Object):82:3075:valueList == null |==> false
+6:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@addValue(org.apache.commons.cli2.Option,java.lang.Object):83:3098:valueList = new ArrayList(); |==> <NO-OP>
+7:STD:<CALL>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@addValue(org.apache.commons.cli2.Option,java.lang.Object):84:3139:values.put(option, valueList); |==> <NO-OP>
+8:STD:<CALL>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@addValue(org.apache.commons.cli2.Option,java.lang.Object):87:3189:valueList.add(value); |==> <NO-OP>
+9:STD:<CALL>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@addSwitch(org.apache.commons.cli2.Option,boolean):92:3322:addOption(option); |==> <NO-OP>
+10:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@addSwitch(org.apache.commons.cli2.Option,boolean):94:3374:switches.containsKey(option) |==> false
+11:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@addSwitch(org.apache.commons.cli2.Option,boolean):94:3374:switches.containsKey(option) |==> true
+12:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@addSwitch(org.apache.commons.cli2.Option,boolean):97:3566:value |==> false
+13:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@addSwitch(org.apache.commons.cli2.Option,boolean):97:3566:value |==> true
+14:STD:<CALL>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@addSwitch(org.apache.commons.cli2.Option,boolean):97:3545:switches.put(option, value ? Boolean.TRUE : Boolean.FALSE); |==> <NO-OP>
+15:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@getValues(org.apache.commons.cli2.Option,java.util.List):117:4126:valueList == null |==> false
+16:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@getValues(org.apache.commons.cli2.Option,java.util.List):117:4115:(valueList == null) || valueList.isEmpty() |==> (valueList == null) != valueList.isEmpty()
+17:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@getValues(org.apache.commons.cli2.Option,java.util.List):117:4115:(valueList == null) || valueList.isEmpty() |==> (valueList == null)
+18:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@getValues(org.apache.commons.cli2.Option,java.util.List):117:4138:(valueList == null) || valueList.isEmpty() |==> valueList.isEmpty()
+19:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@getValues(org.apache.commons.cli2.Option,java.util.List):117:4135:(valueList == null) || valueList.isEmpty() |==> true
+20:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@getValues(org.apache.commons.cli2.Option,java.util.List):118:4173:valueList = defaultValues; |==> <NO-OP>
+21:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@getValues(org.apache.commons.cli2.Option,java.util.List):122:4286:valueList == null |==> false
+22:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@getValues(org.apache.commons.cli2.Option,java.util.List):122:4275:(valueList == null) || valueList.isEmpty() |==> (valueList == null) != valueList.isEmpty()
+23:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@getValues(org.apache.commons.cli2.Option,java.util.List):122:4275:(valueList == null) || valueList.isEmpty() |==> (valueList == null)
+24:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@getValues(org.apache.commons.cli2.Option,java.util.List):122:4298:(valueList == null) || valueList.isEmpty() |==> valueList.isEmpty()
+25:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@getValues(org.apache.commons.cli2.Option,java.util.List):122:4295:(valueList == null) || valueList.isEmpty() |==> true
+26:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@getValues(org.apache.commons.cli2.Option,java.util.List):123:4333:valueList = (List)this.defaultValues.get(option); |==> <NO-OP>
+27:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@getValues(org.apache.commons.cli2.Option,java.util.List):129:4578:valueList == null |==> false
+28:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@getUndefaultedValues(org.apache.commons.cli2.Option):137:4835:valueList == null |==> false
+29:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@getUndefaultedValues(org.apache.commons.cli2.Option):138:4854:valueList = Collections.EMPTY_LIST; |==> <NO-OP>
+30:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@getSwitch(org.apache.commons.cli2.Option,java.lang.Boolean):150:5218:bool == null |==> false
+31:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@getSwitch(org.apache.commons.cli2.Option,java.lang.Boolean):151:5241:bool = defaultValue; |==> <NO-OP>
+32:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@getSwitch(org.apache.commons.cli2.Option,java.lang.Boolean):155:5341:bool == null |==> false
+33:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@getSwitch(org.apache.commons.cli2.Option,java.lang.Boolean):156:5364:bool = (Boolean)this.defaultSwitches.get(option); |==> <NO-OP>
+34:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@addProperty(org.apache.commons.cli2.Option,java.lang.String,java.lang.String):170:5826:properties == null |==> false
+35:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@addProperty(org.apache.commons.cli2.Option,java.lang.String,java.lang.String):171:5849:properties = new Properties(); |==> <NO-OP>
+36:STD:<CALL>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@addProperty(org.apache.commons.cli2.Option,java.lang.String,java.lang.String):172:5892:optionToProperties.put(option, properties); |==> <NO-OP>
+37:STD:<CALL>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@addProperty(org.apache.commons.cli2.Option,java.lang.String,java.lang.String):174:5954:properties.setProperty(property, value); |==> <NO-OP>
+38:STD:<CALL>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@addProperty(java.lang.String,java.lang.String):178:6083:addProperty(new PropertyOption(), property, value); |==> <NO-OP>
+39:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@getProperty(org.apache.commons.cli2.Option,java.lang.String,java.lang.String):185:6405:properties == null |==> false
+40:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@getProperties(org.apache.commons.cli2.Option):193:6681:properties == null |==> false
+41:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@looksLikeOption(java.lang.String):207:7124:trigger.startsWith(prefix) |==> false
+42:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@looksLikeOption(java.lang.String):207:7124:trigger.startsWith(prefix) |==> true
+43:LVR:TRUE:FALSE:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@looksLikeOption(java.lang.String):208:7159:true |==> false
+44:LVR:FALSE:TRUE:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@looksLikeOption(java.lang.String):212:7205:false |==> true
+45:LVR:0:POS:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@toString():222:7501:0 |==> 1
+46:LVR:0:NEG:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@toString():222:7501:0 |==> -1
+47:ROR:>=(int,int):==(int,int):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@toString():222:7481:arg.indexOf(' ') >= 0 |==> arg.indexOf(' ') == 0
+48:ROR:>=(int,int):>(int,int):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@toString():222:7481:arg.indexOf(' ') >= 0 |==> arg.indexOf(' ') > 0
+49:ROR:>=(int,int):TRUE(int,int):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@toString():222:7498:arg.indexOf(' ') >= 0 |==> true
+50:STD:<CALL>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@toString():223:7522:buffer.append("\"").append(arg).append("\""); |==> <NO-OP>
+51:STD:<CALL>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@toString():225:7605:buffer.append(arg); |==> <NO-OP>
+52:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@toString():228:7665:i.hasNext() |==> false
+53:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@toString():228:7665:i.hasNext() |==> true
+54:STD:<CALL>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@toString():229:7687:buffer.append(' '); |==> <NO-OP>
+55:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@setDefaultValues(org.apache.commons.cli2.Option,java.util.List):246:8107:defaults == null |==> false
+56:STD:<CALL>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@setDefaultValues(org.apache.commons.cli2.Option,java.util.List):247:8130:defaultValues.remove(option); |==> <NO-OP>
+57:STD:<CALL>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@setDefaultValues(org.apache.commons.cli2.Option,java.util.List):249:8189:defaultValues.put(option, defaults); |==> <NO-OP>
+58:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.cli2.commandline.WriteableCommandLineImpl@setDefaultSwitch(org.apache.commons.cli2.Option,java.lang.Boolean):255:8387:defaultSwitch == null |==> false
+59:STD:<CALL>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@setDefaultSwitch(org.apache.commons.cli2.Option,java.lang.Boolean):256:8410:defaultSwitches.remove(option); |==> <NO-OP>
+60:STD:<CALL>:<NO-OP>:org.apache.commons.cli2.commandline.WriteableCommandLineImpl@setDefaultSwitch(org.apache.commons.cli2.Option,java.lang.Boolean):258:8471:defaultSwitches.put(option, defaultSwitch); |==> <NO-OP>
