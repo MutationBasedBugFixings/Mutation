@@ -1,0 +1,22 @@
+1:STD:<CALL>:<NO-OP>:org.apache.commons.cli.OptionGroup@addOption(org.apache.commons.cli.Option):55:1759:optionMap.put(option.getKey(), option); |==> <NO-OP>
+2:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.cli.OptionGroup@setSelected(org.apache.commons.cli.Option):88:2630:option == null |==> false
+3:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.OptionGroup@setSelected(org.apache.commons.cli.Option):91:2713:selected = null; |==> <NO-OP>
+4:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.cli.OptionGroup@setSelected(org.apache.commons.cli.Option):98:2940:selected == null |==> false
+5:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.cli.OptionGroup@setSelected(org.apache.commons.cli.Option):98:2931:selected == null || selected.equals(option.getOpt()) |==> selected == null != selected.equals(option.getOpt())
+6:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.OptionGroup@setSelected(org.apache.commons.cli.Option):98:2931:selected == null || selected.equals(option.getOpt()) |==> selected == null
+7:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.OptionGroup@setSelected(org.apache.commons.cli.Option):98:2951:selected == null || selected.equals(option.getOpt()) |==> selected.equals(option.getOpt())
+8:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.cli.OptionGroup@setSelected(org.apache.commons.cli.Option):98:2948:selected == null || selected.equals(option.getOpt()) |==> true
+9:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.OptionGroup@setSelected(org.apache.commons.cli.Option):100:3007:selected = option.getOpt(); |==> <NO-OP>
+10:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.OptionGroup@setRequired(boolean):121:3408:this.required = required; |==> <NO-OP>
+11:STD:<CALL>:<NO-OP>:org.apache.commons.cli.OptionGroup@toString():145:3927:buff.append("["); |==> <NO-OP>
+12:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.cli.OptionGroup@toString():151:4070:option.getOpt() != null |==> true
+13:STD:<CALL>:<NO-OP>:org.apache.commons.cli.OptionGroup@toString():153:4109:buff.append("-"); |==> <NO-OP>
+14:STD:<CALL>:<NO-OP>:org.apache.commons.cli.OptionGroup@toString():154:4143:buff.append(option.getOpt()); |==> <NO-OP>
+15:STD:<CALL>:<NO-OP>:org.apache.commons.cli.OptionGroup@toString():158:4234:buff.append("--"); |==> <NO-OP>
+16:STD:<CALL>:<NO-OP>:org.apache.commons.cli.OptionGroup@toString():159:4269:buff.append(option.getLongOpt()); |==> <NO-OP>
+17:STD:<CALL>:<NO-OP>:org.apache.commons.cli.OptionGroup@toString():162:4330:buff.append(" "); |==> <NO-OP>
+18:STD:<CALL>:<NO-OP>:org.apache.commons.cli.OptionGroup@toString():163:4360:buff.append(option.getDescription()); |==> <NO-OP>
+19:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.OptionGroup@toString():165:4427:iter.hasNext() |==> false
+20:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.OptionGroup@toString():165:4427:iter.hasNext() |==> true
+21:STD:<CALL>:<NO-OP>:org.apache.commons.cli.OptionGroup@toString():167:4461:buff.append(", "); |==> <NO-OP>
+22:STD:<CALL>:<NO-OP>:org.apache.commons.cli.OptionGroup@toString():171:4513:buff.append("]"); |==> <NO-OP>

@@ -1,0 +1,466 @@
+1:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.Parser@setOptions(org.apache.commons.cli.Options):48:1611:this.options = options; |==> <NO-OP>
+2:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.Parser@setOptions(org.apache.commons.cli.Options):49:1643:this.requiredOptions = new ArrayList(options.getRequiredOptions()); |==> <NO-OP>
+3:LVR:FALSE:TRUE:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[]):86:2933:false |==> true
+4:LVR:FALSE:TRUE:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties):103:3600:false |==> true
+5:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):150:5554:opt.clearValues(); |==> <NO-OP>
+6:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):157:5793:group.setSelected(null); |==> <NO-OP>
+7:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):161:5875:setOptions(options); |==> <NO-OP>
+8:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):163:5905:cmd = new CommandLine(); |==> <NO-OP>
+9:LVR:FALSE:TRUE:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):165:5960:false |==> true
+10:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):167:5990:arguments == null |==> false
+11:LVR:0:POS:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):169:6044:0 |==> 1
+12:LVR:0:NEG:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):169:6044:0 |==> -1
+13:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):169:6021:arguments = new String[0]; |==> <NO-OP>
+14:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):182:6416:"--".equals(t) |==> false
+15:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):182:6416:"--".equals(t) |==> true
+16:LVR:TRUE:FALSE:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):184:6464:true |==> false
+17:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):184:6451:eatTheRest = true; |==> <NO-OP>
+18:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):188:6558:"-".equals(t) |==> false
+19:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):188:6558:"-".equals(t) |==> true
+20:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):190:6597:stopAtNonOption |==> false
+21:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):190:6597:stopAtNonOption |==> true
+22:LVR:TRUE:FALSE:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):192:6665:true |==> false
+23:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):192:6652:eatTheRest = true; |==> <NO-OP>
+24:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):196:6748:cmd.addArg(t); |==> <NO-OP>
+25:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):201:6867:t.startsWith("-") |==> false
+26:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):201:6867:t.startsWith("-") |==> true
+27:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):203:6908:stopAtNonOption && !getOptions().hasOption(t) |==> stopAtNonOption == !getOptions().hasOption(t)
+28:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):203:6924:stopAtNonOption && !getOptions().hasOption(t) |==> false
+29:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):203:6908:stopAtNonOption && !getOptions().hasOption(t) |==> stopAtNonOption
+30:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):203:6927:stopAtNonOption && !getOptions().hasOption(t) |==> !getOptions().hasOption(t)
+31:LVR:TRUE:FALSE:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):205:7006:true |==> false
+32:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):205:6993:eatTheRest = true; |==> <NO-OP>
+33:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):206:7032:cmd.addArg(t); |==> <NO-OP>
+34:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):210:7124:processOption(t, iterator); |==> <NO-OP>
+35:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):217:7272:cmd.addArg(t); |==> <NO-OP>
+36:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):219:7308:stopAtNonOption |==> false
+37:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):219:7308:stopAtNonOption |==> true
+38:LVR:TRUE:FALSE:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):221:7376:true |==> false
+39:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):221:7363:eatTheRest = true; |==> <NO-OP>
+40:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):226:7471:eatTheRest |==> false
+41:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):226:7471:eatTheRest |==> true
+42:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):233:7714:"--".equals(str) |==> false
+43:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):233:7714:"--".equals(str) |==> true
+44:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):235:7767:cmd.addArg(str); |==> <NO-OP>
+45:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):241:7857:processProperties(properties); |==> <NO-OP>
+46:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Parser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):242:7896:checkRequiredOptions(); |==> <NO-OP>
+47:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.cli.Parser@processProperties(java.util.Properties):254:8224:properties == null |==> false
+48:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.Parser@processProperties(java.util.Properties):263:8462:cmd.hasOption(option) |==> false
+49:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.Parser@processProperties(java.util.Properties):263:8462:cmd.hasOption(option) |==> true
+50:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.Parser@processProperties(java.util.Properties):272:8833:opt.hasArg() |==> false
+51:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.Parser@processProperties(java.util.Properties):272:8833:opt.hasArg() |==> true
+52:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.cli.Parser@processProperties(java.util.Properties):274:8895:opt.getValues() == null |==> false
+53:LVR:0:POS:org.apache.commons.cli.Parser@processProperties(java.util.Properties):274:8932:0 |==> 1
+54:LVR:0:NEG:org.apache.commons.cli.Parser@processProperties(java.util.Properties):274:8932:0 |==> -1
+55:ROR:==(int,int):<=(int,int):org.apache.commons.cli.Parser@processProperties(java.util.Properties):274:8906:opt.getValues().length == 0 |==> opt.getValues().length <= 0
+56:ROR:==(int,int):>=(int,int):org.apache.commons.cli.Parser@processProperties(java.util.Properties):274:8906:opt.getValues().length == 0 |==> opt.getValues().length >= 0
+57:ROR:==(int,int):FALSE(int,int):org.apache.commons.cli.Parser@processProperties(java.util.Properties):274:8929:opt.getValues().length == 0 |==> false
+58:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.cli.Parser@processProperties(java.util.Properties):274:8879:opt.getValues() == null || opt.getValues().length == 0 |==> opt.getValues() == null != (opt.getValues().length == 0)
+59:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.Parser@processProperties(java.util.Properties):274:8879:opt.getValues() == null || opt.getValues().length == 0 |==> opt.getValues() == null
+60:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.Parser@processProperties(java.util.Properties):274:8906:opt.getValues() == null || opt.getValues().length == 0 |==> opt.getValues().length == 0
+61:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.cli.Parser@processProperties(java.util.Properties):274:8903:opt.getValues() == null || opt.getValues().length == 0 |==> true
+62:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Parser@processProperties(java.util.Properties):278:9039:opt.addValueForProcessing(value); |==> <NO-OP>
+63:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.cli.Parser@processProperties(java.util.Properties):286:9350:"yes".equalsIgnoreCase(value) || "true".equalsIgnoreCase(value) |==> "yes".equalsIgnoreCase(value) != "true".equalsIgnoreCase(value)
+64:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.Parser@processProperties(java.util.Properties):286:9350:"yes".equalsIgnoreCase(value) || "true".equalsIgnoreCase(value) |==> "yes".equalsIgnoreCase(value)
+65:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.Parser@processProperties(java.util.Properties):287:9407:"yes".equalsIgnoreCase(value) || "true".equalsIgnoreCase(value) |==> "true".equalsIgnoreCase(value)
+66:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.cli.Parser@processProperties(java.util.Properties):287:9404:"yes".equalsIgnoreCase(value) || "true".equalsIgnoreCase(value) |==> true
+67:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.cli.Parser@processProperties(java.util.Properties):286:9350:"yes".equalsIgnoreCase(value) || "true".equalsIgnoreCase(value) || "1".equalsIgnoreCase(value) |==> ("yes".equalsIgnoreCase(value) || "true".equalsIgnoreCase(value)) != "1".equalsIgnoreCase(value)
+68:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.Parser@processProperties(java.util.Properties):286:9350:"yes".equalsIgnoreCase(value) || "true".equalsIgnoreCase(value) || "1".equalsIgnoreCase(value) |==> "yes".equalsIgnoreCase(value) || "true".equalsIgnoreCase(value)
+69:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.Parser@processProperties(java.util.Properties):288:9465:"yes".equalsIgnoreCase(value) || "true".equalsIgnoreCase(value) || "1".equalsIgnoreCase(value) |==> "1".equalsIgnoreCase(value)
+70:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.cli.Parser@processProperties(java.util.Properties):288:9462:"yes".equalsIgnoreCase(value) || "true".equalsIgnoreCase(value) || "1".equalsIgnoreCase(value) |==> true
+71:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Parser@processProperties(java.util.Properties):295:9704:cmd.addOption(opt); |==> <NO-OP>
+72:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Parser@processProperties(java.util.Properties):296:9740:updateRequiredOptions(opt); |==> <NO-OP>
+73:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.Parser@checkRequiredOptions():311:10207:getRequiredOptions().isEmpty() |==> false
+74:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.Parser@checkRequiredOptions():311:10207:getRequiredOptions().isEmpty() |==> true
+75:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.cli.Parser@processArgs(org.apache.commons.cli.Option,java.util.ListIterator):337:11002:getOptions().hasOption(str) && str.startsWith("-") |==> getOptions().hasOption(str) == str.startsWith("-")
+76:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.cli.Parser@processArgs(org.apache.commons.cli.Option,java.util.ListIterator):337:11030:getOptions().hasOption(str) && str.startsWith("-") |==> false
+77:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.Parser@processArgs(org.apache.commons.cli.Option,java.util.ListIterator):337:11002:getOptions().hasOption(str) && str.startsWith("-") |==> getOptions().hasOption(str)
+78:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.Parser@processArgs(org.apache.commons.cli.Option,java.util.ListIterator):337:11033:getOptions().hasOption(str) && str.startsWith("-") |==> str.startsWith("-")
+79:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Parser@processArgs(org.apache.commons.cli.Option,java.util.ListIterator):339:11084:iter.previous(); |==> <NO-OP>
+80:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Parser@processArgs(org.apache.commons.cli.Option,java.util.ListIterator):346:11214:opt.addValueForProcessing(Util.stripLeadingAndTrailingQuotes(str)); |==> <NO-OP>
+81:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Parser@processArgs(org.apache.commons.cli.Option,java.util.ListIterator):350:11367:iter.previous(); |==> <NO-OP>
+82:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.cli.Parser@processArgs(org.apache.commons.cli.Option,java.util.ListIterator):355:11460:opt.getValues() == null |==> false
+83:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.cli.Parser@processArgs(org.apache.commons.cli.Option,java.util.ListIterator):355:11444:opt.getValues() == null && !opt.hasOptionalArg() |==> opt.getValues() == null == !opt.hasOptionalArg()
+84:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.cli.Parser@processArgs(org.apache.commons.cli.Option,java.util.ListIterator):355:11468:opt.getValues() == null && !opt.hasOptionalArg() |==> false
+85:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.Parser@processArgs(org.apache.commons.cli.Option,java.util.ListIterator):355:11444:opt.getValues() == null && !opt.hasOptionalArg() |==> opt.getValues() == null
+86:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.Parser@processArgs(org.apache.commons.cli.Option,java.util.ListIterator):355:11471:opt.getValues() == null && !opt.hasOptionalArg() |==> !opt.hasOptionalArg()
+87:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.cli.Parser@processOption(java.lang.String,java.util.ListIterator):375:12185:hasOption |==> false
+88:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.cli.Parser@processOption(java.lang.String,java.util.ListIterator):375:12185:hasOption |==> true
+89:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Parser@processOption(java.lang.String,java.util.ListIterator):384:12483:updateRequiredOptions(opt); |==> <NO-OP>
+90:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.Parser@processOption(java.lang.String,java.util.ListIterator):387:12591:opt.hasArg() |==> false
+91:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.Parser@processOption(java.lang.String,java.util.ListIterator):387:12591:opt.hasArg() |==> true
+92:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Parser@processOption(java.lang.String,java.util.ListIterator):389:12617:processArgs(opt, iter); |==> <NO-OP>
+93:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Parser@processOption(java.lang.String,java.util.ListIterator):393:12714:cmd.addOption(opt); |==> <NO-OP>
+94:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.Parser@updateRequiredOptions(org.apache.commons.cli.Option):405:13068:opt.isRequired() |==> false
+95:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.Parser@updateRequiredOptions(org.apache.commons.cli.Option):405:13068:opt.isRequired() |==> true
+96:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Parser@updateRequiredOptions(org.apache.commons.cli.Option):407:13094:getRequiredOptions().remove(opt.getKey()); |==> <NO-OP>
+97:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.cli.Parser@updateRequiredOptions(org.apache.commons.cli.Option):412:13300:getOptions().getOptionGroup(opt) != null |==> true
+98:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.Parser@updateRequiredOptions(org.apache.commons.cli.Option):416:13418:group.isRequired() |==> false
+99:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.Parser@updateRequiredOptions(org.apache.commons.cli.Option):416:13418:group.isRequired() |==> true
+100:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Parser@updateRequiredOptions(org.apache.commons.cli.Option):418:13452:getRequiredOptions().remove(group); |==> <NO-OP>
+101:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Parser@updateRequiredOptions(org.apache.commons.cli.Option):421:13515:group.setSelected(opt); |==> <NO-OP>
+102:LVR:FALSE:TRUE:org.apache.commons.cli.DefaultParser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties):75:2650:false |==> true
+103:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.DefaultParser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):100:3733:this.options = options; |==> <NO-OP>
+104:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.DefaultParser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):101:3765:this.stopAtNonOption = stopAtNonOption; |==> <NO-OP>
+105:LVR:FALSE:TRUE:org.apache.commons.cli.DefaultParser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):102:3827:false |==> true
+106:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.DefaultParser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):102:3813:skipParsing = false; |==> <NO-OP>
+107:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.DefaultParser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):103:3842:currentOption = null; |==> <NO-OP>
+108:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.DefaultParser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):104:3872:expectedOpts = new ArrayList(options.getRequiredOptions()); |==> <NO-OP>
+109:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):110:4142:group.setSelected(null); |==> <NO-OP>
+110:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.DefaultParser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):113:4194:cmd = new CommandLine(); |==> <NO-OP>
+111:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.cli.DefaultParser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):115:4242:arguments != null |==> true
+112:LVR:0:POS:org.apache.commons.cli.DefaultParser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):117:4286:0 |==> 1
+113:LVR:0:NEG:org.apache.commons.cli.DefaultParser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):117:4286:0 |==> -1
+114:ROR:<(int,int):<=(int,int):org.apache.commons.cli.DefaultParser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):117:4289:i < arguments.length |==> i <= arguments.length
+115:ROR:<(int,int):FALSE(int,int):org.apache.commons.cli.DefaultParser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):117:4291:i < arguments.length |==> false
+116:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):119:4346:handleToken(arguments[i]); |==> <NO-OP>
+117:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):124:4464:checkRequiredArgs(); |==> <NO-OP>
+118:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):127:4537:handleProperties(properties); |==> <NO-OP>
+119:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@parse(org.apache.commons.cli.Options,java.lang.String[],java.util.Properties,boolean):129:4584:checkRequiredOptions(); |==> <NO-OP>
+120:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):141:4917:properties == null |==> false
+121:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):150:5163:cmd.hasOption(option) |==> false
+122:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):150:5163:cmd.hasOption(option) |==> true
+123:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):159:5536:opt.hasArg() |==> false
+124:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):159:5536:opt.hasArg() |==> true
+125:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):161:5598:opt.getValues() == null |==> false
+126:LVR:0:POS:org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):161:5635:0 |==> 1
+127:LVR:0:NEG:org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):161:5635:0 |==> -1
+128:ROR:==(int,int):<=(int,int):org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):161:5609:opt.getValues().length == 0 |==> opt.getValues().length <= 0
+129:ROR:==(int,int):>=(int,int):org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):161:5609:opt.getValues().length == 0 |==> opt.getValues().length >= 0
+130:ROR:==(int,int):FALSE(int,int):org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):161:5632:opt.getValues().length == 0 |==> false
+131:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):161:5582:opt.getValues() == null || opt.getValues().length == 0 |==> opt.getValues() == null != (opt.getValues().length == 0)
+132:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):161:5582:opt.getValues() == null || opt.getValues().length == 0 |==> opt.getValues() == null
+133:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):161:5609:opt.getValues() == null || opt.getValues().length == 0 |==> opt.getValues().length == 0
+134:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):161:5606:opt.getValues() == null || opt.getValues().length == 0 |==> true
+135:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):163:5684:opt.addValueForProcessing(value); |==> <NO-OP>
+136:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):166:5785:"yes".equalsIgnoreCase(value) || "true".equalsIgnoreCase(value) |==> "yes".equalsIgnoreCase(value) != "true".equalsIgnoreCase(value)
+137:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):166:5785:"yes".equalsIgnoreCase(value) || "true".equalsIgnoreCase(value) |==> "yes".equalsIgnoreCase(value)
+138:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):167:5842:"yes".equalsIgnoreCase(value) || "true".equalsIgnoreCase(value) |==> "true".equalsIgnoreCase(value)
+139:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):167:5839:"yes".equalsIgnoreCase(value) || "true".equalsIgnoreCase(value) |==> true
+140:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):166:5785:"yes".equalsIgnoreCase(value) || "true".equalsIgnoreCase(value) || "1".equalsIgnoreCase(value) |==> ("yes".equalsIgnoreCase(value) || "true".equalsIgnoreCase(value)) != "1".equalsIgnoreCase(value)
+141:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):166:5785:"yes".equalsIgnoreCase(value) || "true".equalsIgnoreCase(value) || "1".equalsIgnoreCase(value) |==> "yes".equalsIgnoreCase(value) || "true".equalsIgnoreCase(value)
+142:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):168:5900:"yes".equalsIgnoreCase(value) || "true".equalsIgnoreCase(value) || "1".equalsIgnoreCase(value) |==> "1".equalsIgnoreCase(value)
+143:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):168:5897:"yes".equalsIgnoreCase(value) || "true".equalsIgnoreCase(value) || "1".equalsIgnoreCase(value) |==> true
+144:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):174:6132:handleOption(opt); |==> <NO-OP>
+145:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleProperties(java.util.Properties):175:6167:currentOption = null; |==> <NO-OP>
+146:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.DefaultParser@checkRequiredOptions():190:6625:expectedOpts.isEmpty() |==> false
+147:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.DefaultParser@checkRequiredOptions():190:6625:expectedOpts.isEmpty() |==> true
+148:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.cli.DefaultParser@checkRequiredArgs():202:6949:currentOption != null |==> true
+149:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.cli.DefaultParser@checkRequiredArgs():202:6935:currentOption != null && currentOption.requiresArg() |==> currentOption != null == currentOption.requiresArg()
+150:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.cli.DefaultParser@checkRequiredArgs():202:6957:currentOption != null && currentOption.requiresArg() |==> false
+151:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.DefaultParser@checkRequiredArgs():202:6935:currentOption != null && currentOption.requiresArg() |==> currentOption != null
+152:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.DefaultParser@checkRequiredArgs():202:6960:currentOption != null && currentOption.requiresArg() |==> currentOption.requiresArg()
+153:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):216:7303:currentToken = token; |==> <NO-OP>
+154:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):218:7346:skipParsing |==> false
+155:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):218:7346:skipParsing |==> true
+156:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):220:7381:cmd.addArg(token); |==> <NO-OP>
+157:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):222:7438:"--".equals(token) |==> false
+158:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):222:7438:"--".equals(token) |==> true
+159:LVR:TRUE:FALSE:org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):224:7483:true |==> false
+160:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):224:7469:skipParsing = true; |==> <NO-OP>
+161:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):226:7530:currentOption != null |==> true
+162:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):226:7516:currentOption != null && currentOption.acceptsArg() |==> currentOption != null == currentOption.acceptsArg()
+163:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):226:7538:currentOption != null && currentOption.acceptsArg() |==> false
+164:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):226:7516:currentOption != null && currentOption.acceptsArg() |==> currentOption != null
+165:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):226:7541:currentOption != null && currentOption.acceptsArg() |==> currentOption.acceptsArg()
+166:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):226:7516:currentOption != null && currentOption.acceptsArg() && isArgument(token) |==> (currentOption != null && currentOption.acceptsArg()) == isArgument(token)
+167:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):226:7568:currentOption != null && currentOption.acceptsArg() && isArgument(token) |==> false
+168:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):226:7516:currentOption != null && currentOption.acceptsArg() && isArgument(token) |==> currentOption != null && currentOption.acceptsArg()
+169:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):226:7571:currentOption != null && currentOption.acceptsArg() && isArgument(token) |==> isArgument(token)
+170:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):228:7612:currentOption.addValueForProcessing(Util.stripLeadingAndTrailingQuotes(token)); |==> <NO-OP>
+171:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):230:7735:token.startsWith("--") |==> false
+172:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):230:7735:token.startsWith("--") |==> true
+173:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):232:7765:handleLongOption(token); |==> <NO-OP>
+174:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):234:7817:token.startsWith("-") && !"-".equals(token) |==> token.startsWith("-") == !"-".equals(token)
+175:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):234:7839:token.startsWith("-") && !"-".equals(token) |==> false
+176:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):234:7817:token.startsWith("-") && !"-".equals(token) |==> token.startsWith("-")
+177:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):234:7842:token.startsWith("-") && !"-".equals(token) |==> !"-".equals(token)
+178:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):236:7884:handleShortAndLongOption(token); |==> <NO-OP>
+179:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):240:7962:handleUnknownToken(token); |==> <NO-OP>
+180:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):243:8034:currentOption != null |==> true
+181:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):243:8020:currentOption != null && !currentOption.acceptsArg() |==> currentOption != null == !currentOption.acceptsArg()
+182:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):243:8042:currentOption != null && !currentOption.acceptsArg() |==> false
+183:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):243:8020:currentOption != null && !currentOption.acceptsArg() |==> currentOption != null
+184:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):243:8045:currentOption != null && !currentOption.acceptsArg() |==> !currentOption.acceptsArg()
+185:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleToken(java.lang.String):245:8096:currentOption = null; |==> <NO-OP>
+186:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.cli.DefaultParser@isArgument(java.lang.String):256:8299:!isOption(token) || isNegativeNumber(token) |==> !isOption(token) != isNegativeNumber(token)
+187:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.DefaultParser@isArgument(java.lang.String):256:8299:!isOption(token) || isNegativeNumber(token) |==> !isOption(token)
+188:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.DefaultParser@isArgument(java.lang.String):256:8319:!isOption(token) || isNegativeNumber(token) |==> isNegativeNumber(token)
+189:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.cli.DefaultParser@isArgument(java.lang.String):256:8316:!isOption(token) || isNegativeNumber(token) |==> true
+190:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@isNegativeNumber(java.lang.String):268:8534:Double.parseDouble(token); |==> <NO-OP>
+191:LVR:TRUE:FALSE:org.apache.commons.cli.DefaultParser@isNegativeNumber(java.lang.String):269:8580:true |==> false
+192:LVR:FALSE:TRUE:org.apache.commons.cli.DefaultParser@isNegativeNumber(java.lang.String):273:8665:false |==> true
+193:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.cli.DefaultParser@isOption(java.lang.String):284:8845:isLongOption(token) || isShortOption(token) |==> isLongOption(token) != isShortOption(token)
+194:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.DefaultParser@isOption(java.lang.String):284:8845:isLongOption(token) || isShortOption(token) |==> isLongOption(token)
+195:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.DefaultParser@isOption(java.lang.String):284:8868:isLongOption(token) || isShortOption(token) |==> isShortOption(token)
+196:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.cli.DefaultParser@isOption(java.lang.String):284:8865:isLongOption(token) || isShortOption(token) |==> true
+197:LVR:POS:0:org.apache.commons.cli.DefaultParser@isShortOption(java.lang.String):295:9163:2 |==> 0
+198:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@isShortOption(java.lang.String):295:9163:2 |==> -2
+199:ROR:>=(int,int):==(int,int):org.apache.commons.cli.DefaultParser@isShortOption(java.lang.String):295:9145:token.length() >= 2 |==> token.length() == 2
+200:ROR:>=(int,int):>(int,int):org.apache.commons.cli.DefaultParser@isShortOption(java.lang.String):295:9145:token.length() >= 2 |==> token.length() > 2
+201:ROR:>=(int,int):TRUE(int,int):org.apache.commons.cli.DefaultParser@isShortOption(java.lang.String):295:9160:token.length() >= 2 |==> true
+202:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.cli.DefaultParser@isShortOption(java.lang.String):295:9120:token.startsWith("-") && token.length() >= 2 |==> token.startsWith("-") == token.length() >= 2
+203:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.cli.DefaultParser@isShortOption(java.lang.String):295:9142:token.startsWith("-") && token.length() >= 2 |==> false
+204:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.DefaultParser@isShortOption(java.lang.String):295:9120:token.startsWith("-") && token.length() >= 2 |==> token.startsWith("-")
+205:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.DefaultParser@isShortOption(java.lang.String):295:9145:token.startsWith("-") && token.length() >= 2 |==> token.length() >= 2
+206:LVR:POS:0:org.apache.commons.cli.DefaultParser@isShortOption(java.lang.String):295:9207:1 |==> 0
+207:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@isShortOption(java.lang.String):295:9207:1 |==> -1
+208:LVR:POS:0:org.apache.commons.cli.DefaultParser@isShortOption(java.lang.String):295:9210:2 |==> 0
+209:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@isShortOption(java.lang.String):295:9210:2 |==> -2
+210:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.cli.DefaultParser@isShortOption(java.lang.String):295:9120:token.startsWith("-") && token.length() >= 2 && options.hasShortOption(token.substring(1, 2)) |==> (token.startsWith("-") && token.length() >= 2) == options.hasShortOption(token.substring(1, 2))
+211:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.cli.DefaultParser@isShortOption(java.lang.String):295:9165:token.startsWith("-") && token.length() >= 2 && options.hasShortOption(token.substring(1, 2)) |==> false
+212:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.DefaultParser@isShortOption(java.lang.String):295:9120:token.startsWith("-") && token.length() >= 2 && options.hasShortOption(token.substring(1, 2)) |==> token.startsWith("-") && token.length() >= 2
+213:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.DefaultParser@isShortOption(java.lang.String):295:9168:token.startsWith("-") && token.length() >= 2 && options.hasShortOption(token.substring(1, 2)) |==> options.hasShortOption(token.substring(1, 2))
+214:LVR:POS:0:org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):305:9427:1 |==> 0
+215:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):305:9427:1 |==> -1
+216:ROR:==(int,int):<=(int,int):org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):305:9409:token.length() == 1 |==> token.length() <= 1
+217:ROR:==(int,int):>=(int,int):org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):305:9409:token.length() == 1 |==> token.length() >= 1
+218:ROR:==(int,int):FALSE(int,int):org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):305:9424:token.length() == 1 |==> false
+219:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):305:9383:!token.startsWith("-") || token.length() == 1 |==> !token.startsWith("-") != (token.length() == 1)
+220:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):305:9383:!token.startsWith("-") || token.length() == 1 |==> !token.startsWith("-")
+221:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):305:9409:!token.startsWith("-") || token.length() == 1 |==> token.length() == 1
+222:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):305:9406:!token.startsWith("-") || token.length() == 1 |==> true
+223:LVR:FALSE:TRUE:org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):307:9459:false |==> true
+224:LVR:NEG:0:org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):311:9541:-1 |==> 0
+225:LVR:NEG:POS:org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):311:9541:-1 |==> 1
+226:ROR:==(int,int):<=(int,int):org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):311:9534:pos == -1 |==> pos <= -1
+227:ROR:==(int,int):>=(int,int):org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):311:9534:pos == -1 |==> pos >= -1
+228:ROR:==(int,int):FALSE(int,int):org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):311:9538:pos == -1 |==> false
+229:LVR:0:POS:org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):311:9570:0 |==> 1
+230:LVR:0:NEG:org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):311:9570:0 |==> -1
+231:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):313:9638:options.getMatchingOptions(t).isEmpty() |==> false
+232:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):313:9638:options.getMatchingOptions(t).isEmpty() |==> true
+233:LVR:TRUE:FALSE:org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):316:9750:true |==> false
+234:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):318:9804:getLongPrefix(token) != null |==> true
+235:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):318:9783:getLongPrefix(token) != null && !token.startsWith("--") |==> getLongPrefix(token) != null == !token.startsWith("--")
+236:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):318:9812:getLongPrefix(token) != null && !token.startsWith("--") |==> false
+237:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):318:9783:getLongPrefix(token) != null && !token.startsWith("--") |==> getLongPrefix(token) != null
+238:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):318:9815:getLongPrefix(token) != null && !token.startsWith("--") |==> !token.startsWith("--")
+239:LVR:TRUE:FALSE:org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):321:9888:true |==> false
+240:LVR:FALSE:TRUE:org.apache.commons.cli.DefaultParser@isLongOption(java.lang.String):324:9920:false |==> true
+241:LVR:POS:0:org.apache.commons.cli.DefaultParser@handleUnknownToken(java.lang.String):338:10487:1 |==> 0
+242:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@handleUnknownToken(java.lang.String):338:10487:1 |==> -1
+243:ROR:>(int,int):!=(int,int):org.apache.commons.cli.DefaultParser@handleUnknownToken(java.lang.String):338:10470:token.length() > 1 |==> token.length() != 1
+244:ROR:>(int,int):>=(int,int):org.apache.commons.cli.DefaultParser@handleUnknownToken(java.lang.String):338:10470:token.length() > 1 |==> token.length() >= 1
+245:ROR:>(int,int):FALSE(int,int):org.apache.commons.cli.DefaultParser@handleUnknownToken(java.lang.String):338:10485:token.length() > 1 |==> false
+246:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.cli.DefaultParser@handleUnknownToken(java.lang.String):338:10445:token.startsWith("-") && token.length() > 1 |==> token.startsWith("-") == token.length() > 1
+247:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.cli.DefaultParser@handleUnknownToken(java.lang.String):338:10467:token.startsWith("-") && token.length() > 1 |==> false
+248:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleUnknownToken(java.lang.String):338:10445:token.startsWith("-") && token.length() > 1 |==> token.startsWith("-")
+249:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleUnknownToken(java.lang.String):338:10470:token.startsWith("-") && token.length() > 1 |==> token.length() > 1
+250:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.cli.DefaultParser@handleUnknownToken(java.lang.String):338:10445:token.startsWith("-") && token.length() > 1 && !stopAtNonOption |==> (token.startsWith("-") && token.length() > 1) == !stopAtNonOption
+251:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.cli.DefaultParser@handleUnknownToken(java.lang.String):338:10489:token.startsWith("-") && token.length() > 1 && !stopAtNonOption |==> false
+252:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleUnknownToken(java.lang.String):338:10445:token.startsWith("-") && token.length() > 1 && !stopAtNonOption |==> token.startsWith("-") && token.length() > 1
+253:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleUnknownToken(java.lang.String):338:10492:token.startsWith("-") && token.length() > 1 && !stopAtNonOption |==> !stopAtNonOption
+254:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleUnknownToken(java.lang.String):343:10638:cmd.addArg(token); |==> <NO-OP>
+255:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.cli.DefaultParser@handleUnknownToken(java.lang.String):344:10669:stopAtNonOption |==> false
+256:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.cli.DefaultParser@handleUnknownToken(java.lang.String):344:10669:stopAtNonOption |==> true
+257:LVR:TRUE:FALSE:org.apache.commons.cli.DefaultParser@handleUnknownToken(java.lang.String):346:10722:true |==> false
+258:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleUnknownToken(java.lang.String):346:10708:skipParsing = true; |==> <NO-OP>
+259:LVR:NEG:0:org.apache.commons.cli.DefaultParser@handleLongOption(java.lang.String):362:11025:-1 |==> 0
+260:LVR:NEG:POS:org.apache.commons.cli.DefaultParser@handleLongOption(java.lang.String):362:11025:-1 |==> 1
+261:ROR:==(int,int):>=(int,int):org.apache.commons.cli.DefaultParser@handleLongOption(java.lang.String):362:11003:token.indexOf('=') == -1 |==> token.indexOf('=') >= -1
+262:ROR:==(int,int):FALSE(int,int):org.apache.commons.cli.DefaultParser@handleLongOption(java.lang.String):362:11022:token.indexOf('=') == -1 |==> false
+263:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleLongOption(java.lang.String):364:11051:handleLongOptionWithoutEqual(token); |==> <NO-OP>
+264:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleLongOption(java.lang.String):368:11133:handleLongOptionWithEqual(token); |==> <NO-OP>
+265:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.DefaultParser@handleLongOptionWithoutEqual(java.lang.String):385:11566:matchingOpts.isEmpty() |==> false
+266:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.DefaultParser@handleLongOptionWithoutEqual(java.lang.String):385:11566:matchingOpts.isEmpty() |==> true
+267:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleLongOptionWithoutEqual(java.lang.String):387:11592:handleUnknownToken(currentToken); |==> <NO-OP>
+268:LVR:POS:0:org.apache.commons.cli.DefaultParser@handleLongOptionWithoutEqual(java.lang.String):389:11675:1 |==> 0
+269:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@handleLongOptionWithoutEqual(java.lang.String):389:11675:1 |==> -1
+270:ROR:>(int,int):!=(int,int):org.apache.commons.cli.DefaultParser@handleLongOptionWithoutEqual(java.lang.String):389:11653:matchingOpts.size() > 1 |==> matchingOpts.size() != 1
+271:ROR:>(int,int):>=(int,int):org.apache.commons.cli.DefaultParser@handleLongOptionWithoutEqual(java.lang.String):389:11653:matchingOpts.size() > 1 |==> matchingOpts.size() >= 1
+272:ROR:>(int,int):FALSE(int,int):org.apache.commons.cli.DefaultParser@handleLongOptionWithoutEqual(java.lang.String):389:11673:matchingOpts.size() > 1 |==> false
+273:LVR:0:POS:org.apache.commons.cli.DefaultParser@handleLongOptionWithoutEqual(java.lang.String):395:11859:0 |==> 1
+274:LVR:0:NEG:org.apache.commons.cli.DefaultParser@handleLongOptionWithoutEqual(java.lang.String):395:11859:0 |==> -1
+275:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleLongOptionWithoutEqual(java.lang.String):395:11802:handleOption(options.getOption((String)matchingOpts.get(0))); |==> <NO-OP>
+276:LVR:POS:0:org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):413:12223:1 |==> 0
+277:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):413:12223:1 |==> -1
+278:AOR:+(int,int):%(int,int):org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):413:12217:pos + 1 |==> pos % 1
+279:AOR:+(int,int):*(int,int):org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):413:12217:pos + 1 |==> pos * 1
+280:AOR:+(int,int):-(int,int):org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):413:12217:pos + 1 |==> pos - 1
+281:AOR:+(int,int):/(int,int):org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):413:12217:pos + 1 |==> pos / 1
+282:LVR:0:POS:org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):415:12273:0 |==> 1
+283:LVR:0:NEG:org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):415:12273:0 |==> -1
+284:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):418:12384:matchingOpts.isEmpty() |==> false
+285:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):418:12384:matchingOpts.isEmpty() |==> true
+286:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):420:12410:handleUnknownToken(currentToken); |==> <NO-OP>
+287:LVR:POS:0:org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):422:12493:1 |==> 0
+288:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):422:12493:1 |==> -1
+289:ROR:>(int,int):!=(int,int):org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):422:12471:matchingOpts.size() > 1 |==> matchingOpts.size() != 1
+290:ROR:>(int,int):>=(int,int):org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):422:12471:matchingOpts.size() > 1 |==> matchingOpts.size() >= 1
+291:ROR:>(int,int):FALSE(int,int):org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):422:12491:matchingOpts.size() > 1 |==> false
+292:LVR:0:POS:org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):428:12678:0 |==> 1
+293:LVR:0:NEG:org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):428:12678:0 |==> -1
+294:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):430:12729:option.acceptsArg() |==> false
+295:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):430:12729:option.acceptsArg() |==> true
+296:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):432:12763:handleOption(option); |==> <NO-OP>
+297:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):433:12801:currentOption.addValueForProcessing(value); |==> <NO-OP>
+298:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):434:12861:currentOption = null; |==> <NO-OP>
+299:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleLongOptionWithEqual(java.lang.String):438:12944:handleUnknownToken(currentToken); |==> <NO-OP>
+300:LVR:POS:0:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):468:13496:1 |==> 0
+301:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):468:13496:1 |==> -1
+302:ROR:==(int,int):<=(int,int):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):468:13482:t.length() == 1 |==> t.length() <= 1
+303:ROR:==(int,int):>=(int,int):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):468:13482:t.length() == 1 |==> t.length() >= 1
+304:ROR:==(int,int):FALSE(int,int):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):468:13493:t.length() == 1 |==> false
+305:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):471:13565:options.hasShortOption(t) |==> false
+306:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):471:13565:options.hasShortOption(t) |==> true
+307:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):473:13600:handleOption(options.getOption(t)); |==> <NO-OP>
+308:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):477:13697:handleUnknownToken(token); |==> <NO-OP>
+309:LVR:NEG:0:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):480:13772:-1 |==> 0
+310:LVR:NEG:POS:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):480:13772:-1 |==> 1
+311:ROR:==(int,int):<=(int,int):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):480:13765:pos == -1 |==> pos <= -1
+312:ROR:==(int,int):>=(int,int):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):480:13765:pos == -1 |==> pos >= -1
+313:ROR:==(int,int):FALSE(int,int):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):480:13769:pos == -1 |==> false
+314:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):482:13824:options.hasShortOption(t) |==> false
+315:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):482:13824:options.hasShortOption(t) |==> true
+316:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):484:13859:handleOption(options.getOption(t)); |==> <NO-OP>
+317:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):486:13968:options.getMatchingOptions(t).isEmpty() |==> false
+318:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):486:13968:options.getMatchingOptions(t).isEmpty() |==> true
+319:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):489:14030:handleLongOptionWithoutEqual(token); |==> <NO-OP>
+320:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):496:14253:opt != null |==> true
+321:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):496:14249:opt != null && options.getOption(opt).acceptsArg() |==> opt != null == options.getOption(opt).acceptsArg()
+322:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):496:14261:opt != null && options.getOption(opt).acceptsArg() |==> false
+323:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):496:14249:opt != null && options.getOption(opt).acceptsArg() |==> opt != null
+324:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):496:14264:opt != null && options.getOption(opt).acceptsArg() |==> options.getOption(opt).acceptsArg()
+325:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):498:14339:handleOption(options.getOption(opt)); |==> <NO-OP>
+326:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):499:14397:currentOption.addValueForProcessing(t.substring(opt.length())); |==> <NO-OP>
+327:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):500:14481:currentOption = null; |==> <NO-OP>
+328:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):502:14560:isJavaProperty(t) |==> false
+329:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):502:14560:isJavaProperty(t) |==> true
+330:LVR:0:POS:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):505:14683:0 |==> 1
+331:LVR:0:NEG:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):505:14683:0 |==> -1
+332:LVR:POS:0:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):505:14686:1 |==> 0
+333:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):505:14686:1 |==> -1
+334:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):505:14640:handleOption(options.getOption(t.substring(0, 1))); |==> <NO-OP>
+335:LVR:POS:0:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):506:14760:1 |==> 0
+336:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):506:14760:1 |==> -1
+337:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):506:14712:currentOption.addValueForProcessing(t.substring(1)); |==> <NO-OP>
+338:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):507:14785:currentOption = null; |==> <NO-OP>
+339:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):512:14925:handleConcatenatedOptions(token); |==> <NO-OP>
+340:LVR:0:POS:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):518:15061:0 |==> 1
+341:LVR:0:NEG:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):518:15061:0 |==> -1
+342:LVR:POS:0:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):519:15115:1 |==> 0
+343:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):519:15115:1 |==> -1
+344:AOR:+(int,int):%(int,int):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):519:15109:pos + 1 |==> pos % 1
+345:AOR:+(int,int):*(int,int):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):519:15109:pos + 1 |==> pos * 1
+346:AOR:+(int,int):-(int,int):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):519:15109:pos + 1 |==> pos - 1
+347:AOR:+(int,int):/(int,int):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):519:15109:pos + 1 |==> pos / 1
+348:LVR:POS:0:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):521:15164:1 |==> 0
+349:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):521:15164:1 |==> -1
+350:ROR:==(int,int):<=(int,int):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):521:15148:opt.length() == 1 |==> opt.length() <= 1
+351:ROR:==(int,int):>=(int,int):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):521:15148:opt.length() == 1 |==> opt.length() >= 1
+352:ROR:==(int,int):FALSE(int,int):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):521:15161:opt.length() == 1 |==> false
+353:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):525:15288:option != null |==> true
+354:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):525:15281:option != null && option.acceptsArg() |==> option != null == option.acceptsArg()
+355:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):525:15296:option != null && option.acceptsArg() |==> false
+356:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):525:15281:option != null && option.acceptsArg() |==> option != null
+357:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):525:15299:option != null && option.acceptsArg() |==> option.acceptsArg()
+358:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):527:15358:handleOption(option); |==> <NO-OP>
+359:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):528:15400:currentOption.addValueForProcessing(value); |==> <NO-OP>
+360:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):529:15464:currentOption = null; |==> <NO-OP>
+361:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):533:15563:handleUnknownToken(token); |==> <NO-OP>
+362:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):536:15657:isJavaProperty(opt) |==> false
+363:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):536:15657:isJavaProperty(opt) |==> true
+364:LVR:0:POS:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):539:15780:0 |==> 1
+365:LVR:0:NEG:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):539:15780:0 |==> -1
+366:LVR:POS:0:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):539:15783:1 |==> 0
+367:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):539:15783:1 |==> -1
+368:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):539:15735:handleOption(options.getOption(opt.substring(0, 1))); |==> <NO-OP>
+369:LVR:POS:0:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):540:15855:1 |==> 0
+370:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):540:15855:1 |==> -1
+371:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):540:15805:currentOption.addValueForProcessing(opt.substring(1)); |==> <NO-OP>
+372:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):541:15876:currentOption.addValueForProcessing(value); |==> <NO-OP>
+373:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):542:15936:currentOption = null; |==> <NO-OP>
+374:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleShortAndLongOption(java.lang.String):547:16051:handleLongOptionWithEqual(token); |==> <NO-OP>
+375:LVR:POS:0:org.apache.commons.cli.DefaultParser@getLongPrefix(java.lang.String):563:16419:2 |==> 0
+376:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@getLongPrefix(java.lang.String):563:16419:2 |==> -2
+377:AOR:-(int,int):%(int,int):org.apache.commons.cli.DefaultParser@getLongPrefix(java.lang.String):563:16406:t.length() - 2 |==> t.length() % 2
+378:AOR:-(int,int):*(int,int):org.apache.commons.cli.DefaultParser@getLongPrefix(java.lang.String):563:16406:t.length() - 2 |==> t.length() * 2
+379:AOR:-(int,int):+(int,int):org.apache.commons.cli.DefaultParser@getLongPrefix(java.lang.String):563:16406:t.length() - 2 |==> t.length() + 2
+380:AOR:-(int,int):/(int,int):org.apache.commons.cli.DefaultParser@getLongPrefix(java.lang.String):563:16406:t.length() - 2 |==> t.length() / 2
+381:LVR:POS:0:org.apache.commons.cli.DefaultParser@getLongPrefix(java.lang.String):563:16426:1 |==> 0
+382:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@getLongPrefix(java.lang.String):563:16426:1 |==> -1
+383:ROR:>(int,int):!=(int,int):org.apache.commons.cli.DefaultParser@getLongPrefix(java.lang.String):563:16422:i > 1 |==> i != 1
+384:ROR:>(int,int):>=(int,int):org.apache.commons.cli.DefaultParser@getLongPrefix(java.lang.String):563:16422:i > 1 |==> i >= 1
+385:ROR:>(int,int):FALSE(int,int):org.apache.commons.cli.DefaultParser@getLongPrefix(java.lang.String):563:16424:i > 1 |==> false
+386:LVR:0:POS:org.apache.commons.cli.DefaultParser@getLongPrefix(java.lang.String):565:16484:0 |==> 1
+387:LVR:0:NEG:org.apache.commons.cli.DefaultParser@getLongPrefix(java.lang.String):565:16484:0 |==> -1
+388:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.DefaultParser@getLongPrefix(java.lang.String):566:16528:options.hasLongOption(prefix) |==> false
+389:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.DefaultParser@getLongPrefix(java.lang.String):566:16528:options.hasLongOption(prefix) |==> true
+390:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.DefaultParser@getLongPrefix(java.lang.String):568:16568:opt = prefix; |==> <NO-OP>
+391:LVR:0:POS:org.apache.commons.cli.DefaultParser@isJavaProperty(java.lang.String):581:16848:0 |==> 1
+392:LVR:0:NEG:org.apache.commons.cli.DefaultParser@isJavaProperty(java.lang.String):581:16848:0 |==> -1
+393:LVR:POS:0:org.apache.commons.cli.DefaultParser@isJavaProperty(java.lang.String):581:16851:1 |==> 0
+394:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@isJavaProperty(java.lang.String):581:16851:1 |==> -1
+395:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.cli.DefaultParser@isJavaProperty(java.lang.String):584:16934:option != null |==> true
+396:LVR:POS:0:org.apache.commons.cli.DefaultParser@isJavaProperty(java.lang.String):584:16966:2 |==> 0
+397:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@isJavaProperty(java.lang.String):584:16966:2 |==> -2
+398:ROR:>=(int,int):==(int,int):org.apache.commons.cli.DefaultParser@isJavaProperty(java.lang.String):584:16946:option.getArgs() >= 2 |==> option.getArgs() == 2
+399:ROR:>=(int,int):>(int,int):org.apache.commons.cli.DefaultParser@isJavaProperty(java.lang.String):584:16946:option.getArgs() >= 2 |==> option.getArgs() > 2
+400:ROR:>=(int,int):TRUE(int,int):org.apache.commons.cli.DefaultParser@isJavaProperty(java.lang.String):584:16963:option.getArgs() >= 2 |==> true
+401:ROR:==(int,int):<=(int,int):org.apache.commons.cli.DefaultParser@isJavaProperty(java.lang.String):584:16971:option.getArgs() == Option.UNLIMITED_VALUES |==> option.getArgs() <= Option.UNLIMITED_VALUES
+402:ROR:==(int,int):>=(int,int):org.apache.commons.cli.DefaultParser@isJavaProperty(java.lang.String):584:16971:option.getArgs() == Option.UNLIMITED_VALUES |==> option.getArgs() >= Option.UNLIMITED_VALUES
+403:ROR:==(int,int):FALSE(int,int):org.apache.commons.cli.DefaultParser@isJavaProperty(java.lang.String):584:16988:option.getArgs() == Option.UNLIMITED_VALUES |==> false
+404:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.cli.DefaultParser@isJavaProperty(java.lang.String):584:16946:option.getArgs() >= 2 || option.getArgs() == Option.UNLIMITED_VALUES |==> option.getArgs() >= 2 != (option.getArgs() == Option.UNLIMITED_VALUES)
+405:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.DefaultParser@isJavaProperty(java.lang.String):584:16946:option.getArgs() >= 2 || option.getArgs() == Option.UNLIMITED_VALUES |==> option.getArgs() >= 2
+406:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.DefaultParser@isJavaProperty(java.lang.String):584:16971:option.getArgs() >= 2 || option.getArgs() == Option.UNLIMITED_VALUES |==> option.getArgs() == Option.UNLIMITED_VALUES
+407:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.cli.DefaultParser@isJavaProperty(java.lang.String):584:16968:option.getArgs() >= 2 || option.getArgs() == Option.UNLIMITED_VALUES |==> true
+408:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.cli.DefaultParser@isJavaProperty(java.lang.String):584:16927:option != null && (option.getArgs() >= 2 || option.getArgs() == Option.UNLIMITED_VALUES) |==> option != null == (option.getArgs() >= 2 || option.getArgs() == Option.UNLIMITED_VALUES)
+409:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.cli.DefaultParser@isJavaProperty(java.lang.String):584:16942:option != null && (option.getArgs() >= 2 || option.getArgs() == Option.UNLIMITED_VALUES) |==> false
+410:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.DefaultParser@isJavaProperty(java.lang.String):584:16927:option != null && (option.getArgs() >= 2 || option.getArgs() == Option.UNLIMITED_VALUES) |==> option != null
+411:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.DefaultParser@isJavaProperty(java.lang.String):584:16945:option != null && (option.getArgs() >= 2 || option.getArgs() == Option.UNLIMITED_VALUES) |==> (option.getArgs() >= 2 || option.getArgs() == Option.UNLIMITED_VALUES)
+412:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleOption(org.apache.commons.cli.Option):590:17171:checkRequiredArgs(); |==> <NO-OP>
+413:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleOption(org.apache.commons.cli.Option):592:17209:option = (Option)option.clone(); |==> <NO-OP>
+414:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleOption(org.apache.commons.cli.Option):594:17260:updateRequiredOptions(option); |==> <NO-OP>
+415:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleOption(org.apache.commons.cli.Option):596:17308:cmd.addOption(option); |==> <NO-OP>
+416:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.DefaultParser@handleOption(org.apache.commons.cli.Option):598:17365:option.hasArg() |==> false
+417:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.DefaultParser@handleOption(org.apache.commons.cli.Option):598:17365:option.hasArg() |==> true
+418:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleOption(org.apache.commons.cli.Option):600:17391:currentOption = option; |==> <NO-OP>
+419:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleOption(org.apache.commons.cli.Option):604:17472:currentOption = null; |==> <NO-OP>
+420:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.DefaultParser@updateRequiredOptions(org.apache.commons.cli.Option):615:17752:option.isRequired() |==> false
+421:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.DefaultParser@updateRequiredOptions(org.apache.commons.cli.Option):615:17752:option.isRequired() |==> true
+422:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@updateRequiredOptions(org.apache.commons.cli.Option):617:17778:expectedOpts.remove(option.getKey()); |==> <NO-OP>
+423:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.cli.DefaultParser@updateRequiredOptions(org.apache.commons.cli.Option):621:17966:options.getOptionGroup(option) != null |==> true
+424:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.DefaultParser@updateRequiredOptions(org.apache.commons.cli.Option):625:18082:group.isRequired() |==> false
+425:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.DefaultParser@updateRequiredOptions(org.apache.commons.cli.Option):625:18082:group.isRequired() |==> true
+426:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@updateRequiredOptions(org.apache.commons.cli.Option):627:18116:expectedOpts.remove(group); |==> <NO-OP>
+427:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@updateRequiredOptions(org.apache.commons.cli.Option):630:18171:group.setSelected(option); |==> <NO-OP>
+428:LVR:POS:0:org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):661:19551:1 |==> 0
+429:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):661:19551:1 |==> -1
+430:ROR:<(int,int):!=(int,int):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):661:19554:i < token.length() |==> i != token.length()
+431:ROR:<(int,int):<=(int,int):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):661:19554:i < token.length() |==> i <= token.length()
+432:ROR:<(int,int):FALSE(int,int):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):661:19556:i < token.length() |==> false
+433:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):665:19680:options.hasOption(ch) |==> false
+434:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):665:19680:options.hasOption(ch) |==> true
+435:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):667:19716:handleOption(options.getOption(ch)); |==> <NO-OP>
+436:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):669:19804:currentOption != null |==> true
+437:LVR:POS:0:org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):669:19839:1 |==> 0
+438:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):669:19839:1 |==> -1
+439:AOR:+(int,int):%(int,int):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):669:19835:i + 1 |==> i % 1
+440:AOR:+(int,int):*(int,int):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):669:19835:i + 1 |==> i * 1
+441:AOR:+(int,int):-(int,int):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):669:19835:i + 1 |==> i - 1
+442:AOR:+(int,int):/(int,int):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):669:19835:i + 1 |==> i / 1
+443:ROR:!=(int,int):<(int,int):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):669:19816:token.length() != (i + 1) |==> token.length() < (i + 1)
+444:ROR:!=(int,int):>(int,int):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):669:19816:token.length() != (i + 1) |==> token.length() > (i + 1)
+445:ROR:!=(int,int):TRUE(int,int):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):669:19831:token.length() != (i + 1) |==> true
+446:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):669:19790:currentOption != null && (token.length() != (i + 1)) |==> currentOption != null == (token.length() != (i + 1))
+447:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):669:19812:currentOption != null && (token.length() != (i + 1)) |==> false
+448:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):669:19790:currentOption != null && (token.length() != (i + 1)) |==> currentOption != null
+449:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):669:19815:currentOption != null && (token.length() != (i + 1)) |==> (token.length() != (i + 1))
+450:LVR:POS:0:org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):672:20004:1 |==> 0
+451:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):672:20004:1 |==> -1
+452:AOR:+(int,int):%(int,int):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):672:20000:i + 1 |==> i % 1
+453:AOR:+(int,int):*(int,int):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):672:20000:i + 1 |==> i * 1
+454:AOR:+(int,int):-(int,int):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):672:20000:i + 1 |==> i - 1
+455:AOR:+(int,int):/(int,int):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):672:20000:i + 1 |==> i / 1
+456:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):672:19948:currentOption.addValueForProcessing(token.substring(i + 1)); |==> <NO-OP>
+457:LVR:POS:0:org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):678:20173:1 |==> 0
+458:LVR:POS:NEG:org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):678:20173:1 |==> -1
+459:ROR:>(int,int):!=(int,int):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):678:20169:i > 1 |==> i != 1
+460:ROR:>(int,int):>=(int,int):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):678:20169:i > 1 |==> i >= 1
+461:ROR:>(int,int):FALSE(int,int):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):678:20171:i > 1 |==> false
+462:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):678:20150:stopAtNonOption && i > 1 |==> stopAtNonOption == i > 1
+463:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):678:20166:stopAtNonOption && i > 1 |==> false
+464:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):678:20150:stopAtNonOption && i > 1 |==> stopAtNonOption
+465:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):678:20169:stopAtNonOption && i > 1 |==> i > 1
+466:STD:<CALL>:<NO-OP>:org.apache.commons.cli.DefaultParser@handleConcatenatedOptions(java.lang.String):678:20131:handleUnknownToken(stopAtNonOption && i > 1 ? token.substring(i) : token); |==> <NO-OP>

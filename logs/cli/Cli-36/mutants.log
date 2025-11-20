@@ -1,0 +1,65 @@
+1:STD:<CALL>:<NO-OP>:org.apache.commons.cli.OptionGroup@addOption(org.apache.commons.cli.Option):55:1765:optionMap.put(option.getKey(), option); |==> <NO-OP>
+2:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.cli.OptionGroup@setSelected(org.apache.commons.cli.Option):88:2652:option == null |==> false
+3:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.OptionGroup@setSelected(org.apache.commons.cli.Option):91:2735:selected = null; |==> <NO-OP>
+4:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.cli.OptionGroup@setSelected(org.apache.commons.cli.Option):98:2962:selected == null |==> false
+5:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.cli.OptionGroup@setSelected(org.apache.commons.cli.Option):98:2953:selected == null || selected.equals(option.getKey()) |==> selected == null != selected.equals(option.getKey())
+6:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.OptionGroup@setSelected(org.apache.commons.cli.Option):98:2953:selected == null || selected.equals(option.getKey()) |==> selected == null
+7:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.OptionGroup@setSelected(org.apache.commons.cli.Option):98:2973:selected == null || selected.equals(option.getKey()) |==> selected.equals(option.getKey())
+8:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.cli.OptionGroup@setSelected(org.apache.commons.cli.Option):98:2970:selected == null || selected.equals(option.getKey()) |==> true
+9:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.OptionGroup@setSelected(org.apache.commons.cli.Option):100:3029:selected = option.getKey(); |==> <NO-OP>
+10:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.OptionGroup@setRequired(boolean):121:3430:this.required = required; |==> <NO-OP>
+11:STD:<CALL>:<NO-OP>:org.apache.commons.cli.OptionGroup@toString():146:3981:buff.append("["); |==> <NO-OP>
+12:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.cli.OptionGroup@toString():152:4115:option.getOpt() != null |==> true
+13:STD:<CALL>:<NO-OP>:org.apache.commons.cli.OptionGroup@toString():154:4154:buff.append("-"); |==> <NO-OP>
+14:STD:<CALL>:<NO-OP>:org.apache.commons.cli.OptionGroup@toString():155:4188:buff.append(option.getOpt()); |==> <NO-OP>
+15:STD:<CALL>:<NO-OP>:org.apache.commons.cli.OptionGroup@toString():159:4279:buff.append("--"); |==> <NO-OP>
+16:STD:<CALL>:<NO-OP>:org.apache.commons.cli.OptionGroup@toString():160:4314:buff.append(option.getLongOpt()); |==> <NO-OP>
+17:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.cli.OptionGroup@toString():163:4415:option.getDescription() != null |==> true
+18:STD:<CALL>:<NO-OP>:org.apache.commons.cli.OptionGroup@toString():165:4454:buff.append(" "); |==> <NO-OP>
+19:STD:<CALL>:<NO-OP>:org.apache.commons.cli.OptionGroup@toString():166:4488:buff.append(option.getDescription()); |==> <NO-OP>
+20:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.OptionGroup@toString():169:4581:iter.hasNext() |==> false
+21:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.OptionGroup@toString():169:4581:iter.hasNext() |==> true
+22:STD:<CALL>:<NO-OP>:org.apache.commons.cli.OptionGroup@toString():171:4615:buff.append(", "); |==> <NO-OP>
+23:STD:<CALL>:<NO-OP>:org.apache.commons.cli.OptionGroup@toString():175:4667:buff.append("]"); |==> <NO-OP>
+24:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.Options@addOptionGroup(org.apache.commons.cli.OptionGroup):70:2531:group.isRequired() |==> false
+25:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.Options@addOptionGroup(org.apache.commons.cli.OptionGroup):70:2531:group.isRequired() |==> true
+26:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Options@addOptionGroup(org.apache.commons.cli.OptionGroup):72:2557:requiredOpts.add(group); |==> <NO-OP>
+27:LVR:FALSE:TRUE:org.apache.commons.cli.Options@addOptionGroup(org.apache.commons.cli.OptionGroup):80:2837:false |==> true
+28:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Options@addOptionGroup(org.apache.commons.cli.OptionGroup):80:2818:option.setRequired(false); |==> <NO-OP>
+29:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Options@addOptionGroup(org.apache.commons.cli.OptionGroup):81:2857:addOption(option); |==> <NO-OP>
+30:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Options@addOptionGroup(org.apache.commons.cli.OptionGroup):83:2889:optionGroups.put(option.getKey(), group); |==> <NO-OP>
+31:LVR:FALSE:TRUE:org.apache.commons.cli.Options@addOption(java.lang.String,java.lang.String):110:3641:false |==> true
+32:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Options@addOption(java.lang.String,java.lang.String):110:3620:addOption(opt, null, false, description); |==> <NO-OP>
+33:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Options@addOption(java.lang.String,boolean,java.lang.String):125:4153:addOption(opt, null, hasArg, description); |==> <NO-OP>
+34:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Options@addOption(java.lang.String,java.lang.String,boolean,java.lang.String):141:4777:addOption(new Option(opt, longOpt, hasArg, description)); |==> <NO-OP>
+35:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.Options@addOption(org.apache.commons.cli.Option):156:5163:opt.hasLongOpt() |==> false
+36:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.Options@addOption(org.apache.commons.cli.Option):156:5163:opt.hasLongOpt() |==> true
+37:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Options@addOption(org.apache.commons.cli.Option):158:5189:longOpts.put(opt.getLongOpt(), opt); |==> <NO-OP>
+38:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.Options@addOption(org.apache.commons.cli.Option):162:5328:opt.isRequired() |==> false
+39:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.Options@addOption(org.apache.commons.cli.Option):162:5328:opt.isRequired() |==> true
+40:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.Options@addOption(org.apache.commons.cli.Option):164:5379:requiredOpts.contains(key) |==> false
+41:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.Options@addOption(org.apache.commons.cli.Option):164:5379:requiredOpts.contains(key) |==> true
+42:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Options@addOption(org.apache.commons.cli.Option):166:5416:requiredOpts.remove(requiredOpts.indexOf(key)); |==> <NO-OP>
+43:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Options@addOption(org.apache.commons.cli.Option):168:5490:requiredOpts.add(key); |==> <NO-OP>
+44:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Options@addOption(org.apache.commons.cli.Option):171:5532:shortOpts.put(key, opt); |==> <NO-OP>
+45:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.Options@getOption(java.lang.String):215:6625:opt = Util.stripLeadingHyphens(opt); |==> <NO-OP>
+46:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.Options@getOption(java.lang.String):217:6696:shortOpts.containsKey(opt) |==> false
+47:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.Options@getOption(java.lang.String):217:6696:shortOpts.containsKey(opt) |==> true
+48:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.Options@getMatchingOptions(java.lang.String):234:7139:opt = Util.stripLeadingHyphens(opt); |==> <NO-OP>
+49:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.Options@getMatchingOptions(java.lang.String):239:7346:longOpts.keySet().contains(opt) |==> false
+50:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.Options@getMatchingOptions(java.lang.String):239:7346:longOpts.keySet().contains(opt) |==> true
+51:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.cli.Options@getMatchingOptions(java.lang.String):246:7518:longOpt.startsWith(opt) |==> false
+52:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.cli.Options@getMatchingOptions(java.lang.String):246:7518:longOpt.startsWith(opt) |==> true
+53:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Options@getMatchingOptions(java.lang.String):248:7555:matchingOpts.add(longOpt); |==> <NO-OP>
+54:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.Options@hasOption(java.lang.String):263:7957:opt = Util.stripLeadingHyphens(opt); |==> <NO-OP>
+55:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.cli.Options@hasOption(java.lang.String):265:8010:shortOpts.containsKey(opt) || longOpts.containsKey(opt) |==> shortOpts.containsKey(opt) != longOpts.containsKey(opt)
+56:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.cli.Options@hasOption(java.lang.String):265:8010:shortOpts.containsKey(opt) || longOpts.containsKey(opt) |==> shortOpts.containsKey(opt)
+57:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.cli.Options@hasOption(java.lang.String):265:8040:shortOpts.containsKey(opt) || longOpts.containsKey(opt) |==> longOpts.containsKey(opt)
+58:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.cli.Options@hasOption(java.lang.String):265:8037:shortOpts.containsKey(opt) || longOpts.containsKey(opt) |==> true
+59:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.Options@hasLongOption(java.lang.String):277:8393:opt = Util.stripLeadingHyphens(opt); |==> <NO-OP>
+60:STD:<ASSIGN>:<NO-OP>:org.apache.commons.cli.Options@hasShortOption(java.lang.String):291:8801:opt = Util.stripLeadingHyphens(opt); |==> <NO-OP>
+61:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Options@toString():318:9478:buf.append("[ Options: [ short "); |==> <NO-OP>
+62:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Options@toString():319:9521:buf.append(shortOpts.toString()); |==> <NO-OP>
+63:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Options@toString():320:9563:buf.append(" ] [ long "); |==> <NO-OP>
+64:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Options@toString():321:9597:buf.append(longOpts); |==> <NO-OP>
+65:STD:<CALL>:<NO-OP>:org.apache.commons.cli.Options@toString():322:9627:buf.append(" ]"); |==> <NO-OP>
