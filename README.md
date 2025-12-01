@@ -10,7 +10,6 @@ The workflow is:
 2. Run **MAJOR + PIT** mutation analysis on Defects4J bugs.
 3. Summarise mutation results per project / per bug.
 4. Analyse **plausible mutants per operator**.
-5. (Optional) Evaluate generated patches vs developer patches.
 
 All functionality lives in the `scripts/` directory.
 
