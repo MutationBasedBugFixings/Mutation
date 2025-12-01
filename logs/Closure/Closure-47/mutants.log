@@ -1,0 +1,451 @@
+1:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@parse(java.lang.String):72:2290:parse(contents, null); |==> <NO-OP>
+2:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@parse(java.lang.String,com.google.debugging.sourcemap.SourceMapSupplier):82:2572:parse(sourceMapRoot, sectionSupplier); |==> <NO-OP>
+3:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@parse(org.json.JSONObject):92:2878:parse(sourceMapRoot, null); |==> <NO-OP>
+4:LVR:POS:0:com.google.debugging.sourcemap.SourceMapConsumerV3@parse(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):103:3233:3 |==> 0
+5:LVR:POS:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@parse(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):103:3233:3 |==> -3
+6:ROR:!=(int,int):<(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@parse(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):103:3222:version != 3 |==> version < 3
+7:ROR:!=(int,int):>(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@parse(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):103:3222:version != 3 |==> version > 3
+8:ROR:!=(int,int):TRUE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@parse(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):103:3230:version != 3 |==> true
+9:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.debugging.sourcemap.SourceMapConsumerV3@parse(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):108:3396:file.isEmpty() |==> false
+10:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.debugging.sourcemap.SourceMapConsumerV3@parse(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):108:3396:file.isEmpty() |==> true
+11:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.debugging.sourcemap.SourceMapConsumerV3@parse(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):112:3515:sourceMapRoot.has("sections") |==> false
+12:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.debugging.sourcemap.SourceMapConsumerV3@parse(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):112:3515:sourceMapRoot.has("sections") |==> true
+13:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@parse(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):114:3600:parseMetaMap(sourceMapRoot, sectionSupplier); |==> <NO-OP>
+14:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@parse(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):118:3677:lineCount = sourceMapRoot.getInt("lineCount"); |==> <NO-OP>
+15:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@parse(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):121:3791:sources = getJavaStringArray(sourceMapRoot.getJSONArray("sources")); |==> <NO-OP>
+16:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@parse(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):122:3866:names = getJavaStringArray(sourceMapRoot.getJSONArray("names")); |==> <NO-OP>
+17:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@parse(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):124:3938:lines = Lists.newArrayListWithCapacity(lineCount); |==> <NO-OP>
+18:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@parse(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):126:3996:new MappingBuilder(lineMap).build(); |==> <NO-OP>
+19:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):139:4383:sectionSupplier == null |==> false
+20:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):140:4400:sectionSupplier = new DefaultSourceMapSupplier(); |==> <NO-OP>
+21:LVR:POS:0:com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):146:4591:3 |==> 0
+22:LVR:POS:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):146:4591:3 |==> -3
+23:ROR:!=(int,int):<(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):146:4580:version != 3 |==> version < 3
+24:ROR:!=(int,int):>(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):146:4580:version != 3 |==> version > 3
+25:ROR:!=(int,int):TRUE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):146:4588:version != 3 |==> true
+26:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):151:4754:file.isEmpty() |==> false
+27:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):151:4754:file.isEmpty() |==> true
+28:COR:||(boolean,boolean):!=(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):155:4856:sourceMapRoot.has("lineCount") || sourceMapRoot.has("mappings") |==> sourceMapRoot.has("lineCount") != sourceMapRoot.has("mappings")
+29:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):155:4856:sourceMapRoot.has("lineCount") || sourceMapRoot.has("mappings") |==> sourceMapRoot.has("lineCount")
+30:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):156:4900:sourceMapRoot.has("lineCount") || sourceMapRoot.has("mappings") |==> sourceMapRoot.has("mappings")
+31:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):156:4897:sourceMapRoot.has("lineCount") || sourceMapRoot.has("mappings") |==> true
+32:COR:||(boolean,boolean):!=(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):155:4856:sourceMapRoot.has("lineCount") || sourceMapRoot.has("mappings") || sourceMapRoot.has("sources") |==> (sourceMapRoot.has("lineCount") || sourceMapRoot.has("mappings")) != sourceMapRoot.has("sources")
+33:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):155:4856:sourceMapRoot.has("lineCount") || sourceMapRoot.has("mappings") || sourceMapRoot.has("sources") |==> sourceMapRoot.has("lineCount") || sourceMapRoot.has("mappings")
+34:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):157:4943:sourceMapRoot.has("lineCount") || sourceMapRoot.has("mappings") || sourceMapRoot.has("sources") |==> sourceMapRoot.has("sources")
+35:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):157:4940:sourceMapRoot.has("lineCount") || sourceMapRoot.has("mappings") || sourceMapRoot.has("sources") |==> true
+36:COR:||(boolean,boolean):!=(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):155:4856:sourceMapRoot.has("lineCount") || sourceMapRoot.has("mappings") || sourceMapRoot.has("sources") || sourceMapRoot.has("names") |==> (sourceMapRoot.has("lineCount") || sourceMapRoot.has("mappings") || sourceMapRoot.has("sources")) != sourceMapRoot.has("names")
+37:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):155:4856:sourceMapRoot.has("lineCount") || sourceMapRoot.has("mappings") || sourceMapRoot.has("sources") || sourceMapRoot.has("names") |==> sourceMapRoot.has("lineCount") || sourceMapRoot.has("mappings") || sourceMapRoot.has("sources")
+38:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):158:4985:sourceMapRoot.has("lineCount") || sourceMapRoot.has("mappings") || sourceMapRoot.has("sources") || sourceMapRoot.has("names") |==> sourceMapRoot.has("names")
+39:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):158:4982:sourceMapRoot.has("lineCount") || sourceMapRoot.has("mappings") || sourceMapRoot.has("sources") || sourceMapRoot.has("names") |==> true
+40:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):164:5242:0 |==> 1
+41:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):164:5242:0 |==> -1
+42:ROR:<(int,int):!=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):164:5272:i < count |==> i != count
+43:ROR:<(int,int):<=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):164:5272:i < count |==> i <= count
+44:ROR:<(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):164:5274:i < count |==> false
+45:COR:&&(boolean,boolean):==(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):166:5358:section.has("map") && section.has("url") |==> section.has("map") == section.has("url")
+46:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):166:5377:section.has("map") && section.has("url") |==> false
+47:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):166:5358:section.has("map") && section.has("url") |==> section.has("map")
+48:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):166:5380:section.has("map") && section.has("url") |==> section.has("url")
+49:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):174:5744:section.has("url") |==> false
+50:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):174:5744:section.has("url") |==> true
+51:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):177:5903:mapSectionContents == null |==> false
+52:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):180:6033:section.has("map") |==> false
+53:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):180:6033:section.has("map") |==> true
+54:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):186:6259:generator.mergeMapSection(line, column, mapSectionContents); |==> <NO-OP>
+55:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):191:6395:generator.appendTo(sb, file); |==> <NO-OP>
+56:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@parseMetaMap(org.json.JSONObject,com.google.debugging.sourcemap.SourceMapSupplier):197:6536:parse(sb.toString()); |==> <NO-OP>
+57:STD:<DEC>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):208:6909:lineNumber--; |==> <NO-OP>
+58:STD:<DEC>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):209:6927:column--; |==> <NO-OP>
+59:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):211:6959:0 |==> 1
+60:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):211:6959:0 |==> -1
+61:ROR:<(int,int):!=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):211:6946:lineNumber < 0 |==> lineNumber != 0
+62:ROR:<(int,int):<=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):211:6946:lineNumber < 0 |==> lineNumber <= 0
+63:ROR:<(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):211:6957:lineNumber < 0 |==> false
+64:ROR:>=(int,int):==(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):211:6964:lineNumber >= lines.size() |==> lineNumber == lines.size()
+65:ROR:>=(int,int):>(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):211:6964:lineNumber >= lines.size() |==> lineNumber > lines.size()
+66:ROR:>=(int,int):TRUE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):211:6975:lineNumber >= lines.size() |==> true
+67:COR:||(boolean,boolean):!=(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):211:6946:lineNumber < 0 || lineNumber >= lines.size() |==> lineNumber < 0 != lineNumber >= lines.size()
+68:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):211:6946:lineNumber < 0 || lineNumber >= lines.size() |==> lineNumber < 0
+69:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):211:6964:lineNumber < 0 || lineNumber >= lines.size() |==> lineNumber >= lines.size()
+70:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):211:6961:lineNumber < 0 || lineNumber >= lines.size() |==> true
+71:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):215:7063:0 |==> 1
+72:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):215:7063:0 |==> -1
+73:ROR:>=(int,int):==(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):215:7049:lineNumber >= 0 |==> lineNumber == 0
+74:ROR:>=(int,int):>(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):215:7049:lineNumber >= 0 |==> lineNumber > 0
+75:ROR:>=(int,int):TRUE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):215:7060:lineNumber >= 0 |==> true
+76:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):215:7024:Preconditions.checkState(lineNumber >= 0); |==> <NO-OP>
+77:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):216:7106:0 |==> 1
+78:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):216:7106:0 |==> -1
+79:ROR:>=(int,int):==(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):216:7096:column >= 0 |==> column == 0
+80:ROR:>=(int,int):>(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):216:7096:column >= 0 |==> column > 0
+81:ROR:>=(int,int):TRUE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):216:7103:column >= 0 |==> true
+82:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):216:7071:Preconditions.checkState(column >= 0); |==> <NO-OP>
+83:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):220:7199:lines.get(lineNumber) == null |==> false
+84:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):226:7385:0 |==> 1
+85:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):226:7385:0 |==> -1
+86:ROR:>(int,int):>=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):226:7368:entries.size() > 0 |==> entries.size() >= 0
+87:ROR:>(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):226:7383:entries.size() > 0 |==> false
+88:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):226:7343:Preconditions.checkState(entries.size() > 0); |==> <NO-OP>
+89:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):227:7409:0 |==> 1
+90:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):227:7409:0 |==> -1
+91:ROR:>(int,int):!=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):227:7397:entries.get(0).getGeneratedColumn() > column |==> entries.get(0).getGeneratedColumn() != column
+92:ROR:>(int,int):>=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):227:7397:entries.get(0).getGeneratedColumn() > column |==> entries.get(0).getGeneratedColumn() >= column
+93:ROR:>(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):227:7433:entries.get(0).getGeneratedColumn() > column |==> false
+94:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):231:7537:0 |==> 1
+95:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):231:7537:0 |==> -1
+96:LVR:POS:0:com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):231:7557:1 |==> 0
+97:LVR:POS:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):231:7557:1 |==> -1
+98:AOR:-(int,int):%(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):231:7540:entries.size() - 1 |==> entries.size() % 1
+99:AOR:-(int,int):*(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):231:7540:entries.size() - 1 |==> entries.size() * 1
+100:AOR:-(int,int):+(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):231:7540:entries.size() - 1 |==> entries.size() + 1
+101:AOR:-(int,int):/(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):231:7540:entries.size() - 1 |==> entries.size() / 1
+102:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):232:7599:0 |==> 1
+103:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):232:7599:0 |==> -1
+104:ROR:>=(int,int):==(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):232:7590:index >= 0 |==> index == 0
+105:ROR:>=(int,int):>(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):232:7590:index >= 0 |==> index > 0
+106:ROR:>=(int,int):TRUE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):232:7596:index >= 0 |==> true
+107:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@getMappingForLine(int,int):232:7565:Preconditions.checkState(index >= 0, "unexpected:%s", index); |==> <NO-OP>
+108:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.debugging.sourcemap.SourceMapConsumerV3@getReverseMapping(java.lang.String,int,int):248:8096:reverseSourceMapping == null |==> false
+109:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@getReverseMapping(java.lang.String,int,int):249:8113:createReverseMapping(); |==> <NO-OP>
+110:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.debugging.sourcemap.SourceMapConsumerV3@getReverseMapping(java.lang.String,int,int):255:8301:sourceLineToCollectionMap == null |==> false
+111:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.debugging.sourcemap.SourceMapConsumerV3@getReverseMapping(java.lang.String,int,int):261:8475:mappings == null |==> false
+112:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3@getJavaStringArray(org.json.JSONArray):272:8748:0 |==> 1
+113:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@getJavaStringArray(org.json.JSONArray):272:8748:0 |==> -1
+114:ROR:<(int,int):!=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getJavaStringArray(org.json.JSONArray):272:8751:i < len |==> i != len
+115:ROR:<(int,int):<=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getJavaStringArray(org.json.JSONArray):272:8751:i < len |==> i <= len
+116:ROR:<(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getJavaStringArray(org.json.JSONArray):272:8753:i < len |==> false
+117:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@getJavaStringArray(org.json.JSONArray):273:8773:result[i] = array.getString(i); |==> <NO-OP>
+118:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder:281:8988:0 |==> 1
+119:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder:281:8988:0 |==> -1
+120:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder:282:9021:0 |==> 1
+121:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder:282:9021:0 |==> -1
+122:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder:283:9056:0 |==> 1
+123:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder:283:9056:0 |==> -1
+124:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder:284:9093:0 |==> 1
+125:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder:284:9093:0 |==> -1
+126:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder:285:9132:0 |==> 1
+127:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder:285:9132:0 |==> -1
+128:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder:286:9168:0 |==> 1
+129:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder:286:9168:0 |==> -1
+130:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@build():297:9489:tryConsumeToken(';') |==> false
+131:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@build():297:9489:tryConsumeToken(';') |==> true
+132:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@build():301:9670:0 |==> 1
+133:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@build():301:9670:0 |==> -1
+134:ROR:>(int,int):>=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@build():301:9653:entries.size() > 0 |==> entries.size() >= 0
+135:ROR:>(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@build():301:9668:entries.size() > 0 |==> false
+136:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@build():304:9768:entries = new ArrayList<Entry>(); |==> <NO-OP>
+137:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@build():308:9870:lines.add(result); |==> <NO-OP>
+138:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@build():309:9899:entries.clear(); |==> <NO-OP>
+139:STD:<INC>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@build():310:9926:line++; |==> <NO-OP>
+140:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@build():311:9958:0 |==> 1
+141:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@build():311:9958:0 |==> -1
+142:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@build():311:9944:previousCol = 0; |==> <NO-OP>
+143:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@build():314:10061:0 |==> 1
+144:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@build():314:10061:0 |==> -1
+145:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@build():316:10113:temp[entryValues] = nextValue(); |==> <NO-OP>
+146:STD:<INC>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@build():317:10158:entryValues++; |==> <NO-OP>
+147:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@build():321:10252:validateEntry(entry); |==> <NO-OP>
+148:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@build():322:10284:entries.add(entry); |==> <NO-OP>
+149:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@build():325:10375:tryConsumeToken(','); |==> <NO-OP>
+150:ROR:<(int,int):!=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):334:10546:line < lineCount |==> line != lineCount
+151:ROR:<(int,int):<=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):334:10546:line < lineCount |==> line <= lineCount
+152:ROR:<(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):334:10551:line < lineCount |==> false
+153:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):334:10521:Preconditions.checkState(line < lineCount); |==> <NO-OP>
+154:ROR:==(int,int):<=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):335:10596:entry.getSourceFileId() == UNMAPPED |==> entry.getSourceFileId() <= UNMAPPED
+155:ROR:==(int,int):>=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):335:10596:entry.getSourceFileId() == UNMAPPED |==> entry.getSourceFileId() >= UNMAPPED
+156:ROR:==(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):335:10620:entry.getSourceFileId() == UNMAPPED |==> false
+157:ROR:<(int,int):!=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):336:10645:entry.getSourceFileId() < sources.length |==> entry.getSourceFileId() != sources.length
+158:ROR:<(int,int):<=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):336:10645:entry.getSourceFileId() < sources.length |==> entry.getSourceFileId() <= sources.length
+159:ROR:<(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):336:10669:entry.getSourceFileId() < sources.length |==> false
+160:COR:||(boolean,boolean):!=(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):335:10596:entry.getSourceFileId() == UNMAPPED || entry.getSourceFileId() < sources.length |==> entry.getSourceFileId() == UNMAPPED != entry.getSourceFileId() < sources.length
+161:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):335:10596:entry.getSourceFileId() == UNMAPPED || entry.getSourceFileId() < sources.length |==> entry.getSourceFileId() == UNMAPPED
+162:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):336:10645:entry.getSourceFileId() == UNMAPPED || entry.getSourceFileId() < sources.length |==> entry.getSourceFileId() < sources.length
+163:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):336:10642:entry.getSourceFileId() == UNMAPPED || entry.getSourceFileId() < sources.length |==> true
+164:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):335:10571:Preconditions.checkState(entry.getSourceFileId() == UNMAPPED || entry.getSourceFileId() < sources.length); |==> <NO-OP>
+165:ROR:==(int,int):<=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):337:10719:entry.getNameId() == UNMAPPED |==> entry.getNameId() <= UNMAPPED
+166:ROR:==(int,int):>=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):337:10719:entry.getNameId() == UNMAPPED |==> entry.getNameId() >= UNMAPPED
+167:ROR:==(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):337:10737:entry.getNameId() == UNMAPPED |==> false
+168:ROR:<(int,int):!=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):338:10762:entry.getNameId() < names.length |==> entry.getNameId() != names.length
+169:ROR:<(int,int):<=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):338:10762:entry.getNameId() < names.length |==> entry.getNameId() <= names.length
+170:ROR:<(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):338:10780:entry.getNameId() < names.length |==> false
+171:COR:||(boolean,boolean):!=(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):337:10719:entry.getNameId() == UNMAPPED || entry.getNameId() < names.length |==> entry.getNameId() == UNMAPPED != entry.getNameId() < names.length
+172:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):337:10719:entry.getNameId() == UNMAPPED || entry.getNameId() < names.length |==> entry.getNameId() == UNMAPPED
+173:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):338:10762:entry.getNameId() == UNMAPPED || entry.getNameId() < names.length |==> entry.getNameId() < names.length
+174:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):338:10759:entry.getNameId() == UNMAPPED || entry.getNameId() < names.length |==> true
+175:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@validateEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):337:10694:Preconditions.checkState(entry.getNameId() == UNMAPPED || entry.getNameId() < names.length); |==> <NO-OP>
+176:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):366:11963:0 |==> 1
+177:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):366:11963:0 |==> -1
+178:AOR:+(int,int):%(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):366:11958:vals[0] + previousCol |==> vals[0] % previousCol
+179:AOR:+(int,int):*(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):366:11958:vals[0] + previousCol |==> vals[0] * previousCol
+180:AOR:+(int,int):-(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):366:11958:vals[0] + previousCol |==> vals[0] - previousCol
+181:AOR:+(int,int):/(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):366:11958:vals[0] + previousCol |==> vals[0] / previousCol
+182:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):368:12044:previousCol = entry.getGeneratedColumn(); |==> <NO-OP>
+183:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):374:12235:0 |==> 1
+184:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):374:12235:0 |==> -1
+185:AOR:+(int,int):%(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):374:12230:vals[0] + previousCol |==> vals[0] % previousCol
+186:AOR:+(int,int):*(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):374:12230:vals[0] + previousCol |==> vals[0] * previousCol
+187:AOR:+(int,int):-(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):374:12230:vals[0] + previousCol |==> vals[0] - previousCol
+188:AOR:+(int,int):/(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):374:12230:vals[0] + previousCol |==> vals[0] / previousCol
+189:LVR:POS:0:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):375:12272:1 |==> 0
+190:LVR:POS:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):375:12272:1 |==> -1
+191:AOR:+(int,int):%(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):375:12267:vals[1] + previousSrcId |==> vals[1] % previousSrcId
+192:AOR:+(int,int):*(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):375:12267:vals[1] + previousSrcId |==> vals[1] * previousSrcId
+193:AOR:+(int,int):-(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):375:12267:vals[1] + previousSrcId |==> vals[1] - previousSrcId
+194:AOR:+(int,int):/(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):375:12267:vals[1] + previousSrcId |==> vals[1] / previousSrcId
+195:LVR:POS:0:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):376:12311:2 |==> 0
+196:LVR:POS:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):376:12311:2 |==> -2
+197:AOR:+(int,int):%(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):376:12306:vals[2] + previousSrcLine |==> vals[2] % previousSrcLine
+198:AOR:+(int,int):*(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):376:12306:vals[2] + previousSrcLine |==> vals[2] * previousSrcLine
+199:AOR:+(int,int):-(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):376:12306:vals[2] + previousSrcLine |==> vals[2] - previousSrcLine
+200:AOR:+(int,int):/(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):376:12306:vals[2] + previousSrcLine |==> vals[2] / previousSrcLine
+201:LVR:POS:0:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):377:12352:3 |==> 0
+202:LVR:POS:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):377:12352:3 |==> -3
+203:AOR:+(int,int):%(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):377:12347:vals[3] + previousSrcColumn |==> vals[3] % previousSrcColumn
+204:AOR:+(int,int):*(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):377:12347:vals[3] + previousSrcColumn |==> vals[3] * previousSrcColumn
+205:AOR:+(int,int):-(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):377:12347:vals[3] + previousSrcColumn |==> vals[3] - previousSrcColumn
+206:AOR:+(int,int):/(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):377:12347:vals[3] + previousSrcColumn |==> vals[3] / previousSrcColumn
+207:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):379:12439:previousCol = entry.getGeneratedColumn(); |==> <NO-OP>
+208:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):380:12491:previousSrcId = entry.getSourceFileId(); |==> <NO-OP>
+209:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):381:12542:previousSrcLine = entry.getSourceLine(); |==> <NO-OP>
+210:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):382:12593:previousSrcColumn = entry.getSourceColumn(); |==> <NO-OP>
+211:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):389:12827:0 |==> 1
+212:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):389:12827:0 |==> -1
+213:AOR:+(int,int):%(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):389:12822:vals[0] + previousCol |==> vals[0] % previousCol
+214:AOR:+(int,int):*(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):389:12822:vals[0] + previousCol |==> vals[0] * previousCol
+215:AOR:+(int,int):-(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):389:12822:vals[0] + previousCol |==> vals[0] - previousCol
+216:AOR:+(int,int):/(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):389:12822:vals[0] + previousCol |==> vals[0] / previousCol
+217:LVR:POS:0:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):390:12864:1 |==> 0
+218:LVR:POS:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):390:12864:1 |==> -1
+219:AOR:+(int,int):%(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):390:12859:vals[1] + previousSrcId |==> vals[1] % previousSrcId
+220:AOR:+(int,int):*(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):390:12859:vals[1] + previousSrcId |==> vals[1] * previousSrcId
+221:AOR:+(int,int):-(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):390:12859:vals[1] + previousSrcId |==> vals[1] - previousSrcId
+222:AOR:+(int,int):/(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):390:12859:vals[1] + previousSrcId |==> vals[1] / previousSrcId
+223:LVR:POS:0:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):391:12903:2 |==> 0
+224:LVR:POS:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):391:12903:2 |==> -2
+225:AOR:+(int,int):%(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):391:12898:vals[2] + previousSrcLine |==> vals[2] % previousSrcLine
+226:AOR:+(int,int):*(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):391:12898:vals[2] + previousSrcLine |==> vals[2] * previousSrcLine
+227:AOR:+(int,int):-(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):391:12898:vals[2] + previousSrcLine |==> vals[2] - previousSrcLine
+228:AOR:+(int,int):/(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):391:12898:vals[2] + previousSrcLine |==> vals[2] / previousSrcLine
+229:LVR:POS:0:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):392:12944:3 |==> 0
+230:LVR:POS:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):392:12944:3 |==> -3
+231:AOR:+(int,int):%(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):392:12939:vals[3] + previousSrcColumn |==> vals[3] % previousSrcColumn
+232:AOR:+(int,int):*(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):392:12939:vals[3] + previousSrcColumn |==> vals[3] * previousSrcColumn
+233:AOR:+(int,int):-(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):392:12939:vals[3] + previousSrcColumn |==> vals[3] - previousSrcColumn
+234:AOR:+(int,int):/(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):392:12939:vals[3] + previousSrcColumn |==> vals[3] / previousSrcColumn
+235:LVR:POS:0:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):393:12987:4 |==> 0
+236:LVR:POS:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):393:12987:4 |==> -4
+237:AOR:+(int,int):%(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):393:12982:vals[4] + previousNameId |==> vals[4] % previousNameId
+238:AOR:+(int,int):*(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):393:12982:vals[4] + previousNameId |==> vals[4] * previousNameId
+239:AOR:+(int,int):-(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):393:12982:vals[4] + previousNameId |==> vals[4] - previousNameId
+240:AOR:+(int,int):/(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):393:12982:vals[4] + previousNameId |==> vals[4] / previousNameId
+241:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):395:13071:previousCol = entry.getGeneratedColumn(); |==> <NO-OP>
+242:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):396:13123:previousSrcId = entry.getSourceFileId(); |==> <NO-OP>
+243:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):397:13174:previousSrcLine = entry.getSourceLine(); |==> <NO-OP>
+244:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):398:13225:previousSrcColumn = entry.getSourceColumn(); |==> <NO-OP>
+245:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@decodeEntry(int[],int):399:13280:previousNameId = entry.getNameId(); |==> <NO-OP>
+246:ROR:==(int,int):<=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@tryConsumeToken(char):409:13568:content.peek() == token |==> content.peek() <= token
+247:ROR:==(int,int):>=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@tryConsumeToken(char):409:13568:content.peek() == token |==> content.peek() >= token
+248:ROR:==(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@tryConsumeToken(char):409:13583:content.peek() == token |==> false
+249:COR:&&(boolean,boolean):==(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@tryConsumeToken(char):409:13547:content.hasNext() && content.peek() == token |==> content.hasNext() == (content.peek() == token)
+250:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@tryConsumeToken(char):409:13565:content.hasNext() && content.peek() == token |==> false
+251:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@tryConsumeToken(char):409:13547:content.hasNext() && content.peek() == token |==> content.hasNext()
+252:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@tryConsumeToken(char):409:13568:content.hasNext() && content.peek() == token |==> content.peek() == token
+253:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@tryConsumeToken(char):411:13632:content.next(); |==> <NO-OP>
+254:LVR:TRUE:FALSE:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@tryConsumeToken(char):412:13663:true |==> false
+255:LVR:FALSE:TRUE:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@tryConsumeToken(char):414:13690:false |==> true
+256:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@entryComplete():418:13768:content.hasNext() |==> false
+257:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@entryComplete():418:13768:content.hasNext() |==> true
+258:LVR:TRUE:FALSE:com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@entryComplete():419:13789:true |==> false
+259:ROR:==(int,int):<=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@entryComplete():423:13849:c == ';' |==> c <= ';'
+260:ROR:==(int,int):>=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@entryComplete():423:13849:c == ';' |==> c >= ';'
+261:ROR:==(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@entryComplete():423:13851:c == ';' |==> false
+262:ROR:==(int,int):<=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@entryComplete():423:13861:c == ',' |==> c <= ','
+263:ROR:==(int,int):>=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@entryComplete():423:13861:c == ',' |==> c >= ','
+264:ROR:==(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@entryComplete():423:13863:c == ',' |==> false
+265:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@entryComplete():423:13849:c == ';' || c == ',' |==> c == ';'
+266:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@entryComplete():423:13861:c == ';' || c == ',' |==> c == ','
+267:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3$MappingBuilder@entryComplete():423:13858:c == ';' || c == ',' |==> true
+268:AOR:-(int,int):%(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):437:14186:end - start |==> end % start
+269:AOR:-(int,int):*(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):437:14186:end - start |==> end * start
+270:AOR:-(int,int):+(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):437:14186:end - start |==> end + start
+271:AOR:-(int,int):/(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):437:14186:end - start |==> end / start
+272:LVR:POS:0:com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):437:14201:2 |==> 0
+273:LVR:POS:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):437:14201:2 |==> -2
+274:AOR:/(int,int):%(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):437:14185:(end - start) / 2 |==> (end - start) % 2
+275:AOR:/(int,int):*(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):437:14185:(end - start) / 2 |==> (end - start) * 2
+276:AOR:/(int,int):+(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):437:14185:(end - start) / 2 |==> (end - start) + 2
+277:AOR:/(int,int):-(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):437:14185:(end - start) / 2 |==> (end - start) - 2
+278:AOR:+(int,int):%(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):437:14184:((end - start) / 2) + start |==> ((end - start) / 2) % start
+279:AOR:+(int,int):*(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):437:14184:((end - start) / 2) + start |==> ((end - start) / 2) * start
+280:AOR:+(int,int):-(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):437:14184:((end - start) / 2) + start |==> ((end - start) / 2) - start
+281:AOR:+(int,int):/(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):437:14184:((end - start) / 2) + start |==> ((end - start) / 2) / start
+282:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):439:14290:0 |==> 1
+283:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):439:14290:0 |==> -1
+284:ROR:==(int,int):<=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):439:14279:compare == 0 |==> compare <= 0
+285:ROR:==(int,int):>=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):439:14279:compare == 0 |==> compare >= 0
+286:ROR:==(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):439:14287:compare == 0 |==> false
+287:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):441:14342:0 |==> 1
+288:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):441:14342:0 |==> -1
+289:ROR:<(int,int):!=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):441:14332:compare < 0 |==> compare != 0
+290:ROR:<(int,int):<=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):441:14332:compare < 0 |==> compare <= 0
+291:ROR:<(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):441:14340:compare < 0 |==> false
+292:LVR:POS:0:com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):443:14404:1 |==> 0
+293:LVR:POS:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):443:14404:1 |==> -1
+294:AOR:+(int,int):%(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):443:14398:mid + 1 |==> mid % 1
+295:AOR:+(int,int):*(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):443:14398:mid + 1 |==> mid * 1
+296:AOR:+(int,int):-(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):443:14398:mid + 1 |==> mid - 1
+297:AOR:+(int,int):/(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):443:14398:mid + 1 |==> mid / 1
+298:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):443:14390:start = mid + 1; |==> <NO-OP>
+299:ROR:>(int,int):!=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):444:14419:start > end |==> start != end
+300:ROR:>(int,int):>=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):444:14419:start > end |==> start >= end
+301:ROR:>(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):444:14425:start > end |==> false
+302:LVR:POS:0:com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):449:14536:1 |==> 0
+303:LVR:POS:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):449:14536:1 |==> -1
+304:AOR:-(int,int):%(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):449:14530:mid - 1 |==> mid % 1
+305:AOR:-(int,int):*(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):449:14530:mid - 1 |==> mid * 1
+306:AOR:-(int,int):+(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):449:14530:mid - 1 |==> mid + 1
+307:AOR:-(int,int):/(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):449:14530:mid - 1 |==> mid / 1
+308:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):449:14524:end = mid - 1; |==> <NO-OP>
+309:ROR:<(int,int):!=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):450:14551:end < start |==> end != start
+310:ROR:<(int,int):<=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):450:14551:end < start |==> end <= start
+311:ROR:<(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@search(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int,int):450:14555:end < start |==> false
+312:AOR:-(int,int):%(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@compareEntry(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int):461:14788:entries.get(entry).getGeneratedColumn() - target |==> entries.get(entry).getGeneratedColumn() % target
+313:AOR:-(int,int):*(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@compareEntry(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int):461:14788:entries.get(entry).getGeneratedColumn() - target |==> entries.get(entry).getGeneratedColumn() * target
+314:AOR:-(int,int):+(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@compareEntry(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int):461:14788:entries.get(entry).getGeneratedColumn() - target |==> entries.get(entry).getGeneratedColumn() + target
+315:AOR:-(int,int):/(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@compareEntry(java.util.ArrayList<com.google.debugging.sourcemap.SourceMapConsumerV3.Entry>,int,int):461:14788:entries.get(entry).getGeneratedColumn() - target |==> entries.get(entry).getGeneratedColumn() / target
+316:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3@getPreviousMapping(int):470:15052:0 |==> 1
+317:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@getPreviousMapping(int):470:15052:0 |==> -1
+318:ROR:==(int,int):<=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getPreviousMapping(int):470:15038:lineNumber == 0 |==> lineNumber <= 0
+319:ROR:==(int,int):>=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getPreviousMapping(int):470:15038:lineNumber == 0 |==> lineNumber >= 0
+320:ROR:==(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getPreviousMapping(int):470:15049:lineNumber == 0 |==> false
+321:STD:<DEC>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@getPreviousMapping(int):473:15092:lineNumber--; |==> <NO-OP>
+322:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.debugging.sourcemap.SourceMapConsumerV3@getPreviousMapping(int):474:15141:lines.get(lineNumber) == null |==> false
+323:LVR:POS:0:com.google.debugging.sourcemap.SourceMapConsumerV3@getPreviousMapping(int):476:15272:1 |==> 0
+324:LVR:POS:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@getPreviousMapping(int):476:15272:1 |==> -1
+325:AOR:-(int,int):%(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getPreviousMapping(int):476:15255:entries.size() - 1 |==> entries.size() % 1
+326:AOR:-(int,int):*(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getPreviousMapping(int):476:15255:entries.size() - 1 |==> entries.size() * 1
+327:AOR:-(int,int):+(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getPreviousMapping(int):476:15255:entries.size() - 1 |==> entries.size() + 1
+328:AOR:-(int,int):/(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getPreviousMapping(int):476:15255:entries.size() - 1 |==> entries.size() / 1
+329:ROR:==(int,int):<=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getOriginalMappingForEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):483:15439:entry.getSourceFileId() == UNMAPPED |==> entry.getSourceFileId() <= UNMAPPED
+330:ROR:==(int,int):>=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getOriginalMappingForEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):483:15439:entry.getSourceFileId() == UNMAPPED |==> entry.getSourceFileId() >= UNMAPPED
+331:ROR:==(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getOriginalMappingForEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):483:15463:entry.getSourceFileId() == UNMAPPED |==> false
+332:ROR:!=(int,int):<(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getOriginalMappingForEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):491:15780:entry.getNameId() != UNMAPPED |==> entry.getNameId() < UNMAPPED
+333:ROR:!=(int,int):>(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getOriginalMappingForEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):491:15780:entry.getNameId() != UNMAPPED |==> entry.getNameId() > UNMAPPED
+334:ROR:!=(int,int):TRUE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@getOriginalMappingForEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):491:15798:entry.getNameId() != UNMAPPED |==> true
+335:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@getOriginalMappingForEntry(com.google.debugging.sourcemap.SourceMapConsumerV3.Entry):492:15821:x.setIdentifier(names[entry.getNameId()]); |==> <NO-OP>
+336:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():504:16129:reverseSourceMapping = new HashMap<String, Map<Integer, Collection<OriginalMapping>>>(); |==> <NO-OP>
+337:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():507:16253:0 |==> 1
+338:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():507:16253:0 |==> -1
+339:ROR:<(int,int):<=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():507:16256:targetLine < lines.size() |==> targetLine <= lines.size()
+340:ROR:<(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():507:16267:targetLine < lines.size() |==> false
+341:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():510:16374:entries != null |==> true
+342:ROR:!=(int,int):<(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():512:16437:entry.getSourceFileId() != UNMAPPED |==> entry.getSourceFileId() < UNMAPPED
+343:ROR:!=(int,int):>(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():512:16437:entry.getSourceFileId() != UNMAPPED |==> entry.getSourceFileId() > UNMAPPED
+344:ROR:!=(int,int):TRUE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():512:16461:entry.getSourceFileId() != UNMAPPED |==> true
+345:ROR:!=(int,int):<(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():513:16490:entry.getSourceLine() != UNMAPPED |==> entry.getSourceLine() < UNMAPPED
+346:ROR:!=(int,int):>(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():513:16490:entry.getSourceLine() != UNMAPPED |==> entry.getSourceLine() > UNMAPPED
+347:ROR:!=(int,int):TRUE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():513:16512:entry.getSourceLine() != UNMAPPED |==> true
+348:COR:&&(boolean,boolean):==(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():512:16437:entry.getSourceFileId() != UNMAPPED && entry.getSourceLine() != UNMAPPED |==> entry.getSourceFileId() != UNMAPPED == (entry.getSourceLine() != UNMAPPED)
+349:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():513:16487:entry.getSourceFileId() != UNMAPPED && entry.getSourceLine() != UNMAPPED |==> false
+350:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():512:16437:entry.getSourceFileId() != UNMAPPED && entry.getSourceLine() != UNMAPPED |==> entry.getSourceFileId() != UNMAPPED
+351:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():513:16490:entry.getSourceFileId() != UNMAPPED && entry.getSourceLine() != UNMAPPED |==> entry.getSourceLine() != UNMAPPED
+352:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():516:16645:reverseSourceMapping.containsKey(originalFile) |==> false
+353:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():516:16645:reverseSourceMapping.containsKey(originalFile) |==> true
+354:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():517:16677:reverseSourceMapping.put(originalFile, new HashMap<Integer, Collection<OriginalMapping>>()); |==> <NO-OP>
+355:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():526:17037:lineToCollectionMap.containsKey(sourceLine) |==> false
+356:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():526:17037:lineToCollectionMap.containsKey(sourceLine) |==> true
+357:LVR:POS:0:com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():528:17152:1 |==> 0
+358:LVR:POS:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():528:17152:1 |==> -1
+359:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():527:17067:lineToCollectionMap.put(sourceLine, new ArrayList<OriginalMapping>(1)); |==> <NO-OP>
+360:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@createReverseMapping():537:17439:mappings.add(builder.build()); |==> <NO-OP>
+361:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3$StringCharIterator:551:17773:0 |==> 1
+362:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3$StringCharIterator:551:17773:0 |==> -1
+363:ROR:<(int,int):!=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$StringCharIterator@hasNext():569:18101:current < length |==> current != length
+364:ROR:<(int,int):<=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$StringCharIterator@hasNext():569:18101:current < length |==> current <= length
+365:ROR:<(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3$StringCharIterator@hasNext():569:18109:current < length |==> false
+366:LVR:FALSE:TRUE:com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):685:20620:false |==> true
+367:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):692:20829:0 |==> 1
+368:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):692:20829:0 |==> -1
+369:ROR:<(int,int):!=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):692:20832:i < lineCount |==> i != lineCount
+370:ROR:<(int,int):<=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):692:20832:i < lineCount |==> i <= lineCount
+371:ROR:<(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):692:20834:i < lineCount |==> false
+372:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):694:20913:line != null |==> true
+373:LVR:0:POS:com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):696:20989:0 |==> 1
+374:LVR:0:NEG:com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):696:20989:0 |==> -1
+375:ROR:<(int,int):!=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):696:20992:j < entryCount |==> j != entryCount
+376:ROR:<(int,int):<=(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):696:20992:j < entryCount |==> j <= entryCount
+377:ROR:<(int,int):FALSE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):696:20994:j < entryCount |==> false
+378:COR:<IDENTIFIER(boolean)>:FALSE:com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):698:21066:pending |==> false
+379:COR:<IDENTIFIER(boolean)>:TRUE:com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):698:21066:pending |==> true
+380:STD:<CALL>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):701:21194:visitor.visit(sourceName, symbolName, sourceStartPosition, startPosition, endPosition); |==> <NO-OP>
+381:LVR:FALSE:TRUE:com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):707:21385:false |==> true
+382:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):707:21375:pending = false; |==> <NO-OP>
+383:ROR:!=(int,int):<(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):710:21419:entry.getSourceFileId() != UNMAPPED |==> entry.getSourceFileId() < UNMAPPED
+384:ROR:!=(int,int):>(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):710:21419:entry.getSourceFileId() != UNMAPPED |==> entry.getSourceFileId() > UNMAPPED
+385:ROR:!=(int,int):TRUE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):710:21443:entry.getSourceFileId() != UNMAPPED |==> true
+386:LVR:TRUE:FALSE:com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):711:21480:true |==> false
+387:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):711:21470:pending = true; |==> <NO-OP>
+388:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):712:21498:sourceName = sources[entry.getSourceFileId()]; |==> <NO-OP>
+389:ROR:!=(int,int):<(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):713:21571:entry.getNameId() != UNMAPPED |==> entry.getNameId() < UNMAPPED
+390:ROR:!=(int,int):>(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):713:21571:entry.getNameId() != UNMAPPED |==> entry.getNameId() > UNMAPPED
+391:ROR:!=(int,int):TRUE(int,int):com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):713:21589:entry.getNameId() != UNMAPPED |==> true
+392:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):713:21557:symbolName = (entry.getNameId() != UNMAPPED) ? names[entry.getNameId()] : null; |==> <NO-OP>
+393:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):715:21665:sourceStartPosition = new FilePosition(entry.getSourceLine(), entry.getSourceColumn()); |==> <NO-OP>
+394:STD:<ASSIGN>:<NO-OP>:com.google.debugging.sourcemap.SourceMapConsumerV3@visitMappings(com.google.debugging.sourcemap.SourceMapConsumerV3.EntryVisitor):717:21782:startPosition = new FilePosition(i, entry.getGeneratedColumn()); |==> <NO-OP>
+395:LVR:TRUE:FALSE:com.google.javascript.jscomp.SourceMap$DetailLevel$1@apply(com.google.javascript.rhino.Node):81:2559:true |==> false
+396:COR:||(boolean,boolean):!=(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):88:2766:node.isCall() || node.isNew() |==> node.isCall() != node.isNew()
+397:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):88:2766:node.isCall() || node.isNew() |==> node.isCall()
+398:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):89:2795:node.isCall() || node.isNew() |==> node.isNew()
+399:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):89:2792:node.isCall() || node.isNew() |==> true
+400:COR:||(boolean,boolean):!=(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):88:2766:node.isCall() || node.isNew() || node.isFunction() |==> (node.isCall() || node.isNew()) != node.isFunction()
+401:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):88:2766:node.isCall() || node.isNew() || node.isFunction() |==> node.isCall() || node.isNew()
+402:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):90:2823:node.isCall() || node.isNew() || node.isFunction() |==> node.isFunction()
+403:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):90:2820:node.isCall() || node.isNew() || node.isFunction() |==> true
+404:COR:||(boolean,boolean):!=(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):88:2766:node.isCall() || node.isNew() || node.isFunction() || node.isName() |==> (node.isCall() || node.isNew() || node.isFunction()) != node.isName()
+405:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):88:2766:node.isCall() || node.isNew() || node.isFunction() || node.isName() |==> node.isCall() || node.isNew() || node.isFunction()
+406:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):91:2856:node.isCall() || node.isNew() || node.isFunction() || node.isName() |==> node.isName()
+407:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):91:2853:node.isCall() || node.isNew() || node.isFunction() || node.isName() |==> true
+408:COR:||(boolean,boolean):!=(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):88:2766:node.isCall() || node.isNew() || node.isFunction() || node.isName() || NodeUtil.isGet(node) |==> (node.isCall() || node.isNew() || node.isFunction() || node.isName()) != NodeUtil.isGet(node)
+409:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):88:2766:node.isCall() || node.isNew() || node.isFunction() || node.isName() || NodeUtil.isGet(node) |==> node.isCall() || node.isNew() || node.isFunction() || node.isName()
+410:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):92:2885:node.isCall() || node.isNew() || node.isFunction() || node.isName() || NodeUtil.isGet(node) |==> NodeUtil.isGet(node)
+411:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):92:2882:node.isCall() || node.isNew() || node.isFunction() || node.isName() || NodeUtil.isGet(node) |==> true
+412:COR:||(boolean,boolean):!=(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):88:2766:node.isCall() || node.isNew() || node.isFunction() || node.isName() || NodeUtil.isGet(node) || NodeUtil.isObjectLitKey(node, node.getParent()) |==> (node.isCall() || node.isNew() || node.isFunction() || node.isName() || NodeUtil.isGet(node)) != NodeUtil.isObjectLitKey(node, node.getParent())
+413:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):88:2766:node.isCall() || node.isNew() || node.isFunction() || node.isName() || NodeUtil.isGet(node) || NodeUtil.isObjectLitKey(node, node.getParent()) |==> node.isCall() || node.isNew() || node.isFunction() || node.isName() || NodeUtil.isGet(node)
+414:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):93:2921:node.isCall() || node.isNew() || node.isFunction() || node.isName() || NodeUtil.isGet(node) || NodeUtil.isObjectLitKey(node, node.getParent()) |==> NodeUtil.isObjectLitKey(node, node.getParent())
+415:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):93:2918:node.isCall() || node.isNew() || node.isFunction() || node.isName() || NodeUtil.isGet(node) || NodeUtil.isObjectLitKey(node, node.getParent()) |==> true
+416:COR:&&(boolean,boolean):==(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):94:2985:node.isString() && NodeUtil.isGet(node.getParent()) |==> node.isString() == NodeUtil.isGet(node.getParent())
+417:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):94:3001:node.isString() && NodeUtil.isGet(node.getParent()) |==> false
+418:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):94:2985:node.isString() && NodeUtil.isGet(node.getParent()) |==> node.isString()
+419:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):94:3004:node.isString() && NodeUtil.isGet(node.getParent()) |==> NodeUtil.isGet(node.getParent())
+420:COR:||(boolean,boolean):!=(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):88:2766:node.isCall() || node.isNew() || node.isFunction() || node.isName() || NodeUtil.isGet(node) || NodeUtil.isObjectLitKey(node, node.getParent()) || (node.isString() && NodeUtil.isGet(node.getParent())) |==> (node.isCall() || node.isNew() || node.isFunction() || node.isName() || NodeUtil.isGet(node) || NodeUtil.isObjectLitKey(node, node.getParent())) != (node.isString() && NodeUtil.isGet(node.getParent()))
+421:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):88:2766:node.isCall() || node.isNew() || node.isFunction() || node.isName() || NodeUtil.isGet(node) || NodeUtil.isObjectLitKey(node, node.getParent()) || (node.isString() && NodeUtil.isGet(node.getParent())) |==> node.isCall() || node.isNew() || node.isFunction() || node.isName() || NodeUtil.isGet(node) || NodeUtil.isObjectLitKey(node, node.getParent())
+422:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):94:2984:node.isCall() || node.isNew() || node.isFunction() || node.isName() || NodeUtil.isGet(node) || NodeUtil.isObjectLitKey(node, node.getParent()) || (node.isString() && NodeUtil.isGet(node.getParent())) |==> (node.isString() && NodeUtil.isGet(node.getParent()))
+423:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.javascript.jscomp.SourceMap$DetailLevel$2@apply(com.google.javascript.rhino.Node):94:2981:node.isCall() || node.isNew() || node.isFunction() || node.isName() || NodeUtil.isGet(node) || NodeUtil.isObjectLitKey(node, node.getParent()) || (node.isString() && NodeUtil.isGet(node.getParent())) |==> true
+424:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.javascript.jscomp.SourceMap@addMapping(com.google.javascript.rhino.Node,com.google.debugging.sourcemap.FilePosition,com.google.debugging.sourcemap.FilePosition):126:3964:sourceFile == null |==> false
+425:LVR:0:POS:com.google.javascript.jscomp.SourceMap@addMapping(com.google.javascript.rhino.Node,com.google.debugging.sourcemap.FilePosition,com.google.debugging.sourcemap.FilePosition):126:3994:0 |==> 1
+426:LVR:0:NEG:com.google.javascript.jscomp.SourceMap@addMapping(com.google.javascript.rhino.Node,com.google.debugging.sourcemap.FilePosition,com.google.debugging.sourcemap.FilePosition):126:3994:0 |==> -1
+427:ROR:<(int,int):!=(int,int):com.google.javascript.jscomp.SourceMap@addMapping(com.google.javascript.rhino.Node,com.google.debugging.sourcemap.FilePosition,com.google.debugging.sourcemap.FilePosition):126:3975:node.getLineno() < 0 |==> node.getLineno() != 0
+428:ROR:<(int,int):<=(int,int):com.google.javascript.jscomp.SourceMap@addMapping(com.google.javascript.rhino.Node,com.google.debugging.sourcemap.FilePosition,com.google.debugging.sourcemap.FilePosition):126:3975:node.getLineno() < 0 |==> node.getLineno() <= 0
+429:ROR:<(int,int):FALSE(int,int):com.google.javascript.jscomp.SourceMap@addMapping(com.google.javascript.rhino.Node,com.google.debugging.sourcemap.FilePosition,com.google.debugging.sourcemap.FilePosition):126:3992:node.getLineno() < 0 |==> false
+430:COR:||(boolean,boolean):!=(boolean,boolean):com.google.javascript.jscomp.SourceMap@addMapping(com.google.javascript.rhino.Node,com.google.debugging.sourcemap.FilePosition,com.google.debugging.sourcemap.FilePosition):126:3953:sourceFile == null || node.getLineno() < 0 |==> sourceFile == null != node.getLineno() < 0
+431:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.javascript.jscomp.SourceMap@addMapping(com.google.javascript.rhino.Node,com.google.debugging.sourcemap.FilePosition,com.google.debugging.sourcemap.FilePosition):126:3953:sourceFile == null || node.getLineno() < 0 |==> sourceFile == null
+432:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.javascript.jscomp.SourceMap@addMapping(com.google.javascript.rhino.Node,com.google.debugging.sourcemap.FilePosition,com.google.debugging.sourcemap.FilePosition):126:3975:sourceFile == null || node.getLineno() < 0 |==> node.getLineno() < 0
+433:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.javascript.jscomp.SourceMap@addMapping(com.google.javascript.rhino.Node,com.google.debugging.sourcemap.FilePosition,com.google.debugging.sourcemap.FilePosition):126:3972:sourceFile == null || node.getLineno() < 0 |==> true
+434:STD:<ASSIGN>:<NO-OP>:com.google.javascript.jscomp.SourceMap@addMapping(com.google.javascript.rhino.Node,com.google.debugging.sourcemap.FilePosition,com.google.debugging.sourcemap.FilePosition):130:4024:sourceFile = fixupSourceLocation(sourceFile); |==> <NO-OP>
+435:STD:<CALL>:<NO-OP>:com.google.javascript.jscomp.SourceMap@addMapping(com.google.javascript.rhino.Node,com.google.debugging.sourcemap.FilePosition,com.google.debugging.sourcemap.FilePosition):139:4338:generator.addMapping(sourceFile, originalName, new FilePosition(node.getLineno(), node.getCharno()), outputStartPosition, outputEndPosition); |==> <NO-OP>
+436:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.javascript.jscomp.SourceMap@fixupSourceLocation(java.lang.String):150:4705:prefixMappings.isEmpty() |==> false
+437:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.javascript.jscomp.SourceMap@fixupSourceLocation(java.lang.String):150:4705:prefixMappings.isEmpty() |==> true
+438:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.google.javascript.jscomp.SourceMap@fixupSourceLocation(java.lang.String):155:4818:fixed != null |==> true
+439:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.javascript.jscomp.SourceMap@fixupSourceLocation(java.lang.String):161:4999:sourceFile.startsWith(mapping.prefix) |==> false
+440:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.javascript.jscomp.SourceMap@fixupSourceLocation(java.lang.String):161:4999:sourceFile.startsWith(mapping.prefix) |==> true
+441:STD:<ASSIGN>:<NO-OP>:com.google.javascript.jscomp.SourceMap@fixupSourceLocation(java.lang.String):162:5027:fixed = mapping.replacement + sourceFile.substring(mapping.prefix.length()); |==> <NO-OP>
+442:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.javascript.jscomp.SourceMap@fixupSourceLocation(java.lang.String):169:5229:fixed == null |==> false
+443:STD:<ASSIGN>:<NO-OP>:com.google.javascript.jscomp.SourceMap@fixupSourceLocation(java.lang.String):170:5246:fixed = sourceFile; |==> <NO-OP>
+444:STD:<CALL>:<NO-OP>:com.google.javascript.jscomp.SourceMap@fixupSourceLocation(java.lang.String):173:5277:sourceLocationFixupCache.put(sourceFile, fixed); |==> <NO-OP>
+445:STD:<CALL>:<NO-OP>:com.google.javascript.jscomp.SourceMap@appendTo(java.lang.Appendable,java.lang.String):178:5426:generator.appendTo(out, name); |==> <NO-OP>
+446:STD:<CALL>:<NO-OP>:com.google.javascript.jscomp.SourceMap@reset():182:5490:generator.reset(); |==> <NO-OP>
+447:STD:<CALL>:<NO-OP>:com.google.javascript.jscomp.SourceMap@reset():183:5513:sourceLocationFixupCache.clear(); |==> <NO-OP>
+448:STD:<CALL>:<NO-OP>:com.google.javascript.jscomp.SourceMap@setStartingPosition(int,int):187:5625:generator.setStartingPosition(offsetLine, offsetIndex); |==> <NO-OP>
+449:STD:<CALL>:<NO-OP>:com.google.javascript.jscomp.SourceMap@setWrapperPrefix(java.lang.String):191:5738:generator.setWrapperPrefix(prefix); |==> <NO-OP>
+450:STD:<CALL>:<NO-OP>:com.google.javascript.jscomp.SourceMap@validate(boolean):195:5826:generator.validate(validate); |==> <NO-OP>
+451:STD:<ASSIGN>:<NO-OP>:com.google.javascript.jscomp.SourceMap@setPrefixMappings(java.util.List<com.google.javascript.jscomp.SourceMap.LocationMapping>):202:5999:this.prefixMappings = sourceMapLocationMappings; |==> <NO-OP>
