@@ -1,0 +1,945 @@
+1:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream:93:3571:true |==> false
+2:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream:102:3897:false |==> true
+3:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream:105:4041:false |==> true
+4:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream:115:4425:false |==> true
+5:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream:157:6069:1024 |==> 0
+6:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream:157:6069:1024 |==> -1024
+7:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream:160:6228:2 |==> 0
+8:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream:160:6228:2 |==> -2
+9:AOR:*(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream:160:6228:2 * DWORD |==> 2 % DWORD
+10:AOR:*(int,int):+(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream:160:6228:2 * DWORD |==> 2 + DWORD
+11:AOR:*(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream:160:6228:2 * DWORD |==> 2 - DWORD
+12:AOR:*(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream:160:6228:2 * DWORD |==> 2 / DWORD
+13:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream:162:6271:0 |==> 1
+14:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream:162:6271:0 |==> -1
+15:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@<init>(java.io.InputStream,java.lang.String):180:6877:true |==> false
+16:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@<init>(java.io.InputStream,java.lang.String,boolean):192:7426:false |==> true
+17:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@<init>(java.io.InputStream,java.lang.String,boolean,boolean):214:8457:this.allowStoredEntriesWithDataDescriptor = allowStoredEntriesWithDataDescriptor; |==> <NO-OP>
+18:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@<init>(java.io.InputStream,java.lang.String,boolean,boolean):217:8609:0 |==> 1
+19:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@<init>(java.io.InputStream,java.lang.String,boolean,boolean):217:8609:0 |==> -1
+20:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@<init>(java.io.InputStream,java.lang.String,boolean,boolean):217:8599:buf.limit(0); |==> <NO-OP>
+21:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():221:8715:true |==> false
+22:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():222:8733:closed || hitCentralDirectory |==> closed != hitCentralDirectory
+23:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():222:8733:closed || hitCentralDirectory |==> closed
+24:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():222:8743:closed || hitCentralDirectory |==> hitCentralDirectory
+25:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():222:8740:closed || hitCentralDirectory |==> true
+26:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():225:8821:current != null |==> true
+27:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():226:8844:closeEntry(); |==> <NO-OP>
+28:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():227:8883:false |==> true
+29:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():227:8870:firstEntry = false; |==> <NO-OP>
+30:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():232:8982:firstEntry |==> false
+31:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():232:8982:firstEntry |==> true
+32:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():237:9249:readFirstLocalFileHeader(lfhBuf); |==> <NO-OP>
+33:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():239:9320:readFully(lfhBuf); |==> <NO-OP>
+34:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():246:9491:sig.equals(ZipLong.CFH_SIG) || sig.equals(ZipLong.AED_SIG) |==> sig.equals(ZipLong.CFH_SIG) != sig.equals(ZipLong.AED_SIG)
+35:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():246:9491:sig.equals(ZipLong.CFH_SIG) || sig.equals(ZipLong.AED_SIG) |==> sig.equals(ZipLong.CFH_SIG)
+36:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():246:9522:sig.equals(ZipLong.CFH_SIG) || sig.equals(ZipLong.AED_SIG) |==> sig.equals(ZipLong.AED_SIG)
+37:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():246:9519:sig.equals(ZipLong.CFH_SIG) || sig.equals(ZipLong.AED_SIG) |==> true
+38:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():247:9587:true |==> false
+39:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():247:9565:hitCentralDirectory = true; |==> <NO-OP>
+40:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():248:9605:skipRemainderOfArchive(); |==> <NO-OP>
+41:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():251:9689:sig.equals(ZipLong.LFH_SIG) |==> false
+42:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():251:9689:sig.equals(ZipLong.LFH_SIG) |==> true
+43:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():256:9857:current = new CurrentEntry(); |==> <NO-OP>
+44:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():259:9962:off += SHORT; |==> <NO-OP>
+45:SOR:>>(int,int):<<(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():260:10011:versionMadeBy >> ZipFile.BYTE_SHIFT |==> versionMadeBy << ZipFile.BYTE_SHIFT
+46:SOR:>>(int,int):>>>(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():260:10011:versionMadeBy >> ZipFile.BYTE_SHIFT |==> versionMadeBy >>> ZipFile.BYTE_SHIFT
+47:LOR:&(int,int):^(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():260:10010:(versionMadeBy >> ZipFile.BYTE_SHIFT) & ZipFile.NIBLET_MASK |==> (versionMadeBy >> ZipFile.BYTE_SHIFT) ^ ZipFile.NIBLET_MASK
+48:LOR:&(int,int):|(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():260:10010:(versionMadeBy >> ZipFile.BYTE_SHIFT) & ZipFile.NIBLET_MASK |==> (versionMadeBy >> ZipFile.BYTE_SHIFT) | ZipFile.NIBLET_MASK
+49:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():260:9984:current.entry.setPlatform((versionMadeBy >> ZipFile.BYTE_SHIFT) & ZipFile.NIBLET_MASK); |==> <NO-OP>
+50:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():264:10257:hasUTF8Flag |==> false
+51:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():264:10257:hasUTF8Flag |==> true
+52:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():265:10330:current.hasDataDescriptor = gpFlag.usesDataDescriptor(); |==> <NO-OP>
+53:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():266:10395:current.entry.setGeneralPurposeBit(gpFlag); |==> <NO-OP>
+54:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():268:10448:off += SHORT; |==> <NO-OP>
+55:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():270:10471:current.entry.setMethod(ZipShort.getValue(lfhBuf, off)); |==> <NO-OP>
+56:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():271:10536:off += SHORT; |==> <NO-OP>
+57:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():274:10639:current.entry.setTime(time); |==> <NO-OP>
+58:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():275:10676:off += WORD; |==> <NO-OP>
+59:COR:<MEMBER_SELECT(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():278:10753:current.hasDataDescriptor |==> false
+60:COR:<MEMBER_SELECT(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():278:10753:current.hasDataDescriptor |==> true
+61:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():279:10787:current.entry.setCrc(ZipLong.getValue(lfhBuf, off)); |==> <NO-OP>
+62:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():280:10852:off += WORD; |==> <NO-OP>
+63:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():282:10878:cSize = new ZipLong(lfhBuf, off); |==> <NO-OP>
+64:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():283:10924:off += WORD; |==> <NO-OP>
+65:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():285:10950:size = new ZipLong(lfhBuf, off); |==> <NO-OP>
+66:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():286:10995:off += WORD; |==> <NO-OP>
+67:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():288:11044:3 |==> 0
+68:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():288:11044:3 |==> -3
+69:AOR:*(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():288:11044:3 * WORD |==> 3 % WORD
+70:AOR:*(int,int):+(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():288:11044:3 * WORD |==> 3 + WORD
+71:AOR:*(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():288:11044:3 * WORD |==> 3 - WORD
+72:AOR:*(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():288:11044:3 * WORD |==> 3 / WORD
+73:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():288:11037:off += 3 * WORD; |==> <NO-OP>
+74:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():293:11138:off += SHORT; |==> <NO-OP>
+75:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():296:11222:off += SHORT; |==> <NO-OP>
+76:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():299:11341:readFully(fileName); |==> <NO-OP>
+77:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():300:11370:current.entry.setName(entryEncoding.decode(fileName), fileName); |==> <NO-OP>
+78:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():301:11447:hasUTF8Flag |==> false
+79:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():301:11447:hasUTF8Flag |==> true
+80:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():302:11474:current.entry.setNameSource(ZipArchiveEntry.NameSource.NAME_WITH_EFS_FLAG); |==> <NO-OP>
+81:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():306:11622:readFully(extraData); |==> <NO-OP>
+82:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():307:11652:current.entry.setExtra(extraData); |==> <NO-OP>
+83:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():309:11700:!hasUTF8Flag && useUnicodeExtraFields |==> !hasUTF8Flag == useUnicodeExtraFields
+84:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():309:11713:!hasUTF8Flag && useUnicodeExtraFields |==> false
+85:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():309:11700:!hasUTF8Flag && useUnicodeExtraFields |==> !hasUTF8Flag
+86:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():309:11716:!hasUTF8Flag && useUnicodeExtraFields |==> useUnicodeExtraFields
+87:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():310:11753:ZipUtil.setNameAndCommentFromExtraFields(current.entry, fileName, null); |==> <NO-OP>
+88:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():313:11845:processZip64Extra(size, cSize); |==> <NO-OP>
+89:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():315:11886:current.entry.setLocalHeaderOffset(currentHeaderOffset); |==> <NO-OP>
+90:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():316:11951:current.entry.setDataOffset(getBytesRead()); |==> <NO-OP>
+91:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():317:12038:true |==> false
+92:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():317:12004:current.entry.setStreamContiguous(true); |==> <NO-OP>
+93:ROR:!=(long,long):<(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():320:12134:current.entry.getCompressedSize() != ArchiveEntry.SIZE_UNKNOWN |==> current.entry.getCompressedSize() < ArchiveEntry.SIZE_UNKNOWN
+94:ROR:!=(long,long):>(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():320:12134:current.entry.getCompressedSize() != ArchiveEntry.SIZE_UNKNOWN |==> current.entry.getCompressedSize() > ArchiveEntry.SIZE_UNKNOWN
+95:ROR:!=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():320:12168:current.entry.getCompressedSize() != ArchiveEntry.SIZE_UNKNOWN |==> true
+96:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():321:12263:m != ZipMethod.STORED |==> true
+97:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():321:12216:ZipUtil.canHandleEntryData(current.entry) && m != ZipMethod.STORED |==> ZipUtil.canHandleEntryData(current.entry) == (m != ZipMethod.STORED)
+98:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():321:12258:ZipUtil.canHandleEntryData(current.entry) && m != ZipMethod.STORED |==> false
+99:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():321:12216:ZipUtil.canHandleEntryData(current.entry) && m != ZipMethod.STORED |==> ZipUtil.canHandleEntryData(current.entry)
+100:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():321:12261:ZipUtil.canHandleEntryData(current.entry) && m != ZipMethod.STORED |==> m != ZipMethod.STORED
+101:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():321:12288:m != ZipMethod.DEFLATED |==> true
+102:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():321:12216:ZipUtil.canHandleEntryData(current.entry) && m != ZipMethod.STORED && m != ZipMethod.DEFLATED |==> (ZipUtil.canHandleEntryData(current.entry) && m != ZipMethod.STORED) == (m != ZipMethod.DEFLATED)
+103:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():321:12283:ZipUtil.canHandleEntryData(current.entry) && m != ZipMethod.STORED && m != ZipMethod.DEFLATED |==> false
+104:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():321:12216:ZipUtil.canHandleEntryData(current.entry) && m != ZipMethod.STORED && m != ZipMethod.DEFLATED |==> ZipUtil.canHandleEntryData(current.entry) && m != ZipMethod.STORED
+105:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():321:12286:ZipUtil.canHandleEntryData(current.entry) && m != ZipMethod.STORED && m != ZipMethod.DEFLATED |==> m != ZipMethod.DEFLATED
+106:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():325:12493:current.in = new UnshrinkingInputStream(bis); |==> <NO-OP>
+107:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():328:12618:current.in = new ExplodingInputStream(current.entry.getGeneralPurposeBit().getSlidingDictionarySize(), current.entry.getGeneralPurposeBit().getNumberOfShannonFanoTrees(), bis); |==> <NO-OP>
+108:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():334:12943:current.in = new BZip2CompressorInputStream(bis); |==> <NO-OP>
+109:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():337:13080:current.in = new Deflate64CompressorInputStream(bis); |==> <NO-OP>
+110:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():346:13514:m == ZipMethod.ENHANCED_DEFLATED |==> false
+111:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():347:13560:current.in = new Deflate64CompressorInputStream(in); |==> <NO-OP>
+112:STD:<INC>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getNextZipEntry():350:13632:entriesRead++; |==> <NO-OP>
+113:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):360:13938:readFully(lfh); |==> <NO-OP>
+114:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):362:14022:sig.equals(ZipLong.DD_SIG) |==> false
+115:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):362:14022:sig.equals(ZipLong.DD_SIG) |==> true
+116:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):366:14179:sig.equals(ZipLong.SINGLE_SEGMENT_SPLIT_MARKER) |==> false
+117:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):366:14179:sig.equals(ZipLong.SINGLE_SEGMENT_SPLIT_MARKER) |==> true
+118:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):369:14404:4 |==> 0
+119:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):369:14404:4 |==> -4
+120:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):370:14420:readFully(missedLfhBytes); |==> <NO-OP>
+121:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):371:14481:4 |==> 0
+122:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):371:14481:4 |==> -4
+123:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):371:14489:0 |==> 1
+124:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):371:14489:0 |==> -1
+125:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):371:14502:4 |==> 0
+126:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):371:14502:4 |==> -4
+127:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):371:14492:LFH_LEN - 4 |==> LFH_LEN % 4
+128:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):371:14492:LFH_LEN - 4 |==> LFH_LEN * 4
+129:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):371:14492:LFH_LEN - 4 |==> LFH_LEN + 4
+130:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):371:14492:LFH_LEN - 4 |==> LFH_LEN / 4
+131:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):371:14459:System.arraycopy(lfh, 4, lfh, 0, LFH_LEN - 4); |==> <NO-OP>
+132:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):372:14551:0 |==> 1
+133:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):372:14551:0 |==> -1
+134:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):372:14569:4 |==> 0
+135:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):372:14569:4 |==> -4
+136:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):372:14559:LFH_LEN - 4 |==> LFH_LEN % 4
+137:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):372:14559:LFH_LEN - 4 |==> LFH_LEN * 4
+138:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):372:14559:LFH_LEN - 4 |==> LFH_LEN + 4
+139:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):372:14559:LFH_LEN - 4 |==> LFH_LEN / 4
+140:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):372:14572:4 |==> 0
+141:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):372:14572:4 |==> -4
+142:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFirstLocalFileHeader(byte[]):372:14518:System.arraycopy(missedLfhBytes, 0, lfh, LFH_LEN - 4, 4); |==> <NO-OP>
+143:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@processZip64Extra(org.apache.commons.compress.archivers.zip.ZipLong,org.apache.commons.compress.archivers.zip.ZipLong):385:15079:z64 != null |==> true
+144:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@processZip64Extra(org.apache.commons.compress.archivers.zip.ZipLong,org.apache.commons.compress.archivers.zip.ZipLong):385:15055:current.usesZip64 = z64 != null; |==> <NO-OP>
+145:COR:<MEMBER_SELECT(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@processZip64Extra(org.apache.commons.compress.archivers.zip.ZipLong,org.apache.commons.compress.archivers.zip.ZipLong):386:15108:current.hasDataDescriptor |==> false
+146:COR:<MEMBER_SELECT(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@processZip64Extra(org.apache.commons.compress.archivers.zip.ZipLong,org.apache.commons.compress.archivers.zip.ZipLong):386:15108:current.hasDataDescriptor |==> true
+147:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@processZip64Extra(org.apache.commons.compress.archivers.zip.ZipLong,org.apache.commons.compress.archivers.zip.ZipLong):387:15150:z64 != null |==> true
+148:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@processZip64Extra(org.apache.commons.compress.archivers.zip.ZipLong,org.apache.commons.compress.archivers.zip.ZipLong):388:15234:cSize.equals(ZipLong.ZIP64_MAGIC) || size.equals(ZipLong.ZIP64_MAGIC) |==> cSize.equals(ZipLong.ZIP64_MAGIC) != size.equals(ZipLong.ZIP64_MAGIC)
+149:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@processZip64Extra(org.apache.commons.compress.archivers.zip.ZipLong,org.apache.commons.compress.archivers.zip.ZipLong):388:15234:cSize.equals(ZipLong.ZIP64_MAGIC) || size.equals(ZipLong.ZIP64_MAGIC) |==> cSize.equals(ZipLong.ZIP64_MAGIC)
+150:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@processZip64Extra(org.apache.commons.compress.archivers.zip.ZipLong,org.apache.commons.compress.archivers.zip.ZipLong):388:15271:cSize.equals(ZipLong.ZIP64_MAGIC) || size.equals(ZipLong.ZIP64_MAGIC) |==> size.equals(ZipLong.ZIP64_MAGIC)
+151:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@processZip64Extra(org.apache.commons.compress.archivers.zip.ZipLong,org.apache.commons.compress.archivers.zip.ZipLong):388:15268:cSize.equals(ZipLong.ZIP64_MAGIC) || size.equals(ZipLong.ZIP64_MAGIC) |==> true
+152:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@processZip64Extra(org.apache.commons.compress.archivers.zip.ZipLong,org.apache.commons.compress.archivers.zip.ZipLong):387:15146:z64 != null && (cSize.equals(ZipLong.ZIP64_MAGIC) || size.equals(ZipLong.ZIP64_MAGIC)) |==> z64 != null == (cSize.equals(ZipLong.ZIP64_MAGIC) || size.equals(ZipLong.ZIP64_MAGIC))
+153:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@processZip64Extra(org.apache.commons.compress.archivers.zip.ZipLong,org.apache.commons.compress.archivers.zip.ZipLong):388:15230:z64 != null && (cSize.equals(ZipLong.ZIP64_MAGIC) || size.equals(ZipLong.ZIP64_MAGIC)) |==> false
+154:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@processZip64Extra(org.apache.commons.compress.archivers.zip.ZipLong,org.apache.commons.compress.archivers.zip.ZipLong):387:15146:z64 != null && (cSize.equals(ZipLong.ZIP64_MAGIC) || size.equals(ZipLong.ZIP64_MAGIC)) |==> z64 != null
+155:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@processZip64Extra(org.apache.commons.compress.archivers.zip.ZipLong,org.apache.commons.compress.archivers.zip.ZipLong):388:15233:z64 != null && (cSize.equals(ZipLong.ZIP64_MAGIC) || size.equals(ZipLong.ZIP64_MAGIC)) |==> (cSize.equals(ZipLong.ZIP64_MAGIC) || size.equals(ZipLong.ZIP64_MAGIC))
+156:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@processZip64Extra(org.apache.commons.compress.archivers.zip.ZipLong,org.apache.commons.compress.archivers.zip.ZipLong):389:15325:current.entry.setCompressedSize(z64.getCompressedSize().getLongValue()); |==> <NO-OP>
+157:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@processZip64Extra(org.apache.commons.compress.archivers.zip.ZipLong,org.apache.commons.compress.archivers.zip.ZipLong):390:15414:current.entry.setSize(z64.getSize().getLongValue()); |==> <NO-OP>
+158:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@processZip64Extra(org.apache.commons.compress.archivers.zip.ZipLong,org.apache.commons.compress.archivers.zip.ZipLong):392:15504:current.entry.setCompressedSize(cSize.getValue()); |==> <NO-OP>
+159:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@processZip64Extra(org.apache.commons.compress.archivers.zip.ZipLong,org.apache.commons.compress.archivers.zip.ZipLong):393:15571:current.entry.setSize(size.getValue()); |==> <NO-OP>
+160:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@canReadEntryData(org.apache.commons.compress.archivers.ArchiveEntry):414:16187:ZipUtil.canHandleEntryData(ze) && supportsDataDescriptorFor(ze) |==> ZipUtil.canHandleEntryData(ze) == supportsDataDescriptorFor(ze)
+161:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@canReadEntryData(org.apache.commons.compress.archivers.ArchiveEntry):415:16234:ZipUtil.canHandleEntryData(ze) && supportsDataDescriptorFor(ze) |==> false
+162:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@canReadEntryData(org.apache.commons.compress.archivers.ArchiveEntry):414:16187:ZipUtil.canHandleEntryData(ze) && supportsDataDescriptorFor(ze) |==> ZipUtil.canHandleEntryData(ze)
+163:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@canReadEntryData(org.apache.commons.compress.archivers.ArchiveEntry):415:16237:ZipUtil.canHandleEntryData(ze) && supportsDataDescriptorFor(ze) |==> supportsDataDescriptorFor(ze)
+164:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@canReadEntryData(org.apache.commons.compress.archivers.ArchiveEntry):417:16293:false |==> true
+165:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):422:16431:closed |==> false
+166:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):422:16431:closed |==> true
+167:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):426:16531:current == null |==> false
+168:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):427:16561:-1 |==> 0
+169:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):427:16561:-1 |==> 1
+170:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16637:offset > buffer.length |==> offset != buffer.length
+171:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16637:offset > buffer.length |==> offset >= buffer.length
+172:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16644:offset > buffer.length |==> false
+173:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16672:0 |==> 1
+174:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16672:0 |==> -1
+175:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16663:length < 0 |==> length != 0
+176:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16663:length < 0 |==> length <= 0
+177:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16670:length < 0 |==> false
+178:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16637:offset > buffer.length || length < 0 |==> offset > buffer.length != length < 0
+179:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16637:offset > buffer.length || length < 0 |==> offset > buffer.length
+180:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16663:offset > buffer.length || length < 0 |==> length < 0
+181:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16660:offset > buffer.length || length < 0 |==> true
+182:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16686:0 |==> 1
+183:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16686:0 |==> -1
+184:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16677:offset < 0 |==> offset != 0
+185:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16677:offset < 0 |==> offset <= 0
+186:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16684:offset < 0 |==> false
+187:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16637:offset > buffer.length || length < 0 || offset < 0 |==> (offset > buffer.length || length < 0) != offset < 0
+188:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16637:offset > buffer.length || length < 0 || offset < 0 |==> offset > buffer.length || length < 0
+189:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16677:offset > buffer.length || length < 0 || offset < 0 |==> offset < 0
+190:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16674:offset > buffer.length || length < 0 || offset < 0 |==> true
+191:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16691:buffer.length - offset |==> buffer.length % offset
+192:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16691:buffer.length - offset |==> buffer.length * offset
+193:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16691:buffer.length - offset |==> buffer.length + offset
+194:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16691:buffer.length - offset |==> buffer.length / offset
+195:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16691:buffer.length - offset < length |==> buffer.length - offset != length
+196:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16691:buffer.length - offset < length |==> buffer.length - offset <= length
+197:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16714:buffer.length - offset < length |==> false
+198:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16637:offset > buffer.length || length < 0 || offset < 0 || buffer.length - offset < length |==> (offset > buffer.length || length < 0 || offset < 0) != buffer.length - offset < length
+199:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16637:offset > buffer.length || length < 0 || offset < 0 || buffer.length - offset < length |==> offset > buffer.length || length < 0 || offset < 0
+200:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16691:offset > buffer.length || length < 0 || offset < 0 || buffer.length - offset < length |==> buffer.length - offset < length
+201:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):431:16688:offset > buffer.length || length < 0 || offset < 0 || buffer.length - offset < length |==> true
+202:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):435:16801:ZipUtil.checkRequestedFeatures(current.entry); |==> <NO-OP>
+203:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):436:16886:supportsDataDescriptorFor(current.entry) |==> false
+204:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):436:16886:supportsDataDescriptorFor(current.entry) |==> true
+205:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):442:17091:current.entry.getMethod() == ZipArchiveOutputStream.STORED |==> current.entry.getMethod() <= ZipArchiveOutputStream.STORED
+206:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):442:17091:current.entry.getMethod() == ZipArchiveOutputStream.STORED |==> current.entry.getMethod() >= ZipArchiveOutputStream.STORED
+207:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):442:17117:current.entry.getMethod() == ZipArchiveOutputStream.STORED |==> false
+208:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):444:17227:current.entry.getMethod() == ZipArchiveOutputStream.DEFLATED |==> current.entry.getMethod() <= ZipArchiveOutputStream.DEFLATED
+209:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):444:17227:current.entry.getMethod() == ZipArchiveOutputStream.DEFLATED |==> current.entry.getMethod() >= ZipArchiveOutputStream.DEFLATED
+210:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):444:17253:current.entry.getMethod() == ZipArchiveOutputStream.DEFLATED |==> false
+211:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):446:17367:current.entry.getMethod() == ZipMethod.UNSHRINKING.getCode() |==> current.entry.getMethod() <= ZipMethod.UNSHRINKING.getCode()
+212:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):446:17367:current.entry.getMethod() == ZipMethod.UNSHRINKING.getCode() |==> current.entry.getMethod() >= ZipMethod.UNSHRINKING.getCode()
+213:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):446:17393:current.entry.getMethod() == ZipMethod.UNSHRINKING.getCode() |==> false
+214:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):447:17447:current.entry.getMethod() == ZipMethod.IMPLODING.getCode() |==> current.entry.getMethod() <= ZipMethod.IMPLODING.getCode()
+215:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):447:17447:current.entry.getMethod() == ZipMethod.IMPLODING.getCode() |==> current.entry.getMethod() >= ZipMethod.IMPLODING.getCode()
+216:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):447:17473:current.entry.getMethod() == ZipMethod.IMPLODING.getCode() |==> false
+217:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):446:17367:current.entry.getMethod() == ZipMethod.UNSHRINKING.getCode() || current.entry.getMethod() == ZipMethod.IMPLODING.getCode() |==> current.entry.getMethod() == ZipMethod.UNSHRINKING.getCode() != (current.entry.getMethod() == ZipMethod.IMPLODING.getCode())
+218:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):446:17367:current.entry.getMethod() == ZipMethod.UNSHRINKING.getCode() || current.entry.getMethod() == ZipMethod.IMPLODING.getCode() |==> current.entry.getMethod() == ZipMethod.UNSHRINKING.getCode()
+219:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):447:17447:current.entry.getMethod() == ZipMethod.UNSHRINKING.getCode() || current.entry.getMethod() == ZipMethod.IMPLODING.getCode() |==> current.entry.getMethod() == ZipMethod.IMPLODING.getCode()
+220:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):447:17444:current.entry.getMethod() == ZipMethod.UNSHRINKING.getCode() || current.entry.getMethod() == ZipMethod.IMPLODING.getCode() |==> true
+221:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):448:17525:current.entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode() |==> current.entry.getMethod() <= ZipMethod.ENHANCED_DEFLATED.getCode()
+222:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):448:17525:current.entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode() |==> current.entry.getMethod() >= ZipMethod.ENHANCED_DEFLATED.getCode()
+223:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):448:17551:current.entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode() |==> false
+224:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):446:17367:current.entry.getMethod() == ZipMethod.UNSHRINKING.getCode() || current.entry.getMethod() == ZipMethod.IMPLODING.getCode() || current.entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode() |==> (current.entry.getMethod() == ZipMethod.UNSHRINKING.getCode() || current.entry.getMethod() == ZipMethod.IMPLODING.getCode()) != (current.entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode())
+225:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):446:17367:current.entry.getMethod() == ZipMethod.UNSHRINKING.getCode() || current.entry.getMethod() == ZipMethod.IMPLODING.getCode() || current.entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode() |==> current.entry.getMethod() == ZipMethod.UNSHRINKING.getCode() || current.entry.getMethod() == ZipMethod.IMPLODING.getCode()
+226:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):448:17525:current.entry.getMethod() == ZipMethod.UNSHRINKING.getCode() || current.entry.getMethod() == ZipMethod.IMPLODING.getCode() || current.entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode() |==> current.entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode()
+227:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):448:17522:current.entry.getMethod() == ZipMethod.UNSHRINKING.getCode() || current.entry.getMethod() == ZipMethod.IMPLODING.getCode() || current.entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode() |==> true
+228:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):449:17611:current.entry.getMethod() == ZipMethod.BZIP2.getCode() |==> current.entry.getMethod() <= ZipMethod.BZIP2.getCode()
+229:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):449:17611:current.entry.getMethod() == ZipMethod.BZIP2.getCode() |==> current.entry.getMethod() >= ZipMethod.BZIP2.getCode()
+230:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):449:17637:current.entry.getMethod() == ZipMethod.BZIP2.getCode() |==> false
+231:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):446:17367:current.entry.getMethod() == ZipMethod.UNSHRINKING.getCode() || current.entry.getMethod() == ZipMethod.IMPLODING.getCode() || current.entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode() || current.entry.getMethod() == ZipMethod.BZIP2.getCode() |==> (current.entry.getMethod() == ZipMethod.UNSHRINKING.getCode() || current.entry.getMethod() == ZipMethod.IMPLODING.getCode() || current.entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode()) != (current.entry.getMethod() == ZipMethod.BZIP2.getCode())
+232:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):446:17367:current.entry.getMethod() == ZipMethod.UNSHRINKING.getCode() || current.entry.getMethod() == ZipMethod.IMPLODING.getCode() || current.entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode() || current.entry.getMethod() == ZipMethod.BZIP2.getCode() |==> current.entry.getMethod() == ZipMethod.UNSHRINKING.getCode() || current.entry.getMethod() == ZipMethod.IMPLODING.getCode() || current.entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode()
+233:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):449:17611:current.entry.getMethod() == ZipMethod.UNSHRINKING.getCode() || current.entry.getMethod() == ZipMethod.IMPLODING.getCode() || current.entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode() || current.entry.getMethod() == ZipMethod.BZIP2.getCode() |==> current.entry.getMethod() == ZipMethod.BZIP2.getCode()
+234:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):449:17608:current.entry.getMethod() == ZipMethod.UNSHRINKING.getCode() || current.entry.getMethod() == ZipMethod.IMPLODING.getCode() || current.entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode() || current.entry.getMethod() == ZipMethod.BZIP2.getCode() |==> true
+235:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):456:17920:0 |==> 1
+236:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):456:17920:0 |==> -1
+237:ROR:>=(int,int):==(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):456:17912:read >= 0 |==> read == 0
+238:ROR:>=(int,int):>(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):456:17912:read >= 0 |==> read > 0
+239:ROR:>=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):456:17917:read >= 0 |==> true
+240:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@read(byte[],int,int):457:17937:current.crc.update(buffer, offset, read); |==> <NO-OP>
+241:COR:<MEMBER_SELECT(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):468:18209:current.hasDataDescriptor |==> false
+242:COR:<MEMBER_SELECT(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):468:18209:current.hasDataDescriptor |==> true
+243:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):469:18263:lastStoredEntry == null |==> false
+244:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):470:18290:readStoredEntry(); |==> <NO-OP>
+245:ROR:>=(long,long):==(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):476:18463:current.bytesRead >= csize |==> current.bytesRead == csize
+246:ROR:>=(long,long):>(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):476:18463:current.bytesRead >= csize |==> current.bytesRead > csize
+247:ROR:>=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):476:18481:current.bytesRead >= csize |==> true
+248:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):477:18512:-1 |==> 0
+249:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):477:18512:-1 |==> 1
+250:ROR:>=(int,int):==(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):480:18539:buf.position() >= buf.limit() |==> buf.position() == buf.limit()
+251:ROR:>=(int,int):>(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):480:18539:buf.position() >= buf.limit() |==> buf.position() > buf.limit()
+252:ROR:>=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):480:18554:buf.position() >= buf.limit() |==> true
+253:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):481:18597:0 |==> 1
+254:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):481:18597:0 |==> -1
+255:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):481:18584:buf.position(0); |==> <NO-OP>
+256:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):483:18670:-1 |==> 0
+257:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):483:18670:-1 |==> 1
+258:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):483:18665:l == -1 |==> l <= -1
+259:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):483:18665:l == -1 |==> l >= -1
+260:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):483:18667:l == -1 |==> false
+261:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):484:18699:-1 |==> 0
+262:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):484:18699:-1 |==> 1
+263:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):486:18729:buf.limit(l); |==> <NO-OP>
+264:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):488:18756:count(l); |==> <NO-OP>
+265:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):489:18778:current.bytesReadFromStream += l; |==> <NO-OP>
+266:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):493:18892:csize - current.bytesRead |==> csize % current.bytesRead
+267:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):493:18892:csize - current.bytesRead |==> csize * current.bytesRead
+268:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):493:18892:csize - current.bytesRead |==> csize + current.bytesRead
+269:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):493:18892:csize - current.bytesRead |==> csize / current.bytesRead
+270:ROR:<(long,long):!=(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):493:18891:(csize - current.bytesRead) < toRead |==> (csize - current.bytesRead) != toRead
+271:ROR:<(long,long):<=(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):493:18891:(csize - current.bytesRead) < toRead |==> (csize - current.bytesRead) <= toRead
+272:ROR:<(long,long):FALSE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):493:18919:(csize - current.bytesRead) < toRead |==> false
+273:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):495:19028:csize - current.bytesRead |==> csize % current.bytesRead
+274:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):495:19028:csize - current.bytesRead |==> csize * current.bytesRead
+275:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):495:19028:csize - current.bytesRead |==> csize + current.bytesRead
+276:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):495:19028:csize - current.bytesRead |==> csize / current.bytesRead
+277:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):495:19012:toRead = (int)(csize - current.bytesRead); |==> <NO-OP>
+278:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):497:19074:buf.get(buffer, offset, toRead); |==> <NO-OP>
+279:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStored(byte[],int,int):498:19115:current.bytesRead += toRead; |==> <NO-OP>
+280:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDeflated(byte[],int,int):507:19436:0 |==> 1
+281:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDeflated(byte[],int,int):507:19436:0 |==> -1
+282:ROR:<=(int,int):<(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDeflated(byte[],int,int):507:19428:read <= 0 |==> read < 0
+283:ROR:<=(int,int):==(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDeflated(byte[],int,int):507:19428:read <= 0 |==> read == 0
+284:ROR:<=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDeflated(byte[],int,int):507:19433:read <= 0 |==> true
+285:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDeflated(byte[],int,int):508:19469:inf.finished() |==> false
+286:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDeflated(byte[],int,int):508:19469:inf.finished() |==> true
+287:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDeflated(byte[],int,int):509:19498:-1 |==> 0
+288:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDeflated(byte[],int,int):509:19498:-1 |==> 1
+289:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDeflated(byte[],int,int):510:19544:inf.needsDictionary() |==> false
+290:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDeflated(byte[],int,int):510:19544:inf.needsDictionary() |==> true
+291:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDeflated(byte[],int,int):514:19795:-1 |==> 0
+292:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDeflated(byte[],int,int):514:19795:-1 |==> 1
+293:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDeflated(byte[],int,int):514:19787:read == -1 |==> read <= -1
+294:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDeflated(byte[],int,int):514:19787:read == -1 |==> read >= -1
+295:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDeflated(byte[],int,int):514:19792:read == -1 |==> false
+296:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):526:20152:0 |==> 1
+297:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):526:20152:0 |==> -1
+298:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):528:20198:inf.needsInput() |==> false
+299:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):528:20198:inf.needsInput() |==> true
+300:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):530:20266:0 |==> 1
+301:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):530:20266:0 |==> -1
+302:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):530:20262:l > 0 |==> l != 0
+303:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):530:20262:l > 0 |==> l >= 0
+304:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):530:20264:l > 0 |==> false
+305:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):531:20291:current.bytesReadFromStream += buf.limit(); |==> <NO-OP>
+306:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):532:20367:-1 |==> 0
+307:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):532:20367:-1 |==> 1
+308:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):532:20362:l == -1 |==> l <= -1
+309:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):532:20362:l == -1 |==> l >= -1
+310:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):532:20364:l == -1 |==> false
+311:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):533:20400:-1 |==> 0
+312:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):533:20400:-1 |==> 1
+313:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):543:20740:0 |==> 1
+314:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):543:20740:0 |==> -1
+315:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):543:20732:read == 0 |==> read <= 0
+316:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):543:20732:read == 0 |==> read >= 0
+317:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):543:20737:read == 0 |==> false
+318:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):543:20732:read == 0 && inf.needsInput() |==> read == 0 == inf.needsInput()
+319:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):543:20742:read == 0 && inf.needsInput() |==> false
+320:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):543:20732:read == 0 && inf.needsInput() |==> read == 0
+321:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFromInflater(byte[],int,int):543:20745:read == 0 && inf.needsInput() |==> inf.needsInput()
+322:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@close():549:20864:closed |==> false
+323:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@close():549:20864:closed |==> true
+324:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@close():550:20895:true |==> false
+325:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@close():550:20886:closed = true; |==> <NO-OP>
+326:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@close():552:20935:in.close(); |==> <NO-OP>
+327:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@close():554:20987:inf.end(); |==> <NO-OP>
+328:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):576:21703:0 |==> 1
+329:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):576:21703:0 |==> -1
+330:ROR:>=(long,long):==(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):576:21694:value >= 0 |==> value == 0
+331:ROR:>=(long,long):>(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):576:21694:value >= 0 |==> value > 0
+332:ROR:>=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):576:21700:value >= 0 |==> true
+333:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):577:21735:0 |==> 1
+334:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):577:21735:0 |==> -1
+335:ROR:<(long,long):!=(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):578:21757:skipped < value |==> skipped != value
+336:ROR:<(long,long):<=(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):578:21757:skipped < value |==> skipped <= value
+337:ROR:<(long,long):FALSE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):578:21765:skipped < value |==> false
+338:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):579:21809:value - skipped |==> value % skipped
+339:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):579:21809:value - skipped |==> value * skipped
+340:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):579:21809:value - skipped |==> value + skipped
+341:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):579:21809:value - skipped |==> value / skipped
+342:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):580:21870:0 |==> 1
+343:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):580:21870:0 |==> -1
+344:ROR:>(long,long):!=(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):580:21880:skipBuf.length > rem |==> skipBuf.length != rem
+345:ROR:>(long,long):>=(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):580:21880:skipBuf.length > rem |==> skipBuf.length >= rem
+346:ROR:>(long,long):FALSE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):580:21895:skipBuf.length > rem |==> false
+347:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):581:21952:-1 |==> 0
+348:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):581:21952:-1 |==> 1
+349:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):581:21947:x == -1 |==> x <= -1
+350:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):581:21947:x == -1 |==> x >= -1
+351:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):581:21949:x == -1 |==> false
+352:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skip(long):584:22028:skipped += x; |==> <NO-OP>
+353:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@matches(byte[],int):601:22608:length < ZipArchiveOutputStream.LFH_SIG.length |==> length != ZipArchiveOutputStream.LFH_SIG.length
+354:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@matches(byte[],int):601:22608:length < ZipArchiveOutputStream.LFH_SIG.length |==> length <= ZipArchiveOutputStream.LFH_SIG.length
+355:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@matches(byte[],int):601:22615:length < ZipArchiveOutputStream.LFH_SIG.length |==> false
+356:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@matches(byte[],int):602:22677:false |==> true
+357:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@matches(byte[],int):605:22710:checksig(signature, ZipArchiveOutputStream.LFH_SIG) || checksig(signature, ZipArchiveOutputStream.EOCD_SIG) |==> checksig(signature, ZipArchiveOutputStream.LFH_SIG) != checksig(signature, ZipArchiveOutputStream.EOCD_SIG)
+358:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@matches(byte[],int):605:22710:checksig(signature, ZipArchiveOutputStream.LFH_SIG) || checksig(signature, ZipArchiveOutputStream.EOCD_SIG) |==> checksig(signature, ZipArchiveOutputStream.LFH_SIG)
+359:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@matches(byte[],int):606:22792:checksig(signature, ZipArchiveOutputStream.LFH_SIG) || checksig(signature, ZipArchiveOutputStream.EOCD_SIG) |==> checksig(signature, ZipArchiveOutputStream.EOCD_SIG)
+360:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@matches(byte[],int):606:22789:checksig(signature, ZipArchiveOutputStream.LFH_SIG) || checksig(signature, ZipArchiveOutputStream.EOCD_SIG) |==> true
+361:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@matches(byte[],int):605:22710:checksig(signature, ZipArchiveOutputStream.LFH_SIG) || checksig(signature, ZipArchiveOutputStream.EOCD_SIG) || checksig(signature, ZipArchiveOutputStream.DD_SIG) |==> (checksig(signature, ZipArchiveOutputStream.LFH_SIG) || checksig(signature, ZipArchiveOutputStream.EOCD_SIG)) != checksig(signature, ZipArchiveOutputStream.DD_SIG)
+362:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@matches(byte[],int):605:22710:checksig(signature, ZipArchiveOutputStream.LFH_SIG) || checksig(signature, ZipArchiveOutputStream.EOCD_SIG) || checksig(signature, ZipArchiveOutputStream.DD_SIG) |==> checksig(signature, ZipArchiveOutputStream.LFH_SIG) || checksig(signature, ZipArchiveOutputStream.EOCD_SIG)
+363:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@matches(byte[],int):607:22873:checksig(signature, ZipArchiveOutputStream.LFH_SIG) || checksig(signature, ZipArchiveOutputStream.EOCD_SIG) || checksig(signature, ZipArchiveOutputStream.DD_SIG) |==> checksig(signature, ZipArchiveOutputStream.DD_SIG)
+364:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@matches(byte[],int):607:22870:checksig(signature, ZipArchiveOutputStream.LFH_SIG) || checksig(signature, ZipArchiveOutputStream.EOCD_SIG) || checksig(signature, ZipArchiveOutputStream.DD_SIG) |==> true
+365:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@matches(byte[],int):605:22710:checksig(signature, ZipArchiveOutputStream.LFH_SIG) || checksig(signature, ZipArchiveOutputStream.EOCD_SIG) || checksig(signature, ZipArchiveOutputStream.DD_SIG) || checksig(signature, ZipLong.SINGLE_SEGMENT_SPLIT_MARKER.getBytes()) |==> (checksig(signature, ZipArchiveOutputStream.LFH_SIG) || checksig(signature, ZipArchiveOutputStream.EOCD_SIG) || checksig(signature, ZipArchiveOutputStream.DD_SIG)) != checksig(signature, ZipLong.SINGLE_SEGMENT_SPLIT_MARKER.getBytes())
+366:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@matches(byte[],int):605:22710:checksig(signature, ZipArchiveOutputStream.LFH_SIG) || checksig(signature, ZipArchiveOutputStream.EOCD_SIG) || checksig(signature, ZipArchiveOutputStream.DD_SIG) || checksig(signature, ZipLong.SINGLE_SEGMENT_SPLIT_MARKER.getBytes()) |==> checksig(signature, ZipArchiveOutputStream.LFH_SIG) || checksig(signature, ZipArchiveOutputStream.EOCD_SIG) || checksig(signature, ZipArchiveOutputStream.DD_SIG)
+367:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@matches(byte[],int):608:22952:checksig(signature, ZipArchiveOutputStream.LFH_SIG) || checksig(signature, ZipArchiveOutputStream.EOCD_SIG) || checksig(signature, ZipArchiveOutputStream.DD_SIG) || checksig(signature, ZipLong.SINGLE_SEGMENT_SPLIT_MARKER.getBytes()) |==> checksig(signature, ZipLong.SINGLE_SEGMENT_SPLIT_MARKER.getBytes())
+368:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@matches(byte[],int):608:22949:checksig(signature, ZipArchiveOutputStream.LFH_SIG) || checksig(signature, ZipArchiveOutputStream.EOCD_SIG) || checksig(signature, ZipArchiveOutputStream.DD_SIG) || checksig(signature, ZipLong.SINGLE_SEGMENT_SPLIT_MARKER.getBytes()) |==> true
+369:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@checksig(byte[],byte[]):612:23134:0 |==> 1
+370:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@checksig(byte[],byte[]):612:23134:0 |==> -1
+371:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@checksig(byte[],byte[]):612:23137:i < expected.length |==> i <= expected.length
+372:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@checksig(byte[],byte[]):612:23139:i < expected.length |==> false
+373:ROR:!=(int,int):<(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@checksig(byte[],byte[]):613:23181:signature[i] != expected[i] |==> signature[i] < expected[i]
+374:ROR:!=(int,int):>(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@checksig(byte[],byte[]):613:23181:signature[i] != expected[i] |==> signature[i] > expected[i]
+375:ROR:!=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@checksig(byte[],byte[]):613:23194:signature[i] != expected[i] |==> true
+376:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@checksig(byte[],byte[]):614:23235:false |==> true
+377:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@checksig(byte[],byte[]):617:23281:true |==> false
+378:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():639:24233:closed |==> false
+379:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():639:24233:closed |==> true
+380:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():642:24332:current == null |==> false
+381:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():647:24460:currentEntryHasOutstandingBytes() |==> false
+382:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():647:24460:currentEntryHasOutstandingBytes() |==> true
+383:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():648:24478:drainCurrentEntryData(); |==> <NO-OP>
+384:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():651:24588:skip(Long.MAX_VALUE); |==> <NO-OP>
+385:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():653:24650:current.entry.getMethod() == ZipArchiveOutputStream.DEFLATED |==> current.entry.getMethod() <= ZipArchiveOutputStream.DEFLATED
+386:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():653:24650:current.entry.getMethod() == ZipArchiveOutputStream.DEFLATED |==> current.entry.getMethod() >= ZipArchiveOutputStream.DEFLATED
+387:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():653:24676:current.entry.getMethod() == ZipArchiveOutputStream.DEFLATED |==> false
+388:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():658:24919:current.bytesReadFromStream - inB |==> current.bytesReadFromStream % inB
+389:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():658:24919:current.bytesReadFromStream - inB |==> current.bytesReadFromStream * inB
+390:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():658:24919:current.bytesReadFromStream - inB |==> current.bytesReadFromStream + inB
+391:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():658:24919:current.bytesReadFromStream - inB |==> current.bytesReadFromStream / inB
+392:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():661:25022:0 |==> 1
+393:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():661:25022:0 |==> -1
+394:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():661:25015:diff > 0 |==> diff != 0
+395:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():661:25015:diff > 0 |==> diff >= 0
+396:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():661:25020:diff > 0 |==> false
+397:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():662:25065:buf.limit() - diff |==> buf.limit() % diff
+398:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():662:25065:buf.limit() - diff |==> buf.limit() * diff
+399:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():662:25065:buf.limit() - diff |==> buf.limit() + diff
+400:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():662:25065:buf.limit() - diff |==> buf.limit() / diff
+401:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():662:25043:pushback(buf.array(), buf.limit() - diff, diff); |==> <NO-OP>
+402:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():663:25108:current.bytesReadFromStream -= diff; |==> <NO-OP>
+403:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():667:25283:currentEntryHasOutstandingBytes() |==> false
+404:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():667:25283:currentEntryHasOutstandingBytes() |==> true
+405:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():668:25305:drainCurrentEntryData(); |==> <NO-OP>
+406:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():672:25383:lastStoredEntry == null |==> false
+407:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():672:25367:lastStoredEntry == null && current.hasDataDescriptor |==> lastStoredEntry == null == current.hasDataDescriptor
+408:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():672:25391:lastStoredEntry == null && current.hasDataDescriptor |==> false
+409:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():672:25367:lastStoredEntry == null && current.hasDataDescriptor |==> lastStoredEntry == null
+410:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():672:25394:lastStoredEntry == null && current.hasDataDescriptor |==> current.hasDataDescriptor
+411:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():673:25435:readDataDescriptor(); |==> <NO-OP>
+412:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():676:25476:inf.reset(); |==> <NO-OP>
+413:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():677:25497:buf.clear().flip(); |==> <NO-OP>
+414:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():678:25525:current = null; |==> <NO-OP>
+415:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@closeEntry():679:25549:lastStoredEntry = null; |==> <NO-OP>
+416:ROR:<=(long,long):<(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@currentEntryHasOutstandingBytes():690:25952:current.bytesReadFromStream <= current.entry.getCompressedSize() |==> current.bytesReadFromStream < current.entry.getCompressedSize()
+417:ROR:<=(long,long):==(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@currentEntryHasOutstandingBytes():690:25952:current.bytesReadFromStream <= current.entry.getCompressedSize() |==> current.bytesReadFromStream == current.entry.getCompressedSize()
+418:ROR:<=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@currentEntryHasOutstandingBytes():690:25980:current.bytesReadFromStream <= current.entry.getCompressedSize() |==> true
+419:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@currentEntryHasOutstandingBytes():690:25952:current.bytesReadFromStream <= current.entry.getCompressedSize() && !current.hasDataDescriptor |==> current.bytesReadFromStream <= current.entry.getCompressedSize() == !current.hasDataDescriptor
+420:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@currentEntryHasOutstandingBytes():691:26033:current.bytesReadFromStream <= current.entry.getCompressedSize() && !current.hasDataDescriptor |==> false
+421:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@currentEntryHasOutstandingBytes():690:25952:current.bytesReadFromStream <= current.entry.getCompressedSize() && !current.hasDataDescriptor |==> current.bytesReadFromStream <= current.entry.getCompressedSize()
+422:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@currentEntryHasOutstandingBytes():691:26036:current.bytesReadFromStream <= current.entry.getCompressedSize() && !current.hasDataDescriptor |==> !current.hasDataDescriptor
+423:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@drainCurrentEntryData():699:26278:current.entry.getCompressedSize() - current.bytesReadFromStream |==> current.entry.getCompressedSize() % current.bytesReadFromStream
+424:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@drainCurrentEntryData():699:26278:current.entry.getCompressedSize() - current.bytesReadFromStream |==> current.entry.getCompressedSize() * current.bytesReadFromStream
+425:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@drainCurrentEntryData():699:26278:current.entry.getCompressedSize() - current.bytesReadFromStream |==> current.entry.getCompressedSize() + current.bytesReadFromStream
+426:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@drainCurrentEntryData():699:26278:current.entry.getCompressedSize() - current.bytesReadFromStream |==> current.entry.getCompressedSize() / current.bytesReadFromStream
+427:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@drainCurrentEntryData():700:26370:0 |==> 1
+428:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@drainCurrentEntryData():700:26370:0 |==> -1
+429:ROR:>(long,long):!=(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@drainCurrentEntryData():700:26358:remaining > 0 |==> remaining != 0
+430:ROR:>(long,long):>=(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@drainCurrentEntryData():700:26358:remaining > 0 |==> remaining >= 0
+431:ROR:>(long,long):FALSE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@drainCurrentEntryData():700:26368:remaining > 0 |==> false
+432:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@drainCurrentEntryData():701:26423:0 |==> 1
+433:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@drainCurrentEntryData():701:26423:0 |==> -1
+434:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@drainCurrentEntryData():702:26490:0 |==> 1
+435:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@drainCurrentEntryData():702:26490:0 |==> -1
+436:ROR:<(long,long):!=(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@drainCurrentEntryData():702:26486:n < 0 |==> n != 0
+437:ROR:<(long,long):<=(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@drainCurrentEntryData():702:26486:n < 0 |==> n <= 0
+438:ROR:<(long,long):FALSE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@drainCurrentEntryData():702:26488:n < 0 |==> false
+439:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@drainCurrentEntryData():706:26674:count(n); |==> <NO-OP>
+440:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@drainCurrentEntryData():707:26696:remaining -= n; |==> <NO-OP>
+441:ROR:>=(long,long):==(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getBytesInflated():728:27560:current.bytesReadFromStream >= TWO_EXP_32 |==> current.bytesReadFromStream == TWO_EXP_32
+442:ROR:>=(long,long):>(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getBytesInflated():728:27560:current.bytesReadFromStream >= TWO_EXP_32 |==> current.bytesReadFromStream > TWO_EXP_32
+443:ROR:>=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getBytesInflated():728:27588:current.bytesReadFromStream >= TWO_EXP_32 |==> true
+444:AOR:+(long,long):%(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getBytesInflated():729:27624:inB + TWO_EXP_32 |==> inB % TWO_EXP_32
+445:AOR:+(long,long):*(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getBytesInflated():729:27624:inB + TWO_EXP_32 |==> inB * TWO_EXP_32
+446:AOR:+(long,long):-(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getBytesInflated():729:27624:inB + TWO_EXP_32 |==> inB - TWO_EXP_32
+447:AOR:+(long,long):/(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getBytesInflated():729:27624:inB + TWO_EXP_32 |==> inB / TWO_EXP_32
+448:ROR:<=(long,long):<(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getBytesInflated():729:27624:inB + TWO_EXP_32 <= current.bytesReadFromStream |==> inB + TWO_EXP_32 < current.bytesReadFromStream
+449:ROR:<=(long,long):==(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getBytesInflated():729:27624:inB + TWO_EXP_32 <= current.bytesReadFromStream |==> inB + TWO_EXP_32 == current.bytesReadFromStream
+450:ROR:<=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getBytesInflated():729:27641:inB + TWO_EXP_32 <= current.bytesReadFromStream |==> true
+451:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@getBytesInflated():730:27691:inB += TWO_EXP_32; |==> <NO-OP>
+452:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@fill():737:27817:closed |==> false
+453:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@fill():737:27817:closed |==> true
+454:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@fill():741:27966:0 |==> 1
+455:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@fill():741:27966:0 |==> -1
+456:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@fill():741:27957:length > 0 |==> length != 0
+457:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@fill():741:27957:length > 0 |==> length >= 0
+458:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@fill():741:27964:length > 0 |==> false
+459:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@fill():742:27983:buf.limit(length); |==> <NO-OP>
+460:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@fill():743:28014:count(buf.limit()); |==> <NO-OP>
+461:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@fill():744:28072:0 |==> 1
+462:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@fill():744:28072:0 |==> -1
+463:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@fill():744:28046:inf.setInput(buf.array(), 0, buf.limit()); |==> <NO-OP>
+464:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFully(byte[]):751:28253:count(count); |==> <NO-OP>
+465:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFully(byte[]):752:28279:count < b.length |==> count != b.length
+466:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFully(byte[]):752:28279:count < b.length |==> count <= b.length
+467:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readFully(byte[]):752:28285:count < b.length |==> false
+468:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDataDescriptor():758:28421:readFully(wordBuf); |==> <NO-OP>
+469:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDataDescriptor():760:28518:ZipLong.DD_SIG.equals(val) |==> false
+470:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDataDescriptor():760:28518:ZipLong.DD_SIG.equals(val) |==> true
+471:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDataDescriptor():762:28595:readFully(wordBuf); |==> <NO-OP>
+472:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDataDescriptor():763:28627:val = new ZipLong(wordBuf); |==> <NO-OP>
+473:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDataDescriptor():765:28673:current.entry.setCrc(val.getValue()); |==> <NO-OP>
+474:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDataDescriptor():778:29359:readFully(twoDwordBuf); |==> <NO-OP>
+475:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDataDescriptor():780:29465:potentialSig.equals(ZipLong.CFH_SIG) || potentialSig.equals(ZipLong.LFH_SIG) |==> potentialSig.equals(ZipLong.CFH_SIG) != potentialSig.equals(ZipLong.LFH_SIG)
+476:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDataDescriptor():780:29465:potentialSig.equals(ZipLong.CFH_SIG) || potentialSig.equals(ZipLong.LFH_SIG) |==> potentialSig.equals(ZipLong.CFH_SIG)
+477:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDataDescriptor():780:29505:potentialSig.equals(ZipLong.CFH_SIG) || potentialSig.equals(ZipLong.LFH_SIG) |==> potentialSig.equals(ZipLong.LFH_SIG)
+478:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDataDescriptor():780:29502:potentialSig.equals(ZipLong.CFH_SIG) || potentialSig.equals(ZipLong.LFH_SIG) |==> true
+479:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDataDescriptor():781:29557:pushback(twoDwordBuf, DWORD, DWORD); |==> <NO-OP>
+480:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDataDescriptor():782:29606:current.entry.setCompressedSize(ZipLong.getValue(twoDwordBuf)); |==> <NO-OP>
+481:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDataDescriptor():783:29682:current.entry.setSize(ZipLong.getValue(twoDwordBuf, WORD)); |==> <NO-OP>
+482:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDataDescriptor():785:29771:current.entry.setCompressedSize(ZipEightByteInteger.getLongValue(twoDwordBuf)); |==> <NO-OP>
+483:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readDataDescriptor():786:29863:current.entry.setSize(ZipEightByteInteger.getLongValue(twoDwordBuf, DWORD)); |==> <NO-OP>
+484:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):800:30442:entry.getMethod() == ZipEntry.STORED |==> entry.getMethod() <= ZipEntry.STORED
+485:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):800:30442:entry.getMethod() == ZipEntry.STORED |==> entry.getMethod() >= ZipEntry.STORED
+486:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):800:30460:entry.getMethod() == ZipEntry.STORED |==> false
+487:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):800:30402:allowStoredEntriesWithDataDescriptor && entry.getMethod() == ZipEntry.STORED |==> allowStoredEntriesWithDataDescriptor == (entry.getMethod() == ZipEntry.STORED)
+488:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):800:30439:allowStoredEntriesWithDataDescriptor && entry.getMethod() == ZipEntry.STORED |==> false
+489:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):800:30402:allowStoredEntriesWithDataDescriptor && entry.getMethod() == ZipEntry.STORED |==> allowStoredEntriesWithDataDescriptor
+490:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):800:30442:allowStoredEntriesWithDataDescriptor && entry.getMethod() == ZipEntry.STORED |==> entry.getMethod() == ZipEntry.STORED
+491:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):798:30330:!entry.getGeneralPurposeBit().usesDataDescriptor() || (allowStoredEntriesWithDataDescriptor && entry.getMethod() == ZipEntry.STORED) |==> !entry.getGeneralPurposeBit().usesDataDescriptor() != (allowStoredEntriesWithDataDescriptor && entry.getMethod() == ZipEntry.STORED)
+492:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):798:30330:!entry.getGeneralPurposeBit().usesDataDescriptor() || (allowStoredEntriesWithDataDescriptor && entry.getMethod() == ZipEntry.STORED) |==> !entry.getGeneralPurposeBit().usesDataDescriptor()
+493:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):800:30401:!entry.getGeneralPurposeBit().usesDataDescriptor() || (allowStoredEntriesWithDataDescriptor && entry.getMethod() == ZipEntry.STORED) |==> (allowStoredEntriesWithDataDescriptor && entry.getMethod() == ZipEntry.STORED)
+494:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):800:30398:!entry.getGeneralPurposeBit().usesDataDescriptor() || (allowStoredEntriesWithDataDescriptor && entry.getMethod() == ZipEntry.STORED) |==> true
+495:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):801:30499:entry.getMethod() == ZipEntry.DEFLATED |==> entry.getMethod() <= ZipEntry.DEFLATED
+496:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):801:30499:entry.getMethod() == ZipEntry.DEFLATED |==> entry.getMethod() >= ZipEntry.DEFLATED
+497:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):801:30517:entry.getMethod() == ZipEntry.DEFLATED |==> false
+498:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):798:30330:!entry.getGeneralPurposeBit().usesDataDescriptor() || (allowStoredEntriesWithDataDescriptor && entry.getMethod() == ZipEntry.STORED) || entry.getMethod() == ZipEntry.DEFLATED |==> (!entry.getGeneralPurposeBit().usesDataDescriptor() || (allowStoredEntriesWithDataDescriptor && entry.getMethod() == ZipEntry.STORED)) != (entry.getMethod() == ZipEntry.DEFLATED)
+499:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):798:30330:!entry.getGeneralPurposeBit().usesDataDescriptor() || (allowStoredEntriesWithDataDescriptor && entry.getMethod() == ZipEntry.STORED) || entry.getMethod() == ZipEntry.DEFLATED |==> !entry.getGeneralPurposeBit().usesDataDescriptor() || (allowStoredEntriesWithDataDescriptor && entry.getMethod() == ZipEntry.STORED)
+500:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):801:30499:!entry.getGeneralPurposeBit().usesDataDescriptor() || (allowStoredEntriesWithDataDescriptor && entry.getMethod() == ZipEntry.STORED) || entry.getMethod() == ZipEntry.DEFLATED |==> entry.getMethod() == ZipEntry.DEFLATED
+501:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):801:30496:!entry.getGeneralPurposeBit().usesDataDescriptor() || (allowStoredEntriesWithDataDescriptor && entry.getMethod() == ZipEntry.STORED) || entry.getMethod() == ZipEntry.DEFLATED |==> true
+502:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):802:30557:entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode() |==> entry.getMethod() <= ZipMethod.ENHANCED_DEFLATED.getCode()
+503:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):802:30557:entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode() |==> entry.getMethod() >= ZipMethod.ENHANCED_DEFLATED.getCode()
+504:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):802:30575:entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode() |==> false
+505:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):798:30330:!entry.getGeneralPurposeBit().usesDataDescriptor() || (allowStoredEntriesWithDataDescriptor && entry.getMethod() == ZipEntry.STORED) || entry.getMethod() == ZipEntry.DEFLATED || entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode() |==> (!entry.getGeneralPurposeBit().usesDataDescriptor() || (allowStoredEntriesWithDataDescriptor && entry.getMethod() == ZipEntry.STORED) || entry.getMethod() == ZipEntry.DEFLATED) != (entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode())
+506:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):798:30330:!entry.getGeneralPurposeBit().usesDataDescriptor() || (allowStoredEntriesWithDataDescriptor && entry.getMethod() == ZipEntry.STORED) || entry.getMethod() == ZipEntry.DEFLATED || entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode() |==> !entry.getGeneralPurposeBit().usesDataDescriptor() || (allowStoredEntriesWithDataDescriptor && entry.getMethod() == ZipEntry.STORED) || entry.getMethod() == ZipEntry.DEFLATED
+507:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):802:30557:!entry.getGeneralPurposeBit().usesDataDescriptor() || (allowStoredEntriesWithDataDescriptor && entry.getMethod() == ZipEntry.STORED) || entry.getMethod() == ZipEntry.DEFLATED || entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode() |==> entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode()
+508:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@supportsDataDescriptorFor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):802:30554:!entry.getGeneralPurposeBit().usesDataDescriptor() || (allowStoredEntriesWithDataDescriptor && entry.getMethod() == ZipEntry.STORED) || entry.getMethod() == ZipEntry.DEFLATED || entry.getMethod() == ZipMethod.ENHANCED_DEFLATED.getCode() |==> true
+509:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():829:31573:0 |==> 1
+510:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():829:31573:0 |==> -1
+511:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():830:31599:false |==> true
+512:COR:<MEMBER_SELECT(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():833:31682:current.usesZip64 |==> false
+513:COR:<MEMBER_SELECT(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():833:31682:current.usesZip64 |==> true
+514:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():833:31702:2 |==> 0
+515:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():833:31702:2 |==> -2
+516:AOR:*(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():833:31702:2 * DWORD |==> 2 % DWORD
+517:AOR:*(int,int):+(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():833:31702:2 * DWORD |==> 2 + DWORD
+518:AOR:*(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():833:31702:2 * DWORD |==> 2 - DWORD
+519:AOR:*(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():833:31702:2 * DWORD |==> 2 / DWORD
+520:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():833:31695:WORD + 2 * DWORD |==> WORD % (2 * DWORD)
+521:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():833:31695:WORD + 2 * DWORD |==> WORD * (2 * DWORD)
+522:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():833:31695:WORD + 2 * DWORD |==> WORD - 2 * DWORD
+523:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():833:31695:WORD + 2 * DWORD |==> WORD / (2 * DWORD)
+524:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():833:31714:3 |==> 0
+525:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():833:31714:3 |==> -3
+526:AOR:*(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():833:31714:3 * WORD |==> 3 % WORD
+527:AOR:*(int,int):+(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():833:31714:3 * WORD |==> 3 + WORD
+528:AOR:*(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():833:31714:3 * WORD |==> 3 - WORD
+529:AOR:*(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():833:31714:3 * WORD |==> 3 / WORD
+530:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():836:31801:ZipArchiveOutputStream.BUFFER_SIZE - off |==> ZipArchiveOutputStream.BUFFER_SIZE % off
+531:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():836:31801:ZipArchiveOutputStream.BUFFER_SIZE - off |==> ZipArchiveOutputStream.BUFFER_SIZE * off
+532:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():836:31801:ZipArchiveOutputStream.BUFFER_SIZE - off |==> ZipArchiveOutputStream.BUFFER_SIZE + off
+533:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():836:31801:ZipArchiveOutputStream.BUFFER_SIZE - off |==> ZipArchiveOutputStream.BUFFER_SIZE / off
+534:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():837:31865:0 |==> 1
+535:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():837:31865:0 |==> -1
+536:ROR:<=(int,int):<(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():837:31860:r <= 0 |==> r < 0
+537:ROR:<=(int,int):==(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():837:31860:r <= 0 |==> r == 0
+538:ROR:<=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():837:31862:r <= 0 |==> true
+539:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():842:32063:r + off |==> r % off
+540:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():842:32063:r + off |==> r * off
+541:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():842:32063:r + off |==> r - off
+542:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():842:32063:r + off |==> r / off
+543:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():842:32073:4 |==> 0
+544:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():842:32073:4 |==> -4
+545:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():842:32063:r + off < 4 |==> r + off != 4
+546:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():842:32063:r + off < 4 |==> r + off <= 4
+547:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():842:32071:r + off < 4 |==> false
+548:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():844:32161:off += r; |==> <NO-OP>
+549:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():848:32224:done = bufferContainsSignature(bos, off, r, ddLen); |==> <NO-OP>
+550:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():849:32293:done |==> false
+551:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():849:32293:done |==> true
+552:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():850:32317:off = cacheBytesRead(bos, off, r, ddLen); |==> <NO-OP>
+553:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readStoredEntry():855:32436:lastStoredEntry = new ByteArrayInputStream(b); |==> <NO-OP>
+554:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):873:33227:false |==> true
+555:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):874:33260:0 |==> 1
+556:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):874:33260:0 |==> -1
+557:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):875:33284:0 |==> 1
+558:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):875:33284:0 |==> -1
+559:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):875:33311:4 |==> 0
+560:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):875:33311:4 |==> -4
+561:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):875:33300:lastRead - 4 |==> lastRead % 4
+562:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):875:33300:lastRead - 4 |==> lastRead * 4
+563:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):875:33300:lastRead - 4 |==> lastRead + 4
+564:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):875:33300:lastRead - 4 |==> lastRead / 4
+565:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):875:33296:i < lastRead - 4 |==> i != lastRead - 4
+566:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):875:33296:i < lastRead - 4 |==> i <= lastRead - 4
+567:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):875:33298:i < lastRead - 4 |==> false
+568:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):875:33287:!done && i < lastRead - 4 |==> !done == i < lastRead - 4
+569:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):875:33293:!done && i < lastRead - 4 |==> false
+570:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):875:33287:!done && i < lastRead - 4 |==> !done
+571:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):875:33296:!done && i < lastRead - 4 |==> i < lastRead - 4
+572:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):876:33359:0 |==> 1
+573:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):876:33359:0 |==> -1
+574:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):876:33337:buf.array()[i] == LFH[0] |==> buf.array()[i] <= LFH[0]
+575:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):876:33337:buf.array()[i] == LFH[0] |==> buf.array()[i] >= LFH[0]
+576:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):876:33352:buf.array()[i] == LFH[0] |==> false
+577:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):876:33381:1 |==> 0
+578:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):876:33381:1 |==> -1
+579:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):876:33377:i + 1 |==> i % 1
+580:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):876:33377:i + 1 |==> i * 1
+581:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):876:33377:i + 1 |==> i - 1
+582:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):876:33377:i + 1 |==> i / 1
+583:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):876:33391:1 |==> 0
+584:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):876:33391:1 |==> -1
+585:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):876:33365:buf.array()[i + 1] == LFH[1] |==> buf.array()[i + 1] <= LFH[1]
+586:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):876:33365:buf.array()[i + 1] == LFH[1] |==> buf.array()[i + 1] >= LFH[1]
+587:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):876:33384:buf.array()[i + 1] == LFH[1] |==> false
+588:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):876:33337:buf.array()[i] == LFH[0] && buf.array()[i + 1] == LFH[1] |==> buf.array()[i] == LFH[0] == (buf.array()[i + 1] == LFH[1])
+589:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):876:33362:buf.array()[i] == LFH[0] && buf.array()[i + 1] == LFH[1] |==> false
+590:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):876:33337:buf.array()[i] == LFH[0] && buf.array()[i + 1] == LFH[1] |==> buf.array()[i] == LFH[0]
+591:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):876:33365:buf.array()[i] == LFH[0] && buf.array()[i + 1] == LFH[1] |==> buf.array()[i + 1] == LFH[1]
+592:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33434:2 |==> 0
+593:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33434:2 |==> -2
+594:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33430:i + 2 |==> i % 2
+595:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33430:i + 2 |==> i * 2
+596:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33430:i + 2 |==> i - 2
+597:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33430:i + 2 |==> i / 2
+598:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33444:2 |==> 0
+599:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33444:2 |==> -2
+600:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33418:buf.array()[i + 2] == LFH[2] |==> buf.array()[i + 2] <= LFH[2]
+601:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33418:buf.array()[i + 2] == LFH[2] |==> buf.array()[i + 2] >= LFH[2]
+602:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33437:buf.array()[i + 2] == LFH[2] |==> false
+603:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33466:3 |==> 0
+604:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33466:3 |==> -3
+605:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33462:i + 3 |==> i % 3
+606:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33462:i + 3 |==> i * 3
+607:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33462:i + 3 |==> i - 3
+608:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33462:i + 3 |==> i / 3
+609:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33476:3 |==> 0
+610:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33476:3 |==> -3
+611:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33450:buf.array()[i + 3] == LFH[3] |==> buf.array()[i + 3] <= LFH[3]
+612:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33450:buf.array()[i + 3] == LFH[3] |==> buf.array()[i + 3] >= LFH[3]
+613:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33469:buf.array()[i + 3] == LFH[3] |==> false
+614:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33418:buf.array()[i + 2] == LFH[2] && buf.array()[i + 3] == LFH[3] |==> buf.array()[i + 2] == LFH[2] == (buf.array()[i + 3] == LFH[3])
+615:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33447:buf.array()[i + 2] == LFH[2] && buf.array()[i + 3] == LFH[3] |==> false
+616:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33418:buf.array()[i + 2] == LFH[2] && buf.array()[i + 3] == LFH[3] |==> buf.array()[i + 2] == LFH[2]
+617:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33450:buf.array()[i + 2] == LFH[2] && buf.array()[i + 3] == LFH[3] |==> buf.array()[i + 3] == LFH[3]
+618:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):878:33526:2 |==> 0
+619:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):878:33526:2 |==> -2
+620:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):878:33504:buf.array()[i] == CFH[2] |==> buf.array()[i] <= CFH[2]
+621:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):878:33504:buf.array()[i] == CFH[2] |==> buf.array()[i] >= CFH[2]
+622:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):878:33519:buf.array()[i] == CFH[2] |==> false
+623:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):878:33548:3 |==> 0
+624:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):878:33548:3 |==> -3
+625:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):878:33544:i + 3 |==> i % 3
+626:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):878:33544:i + 3 |==> i * 3
+627:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):878:33544:i + 3 |==> i - 3
+628:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):878:33544:i + 3 |==> i / 3
+629:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):878:33558:3 |==> 0
+630:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):878:33558:3 |==> -3
+631:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):878:33532:buf.array()[i + 3] == CFH[3] |==> buf.array()[i + 3] <= CFH[3]
+632:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):878:33532:buf.array()[i + 3] == CFH[3] |==> buf.array()[i + 3] >= CFH[3]
+633:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):878:33551:buf.array()[i + 3] == CFH[3] |==> false
+634:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):878:33504:buf.array()[i] == CFH[2] && buf.array()[i + 3] == CFH[3] |==> buf.array()[i] == CFH[2] == (buf.array()[i + 3] == CFH[3])
+635:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):878:33529:buf.array()[i] == CFH[2] && buf.array()[i + 3] == CFH[3] |==> false
+636:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):878:33504:buf.array()[i] == CFH[2] && buf.array()[i + 3] == CFH[3] |==> buf.array()[i] == CFH[2]
+637:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):878:33532:buf.array()[i] == CFH[2] && buf.array()[i + 3] == CFH[3] |==> buf.array()[i + 3] == CFH[3]
+638:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33417:(buf.array()[i + 2] == LFH[2] && buf.array()[i + 3] == LFH[3]) || (buf.array()[i] == CFH[2] && buf.array()[i + 3] == CFH[3]) |==> (buf.array()[i + 2] == LFH[2] && buf.array()[i + 3] == LFH[3]) != (buf.array()[i] == CFH[2] && buf.array()[i + 3] == CFH[3])
+639:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):877:33417:(buf.array()[i + 2] == LFH[2] && buf.array()[i + 3] == LFH[3]) || (buf.array()[i] == CFH[2] && buf.array()[i + 3] == CFH[3]) |==> (buf.array()[i + 2] == LFH[2] && buf.array()[i + 3] == LFH[3])
+640:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):878:33503:(buf.array()[i + 2] == LFH[2] && buf.array()[i + 3] == LFH[3]) || (buf.array()[i] == CFH[2] && buf.array()[i + 3] == CFH[3]) |==> (buf.array()[i] == CFH[2] && buf.array()[i + 3] == CFH[3])
+641:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):878:33500:(buf.array()[i + 2] == LFH[2] && buf.array()[i + 3] == LFH[3]) || (buf.array()[i] == CFH[2] && buf.array()[i + 3] == CFH[3]) |==> true
+642:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):880:33642:offset + lastRead |==> offset % lastRead
+643:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):880:33642:offset + lastRead |==> offset * lastRead
+644:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):880:33642:offset + lastRead |==> offset - lastRead
+645:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):880:33642:offset + lastRead |==> offset / lastRead
+646:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):880:33642:offset + lastRead - i |==> (offset + lastRead) % i
+647:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):880:33642:offset + lastRead - i |==> (offset + lastRead) * i
+648:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):880:33642:offset + lastRead - i |==> offset + lastRead + i
+649:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):880:33642:offset + lastRead - i |==> (offset + lastRead) / i
+650:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):880:33642:offset + lastRead - i - expectedDDLen |==> (offset + lastRead - i) % expectedDDLen
+651:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):880:33642:offset + lastRead - i - expectedDDLen |==> (offset + lastRead - i) * expectedDDLen
+652:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):880:33642:offset + lastRead - i - expectedDDLen |==> offset + lastRead - i + expectedDDLen
+653:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):880:33642:offset + lastRead - i - expectedDDLen |==> (offset + lastRead - i) / expectedDDLen
+654:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):880:33628:readTooMuch = offset + lastRead - i - expectedDDLen; |==> <NO-OP>
+655:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):881:33708:true |==> false
+656:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):881:33701:done = true; |==> <NO-OP>
+657:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33773:2 |==> 0
+658:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33773:2 |==> -2
+659:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33769:i + 2 |==> i % 2
+660:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33769:i + 2 |==> i * 2
+661:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33769:i + 2 |==> i - 2
+662:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33769:i + 2 |==> i / 2
+663:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33782:2 |==> 0
+664:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33782:2 |==> -2
+665:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33757:buf.array()[i + 2] == DD[2] |==> buf.array()[i + 2] <= DD[2]
+666:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33757:buf.array()[i + 2] == DD[2] |==> buf.array()[i + 2] >= DD[2]
+667:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33776:buf.array()[i + 2] == DD[2] |==> false
+668:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33804:3 |==> 0
+669:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33804:3 |==> -3
+670:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33800:i + 3 |==> i % 3
+671:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33800:i + 3 |==> i * 3
+672:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33800:i + 3 |==> i - 3
+673:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33800:i + 3 |==> i / 3
+674:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33813:3 |==> 0
+675:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33813:3 |==> -3
+676:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33788:buf.array()[i + 3] == DD[3] |==> buf.array()[i + 3] <= DD[3]
+677:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33788:buf.array()[i + 3] == DD[3] |==> buf.array()[i + 3] >= DD[3]
+678:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33807:buf.array()[i + 3] == DD[3] |==> false
+679:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33757:buf.array()[i + 2] == DD[2] && buf.array()[i + 3] == DD[3] |==> buf.array()[i + 2] == DD[2] == (buf.array()[i + 3] == DD[3])
+680:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33785:buf.array()[i + 2] == DD[2] && buf.array()[i + 3] == DD[3] |==> false
+681:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33757:buf.array()[i + 2] == DD[2] && buf.array()[i + 3] == DD[3] |==> buf.array()[i + 2] == DD[2]
+682:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):883:33788:buf.array()[i + 2] == DD[2] && buf.array()[i + 3] == DD[3] |==> buf.array()[i + 3] == DD[3]
+683:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):885:33886:offset + lastRead |==> offset % lastRead
+684:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):885:33886:offset + lastRead |==> offset * lastRead
+685:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):885:33886:offset + lastRead |==> offset - lastRead
+686:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):885:33886:offset + lastRead |==> offset / lastRead
+687:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):885:33886:offset + lastRead - i |==> (offset + lastRead) % i
+688:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):885:33886:offset + lastRead - i |==> (offset + lastRead) * i
+689:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):885:33886:offset + lastRead - i |==> offset + lastRead + i
+690:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):885:33886:offset + lastRead - i |==> (offset + lastRead) / i
+691:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):885:33872:readTooMuch = offset + lastRead - i; |==> <NO-OP>
+692:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):886:33936:true |==> false
+693:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):886:33929:done = true; |==> <NO-OP>
+694:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):888:33980:done |==> false
+695:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):888:33980:done |==> true
+696:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):893:34247:offset + lastRead |==> offset % lastRead
+697:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):893:34247:offset + lastRead |==> offset * lastRead
+698:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):893:34247:offset + lastRead |==> offset - lastRead
+699:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):893:34247:offset + lastRead |==> offset / lastRead
+700:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):893:34247:offset + lastRead - readTooMuch |==> (offset + lastRead) % readTooMuch
+701:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):893:34247:offset + lastRead - readTooMuch |==> (offset + lastRead) * readTooMuch
+702:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):893:34247:offset + lastRead - readTooMuch |==> offset + lastRead + readTooMuch
+703:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):893:34247:offset + lastRead - readTooMuch |==> (offset + lastRead) / readTooMuch
+704:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):893:34225:pushback(buf.array(), offset + lastRead - readTooMuch, readTooMuch); |==> <NO-OP>
+705:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):894:34337:0 |==> 1
+706:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):894:34337:0 |==> -1
+707:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):894:34314:bos.write(buf.array(), 0, i); |==> <NO-OP>
+708:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@bufferContainsSignature(java.io.ByteArrayOutputStream,int,int,int):895:34364:readDataDescriptor(); |==> <NO-OP>
+709:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):912:35004:offset + lastRead |==> offset % lastRead
+710:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):912:35004:offset + lastRead |==> offset * lastRead
+711:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):912:35004:offset + lastRead |==> offset - lastRead
+712:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):912:35004:offset + lastRead |==> offset / lastRead
+713:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):912:35004:offset + lastRead - expecteDDLen |==> (offset + lastRead) % expecteDDLen
+714:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):912:35004:offset + lastRead - expecteDDLen |==> (offset + lastRead) * expecteDDLen
+715:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):912:35004:offset + lastRead - expecteDDLen |==> offset + lastRead + expecteDDLen
+716:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):912:35004:offset + lastRead - expecteDDLen |==> (offset + lastRead) / expecteDDLen
+717:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):912:35039:3 |==> 0
+718:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):912:35039:3 |==> -3
+719:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):912:35004:offset + lastRead - expecteDDLen - 3 |==> (offset + lastRead - expecteDDLen) % 3
+720:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):912:35004:offset + lastRead - expecteDDLen - 3 |==> (offset + lastRead - expecteDDLen) * 3
+721:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):912:35004:offset + lastRead - expecteDDLen - 3 |==> offset + lastRead - expecteDDLen + 3
+722:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):912:35004:offset + lastRead - expecteDDLen - 3 |==> (offset + lastRead - expecteDDLen) / 3
+723:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):913:35066:0 |==> 1
+724:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):913:35066:0 |==> -1
+725:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):913:35054:cacheable > 0 |==> cacheable != 0
+726:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):913:35054:cacheable > 0 |==> cacheable >= 0
+727:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):913:35064:cacheable > 0 |==> false
+728:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):914:35106:0 |==> 1
+729:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):914:35106:0 |==> -1
+730:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):914:35083:bos.write(buf.array(), 0, cacheable); |==> <NO-OP>
+731:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):915:35187:0 |==> 1
+732:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):915:35187:0 |==> -1
+733:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):915:35205:3 |==> 0
+734:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):915:35205:3 |==> -3
+735:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):915:35190:expecteDDLen + 3 |==> expecteDDLen % 3
+736:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):915:35190:expecteDDLen + 3 |==> expecteDDLen * 3
+737:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):915:35190:expecteDDLen + 3 |==> expecteDDLen - 3
+738:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):915:35190:expecteDDLen + 3 |==> expecteDDLen / 3
+739:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):915:35133:System.arraycopy(buf.array(), cacheable, buf.array(), 0, expecteDDLen + 3); |==> <NO-OP>
+740:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):916:35245:3 |==> 0
+741:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):916:35245:3 |==> -3
+742:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):916:35230:expecteDDLen + 3 |==> expecteDDLen % 3
+743:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):916:35230:expecteDDLen + 3 |==> expecteDDLen * 3
+744:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):916:35230:expecteDDLen + 3 |==> expecteDDLen - 3
+745:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):916:35230:expecteDDLen + 3 |==> expecteDDLen / 3
+746:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):916:35221:offset = expecteDDLen + 3; |==> <NO-OP>
+747:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@cacheBytesRead(java.io.ByteArrayOutputStream,int,int,int):918:35277:offset += lastRead; |==> <NO-OP>
+748:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@pushback(byte[],int,int):924:35446:((PushbackInputStream)in).unread(buf, offset, length); |==> <NO-OP>
+749:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@pushback(byte[],int,int):925:35510:pushedBackBytes(length); |==> <NO-OP>
+750:AOR:*(long,long):%(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skipRemainderOfArchive():953:36582:(long)entriesRead * CFH_LEN |==> (long)entriesRead % CFH_LEN
+751:AOR:*(long,long):+(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skipRemainderOfArchive():953:36582:(long)entriesRead * CFH_LEN |==> (long)entriesRead + CFH_LEN
+752:AOR:*(long,long):-(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skipRemainderOfArchive():953:36582:(long)entriesRead * CFH_LEN |==> (long)entriesRead - CFH_LEN
+753:AOR:*(long,long):/(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skipRemainderOfArchive():953:36582:(long)entriesRead * CFH_LEN |==> (long)entriesRead / CFH_LEN
+754:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skipRemainderOfArchive():953:36582:(long)entriesRead * CFH_LEN - LFH_LEN |==> (long)entriesRead * CFH_LEN % LFH_LEN
+755:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skipRemainderOfArchive():953:36582:(long)entriesRead * CFH_LEN - LFH_LEN |==> (long)entriesRead * CFH_LEN * LFH_LEN
+756:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skipRemainderOfArchive():953:36582:(long)entriesRead * CFH_LEN - LFH_LEN |==> (long)entriesRead * CFH_LEN + LFH_LEN
+757:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skipRemainderOfArchive():953:36582:(long)entriesRead * CFH_LEN - LFH_LEN |==> (long)entriesRead * CFH_LEN / LFH_LEN
+758:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skipRemainderOfArchive():953:36573:realSkip((long)entriesRead * CFH_LEN - LFH_LEN); |==> <NO-OP>
+759:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skipRemainderOfArchive():954:36631:findEocdRecord(); |==> <NO-OP>
+760:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skipRemainderOfArchive():955:36666:(long)ZipFile.MIN_EOCD_SIZE - WORD |==> (long)ZipFile.MIN_EOCD_SIZE % WORD
+761:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skipRemainderOfArchive():955:36666:(long)ZipFile.MIN_EOCD_SIZE - WORD |==> (long)ZipFile.MIN_EOCD_SIZE * WORD
+762:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skipRemainderOfArchive():955:36666:(long)ZipFile.MIN_EOCD_SIZE - WORD |==> (long)ZipFile.MIN_EOCD_SIZE + WORD
+763:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skipRemainderOfArchive():955:36666:(long)ZipFile.MIN_EOCD_SIZE - WORD |==> (long)ZipFile.MIN_EOCD_SIZE / WORD
+764:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skipRemainderOfArchive():955:36666:(long)ZipFile.MIN_EOCD_SIZE - WORD - SHORT |==> ((long)ZipFile.MIN_EOCD_SIZE - WORD) % SHORT
+765:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skipRemainderOfArchive():955:36666:(long)ZipFile.MIN_EOCD_SIZE - WORD - SHORT |==> ((long)ZipFile.MIN_EOCD_SIZE - WORD) * SHORT
+766:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skipRemainderOfArchive():955:36666:(long)ZipFile.MIN_EOCD_SIZE - WORD - SHORT |==> (long)ZipFile.MIN_EOCD_SIZE - WORD + SHORT
+767:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skipRemainderOfArchive():955:36666:(long)ZipFile.MIN_EOCD_SIZE - WORD - SHORT |==> ((long)ZipFile.MIN_EOCD_SIZE - WORD) / SHORT
+768:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skipRemainderOfArchive():955:36657:realSkip((long)ZipFile.MIN_EOCD_SIZE - WORD - SHORT); |==> <NO-OP>
+769:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skipRemainderOfArchive():956:36754:readFully(shortBuf); |==> <NO-OP>
+770:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@skipRemainderOfArchive():958:36807:realSkip(ZipShort.getValue(shortBuf)); |==> <NO-OP>
+771:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():966:37059:-1 |==> 0
+772:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():966:37059:-1 |==> 1
+773:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():967:37094:false |==> true
+774:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():968:37164:-1 |==> 0
+775:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():968:37164:-1 |==> 1
+776:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():968:37132:(currentByte = readOneByte()) > -1 |==> (currentByte = readOneByte()) != -1
+777:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():968:37132:(currentByte = readOneByte()) > -1 |==> (currentByte = readOneByte()) >= -1
+778:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():968:37162:(currentByte = readOneByte()) > -1 |==> false
+779:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():968:37116:skipReadCall || (currentByte = readOneByte()) > -1 |==> skipReadCall != (currentByte = readOneByte()) > -1
+780:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():968:37116:skipReadCall || (currentByte = readOneByte()) > -1 |==> skipReadCall
+781:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():968:37132:skipReadCall || (currentByte = readOneByte()) > -1 |==> (currentByte = readOneByte()) > -1
+782:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():968:37129:skipReadCall || (currentByte = readOneByte()) > -1 |==> true
+783:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():969:37197:false |==> true
+784:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():969:37182:skipReadCall = false; |==> <NO-OP>
+785:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():970:37241:isFirstByteOfEocdSig(currentByte) |==> false
+786:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():970:37241:isFirstByteOfEocdSig(currentByte) |==> true
+787:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():973:37310:currentByte = readOneByte(); |==> <NO-OP>
+788:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():974:37402:1 |==> 0
+789:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():974:37402:1 |==> -1
+790:ROR:!=(int,int):<(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():974:37355:currentByte != ZipArchiveOutputStream.EOCD_SIG[1] |==> currentByte < ZipArchiveOutputStream.EOCD_SIG[1]
+791:ROR:!=(int,int):>(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():974:37355:currentByte != ZipArchiveOutputStream.EOCD_SIG[1] |==> currentByte > ZipArchiveOutputStream.EOCD_SIG[1]
+792:ROR:!=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():974:37367:currentByte != ZipArchiveOutputStream.EOCD_SIG[1] |==> true
+793:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():975:37443:-1 |==> 0
+794:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():975:37443:-1 |==> 1
+795:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():975:37428:currentByte == -1 |==> currentByte <= -1
+796:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():975:37428:currentByte == -1 |==> currentByte >= -1
+797:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():975:37440:currentByte == -1 |==> false
+798:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():978:37510:skipReadCall = isFirstByteOfEocdSig(currentByte); |==> <NO-OP>
+799:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():981:37612:currentByte = readOneByte(); |==> <NO-OP>
+800:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():982:37704:2 |==> 0
+801:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():982:37704:2 |==> -2
+802:ROR:!=(int,int):<(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():982:37657:currentByte != ZipArchiveOutputStream.EOCD_SIG[2] |==> currentByte < ZipArchiveOutputStream.EOCD_SIG[2]
+803:ROR:!=(int,int):>(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():982:37657:currentByte != ZipArchiveOutputStream.EOCD_SIG[2] |==> currentByte > ZipArchiveOutputStream.EOCD_SIG[2]
+804:ROR:!=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():982:37669:currentByte != ZipArchiveOutputStream.EOCD_SIG[2] |==> true
+805:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():983:37745:-1 |==> 0
+806:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():983:37745:-1 |==> 1
+807:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():983:37730:currentByte == -1 |==> currentByte <= -1
+808:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():983:37730:currentByte == -1 |==> currentByte >= -1
+809:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():983:37742:currentByte == -1 |==> false
+810:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():986:37812:skipReadCall = isFirstByteOfEocdSig(currentByte); |==> <NO-OP>
+811:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():989:37914:currentByte = readOneByte(); |==> <NO-OP>
+812:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():990:37974:-1 |==> 0
+813:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():990:37974:-1 |==> 1
+814:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():990:37959:currentByte == -1 |==> currentByte <= -1
+815:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():990:37959:currentByte == -1 |==> currentByte >= -1
+816:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():990:37971:currentByte == -1 |==> false
+817:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():991:38043:3 |==> 0
+818:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():991:38043:3 |==> -3
+819:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():991:37996:currentByte == ZipArchiveOutputStream.EOCD_SIG[3] |==> currentByte <= ZipArchiveOutputStream.EOCD_SIG[3]
+820:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():991:37996:currentByte == ZipArchiveOutputStream.EOCD_SIG[3] |==> currentByte >= ZipArchiveOutputStream.EOCD_SIG[3]
+821:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():991:38008:currentByte == ZipArchiveOutputStream.EOCD_SIG[3] |==> false
+822:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():990:37959:currentByte == -1 || currentByte == ZipArchiveOutputStream.EOCD_SIG[3] |==> currentByte == -1 != (currentByte == ZipArchiveOutputStream.EOCD_SIG[3])
+823:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():990:37959:currentByte == -1 || currentByte == ZipArchiveOutputStream.EOCD_SIG[3] |==> currentByte == -1
+824:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():991:37996:currentByte == -1 || currentByte == ZipArchiveOutputStream.EOCD_SIG[3] |==> currentByte == ZipArchiveOutputStream.EOCD_SIG[3]
+825:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():991:37993:currentByte == -1 || currentByte == ZipArchiveOutputStream.EOCD_SIG[3] |==> true
+826:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@findEocdRecord():994:38098:skipReadCall = isFirstByteOfEocdSig(currentByte); |==> <NO-OP>
+827:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1006:38472:0 |==> 1
+828:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1006:38472:0 |==> -1
+829:ROR:>=(long,long):==(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1006:38463:value >= 0 |==> value == 0
+830:ROR:>=(long,long):>(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1006:38463:value >= 0 |==> value > 0
+831:ROR:>=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1006:38469:value >= 0 |==> true
+832:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1007:38504:0 |==> 1
+833:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1007:38504:0 |==> -1
+834:ROR:<(long,long):!=(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1008:38526:skipped < value |==> skipped != value
+835:ROR:<(long,long):<=(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1008:38526:skipped < value |==> skipped <= value
+836:ROR:<(long,long):FALSE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1008:38534:skipped < value |==> false
+837:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1009:38578:value - skipped |==> value % skipped
+838:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1009:38578:value - skipped |==> value * skipped
+839:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1009:38578:value - skipped |==> value + skipped
+840:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1009:38578:value - skipped |==> value / skipped
+841:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1010:38642:0 |==> 1
+842:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1010:38642:0 |==> -1
+843:ROR:>(long,long):!=(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1010:38652:skipBuf.length > rem |==> skipBuf.length != rem
+844:ROR:>(long,long):>=(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1010:38652:skipBuf.length > rem |==> skipBuf.length >= rem
+845:ROR:>(long,long):FALSE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1010:38667:skipBuf.length > rem |==> false
+846:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1011:38724:-1 |==> 0
+847:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1011:38724:-1 |==> 1
+848:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1011:38719:x == -1 |==> x <= -1
+849:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1011:38719:x == -1 |==> x >= -1
+850:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1011:38721:x == -1 |==> false
+851:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1014:38792:count(x); |==> <NO-OP>
+852:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@realSkip(long):1015:38818:skipped += x; |==> <NO-OP>
+853:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readOneByte():1030:39244:-1 |==> 0
+854:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readOneByte():1030:39244:-1 |==> 1
+855:ROR:!=(int,int):<(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readOneByte():1030:39239:b != -1 |==> b < -1
+856:ROR:!=(int,int):>(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readOneByte():1030:39239:b != -1 |==> b > -1
+857:ROR:!=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readOneByte():1030:39241:b != -1 |==> true
+858:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readOneByte():1031:39268:1 |==> 0
+859:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readOneByte():1031:39268:1 |==> -1
+860:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@readOneByte():1031:39262:count(1); |==> <NO-OP>
+861:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@isFirstByteOfEocdSig(int):1037:39415:0 |==> 1
+862:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@isFirstByteOfEocdSig(int):1037:39415:0 |==> -1
+863:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@isFirstByteOfEocdSig(int):1037:39378:b == ZipArchiveOutputStream.EOCD_SIG[0] |==> b <= ZipArchiveOutputStream.EOCD_SIG[0]
+864:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@isFirstByteOfEocdSig(int):1037:39378:b == ZipArchiveOutputStream.EOCD_SIG[0] |==> b >= ZipArchiveOutputStream.EOCD_SIG[0]
+865:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream@isFirstByteOfEocdSig(int):1037:39380:b == ZipArchiveOutputStream.EOCD_SIG[0] |==> false
+866:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream:1099:41091:0 |==> 1
+867:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream:1099:41091:0 |==> -1
+868:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read():1115:41601:0 |==> 1
+869:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read():1115:41601:0 |==> -1
+870:ROR:>=(long,long):==(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read():1115:41594:max >= 0 |==> max == 0
+871:ROR:>=(long,long):>(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read():1115:41594:max >= 0 |==> max > 0
+872:ROR:>=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read():1115:41598:max >= 0 |==> true
+873:ROR:>=(long,long):==(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read():1115:41606:pos >= max |==> pos == max
+874:ROR:>=(long,long):>(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read():1115:41606:pos >= max |==> pos > max
+875:ROR:>=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read():1115:41610:pos >= max |==> true
+876:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read():1115:41594:max >= 0 && pos >= max |==> max >= 0 == pos >= max
+877:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read():1115:41603:max >= 0 && pos >= max |==> false
+878:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read():1115:41594:max >= 0 && pos >= max |==> max >= 0
+879:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read():1115:41606:max >= 0 && pos >= max |==> pos >= max
+880:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read():1116:41643:-1 |==> 0
+881:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read():1116:41643:-1 |==> 1
+882:STD:<INC>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read():1119:41715:pos++; |==> <NO-OP>
+883:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read():1120:41740:1 |==> 0
+884:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read():1120:41740:1 |==> -1
+885:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read():1120:41734:count(1); |==> <NO-OP>
+886:STD:<INC>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read():1121:41756:current.bytesReadFromStream++; |==> <NO-OP>
+887:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[]):1127:41936:0 |==> 1
+888:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[]):1127:41936:0 |==> -1
+889:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1132:42093:0 |==> 1
+890:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1132:42093:0 |==> -1
+891:ROR:>=(long,long):==(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1132:42086:max >= 0 |==> max == 0
+892:ROR:>=(long,long):>(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1132:42086:max >= 0 |==> max > 0
+893:ROR:>=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1132:42090:max >= 0 |==> true
+894:ROR:>=(long,long):==(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1132:42098:pos >= max |==> pos == max
+895:ROR:>=(long,long):>(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1132:42098:pos >= max |==> pos > max
+896:ROR:>=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1132:42102:pos >= max |==> true
+897:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1132:42086:max >= 0 && pos >= max |==> max >= 0 == pos >= max
+898:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1132:42095:max >= 0 && pos >= max |==> false
+899:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1132:42086:max >= 0 && pos >= max |==> max >= 0
+900:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1132:42098:max >= 0 && pos >= max |==> pos >= max
+901:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1133:42135:-1 |==> 0
+902:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1133:42135:-1 |==> 1
+903:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1135:42193:0 |==> 1
+904:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1135:42193:0 |==> -1
+905:ROR:>=(long,long):==(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1135:42186:max >= 0 |==> max == 0
+906:ROR:>=(long,long):>(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1135:42186:max >= 0 |==> max > 0
+907:ROR:>=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1135:42190:max >= 0 |==> true
+908:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1135:42211:max - pos |==> max % pos
+909:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1135:42211:max - pos |==> max * pos
+910:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1135:42211:max - pos |==> max + pos
+911:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1135:42211:max - pos |==> max / pos
+912:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1138:42325:-1 |==> 0
+913:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1138:42325:-1 |==> 1
+914:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1138:42312:bytesRead == -1 |==> bytesRead <= -1
+915:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1138:42312:bytesRead == -1 |==> bytesRead >= -1
+916:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1138:42322:bytesRead == -1 |==> false
+917:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1139:42354:-1 |==> 0
+918:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1139:42354:-1 |==> 1
+919:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1142:42385:pos += bytesRead; |==> <NO-OP>
+920:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1143:42415:count(bytesRead); |==> <NO-OP>
+921:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@read(byte[],int,int):1144:42445:current.bytesReadFromStream += bytesRead; |==> <NO-OP>
+922:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@skip(long):1150:42645:0 |==> 1
+923:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@skip(long):1150:42645:0 |==> -1
+924:ROR:>=(long,long):==(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@skip(long):1150:42638:max >= 0 |==> max == 0
+925:ROR:>=(long,long):>(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@skip(long):1150:42638:max >= 0 |==> max > 0
+926:ROR:>=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@skip(long):1150:42642:max >= 0 |==> true
+927:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@skip(long):1150:42661:max - pos |==> max % pos
+928:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@skip(long):1150:42661:max - pos |==> max * pos
+929:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@skip(long):1150:42661:max - pos |==> max + pos
+930:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@skip(long):1150:42661:max - pos |==> max / pos
+931:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@skip(long):1152:42744:pos += skippedBytes; |==> <NO-OP>
+932:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@available():1158:42902:0 |==> 1
+933:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@available():1158:42902:0 |==> -1
+934:ROR:>=(long,long):==(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@available():1158:42895:max >= 0 |==> max == 0
+935:ROR:>=(long,long):>(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@available():1158:42895:max >= 0 |==> max > 0
+936:ROR:>=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@available():1158:42899:max >= 0 |==> true
+937:ROR:>=(long,long):==(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@available():1158:42907:pos >= max |==> pos == max
+938:ROR:>=(long,long):>(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@available():1158:42907:pos >= max |==> pos > max
+939:ROR:>=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@available():1158:42911:pos >= max |==> true
+940:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@available():1158:42895:max >= 0 && pos >= max |==> max >= 0 == pos >= max
+941:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@available():1158:42904:max >= 0 && pos >= max |==> false
+942:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@available():1158:42895:max >= 0 && pos >= max |==> max >= 0
+943:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@available():1158:42907:max >= 0 && pos >= max |==> pos >= max
+944:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@available():1159:42944:0 |==> 1
+945:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveInputStream$BoundedInputStream@available():1159:42944:0 |==> -1

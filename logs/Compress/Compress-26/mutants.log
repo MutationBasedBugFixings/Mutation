@@ -1,0 +1,76 @@
+1:LVR:0:POS:org.apache.commons.compress.utils.IOUtils@copy(java.io.InputStream,java.io.OutputStream,int):70:2309:0 |==> 1
+2:LVR:0:NEG:org.apache.commons.compress.utils.IOUtils@copy(java.io.InputStream,java.io.OutputStream,int):70:2309:0 |==> -1
+3:LVR:NEG:0:org.apache.commons.compress.utils.IOUtils@copy(java.io.InputStream,java.io.OutputStream,int):71:2327:-1 |==> 0
+4:LVR:NEG:POS:org.apache.commons.compress.utils.IOUtils@copy(java.io.InputStream,java.io.OutputStream,int):71:2327:-1 |==> 1
+5:ROR:!=(int,int):<(int,int):org.apache.commons.compress.utils.IOUtils@copy(java.io.InputStream,java.io.OutputStream,int):71:2327:-1 != (n = input.read(buffer)) |==> -1 < (n = input.read(buffer))
+6:ROR:!=(int,int):>(int,int):org.apache.commons.compress.utils.IOUtils@copy(java.io.InputStream,java.io.OutputStream,int):71:2327:-1 != (n = input.read(buffer)) |==> -1 > (n = input.read(buffer))
+7:ROR:!=(int,int):TRUE(int,int):org.apache.commons.compress.utils.IOUtils@copy(java.io.InputStream,java.io.OutputStream,int):71:2330:-1 != (n = input.read(buffer)) |==> true
+8:LVR:0:POS:org.apache.commons.compress.utils.IOUtils@copy(java.io.InputStream,java.io.OutputStream,int):72:2394:0 |==> 1
+9:LVR:0:NEG:org.apache.commons.compress.utils.IOUtils@copy(java.io.InputStream,java.io.OutputStream,int):72:2394:0 |==> -1
+10:STD:<CALL>:<NO-OP>:org.apache.commons.compress.utils.IOUtils@copy(java.io.InputStream,java.io.OutputStream,int):72:2373:output.write(buffer, 0, n); |==> <NO-OP>
+11:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.utils.IOUtils@copy(java.io.InputStream,java.io.OutputStream,int):73:2413:count += n; |==> <NO-OP>
+12:LVR:0:POS:org.apache.commons.compress.utils.IOUtils@skip(java.io.InputStream,long):96:3273:0 |==> 1
+13:LVR:0:NEG:org.apache.commons.compress.utils.IOUtils@skip(java.io.InputStream,long):96:3273:0 |==> -1
+14:ROR:>(long,long):!=(long,long):org.apache.commons.compress.utils.IOUtils@skip(java.io.InputStream,long):96:3261:numToSkip > 0 |==> numToSkip != 0
+15:ROR:>(long,long):>=(long,long):org.apache.commons.compress.utils.IOUtils@skip(java.io.InputStream,long):96:3261:numToSkip > 0 |==> numToSkip >= 0
+16:ROR:>(long,long):FALSE(long,long):org.apache.commons.compress.utils.IOUtils@skip(java.io.InputStream,long):96:3271:numToSkip > 0 |==> false
+17:LVR:0:POS:org.apache.commons.compress.utils.IOUtils@skip(java.io.InputStream,long):98:3355:0 |==> 1
+18:LVR:0:NEG:org.apache.commons.compress.utils.IOUtils@skip(java.io.InputStream,long):98:3355:0 |==> -1
+19:ROR:==(long,long):<=(long,long):org.apache.commons.compress.utils.IOUtils@skip(java.io.InputStream,long):98:3344:skipped == 0 |==> skipped <= 0
+20:ROR:==(long,long):>=(long,long):org.apache.commons.compress.utils.IOUtils@skip(java.io.InputStream,long):98:3344:skipped == 0 |==> skipped >= 0
+21:ROR:==(long,long):FALSE(long,long):org.apache.commons.compress.utils.IOUtils@skip(java.io.InputStream,long):98:3352:skipped == 0 |==> false
+22:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.utils.IOUtils@skip(java.io.InputStream,long):101:3409:numToSkip -= skipped; |==> <NO-OP>
+23:AOR:-(long,long):%(long,long):org.apache.commons.compress.utils.IOUtils@skip(java.io.InputStream,long):104:3469:available - numToSkip |==> available % numToSkip
+24:AOR:-(long,long):*(long,long):org.apache.commons.compress.utils.IOUtils@skip(java.io.InputStream,long):104:3469:available - numToSkip |==> available * numToSkip
+25:AOR:-(long,long):+(long,long):org.apache.commons.compress.utils.IOUtils@skip(java.io.InputStream,long):104:3469:available - numToSkip |==> available + numToSkip
+26:AOR:-(long,long):/(long,long):org.apache.commons.compress.utils.IOUtils@skip(java.io.InputStream,long):104:3469:available - numToSkip |==> available / numToSkip
+27:LVR:0:POS:org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[]):120:4044:0 |==> 1
+28:LVR:0:NEG:org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[]):120:4044:0 |==> -1
+29:LVR:0:POS:org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4804:0 |==> 1
+30:LVR:0:NEG:org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4804:0 |==> -1
+31:ROR:<(int,int):!=(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4798:len < 0 |==> len != 0
+32:ROR:<(int,int):<=(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4798:len < 0 |==> len <= 0
+33:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4802:len < 0 |==> false
+34:LVR:0:POS:org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4818:0 |==> 1
+35:LVR:0:NEG:org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4818:0 |==> -1
+36:ROR:<(int,int):!=(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4809:offset < 0 |==> offset != 0
+37:ROR:<(int,int):<=(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4809:offset < 0 |==> offset <= 0
+38:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4816:offset < 0 |==> false
+39:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4798:len < 0 || offset < 0 |==> len < 0 != offset < 0
+40:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4798:len < 0 || offset < 0 |==> len < 0
+41:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4809:len < 0 || offset < 0 |==> offset < 0
+42:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4806:len < 0 || offset < 0 |==> true
+43:AOR:+(int,int):%(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4823:len + offset |==> len % offset
+44:AOR:+(int,int):*(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4823:len + offset |==> len * offset
+45:AOR:+(int,int):-(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4823:len + offset |==> len - offset
+46:AOR:+(int,int):/(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4823:len + offset |==> len / offset
+47:ROR:>(int,int):!=(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4823:len + offset > b.length |==> len + offset != b.length
+48:ROR:>(int,int):>=(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4823:len + offset > b.length |==> len + offset >= b.length
+49:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4836:len + offset > b.length |==> false
+50:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4798:len < 0 || offset < 0 || len + offset > b.length |==> (len < 0 || offset < 0) != len + offset > b.length
+51:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4798:len < 0 || offset < 0 || len + offset > b.length |==> len < 0 || offset < 0
+52:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4823:len < 0 || offset < 0 || len + offset > b.length |==> len + offset > b.length
+53:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):141:4820:len < 0 || offset < 0 || len + offset > b.length |==> true
+54:LVR:0:POS:org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):144:4931:0 |==> 1
+55:LVR:0:NEG:org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):144:4931:0 |==> -1
+56:ROR:!=(int,int):<(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):145:4956:count != len |==> count < len
+57:ROR:!=(int,int):>(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):145:4956:count != len |==> count > len
+58:ROR:!=(int,int):TRUE(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):145:4962:count != len |==> true
+59:AOR:+(int,int):%(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):146:5002:offset + count |==> offset % count
+60:AOR:+(int,int):*(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):146:5002:offset + count |==> offset * count
+61:AOR:+(int,int):-(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):146:5002:offset + count |==> offset - count
+62:AOR:+(int,int):/(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):146:5002:offset + count |==> offset / count
+63:AOR:-(int,int):%(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):146:5018:len - count |==> len % count
+64:AOR:-(int,int):*(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):146:5018:len - count |==> len * count
+65:AOR:-(int,int):+(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):146:5018:len - count |==> len + count
+66:AOR:-(int,int):/(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):146:5018:len - count |==> len / count
+67:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):146:4984:x = input.read(b, offset + count, len - count); |==> <NO-OP>
+68:LVR:NEG:0:org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):147:5053:-1 |==> 0
+69:LVR:NEG:POS:org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):147:5053:-1 |==> 1
+70:ROR:==(int,int):<=(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):147:5048:x == -1 |==> x <= -1
+71:ROR:==(int,int):>=(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):147:5048:x == -1 |==> x >= -1
+72:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):147:5050:x == -1 |==> false
+73:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.utils.IOUtils@readFully(java.io.InputStream,byte[],int,int):150:5108:count += x; |==> <NO-OP>
+74:STD:<CALL>:<NO-OP>:org.apache.commons.compress.utils.IOUtils@toByteArray(java.io.InputStream):175:6024:copy(input, output); |==> <NO-OP>
+75:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.utils.IOUtils@closeQuietly(java.io.Closeable):185:6315:c != null |==> true
+76:STD:<CALL>:<NO-OP>:org.apache.commons.compress.utils.IOUtils@closeQuietly(java.io.Closeable):187:6360:c.close(); |==> <NO-OP>

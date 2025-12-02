@@ -1,0 +1,327 @@
+1:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@<init>(java.io.InputStream,int,int,java.lang.String):142:4769:false |==> true
+2:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@<init>(java.io.InputStream,int,int,java.lang.String):142:4752:this.hasHitEOF = false; |==> <NO-OP>
+3:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@close():155:5146:is.close(); |==> <NO-OP>
+4:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@available():181:6027:entrySize - entryOffset |==> entrySize % entryOffset
+5:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@available():181:6027:entrySize - entryOffset |==> entrySize * entryOffset
+6:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@available():181:6027:entrySize - entryOffset |==> entrySize + entryOffset
+7:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@available():181:6027:entrySize - entryOffset |==> entrySize / entryOffset
+8:ROR:>(long,long):!=(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@available():181:6027:entrySize - entryOffset > Integer.MAX_VALUE |==> entrySize - entryOffset != Integer.MAX_VALUE
+9:ROR:>(long,long):>=(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@available():181:6027:entrySize - entryOffset > Integer.MAX_VALUE |==> entrySize - entryOffset >= Integer.MAX_VALUE
+10:ROR:>(long,long):FALSE(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@available():181:6051:entrySize - entryOffset > Integer.MAX_VALUE |==> false
+11:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@available():184:6144:entrySize - entryOffset |==> entrySize % entryOffset
+12:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@available():184:6144:entrySize - entryOffset |==> entrySize * entryOffset
+13:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@available():184:6144:entrySize - entryOffset |==> entrySize + entryOffset
+14:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@available():184:6144:entrySize - entryOffset |==> entrySize / entryOffset
+15:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skip(long):206:7032:0 |==> 1
+16:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skip(long):206:7032:0 |==> -1
+17:ROR:<=(long,long):<(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skip(long):206:7027:n <= 0 |==> n < 0
+18:ROR:<=(long,long):==(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skip(long):206:7027:n <= 0 |==> n == 0
+19:ROR:<=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skip(long):206:7029:n <= 0 |==> true
+20:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skip(long):207:7056:0 |==> 1
+21:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skip(long):207:7056:0 |==> -1
+22:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skip(long):210:7101:entrySize - entryOffset |==> entrySize % entryOffset
+23:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skip(long):210:7101:entrySize - entryOffset |==> entrySize * entryOffset
+24:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skip(long):210:7101:entrySize - entryOffset |==> entrySize + entryOffset
+25:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skip(long):210:7101:entrySize - entryOffset |==> entrySize / entryOffset
+26:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skip(long):212:7197:count(skipped); |==> <NO-OP>
+27:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skip(long):213:7221:entryOffset += skipped; |==> <NO-OP>
+28:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@markSupported():224:7453:false |==> true
+29:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():257:8446:hasHitEOF |==> false
+30:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():257:8446:hasHitEOF |==> true
+31:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():261:8517:currEntry != null |==> true
+32:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():263:8608:IOUtils.skip(this, Long.MAX_VALUE); |==> <NO-OP>
+33:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():266:8710:skipRecordPadding(); |==> <NO-OP>
+34:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():271:8805:headerBuf == null |==> false
+35:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():273:8854:currEntry = null; |==> <NO-OP>
+36:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():278:8934:currEntry = new TarArchiveEntry(headerBuf, zipEncoding); |==> <NO-OP>
+37:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():281:9134:ioe.initCause(e); |==> <NO-OP>
+38:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():285:9208:0 |==> 1
+39:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():285:9208:0 |==> -1
+40:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():285:9194:entryOffset = 0; |==> <NO-OP>
+41:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():286:9219:entrySize = currEntry.getSize(); |==> <NO-OP>
+42:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():288:9293:currEntry.isGNULongLinkEntry() |==> false
+43:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():288:9293:currEntry.isGNULongLinkEntry() |==> true
+44:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():290:9381:longLinkData == null |==> false
+45:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():296:9584:currEntry.setLinkName(zipEncoding.decode(longLinkData)); |==> <NO-OP>
+46:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():299:9692:currEntry.isGNULongNameEntry() |==> false
+47:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():299:9692:currEntry.isGNULongNameEntry() |==> true
+48:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():301:9780:longNameData == null |==> false
+49:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():307:9978:currEntry.setName(zipEncoding.decode(longNameData)); |==> <NO-OP>
+50:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():310:10075:currEntry.isPaxHeader() |==> false
+51:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():310:10075:currEntry.isPaxHeader() |==> true
+52:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():311:10115:paxHeaders(); |==> <NO-OP>
+53:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():314:10173:currEntry.isGNUSparse() |==> false
+54:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():314:10173:currEntry.isGNUSparse() |==> true
+55:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():315:10214:readGNUSparse(); |==> <NO-OP>
+56:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getNextTarEntry():322:10483:entrySize = currEntry.getSize(); |==> <NO-OP>
+57:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():332:10795:0 |==> 1
+58:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():332:10795:0 |==> -1
+59:ROR:>(long,long):!=(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():332:10778:this.entrySize > 0 |==> this.entrySize != 0
+60:ROR:>(long,long):>=(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():332:10778:this.entrySize > 0 |==> this.entrySize >= 0
+61:ROR:>(long,long):FALSE(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():332:10793:this.entrySize > 0 |==> false
+62:AOR:%(long,long):*(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():332:10800:this.entrySize % this.recordSize |==> this.entrySize * this.recordSize
+63:AOR:%(long,long):+(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():332:10800:this.entrySize % this.recordSize |==> this.entrySize + this.recordSize
+64:AOR:%(long,long):-(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():332:10800:this.entrySize % this.recordSize |==> this.entrySize - this.recordSize
+65:AOR:%(long,long):/(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():332:10800:this.entrySize % this.recordSize |==> this.entrySize / this.recordSize
+66:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():332:10836:0 |==> 1
+67:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():332:10836:0 |==> -1
+68:ROR:!=(long,long):<(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():332:10800:this.entrySize % this.recordSize != 0 |==> this.entrySize % this.recordSize < 0
+69:ROR:!=(long,long):>(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():332:10800:this.entrySize % this.recordSize != 0 |==> this.entrySize % this.recordSize > 0
+70:ROR:!=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():332:10833:this.entrySize % this.recordSize != 0 |==> true
+71:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():332:10778:this.entrySize > 0 && this.entrySize % this.recordSize != 0 |==> this.entrySize > 0 == (this.entrySize % this.recordSize != 0)
+72:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():332:10797:this.entrySize > 0 && this.entrySize % this.recordSize != 0 |==> false
+73:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():332:10778:this.entrySize > 0 && this.entrySize % this.recordSize != 0 |==> this.entrySize > 0
+74:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():332:10800:this.entrySize > 0 && this.entrySize % this.recordSize != 0 |==> this.entrySize % this.recordSize != 0
+75:AOR:/(long,long):%(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():333:10872:this.entrySize / this.recordSize |==> this.entrySize % this.recordSize
+76:AOR:/(long,long):*(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():333:10872:this.entrySize / this.recordSize |==> this.entrySize * this.recordSize
+77:AOR:/(long,long):+(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():333:10872:this.entrySize / this.recordSize |==> this.entrySize + this.recordSize
+78:AOR:/(long,long):-(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():333:10872:this.entrySize / this.recordSize |==> this.entrySize - this.recordSize
+79:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():333:10908:1 |==> 0
+80:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():333:10908:1 |==> -1
+81:AOR:+(long,long):%(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():333:10871:(this.entrySize / this.recordSize) + 1 |==> (this.entrySize / this.recordSize) % 1
+82:AOR:+(long,long):*(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():333:10871:(this.entrySize / this.recordSize) + 1 |==> (this.entrySize / this.recordSize) * 1
+83:AOR:+(long,long):-(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():333:10871:(this.entrySize / this.recordSize) + 1 |==> (this.entrySize / this.recordSize) - 1
+84:AOR:+(long,long):/(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():333:10871:(this.entrySize / this.recordSize) + 1 |==> (this.entrySize / this.recordSize) / 1
+85:AOR:*(long,long):%(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():334:10939:numRecords * this.recordSize |==> numRecords % this.recordSize
+86:AOR:*(long,long):+(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():334:10939:numRecords * this.recordSize |==> numRecords + this.recordSize
+87:AOR:*(long,long):-(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():334:10939:numRecords * this.recordSize |==> numRecords - this.recordSize
+88:AOR:*(long,long):/(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():334:10939:numRecords * this.recordSize |==> numRecords / this.recordSize
+89:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():334:10938:(numRecords * this.recordSize) - this.entrySize |==> (numRecords * this.recordSize) % this.entrySize
+90:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():334:10938:(numRecords * this.recordSize) - this.entrySize |==> (numRecords * this.recordSize) * this.entrySize
+91:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():334:10938:(numRecords * this.recordSize) - this.entrySize |==> (numRecords * this.recordSize) + this.entrySize
+92:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():334:10938:(numRecords * this.recordSize) - this.entrySize |==> (numRecords * this.recordSize) / this.entrySize
+93:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@skipRecordPadding():336:11053:count(skipped); |==> <NO-OP>
+94:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():350:11508:0 |==> 1
+95:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():350:11508:0 |==> -1
+96:ROR:>=(int,int):==(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():350:11478:(length = read(SMALL_BUF)) >= 0 |==> (length = read(SMALL_BUF)) == 0
+97:ROR:>=(int,int):>(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():350:11478:(length = read(SMALL_BUF)) >= 0 |==> (length = read(SMALL_BUF)) > 0
+98:ROR:>=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():350:11505:(length = read(SMALL_BUF)) >= 0 |==> true
+99:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():351:11551:0 |==> 1
+100:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():351:11551:0 |==> -1
+101:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():351:11525:longName.write(SMALL_BUF, 0, length); |==> <NO-OP>
+102:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():353:11581:getNextEntry(); |==> <NO-OP>
+103:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():354:11619:currEntry == null |==> false
+104:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():361:11878:length = longNameData.length; |==> <NO-OP>
+105:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():362:11932:0 |==> 1
+106:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():362:11932:0 |==> -1
+107:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():362:11923:length > 0 |==> length != 0
+108:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():362:11923:length > 0 |==> length >= 0
+109:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():362:11930:length > 0 |==> false
+110:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():362:11959:1 |==> 0
+111:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():362:11959:1 |==> -1
+112:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():362:11950:length - 1 |==> length % 1
+113:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():362:11950:length - 1 |==> length * 1
+114:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():362:11950:length - 1 |==> length + 1
+115:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():362:11950:length - 1 |==> length / 1
+116:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():362:11965:0 |==> 1
+117:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():362:11965:0 |==> -1
+118:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():362:11937:longNameData[length - 1] == 0 |==> longNameData[length - 1] <= 0
+119:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():362:11937:longNameData[length - 1] == 0 |==> longNameData[length - 1] >= 0
+120:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():362:11962:longNameData[length - 1] == 0 |==> false
+121:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():362:11923:length > 0 && longNameData[length - 1] == 0 |==> length > 0 == (longNameData[length - 1] == 0)
+122:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():362:11934:length > 0 && longNameData[length - 1] == 0 |==> false
+123:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():362:11923:length > 0 && longNameData[length - 1] == 0 |==> length > 0
+124:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():362:11937:length > 0 && longNameData[length - 1] == 0 |==> longNameData[length - 1] == 0
+125:STD:<DEC>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():363:11982:--length; |==> <NO-OP>
+126:ROR:!=(int,int):<(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():365:12014:length != longNameData.length |==> length < longNameData.length
+127:ROR:!=(int,int):>(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():365:12014:length != longNameData.length |==> length > longNameData.length
+128:ROR:!=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():365:12021:length != longNameData.length |==> true
+129:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():367:12131:0 |==> 1
+130:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():367:12131:0 |==> -1
+131:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():367:12137:0 |==> 1
+132:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():367:12137:0 |==> -1
+133:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():367:12100:System.arraycopy(longNameData, 0, l, 0, length); |==> <NO-OP>
+134:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getLongNameData():368:12161:longNameData = l; |==> <NO-OP>
+135:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getRecord():389:12883:hasHitEOF = isEOFRecord(headerBuf); |==> <NO-OP>
+136:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getRecord():390:12954:headerBuf != null |==> true
+137:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getRecord():390:12931:hasHitEOF && headerBuf != null |==> hasHitEOF == (headerBuf != null)
+138:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getRecord():390:12941:hasHitEOF && headerBuf != null |==> false
+139:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getRecord():390:12931:hasHitEOF && headerBuf != null |==> hasHitEOF
+140:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getRecord():390:12944:hasHitEOF && headerBuf != null |==> headerBuf != null
+141:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getRecord():391:12977:tryToConsumeSecondEOFRecord(); |==> <NO-OP>
+142:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getRecord():392:13020:consumeRemainderOfLastBlock(); |==> <NO-OP>
+143:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@getRecord():393:13063:headerBuf = null; |==> <NO-OP>
+144:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@isEOFRecord(byte[]):406:13475:record == null |==> false
+145:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@isEOFRecord(byte[]):406:13468:record == null || ArchiveUtils.isArrayZero(record, recordSize) |==> record == null != ArchiveUtils.isArrayZero(record, recordSize)
+146:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@isEOFRecord(byte[]):406:13468:record == null || ArchiveUtils.isArrayZero(record, recordSize) |==> record == null
+147:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@isEOFRecord(byte[]):406:13486:record == null || ArchiveUtils.isArrayZero(record, recordSize) |==> ArchiveUtils.isArrayZero(record, recordSize)
+148:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@isEOFRecord(byte[]):406:13483:record == null || ArchiveUtils.isArrayZero(record, recordSize) |==> true
+149:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@readRecord():420:13890:count(readNow); |==> <NO-OP>
+150:ROR:!=(int,int):<(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@readRecord():421:13918:readNow != recordSize |==> readNow < recordSize
+151:ROR:!=(int,int):>(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@readRecord():421:13918:readNow != recordSize |==> readNow > recordSize
+152:ROR:!=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@readRecord():421:13926:readNow != recordSize |==> true
+153:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@paxHeaders():430:14128:getNextEntry(); |==> <NO-OP>
+154:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@paxHeaders():431:14181:applyPaxHeadersToCurrentEntry(headers); |==> <NO-OP>
+155:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):439:14497:0 |==> 1
+156:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):439:14497:0 |==> -1
+157:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):440:14523:0 |==> 1
+158:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):440:14523:0 |==> -1
+159:LVR:NEG:0:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):441:14563:-1 |==> 0
+160:LVR:NEG:POS:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):441:14563:-1 |==> 1
+161:ROR:!=(int,int):<(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):441:14544:(ch = i.read()) != -1 |==> (ch = i.read()) < -1
+162:ROR:!=(int,int):>(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):441:14544:(ch = i.read()) != -1 |==> (ch = i.read()) > -1
+163:STD:<INC>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):442:14585:read++; |==> <NO-OP>
+164:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):443:14613:ch == ' ' |==> ch <= ' '
+165:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):443:14613:ch == ' ' |==> ch >= ' '
+166:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):443:14616:ch == ' ' |==> false
+167:LVR:NEG:0:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):446:14807:-1 |==> 0
+168:LVR:NEG:POS:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):446:14807:-1 |==> 1
+169:ROR:!=(int,int):<(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):446:14788:(ch = i.read()) != -1 |==> (ch = i.read()) < -1
+170:ROR:!=(int,int):>(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):446:14788:(ch = i.read()) != -1 |==> (ch = i.read()) > -1
+171:ROR:!=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):446:14804:(ch = i.read()) != -1 |==> true
+172:STD:<INC>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):447:14837:read++; |==> <NO-OP>
+173:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):448:14873:ch == '=' |==> ch <= '='
+174:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):448:14873:ch == '=' |==> ch >= '='
+175:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):448:14876:ch == '=' |==> false
+176:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):451:15080:len - read |==> len % read
+177:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):451:15080:len - read |==> len * read
+178:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):451:15080:len - read |==> len + read
+179:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):451:15080:len - read |==> len / read
+180:ROR:!=(int,int):<(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):454:15251:got != restLen |==> got < restLen
+181:ROR:!=(int,int):>(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):454:15251:got != restLen |==> got > restLen
+182:ROR:!=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):454:15255:got != restLen |==> true
+183:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):462:15756:0 |==> 1
+184:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):462:15756:0 |==> -1
+185:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):463:15823:1 |==> 0
+186:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):463:15823:1 |==> -1
+187:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):463:15813:restLen - 1 |==> restLen % 1
+188:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):463:15813:restLen - 1 |==> restLen * 1
+189:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):463:15813:restLen - 1 |==> restLen + 1
+190:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):463:15813:restLen - 1 |==> restLen / 1
+191:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):464:15875:headers.put(keyword, value); |==> <NO-OP>
+192:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):467:15989:coll.write((byte)ch); |==> <NO-OP>
+193:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):471:16129:10 |==> 0
+194:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):471:16129:10 |==> -10
+195:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):471:16122:len *= 10; |==> <NO-OP>
+196:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):472:16156:ch - '0' |==> ch % '0'
+197:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):472:16156:ch - '0' |==> ch * '0'
+198:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):472:16156:ch - '0' |==> ch + '0'
+199:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):472:16156:ch - '0' |==> ch / '0'
+200:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):472:16149:len += ch - '0'; |==> <NO-OP>
+201:LVR:NEG:0:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):474:16202:-1 |==> 0
+202:LVR:NEG:POS:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):474:16202:-1 |==> 1
+203:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):474:16196:ch == -1 |==> ch <= -1
+204:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):474:16196:ch == -1 |==> ch >= -1
+205:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@parsePaxHeaders(java.io.InputStream):474:16199:ch == -1 |==> false
+206:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):496:16906:"path".equals(key) |==> false
+207:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):496:16906:"path".equals(key) |==> true
+208:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):497:16930:currEntry.setName(val); |==> <NO-OP>
+209:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):498:16994:"linkpath".equals(key) |==> false
+210:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):498:16994:"linkpath".equals(key) |==> true
+211:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):499:17018:currEntry.setLinkName(val); |==> <NO-OP>
+212:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):500:17081:"gid".equals(key) |==> false
+213:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):500:17081:"gid".equals(key) |==> true
+214:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):501:17105:currEntry.setGroupId(Integer.parseInt(val)); |==> <NO-OP>
+215:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):502:17187:"gname".equals(key) |==> false
+216:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):502:17187:"gname".equals(key) |==> true
+217:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):503:17211:currEntry.setGroupName(val); |==> <NO-OP>
+218:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):504:17275:"uid".equals(key) |==> false
+219:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):504:17275:"uid".equals(key) |==> true
+220:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):505:17299:currEntry.setUserId(Integer.parseInt(val)); |==> <NO-OP>
+221:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):506:17380:"uname".equals(key) |==> false
+222:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):506:17380:"uname".equals(key) |==> true
+223:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):507:17404:currEntry.setUserName(val); |==> <NO-OP>
+224:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):508:17468:"size".equals(key) |==> false
+225:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):508:17468:"size".equals(key) |==> true
+226:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):509:17492:currEntry.setSize(Long.parseLong(val)); |==> <NO-OP>
+227:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):510:17569:"mtime".equals(key) |==> false
+228:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):510:17569:"mtime".equals(key) |==> true
+229:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):511:17648:1000 |==> 0
+230:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):511:17648:1000 |==> -1000
+231:AOR:*(double,double):%(double,double):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):511:17622:Double.parseDouble(val) * 1000 |==> Double.parseDouble(val) % 1000
+232:AOR:*(double,double):+(double,double):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):511:17622:Double.parseDouble(val) * 1000 |==> Double.parseDouble(val) + 1000
+233:AOR:*(double,double):-(double,double):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):511:17622:Double.parseDouble(val) * 1000 |==> Double.parseDouble(val) - 1000
+234:AOR:*(double,double):/(double,double):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):511:17622:Double.parseDouble(val) * 1000 |==> Double.parseDouble(val) / 1000
+235:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):511:17593:currEntry.setModTime((long)(Double.parseDouble(val) * 1000)); |==> <NO-OP>
+236:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):512:17703:"SCHILY.devminor".equals(key) |==> false
+237:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):512:17703:"SCHILY.devminor".equals(key) |==> true
+238:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):513:17727:currEntry.setDevMinor(Integer.parseInt(val)); |==> <NO-OP>
+239:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):514:17820:"SCHILY.devmajor".equals(key) |==> false
+240:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):514:17820:"SCHILY.devmajor".equals(key) |==> true
+241:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@applyPaxHeadersToCurrentEntry(java.util.Map<java.lang.String,java.lang.String>):515:17844:currEntry.setDevMajor(Integer.parseInt(val)); |==> <NO-OP>
+242:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@readGNUSparse():533:18427:currEntry.isExtended() |==> false
+243:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@readGNUSparse():533:18427:currEntry.isExtended() |==> true
+244:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@readGNUSparse():537:18569:headerBuf == null |==> false
+245:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@readGNUSparse():538:18600:currEntry = null; |==> <NO-OP>
+246:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@tryToConsumeSecondEOFRecord():572:19844:true |==> false
+247:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@tryToConsumeSecondEOFRecord():574:19907:marked |==> false
+248:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@tryToConsumeSecondEOFRecord():574:19907:marked |==> true
+249:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@tryToConsumeSecondEOFRecord():575:19929:is.mark(recordSize); |==> <NO-OP>
+250:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@tryToConsumeSecondEOFRecord():578:19986:shouldReset = !isEOFRecord(readRecord()); |==> <NO-OP>
+251:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@tryToConsumeSecondEOFRecord():580:20064:shouldReset && marked |==> shouldReset == marked
+252:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@tryToConsumeSecondEOFRecord():580:20076:shouldReset && marked |==> false
+253:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@tryToConsumeSecondEOFRecord():580:20064:shouldReset && marked |==> shouldReset
+254:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@tryToConsumeSecondEOFRecord():580:20079:shouldReset && marked |==> marked
+255:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@tryToConsumeSecondEOFRecord():581:20105:pushedBackBytes(recordSize); |==> <NO-OP>
+256:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@tryToConsumeSecondEOFRecord():582:20147:is.reset(); |==> <NO-OP>
+257:ROR:>=(long,long):==(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):604:20851:entryOffset >= entrySize |==> entryOffset == entrySize
+258:ROR:>=(long,long):>(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):604:20851:entryOffset >= entrySize |==> entryOffset > entrySize
+259:ROR:>=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):604:20863:entryOffset >= entrySize |==> true
+260:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):604:20838:hasHitEOF || entryOffset >= entrySize |==> hasHitEOF != entryOffset >= entrySize
+261:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):604:20838:hasHitEOF || entryOffset >= entrySize |==> hasHitEOF
+262:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):604:20851:hasHitEOF || entryOffset >= entrySize |==> entryOffset >= entrySize
+263:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):604:20848:hasHitEOF || entryOffset >= entrySize |==> true
+264:LVR:NEG:0:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):605:20898:-1 |==> 0
+265:LVR:NEG:POS:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):605:20898:-1 |==> 1
+266:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):608:20935:currEntry == null |==> false
+267:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):612:21034:numToRead = Math.min(numToRead, available()); |==> <NO-OP>
+268:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):614:21097:totalRead = is.read(buf, offset, numToRead); |==> <NO-OP>
+269:LVR:NEG:0:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):616:21176:-1 |==> 0
+270:LVR:NEG:POS:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):616:21176:-1 |==> 1
+271:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):616:21163:totalRead == -1 |==> totalRead <= -1
+272:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):616:21163:totalRead == -1 |==> totalRead >= -1
+273:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):616:21173:totalRead == -1 |==> false
+274:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):617:21210:0 |==> 1
+275:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):617:21210:0 |==> -1
+276:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):617:21198:numToRead > 0 |==> numToRead != 0
+277:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):617:21198:numToRead > 0 |==> numToRead >= 0
+278:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):617:21208:numToRead > 0 |==> false
+279:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):620:21317:true |==> false
+280:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):620:21305:hasHitEOF = true; |==> <NO-OP>
+281:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):622:21352:count(totalRead); |==> <NO-OP>
+282:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@read(byte[],int,int):623:21382:entryOffset += totalRead; |==> <NO-OP>
+283:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@canReadEntryData(org.apache.commons.compress.archivers.ArchiveEntry):640:21836:false |==> true
+284:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@setCurrentEntry(org.apache.commons.compress.archivers.tar.TarArchiveEntry):653:22143:currEntry = e; |==> <NO-OP>
+285:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@setAtEOF(boolean):661:22293:hasHitEOF = b; |==> <NO-OP>
+286:AOR:%(long,long):*(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@consumeRemainderOfLastBlock():670:22639:getBytesRead() % blockSize |==> getBytesRead() * blockSize
+287:AOR:%(long,long):+(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@consumeRemainderOfLastBlock():670:22639:getBytesRead() % blockSize |==> getBytesRead() + blockSize
+288:AOR:%(long,long):-(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@consumeRemainderOfLastBlock():670:22639:getBytesRead() % blockSize |==> getBytesRead() - blockSize
+289:AOR:%(long,long):/(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@consumeRemainderOfLastBlock():670:22639:getBytesRead() % blockSize |==> getBytesRead() / blockSize
+290:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@consumeRemainderOfLastBlock():671:22702:0 |==> 1
+291:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@consumeRemainderOfLastBlock():671:22702:0 |==> -1
+292:ROR:>(long,long):!=(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@consumeRemainderOfLastBlock():671:22679:bytesReadOfLastBlock > 0 |==> bytesReadOfLastBlock != 0
+293:ROR:>(long,long):>=(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@consumeRemainderOfLastBlock():671:22679:bytesReadOfLastBlock > 0 |==> bytesReadOfLastBlock >= 0
+294:ROR:>(long,long):FALSE(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@consumeRemainderOfLastBlock():671:22700:bytesReadOfLastBlock > 0 |==> false
+295:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@consumeRemainderOfLastBlock():672:22751:blockSize - bytesReadOfLastBlock |==> blockSize % bytesReadOfLastBlock
+296:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@consumeRemainderOfLastBlock():672:22751:blockSize - bytesReadOfLastBlock |==> blockSize * bytesReadOfLastBlock
+297:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@consumeRemainderOfLastBlock():672:22751:blockSize - bytesReadOfLastBlock |==> blockSize + bytesReadOfLastBlock
+298:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@consumeRemainderOfLastBlock():672:22751:blockSize - bytesReadOfLastBlock |==> blockSize / bytesReadOfLastBlock
+299:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@consumeRemainderOfLastBlock():673:22798:count(skipped); |==> <NO-OP>
+300:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):687:23219:TarConstants.VERSION_OFFSET + TarConstants.VERSIONLEN |==> TarConstants.VERSION_OFFSET % TarConstants.VERSIONLEN
+301:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):687:23219:TarConstants.VERSION_OFFSET + TarConstants.VERSIONLEN |==> TarConstants.VERSION_OFFSET * TarConstants.VERSIONLEN
+302:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):687:23219:TarConstants.VERSION_OFFSET + TarConstants.VERSIONLEN |==> TarConstants.VERSION_OFFSET - TarConstants.VERSIONLEN
+303:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):687:23219:TarConstants.VERSION_OFFSET + TarConstants.VERSIONLEN |==> TarConstants.VERSION_OFFSET / TarConstants.VERSIONLEN
+304:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):687:23210:length < TarConstants.VERSION_OFFSET + TarConstants.VERSIONLEN |==> length != TarConstants.VERSION_OFFSET + TarConstants.VERSIONLEN
+305:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):687:23210:length < TarConstants.VERSION_OFFSET + TarConstants.VERSIONLEN |==> length <= TarConstants.VERSION_OFFSET + TarConstants.VERSIONLEN
+306:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):687:23217:length < TarConstants.VERSION_OFFSET + TarConstants.VERSIONLEN |==> false
+307:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):688:23293:false |==> true
+308:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):691:23323:ArchiveUtils.matchAsciiBuffer(TarConstants.MAGIC_POSIX, signature, TarConstants.MAGIC_OFFSET, TarConstants.MAGICLEN) && ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_POSIX, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) |==> ArchiveUtils.matchAsciiBuffer(TarConstants.MAGIC_POSIX, signature, TarConstants.MAGIC_OFFSET, TarConstants.MAGICLEN) == ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_POSIX, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN)
+309:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):693:23468:ArchiveUtils.matchAsciiBuffer(TarConstants.MAGIC_POSIX, signature, TarConstants.MAGIC_OFFSET, TarConstants.MAGICLEN) && ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_POSIX, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) |==> false
+310:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):691:23323:ArchiveUtils.matchAsciiBuffer(TarConstants.MAGIC_POSIX, signature, TarConstants.MAGIC_OFFSET, TarConstants.MAGICLEN) && ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_POSIX, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) |==> ArchiveUtils.matchAsciiBuffer(TarConstants.MAGIC_POSIX, signature, TarConstants.MAGIC_OFFSET, TarConstants.MAGICLEN)
+311:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):694:23483:ArchiveUtils.matchAsciiBuffer(TarConstants.MAGIC_POSIX, signature, TarConstants.MAGIC_OFFSET, TarConstants.MAGICLEN) && ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_POSIX, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) |==> ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_POSIX, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN)
+312:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):697:23660:true |==> false
+313:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):703:23861:ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_SPACE, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) || ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_ZERO, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) |==> ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_SPACE, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) != ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_ZERO, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN)
+314:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):703:23861:ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_SPACE, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) || ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_ZERO, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) |==> ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_SPACE, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN)
+315:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):706:24031:ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_SPACE, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) || ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_ZERO, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) |==> ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_ZERO, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN)
+316:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):705:24016:ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_SPACE, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) || ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_ZERO, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) |==> true
+317:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):699:23688:ArchiveUtils.matchAsciiBuffer(TarConstants.MAGIC_GNU, signature, TarConstants.MAGIC_OFFSET, TarConstants.MAGICLEN) && (ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_SPACE, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) || ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_ZERO, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN)) |==> ArchiveUtils.matchAsciiBuffer(TarConstants.MAGIC_GNU, signature, TarConstants.MAGIC_OFFSET, TarConstants.MAGICLEN) == (ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_SPACE, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) || ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_ZERO, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN))
+318:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):701:23831:ArchiveUtils.matchAsciiBuffer(TarConstants.MAGIC_GNU, signature, TarConstants.MAGIC_OFFSET, TarConstants.MAGICLEN) && (ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_SPACE, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) || ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_ZERO, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN)) |==> false
+319:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):699:23688:ArchiveUtils.matchAsciiBuffer(TarConstants.MAGIC_GNU, signature, TarConstants.MAGIC_OFFSET, TarConstants.MAGICLEN) && (ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_SPACE, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) || ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_ZERO, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN)) |==> ArchiveUtils.matchAsciiBuffer(TarConstants.MAGIC_GNU, signature, TarConstants.MAGIC_OFFSET, TarConstants.MAGICLEN)
+320:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):702:23846:ArchiveUtils.matchAsciiBuffer(TarConstants.MAGIC_GNU, signature, TarConstants.MAGIC_OFFSET, TarConstants.MAGICLEN) && (ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_SPACE, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) || ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_ZERO, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN)) |==> (ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_SPACE, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) || ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_GNU_ZERO, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN))
+321:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):710:24225:true |==> false
+322:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):713:24303:ArchiveUtils.matchAsciiBuffer(TarConstants.MAGIC_ANT, signature, TarConstants.MAGIC_OFFSET, TarConstants.MAGICLEN) && ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_ANT, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) |==> ArchiveUtils.matchAsciiBuffer(TarConstants.MAGIC_ANT, signature, TarConstants.MAGIC_OFFSET, TarConstants.MAGICLEN) == ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_ANT, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN)
+323:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):715:24446:ArchiveUtils.matchAsciiBuffer(TarConstants.MAGIC_ANT, signature, TarConstants.MAGIC_OFFSET, TarConstants.MAGICLEN) && ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_ANT, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) |==> false
+324:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):713:24303:ArchiveUtils.matchAsciiBuffer(TarConstants.MAGIC_ANT, signature, TarConstants.MAGIC_OFFSET, TarConstants.MAGICLEN) && ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_ANT, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) |==> ArchiveUtils.matchAsciiBuffer(TarConstants.MAGIC_ANT, signature, TarConstants.MAGIC_OFFSET, TarConstants.MAGICLEN)
+325:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):716:24461:ArchiveUtils.matchAsciiBuffer(TarConstants.MAGIC_ANT, signature, TarConstants.MAGIC_OFFSET, TarConstants.MAGICLEN) && ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_ANT, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN) |==> ArchiveUtils.matchAsciiBuffer(TarConstants.VERSION_ANT, signature, TarConstants.VERSION_OFFSET, TarConstants.VERSIONLEN)
+326:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):719:24636:true |==> false
+327:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveInputStream@matches(byte[],int):721:24667:false |==> true

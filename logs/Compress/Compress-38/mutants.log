@@ -1,0 +1,441 @@
+1:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry:146:6266:0 |==> 1
+2:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry:146:6266:0 |==> -1
+3:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry:158:6555:0 |==> 1
+4:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry:158:6555:0 |==> -1
+5:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry:161:6619:0 |==> 1
+6:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry:161:6619:0 |==> -1
+7:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry:164:6676:0 |==> 1
+8:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry:164:6676:0 |==> -1
+9:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry:190:7332:0 |==> 1
+10:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry:190:7332:0 |==> -1
+11:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry:193:7407:0 |==> 1
+12:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry:193:7407:0 |==> -1
+13:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>():228:8452:user.length() > MAX_NAMELEN |==> user.length() != MAX_NAMELEN
+14:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>():228:8452:user.length() > MAX_NAMELEN |==> user.length() >= MAX_NAMELEN
+15:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>():228:8466:user.length() > MAX_NAMELEN |==> false
+16:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>():229:8517:0 |==> 1
+17:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>():229:8517:0 |==> -1
+18:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>():229:8495:user = user.substring(0, MAX_NAMELEN); |==> <NO-OP>
+19:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>():232:8553:this.userName = user; |==> <NO-OP>
+20:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String):243:8874:false |==> true
+21:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String,boolean):259:9308:this.preserveLeadingSlashes = preserveLeadingSlashes; |==> <NO-OP>
+22:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String,boolean):261:9371:name = normalizeFileName(name, preserveLeadingSlashes); |==> <NO-OP>
+23:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String,boolean):264:9486:this.name = name; |==> <NO-OP>
+24:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String,boolean):265:9524:isDir |==> false
+25:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String,boolean):265:9524:isDir |==> true
+26:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String,boolean):265:9512:this.mode = isDir ? DEFAULT_DIR_MODE : DEFAULT_FILE_MODE; |==> <NO-OP>
+27:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String,boolean):266:9594:isDir |==> false
+28:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String,boolean):266:9594:isDir |==> true
+29:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String,boolean):266:9578:this.linkFlag = isDir ? LF_DIR : LF_NORMAL; |==> <NO-OP>
+30:AOR:/(long,long):%(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String,boolean):267:9645:new Date().getTime() / MILLIS_PER_SECOND |==> new Date().getTime() % MILLIS_PER_SECOND
+31:AOR:/(long,long):*(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String,boolean):267:9645:new Date().getTime() / MILLIS_PER_SECOND |==> new Date().getTime() * MILLIS_PER_SECOND
+32:AOR:/(long,long):+(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String,boolean):267:9645:new Date().getTime() / MILLIS_PER_SECOND |==> new Date().getTime() + MILLIS_PER_SECOND
+33:AOR:/(long,long):-(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String,boolean):267:9645:new Date().getTime() / MILLIS_PER_SECOND |==> new Date().getTime() - MILLIS_PER_SECOND
+34:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String,boolean):267:9630:this.modTime = new Date().getTime() / MILLIS_PER_SECOND; |==> <NO-OP>
+35:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String,boolean):268:9695:this.userName = ""; |==> <NO-OP>
+36:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String,byte):278:9976:false |==> true
+37:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String,byte,boolean):293:10421:this.linkFlag = linkFlag; |==> <NO-OP>
+38:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String,byte,boolean):294:10459:linkFlag == LF_GNUTYPE_LONGNAME |==> linkFlag <= LF_GNUTYPE_LONGNAME
+39:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String,byte,boolean):294:10459:linkFlag == LF_GNUTYPE_LONGNAME |==> linkFlag >= LF_GNUTYPE_LONGNAME
+40:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String,byte,boolean):294:10468:linkFlag == LF_GNUTYPE_LONGNAME |==> false
+41:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String,byte,boolean):295:10506:magic = MAGIC_GNU; |==> <NO-OP>
+42:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.lang.String,byte,boolean):296:10537:version = VERSION_GNU_SPACE; |==> <NO-OP>
+43:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):319:11331:false |==> true
+44:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):322:11394:file.isDirectory() |==> false
+45:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):322:11394:file.isDirectory() |==> true
+46:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):323:11412:this.mode = DEFAULT_DIR_MODE; |==> <NO-OP>
+47:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):324:11454:this.linkFlag = LF_DIR; |==> <NO-OP>
+48:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):327:11569:0 |==> 1
+49:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):327:11569:0 |==> -1
+50:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):327:11555:nameLength == 0 |==> nameLength <= 0
+51:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):327:11555:nameLength == 0 |==> nameLength >= 0
+52:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):327:11566:nameLength == 0 |==> false
+53:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):327:11609:1 |==> 0
+54:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):327:11609:1 |==> -1
+55:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):327:11596:nameLength - 1 |==> nameLength % 1
+56:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):327:11596:nameLength - 1 |==> nameLength * 1
+57:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):327:11596:nameLength - 1 |==> nameLength + 1
+58:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):327:11596:nameLength - 1 |==> nameLength / 1
+59:ROR:!=(int,int):<(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):327:11574:normalizedName.charAt(nameLength - 1) != '/' |==> normalizedName.charAt(nameLength - 1) < '/'
+60:ROR:!=(int,int):>(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):327:11574:normalizedName.charAt(nameLength - 1) != '/' |==> normalizedName.charAt(nameLength - 1) > '/'
+61:ROR:!=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):327:11612:normalizedName.charAt(nameLength - 1) != '/' |==> true
+62:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):327:11555:nameLength == 0 || normalizedName.charAt(nameLength - 1) != '/' |==> nameLength == 0 != (normalizedName.charAt(nameLength - 1) != '/')
+63:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):327:11555:nameLength == 0 || normalizedName.charAt(nameLength - 1) != '/' |==> nameLength == 0
+64:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):327:11574:nameLength == 0 || normalizedName.charAt(nameLength - 1) != '/' |==> normalizedName.charAt(nameLength - 1) != '/'
+65:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):327:11571:nameLength == 0 || normalizedName.charAt(nameLength - 1) != '/' |==> true
+66:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):328:11638:this.name = normalizedName + "/"; |==> <NO-OP>
+67:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):330:11709:this.name = normalizedName; |==> <NO-OP>
+68:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):333:11780:this.mode = DEFAULT_FILE_MODE; |==> <NO-OP>
+69:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):334:11823:this.linkFlag = LF_NORMAL; |==> <NO-OP>
+70:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):335:11862:this.size = file.length(); |==> <NO-OP>
+71:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):336:11901:this.name = normalizedName; |==> <NO-OP>
+72:AOR:/(long,long):%(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):339:11963:file.lastModified() / MILLIS_PER_SECOND |==> file.lastModified() % MILLIS_PER_SECOND
+73:AOR:/(long,long):*(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):339:11963:file.lastModified() / MILLIS_PER_SECOND |==> file.lastModified() * MILLIS_PER_SECOND
+74:AOR:/(long,long):+(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):339:11963:file.lastModified() / MILLIS_PER_SECOND |==> file.lastModified() + MILLIS_PER_SECOND
+75:AOR:/(long,long):-(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):339:11963:file.lastModified() / MILLIS_PER_SECOND |==> file.lastModified() - MILLIS_PER_SECOND
+76:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):339:11948:this.modTime = file.lastModified() / MILLIS_PER_SECOND; |==> <NO-OP>
+77:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(java.io.File,java.lang.String):340:12012:this.userName = ""; |==> <NO-OP>
+78:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(byte[]):352:12384:parseTarHeader(headerBuf); |==> <NO-OP>
+79:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@<init>(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding):368:12926:parseTarHeader(headerBuf, encoding); |==> <NO-OP>
+80:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.tar.TarArchiveEntry@equals(java.lang.Object):391:13612:it == null |==> false
+81:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.tar.TarArchiveEntry@equals(java.lang.Object):391:13634:getClass() != it.getClass() |==> true
+82:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@equals(java.lang.Object):391:13609:it == null || getClass() != it.getClass() |==> it == null != (getClass() != it.getClass())
+83:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@equals(java.lang.Object):391:13609:it == null || getClass() != it.getClass() |==> it == null
+84:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@equals(java.lang.Object):391:13623:it == null || getClass() != it.getClass() |==> getClass() != it.getClass()
+85:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@equals(java.lang.Object):391:13620:it == null || getClass() != it.getClass() |==> true
+86:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@equals(java.lang.Object):392:13673:false |==> true
+87:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setName(java.lang.String):435:14668:this.name = normalizeFileName(name, this.preserveLeadingSlashes); |==> <NO-OP>
+88:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setMode(int):444:14892:this.mode = mode; |==> <NO-OP>
+89:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setLinkName(java.lang.String):464:15261:this.linkName = link; |==> <NO-OP>
+90:LVR:NEG:0:org.apache.commons.compress.archivers.tar.TarArchiveEntry@getUserId():476:15569:-1 |==> 0
+91:LVR:NEG:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry@getUserId():476:15569:-1 |==> 1
+92:LOR:&(long,long):^(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@getUserId():476:15560:userId & -1 |==> userId ^ -1
+93:LOR:&(long,long):|(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@getUserId():476:15560:userId & -1 |==> userId | -1
+94:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setUserId(int):485:15746:setUserId((long)userId); |==> <NO-OP>
+95:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setUserId(long):505:16132:this.userId = userId; |==> <NO-OP>
+96:LVR:NEG:0:org.apache.commons.compress.archivers.tar.TarArchiveEntry@getGroupId():517:16446:-1 |==> 0
+97:LVR:NEG:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry@getGroupId():517:16446:-1 |==> 1
+98:LOR:&(long,long):^(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@getGroupId():517:16436:groupId & -1 |==> groupId ^ -1
+99:LOR:&(long,long):|(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@getGroupId():517:16436:groupId & -1 |==> groupId | -1
+100:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setGroupId(int):526:16628:setGroupId((long)groupId); |==> <NO-OP>
+101:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setGroupId(long):546:17025:this.groupId = groupId; |==> <NO-OP>
+102:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setUserName(java.lang.String):564:17389:this.userName = userName; |==> <NO-OP>
+103:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setGroupName(java.lang.String):582:17764:this.groupName = groupName; |==> <NO-OP>
+104:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setIds(int,int):592:18054:setUserId(userId); |==> <NO-OP>
+105:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setIds(int,int):593:18081:setGroupId(groupId); |==> <NO-OP>
+106:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setNames(java.lang.String,java.lang.String):603:18386:setUserName(userName); |==> <NO-OP>
+107:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setNames(java.lang.String,java.lang.String):604:18417:setGroupName(groupName); |==> <NO-OP>
+108:AOR:/(long,long):%(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@setModTime(long):614:18696:time / MILLIS_PER_SECOND |==> time % MILLIS_PER_SECOND
+109:AOR:/(long,long):*(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@setModTime(long):614:18696:time / MILLIS_PER_SECOND |==> time * MILLIS_PER_SECOND
+110:AOR:/(long,long):+(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@setModTime(long):614:18696:time / MILLIS_PER_SECOND |==> time + MILLIS_PER_SECOND
+111:AOR:/(long,long):-(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@setModTime(long):614:18696:time / MILLIS_PER_SECOND |==> time - MILLIS_PER_SECOND
+112:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setModTime(long):614:18686:modTime = time / MILLIS_PER_SECOND; |==> <NO-OP>
+113:AOR:/(long,long):%(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@setModTime(java.util.Date):623:18914:time.getTime() / MILLIS_PER_SECOND |==> time.getTime() % MILLIS_PER_SECOND
+114:AOR:/(long,long):*(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@setModTime(java.util.Date):623:18914:time.getTime() / MILLIS_PER_SECOND |==> time.getTime() * MILLIS_PER_SECOND
+115:AOR:/(long,long):+(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@setModTime(java.util.Date):623:18914:time.getTime() / MILLIS_PER_SECOND |==> time.getTime() + MILLIS_PER_SECOND
+116:AOR:/(long,long):-(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@setModTime(java.util.Date):623:18914:time.getTime() / MILLIS_PER_SECOND |==> time.getTime() - MILLIS_PER_SECOND
+117:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setModTime(java.util.Date):623:18904:modTime = time.getTime() / MILLIS_PER_SECOND; |==> <NO-OP>
+118:AOR:*(long,long):%(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@getModTime():632:19134:modTime * MILLIS_PER_SECOND |==> modTime % MILLIS_PER_SECOND
+119:AOR:*(long,long):+(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@getModTime():632:19134:modTime * MILLIS_PER_SECOND |==> modTime + MILLIS_PER_SECOND
+120:AOR:*(long,long):-(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@getModTime():632:19134:modTime * MILLIS_PER_SECOND |==> modTime - MILLIS_PER_SECOND
+121:AOR:*(long,long):/(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@getModTime():632:19134:modTime * MILLIS_PER_SECOND |==> modTime / MILLIS_PER_SECOND
+122:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setSize(long):686:20199:0 |==> 1
+123:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setSize(long):686:20199:0 |==> -1
+124:ROR:<(long,long):!=(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@setSize(long):686:20192:size < 0 |==> size != 0
+125:ROR:<(long,long):<=(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@setSize(long):686:20192:size < 0 |==> size <= 0
+126:ROR:<(long,long):FALSE(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@setSize(long):686:20197:size < 0 |==> false
+127:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setSize(long):689:20300:this.size = size; |==> <NO-OP>
+128:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setDevMajor(int):710:20794:0 |==> 1
+129:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setDevMajor(int):710:20794:0 |==> -1
+130:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@setDevMajor(int):710:20786:devNo < 0 |==> devNo != 0
+131:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@setDevMajor(int):710:20786:devNo < 0 |==> devNo <= 0
+132:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@setDevMajor(int):710:20792:devNo < 0 |==> false
+133:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setDevMajor(int):714:20965:this.devMajor = devNo; |==> <NO-OP>
+134:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setDevMinor(int):735:21464:0 |==> 1
+135:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setDevMinor(int):735:21464:0 |==> -1
+136:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@setDevMinor(int):735:21456:devNo < 0 |==> devNo != 0
+137:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@setDevMinor(int):735:21456:devNo < 0 |==> devNo <= 0
+138:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@setDevMinor(int):735:21462:devNo < 0 |==> false
+139:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@setDevMinor(int):739:21635:this.devMinor = devNo; |==> <NO-OP>
+140:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isGNUSparse():767:22310:isOldGNUSparse() || isPaxGNUSparse() |==> isOldGNUSparse() != isPaxGNUSparse()
+141:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isGNUSparse():767:22310:isOldGNUSparse() || isPaxGNUSparse() |==> isOldGNUSparse()
+142:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isGNUSparse():767:22330:isOldGNUSparse() || isPaxGNUSparse() |==> isPaxGNUSparse()
+143:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isGNUSparse():767:22327:isOldGNUSparse() || isPaxGNUSparse() |==> true
+144:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isOldGNUSparse():778:22620:linkFlag == LF_GNUTYPE_SPARSE |==> linkFlag <= LF_GNUTYPE_SPARSE
+145:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isOldGNUSparse():778:22620:linkFlag == LF_GNUTYPE_SPARSE |==> linkFlag >= LF_GNUTYPE_SPARSE
+146:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isOldGNUSparse():778:22629:linkFlag == LF_GNUTYPE_SPARSE |==> false
+147:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isGNULongLinkEntry():808:23396:linkFlag == LF_GNUTYPE_LONGLINK |==> linkFlag <= LF_GNUTYPE_LONGLINK
+148:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isGNULongLinkEntry():808:23396:linkFlag == LF_GNUTYPE_LONGLINK |==> linkFlag >= LF_GNUTYPE_LONGLINK
+149:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isGNULongLinkEntry():808:23405:linkFlag == LF_GNUTYPE_LONGLINK |==> false
+150:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isGNULongNameEntry():817:23644:linkFlag == LF_GNUTYPE_LONGNAME |==> linkFlag <= LF_GNUTYPE_LONGNAME
+151:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isGNULongNameEntry():817:23644:linkFlag == LF_GNUTYPE_LONGNAME |==> linkFlag >= LF_GNUTYPE_LONGNAME
+152:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isGNULongNameEntry():817:23653:linkFlag == LF_GNUTYPE_LONGNAME |==> false
+153:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isPaxHeader():829:23879:linkFlag == LF_PAX_EXTENDED_HEADER_LC |==> linkFlag <= LF_PAX_EXTENDED_HEADER_LC
+154:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isPaxHeader():829:23879:linkFlag == LF_PAX_EXTENDED_HEADER_LC |==> linkFlag >= LF_PAX_EXTENDED_HEADER_LC
+155:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isPaxHeader():829:23888:linkFlag == LF_PAX_EXTENDED_HEADER_LC |==> false
+156:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isPaxHeader():830:23932:linkFlag == LF_PAX_EXTENDED_HEADER_UC |==> linkFlag <= LF_PAX_EXTENDED_HEADER_UC
+157:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isPaxHeader():830:23932:linkFlag == LF_PAX_EXTENDED_HEADER_UC |==> linkFlag >= LF_PAX_EXTENDED_HEADER_UC
+158:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isPaxHeader():830:23941:linkFlag == LF_PAX_EXTENDED_HEADER_UC |==> false
+159:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isPaxHeader():829:23879:linkFlag == LF_PAX_EXTENDED_HEADER_LC || linkFlag == LF_PAX_EXTENDED_HEADER_UC |==> linkFlag == LF_PAX_EXTENDED_HEADER_LC
+160:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isPaxHeader():830:23932:linkFlag == LF_PAX_EXTENDED_HEADER_LC || linkFlag == LF_PAX_EXTENDED_HEADER_UC |==> linkFlag == LF_PAX_EXTENDED_HEADER_UC
+161:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isPaxHeader():830:23929:linkFlag == LF_PAX_EXTENDED_HEADER_LC || linkFlag == LF_PAX_EXTENDED_HEADER_UC |==> true
+162:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isGlobalPaxHeader():841:24172:linkFlag == LF_PAX_GLOBAL_EXTENDED_HEADER |==> linkFlag <= LF_PAX_GLOBAL_EXTENDED_HEADER
+163:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isGlobalPaxHeader():841:24172:linkFlag == LF_PAX_GLOBAL_EXTENDED_HEADER |==> linkFlag >= LF_PAX_GLOBAL_EXTENDED_HEADER
+164:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isGlobalPaxHeader():841:24181:linkFlag == LF_PAX_GLOBAL_EXTENDED_HEADER |==> false
+165:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isDirectory():851:24425:file != null |==> true
+166:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isDirectory():855:24498:linkFlag == LF_DIR |==> linkFlag <= LF_DIR
+167:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isDirectory():855:24498:linkFlag == LF_DIR |==> linkFlag >= LF_DIR
+168:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isDirectory():855:24507:linkFlag == LF_DIR |==> false
+169:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@isDirectory():856:24539:true |==> false
+170:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@isDirectory():859:24586:getName().endsWith("/") |==> false
+171:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@isDirectory():859:24586:getName().endsWith("/") |==> true
+172:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@isDirectory():860:24614:true |==> false
+173:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@isDirectory():863:24646:false |==> true
+174:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isFile():873:24835:file != null |==> true
+175:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isFile():876:24902:linkFlag == LF_OLDNORM |==> linkFlag <= LF_OLDNORM
+176:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isFile():876:24902:linkFlag == LF_OLDNORM |==> linkFlag >= LF_OLDNORM
+177:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isFile():876:24911:linkFlag == LF_OLDNORM |==> false
+178:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isFile():876:24928:linkFlag == LF_NORMAL |==> linkFlag <= LF_NORMAL
+179:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isFile():876:24928:linkFlag == LF_NORMAL |==> linkFlag >= LF_NORMAL
+180:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isFile():876:24937:linkFlag == LF_NORMAL |==> false
+181:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isFile():876:24902:linkFlag == LF_OLDNORM || linkFlag == LF_NORMAL |==> linkFlag == LF_OLDNORM
+182:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isFile():876:24928:linkFlag == LF_OLDNORM || linkFlag == LF_NORMAL |==> linkFlag == LF_NORMAL
+183:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isFile():876:24925:linkFlag == LF_OLDNORM || linkFlag == LF_NORMAL |==> true
+184:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@isFile():877:24972:true |==> false
+185:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isSymbolicLink():889:25224:linkFlag == LF_SYMLINK |==> linkFlag <= LF_SYMLINK
+186:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isSymbolicLink():889:25224:linkFlag == LF_SYMLINK |==> linkFlag >= LF_SYMLINK
+187:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isSymbolicLink():889:25233:linkFlag == LF_SYMLINK |==> false
+188:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isLink():899:25423:linkFlag == LF_LINK |==> linkFlag <= LF_LINK
+189:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isLink():899:25423:linkFlag == LF_LINK |==> linkFlag >= LF_LINK
+190:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isLink():899:25432:linkFlag == LF_LINK |==> false
+191:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isCharacterDevice():909:25648:linkFlag == LF_CHR |==> linkFlag <= LF_CHR
+192:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isCharacterDevice():909:25648:linkFlag == LF_CHR |==> linkFlag >= LF_CHR
+193:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isCharacterDevice():909:25657:linkFlag == LF_CHR |==> false
+194:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isBlockDevice():919:25860:linkFlag == LF_BLK |==> linkFlag <= LF_BLK
+195:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isBlockDevice():919:25860:linkFlag == LF_BLK |==> linkFlag >= LF_BLK
+196:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isBlockDevice():919:25869:linkFlag == LF_BLK |==> false
+197:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isFIFO():929:26062:linkFlag == LF_FIFO |==> linkFlag <= LF_FIFO
+198:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isFIFO():929:26062:linkFlag == LF_FIFO |==> linkFlag >= LF_FIFO
+199:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isFIFO():929:26071:linkFlag == LF_FIFO |==> false
+200:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isSparse():939:26270:isGNUSparse() || isStarSparse() |==> isGNUSparse() != isStarSparse()
+201:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isSparse():939:26270:isGNUSparse() || isStarSparse() |==> isGNUSparse()
+202:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isSparse():939:26287:isGNUSparse() || isStarSparse() |==> isStarSparse()
+203:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@isSparse():939:26284:isGNUSparse() || isStarSparse() |==> true
+204:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.tar.TarArchiveEntry@getDirectoryEntries():949:26601:file == null |==> false
+205:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@getDirectoryEntries():949:26596:file == null || !file.isDirectory() |==> file == null != !file.isDirectory()
+206:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@getDirectoryEntries():949:26596:file == null || !file.isDirectory() |==> file == null
+207:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@getDirectoryEntries():949:26612:file == null || !file.isDirectory() |==> !file.isDirectory()
+208:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@getDirectoryEntries():949:26609:file == null || !file.isDirectory() |==> true
+209:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.tar.TarArchiveEntry@getDirectoryEntries():954:26752:list == null |==> false
+210:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry@getDirectoryEntries():959:26916:0 |==> 1
+211:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@getDirectoryEntries():959:26916:0 |==> -1
+212:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@getDirectoryEntries():959:26919:i < result.length |==> i <= result.length
+213:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@getDirectoryEntries():959:26921:i < result.length |==> false
+214:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@getDirectoryEntries():960:26957:result[i] = new TarArchiveEntry(new File(file, list[i])); |==> <NO-OP>
+215:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[]):975:27420:false |==> true
+216:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[]):975:27368:writeEntryHeader(outbuf, TarUtils.DEFAULT_ENCODING, false); |==> <NO-OP>
+217:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[]):978:27556:false |==> true
+218:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[]):978:27503:writeEntryHeader(outbuf, TarUtils.FALLBACK_ENCODING, false); |==> <NO-OP>
+219:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):999:28347:0 |==> 1
+220:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):999:28347:0 |==> -1
+221:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1001:28359:offset = TarUtils.formatNameBytes(name, outbuf, offset, NAMELEN, encoding); |==> <NO-OP>
+222:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1003:28485:offset = writeEntryHeaderField(mode, outbuf, offset, MODELEN, starMode); |==> <NO-OP>
+223:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1004:28566:offset = writeEntryHeaderField(userId, outbuf, offset, UIDLEN, starMode); |==> <NO-OP>
+224:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1006:28687:offset = writeEntryHeaderField(groupId, outbuf, offset, GIDLEN, starMode); |==> <NO-OP>
+225:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1008:28809:offset = writeEntryHeaderField(size, outbuf, offset, SIZELEN, starMode); |==> <NO-OP>
+226:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1009:28890:offset = writeEntryHeaderField(modTime, outbuf, offset, MODTIMELEN, starMode); |==> <NO-OP>
+227:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1014:29068:0 |==> 1
+228:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1014:29068:0 |==> -1
+229:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1014:29071:c < CHKSUMLEN |==> c <= CHKSUMLEN
+230:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1014:29073:c < CHKSUMLEN |==> false
+231:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1015:29105:outbuf[offset++] = (byte)' '; |==> <NO-OP>
+232:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1018:29155:outbuf[offset++] = linkFlag; |==> <NO-OP>
+233:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1019:29192:offset = TarUtils.formatNameBytes(linkName, outbuf, offset, NAMELEN, encoding); |==> <NO-OP>
+234:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1021:29322:offset = TarUtils.formatNameBytes(magic, outbuf, offset, MAGICLEN); |==> <NO-OP>
+235:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1022:29398:offset = TarUtils.formatNameBytes(version, outbuf, offset, VERSIONLEN); |==> <NO-OP>
+236:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1023:29478:offset = TarUtils.formatNameBytes(userName, outbuf, offset, UNAMELEN, encoding); |==> <NO-OP>
+237:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1025:29609:offset = TarUtils.formatNameBytes(groupName, outbuf, offset, GNAMELEN, encoding); |==> <NO-OP>
+238:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1027:29741:offset = writeEntryHeaderField(devMajor, outbuf, offset, DEVLEN, starMode); |==> <NO-OP>
+239:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1029:29864:offset = writeEntryHeaderField(devMinor, outbuf, offset, DEVLEN, starMode); |==> <NO-OP>
+240:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1032:29995:offset < outbuf.length |==> offset != outbuf.length
+241:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1032:29995:offset < outbuf.length |==> offset <= outbuf.length
+242:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1032:30002:offset < outbuf.length |==> false
+243:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1033:30052:0 |==> 1
+244:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1033:30052:0 |==> -1
+245:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1033:30033:outbuf[offset++] = 0; |==> <NO-OP>
+246:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1038:30134:TarUtils.formatCheckSumOctalBytes(chk, outbuf, csOffset, CHKSUMLEN); |==> <NO-OP>
+247:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1043:30421:0 |==> 1
+248:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1043:30421:0 |==> -1
+249:ROR:<(long,long):!=(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1043:30413:value < 0 |==> value != 0
+250:ROR:<(long,long):<=(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1043:30413:value < 0 |==> value <= 0
+251:ROR:<(long,long):FALSE(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1043:30419:value < 0 |==> false
+252:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1044:30461:1L |==> 0L
+253:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1044:30461:1L |==> -1L
+254:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1044:30467:3 |==> 0
+255:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1044:30467:3 |==> -3
+256:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1044:30481:1 |==> 0
+257:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1044:30481:1 |==> -1
+258:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1044:30472:length - 1 |==> length % 1
+259:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1044:30472:length - 1 |==> length * 1
+260:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1044:30472:length - 1 |==> length + 1
+261:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1044:30472:length - 1 |==> length / 1
+262:AOR:*(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1044:30467:3 * (length - 1) |==> 3 % (length - 1)
+263:AOR:*(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1044:30467:3 * (length - 1) |==> 3 + (length - 1)
+264:AOR:*(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1044:30467:3 * (length - 1) |==> 3 - (length - 1)
+265:AOR:*(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1044:30467:3 * (length - 1) |==> 3 / (length - 1)
+266:SOR:<<(long,int):>>(long,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1044:30461:1L << 3 * (length - 1) |==> 1L >> 3 * (length - 1)
+267:SOR:<<(long,int):>>>(long,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1044:30461:1L << 3 * (length - 1) |==> 1L >>> 3 * (length - 1)
+268:ROR:>=(long,long):==(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1044:30452:value >= 1L << 3 * (length - 1) |==> value == 1L << 3 * (length - 1)
+269:ROR:>=(long,long):>(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1044:30452:value >= 1L << 3 * (length - 1) |==> value > 1L << 3 * (length - 1)
+270:ROR:>=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1044:30458:value >= 1L << 3 * (length - 1) |==> true
+271:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1043:30413:value < 0 || value >= 1L << 3 * (length - 1) |==> value < 0 != value >= 1L << 3 * (length - 1)
+272:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1043:30413:value < 0 || value >= 1L << 3 * (length - 1) |==> value < 0
+273:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1044:30452:value < 0 || value >= 1L << 3 * (length - 1) |==> value >= 1L << 3 * (length - 1)
+274:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1044:30449:value < 0 || value >= 1L << 3 * (length - 1) |==> true
+275:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1043:30399:!starMode && (value < 0 || value >= 1L << 3 * (length - 1)) |==> !starMode == (value < 0 || value >= 1L << 3 * (length - 1))
+276:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1043:30409:!starMode && (value < 0 || value >= 1L << 3 * (length - 1)) |==> false
+277:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1043:30399:!starMode && (value < 0 || value >= 1L << 3 * (length - 1)) |==> !starMode
+278:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1043:30412:!starMode && (value < 0 || value >= 1L << 3 * (length - 1)) |==> (value < 0 || value >= 1L << 3 * (length - 1))
+279:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1048:30690:0 |==> 1
+280:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@writeEntryHeaderField(long,byte[],int,int,boolean):1048:30690:0 |==> -1
+281:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[]):1062:31207:parseTarHeader(header, TarUtils.DEFAULT_ENCODING); |==> <NO-OP>
+282:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[]):1065:31383:true |==> false
+283:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[]):1065:31333:parseTarHeader(header, TarUtils.DEFAULT_ENCODING, true); |==> <NO-OP>
+284:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding):1085:32074:false |==> true
+285:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding):1085:32041:parseTarHeader(header, encoding, false); |==> <NO-OP>
+286:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1091:32276:0 |==> 1
+287:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1091:32276:0 |==> -1
+288:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1093:32295:oldStyle |==> false
+289:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1093:32295:oldStyle |==> true
+290:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1093:32288:name = oldStyle ? TarUtils.parseName(header, offset, NAMELEN) : TarUtils.parseName(header, offset, NAMELEN, encoding); |==> <NO-OP>
+291:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1095:32427:offset += NAMELEN; |==> <NO-OP>
+292:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1096:32454:mode = (int)TarUtils.parseOctalOrBinary(header, offset, MODELEN); |==> <NO-OP>
+293:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1097:32529:offset += MODELEN; |==> <NO-OP>
+294:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1098:32556:userId = (int)TarUtils.parseOctalOrBinary(header, offset, UIDLEN); |==> <NO-OP>
+295:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1099:32632:offset += UIDLEN; |==> <NO-OP>
+296:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1100:32658:groupId = (int)TarUtils.parseOctalOrBinary(header, offset, GIDLEN); |==> <NO-OP>
+297:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1101:32735:offset += GIDLEN; |==> <NO-OP>
+298:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1102:32761:size = TarUtils.parseOctalOrBinary(header, offset, SIZELEN); |==> <NO-OP>
+299:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1103:32830:offset += SIZELEN; |==> <NO-OP>
+300:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1104:32857:modTime = TarUtils.parseOctalOrBinary(header, offset, MODTIMELEN); |==> <NO-OP>
+301:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1105:32932:offset += MODTIMELEN; |==> <NO-OP>
+302:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1106:32962:checkSumOK = TarUtils.verifyCheckSum(header); |==> <NO-OP>
+303:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1107:33016:offset += CHKSUMLEN; |==> <NO-OP>
+304:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1108:33045:linkFlag = header[offset++]; |==> <NO-OP>
+305:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1109:33093:oldStyle |==> false
+306:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1109:33093:oldStyle |==> true
+307:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1109:33082:linkName = oldStyle ? TarUtils.parseName(header, offset, NAMELEN) : TarUtils.parseName(header, offset, NAMELEN, encoding); |==> <NO-OP>
+308:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1111:33225:offset += NAMELEN; |==> <NO-OP>
+309:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1112:33252:magic = TarUtils.parseName(header, offset, MAGICLEN); |==> <NO-OP>
+310:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1113:33314:offset += MAGICLEN; |==> <NO-OP>
+311:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1114:33342:version = TarUtils.parseName(header, offset, VERSIONLEN); |==> <NO-OP>
+312:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1115:33408:offset += VERSIONLEN; |==> <NO-OP>
+313:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1116:33449:oldStyle |==> false
+314:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1116:33449:oldStyle |==> true
+315:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1116:33438:userName = oldStyle ? TarUtils.parseName(header, offset, UNAMELEN) : TarUtils.parseName(header, offset, UNAMELEN, encoding); |==> <NO-OP>
+316:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1118:33583:offset += UNAMELEN; |==> <NO-OP>
+317:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1119:33623:oldStyle |==> false
+318:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1119:33623:oldStyle |==> true
+319:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1119:33611:groupName = oldStyle ? TarUtils.parseName(header, offset, GNAMELEN) : TarUtils.parseName(header, offset, GNAMELEN, encoding); |==> <NO-OP>
+320:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1121:33757:offset += GNAMELEN; |==> <NO-OP>
+321:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1122:33785:devMajor = (int)TarUtils.parseOctalOrBinary(header, offset, DEVLEN); |==> <NO-OP>
+322:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1123:33863:offset += DEVLEN; |==> <NO-OP>
+323:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1124:33889:devMinor = (int)TarUtils.parseOctalOrBinary(header, offset, DEVLEN); |==> <NO-OP>
+324:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1125:33967:offset += DEVLEN; |==> <NO-OP>
+325:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1130:34099:offset += ATIMELEN_GNU; |==> <NO-OP>
+326:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1131:34135:offset += CTIMELEN_GNU; |==> <NO-OP>
+327:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1132:34171:offset += OFFSETLEN_GNU; |==> <NO-OP>
+328:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1133:34208:offset += LONGNAMESLEN_GNU; |==> <NO-OP>
+329:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1134:34248:offset += PAD2LEN_GNU; |==> <NO-OP>
+330:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1135:34283:offset += SPARSELEN_GNU; |==> <NO-OP>
+331:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1136:34320:isExtended = TarUtils.parseBoolean(header, offset); |==> <NO-OP>
+332:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1137:34384:offset += ISEXTENDEDLEN_GNU; |==> <NO-OP>
+333:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1138:34425:realSize = TarUtils.parseOctal(header, offset, REALSIZELEN_GNU); |==> <NO-OP>
+334:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1139:34502:offset += REALSIZELEN_GNU; |==> <NO-OP>
+335:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1143:34626:oldStyle |==> false
+336:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1143:34626:oldStyle |==> true
+337:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1146:34825:0 |==> 1
+338:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1146:34825:0 |==> -1
+339:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1146:34802:xstarPrefix.length() > 0 |==> xstarPrefix.length() >= 0
+340:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1146:34823:xstarPrefix.length() > 0 |==> false
+341:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1147:34846:name = xstarPrefix + "/" + name; |==> <NO-OP>
+342:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1153:35002:oldStyle |==> false
+343:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1153:35002:oldStyle |==> true
+344:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1158:35271:isDirectory() && !name.endsWith("/") |==> isDirectory() == !name.endsWith("/")
+345:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1158:35285:isDirectory() && !name.endsWith("/") |==> false
+346:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1158:35271:isDirectory() && !name.endsWith("/") |==> isDirectory()
+347:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1158:35288:isDirectory() && !name.endsWith("/") |==> !name.endsWith("/")
+348:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1159:35326:name = name + "/"; |==> <NO-OP>
+349:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1161:35393:0 |==> 1
+350:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1161:35393:0 |==> -1
+351:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1161:35375:prefix.length() > 0 |==> prefix.length() >= 0
+352:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1161:35391:prefix.length() > 0 |==> false
+353:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@parseTarHeader(byte[],org.apache.commons.compress.archivers.zip.ZipEncoding,boolean):1162:35413:name = prefix + "/" + name; |==> <NO-OP>
+354:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1176:35870:osname != null |==> true
+355:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1181:36029:osname.startsWith("windows") |==> false
+356:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1181:36029:osname.startsWith("windows") |==> true
+357:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1182:36084:2 |==> 0
+358:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1182:36084:2 |==> -2
+359:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1182:36064:fileName.length() > 2 |==> fileName.length() != 2
+360:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1182:36064:fileName.length() > 2 |==> fileName.length() >= 2
+361:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1182:36082:fileName.length() > 2 |==> false
+362:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1183:36142:0 |==> 1
+363:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1183:36142:0 |==> -1
+364:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1184:36199:1 |==> 0
+365:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1184:36199:1 |==> -1
+366:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1186:36228:ch2 == ':' |==> ch2 <= ':'
+367:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1186:36228:ch2 == ':' |==> ch2 >= ':'
+368:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1186:36232:ch2 == ':' |==> false
+369:ROR:>=(int,int):==(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1187:36267:ch1 >= 'a' |==> ch1 == 'a'
+370:ROR:>=(int,int):>(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1187:36267:ch1 >= 'a' |==> ch1 > 'a'
+371:ROR:>=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1187:36271:ch1 >= 'a' |==> true
+372:ROR:<=(int,int):<(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1187:36281:ch1 <= 'z' |==> ch1 < 'z'
+373:ROR:<=(int,int):==(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1187:36281:ch1 <= 'z' |==> ch1 == 'z'
+374:ROR:<=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1187:36285:ch1 <= 'z' |==> true
+375:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1187:36278:ch1 >= 'a' && ch1 <= 'z' |==> false
+376:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1187:36267:ch1 >= 'a' && ch1 <= 'z' |==> ch1 >= 'a'
+377:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1187:36281:ch1 >= 'a' && ch1 <= 'z' |==> ch1 <= 'z'
+378:ROR:>=(int,int):==(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1188:36323:ch1 >= 'A' |==> ch1 == 'A'
+379:ROR:>=(int,int):>(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1188:36323:ch1 >= 'A' |==> ch1 > 'A'
+380:ROR:>=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1188:36327:ch1 >= 'A' |==> true
+381:ROR:<=(int,int):<(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1188:36337:ch1 <= 'Z' |==> ch1 < 'Z'
+382:ROR:<=(int,int):==(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1188:36337:ch1 <= 'Z' |==> ch1 == 'Z'
+383:ROR:<=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1188:36341:ch1 <= 'Z' |==> true
+384:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1188:36334:ch1 >= 'A' && ch1 <= 'Z' |==> false
+385:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1188:36323:ch1 >= 'A' && ch1 <= 'Z' |==> ch1 >= 'A'
+386:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1188:36337:ch1 >= 'A' && ch1 <= 'Z' |==> ch1 <= 'Z'
+387:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1187:36267:ch1 >= 'a' && ch1 <= 'z' || ch1 >= 'A' && ch1 <= 'Z' |==> ch1 >= 'a' && ch1 <= 'z'
+388:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1188:36323:ch1 >= 'a' && ch1 <= 'z' || ch1 >= 'A' && ch1 <= 'Z' |==> ch1 >= 'A' && ch1 <= 'Z'
+389:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1188:36320:ch1 >= 'a' && ch1 <= 'z' || ch1 >= 'A' && ch1 <= 'Z' |==> true
+390:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1186:36228:ch2 == ':' && (ch1 >= 'a' && ch1 <= 'z' || ch1 >= 'A' && ch1 <= 'Z') |==> ch2 == ':' == (ch1 >= 'a' && ch1 <= 'z' || ch1 >= 'A' && ch1 <= 'Z')
+391:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1187:36263:ch2 == ':' && (ch1 >= 'a' && ch1 <= 'z' || ch1 >= 'A' && ch1 <= 'Z') |==> false
+392:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1186:36228:ch2 == ':' && (ch1 >= 'a' && ch1 <= 'z' || ch1 >= 'A' && ch1 <= 'Z') |==> ch2 == ':'
+393:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1187:36266:ch2 == ':' && (ch1 >= 'a' && ch1 <= 'z' || ch1 >= 'A' && ch1 <= 'Z') |==> (ch1 >= 'a' && ch1 <= 'z' || ch1 >= 'A' && ch1 <= 'Z')
+394:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1189:36406:2 |==> 0
+395:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1189:36406:2 |==> -2
+396:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1189:36376:fileName = fileName.substring(2); |==> <NO-OP>
+397:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1192:36488:osname.contains("netware") |==> false
+398:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1192:36488:osname.contains("netware") |==> true
+399:LVR:NEG:0:org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1194:36589:-1 |==> 0
+400:LVR:NEG:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1194:36589:-1 |==> 1
+401:ROR:!=(int,int):<(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1194:36580:colon != -1 |==> colon < -1
+402:ROR:!=(int,int):>(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1194:36580:colon != -1 |==> colon > -1
+403:ROR:!=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1194:36586:colon != -1 |==> true
+404:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1195:36653:1 |==> 0
+405:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1195:36653:1 |==> -1
+406:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1195:36645:colon + 1 |==> colon % 1
+407:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1195:36645:colon + 1 |==> colon * 1
+408:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1195:36645:colon + 1 |==> colon - 1
+409:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1195:36645:colon + 1 |==> colon / 1
+410:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1195:36615:fileName = fileName.substring(colon + 1); |==> <NO-OP>
+411:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1200:36708:fileName = fileName.replace(File.separatorChar, '/'); |==> <NO-OP>
+412:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1205:36922:!preserveLeadingSlashes && fileName.startsWith("/") |==> !preserveLeadingSlashes == fileName.startsWith("/")
+413:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1205:36946:!preserveLeadingSlashes && fileName.startsWith("/") |==> false
+414:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1205:36922:!preserveLeadingSlashes && fileName.startsWith("/") |==> !preserveLeadingSlashes
+415:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1205:36949:!preserveLeadingSlashes && fileName.startsWith("/") |==> fileName.startsWith("/")
+416:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1206:37019:1 |==> 0
+417:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1206:37019:1 |==> -1
+418:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@normalizeFileName(java.lang.String,boolean):1206:36989:fileName = fileName.substring(1); |==> <NO-OP>
+419:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@evaluateType(byte[]):1218:37348:ArchiveUtils.matchAsciiBuffer(MAGIC_GNU, header, MAGIC_OFFSET, MAGICLEN) |==> false
+420:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@evaluateType(byte[]):1218:37348:ArchiveUtils.matchAsciiBuffer(MAGIC_GNU, header, MAGIC_OFFSET, MAGICLEN) |==> true
+421:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@evaluateType(byte[]):1221:37480:ArchiveUtils.matchAsciiBuffer(MAGIC_POSIX, header, MAGIC_OFFSET, MAGICLEN) |==> false
+422:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@evaluateType(byte[]):1221:37480:ArchiveUtils.matchAsciiBuffer(MAGIC_POSIX, header, MAGIC_OFFSET, MAGICLEN) |==> true
+423:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@evaluateType(byte[]):1222:37574:ArchiveUtils.matchAsciiBuffer(MAGIC_XSTAR, header, XSTAR_MAGIC_OFFSET, XSTAR_MAGIC_LEN) |==> false
+424:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@evaluateType(byte[]):1222:37574:ArchiveUtils.matchAsciiBuffer(MAGIC_XSTAR, header, XSTAR_MAGIC_OFFSET, XSTAR_MAGIC_LEN) |==> true
+425:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveEntry@evaluateType(byte[]):1228:37791:0 |==> 1
+426:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveEntry@evaluateType(byte[]):1228:37791:0 |==> -1
+427:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@fillGNUSparse0xData(java.util.Map<java.lang.String,java.lang.String>):1232:37890:true |==> false
+428:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@fillGNUSparse0xData(java.util.Map<java.lang.String,java.lang.String>):1232:37875:paxGNUSparse = true; |==> <NO-OP>
+429:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@fillGNUSparse0xData(java.util.Map<java.lang.String,java.lang.String>):1233:37904:realSize = Integer.parseInt(headers.get("GNU.sparse.size")); |==> <NO-OP>
+430:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@fillGNUSparse0xData(java.util.Map<java.lang.String,java.lang.String>):1234:37996:headers.containsKey("GNU.sparse.name") |==> false
+431:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@fillGNUSparse0xData(java.util.Map<java.lang.String,java.lang.String>):1234:37996:headers.containsKey("GNU.sparse.name") |==> true
+432:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@fillGNUSparse0xData(java.util.Map<java.lang.String,java.lang.String>):1236:38058:name = headers.get("GNU.sparse.name"); |==> <NO-OP>
+433:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@fillGNUSparse1xData(java.util.Map<java.lang.String,java.lang.String>):1241:38203:true |==> false
+434:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@fillGNUSparse1xData(java.util.Map<java.lang.String,java.lang.String>):1241:38188:paxGNUSparse = true; |==> <NO-OP>
+435:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@fillGNUSparse1xData(java.util.Map<java.lang.String,java.lang.String>):1242:38217:realSize = Integer.parseInt(headers.get("GNU.sparse.realsize")); |==> <NO-OP>
+436:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@fillGNUSparse1xData(java.util.Map<java.lang.String,java.lang.String>):1243:38290:name = headers.get("GNU.sparse.name"); |==> <NO-OP>
+437:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@fillStarSparseData(java.util.Map<java.lang.String,java.lang.String>):1247:38422:true |==> false
+438:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@fillStarSparseData(java.util.Map<java.lang.String,java.lang.String>):1247:38409:starSparse = true; |==> <NO-OP>
+439:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@fillStarSparseData(java.util.Map<java.lang.String,java.lang.String>):1248:38459:headers.containsKey("SCHILY.realsize") |==> false
+440:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveEntry@fillStarSparseData(java.util.Map<java.lang.String,java.lang.String>):1248:38459:headers.containsKey("SCHILY.realsize") |==> true
+441:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveEntry@fillStarSparseData(java.util.Map<java.lang.String,java.lang.String>):1249:38494:realSize = Long.parseLong(headers.get("SCHILY.realsize")); |==> <NO-OP>
