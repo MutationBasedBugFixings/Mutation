@@ -1,0 +1,519 @@
+1:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile:43:1573:0 |==> 1
+2:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile:43:1573:0 |==> -1
+3:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile:46:1700:0 |==> 1
+4:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile:46:1700:0 |==> -1
+5:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile:47:1734:false |==> true
+6:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@<init>(java.io.File):59:2169:file.seek(SevenZFile.SIGNATURE_HEADER_SIZE); |==> <NO-OP>
+7:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@setContentCompression(org.apache.commons.compress.archivers.sevenz.SevenZMethod):71:2582:this.contentCompression = method; |==> <NO-OP>
+8:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@close():80:2797:finished |==> false
+9:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@close():80:2797:finished |==> true
+10:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@close():81:2821:finish(); |==> <NO-OP>
+11:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@close():83:2849:file.close(); |==> <NO-OP>
+12:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@createArchiveEntry(java.io.File,java.lang.String):98:3326:entry.setDirectory(inputFile.isDirectory()); |==> <NO-OP>
+13:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@createArchiveEntry(java.io.File,java.lang.String):99:3379:entry.setName(entryName); |==> <NO-OP>
+14:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@createArchiveEntry(java.io.File,java.lang.String):100:3413:entry.setLastModifiedDate(new Date(inputFile.lastModified())); |==> <NO-OP>
+15:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):115:3951:files.add(entry); |==> <NO-OP>
+16:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():123:4145:currentOutputStream != null |==> true
+17:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():124:4168:currentOutputStream.flush(); |==> <NO-OP>
+18:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():125:4209:currentOutputStream.close(); |==> <NO-OP>
+19:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():128:4315:1 |==> 0
+20:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():128:4315:1 |==> -1
+21:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():128:4300:files.size() - 1 |==> files.size() % 1
+22:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():128:4300:files.size() - 1 |==> files.size() * 1
+23:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():128:4300:files.size() - 1 |==> files.size() + 1
+24:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():128:4300:files.size() - 1 |==> files.size() / 1
+25:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():129:4350:0 |==> 1
+26:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():129:4350:0 |==> -1
+27:ROR:>(long,long):!=(long,long):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():129:4331:fileBytesWritten > 0 |==> fileBytesWritten != 0
+28:ROR:>(long,long):>=(long,long):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():129:4331:fileBytesWritten > 0 |==> fileBytesWritten >= 0
+29:ROR:>(long,long):FALSE(long,long):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():129:4348:fileBytesWritten > 0 |==> false
+30:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():130:4386:true |==> false
+31:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():130:4367:entry.setHasStream(true); |==> <NO-OP>
+32:STD:<INC>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():131:4405:++numNonEmptyStreams; |==> <NO-OP>
+33:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():132:4439:entry.setSize(currentOutputStream.getBytesWritten()); |==> <NO-OP>
+34:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():133:4505:entry.setCompressedSize(fileBytesWritten); |==> <NO-OP>
+35:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():134:4560:entry.setCrcValue(crc32.getValue()); |==> <NO-OP>
+36:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():135:4609:entry.setCompressedCrcValue(compressedCrc32.getValue()); |==> <NO-OP>
+37:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():136:4694:true |==> false
+38:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():136:4678:entry.setHasCrc(true); |==> <NO-OP>
+39:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():138:4749:false |==> true
+40:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():138:4730:entry.setHasStream(false); |==> <NO-OP>
+41:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():139:4783:0 |==> 1
+42:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():139:4783:0 |==> -1
+43:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():139:4769:entry.setSize(0); |==> <NO-OP>
+44:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():140:4823:0 |==> 1
+45:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():140:4823:0 |==> -1
+46:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():140:4799:entry.setCompressedSize(0); |==> <NO-OP>
+47:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():141:4855:false |==> true
+48:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():141:4839:entry.setHasCrc(false); |==> <NO-OP>
+49:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():143:4881:currentOutputStream = null; |==> <NO-OP>
+50:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():144:4917:crc32.reset(); |==> <NO-OP>
+51:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():145:4940:compressedCrc32.reset(); |==> <NO-OP>
+52:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():146:4992:0 |==> 1
+53:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():146:4992:0 |==> -1
+54:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@closeArchiveEntry():146:4973:fileBytesWritten = 0; |==> <NO-OP>
+55:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@write(int):155:5213:getCurrentOutputStream().write(b); |==> <NO-OP>
+56:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@write(byte[]):164:5490:0 |==> 1
+57:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@write(byte[]):164:5490:0 |==> -1
+58:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@write(byte[]):164:5481:write(b, 0, b.length); |==> <NO-OP>
+59:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@write(byte[],int,int):175:5890:0 |==> 1
+60:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@write(byte[],int,int):175:5890:0 |==> -1
+61:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@write(byte[],int,int):175:5884:len > 0 |==> len != 0
+62:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@write(byte[],int,int):175:5884:len > 0 |==> len >= 0
+63:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@write(byte[],int,int):175:5888:len > 0 |==> false
+64:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@write(byte[],int,int):176:5907:getCurrentOutputStream().write(b, off, len); |==> <NO-OP>
+65:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():186:6189:finished |==> false
+66:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():186:6189:finished |==> true
+67:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():189:6307:true |==> false
+68:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():189:6296:finished = true; |==> <NO-OP>
+69:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():196:6559:writeHeader(header); |==> <NO-OP>
+70:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():197:6588:header.flush(); |==> <NO-OP>
+71:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():199:6673:file.write(headerBytes); |==> <NO-OP>
+72:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():204:6803:0 |==> 1
+73:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():204:6803:0 |==> -1
+74:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():204:6793:file.seek(0); |==> <NO-OP>
+75:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():205:6815:file.write(SevenZFile.sevenZSignature); |==> <NO-OP>
+76:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():207:6893:0 |==> 1
+77:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():207:6893:0 |==> -1
+78:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():207:6882:file.write(0); |==> <NO-OP>
+79:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():208:6916:2 |==> 0
+80:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():208:6916:2 |==> -2
+81:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():208:6905:file.write(2); |==> <NO-OP>
+82:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():213:7180:headerPosition - SevenZFile.SIGNATURE_HEADER_SIZE |==> headerPosition % SevenZFile.SIGNATURE_HEADER_SIZE
+83:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():213:7180:headerPosition - SevenZFile.SIGNATURE_HEADER_SIZE |==> headerPosition * SevenZFile.SIGNATURE_HEADER_SIZE
+84:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():213:7180:headerPosition - SevenZFile.SIGNATURE_HEADER_SIZE |==> headerPosition + SevenZFile.SIGNATURE_HEADER_SIZE
+85:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():213:7180:headerPosition - SevenZFile.SIGNATURE_HEADER_SIZE |==> headerPosition / SevenZFile.SIGNATURE_HEADER_SIZE
+86:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():213:7134:startHeaderStream.writeLong(Long.reverseBytes(headerPosition - SevenZFile.SIGNATURE_HEADER_SIZE)); |==> <NO-OP>
+87:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():214:7287:4294967295L |==> 0L
+88:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():214:7287:4294967295L |==> -4294967295L
+89:LOR:&(long,long):^(long,long):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():214:7287:4294967295L & headerBytes.length |==> 4294967295L ^ headerBytes.length
+90:LOR:&(long,long):|(long,long):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():214:7287:4294967295L & headerBytes.length |==> 4294967295L | headerBytes.length
+91:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():214:7241:startHeaderStream.writeLong(Long.reverseBytes(4294967295L & headerBytes.length)); |==> <NO-OP>
+92:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():215:7331:crc32.reset(); |==> <NO-OP>
+93:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():216:7354:crc32.update(headerBytes); |==> <NO-OP>
+94:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():217:7389:startHeaderStream.writeInt(Integer.reverseBytes((int)crc32.getValue())); |==> <NO-OP>
+95:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():218:7470:startHeaderStream.flush(); |==> <NO-OP>
+96:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():220:7576:crc32.reset(); |==> <NO-OP>
+97:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():221:7599:crc32.update(startHeaderBytes); |==> <NO-OP>
+98:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():222:7639:file.writeInt(Integer.reverseBytes((int)crc32.getValue())); |==> <NO-OP>
+99:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@finish():223:7708:file.write(startHeaderBytes); |==> <NO-OP>
+100:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@getCurrentOutputStream():232:8053:currentOutputStream == null |==> false
+101:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@getCurrentOutputStream():233:8076:currentOutputStream = setupFileOutputStream(); |==> <NO-OP>
+102:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile$1@write(int):246:8647:super.write(b); |==> <NO-OP>
+103:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile$1@write(int):247:8679:crc32.update(b); |==> <NO-OP>
+104:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile$1@write(byte[]):252:8820:super.write(b); |==> <NO-OP>
+105:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile$1@write(byte[]):253:8852:crc32.update(b); |==> <NO-OP>
+106:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile$1@write(byte[],int,int):259:9039:super.write(b, off, len); |==> <NO-OP>
+107:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile$1@write(byte[],int,int):260:9081:crc32.update(b, off, len); |==> <NO-OP>
+108:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeHeader(java.io.DataOutput):266:9223:header.write(NID.kHeader); |==> <NO-OP>
+109:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeHeader(java.io.DataOutput):268:9267:header.write(NID.kMainStreamsInfo); |==> <NO-OP>
+110:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeHeader(java.io.DataOutput):269:9311:writeStreamsInfo(header); |==> <NO-OP>
+111:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeHeader(java.io.DataOutput):270:9345:writeFilesInfo(header); |==> <NO-OP>
+112:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeHeader(java.io.DataOutput):271:9377:header.write(NID.kEnd); |==> <NO-OP>
+113:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeStreamsInfo(java.io.DataOutput):275:9525:0 |==> 1
+114:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeStreamsInfo(java.io.DataOutput):275:9525:0 |==> -1
+115:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeStreamsInfo(java.io.DataOutput):275:9504:numNonEmptyStreams > 0 |==> numNonEmptyStreams != 0
+116:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeStreamsInfo(java.io.DataOutput):275:9504:numNonEmptyStreams > 0 |==> numNonEmptyStreams >= 0
+117:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeStreamsInfo(java.io.DataOutput):275:9523:numNonEmptyStreams > 0 |==> false
+118:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeStreamsInfo(java.io.DataOutput):276:9542:writePackInfo(header); |==> <NO-OP>
+119:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeStreamsInfo(java.io.DataOutput):277:9577:writeUnpackInfo(header); |==> <NO-OP>
+120:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeStreamsInfo(java.io.DataOutput):280:9629:writeSubStreamsInfo(header); |==> <NO-OP>
+121:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeStreamsInfo(java.io.DataOutput):282:9675:header.write(NID.kEnd); |==> <NO-OP>
+122:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writePackInfo(java.io.DataOutput):286:9795:header.write(NID.kPackInfo); |==> <NO-OP>
+123:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writePackInfo(java.io.DataOutput):288:9861:0 |==> 1
+124:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writePackInfo(java.io.DataOutput):288:9861:0 |==> -1
+125:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writePackInfo(java.io.DataOutput):288:9841:writeUint64(header, 0); |==> <NO-OP>
+126:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writePackInfo(java.io.DataOutput):289:9893:4294967295L |==> 0L
+127:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writePackInfo(java.io.DataOutput):289:9893:4294967295L |==> -4294967295L
+128:LOR:&(long,long):^(long,long):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writePackInfo(java.io.DataOutput):289:9893:4294967295L & numNonEmptyStreams |==> 4294967295L ^ numNonEmptyStreams
+129:LOR:&(long,long):|(long,long):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writePackInfo(java.io.DataOutput):289:9893:4294967295L & numNonEmptyStreams |==> 4294967295L | numNonEmptyStreams
+130:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writePackInfo(java.io.DataOutput):289:9873:writeUint64(header, 4294967295L & numNonEmptyStreams); |==> <NO-OP>
+131:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writePackInfo(java.io.DataOutput):291:9945:header.write(NID.kSize); |==> <NO-OP>
+132:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writePackInfo(java.io.DataOutput):293:10056:entry.hasStream() |==> false
+133:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writePackInfo(java.io.DataOutput):293:10056:entry.hasStream() |==> true
+134:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writePackInfo(java.io.DataOutput):294:10078:writeUint64(header, entry.getCompressedSize()); |==> <NO-OP>
+135:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writePackInfo(java.io.DataOutput):298:10167:header.write(NID.kCRC); |==> <NO-OP>
+136:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writePackInfo(java.io.DataOutput):299:10212:1 |==> 0
+137:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writePackInfo(java.io.DataOutput):299:10212:1 |==> -1
+138:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writePackInfo(java.io.DataOutput):299:10199:header.write(1); |==> <NO-OP>
+139:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writePackInfo(java.io.DataOutput):301:10302:entry.hasStream() |==> false
+140:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writePackInfo(java.io.DataOutput):301:10302:entry.hasStream() |==> true
+141:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writePackInfo(java.io.DataOutput):302:10324:header.writeInt(Integer.reverseBytes((int)entry.getCompressedCrcValue())); |==> <NO-OP>
+142:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writePackInfo(java.io.DataOutput):306:10441:header.write(NID.kEnd); |==> <NO-OP>
+143:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):310:10563:header.write(NID.kUnpackInfo); |==> <NO-OP>
+144:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):312:10611:header.write(NID.kFolder); |==> <NO-OP>
+145:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):313:10646:writeUint64(header, numNonEmptyStreams); |==> <NO-OP>
+146:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):314:10708:0 |==> 1
+147:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):314:10708:0 |==> -1
+148:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):314:10695:header.write(0); |==> <NO-OP>
+149:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):315:10733:0 |==> 1
+150:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):315:10733:0 |==> -1
+151:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):315:10736:i < numNonEmptyStreams |==> i != numNonEmptyStreams
+152:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):315:10736:i < numNonEmptyStreams |==> i <= numNonEmptyStreams
+153:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):315:10738:i < numNonEmptyStreams |==> false
+154:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):316:10779:writeFolder(header); |==> <NO-OP>
+155:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):319:10827:header.write(NID.kCodersUnpackSize); |==> <NO-OP>
+156:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):321:10950:entry.hasStream() |==> false
+157:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):321:10950:entry.hasStream() |==> true
+158:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):322:10972:writeUint64(header, entry.getSize()); |==> <NO-OP>
+159:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):326:11051:header.write(NID.kCRC); |==> <NO-OP>
+160:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):327:11096:1 |==> 0
+161:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):327:11096:1 |==> -1
+162:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):327:11083:header.write(1); |==> <NO-OP>
+163:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):329:11186:entry.hasStream() |==> false
+164:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):329:11186:entry.hasStream() |==> true
+165:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):330:11208:header.writeInt(Integer.reverseBytes((int)entry.getCrcValue())); |==> <NO-OP>
+166:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUnpackInfo(java.io.DataOutput):334:11315:header.write(NID.kEnd); |==> <NO-OP>
+167:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFolder(java.io.DataOutput):339:11474:1 |==> 0
+168:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFolder(java.io.DataOutput):339:11474:1 |==> -1
+169:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFolder(java.io.DataOutput):339:11454:writeUint64(header, 1); |==> <NO-OP>
+170:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFolder(java.io.DataOutput):344:11659:0 |==> 1
+171:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFolder(java.io.DataOutput):344:11659:0 |==> -1
+172:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFolder(java.io.DataOutput):344:11639:properties.length > 0 |==> properties.length >= 0
+173:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFolder(java.io.DataOutput):344:11657:properties.length > 0 |==> false
+174:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFolder(java.io.DataOutput):345:11690:32 |==> 0
+175:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFolder(java.io.DataOutput):345:11690:32 |==> -32
+176:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFolder(java.io.DataOutput):345:11676:codecFlags |= 32; |==> <NO-OP>
+177:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFolder(java.io.DataOutput):347:11714:header.write(codecFlags); |==> <NO-OP>
+178:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFolder(java.io.DataOutput):348:11748:header.write(id); |==> <NO-OP>
+179:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFolder(java.io.DataOutput):350:11799:0 |==> 1
+180:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFolder(java.io.DataOutput):350:11799:0 |==> -1
+181:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFolder(java.io.DataOutput):350:11779:properties.length > 0 |==> properties.length >= 0
+182:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFolder(java.io.DataOutput):350:11797:properties.length > 0 |==> false
+183:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFolder(java.io.DataOutput):351:11816:header.write(properties.length); |==> <NO-OP>
+184:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFolder(java.io.DataOutput):352:11861:header.write(properties); |==> <NO-OP>
+185:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeSubStreamsInfo(java.io.DataOutput):357:11999:header.write(NID.kSubStreamsInfo); |==> <NO-OP>
+186:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeSubStreamsInfo(java.io.DataOutput):367:12322:header.write(NID.kEnd); |==> <NO-OP>
+187:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFilesInfo(java.io.DataOutput):371:12443:header.write(NID.kFilesInfo); |==> <NO-OP>
+188:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFilesInfo(java.io.DataOutput):373:12490:writeUint64(header, files.size()); |==> <NO-OP>
+189:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFilesInfo(java.io.DataOutput):375:12534:writeFileEmptyStreams(header); |==> <NO-OP>
+190:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFilesInfo(java.io.DataOutput):376:12573:writeFileEmptyFiles(header); |==> <NO-OP>
+191:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFilesInfo(java.io.DataOutput):377:12610:writeFileAntiItems(header); |==> <NO-OP>
+192:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFilesInfo(java.io.DataOutput):378:12646:writeFileNames(header); |==> <NO-OP>
+193:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFilesInfo(java.io.DataOutput):379:12678:writeFileCTimes(header); |==> <NO-OP>
+194:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFilesInfo(java.io.DataOutput):380:12711:writeFileATimes(header); |==> <NO-OP>
+195:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFilesInfo(java.io.DataOutput):381:12744:writeFileMTimes(header); |==> <NO-OP>
+196:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFilesInfo(java.io.DataOutput):382:12777:writeFileWindowsAttributes(header); |==> <NO-OP>
+197:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFilesInfo(java.io.DataOutput):383:12834:0 |==> 1
+198:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFilesInfo(java.io.DataOutput):383:12834:0 |==> -1
+199:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFilesInfo(java.io.DataOutput):383:12821:header.write(0); |==> <NO-OP>
+200:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyStreams(java.io.DataOutput):387:12968:false |==> true
+201:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyStreams(java.io.DataOutput):389:13062:entry.hasStream() |==> false
+202:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyStreams(java.io.DataOutput):389:13062:entry.hasStream() |==> true
+203:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyStreams(java.io.DataOutput):390:13102:true |==> false
+204:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyStreams(java.io.DataOutput):390:13084:hasEmptyStreams = true; |==> <NO-OP>
+205:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyStreams(java.io.DataOutput):394:13167:hasEmptyStreams |==> false
+206:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyStreams(java.io.DataOutput):394:13167:hasEmptyStreams |==> true
+207:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyStreams(java.io.DataOutput):395:13198:header.write(NID.kEmptyStream); |==> <NO-OP>
+208:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyStreams(java.io.DataOutput):397:13321:0 |==> 1
+209:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyStreams(java.io.DataOutput):397:13321:0 |==> -1
+210:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyStreams(java.io.DataOutput):397:13324:i < files.size() |==> i <= files.size()
+211:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyStreams(java.io.DataOutput):397:13326:i < files.size() |==> false
+212:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyStreams(java.io.DataOutput):398:13365:emptyStreams.set(i, !files.get(i).hasStream()); |==> <NO-OP>
+213:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyStreams(java.io.DataOutput):402:13584:writeBits(out, emptyStreams, files.size()); |==> <NO-OP>
+214:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyStreams(java.io.DataOutput):403:13640:out.flush(); |==> <NO-OP>
+215:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyStreams(java.io.DataOutput):405:13721:writeUint64(header, contents.length); |==> <NO-OP>
+216:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyStreams(java.io.DataOutput):406:13771:header.write(contents); |==> <NO-OP>
+217:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyFiles(java.io.DataOutput):411:13931:false |==> true
+218:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyFiles(java.io.DataOutput):412:13971:0 |==> 1
+219:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyFiles(java.io.DataOutput):412:13971:0 |==> -1
+220:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyFiles(java.io.DataOutput):413:14019:0 |==> 1
+221:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyFiles(java.io.DataOutput):413:14019:0 |==> -1
+222:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyFiles(java.io.DataOutput):414:14044:0 |==> 1
+223:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyFiles(java.io.DataOutput):414:14044:0 |==> -1
+224:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyFiles(java.io.DataOutput):414:14047:i < files.size() |==> i <= files.size()
+225:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyFiles(java.io.DataOutput):414:14049:i < files.size() |==> false
+226:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyFiles(java.io.DataOutput):415:14111:files.get(i).hasStream() |==> false
+227:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyFiles(java.io.DataOutput):415:14111:files.get(i).hasStream() |==> true
+228:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyFiles(java.io.DataOutput):417:14193:emptyFiles.set(emptyStreamCounter++, !isDir); |==> <NO-OP>
+229:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyFiles(java.io.DataOutput):418:14255:hasEmptyFiles |= !isDir; |==> <NO-OP>
+230:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyFiles(java.io.DataOutput):421:14316:hasEmptyFiles |==> false
+231:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyFiles(java.io.DataOutput):421:14316:hasEmptyFiles |==> true
+232:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyFiles(java.io.DataOutput):422:14345:header.write(NID.kEmptyFile); |==> <NO-OP>
+233:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyFiles(java.io.DataOutput):425:14532:writeBits(out, emptyFiles, emptyStreamCounter); |==> <NO-OP>
+234:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyFiles(java.io.DataOutput):426:14592:out.flush(); |==> <NO-OP>
+235:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyFiles(java.io.DataOutput):428:14673:writeUint64(header, contents.length); |==> <NO-OP>
+236:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileEmptyFiles(java.io.DataOutput):429:14723:header.write(contents); |==> <NO-OP>
+237:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileAntiItems(java.io.DataOutput):434:14881:false |==> true
+238:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileAntiItems(java.io.DataOutput):435:14932:0 |==> 1
+239:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileAntiItems(java.io.DataOutput):435:14932:0 |==> -1
+240:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileAntiItems(java.io.DataOutput):436:14966:0 |==> 1
+241:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileAntiItems(java.io.DataOutput):436:14966:0 |==> -1
+242:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileAntiItems(java.io.DataOutput):437:14990:0 |==> 1
+243:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileAntiItems(java.io.DataOutput):437:14990:0 |==> -1
+244:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileAntiItems(java.io.DataOutput):437:14993:i < files.size() |==> i <= files.size()
+245:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileAntiItems(java.io.DataOutput):437:14995:i < files.size() |==> false
+246:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileAntiItems(java.io.DataOutput):438:15057:files.get(i).hasStream() |==> false
+247:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileAntiItems(java.io.DataOutput):438:15057:files.get(i).hasStream() |==> true
+248:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileAntiItems(java.io.DataOutput):440:15139:antiItems.set(antiItemCounter++, isAnti); |==> <NO-OP>
+249:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileAntiItems(java.io.DataOutput):441:15197:hasAntiItems |= isAnti; |==> <NO-OP>
+250:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileAntiItems(java.io.DataOutput):444:15257:hasAntiItems |==> false
+251:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileAntiItems(java.io.DataOutput):444:15257:hasAntiItems |==> true
+252:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileAntiItems(java.io.DataOutput):445:15285:header.write(NID.kAnti); |==> <NO-OP>
+253:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileAntiItems(java.io.DataOutput):448:15467:writeBits(out, antiItems, antiItemCounter); |==> <NO-OP>
+254:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileAntiItems(java.io.DataOutput):449:15523:out.flush(); |==> <NO-OP>
+255:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileAntiItems(java.io.DataOutput):451:15604:writeUint64(header, contents.length); |==> <NO-OP>
+256:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileAntiItems(java.io.DataOutput):452:15654:header.write(contents); |==> <NO-OP>
+257:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileNames(java.io.DataOutput):457:15785:header.write(NID.kName); |==> <NO-OP>
+258:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileNames(java.io.DataOutput):461:15974:0 |==> 1
+259:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileNames(java.io.DataOutput):461:15974:0 |==> -1
+260:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileNames(java.io.DataOutput):461:15964:out.write(0); |==> <NO-OP>
+261:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileNames(java.io.DataOutput):463:16045:out.write(entry.getName().getBytes("UTF-16LE")); |==> <NO-OP>
+262:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileNames(java.io.DataOutput):464:16121:0 |==> 1
+263:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileNames(java.io.DataOutput):464:16121:0 |==> -1
+264:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileNames(java.io.DataOutput):464:16106:out.writeShort(0); |==> <NO-OP>
+265:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileNames(java.io.DataOutput):466:16143:out.flush(); |==> <NO-OP>
+266:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileNames(java.io.DataOutput):468:16216:writeUint64(header, contents.length); |==> <NO-OP>
+267:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileNames(java.io.DataOutput):469:16262:header.write(contents); |==> <NO-OP>
+268:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):473:16403:0 |==> 1
+269:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):473:16403:0 |==> -1
+270:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):475:16501:entry.getHasCreationDate() |==> false
+271:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):475:16501:entry.getHasCreationDate() |==> true
+272:STD:<INC>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):476:16523:++numCreationDates; |==> <NO-OP>
+273:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):479:16598:0 |==> 1
+274:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):479:16598:0 |==> -1
+275:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):479:16579:numCreationDates > 0 |==> numCreationDates != 0
+276:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):479:16579:numCreationDates > 0 |==> numCreationDates >= 0
+277:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):479:16596:numCreationDates > 0 |==> false
+278:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):480:16615:header.write(NID.kCTime); |==> <NO-OP>
+279:ROR:!=(int,int):<(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):484:16803:numCreationDates != files.size() |==> numCreationDates < files.size()
+280:ROR:!=(int,int):>(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):484:16803:numCreationDates != files.size() |==> numCreationDates > files.size()
+281:ROR:!=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):484:16820:numCreationDates != files.size() |==> true
+282:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):485:16865:0 |==> 1
+283:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):485:16865:0 |==> -1
+284:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):485:16855:out.write(0); |==> <NO-OP>
+285:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):487:16962:0 |==> 1
+286:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):487:16962:0 |==> -1
+287:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):487:16965:i < files.size() |==> i <= files.size()
+288:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):487:16967:i < files.size() |==> false
+289:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):488:17010:cTimes.set(i, files.get(i).getHasCreationDate()); |==> <NO-OP>
+290:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):490:17094:writeBits(out, cTimes, files.size()); |==> <NO-OP>
+291:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):492:17179:1 |==> 0
+292:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):492:17179:1 |==> -1
+293:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):492:17169:out.write(1); |==> <NO-OP>
+294:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):494:17219:0 |==> 1
+295:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):494:17219:0 |==> -1
+296:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):494:17209:out.write(0); |==> <NO-OP>
+297:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):496:17326:entry.getHasCreationDate() |==> false
+298:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):496:17326:entry.getHasCreationDate() |==> true
+299:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):497:17352:out.writeLong(Long.reverseBytes(SevenZArchiveEntry.javaTimeToNtfsTime(entry.getCreationDate()))); |==> <NO-OP>
+300:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):501:17523:out.flush(); |==> <NO-OP>
+301:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):503:17604:writeUint64(header, contents.length); |==> <NO-OP>
+302:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileCTimes(java.io.DataOutput):504:17654:header.write(contents); |==> <NO-OP>
+303:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):509:17803:0 |==> 1
+304:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):509:17803:0 |==> -1
+305:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):511:17899:entry.getHasAccessDate() |==> false
+306:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):511:17899:entry.getHasAccessDate() |==> true
+307:STD:<INC>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):512:17921:++numAccessDates; |==> <NO-OP>
+308:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):515:17992:0 |==> 1
+309:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):515:17992:0 |==> -1
+310:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):515:17975:numAccessDates > 0 |==> numAccessDates != 0
+311:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):515:17975:numAccessDates > 0 |==> numAccessDates >= 0
+312:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):515:17990:numAccessDates > 0 |==> false
+313:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):516:18009:header.write(NID.kATime); |==> <NO-OP>
+314:ROR:!=(int,int):<(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):520:18197:numAccessDates != files.size() |==> numAccessDates < files.size()
+315:ROR:!=(int,int):>(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):520:18197:numAccessDates != files.size() |==> numAccessDates > files.size()
+316:ROR:!=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):520:18212:numAccessDates != files.size() |==> true
+317:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):521:18257:0 |==> 1
+318:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):521:18257:0 |==> -1
+319:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):521:18247:out.write(0); |==> <NO-OP>
+320:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):523:18354:0 |==> 1
+321:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):523:18354:0 |==> -1
+322:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):523:18357:i < files.size() |==> i <= files.size()
+323:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):523:18359:i < files.size() |==> false
+324:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):524:18402:aTimes.set(i, files.get(i).getHasAccessDate()); |==> <NO-OP>
+325:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):526:18484:writeBits(out, aTimes, files.size()); |==> <NO-OP>
+326:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):528:18569:1 |==> 0
+327:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):528:18569:1 |==> -1
+328:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):528:18559:out.write(1); |==> <NO-OP>
+329:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):530:18609:0 |==> 1
+330:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):530:18609:0 |==> -1
+331:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):530:18599:out.write(0); |==> <NO-OP>
+332:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):532:18714:entry.getHasAccessDate() |==> false
+333:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):532:18714:entry.getHasAccessDate() |==> true
+334:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):533:18740:out.writeLong(Long.reverseBytes(SevenZArchiveEntry.javaTimeToNtfsTime(entry.getAccessDate()))); |==> <NO-OP>
+335:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):537:18909:out.flush(); |==> <NO-OP>
+336:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):539:18990:writeUint64(header, contents.length); |==> <NO-OP>
+337:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileATimes(java.io.DataOutput):540:19040:header.write(contents); |==> <NO-OP>
+338:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):545:19195:0 |==> 1
+339:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):545:19195:0 |==> -1
+340:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):547:19297:entry.getHasLastModifiedDate() |==> false
+341:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):547:19297:entry.getHasLastModifiedDate() |==> true
+342:STD:<INC>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):548:19319:++numLastModifiedDates; |==> <NO-OP>
+343:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):551:19402:0 |==> 1
+344:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):551:19402:0 |==> -1
+345:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):551:19379:numLastModifiedDates > 0 |==> numLastModifiedDates != 0
+346:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):551:19379:numLastModifiedDates > 0 |==> numLastModifiedDates >= 0
+347:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):551:19400:numLastModifiedDates > 0 |==> false
+348:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):552:19419:header.write(NID.kMTime); |==> <NO-OP>
+349:ROR:!=(int,int):<(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):556:19607:numLastModifiedDates != files.size() |==> numLastModifiedDates < files.size()
+350:ROR:!=(int,int):>(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):556:19607:numLastModifiedDates != files.size() |==> numLastModifiedDates > files.size()
+351:ROR:!=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):556:19628:numLastModifiedDates != files.size() |==> true
+352:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):557:19673:0 |==> 1
+353:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):557:19673:0 |==> -1
+354:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):557:19663:out.write(0); |==> <NO-OP>
+355:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):559:19770:0 |==> 1
+356:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):559:19770:0 |==> -1
+357:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):559:19773:i < files.size() |==> i <= files.size()
+358:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):559:19775:i < files.size() |==> false
+359:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):560:19818:mTimes.set(i, files.get(i).getHasLastModifiedDate()); |==> <NO-OP>
+360:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):562:19906:writeBits(out, mTimes, files.size()); |==> <NO-OP>
+361:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):564:19991:1 |==> 0
+362:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):564:19991:1 |==> -1
+363:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):564:19981:out.write(1); |==> <NO-OP>
+364:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):566:20031:0 |==> 1
+365:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):566:20031:0 |==> -1
+366:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):566:20021:out.write(0); |==> <NO-OP>
+367:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):568:20142:entry.getHasLastModifiedDate() |==> false
+368:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):568:20142:entry.getHasLastModifiedDate() |==> true
+369:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):569:20168:out.writeLong(Long.reverseBytes(SevenZArchiveEntry.javaTimeToNtfsTime(entry.getLastModifiedDate()))); |==> <NO-OP>
+370:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):573:20343:out.flush(); |==> <NO-OP>
+371:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):575:20424:writeUint64(header, contents.length); |==> <NO-OP>
+372:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileMTimes(java.io.DataOutput):576:20474:header.write(contents); |==> <NO-OP>
+373:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):581:20640:0 |==> 1
+374:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):581:20640:0 |==> -1
+375:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):583:20743:entry.getHasWindowsAttributes() |==> false
+376:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):583:20743:entry.getHasWindowsAttributes() |==> true
+377:STD:<INC>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):584:20765:++numWindowsAttributes; |==> <NO-OP>
+378:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):587:20848:0 |==> 1
+379:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):587:20848:0 |==> -1
+380:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):587:20825:numWindowsAttributes > 0 |==> numWindowsAttributes != 0
+381:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):587:20825:numWindowsAttributes > 0 |==> numWindowsAttributes >= 0
+382:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):587:20846:numWindowsAttributes > 0 |==> false
+383:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):588:20865:header.write(NID.kWinAttributes); |==> <NO-OP>
+384:ROR:!=(int,int):<(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):592:21061:numWindowsAttributes != files.size() |==> numWindowsAttributes < files.size()
+385:ROR:!=(int,int):>(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):592:21061:numWindowsAttributes != files.size() |==> numWindowsAttributes > files.size()
+386:ROR:!=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):592:21082:numWindowsAttributes != files.size() |==> true
+387:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):593:21127:0 |==> 1
+388:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):593:21127:0 |==> -1
+389:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):593:21117:out.write(0); |==> <NO-OP>
+390:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):595:21228:0 |==> 1
+391:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):595:21228:0 |==> -1
+392:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):595:21231:i < files.size() |==> i <= files.size()
+393:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):595:21233:i < files.size() |==> false
+394:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):596:21276:attributes.set(i, files.get(i).getHasWindowsAttributes()); |==> <NO-OP>
+395:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):598:21369:writeBits(out, attributes, files.size()); |==> <NO-OP>
+396:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):600:21458:1 |==> 0
+397:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):600:21458:1 |==> -1
+398:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):600:21448:out.write(1); |==> <NO-OP>
+399:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):602:21498:0 |==> 1
+400:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):602:21498:0 |==> -1
+401:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):602:21488:out.write(0); |==> <NO-OP>
+402:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):604:21610:entry.getHasWindowsAttributes() |==> false
+403:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):604:21610:entry.getHasWindowsAttributes() |==> true
+404:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):605:21636:out.writeInt(Integer.reverseBytes(entry.getWindowsAttributes())); |==> <NO-OP>
+405:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):608:21746:out.flush(); |==> <NO-OP>
+406:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):610:21827:writeUint64(header, contents.length); |==> <NO-OP>
+407:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeFileWindowsAttributes(java.io.DataOutput):611:21877:header.write(contents); |==> <NO-OP>
+408:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):616:22029:0 |==> 1
+409:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):616:22029:0 |==> -1
+410:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):617:22051:128 |==> 0
+411:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):617:22051:128 |==> -128
+412:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):619:22089:0 |==> 1
+413:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):619:22089:0 |==> -1
+414:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):619:22096:8 |==> 0
+415:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):619:22096:8 |==> -8
+416:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):619:22092:i < 8 |==> i != 8
+417:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):619:22092:i < 8 |==> i <= 8
+418:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):619:22094:i < 8 |==> false
+419:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):620:22132:1L |==> 0L
+420:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):620:22132:1L |==> -1L
+421:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):620:22140:7 |==> 0
+422:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):620:22140:7 |==> -7
+423:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):620:22150:1 |==> 0
+424:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):620:22150:1 |==> -1
+425:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):620:22146:i + 1 |==> i % 1
+426:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):620:22146:i + 1 |==> i * 1
+427:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):620:22146:i + 1 |==> i - 1
+428:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):620:22146:i + 1 |==> i / 1
+429:AOR:*(int,int):%(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):620:22140:7 * (i + 1) |==> 7 % (i + 1)
+430:AOR:*(int,int):+(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):620:22140:7 * (i + 1) |==> 7 + (i + 1)
+431:AOR:*(int,int):-(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):620:22140:7 * (i + 1) |==> 7 - (i + 1)
+432:AOR:*(int,int):/(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):620:22140:7 * (i + 1) |==> 7 / (i + 1)
+433:SOR:<<(long,int):>>(long,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):620:22132:1L << (7 * (i + 1)) |==> 1L >> (7 * (i + 1))
+434:SOR:<<(long,int):>>>(long,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):620:22132:1L << (7 * (i + 1)) |==> 1L >>> (7 * (i + 1))
+435:ROR:<(long,long):!=(long,long):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):620:22122:value < ((1L << (7 * (i + 1)))) |==> value != ((1L << (7 * (i + 1))))
+436:ROR:<(long,long):<=(long,long):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):620:22122:value < ((1L << (7 * (i + 1)))) |==> value <= ((1L << (7 * (i + 1))))
+437:ROR:<(long,long):FALSE(long,long):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):620:22128:value < ((1L << (7 * (i + 1)))) |==> false
+438:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):621:22200:8 |==> 0
+439:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):621:22200:8 |==> -8
+440:AOR:*(int,int):%(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):621:22200:8 * i |==> 8 % i
+441:AOR:*(int,int):+(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):621:22200:8 * i |==> 8 + i
+442:AOR:*(int,int):-(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):621:22200:8 * i |==> 8 - i
+443:AOR:*(int,int):/(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):621:22200:8 * i |==> 8 / i
+444:SOR:>>>(long,int):<<(long,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):621:22189:value >>> (8 * i) |==> value << (8 * i)
+445:SOR:>>>(long,int):>>(long,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):621:22189:value >>> (8 * i) |==> value >> (8 * i)
+446:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):621:22175:firstByte |= (value >>> (8 * i)); |==> <NO-OP>
+447:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):624:22258:firstByte |= mask; |==> <NO-OP>
+448:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):625:22299:1 |==> 0
+449:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):625:22299:1 |==> -1
+450:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):625:22289:mask >>>= 1; |==> <NO-OP>
+451:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):627:22320:header.write(firstByte); |==> <NO-OP>
+452:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):628:22364:0 |==> 1
+453:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):628:22364:0 |==> -1
+454:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):628:22360:i > 0 |==> i != 0
+455:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):628:22360:i > 0 |==> i >= 0
+456:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):628:22362:i > 0 |==> false
+457:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):629:22406:255 |==> 0
+458:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):629:22406:255 |==> -255
+459:LOR:&(long,long):^(long,long):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):629:22406:255 & value |==> 255 ^ value
+460:LOR:&(long,long):|(long,long):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):629:22406:255 & value |==> 255 | value
+461:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):629:22386:header.write((int)(255 & value)); |==> <NO-OP>
+462:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):630:22445:8 |==> 0
+463:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):630:22445:8 |==> -8
+464:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeUint64(java.io.DataOutput,long):630:22434:value >>>= 8; |==> <NO-OP>
+465:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):635:22595:0 |==> 1
+466:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):635:22595:0 |==> -1
+467:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):636:22618:7 |==> 0
+468:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):636:22618:7 |==> -7
+469:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):637:22642:0 |==> 1
+470:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):637:22642:0 |==> -1
+471:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):637:22645:i < length |==> i != length
+472:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):637:22645:i < length |==> i <= length
+473:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):637:22647:i < length |==> false
+474:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):638:22695:bits.get(i) |==> false
+475:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):638:22695:bits.get(i) |==> true
+476:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):638:22701:1 |==> 0
+477:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):638:22701:1 |==> -1
+478:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):638:22705:0 |==> 1
+479:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):638:22705:0 |==> -1
+480:SOR:<<(int,int):>>(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):638:22686:(bits.get(i) ? 1 : 0) << shift |==> (bits.get(i) ? 1 : 0) >> shift
+481:SOR:<<(int,int):>>>(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):638:22686:(bits.get(i) ? 1 : 0) << shift |==> (bits.get(i) ? 1 : 0) >>> shift
+482:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):638:22676:cache |= ((bits.get(i) ? 1 : 0) << shift); |==> <NO-OP>
+483:STD:<DEC>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):639:22731:--shift; |==> <NO-OP>
+484:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):640:22765:0 |==> 1
+485:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):640:22765:0 |==> -1
+486:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):640:22756:shift == 0 |==> shift <= 0
+487:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):640:22756:shift == 0 |==> shift >= 0
+488:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):640:22762:shift == 0 |==> false
+489:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):641:22786:header.write(cache); |==> <NO-OP>
+490:LVR:POS:0:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):642:22831:7 |==> 0
+491:LVR:POS:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):642:22831:7 |==> -7
+492:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):642:22823:shift = 7; |==> <NO-OP>
+493:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):643:22858:0 |==> 1
+494:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):643:22858:0 |==> -1
+495:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):643:22850:cache = 0; |==> <NO-OP>
+496:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):646:22906:0 |==> 1
+497:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):646:22906:0 |==> -1
+498:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):646:22897:length > 0 |==> length != 0
+499:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):646:22897:length > 0 |==> length >= 0
+500:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):646:22904:length > 0 |==> false
+501:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):646:22919:0 |==> 1
+502:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):646:22919:0 |==> -1
+503:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):646:22911:shift > 0 |==> shift != 0
+504:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):646:22911:shift > 0 |==> shift >= 0
+505:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):646:22917:shift > 0 |==> false
+506:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):646:22897:length > 0 && shift > 0 |==> length > 0 == shift > 0
+507:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):646:22908:length > 0 && shift > 0 |==> false
+508:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):646:22897:length > 0 && shift > 0 |==> length > 0
+509:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):646:22911:length > 0 && shift > 0 |==> shift > 0
+510:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile@writeBits(java.io.DataOutput,java.util.BitSet,int):647:22936:header.write(cache); |==> <NO-OP>
+511:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile$OutputStreamWrapper@write(int):654:23125:file.write(b); |==> <NO-OP>
+512:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile$OutputStreamWrapper@write(int):655:23152:compressedCrc32.update(b); |==> <NO-OP>
+513:STD:<INC>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile$OutputStreamWrapper@write(int):656:23191:fileBytesWritten++; |==> <NO-OP>
+514:LVR:0:POS:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile$OutputStreamWrapper@write(byte[]):661:23353:0 |==> 1
+515:LVR:0:NEG:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile$OutputStreamWrapper@write(byte[]):661:23353:0 |==> -1
+516:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile$OutputStreamWrapper@write(byte[]):661:23319:OutputStreamWrapper.this.write(b, 0, b.length); |==> <NO-OP>
+517:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile$OutputStreamWrapper@write(byte[],int,int):667:23517:file.write(b, off, len); |==> <NO-OP>
+518:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile$OutputStreamWrapper@write(byte[],int,int):668:23554:compressedCrc32.update(b, off, len); |==> <NO-OP>
+519:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.sevenz.SevenZOutputFile$OutputStreamWrapper@write(byte[],int,int):669:23603:fileBytesWritten += len; |==> <NO-OP>

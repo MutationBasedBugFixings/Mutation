@@ -1,0 +1,960 @@
+1:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream:67:2586:false |==> true
+2:LVR:0:POS:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream:78:2826:0 |==> 1
+3:LVR:0:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream:78:2826:0 |==> -1
+4:COR:<MEMBER_SELECT(boolean)>:FALSE:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@ensureOpen():125:4049:this.closed |==> false
+5:COR:<MEMBER_SELECT(boolean)>:TRUE:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@ensureOpen():125:4049:this.closed |==> true
+6:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):146:4905:ensureOpen(); |==> <NO-OP>
+7:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):147:4942:this.entry != null |==> true
+8:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):148:4965:closeArchiveEntry(); |==> <NO-OP>
+9:LVR:NEG:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):150:5047:-1 |==> 0
+10:LVR:NEG:POS:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):150:5047:-1 |==> 1
+11:ROR:==(long,long):<=(long,long):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):150:5032:e.getTime() == -1 |==> e.getTime() <= -1
+12:ROR:==(long,long):>=(long,long):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):150:5032:e.getTime() == -1 |==> e.getTime() >= -1
+13:ROR:==(long,long):FALSE(long,long):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):150:5044:e.getTime() == -1 |==> false
+14:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):151:5065:e.setTime(System.currentTimeMillis()); |==> <NO-OP>
+15:ROR:!=(int,int):<(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):155:5171:format != this.entryFormat |==> format < this.entryFormat
+16:ROR:!=(int,int):>(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):155:5171:format != this.entryFormat |==> format > this.entryFormat
+17:ROR:!=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):155:5178:format != this.entryFormat |==> true
+18:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):159:5368:this.names.put(e.getName(), e) != null |==> true
+19:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):163:5468:writeHeader(e); |==> <NO-OP>
+20:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):164:5492:this.entry = e; |==> <NO-OP>
+21:LVR:0:POS:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):165:5531:0 |==> 1
+22:LVR:0:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):165:5531:0 |==> -1
+23:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):165:5516:this.written = 0; |==> <NO-OP>
+24:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeHeader(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):171:5687:out.write(ArchiveUtils.toAsciiBytes(MAGIC_NEW)); |==> <NO-OP>
+25:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeHeader(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):172:5748:writeNewEntry(e); |==> <NO-OP>
+26:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeHeader(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):175:5826:out.write(ArchiveUtils.toAsciiBytes(MAGIC_NEW_CRC)); |==> <NO-OP>
+27:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeHeader(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):176:5891:writeNewEntry(e); |==> <NO-OP>
+28:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeHeader(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):179:5971:out.write(ArchiveUtils.toAsciiBytes(MAGIC_OLD_ASCII)); |==> <NO-OP>
+29:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeHeader(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):180:6038:writeOldAsciiEntry(e); |==> <NO-OP>
+30:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeHeader(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):183:6147:true |==> false
+31:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeHeader(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):184:6199:2 |==> 0
+32:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeHeader(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):184:6199:2 |==> -2
+33:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeHeader(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):184:6165:writeBinaryLong(MAGIC_OLD_BINARY, 2, swapHalfWord); |==> <NO-OP>
+34:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeHeader(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):185:6229:writeOldBinaryEntry(e, swapHalfWord); |==> <NO-OP>
+35:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):191:6426:8 |==> 0
+36:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):191:6426:8 |==> -8
+37:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):191:6429:16 |==> 0
+38:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):191:6429:16 |==> -16
+39:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):191:6393:writeAsciiLong(entry.getInode(), 8, 16); |==> <NO-OP>
+40:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):192:6474:8 |==> 0
+41:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):192:6474:8 |==> -8
+42:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):192:6477:16 |==> 0
+43:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):192:6477:16 |==> -16
+44:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):192:6442:writeAsciiLong(entry.getMode(), 8, 16); |==> <NO-OP>
+45:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):193:6521:8 |==> 0
+46:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):193:6521:8 |==> -8
+47:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):193:6524:16 |==> 0
+48:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):193:6524:16 |==> -16
+49:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):193:6490:writeAsciiLong(entry.getUID(), 8, 16); |==> <NO-OP>
+50:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):194:6568:8 |==> 0
+51:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):194:6568:8 |==> -8
+52:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):194:6571:16 |==> 0
+53:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):194:6571:16 |==> -16
+54:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):194:6537:writeAsciiLong(entry.getGID(), 8, 16); |==> <NO-OP>
+55:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):195:6625:8 |==> 0
+56:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):195:6625:8 |==> -8
+57:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):195:6628:16 |==> 0
+58:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):195:6628:16 |==> -16
+59:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):195:6584:writeAsciiLong(entry.getNumberOfLinks(), 8, 16); |==> <NO-OP>
+60:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):196:6673:8 |==> 0
+61:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):196:6673:8 |==> -8
+62:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):196:6676:16 |==> 0
+63:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):196:6676:16 |==> -16
+64:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):196:6641:writeAsciiLong(entry.getTime(), 8, 16); |==> <NO-OP>
+65:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):197:6721:8 |==> 0
+66:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):197:6721:8 |==> -8
+67:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):197:6724:16 |==> 0
+68:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):197:6724:16 |==> -16
+69:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):197:6689:writeAsciiLong(entry.getSize(), 8, 16); |==> <NO-OP>
+70:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):198:6774:8 |==> 0
+71:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):198:6774:8 |==> -8
+72:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):198:6777:16 |==> 0
+73:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):198:6777:16 |==> -16
+74:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):198:6737:writeAsciiLong(entry.getDeviceMaj(), 8, 16); |==> <NO-OP>
+75:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):199:6827:8 |==> 0
+76:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):199:6827:8 |==> -8
+77:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):199:6830:16 |==> 0
+78:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):199:6830:16 |==> -16
+79:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):199:6790:writeAsciiLong(entry.getDeviceMin(), 8, 16); |==> <NO-OP>
+80:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):200:6886:8 |==> 0
+81:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):200:6886:8 |==> -8
+82:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):200:6889:16 |==> 0
+83:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):200:6889:16 |==> -16
+84:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):200:6843:writeAsciiLong(entry.getRemoteDeviceMaj(), 8, 16); |==> <NO-OP>
+85:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):201:6945:8 |==> 0
+86:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):201:6945:8 |==> -8
+87:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):201:6948:16 |==> 0
+88:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):201:6948:16 |==> -16
+89:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):201:6902:writeAsciiLong(entry.getRemoteDeviceMin(), 8, 16); |==> <NO-OP>
+90:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):202:7003:1 |==> 0
+91:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):202:7003:1 |==> -1
+92:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):202:6976:entry.getName().length() + 1 |==> entry.getName().length() % 1
+93:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):202:6976:entry.getName().length() + 1 |==> entry.getName().length() * 1
+94:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):202:6976:entry.getName().length() + 1 |==> entry.getName().length() - 1
+95:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):202:6976:entry.getName().length() + 1 |==> entry.getName().length() / 1
+96:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):202:7006:8 |==> 0
+97:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):202:7006:8 |==> -8
+98:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):202:7009:16 |==> 0
+99:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):202:7009:16 |==> -16
+100:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):202:6961:writeAsciiLong(entry.getName().length() + 1, 8, 16); |==> <NO-OP>
+101:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):203:7056:8 |==> 0
+102:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):203:7056:8 |==> -8
+103:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):203:7059:16 |==> 0
+104:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):203:7059:16 |==> -16
+105:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):203:7022:writeAsciiLong(entry.getChksum(), 8, 16); |==> <NO-OP>
+106:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):204:7072:writeCString(entry.getName()); |==> <NO-OP>
+107:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeNewEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):205:7111:pad(entry.getHeaderPadCount()); |==> <NO-OP>
+108:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):210:7291:6 |==> 0
+109:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):210:7291:6 |==> -6
+110:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):210:7294:8 |==> 0
+111:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):210:7294:8 |==> -8
+112:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):210:7257:writeAsciiLong(entry.getDevice(), 6, 8); |==> <NO-OP>
+113:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):211:7339:6 |==> 0
+114:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):211:7339:6 |==> -6
+115:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):211:7342:8 |==> 0
+116:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):211:7342:8 |==> -8
+117:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):211:7306:writeAsciiLong(entry.getInode(), 6, 8); |==> <NO-OP>
+118:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):212:7386:6 |==> 0
+119:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):212:7386:6 |==> -6
+120:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):212:7389:8 |==> 0
+121:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):212:7389:8 |==> -8
+122:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):212:7354:writeAsciiLong(entry.getMode(), 6, 8); |==> <NO-OP>
+123:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):213:7432:6 |==> 0
+124:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):213:7432:6 |==> -6
+125:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):213:7435:8 |==> 0
+126:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):213:7435:8 |==> -8
+127:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):213:7401:writeAsciiLong(entry.getUID(), 6, 8); |==> <NO-OP>
+128:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):214:7478:6 |==> 0
+129:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):214:7478:6 |==> -6
+130:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):214:7481:8 |==> 0
+131:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):214:7481:8 |==> -8
+132:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):214:7447:writeAsciiLong(entry.getGID(), 6, 8); |==> <NO-OP>
+133:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):215:7534:6 |==> 0
+134:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):215:7534:6 |==> -6
+135:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):215:7537:8 |==> 0
+136:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):215:7537:8 |==> -8
+137:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):215:7493:writeAsciiLong(entry.getNumberOfLinks(), 6, 8); |==> <NO-OP>
+138:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):216:7589:6 |==> 0
+139:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):216:7589:6 |==> -6
+140:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):216:7592:8 |==> 0
+141:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):216:7592:8 |==> -8
+142:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):216:7549:writeAsciiLong(entry.getRemoteDevice(), 6, 8); |==> <NO-OP>
+143:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):217:7636:11 |==> 0
+144:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):217:7636:11 |==> -11
+145:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):217:7640:8 |==> 0
+146:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):217:7640:8 |==> -8
+147:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):217:7604:writeAsciiLong(entry.getTime(), 11, 8); |==> <NO-OP>
+148:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):218:7694:1 |==> 0
+149:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):218:7694:1 |==> -1
+150:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):218:7667:entry.getName().length() + 1 |==> entry.getName().length() % 1
+151:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):218:7667:entry.getName().length() + 1 |==> entry.getName().length() * 1
+152:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):218:7667:entry.getName().length() + 1 |==> entry.getName().length() - 1
+153:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):218:7667:entry.getName().length() + 1 |==> entry.getName().length() / 1
+154:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):218:7697:6 |==> 0
+155:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):218:7697:6 |==> -6
+156:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):218:7700:8 |==> 0
+157:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):218:7700:8 |==> -8
+158:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):218:7652:writeAsciiLong(entry.getName().length() + 1, 6, 8); |==> <NO-OP>
+159:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):219:7744:11 |==> 0
+160:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):219:7744:11 |==> -11
+161:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):219:7748:8 |==> 0
+162:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):219:7748:8 |==> -8
+163:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):219:7712:writeAsciiLong(entry.getSize(), 11, 8); |==> <NO-OP>
+164:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldAsciiEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry):220:7760:writeCString(entry.getName()); |==> <NO-OP>
+165:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):225:7969:2 |==> 0
+166:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):225:7969:2 |==> -2
+167:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):225:7934:writeBinaryLong(entry.getDevice(), 2, swapHalfWord); |==> <NO-OP>
+168:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):226:8029:2 |==> 0
+169:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):226:8029:2 |==> -2
+170:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):226:7995:writeBinaryLong(entry.getInode(), 2, swapHalfWord); |==> <NO-OP>
+171:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):227:8088:2 |==> 0
+172:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):227:8088:2 |==> -2
+173:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):227:8055:writeBinaryLong(entry.getMode(), 2, swapHalfWord); |==> <NO-OP>
+174:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):228:8146:2 |==> 0
+175:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):228:8146:2 |==> -2
+176:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):228:8114:writeBinaryLong(entry.getUID(), 2, swapHalfWord); |==> <NO-OP>
+177:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):229:8204:2 |==> 0
+178:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):229:8204:2 |==> -2
+179:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):229:8172:writeBinaryLong(entry.getGID(), 2, swapHalfWord); |==> <NO-OP>
+180:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):230:8272:2 |==> 0
+181:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):230:8272:2 |==> -2
+182:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):230:8230:writeBinaryLong(entry.getNumberOfLinks(), 2, swapHalfWord); |==> <NO-OP>
+183:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):231:8339:2 |==> 0
+184:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):231:8339:2 |==> -2
+185:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):231:8298:writeBinaryLong(entry.getRemoteDevice(), 2, swapHalfWord); |==> <NO-OP>
+186:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):232:8398:4 |==> 0
+187:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):232:8398:4 |==> -4
+188:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):232:8365:writeBinaryLong(entry.getTime(), 4, swapHalfWord); |==> <NO-OP>
+189:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):233:8467:1 |==> 0
+190:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):233:8467:1 |==> -1
+191:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):233:8440:entry.getName().length() + 1 |==> entry.getName().length() % 1
+192:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):233:8440:entry.getName().length() + 1 |==> entry.getName().length() * 1
+193:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):233:8440:entry.getName().length() + 1 |==> entry.getName().length() - 1
+194:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):233:8440:entry.getName().length() + 1 |==> entry.getName().length() / 1
+195:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):233:8470:2 |==> 0
+196:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):233:8470:2 |==> -2
+197:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):233:8424:writeBinaryLong(entry.getName().length() + 1, 2, swapHalfWord); |==> <NO-OP>
+198:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):234:8529:4 |==> 0
+199:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):234:8529:4 |==> -4
+200:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):234:8496:writeBinaryLong(entry.getSize(), 4, swapHalfWord); |==> <NO-OP>
+201:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):235:8555:writeCString(entry.getName()); |==> <NO-OP>
+202:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeOldBinaryEntry(org.apache.commons.compress.archivers.cpio.CpioArchiveEntry,boolean):236:8594:pad(entry.getHeaderPadCount()); |==> <NO-OP>
+203:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@closeArchiveEntry():246:8839:ensureOpen(); |==> <NO-OP>
+204:ROR:!=(long,long):<(long,long):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@closeArchiveEntry():248:8866:this.entry.getSize() != this.written |==> this.entry.getSize() < this.written
+205:ROR:!=(long,long):>(long,long):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@closeArchiveEntry():248:8866:this.entry.getSize() != this.written |==> this.entry.getSize() > this.written
+206:ROR:!=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@closeArchiveEntry():248:8887:this.entry.getSize() != this.written |==> true
+207:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@closeArchiveEntry():253:9096:pad(this.entry.getDataPadCount()); |==> <NO-OP>
+208:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@closeArchiveEntry():254:9143:this.entry.getFormat() == FORMAT_NEW_CRC |==> this.entry.getFormat() <= FORMAT_NEW_CRC
+209:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@closeArchiveEntry():254:9143:this.entry.getFormat() == FORMAT_NEW_CRC |==> this.entry.getFormat() >= FORMAT_NEW_CRC
+210:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@closeArchiveEntry():254:9166:this.entry.getFormat() == FORMAT_NEW_CRC |==> false
+211:ROR:!=(long,long):<(long,long):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@closeArchiveEntry():255:9203:this.crc != this.entry.getChksum() |==> this.crc < this.entry.getChksum()
+212:ROR:!=(long,long):>(long,long):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@closeArchiveEntry():255:9203:this.crc != this.entry.getChksum() |==> this.crc > this.entry.getChksum()
+213:ROR:!=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@closeArchiveEntry():255:9212:this.crc != this.entry.getChksum() |==> true
+214:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@closeArchiveEntry():259:9325:this.entry = null; |==> <NO-OP>
+215:LVR:0:POS:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@closeArchiveEntry():260:9363:0 |==> 1
+216:LVR:0:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@closeArchiveEntry():260:9363:0 |==> -1
+217:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@closeArchiveEntry():260:9352:this.crc = 0; |==> <NO-OP>
+218:LVR:0:POS:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@closeArchiveEntry():261:9389:0 |==> 1
+219:LVR:0:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@closeArchiveEntry():261:9389:0 |==> -1
+220:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@closeArchiveEntry():261:9374:this.written = 0; |==> <NO-OP>
+221:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):280:9985:ensureOpen(); |==> <NO-OP>
+222:LVR:0:POS:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10017:0 |==> 1
+223:LVR:0:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10017:0 |==> -1
+224:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10011:off < 0 |==> off != 0
+225:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10011:off < 0 |==> off <= 0
+226:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10015:off < 0 |==> false
+227:LVR:0:POS:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10028:0 |==> 1
+228:LVR:0:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10028:0 |==> -1
+229:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10022:len < 0 |==> len != 0
+230:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10022:len < 0 |==> len <= 0
+231:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10026:len < 0 |==> false
+232:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10011:off < 0 || len < 0 |==> off < 0 != len < 0
+233:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10011:off < 0 || len < 0 |==> off < 0
+234:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10022:off < 0 || len < 0 |==> len < 0
+235:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10019:off < 0 || len < 0 |==> true
+236:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10039:b.length - len |==> b.length % len
+237:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10039:b.length - len |==> b.length * len
+238:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10039:b.length - len |==> b.length + len
+239:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10039:b.length - len |==> b.length / len
+240:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10033:off > b.length - len |==> off != b.length - len
+241:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10033:off > b.length - len |==> off >= b.length - len
+242:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10037:off > b.length - len |==> false
+243:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10011:off < 0 || len < 0 || off > b.length - len |==> (off < 0 || len < 0) != off > b.length - len
+244:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10011:off < 0 || len < 0 || off > b.length - len |==> off < 0 || len < 0
+245:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10033:off < 0 || len < 0 || off > b.length - len |==> off > b.length - len
+246:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):281:10030:off < 0 || len < 0 || off > b.length - len |==> true
+247:LVR:0:POS:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):283:10134:0 |==> 1
+248:LVR:0:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):283:10134:0 |==> -1
+249:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):283:10127:len == 0 |==> len <= 0
+250:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):283:10127:len == 0 |==> len >= 0
+251:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):283:10131:len == 0 |==> false
+252:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):287:10193:this.entry == null |==> false
+253:AOR:+(long,long):%(long,long):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):290:10286:this.written + len |==> this.written % len
+254:AOR:+(long,long):*(long,long):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):290:10286:this.written + len |==> this.written * len
+255:AOR:+(long,long):-(long,long):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):290:10286:this.written + len |==> this.written - len
+256:AOR:+(long,long):/(long,long):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):290:10286:this.written + len |==> this.written / len
+257:ROR:>(long,long):!=(long,long):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):290:10286:this.written + len > this.entry.getSize() |==> this.written + len != this.entry.getSize()
+258:ROR:>(long,long):>=(long,long):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):290:10286:this.written + len > this.entry.getSize() |==> this.written + len >= this.entry.getSize()
+259:ROR:>(long,long):FALSE(long,long):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):290:10305:this.written + len > this.entry.getSize() |==> false
+260:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):293:10429:out.write(b, off, len); |==> <NO-OP>
+261:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):294:10461:this.written += len; |==> <NO-OP>
+262:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):295:10494:this.entry.getFormat() == FORMAT_NEW_CRC |==> this.entry.getFormat() <= FORMAT_NEW_CRC
+263:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):295:10494:this.entry.getFormat() == FORMAT_NEW_CRC |==> this.entry.getFormat() >= FORMAT_NEW_CRC
+264:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):295:10517:this.entry.getFormat() == FORMAT_NEW_CRC |==> false
+265:LVR:0:POS:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):296:10565:0 |==> 1
+266:LVR:0:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):296:10565:0 |==> -1
+267:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):296:10568:pos < len |==> pos != len
+268:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):296:10568:pos < len |==> pos <= len
+269:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):296:10572:pos < len |==> false
+270:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):297:10625:255 |==> 0
+271:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):297:10625:255 |==> -255
+272:LOR:&(int,int):^(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):297:10616:b[pos] & 255 |==> b[pos] ^ 255
+273:LOR:&(int,int):|(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):297:10616:b[pos] & 255 |==> b[pos] | 255
+274:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@write(byte[],int,int):297:10604:this.crc += b[pos] & 255; |==> <NO-OP>
+275:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@finish():312:11079:ensureOpen(); |==> <NO-OP>
+276:COR:<MEMBER_SELECT(boolean)>:FALSE:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@finish():314:11110:this.finished |==> false
+277:COR:<MEMBER_SELECT(boolean)>:TRUE:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@finish():314:11110:this.finished |==> true
+278:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@finish():317:11176:this.entry != null |==> true
+279:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@finish():320:11284:this.entry = new CpioArchiveEntry(this.entryFormat); |==> <NO-OP>
+280:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@finish():321:11345:this.entry.setName(CPIO_TRAILER); |==> <NO-OP>
+281:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@finish():322:11415:1 |==> 0
+282:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@finish():322:11415:1 |==> -1
+283:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@finish():322:11387:this.entry.setNumberOfLinks(1); |==> <NO-OP>
+284:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@finish():323:11427:writeHeader(this.entry); |==> <NO-OP>
+285:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@finish():324:11460:closeArchiveEntry(); |==> <NO-OP>
+286:COR:<MEMBER_SELECT(boolean)>:FALSE:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@close():335:11780:this.closed |==> false
+287:COR:<MEMBER_SELECT(boolean)>:TRUE:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@close():335:11780:this.closed |==> true
+288:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@close():336:11803:this.finish(); |==> <NO-OP>
+289:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@close():337:11830:out.close(); |==> <NO-OP>
+290:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@close():338:11869:true |==> false
+291:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@close():338:11855:this.closed = true; |==> <NO-OP>
+292:LVR:0:POS:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@pad(int):343:11964:0 |==> 1
+293:LVR:0:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@pad(int):343:11964:0 |==> -1
+294:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@pad(int):343:11956:count > 0 |==> count != 0
+295:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@pad(int):343:11956:count > 0 |==> count >= 0
+296:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@pad(int):343:11962:count > 0 |==> false
+297:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@pad(int):345:12023:out.write(buff); |==> <NO-OP>
+298:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeBinaryLong(long,int,boolean):352:12272:out.write(tmp); |==> <NO-OP>
+299:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):359:12505:16 |==> 0
+300:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):359:12505:16 |==> -16
+301:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):359:12496:radix == 16 |==> radix <= 16
+302:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):359:12496:radix == 16 |==> radix >= 16
+303:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):359:12502:radix == 16 |==> false
+304:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):360:12523:tmp.append(Long.toHexString(number)); |==> <NO-OP>
+305:LVR:POS:0:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):361:12589:8 |==> 0
+306:LVR:POS:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):361:12589:8 |==> -8
+307:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):361:12580:radix == 8 |==> radix <= 8
+308:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):361:12580:radix == 8 |==> radix >= 8
+309:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):361:12586:radix == 8 |==> false
+310:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):362:12606:tmp.append(Long.toOctalString(number)); |==> <NO-OP>
+311:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):364:12675:tmp.append(Long.toString(number)); |==> <NO-OP>
+312:ROR:<=(int,int):<(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):367:12733:tmp.length() <= length |==> tmp.length() < length
+313:ROR:<=(int,int):==(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):367:12733:tmp.length() <= length |==> tmp.length() == length
+314:ROR:<=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):367:12746:tmp.length() <= length |==> true
+315:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):368:12791:length - tmp.length() |==> length % tmp.length()
+316:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):368:12791:length - tmp.length() |==> length * tmp.length()
+317:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):368:12791:length - tmp.length() |==> length + tmp.length()
+318:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):368:12791:length - tmp.length() |==> length / tmp.length()
+319:LVR:0:POS:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):369:12841:0 |==> 1
+320:LVR:0:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):369:12841:0 |==> -1
+321:ROR:<(long,long):!=(long,long):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):369:12844:pos < insertLength |==> pos != insertLength
+322:ROR:<(long,long):<=(long,long):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):369:12844:pos < insertLength |==> pos <= insertLength
+323:ROR:<(long,long):FALSE(long,long):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):369:12848:pos < insertLength |==> false
+324:LVR:0:POS:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):370:12900:0 |==> 1
+325:LVR:0:NEG:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):370:12900:0 |==> -1
+326:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):370:12889:tmp.insert(0, "0"); |==> <NO-OP>
+327:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):374:13012:tmp.length() - length |==> tmp.length() % length
+328:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):374:13012:tmp.length() - length |==> tmp.length() * length
+329:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):374:13012:tmp.length() - length |==> tmp.length() + length
+330:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):374:13012:tmp.length() - length |==> tmp.length() / length
+331:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeAsciiLong(long,int,int):376:13054:out.write(tmpStr.getBytes()); |==> <NO-OP>
+332:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeCString(java.lang.String):380:13223:out.write(str.getBytes()); |==> <NO-OP>
+333:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream@writeCString(java.lang.String):381:13313:out.write('\u0000'); |==> <NO-OP>
+334:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:118:3982:false |==> true
+335:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:138:4432:0 |==> 1
+336:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:138:4432:0 |==> -1
+337:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:143:4515:0 |==> 1
+338:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:143:4515:0 |==> -1
+339:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:149:4669:0 |==> 1
+340:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:149:4669:0 |==> -1
+341:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:154:4752:0 |==> 1
+342:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:154:4752:0 |==> -1
+343:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:159:4836:0 |==> 1
+344:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:159:4836:0 |==> -1
+345:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:164:4928:0 |==> 1
+346:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:164:4928:0 |==> -1
+347:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:164:4931:0 |==> 1
+348:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:164:4931:0 |==> -1
+349:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:169:5024:0 |==> 1
+350:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:169:5024:0 |==> -1
+351:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:169:5027:0 |==> 1
+352:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:169:5027:0 |==> -1
+353:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:169:5030:0 |==> 1
+354:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:169:5030:0 |==> -1
+355:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:169:5033:0 |==> 1
+356:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:169:5033:0 |==> -1
+357:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:198:5930:true |==> false
+358:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:216:6307:true |==> false
+359:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:221:6428:false |==> true
+360:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@<init>(java.io.File):248:7211:_raf = new RandomAccessFile(file, "rw"); |==> <NO-OP>
+361:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@<init>(java.io.File):249:7279:0 |==> 1
+362:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@<init>(java.io.File):249:7279:0 |==> -1
+363:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@<init>(java.io.File):249:7264:_raf.setLength(0); |==> <NO-OP>
+364:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@<init>(java.io.File):251:7338:_raf != null |==> true
+365:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@<init>(java.io.File):253:7391:_raf.close(); |==> <NO-OP>
+366:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@<init>(java.io.File):257:7515:_raf = null; |==> <NO-OP>
+367:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@<init>(java.io.File):259:7554:o = new FileOutputStream(file); |==> <NO-OP>
+368:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@isSeekable():275:8057:raf != null |==> true
+369:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setEncoding(java.lang.String):288:8557:this.encoding = encoding; |==> <NO-OP>
+370:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setEncoding(java.lang.String):289:8591:this.zipEncoding = ZipEncodingHelper.getZipEncoding(encoding); |==> <NO-OP>
+371:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setEncoding(java.lang.String):290:8662:useEFS &= ZipEncodingHelper.isUTF8(encoding); |==> <NO-OP>
+372:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setUseLanguageEncodingFlag(boolean):309:9159:b && ZipEncodingHelper.isUTF8(encoding) |==> b == ZipEncodingHelper.isUTF8(encoding)
+373:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setUseLanguageEncodingFlag(boolean):309:9161:b && ZipEncodingHelper.isUTF8(encoding) |==> false
+374:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setUseLanguageEncodingFlag(boolean):309:9159:b && ZipEncodingHelper.isUTF8(encoding) |==> b
+375:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setUseLanguageEncodingFlag(boolean):309:9164:b && ZipEncodingHelper.isUTF8(encoding) |==> ZipEncodingHelper.isUTF8(encoding)
+376:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setUseLanguageEncodingFlag(boolean):309:9150:useEFS = b && ZipEncodingHelper.isUTF8(encoding); |==> <NO-OP>
+377:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setCreateUnicodeExtraFields(org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream.UnicodeExtraFieldPolicy):318:9391:createUnicodeExtraFields = b; |==> <NO-OP>
+378:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setFallbackToUTF8(boolean):328:9677:fallbackToUTF8 = b; |==> <NO-OP>
+379:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@finish():335:9875:entry != null |==> true
+380:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@finish():339:9992:cdOffset = written; |==> <NO-OP>
+381:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@finish():341:10087:writeCentralFileHeader((ZipArchiveEntry)i.next()); |==> <NO-OP>
+382:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@finish():343:10168:written - cdOffset |==> written % cdOffset
+383:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@finish():343:10168:written - cdOffset |==> written * cdOffset
+384:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@finish():343:10168:written - cdOffset |==> written + cdOffset
+385:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@finish():343:10168:written - cdOffset |==> written / cdOffset
+386:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@finish():343:10157:cdLength = written - cdOffset; |==> <NO-OP>
+387:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@finish():344:10196:writeCentralDirectoryEnd(); |==> <NO-OP>
+388:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@finish():345:10232:offsets.clear(); |==> <NO-OP>
+389:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@finish():346:10257:entries.clear(); |==> <NO-OP>
+390:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():354:10457:entry == null |==> false
+391:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():359:10546:crc.reset(); |==> <NO-OP>
+392:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():361:10572:entry.getMethod() == DEFLATED |==> entry.getMethod() <= DEFLATED
+393:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():361:10572:entry.getMethod() == DEFLATED |==> entry.getMethod() >= DEFLATED
+394:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():361:10590:entry.getMethod() == DEFLATED |==> false
+395:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():362:10617:def.finish(); |==> <NO-OP>
+396:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():364:10685:deflate(); |==> <NO-OP>
+397:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():367:10723:entry.setSize(ZipUtil.adjustToLong(def.getTotalIn())); |==> <NO-OP>
+398:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():368:10790:entry.setCompressedSize(ZipUtil.adjustToLong(def.getTotalOut())); |==> <NO-OP>
+399:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():369:10868:entry.setCrc(realCrc); |==> <NO-OP>
+400:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():371:10904:def.reset(); |==> <NO-OP>
+401:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():373:10930:written += entry.getCompressedSize(); |==> <NO-OP>
+402:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():374:10991:raf == null |==> false
+403:ROR:!=(long,long):<(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():375:11018:entry.getCrc() != realCrc |==> entry.getCrc() < realCrc
+404:ROR:!=(long,long):>(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():375:11018:entry.getCrc() != realCrc |==> entry.getCrc() > realCrc
+405:ROR:!=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():375:11033:entry.getCrc() != realCrc |==> true
+406:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():383:11429:written - dataStart |==> written % dataStart
+407:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():383:11429:written - dataStart |==> written * dataStart
+408:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():383:11429:written - dataStart |==> written + dataStart
+409:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():383:11429:written - dataStart |==> written / dataStart
+410:ROR:!=(long,long):<(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():383:11410:entry.getSize() != written - dataStart |==> entry.getSize() < written - dataStart
+411:ROR:!=(long,long):>(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():383:11410:entry.getSize() != written - dataStart |==> entry.getSize() > written - dataStart
+412:ROR:!=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():383:11426:entry.getSize() != written - dataStart |==> true
+413:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():388:11732:written - dataStart |==> written % dataStart
+414:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():388:11732:written - dataStart |==> written * dataStart
+415:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():388:11732:written - dataStart |==> written + dataStart
+416:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():388:11732:written - dataStart |==> written / dataStart
+417:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():391:11862:written - dataStart |==> written % dataStart
+418:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():391:11862:written - dataStart |==> written * dataStart
+419:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():391:11862:written - dataStart |==> written + dataStart
+420:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():391:11862:written - dataStart |==> written / dataStart
+421:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():393:11896:entry.setSize(size); |==> <NO-OP>
+422:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():394:11929:entry.setCompressedSize(size); |==> <NO-OP>
+423:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():395:11972:entry.setCrc(realCrc); |==> <NO-OP>
+424:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():400:12158:raf != null |==> true
+425:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():403:12228:raf.seek(localDataStart); |==> <NO-OP>
+426:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():404:12266:writeOut(ZipLong.getBytes(entry.getCrc())); |==> <NO-OP>
+427:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():405:12322:writeOut(ZipLong.getBytes(entry.getCompressedSize())); |==> <NO-OP>
+428:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():406:12389:writeOut(ZipLong.getBytes(entry.getSize())); |==> <NO-OP>
+429:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():407:12446:raf.seek(save); |==> <NO-OP>
+430:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():410:12481:writeDataDescriptor(entry); |==> <NO-OP>
+431:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@closeArchiveEntry():411:12517:entry = null; |==> <NO-OP>
+432:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):417:12729:closeArchiveEntry(); |==> <NO-OP>
+433:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):419:12759:entry = ((ZipArchiveEntry)archiveEntry); |==> <NO-OP>
+434:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):420:12809:entries.add(entry); |==> <NO-OP>
+435:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):422:12863:-1 |==> 0
+436:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):422:12863:-1 |==> 1
+437:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):422:12842:entry.getMethod() == -1 |==> entry.getMethod() <= -1
+438:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):422:12842:entry.getMethod() == -1 |==> entry.getMethod() >= -1
+439:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):422:12860:entry.getMethod() == -1 |==> false
+440:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):423:12898:entry.setMethod(method); |==> <NO-OP>
+441:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):426:12965:-1 |==> 0
+442:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):426:12965:-1 |==> 1
+443:ROR:==(long,long):<=(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):426:12946:entry.getTime() == -1 |==> entry.getTime() <= -1
+444:ROR:==(long,long):>=(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):426:12946:entry.getTime() == -1 |==> entry.getTime() >= -1
+445:ROR:==(long,long):FALSE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):426:12962:entry.getTime() == -1 |==> false
+446:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):427:13000:entry.setTime(System.currentTimeMillis()); |==> <NO-OP>
+447:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):431:13127:entry.getMethod() == STORED |==> entry.getMethod() <= STORED
+448:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):431:13127:entry.getMethod() == STORED |==> entry.getMethod() >= STORED
+449:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):431:13145:entry.getMethod() == STORED |==> false
+450:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):431:13162:raf == null |==> false
+451:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):431:13127:entry.getMethod() == STORED && raf == null |==> entry.getMethod() == STORED == (raf == null)
+452:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):431:13155:entry.getMethod() == STORED && raf == null |==> false
+453:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):431:13127:entry.getMethod() == STORED && raf == null |==> entry.getMethod() == STORED
+454:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):431:13158:entry.getMethod() == STORED && raf == null |==> raf == null
+455:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):432:13208:-1 |==> 0
+456:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):432:13208:-1 |==> 1
+457:ROR:==(long,long):<=(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):432:13189:entry.getSize() == -1 |==> entry.getSize() <= -1
+458:ROR:==(long,long):>=(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):432:13189:entry.getSize() == -1 |==> entry.getSize() >= -1
+459:ROR:==(long,long):FALSE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):432:13205:entry.getSize() == -1 |==> false
+460:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):437:13468:-1 |==> 0
+461:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):437:13468:-1 |==> 1
+462:ROR:==(long,long):<=(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):437:13450:entry.getCrc() == -1 |==> entry.getCrc() <= -1
+463:ROR:==(long,long):>=(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):437:13450:entry.getCrc() == -1 |==> entry.getCrc() >= -1
+464:ROR:==(long,long):FALSE(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):437:13465:entry.getCrc() == -1 |==> false
+465:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):441:13657:entry.setCompressedSize(entry.getSize()); |==> <NO-OP>
+466:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):444:13722:entry.getMethod() == DEFLATED |==> entry.getMethod() <= DEFLATED
+467:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):444:13722:entry.getMethod() == DEFLATED |==> entry.getMethod() >= DEFLATED
+468:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):444:13740:entry.getMethod() == DEFLATED |==> false
+469:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):444:13722:entry.getMethod() == DEFLATED && hasCompressionLevelChanged |==> entry.getMethod() == DEFLATED == hasCompressionLevelChanged
+470:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):444:13752:entry.getMethod() == DEFLATED && hasCompressionLevelChanged |==> false
+471:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):444:13722:entry.getMethod() == DEFLATED && hasCompressionLevelChanged |==> entry.getMethod() == DEFLATED
+472:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):444:13755:entry.getMethod() == DEFLATED && hasCompressionLevelChanged |==> hasCompressionLevelChanged
+473:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):445:13797:def.setLevel(level); |==> <NO-OP>
+474:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):446:13859:false |==> true
+475:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):446:13830:hasCompressionLevelChanged = false; |==> <NO-OP>
+476:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):448:13884:writeLocalFileHeader(entry); |==> <NO-OP>
+477:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setComment(java.lang.String):456:14052:this.comment = comment; |==> <NO-OP>
+478:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setLevel(int):468:14405:level < Deflater.DEFAULT_COMPRESSION |==> level != Deflater.DEFAULT_COMPRESSION
+479:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setLevel(int):468:14405:level < Deflater.DEFAULT_COMPRESSION |==> level <= Deflater.DEFAULT_COMPRESSION
+480:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setLevel(int):468:14411:level < Deflater.DEFAULT_COMPRESSION |==> false
+481:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setLevel(int):469:14457:level > Deflater.BEST_COMPRESSION |==> level != Deflater.BEST_COMPRESSION
+482:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setLevel(int):469:14457:level > Deflater.BEST_COMPRESSION |==> level >= Deflater.BEST_COMPRESSION
+483:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setLevel(int):469:14463:level > Deflater.BEST_COMPRESSION |==> false
+484:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setLevel(int):468:14405:level < Deflater.DEFAULT_COMPRESSION || level > Deflater.BEST_COMPRESSION |==> level < Deflater.DEFAULT_COMPRESSION
+485:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setLevel(int):469:14457:level < Deflater.DEFAULT_COMPRESSION || level > Deflater.BEST_COMPRESSION |==> level > Deflater.BEST_COMPRESSION
+486:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setLevel(int):469:14454:level < Deflater.DEFAULT_COMPRESSION || level > Deflater.BEST_COMPRESSION |==> true
+487:ROR:!=(int,int):<(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setLevel(int):473:14676:this.level != level |==> this.level < level
+488:ROR:!=(int,int):>(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setLevel(int):473:14676:this.level != level |==> this.level > level
+489:ROR:!=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setLevel(int):473:14687:this.level != level |==> true
+490:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setLevel(int):473:14646:hasCompressionLevelChanged = (this.level != level); |==> <NO-OP>
+491:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setLevel(int):474:14706:this.level = level; |==> <NO-OP>
+492:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@setMethod(int):484:14975:this.method = method; |==> <NO-OP>
+493:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):495:15323:entry.getMethod() == DEFLATED |==> entry.getMethod() <= DEFLATED
+494:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):495:15323:entry.getMethod() == DEFLATED |==> entry.getMethod() >= DEFLATED
+495:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):495:15341:entry.getMethod() == DEFLATED |==> false
+496:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):496:15381:0 |==> 1
+497:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):496:15381:0 |==> -1
+498:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):496:15372:length > 0 |==> length != 0
+499:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):496:15372:length > 0 |==> length >= 0
+500:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):496:15379:length > 0 |==> false
+501:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):497:15419:def.finished() |==> false
+502:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):497:15419:def.finished() |==> true
+503:ROR:<=(int,int):<(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):498:15449:length <= DEFLATER_BLOCK_SIZE |==> length < DEFLATER_BLOCK_SIZE
+504:ROR:<=(int,int):==(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):498:15449:length <= DEFLATER_BLOCK_SIZE |==> length == DEFLATER_BLOCK_SIZE
+505:ROR:<=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):498:15456:length <= DEFLATER_BLOCK_SIZE |==> true
+506:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):499:15506:def.setInput(b, offset, length); |==> <NO-OP>
+507:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):500:15563:deflateUntilInputIsNeeded(); |==> <NO-OP>
+508:AOR:/(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):502:15668:length / DEFLATER_BLOCK_SIZE |==> length % DEFLATER_BLOCK_SIZE
+509:AOR:/(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):502:15668:length / DEFLATER_BLOCK_SIZE |==> length * DEFLATER_BLOCK_SIZE
+510:AOR:/(int,int):+(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):502:15668:length / DEFLATER_BLOCK_SIZE |==> length + DEFLATER_BLOCK_SIZE
+511:AOR:/(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):502:15668:length / DEFLATER_BLOCK_SIZE |==> length - DEFLATER_BLOCK_SIZE
+512:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):503:15735:0 |==> 1
+513:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):503:15735:0 |==> -1
+514:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):503:15738:i < fullblocks |==> i != fullblocks
+515:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):503:15738:i < fullblocks |==> i <= fullblocks
+516:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):503:15740:i < fullblocks |==> false
+517:AOR:*(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):504:15814:i * DEFLATER_BLOCK_SIZE |==> i % DEFLATER_BLOCK_SIZE
+518:AOR:*(int,int):+(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):504:15814:i * DEFLATER_BLOCK_SIZE |==> i + DEFLATER_BLOCK_SIZE
+519:AOR:*(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):504:15814:i * DEFLATER_BLOCK_SIZE |==> i - DEFLATER_BLOCK_SIZE
+520:AOR:*(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):504:15814:i * DEFLATER_BLOCK_SIZE |==> i / DEFLATER_BLOCK_SIZE
+521:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):504:15805:offset + i * DEFLATER_BLOCK_SIZE |==> offset % (i * DEFLATER_BLOCK_SIZE)
+522:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):504:15805:offset + i * DEFLATER_BLOCK_SIZE |==> offset * (i * DEFLATER_BLOCK_SIZE)
+523:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):504:15805:offset + i * DEFLATER_BLOCK_SIZE |==> offset - i * DEFLATER_BLOCK_SIZE
+524:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):504:15805:offset + i * DEFLATER_BLOCK_SIZE |==> offset / (i * DEFLATER_BLOCK_SIZE)
+525:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):504:15789:def.setInput(b, offset + i * DEFLATER_BLOCK_SIZE, DEFLATER_BLOCK_SIZE); |==> <NO-OP>
+526:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):506:15930:deflateUntilInputIsNeeded(); |==> <NO-OP>
+527:AOR:*(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):508:16026:fullblocks * DEFLATER_BLOCK_SIZE |==> fullblocks % DEFLATER_BLOCK_SIZE
+528:AOR:*(int,int):+(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):508:16026:fullblocks * DEFLATER_BLOCK_SIZE |==> fullblocks + DEFLATER_BLOCK_SIZE
+529:AOR:*(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):508:16026:fullblocks * DEFLATER_BLOCK_SIZE |==> fullblocks - DEFLATER_BLOCK_SIZE
+530:AOR:*(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):508:16026:fullblocks * DEFLATER_BLOCK_SIZE |==> fullblocks / DEFLATER_BLOCK_SIZE
+531:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):509:16088:done < length |==> done != length
+532:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):509:16088:done < length |==> done <= length
+533:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):509:16093:done < length |==> false
+534:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):510:16149:offset + done |==> offset % done
+535:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):510:16149:offset + done |==> offset * done
+536:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):510:16149:offset + done |==> offset - done
+537:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):510:16149:offset + done |==> offset / done
+538:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):510:16164:length - done |==> length % done
+539:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):510:16164:length - done |==> length * done
+540:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):510:16164:length - done |==> length + done
+541:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):510:16164:length - done |==> length / done
+542:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):510:16133:def.setInput(b, offset + done, length - done); |==> <NO-OP>
+543:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):511:16208:deflateUntilInputIsNeeded(); |==> <NO-OP>
+544:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):517:16346:writeOut(b, offset, length); |==> <NO-OP>
+545:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):518:16387:written += length; |==> <NO-OP>
+546:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@write(byte[],int,int):520:16424:crc.update(b, offset, length); |==> <NO-OP>
+547:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@close():530:16696:finish(); |==> <NO-OP>
+548:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@close():531:16722:raf != null |==> true
+549:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@close():532:16745:raf.close(); |==> <NO-OP>
+550:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@close():534:16784:out != null |==> true
+551:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@close():535:16807:out.close(); |==> <NO-OP>
+552:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@flush():546:17088:out != null |==> true
+553:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@flush():547:17111:out.flush(); |==> <NO-OP>
+554:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:561:17397:134695760L |==> 0L
+555:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:561:17397:134695760L |==> -134695760L
+556:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:569:17630:101010256L |==> 0L
+557:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream:569:17630:101010256L |==> -101010256L
+558:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@deflate():576:17854:0 |==> 1
+559:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@deflate():576:17854:0 |==> -1
+560:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@deflate():577:17888:0 |==> 1
+561:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@deflate():577:17888:0 |==> -1
+562:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@deflate():577:17882:len > 0 |==> len != 0
+563:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@deflate():577:17882:len > 0 |==> len >= 0
+564:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@deflate():577:17886:len > 0 |==> false
+565:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@deflate():578:17919:0 |==> 1
+566:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@deflate():578:17919:0 |==> -1
+567:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@deflate():578:17905:writeOut(buf, 0, len); |==> <NO-OP>
+568:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):593:18293:!encodable && fallbackToUTF8 |==> !encodable == fallbackToUTF8
+569:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):593:18304:!encodable && fallbackToUTF8 |==> false
+570:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):593:18293:!encodable && fallbackToUTF8 |==> !encodable
+571:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):593:18307:!encodable && fallbackToUTF8 |==> fallbackToUTF8
+572:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):601:18575:createUnicodeExtraFields != UnicodeExtraFieldPolicy.NEVER |==> true
+573:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):603:18653:createUnicodeExtraFields == UnicodeExtraFieldPolicy.ALWAYS |==> false
+574:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):603:18628:createUnicodeExtraFields == UnicodeExtraFieldPolicy.ALWAYS || !encodable |==> createUnicodeExtraFields == UnicodeExtraFieldPolicy.ALWAYS != !encodable
+575:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):603:18628:createUnicodeExtraFields == UnicodeExtraFieldPolicy.ALWAYS || !encodable |==> createUnicodeExtraFields == UnicodeExtraFieldPolicy.ALWAYS
+576:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):604:18706:createUnicodeExtraFields == UnicodeExtraFieldPolicy.ALWAYS || !encodable |==> !encodable
+577:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):604:18703:createUnicodeExtraFields == UnicodeExtraFieldPolicy.ALWAYS || !encodable |==> true
+578:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):605:18736:ze.addExtraField(new UnicodePathExtraField(ze.getName(), name.array(), name.arrayOffset(), name.limit())); |==> <NO-OP>
+579:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):612:19099:comm != null |==> true
+580:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):612:19094:comm != null && !"".equals(comm) |==> comm != null == !"".equals(comm)
+581:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):612:19107:comm != null && !"".equals(comm) |==> false
+582:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):612:19094:comm != null && !"".equals(comm) |==> comm != null
+583:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):612:19110:comm != null && !"".equals(comm) |==> !"".equals(comm)
+584:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):616:19254:createUnicodeExtraFields == UnicodeExtraFieldPolicy.ALWAYS |==> false
+585:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):616:19229:createUnicodeExtraFields == UnicodeExtraFieldPolicy.ALWAYS || !commentEncodable |==> createUnicodeExtraFields == UnicodeExtraFieldPolicy.ALWAYS != !commentEncodable
+586:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):616:19229:createUnicodeExtraFields == UnicodeExtraFieldPolicy.ALWAYS || !commentEncodable |==> createUnicodeExtraFields == UnicodeExtraFieldPolicy.ALWAYS
+587:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):617:19311:createUnicodeExtraFields == UnicodeExtraFieldPolicy.ALWAYS || !commentEncodable |==> !commentEncodable
+588:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):617:19308:createUnicodeExtraFields == UnicodeExtraFieldPolicy.ALWAYS || !commentEncodable |==> true
+589:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):619:19422:ze.addExtraField(new UnicodeCommentExtraField(comm, commentB.array(), commentB.arrayOffset(), commentB.limit())); |==> <NO-OP>
+590:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):628:19823:offsets.put(ze, ZipLong.getBytes(written)); |==> <NO-OP>
+591:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):630:19876:writeOut(LFH_SIG); |==> <NO-OP>
+592:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):631:19903:written += WORD; |==> <NO-OP>
+593:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):637:20167:!encodable && fallbackToUTF8 |==> !encodable == fallbackToUTF8
+594:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):638:20235:!encodable && fallbackToUTF8 |==> false
+595:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):637:20167:!encodable && fallbackToUTF8 |==> !encodable
+596:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):638:20238:!encodable && fallbackToUTF8 |==> fallbackToUTF8
+597:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):636:20050:writeVersionNeededToExtractAndGeneralPurposeBits(zipMethod, !encodable && fallbackToUTF8); |==> <NO-OP>
+598:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):639:20263:written += WORD; |==> <NO-OP>
+599:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):642:20319:writeOut(ZipShort.getBytes(zipMethod)); |==> <NO-OP>
+600:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):643:20367:written += SHORT; |==> <NO-OP>
+601:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):646:20429:writeOut(ZipUtil.toDosTime(ze.getTime())); |==> <NO-OP>
+602:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):647:20480:written += WORD; |==> <NO-OP>
+603:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):652:20581:localDataStart = written; |==> <NO-OP>
+604:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):653:20619:zipMethod == DEFLATED |==> zipMethod <= DEFLATED
+605:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):653:20619:zipMethod == DEFLATED |==> zipMethod >= DEFLATED
+606:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):653:20629:zipMethod == DEFLATED |==> false
+607:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):653:20648:raf != null |==> true
+608:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):653:20619:zipMethod == DEFLATED || raf != null |==> zipMethod == DEFLATED != (raf != null)
+609:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):653:20619:zipMethod == DEFLATED || raf != null |==> zipMethod == DEFLATED
+610:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):653:20644:zipMethod == DEFLATED || raf != null |==> raf != null
+611:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):653:20641:zipMethod == DEFLATED || raf != null |==> true
+612:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):654:20671:writeOut(LZERO); |==> <NO-OP>
+613:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):655:20700:writeOut(LZERO); |==> <NO-OP>
+614:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):656:20729:writeOut(LZERO); |==> <NO-OP>
+615:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):658:20775:writeOut(ZipLong.getBytes(ze.getCrc())); |==> <NO-OP>
+616:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):659:20828:writeOut(ZipLong.getBytes(ze.getSize())); |==> <NO-OP>
+617:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):660:20882:writeOut(ZipLong.getBytes(ze.getSize())); |==> <NO-OP>
+618:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):663:20991:12 |==> 0
+619:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):663:20991:12 |==> -12
+620:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):663:20980:written += 12; |==> <NO-OP>
+621:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):667:21069:writeOut(ZipShort.getBytes(name.limit())); |==> <NO-OP>
+622:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):668:21120:written += SHORT; |==> <NO-OP>
+623:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):672:21228:writeOut(ZipShort.getBytes(extra.length)); |==> <NO-OP>
+624:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):673:21279:written += SHORT; |==> <NO-OP>
+625:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):676:21327:writeOut(name.array(), name.arrayOffset(), name.limit()); |==> <NO-OP>
+626:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):677:21393:written += name.limit(); |==> <NO-OP>
+627:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):680:21450:writeOut(extra); |==> <NO-OP>
+628:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):681:21475:written += extra.length; |==> <NO-OP>
+629:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeLocalFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):683:21509:dataStart = written; |==> <NO-OP>
+630:ROR:!=(int,int):<(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeDataDescriptor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):692:21758:ze.getMethod() != DEFLATED |==> ze.getMethod() < DEFLATED
+631:ROR:!=(int,int):>(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeDataDescriptor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):692:21758:ze.getMethod() != DEFLATED |==> ze.getMethod() > DEFLATED
+632:ROR:!=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeDataDescriptor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):692:21773:ze.getMethod() != DEFLATED |==> true
+633:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeDataDescriptor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):692:21792:raf != null |==> true
+634:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeDataDescriptor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):692:21758:ze.getMethod() != DEFLATED || raf != null |==> ze.getMethod() != DEFLATED != (raf != null)
+635:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeDataDescriptor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):692:21758:ze.getMethod() != DEFLATED || raf != null |==> ze.getMethod() != DEFLATED
+636:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeDataDescriptor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):692:21788:ze.getMethod() != DEFLATED || raf != null |==> raf != null
+637:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeDataDescriptor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):692:21785:ze.getMethod() != DEFLATED || raf != null |==> true
+638:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeDataDescriptor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):695:21841:writeOut(DD_SIG); |==> <NO-OP>
+639:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeDataDescriptor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):696:21867:writeOut(ZipLong.getBytes(entry.getCrc())); |==> <NO-OP>
+640:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeDataDescriptor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):697:21919:writeOut(ZipLong.getBytes(entry.getCompressedSize())); |==> <NO-OP>
+641:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeDataDescriptor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):698:21982:writeOut(ZipLong.getBytes(entry.getSize())); |==> <NO-OP>
+642:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeDataDescriptor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):700:22084:16 |==> 0
+643:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeDataDescriptor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):700:22084:16 |==> -16
+644:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeDataDescriptor(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):700:22073:written += 16; |==> <NO-OP>
+645:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):710:22356:writeOut(CFH_SIG); |==> <NO-OP>
+646:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):711:22383:written += WORD; |==> <NO-OP>
+647:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):715:22522:8 |==> 0
+648:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):715:22522:8 |==> -8
+649:SOR:<<(int,int):>>(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):715:22502:ze.getPlatform() << 8 |==> ze.getPlatform() >> 8
+650:SOR:<<(int,int):>>>(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):715:22502:ze.getPlatform() << 8 |==> ze.getPlatform() >>> 8
+651:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):715:22527:20 |==> 0
+652:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):715:22527:20 |==> -20
+653:LOR:|(int,int):&(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):715:22501:(ze.getPlatform() << 8) | 20 |==> (ze.getPlatform() << 8) & 20
+654:LOR:|(int,int):^(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):715:22501:(ze.getPlatform() << 8) | 20 |==> (ze.getPlatform() << 8) ^ 20
+655:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):715:22474:writeOut(ZipShort.getBytes((ze.getPlatform() << 8) | 20)); |==> <NO-OP>
+656:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):716:22541:written += SHORT; |==> <NO-OP>
+657:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):721:22802:!encodable && fallbackToUTF8 |==> !encodable == fallbackToUTF8
+658:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):722:22870:!encodable && fallbackToUTF8 |==> false
+659:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):721:22802:!encodable && fallbackToUTF8 |==> !encodable
+660:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):722:22873:!encodable && fallbackToUTF8 |==> fallbackToUTF8
+661:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):720:22685:writeVersionNeededToExtractAndGeneralPurposeBits(zipMethod, !encodable && fallbackToUTF8); |==> <NO-OP>
+662:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):723:22898:written += WORD; |==> <NO-OP>
+663:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):726:22954:writeOut(ZipShort.getBytes(zipMethod)); |==> <NO-OP>
+664:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):727:23002:written += SHORT; |==> <NO-OP>
+665:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):730:23064:writeOut(ZipUtil.toDosTime(ze.getTime())); |==> <NO-OP>
+666:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):731:23115:written += WORD; |==> <NO-OP>
+667:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):736:23216:writeOut(ZipLong.getBytes(ze.getCrc())); |==> <NO-OP>
+668:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):737:23265:writeOut(ZipLong.getBytes(ze.getCompressedSize())); |==> <NO-OP>
+669:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):738:23325:writeOut(ZipLong.getBytes(ze.getSize())); |==> <NO-OP>
+670:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):740:23424:12 |==> 0
+671:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):740:23424:12 |==> -12
+672:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):740:23413:written += 12; |==> <NO-OP>
+673:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):746:23556:!encodable && fallbackToUTF8 |==> !encodable == fallbackToUTF8
+674:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):746:23567:!encodable && fallbackToUTF8 |==> false
+675:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):746:23556:!encodable && fallbackToUTF8 |==> !encodable
+676:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):746:23570:!encodable && fallbackToUTF8 |==> fallbackToUTF8
+677:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):754:23809:writeOut(ZipShort.getBytes(name.limit())); |==> <NO-OP>
+678:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):755:23860:written += SHORT; |==> <NO-OP>
+679:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):759:23971:writeOut(ZipShort.getBytes(extra.length)); |==> <NO-OP>
+680:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):760:24022:written += SHORT; |==> <NO-OP>
+681:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):764:24128:comm == null |==> false
+682:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):765:24151:comm = ""; |==> <NO-OP>
+683:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):770:24256:writeOut(ZipShort.getBytes(commentB.limit())); |==> <NO-OP>
+684:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):771:24311:written += SHORT; |==> <NO-OP>
+685:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):774:24367:writeOut(ZERO); |==> <NO-OP>
+686:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):775:24391:written += SHORT; |==> <NO-OP>
+687:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):778:24454:writeOut(ZipShort.getBytes(ze.getInternalAttributes())); |==> <NO-OP>
+688:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):779:24519:written += SHORT; |==> <NO-OP>
+689:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):782:24582:writeOut(ZipLong.getBytes(ze.getExternalAttributes())); |==> <NO-OP>
+690:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):783:24646:written += WORD; |==> <NO-OP>
+691:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):786:24706:writeOut((byte[])offsets.get(ze)); |==> <NO-OP>
+692:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):787:24750:written += WORD; |==> <NO-OP>
+693:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):790:24797:writeOut(name.array(), name.arrayOffset(), name.limit()); |==> <NO-OP>
+694:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):791:24863:written += name.limit(); |==> <NO-OP>
+695:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):794:24920:writeOut(extra); |==> <NO-OP>
+696:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):795:24945:written += extra.length; |==> <NO-OP>
+697:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):798:25003:writeOut(commentB.array(), commentB.arrayOffset(), commentB.limit()); |==> <NO-OP>
+698:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralFileHeader(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):799:25081:written += commentB.limit(); |==> <NO-OP>
+699:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralDirectoryEnd():807:25301:writeOut(EOCD_SIG); |==> <NO-OP>
+700:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralDirectoryEnd():810:25354:writeOut(ZERO); |==> <NO-OP>
+701:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralDirectoryEnd():811:25378:writeOut(ZERO); |==> <NO-OP>
+702:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralDirectoryEnd():815:25488:writeOut(num); |==> <NO-OP>
+703:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralDirectoryEnd():816:25511:writeOut(num); |==> <NO-OP>
+704:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralDirectoryEnd():819:25572:writeOut(ZipLong.getBytes(cdLength)); |==> <NO-OP>
+705:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralDirectoryEnd():820:25618:writeOut(ZipLong.getBytes(cdOffset)); |==> <NO-OP>
+706:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralDirectoryEnd():824:25753:writeOut(ZipShort.getBytes(data.limit())); |==> <NO-OP>
+707:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeCentralDirectoryEnd():825:25804:writeOut(data.array(), data.arrayOffset(), data.limit()); |==> <NO-OP>
+708:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeOut(byte[]):834:26107:0 |==> 1
+709:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeOut(byte[]):834:26107:0 |==> -1
+710:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeOut(byte[]):834:26092:writeOut(data, 0, data.length); |==> <NO-OP>
+711:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeOut(byte[],int,int):846:26498:raf != null |==> true
+712:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeOut(byte[],int,int):847:26521:raf.write(data, offset, length); |==> <NO-OP>
+713:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeOut(byte[],int,int):849:26583:out.write(data, offset, length); |==> <NO-OP>
+714:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@deflateUntilInputIsNeeded():855:26747:deflate(); |==> <NO-OP>
+715:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):866:27192:10 |==> 0
+716:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):866:27192:10 |==> -10
+717:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):867:27230:useEFS || utfFallback |==> useEFS != utfFallback
+718:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):867:27230:useEFS || utfFallback |==> useEFS
+719:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):867:27240:useEFS || utfFallback |==> utfFallback
+720:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):867:27237:useEFS || utfFallback |==> true
+721:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):867:27266:0 |==> 1
+722:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):867:27266:0 |==> -1
+723:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):868:27281:zipMethod == DEFLATED |==> zipMethod <= DEFLATED
+724:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):868:27281:zipMethod == DEFLATED |==> zipMethod >= DEFLATED
+725:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):868:27291:zipMethod == DEFLATED |==> false
+726:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):868:27310:raf == null |==> false
+727:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):868:27281:zipMethod == DEFLATED && raf == null |==> zipMethod == DEFLATED == (raf == null)
+728:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):868:27303:zipMethod == DEFLATED && raf == null |==> false
+729:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):868:27281:zipMethod == DEFLATED && raf == null |==> zipMethod == DEFLATED
+730:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):868:27306:zipMethod == DEFLATED && raf == null |==> raf == null
+731:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):871:27468:20 |==> 0
+732:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):871:27468:20 |==> -20
+733:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):871:27442:versionNeededToExtract = 20; |==> <NO-OP>
+734:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):873:27566:8 |==> 0
+735:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):873:27566:8 |==> -8
+736:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):873:27544:generalPurposeFlag |= 8; |==> <NO-OP>
+737:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):878:27662:writeOut(ZipShort.getBytes(versionNeededToExtract)); |==> <NO-OP>
+738:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveOutputStream@writeVersionNeededToExtractAndGeneralPurposeBits(int,boolean):880:27759:writeOut(ZipShort.getBytes(generalPurposeFlag)); |==> <NO-OP>
+739:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream:52:2012:false |==> true
+740:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream:55:2141:false |==> true
+741:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@<init>(java.io.OutputStream,int,int):86:3075:0 |==> 1
+742:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@<init>(java.io.OutputStream,int,int):86:3075:0 |==> -1
+743:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@<init>(java.io.OutputStream,int,int):86:3059:this.assemLen = 0; |==> <NO-OP>
+744:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@setLongFileMode(int):99:3529:this.longFileMode = longFileMode; |==> <NO-OP>
+745:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@finish():113:3993:haveUnclosedEntry |==> false
+746:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@finish():113:3993:haveUnclosedEntry |==> true
+747:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@finish():116:4111:writeEOFRecord(); |==> <NO-OP>
+748:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@finish():117:4137:writeEOFRecord(); |==> <NO-OP>
+749:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@close():125:4315:closed |==> false
+750:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@close():125:4315:closed |==> true
+751:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@close():126:4337:finish(); |==> <NO-OP>
+752:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@close():127:4359:buffer.close(); |==> <NO-OP>
+753:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@close():128:4387:out.close(); |==> <NO-OP>
+754:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@close():129:4421:true |==> false
+755:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@close():129:4412:closed = true; |==> <NO-OP>
+756:ROR:>=(int,int):==(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):157:5470:entry.getName().length() >= TarConstants.NAMELEN |==> entry.getName().length() == TarConstants.NAMELEN
+757:ROR:>=(int,int):>(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):157:5470:entry.getName().length() >= TarConstants.NAMELEN |==> entry.getName().length() > TarConstants.NAMELEN
+758:ROR:>=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):157:5495:entry.getName().length() >= TarConstants.NAMELEN |==> true
+759:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):159:5539:longFileMode == LONGFILE_GNU |==> longFileMode <= LONGFILE_GNU
+760:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):159:5539:longFileMode == LONGFILE_GNU |==> longFileMode >= LONGFILE_GNU
+761:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):159:5552:longFileMode == LONGFILE_GNU |==> false
+762:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):166:6068:1 |==> 0
+763:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):166:6068:1 |==> -1
+764:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):166:6049:nameBytes.length + 1 |==> nameBytes.length % 1
+765:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):166:6049:nameBytes.length + 1 |==> nameBytes.length * 1
+766:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):166:6049:nameBytes.length + 1 |==> nameBytes.length - 1
+767:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):166:6049:nameBytes.length + 1 |==> nameBytes.length / 1
+768:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):166:6027:longLinkEntry.setSize(nameBytes.length + 1); |==> <NO-OP>
+769:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):167:6102:putArchiveEntry(longLinkEntry); |==> <NO-OP>
+770:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):168:6150:write(nameBytes); |==> <NO-OP>
+771:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):169:6190:0 |==> 1
+772:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):169:6190:0 |==> -1
+773:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):169:6184:write(0); |==> <NO-OP>
+774:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):170:6228:closeArchiveEntry(); |==> <NO-OP>
+775:ROR:!=(int,int):<(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):171:6272:longFileMode != LONGFILE_TRUNCATE |==> longFileMode < LONGFILE_TRUNCATE
+776:ROR:!=(int,int):>(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):171:6272:longFileMode != LONGFILE_TRUNCATE |==> longFileMode > LONGFILE_TRUNCATE
+777:ROR:!=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):171:6285:longFileMode != LONGFILE_TRUNCATE |==> true
+778:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):178:6563:entry.writeEntryHeader(recordBuf); |==> <NO-OP>
+779:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):179:6606:buffer.writeRecord(recordBuf); |==> <NO-OP>
+780:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):181:6658:0 |==> 1
+781:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):181:6658:0 |==> -1
+782:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):181:6646:currBytes = 0; |==> <NO-OP>
+783:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):183:6691:entry.isDirectory() |==> false
+784:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):183:6691:entry.isDirectory() |==> true
+785:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):184:6720:0 |==> 1
+786:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):184:6720:0 |==> -1
+787:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):184:6709:currSize = 0; |==> <NO-OP>
+788:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):186:6752:currSize = entry.getSize(); |==> <NO-OP>
+789:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):188:6798:currName = entry.getName(); |==> <NO-OP>
+790:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):189:6854:true |==> false
+791:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@putArchiveEntry(org.apache.commons.compress.archivers.ArchiveEntry):189:6834:haveUnclosedEntry = true; |==> <NO-OP>
+792:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@closeArchiveEntry():203:7400:0 |==> 1
+793:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@closeArchiveEntry():203:7400:0 |==> -1
+794:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@closeArchiveEntry():203:7389:assemLen > 0 |==> assemLen != 0
+795:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@closeArchiveEntry():203:7389:assemLen > 0 |==> assemLen >= 0
+796:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@closeArchiveEntry():203:7398:assemLen > 0 |==> false
+797:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@closeArchiveEntry():204:7440:i < assemBuf.length |==> i != assemBuf.length
+798:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@closeArchiveEntry():204:7440:i < assemBuf.length |==> i <= assemBuf.length
+799:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@closeArchiveEntry():204:7442:i < assemBuf.length |==> false
+800:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@closeArchiveEntry():205:7498:0 |==> 1
+801:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@closeArchiveEntry():205:7498:0 |==> -1
+802:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@closeArchiveEntry():205:7484:assemBuf[i] = 0; |==> <NO-OP>
+803:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@closeArchiveEntry():208:7528:buffer.writeRecord(assemBuf); |==> <NO-OP>
+804:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@closeArchiveEntry():210:7571:currBytes += assemLen; |==> <NO-OP>
+805:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@closeArchiveEntry():211:7617:0 |==> 1
+806:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@closeArchiveEntry():211:7617:0 |==> -1
+807:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@closeArchiveEntry():211:7606:assemLen = 0; |==> <NO-OP>
+808:ROR:<(long,long):!=(long,long):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@closeArchiveEntry():214:7643:currBytes < currSize |==> currBytes != currSize
+809:ROR:<(long,long):<=(long,long):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@closeArchiveEntry():214:7643:currBytes < currSize |==> currBytes <= currSize
+810:ROR:<(long,long):FALSE(long,long):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@closeArchiveEntry():214:7653:currBytes < currSize |==> false
+811:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@closeArchiveEntry():220:7973:false |==> true
+812:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@closeArchiveEntry():220:7953:haveUnclosedEntry = false; |==> <NO-OP>
+813:AOR:+(long,long):%(long,long):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):238:8773:currBytes + numToWrite |==> currBytes % numToWrite
+814:AOR:+(long,long):*(long,long):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):238:8773:currBytes + numToWrite |==> currBytes * numToWrite
+815:AOR:+(long,long):-(long,long):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):238:8773:currBytes + numToWrite |==> currBytes - numToWrite
+816:AOR:+(long,long):/(long,long):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):238:8773:currBytes + numToWrite |==> currBytes / numToWrite
+817:ROR:>(long,long):!=(long,long):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):238:8772:(currBytes + numToWrite) > currSize |==> (currBytes + numToWrite) != currSize
+818:ROR:>(long,long):>=(long,long):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):238:8772:(currBytes + numToWrite) > currSize |==> (currBytes + numToWrite) >= currSize
+819:ROR:>(long,long):FALSE(long,long):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):238:8797:(currBytes + numToWrite) > currSize |==> false
+820:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):253:9467:0 |==> 1
+821:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):253:9467:0 |==> -1
+822:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):253:9456:assemLen > 0 |==> assemLen != 0
+823:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):253:9456:assemLen > 0 |==> assemLen >= 0
+824:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):253:9465:assemLen > 0 |==> false
+825:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):254:9489:assemLen + numToWrite |==> assemLen % numToWrite
+826:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):254:9489:assemLen + numToWrite |==> assemLen * numToWrite
+827:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):254:9489:assemLen + numToWrite |==> assemLen - numToWrite
+828:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):254:9489:assemLen + numToWrite |==> assemLen / numToWrite
+829:ROR:>=(int,int):==(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):254:9488:(assemLen + numToWrite) >= recordBuf.length |==> (assemLen + numToWrite) == recordBuf.length
+830:ROR:>=(int,int):>(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):254:9488:(assemLen + numToWrite) >= recordBuf.length |==> (assemLen + numToWrite) > recordBuf.length
+831:ROR:>=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):254:9512:(assemLen + numToWrite) >= recordBuf.length |==> true
+832:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):255:9562:recordBuf.length - assemLen |==> recordBuf.length % assemLen
+833:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):255:9562:recordBuf.length - assemLen |==> recordBuf.length * assemLen
+834:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):255:9562:recordBuf.length - assemLen |==> recordBuf.length + assemLen
+835:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):255:9562:recordBuf.length - assemLen |==> recordBuf.length / assemLen
+836:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):257:9635:0 |==> 1
+837:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):257:9635:0 |==> -1
+838:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):257:9649:0 |==> 1
+839:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):257:9649:0 |==> -1
+840:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):257:9608:System.arraycopy(assemBuf, 0, recordBuf, 0, assemLen); |==> <NO-OP>
+841:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):259:9712:System.arraycopy(wBuf, wOffset, recordBuf, assemLen, aLen); |==> <NO-OP>
+842:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):261:9821:buffer.writeRecord(recordBuf); |==> <NO-OP>
+843:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):263:9869:currBytes += recordBuf.length; |==> <NO-OP>
+844:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):264:9916:wOffset += aLen; |==> <NO-OP>
+845:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):265:9949:numToWrite -= aLen; |==> <NO-OP>
+846:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):266:9996:0 |==> 1
+847:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):266:9996:0 |==> -1
+848:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):266:9985:assemLen = 0; |==> <NO-OP>
+849:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):268:10036:System.arraycopy(wBuf, wOffset, assemBuf, assemLen, numToWrite); |==> <NO-OP>
+850:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):271:10151:wOffset += numToWrite; |==> <NO-OP>
+851:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):272:10190:assemLen += numToWrite; |==> <NO-OP>
+852:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):273:10243:0 |==> 1
+853:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):273:10243:0 |==> -1
+854:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):273:10230:numToWrite = 0; |==> <NO-OP>
+855:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):282:10455:0 |==> 1
+856:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):282:10455:0 |==> -1
+857:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):282:10442:numToWrite > 0 |==> numToWrite != 0
+858:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):282:10442:numToWrite > 0 |==> numToWrite >= 0
+859:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):282:10453:numToWrite > 0 |==> false
+860:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):283:10476:numToWrite < recordBuf.length |==> numToWrite != recordBuf.length
+861:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):283:10476:numToWrite < recordBuf.length |==> numToWrite <= recordBuf.length
+862:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):283:10487:numToWrite < recordBuf.length |==> false
+863:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):284:10525:System.arraycopy(wBuf, wOffset, assemBuf, assemLen, numToWrite); |==> <NO-OP>
+864:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):287:10640:assemLen += numToWrite; |==> <NO-OP>
+865:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):292:10715:buffer.writeRecord(wBuf, wOffset); |==> <NO-OP>
+866:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):296:10804:currBytes += num; |==> <NO-OP>
+867:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):297:10834:numToWrite -= num; |==> <NO-OP>
+868:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@write(byte[],int,int):298:10865:wOffset += num; |==> <NO-OP>
+869:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@writeEOFRecord():307:11110:0 |==> 1
+870:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@writeEOFRecord():307:11110:0 |==> -1
+871:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@writeEOFRecord():307:11113:i < recordBuf.length |==> i <= recordBuf.length
+872:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@writeEOFRecord():307:11115:i < recordBuf.length |==> false
+873:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@writeEOFRecord():308:11169:0 |==> 1
+874:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@writeEOFRecord():308:11169:0 |==> -1
+875:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@writeEOFRecord():308:11154:recordBuf[i] = 0; |==> <NO-OP>
+876:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@writeEOFRecord():311:11191:buffer.writeRecord(recordBuf); |==> <NO-OP>
+877:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarArchiveOutputStream@flush():316:11335:out.flush(); |==> <NO-OP>
+878:ROR:==(int,int):<=(int,int):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):76:2790:change.type() == Change.TYPE_ADD |==> change.type() <= Change.TYPE_ADD
+879:ROR:==(int,int):>=(int,int):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):76:2790:change.type() == Change.TYPE_ADD |==> change.type() >= Change.TYPE_ADD
+880:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):76:2804:change.type() == Change.TYPE_ADD |==> false
+881:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):76:2790:change.type() == Change.TYPE_ADD && change.isReplaceMode() |==> change.type() == Change.TYPE_ADD == change.isReplaceMode()
+882:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):76:2823:change.type() == Change.TYPE_ADD && change.isReplaceMode() |==> false
+883:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):76:2790:change.type() == Change.TYPE_ADD && change.isReplaceMode() |==> change.type() == Change.TYPE_ADD
+884:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):76:2826:change.type() == Change.TYPE_ADD && change.isReplaceMode() |==> change.isReplaceMode()
+885:STD:<CALL>:<NO-OP>:org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):77:2868:copyStream(change.getInput(), out, change.getEntry()); |==> <NO-OP>
+886:STD:<CALL>:<NO-OP>:org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):78:2939:it.remove(); |==> <NO-OP>
+887:STD:<CALL>:<NO-OP>:org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):79:2968:results.addedFromChangeSet(change.getEntry().getName()); |==> <NO-OP>
+888:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):84:3128:(entry = in.getNextEntry()) != null |==> true
+889:LVR:TRUE:FALSE:org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):85:3166:true |==> false
+890:ROR:==(int,int):<=(int,int):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):92:3418:type == Change.TYPE_DELETE |==> type <= Change.TYPE_DELETE
+891:ROR:==(int,int):>=(int,int):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):92:3418:type == Change.TYPE_DELETE |==> type >= Change.TYPE_DELETE
+892:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):92:3423:type == Change.TYPE_DELETE |==> false
+893:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):92:3453:name != null |==> true
+894:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):92:3418:type == Change.TYPE_DELETE && name != null |==> type == Change.TYPE_DELETE == (name != null)
+895:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):92:3445:type == Change.TYPE_DELETE && name != null |==> false
+896:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):92:3418:type == Change.TYPE_DELETE && name != null |==> type == Change.TYPE_DELETE
+897:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):92:3448:type == Change.TYPE_DELETE && name != null |==> name != null
+898:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):93:3499:name.equals(change.targetFile()) |==> false
+899:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):93:3499:name.equals(change.targetFile()) |==> true
+900:LVR:FALSE:TRUE:org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):94:3555:false |==> true
+901:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):94:3548:copy = false; |==> <NO-OP>
+902:STD:<CALL>:<NO-OP>:org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):95:3586:it.remove(); |==> <NO-OP>
+903:STD:<CALL>:<NO-OP>:org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):96:3623:results.deleted(name); |==> <NO-OP>
+904:ROR:==(int,int):<=(int,int):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):99:3725:type == Change.TYPE_DELETE_DIR |==> type <= Change.TYPE_DELETE_DIR
+905:ROR:==(int,int):>=(int,int):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):99:3725:type == Change.TYPE_DELETE_DIR |==> type >= Change.TYPE_DELETE_DIR
+906:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):99:3730:type == Change.TYPE_DELETE_DIR |==> false
+907:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):99:3764:name != null |==> true
+908:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):99:3725:type == Change.TYPE_DELETE_DIR && name != null |==> type == Change.TYPE_DELETE_DIR == (name != null)
+909:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):99:3756:type == Change.TYPE_DELETE_DIR && name != null |==> false
+910:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):99:3725:type == Change.TYPE_DELETE_DIR && name != null |==> type == Change.TYPE_DELETE_DIR
+911:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):99:3759:type == Change.TYPE_DELETE_DIR && name != null |==> name != null
+912:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):100:3814:name.startsWith(change.targetFile() + "/") |==> false
+913:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):100:3814:name.startsWith(change.targetFile() + "/") |==> true
+914:LVR:FALSE:TRUE:org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):101:3876:false |==> true
+915:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):101:3869:copy = false; |==> <NO-OP>
+916:STD:<CALL>:<NO-OP>:org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):102:3907:results.deleted(name); |==> <NO-OP>
+917:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):108:4032:copy |==> false
+918:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):108:4032:copy |==> true
+919:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):109:4060:!isDeletedLater(workingSet, entry) && !results.hasBeenAdded(entry.getName()) |==> !isDeletedLater(workingSet, entry) == !results.hasBeenAdded(entry.getName())
+920:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):109:4095:!isDeletedLater(workingSet, entry) && !results.hasBeenAdded(entry.getName()) |==> false
+921:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):109:4060:!isDeletedLater(workingSet, entry) && !results.hasBeenAdded(entry.getName()) |==> !isDeletedLater(workingSet, entry)
+922:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):109:4098:!isDeletedLater(workingSet, entry) && !results.hasBeenAdded(entry.getName()) |==> !results.hasBeenAdded(entry.getName())
+923:STD:<CALL>:<NO-OP>:org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):110:4160:copyStream(in, out, entry); |==> <NO-OP>
+924:STD:<CALL>:<NO-OP>:org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):111:4208:results.addedFromStream(entry.getName()); |==> <NO-OP>
+925:ROR:==(int,int):<=(int,int):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):120:4529:change.type() == Change.TYPE_ADD |==> change.type() <= Change.TYPE_ADD
+926:ROR:==(int,int):>=(int,int):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):120:4529:change.type() == Change.TYPE_ADD |==> change.type() >= Change.TYPE_ADD
+927:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):120:4543:change.type() == Change.TYPE_ADD |==> false
+928:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):120:4529:change.type() == Change.TYPE_ADD && !change.isReplaceMode() |==> change.type() == Change.TYPE_ADD == !change.isReplaceMode()
+929:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):120:4562:change.type() == Change.TYPE_ADD && !change.isReplaceMode() |==> false
+930:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):120:4529:change.type() == Change.TYPE_ADD && !change.isReplaceMode() |==> change.type() == Change.TYPE_ADD
+931:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):121:4582:change.type() == Change.TYPE_ADD && !change.isReplaceMode() |==> !change.isReplaceMode()
+932:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):120:4529:change.type() == Change.TYPE_ADD && !change.isReplaceMode() && !results.hasBeenAdded(change.getEntry().getName()) |==> (change.type() == Change.TYPE_ADD && !change.isReplaceMode()) == !results.hasBeenAdded(change.getEntry().getName())
+933:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):121:4606:change.type() == Change.TYPE_ADD && !change.isReplaceMode() && !results.hasBeenAdded(change.getEntry().getName()) |==> false
+934:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):120:4529:change.type() == Change.TYPE_ADD && !change.isReplaceMode() && !results.hasBeenAdded(change.getEntry().getName()) |==> change.type() == Change.TYPE_ADD && !change.isReplaceMode()
+935:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):122:4626:change.type() == Change.TYPE_ADD && !change.isReplaceMode() && !results.hasBeenAdded(change.getEntry().getName()) |==> !results.hasBeenAdded(change.getEntry().getName())
+936:STD:<CALL>:<NO-OP>:org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):123:4696:copyStream(change.getInput(), out, change.getEntry()); |==> <NO-OP>
+937:STD:<CALL>:<NO-OP>:org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):124:4767:it.remove(); |==> <NO-OP>
+938:STD:<CALL>:<NO-OP>:org.apache.commons.compress.changes.ChangeSetPerformer@perform(org.apache.commons.compress.archivers.ArchiveInputStream,org.apache.commons.compress.archivers.ArchiveOutputStream):125:4796:results.addedFromChangeSet(change.getEntry().getName()); |==> <NO-OP>
+939:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.changes.ChangeSetPerformer@isDeletedLater(java.util.Set,org.apache.commons.compress.archivers.ArchiveEntry):143:5399:workingSet.isEmpty() |==> false
+940:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.changes.ChangeSetPerformer@isDeletedLater(java.util.Set,org.apache.commons.compress.archivers.ArchiveEntry):143:5399:workingSet.isEmpty() |==> true
+941:ROR:==(int,int):<=(int,int):org.apache.commons.compress.changes.ChangeSetPerformer@isDeletedLater(java.util.Set,org.apache.commons.compress.archivers.ArchiveEntry):148:5649:type == Change.TYPE_DELETE |==> type <= Change.TYPE_DELETE
+942:ROR:==(int,int):>=(int,int):org.apache.commons.compress.changes.ChangeSetPerformer@isDeletedLater(java.util.Set,org.apache.commons.compress.archivers.ArchiveEntry):148:5649:type == Change.TYPE_DELETE |==> type >= Change.TYPE_DELETE
+943:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.changes.ChangeSetPerformer@isDeletedLater(java.util.Set,org.apache.commons.compress.archivers.ArchiveEntry):148:5654:type == Change.TYPE_DELETE |==> false
+944:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@isDeletedLater(java.util.Set,org.apache.commons.compress.archivers.ArchiveEntry):148:5649:type == Change.TYPE_DELETE && source.equals(target) |==> type == Change.TYPE_DELETE == source.equals(target)
+945:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@isDeletedLater(java.util.Set,org.apache.commons.compress.archivers.ArchiveEntry):148:5676:type == Change.TYPE_DELETE && source.equals(target) |==> false
+946:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@isDeletedLater(java.util.Set,org.apache.commons.compress.archivers.ArchiveEntry):148:5649:type == Change.TYPE_DELETE && source.equals(target) |==> type == Change.TYPE_DELETE
+947:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@isDeletedLater(java.util.Set,org.apache.commons.compress.archivers.ArchiveEntry):148:5679:type == Change.TYPE_DELETE && source.equals(target) |==> source.equals(target)
+948:LVR:TRUE:FALSE:org.apache.commons.compress.changes.ChangeSetPerformer@isDeletedLater(java.util.Set,org.apache.commons.compress.archivers.ArchiveEntry):149:5731:true |==> false
+949:ROR:==(int,int):<=(int,int):org.apache.commons.compress.changes.ChangeSetPerformer@isDeletedLater(java.util.Set,org.apache.commons.compress.archivers.ArchiveEntry):152:5776:type == Change.TYPE_DELETE_DIR |==> type <= Change.TYPE_DELETE_DIR
+950:ROR:==(int,int):>=(int,int):org.apache.commons.compress.changes.ChangeSetPerformer@isDeletedLater(java.util.Set,org.apache.commons.compress.archivers.ArchiveEntry):152:5776:type == Change.TYPE_DELETE_DIR |==> type >= Change.TYPE_DELETE_DIR
+951:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.changes.ChangeSetPerformer@isDeletedLater(java.util.Set,org.apache.commons.compress.archivers.ArchiveEntry):152:5781:type == Change.TYPE_DELETE_DIR |==> false
+952:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@isDeletedLater(java.util.Set,org.apache.commons.compress.archivers.ArchiveEntry):152:5776:type == Change.TYPE_DELETE_DIR && source.startsWith(target + "/") |==> type == Change.TYPE_DELETE_DIR == source.startsWith(target + "/")
+953:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@isDeletedLater(java.util.Set,org.apache.commons.compress.archivers.ArchiveEntry):152:5807:type == Change.TYPE_DELETE_DIR && source.startsWith(target + "/") |==> false
+954:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@isDeletedLater(java.util.Set,org.apache.commons.compress.archivers.ArchiveEntry):152:5776:type == Change.TYPE_DELETE_DIR && source.startsWith(target + "/") |==> type == Change.TYPE_DELETE_DIR
+955:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.changes.ChangeSetPerformer@isDeletedLater(java.util.Set,org.apache.commons.compress.archivers.ArchiveEntry):152:5810:type == Change.TYPE_DELETE_DIR && source.startsWith(target + "/") |==> source.startsWith(target + "/")
+956:LVR:TRUE:FALSE:org.apache.commons.compress.changes.ChangeSetPerformer@isDeletedLater(java.util.Set,org.apache.commons.compress.archivers.ArchiveEntry):153:5871:true |==> false
+957:LVR:FALSE:TRUE:org.apache.commons.compress.changes.ChangeSetPerformer@isDeletedLater(java.util.Set,org.apache.commons.compress.archivers.ArchiveEntry):157:5934:false |==> true
+958:STD:<CALL>:<NO-OP>:org.apache.commons.compress.changes.ChangeSetPerformer@copyStream(java.io.InputStream,org.apache.commons.compress.archivers.ArchiveOutputStream,org.apache.commons.compress.archivers.ArchiveEntry):174:6427:out.putArchiveEntry(entry); |==> <NO-OP>
+959:STD:<CALL>:<NO-OP>:org.apache.commons.compress.changes.ChangeSetPerformer@copyStream(java.io.InputStream,org.apache.commons.compress.archivers.ArchiveOutputStream,org.apache.commons.compress.archivers.ArchiveEntry):175:6463:IOUtils.copy(in, out); |==> <NO-OP>
+960:STD:<CALL>:<NO-OP>:org.apache.commons.compress.changes.ChangeSetPerformer@copyStream(java.io.InputStream,org.apache.commons.compress.archivers.ArchiveOutputStream,org.apache.commons.compress.archivers.ArchiveEntry):176:6494:out.closeArchiveEntry(); |==> <NO-OP>

@@ -1,0 +1,149 @@
+1:LVR:NEG:0:org.apache.commons.compress.archivers.zip.ZipArchiveEntry:50:1916:-1 |==> 0
+2:LVR:NEG:POS:org.apache.commons.compress.archivers.zip.ZipArchiveEntry:50:1916:-1 |==> 1
+3:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveEntry:52:1958:0 |==> 1
+4:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveEntry:52:1958:0 |==> -1
+5:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveEntry:54:2040:0 |==> 1
+6:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveEntry:54:2040:0 |==> -1
+7:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@<init>(java.util.zip.ZipEntry):73:2624:setName(entry.getName()); |==> <NO-OP>
+8:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@<init>(java.util.zip.ZipEntry):75:2709:extra != null |==> true
+9:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@<init>(java.util.zip.ZipEntry):76:2732:setExtraFields(ExtraFieldUtils.parse(extra)); |==> <NO-OP>
+10:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@<init>(java.util.zip.ZipEntry):79:2868:setExtra(); |==> <NO-OP>
+11:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@<init>(java.util.zip.ZipEntry):81:2898:setMethod(entry.getMethod()); |==> <NO-OP>
+12:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@<init>(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):91:3242:setInternalAttributes(entry.getInternalAttributes()); |==> <NO-OP>
+13:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@<init>(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):92:3304:setExternalAttributes(entry.getExternalAttributes()); |==> <NO-OP>
+14:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@<init>(org.apache.commons.compress.archivers.zip.ZipArchiveEntry):93:3366:setExtraFields(entry.getExtraFields()); |==> <NO-OP>
+15:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@<init>(java.io.File,java.lang.String):103:3564:inputFile.isDirectory() && !entryName.endsWith("/") |==> inputFile.isDirectory() == !entryName.endsWith("/")
+16:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@<init>(java.io.File,java.lang.String):103:3588:inputFile.isDirectory() && !entryName.endsWith("/") |==> false
+17:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@<init>(java.io.File,java.lang.String):103:3564:inputFile.isDirectory() && !entryName.endsWith("/") |==> inputFile.isDirectory()
+18:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@<init>(java.io.File,java.lang.String):103:3591:inputFile.isDirectory() && !entryName.endsWith("/") |==> !entryName.endsWith("/")
+19:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@<init>(java.io.File,java.lang.String):105:3690:inputFile.isFile() |==> false
+20:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@<init>(java.io.File,java.lang.String):105:3690:inputFile.isFile() |==> true
+21:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@<init>(java.io.File,java.lang.String):106:3707:setSize(inputFile.length()); |==> <NO-OP>
+22:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@<init>(java.io.File,java.lang.String):108:3754:setTime(inputFile.lastModified()); |==> <NO-OP>
+23:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@clone():119:4075:extraFields != null |==> true
+24:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@clone():119:4047:e.extraFields = extraFields != null ? (LinkedHashMap)extraFields.clone() : null; |==> <NO-OP>
+25:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@clone():120:4137:e.setInternalAttributes(getInternalAttributes()); |==> <NO-OP>
+26:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@clone():121:4195:e.setExternalAttributes(getExternalAttributes()); |==> <NO-OP>
+27:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@clone():122:4253:e.setExtraFields(getExtraFields()); |==> <NO-OP>
+28:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@isSupportedCompressionMethod():137:4806:method == STORED |==> method <= STORED
+29:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@isSupportedCompressionMethod():137:4806:method == STORED |==> method >= STORED
+30:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@isSupportedCompressionMethod():137:4813:method == STORED |==> false
+31:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@isSupportedCompressionMethod():137:4826:method == DEFLATED |==> method <= DEFLATED
+32:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@isSupportedCompressionMethod():137:4826:method == DEFLATED |==> method >= DEFLATED
+33:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@isSupportedCompressionMethod():137:4833:method == DEFLATED |==> false
+34:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@isSupportedCompressionMethod():137:4806:method == STORED || method == DEFLATED |==> method == STORED
+35:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@isSupportedCompressionMethod():137:4826:method == STORED || method == DEFLATED |==> method == DEFLATED
+36:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@isSupportedCompressionMethod():137:4823:method == STORED || method == DEFLATED |==> true
+37:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setMethod(int):156:5259:0 |==> 1
+38:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setMethod(int):156:5259:0 |==> -1
+39:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setMethod(int):156:5250:method < 0 |==> method != 0
+40:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setMethod(int):156:5250:method < 0 |==> method <= 0
+41:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setMethod(int):156:5257:method < 0 |==> false
+42:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setMethod(int):160:5408:this.method = method; |==> <NO-OP>
+43:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setInternalAttributes(int):177:5797:internalAttributes = value; |==> <NO-OP>
+44:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setExternalAttributes(long):193:6188:externalAttributes = value; |==> <NO-OP>
+45:SOR:<<(int,int):>>(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):203:6502:mode << SHORT_SHIFT |==> mode >> SHORT_SHIFT
+46:SOR:<<(int,int):>>>(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):203:6502:mode << SHORT_SHIFT |==> mode >>> SHORT_SHIFT
+47:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):205:6624:128 |==> 0
+48:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):205:6624:128 |==> -128
+49:LOR:&(int,int):^(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):205:6617:mode & 128 |==> mode ^ 128
+50:LOR:&(int,int):|(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):205:6617:mode & 128 |==> mode | 128
+51:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):205:6633:0 |==> 1
+52:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):205:6633:0 |==> -1
+53:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):205:6616:(mode & 128) == 0 |==> (mode & 128) <= 0
+54:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):205:6616:(mode & 128) == 0 |==> (mode & 128) >= 0
+55:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):205:6630:(mode & 128) == 0 |==> false
+56:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):205:6637:1 |==> 0
+57:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):205:6637:1 |==> -1
+58:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):205:6641:0 |==> 1
+59:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):205:6641:0 |==> -1
+60:LOR:|(int,int):&(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):203:6501:(mode << SHORT_SHIFT) | ((mode & 128) == 0 ? 1 : 0) |==> (mode << SHORT_SHIFT) & ((mode & 128) == 0 ? 1 : 0)
+61:LOR:|(int,int):^(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):203:6501:(mode << SHORT_SHIFT) | ((mode & 128) == 0 ? 1 : 0) |==> (mode << SHORT_SHIFT) ^ ((mode & 128) == 0 ? 1 : 0)
+62:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):207:6743:isDirectory() |==> false
+63:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):207:6743:isDirectory() |==> true
+64:LVR:POS:0:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):207:6748:16 |==> 0
+65:LVR:POS:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):207:6748:16 |==> -16
+66:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):207:6755:0 |==> 1
+67:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):207:6755:0 |==> -1
+68:LOR:|(int,int):&(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):203:6501:(mode << SHORT_SHIFT) | ((mode & 128) == 0 ? 1 : 0) | (isDirectory() ? 16 : 0) |==> ((mode << SHORT_SHIFT) | ((mode & 128) == 0 ? 1 : 0)) & (isDirectory() ? 16 : 0)
+69:LOR:|(int,int):^(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):203:6501:(mode << SHORT_SHIFT) | ((mode & 128) == 0 ? 1 : 0) | (isDirectory() ? 16 : 0) |==> ((mode << SHORT_SHIFT) | ((mode & 128) == 0 ? 1 : 0)) ^ (isDirectory() ? 16 : 0)
+70:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):203:6479:setExternalAttributes((mode << SHORT_SHIFT) | ((mode & 128) == 0 ? 1 : 0) | (isDirectory() ? 16 : 0)); |==> <NO-OP>
+71:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setUnixMode(int):209:6810:platform = PLATFORM_UNIX; |==> <NO-OP>
+72:ROR:!=(int,int):<(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@getUnixMode():217:6965:platform != PLATFORM_UNIX |==> platform < PLATFORM_UNIX
+73:ROR:!=(int,int):>(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@getUnixMode():217:6965:platform != PLATFORM_UNIX |==> platform > PLATFORM_UNIX
+74:ROR:!=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@getUnixMode():217:6974:platform != PLATFORM_UNIX |==> true
+75:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@getUnixMode():217:6993:0 |==> 1
+76:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@getUnixMode():217:6993:0 |==> -1
+77:SOR:>>(long,int):<<(long,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@getUnixMode():218:7017:getExternalAttributes() >> SHORT_SHIFT |==> getExternalAttributes() << SHORT_SHIFT
+78:SOR:>>(long,int):>>>(long,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@getUnixMode():218:7017:getExternalAttributes() >> SHORT_SHIFT |==> getExternalAttributes() >>> SHORT_SHIFT
+79:LOR:&(long,long):^(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@getUnixMode():218:7016:(getExternalAttributes() >> SHORT_SHIFT) & SHORT_MASK |==> (getExternalAttributes() >> SHORT_SHIFT) ^ SHORT_MASK
+80:LOR:&(long,long):|(long,long):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@getUnixMode():218:7016:(getExternalAttributes() >> SHORT_SHIFT) & SHORT_MASK |==> (getExternalAttributes() >> SHORT_SHIFT) | SHORT_MASK
+81:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setPlatform(int):237:7597:this.platform = platform; |==> <NO-OP>
+82:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[]):245:7829:extraFields = new LinkedHashMap(); |==> <NO-OP>
+83:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[]):246:7885:0 |==> 1
+84:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[]):246:7885:0 |==> -1
+85:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[]):246:7888:i < fields.length |==> i <= fields.length
+86:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[]):246:7890:i < fields.length |==> false
+87:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[]):247:7926:extraFields.put(fields[i].getHeaderId(), fields[i]); |==> <NO-OP>
+88:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[]):249:7997:setExtra(); |==> <NO-OP>
+89:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@getExtraFields():257:8177:extraFields == null |==> false
+90:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@getExtraFields():258:8225:0 |==> 1
+91:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@getExtraFields():258:8225:0 |==> -1
+92:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@addExtraField(org.apache.commons.compress.archivers.zip.ZipExtraField):273:8717:extraFields == null |==> false
+93:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@addExtraField(org.apache.commons.compress.archivers.zip.ZipExtraField):274:8740:extraFields = new LinkedHashMap(); |==> <NO-OP>
+94:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@addExtraField(org.apache.commons.compress.archivers.zip.ZipExtraField):276:8793:extraFields.put(ze.getHeaderId(), ze); |==> <NO-OP>
+95:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@addExtraField(org.apache.commons.compress.archivers.zip.ZipExtraField):277:8840:setExtra(); |==> <NO-OP>
+96:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@addAsFirstExtraField(org.apache.commons.compress.archivers.zip.ZipExtraField):289:9174:extraFields = new LinkedHashMap(); |==> <NO-OP>
+97:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@addAsFirstExtraField(org.apache.commons.compress.archivers.zip.ZipExtraField):290:9217:extraFields.put(ze.getHeaderId(), ze); |==> <NO-OP>
+98:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@addAsFirstExtraField(org.apache.commons.compress.archivers.zip.ZipExtraField):291:9273:copy != null |==> true
+99:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@addAsFirstExtraField(org.apache.commons.compress.archivers.zip.ZipExtraField):292:9296:copy.remove(ze.getHeaderId()); |==> <NO-OP>
+100:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@addAsFirstExtraField(org.apache.commons.compress.archivers.zip.ZipExtraField):293:9339:extraFields.putAll(copy); |==> <NO-OP>
+101:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@addAsFirstExtraField(org.apache.commons.compress.archivers.zip.ZipExtraField):295:9383:setExtra(); |==> <NO-OP>
+102:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@removeExtraField(org.apache.commons.compress.archivers.zip.ZipShort):303:9576:extraFields == null |==> false
+103:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@removeExtraField(org.apache.commons.compress.archivers.zip.ZipShort):306:9692:extraFields.remove(type) == null |==> false
+104:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@removeExtraField(org.apache.commons.compress.archivers.zip.ZipShort):309:9779:setExtra(); |==> <NO-OP>
+105:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@getExtraField(org.apache.commons.compress.archivers.zip.ZipShort):318:9995:extraFields != null |==> true
+106:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setExtra(byte[]):332:10511:true |==> false
+107:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setExtra(byte[]):333:10554:true |==> false
+108:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setExtra(byte[]):333:10530:mergeExtraFields(local, true); |==> <NO-OP>
+109:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setExtra():346:10958:super.setExtra(ExtraFieldUtils.mergeLocalFileDataData(getExtraFields())); |==> <NO-OP>
+110:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setCentralDirectoryExtra(byte[]):354:11241:false |==> true
+111:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setCentralDirectoryExtra(byte[]):355:11287:false |==> true
+112:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setCentralDirectoryExtra(byte[]):355:11261:mergeExtraFields(central, false); |==> <NO-OP>
+113:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@getLocalFileDataExtra():367:11624:extra != null |==> true
+114:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@getLocalFileDataExtra():367:11651:0 |==> 1
+115:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@getLocalFileDataExtra():367:11651:0 |==> -1
+116:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@getName():383:12045:name == null |==> false
+117:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@setName(java.lang.String):399:12401:this.name = name; |==> <NO-OP>
+118:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@mergeExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[],boolean):425:13402:extraFields == null |==> false
+119:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@mergeExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[],boolean):426:13425:setExtraFields(f); |==> <NO-OP>
+120:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@mergeExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[],boolean):428:13486:0 |==> 1
+121:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@mergeExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[],boolean):428:13486:0 |==> -1
+122:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@mergeExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[],boolean):428:13489:i < f.length |==> i <= f.length
+123:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@mergeExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[],boolean):428:13491:i < f.length |==> false
+124:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@mergeExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[],boolean):430:13615:existing == null |==> false
+125:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@mergeExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[],boolean):431:13646:addExtraField(f[i]); |==> <NO-OP>
+126:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@mergeExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[],boolean):433:13716:local |==> false
+127:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@mergeExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[],boolean):433:13716:local |==> true
+128:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@mergeExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[],boolean):435:13848:0 |==> 1
+129:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@mergeExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[],boolean):435:13848:0 |==> -1
+130:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@mergeExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[],boolean):435:13813:existing.parseFromLocalFileData(b, 0, b.length); |==> <NO-OP>
+131:LVR:0:POS:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@mergeExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[],boolean):438:14024:0 |==> 1
+132:LVR:0:NEG:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@mergeExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[],boolean):438:14024:0 |==> -1
+133:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@mergeExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[],boolean):438:13982:existing.parseFromCentralDirectoryData(b, 0, b.length); |==> <NO-OP>
+134:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@mergeExtraFields(org.apache.commons.compress.archivers.zip.ZipExtraField[],boolean):442:14104:setExtra(); |==> <NO-OP>
+135:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@equals(java.lang.Object):456:14411:true |==> false
+136:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@equals(java.lang.Object):458:14443:obj == null |==> false
+137:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@equals(java.lang.Object):458:14465:getClass() != obj.getClass() |==> true
+138:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@equals(java.lang.Object):458:14439:obj == null || getClass() != obj.getClass() |==> obj == null != (getClass() != obj.getClass())
+139:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@equals(java.lang.Object):458:14439:obj == null || getClass() != obj.getClass() |==> obj == null
+140:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@equals(java.lang.Object):458:14454:obj == null || getClass() != obj.getClass() |==> getClass() != obj.getClass()
+141:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@equals(java.lang.Object):458:14451:obj == null || getClass() != obj.getClass() |==> true
+142:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@equals(java.lang.Object):459:14505:false |==> true
+143:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@equals(java.lang.Object):462:14594:name == null |==> false
+144:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.compress.archivers.zip.ZipArchiveEntry@equals(java.lang.Object):463:14632:other.name != null |==> true
+145:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@equals(java.lang.Object):464:14666:false |==> true
+146:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@equals(java.lang.Object):466:14718:name.equals(other.name) |==> false
+147:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@equals(java.lang.Object):466:14718:name.equals(other.name) |==> true
+148:LVR:FALSE:TRUE:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@equals(java.lang.Object):467:14753:false |==> true
+149:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.zip.ZipArchiveEntry@equals(java.lang.Object):469:14785:true |==> false

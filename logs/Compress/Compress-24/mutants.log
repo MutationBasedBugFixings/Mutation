@@ -1,0 +1,646 @@
+1:LVR:TRUE:FALSE:org.apache.commons.compress.archivers.tar.TarUtils$1@canEncode(java.lang.String):48:1796:true |==> false
+2:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils$1@encode(java.lang.String):55:2049:0 |==> 1
+3:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils$1@encode(java.lang.String):55:2049:0 |==> -1
+4:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarUtils$1@encode(java.lang.String):55:2052:i < length |==> i != length
+5:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils$1@encode(java.lang.String):55:2052:i < length |==> i <= length
+6:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils$1@encode(java.lang.String):55:2054:i < length |==> false
+7:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils$1@encode(java.lang.String):56:2091:buf[i] = (byte)name.charAt(i); |==> <NO-OP>
+8:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils$1@decode(byte[]):65:2397:0 |==> 1
+9:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils$1@decode(byte[]):65:2397:0 |==> -1
+10:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarUtils$1@decode(byte[]):65:2400:i < length |==> i != length
+11:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils$1@decode(byte[]):65:2400:i < length |==> i <= length
+12:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils$1@decode(byte[]):65:2402:i < length |==> false
+13:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils$1@decode(byte[]):67:2488:0 |==> 1
+14:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils$1@decode(byte[]):67:2488:0 |==> -1
+15:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils$1@decode(byte[]):67:2483:b == 0 |==> b <= 0
+16:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarUtils$1@decode(byte[]):67:2483:b == 0 |==> b >= 0
+17:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils$1@decode(byte[]):67:2485:b == 0 |==> false
+18:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils$1@decode(byte[]):70:2609:255 |==> 0
+19:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils$1@decode(byte[]):70:2609:255 |==> -255
+20:LOR:&(int,int):^(int,int):org.apache.commons.compress.archivers.tar.TarUtils$1@decode(byte[]):70:2605:b & 255 |==> b ^ 255
+21:LOR:&(int,int):|(int,int):org.apache.commons.compress.archivers.tar.TarUtils$1@decode(byte[]):70:2605:b & 255 |==> b | 255
+22:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils$1@decode(byte[]):70:2583:result.append((char)(b & 255)); |==> <NO-OP>
+23:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):103:3895:0 |==> 1
+24:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):103:3895:0 |==> -1
+25:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):104:3920:offset + length |==> offset % length
+26:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):104:3920:offset + length |==> offset * length
+27:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):104:3920:offset + length |==> offset - length
+28:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):104:3920:offset + length |==> offset / length
+29:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):107:3991:2 |==> 0
+30:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):107:3991:2 |==> -2
+31:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):107:3982:length < 2 |==> length != 2
+32:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):107:3982:length < 2 |==> length <= 2
+33:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):107:3989:length < 2 |==> false
+34:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):111:4123:0 |==> 1
+35:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):111:4123:0 |==> -1
+36:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):111:4106:buffer[start] == 0 |==> buffer[start] <= 0
+37:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):111:4106:buffer[start] == 0 |==> buffer[start] >= 0
+38:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):111:4120:buffer[start] == 0 |==> false
+39:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):112:4147:0L |==> 1L
+40:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):112:4147:0L |==> -1L
+41:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):116:4208:start < end |==> start != end
+42:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):116:4208:start < end |==> start <= end
+43:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):116:4214:start < end |==> false
+44:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):117:4238:buffer[start] == ' ' |==> buffer[start] <= ' '
+45:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):117:4238:buffer[start] == ' ' |==> buffer[start] >= ' '
+46:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):117:4252:buffer[start] == ' ' |==> false
+47:STD:<INC>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):118:4277:start++; |==> <NO-OP>
+48:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):128:4605:1 |==> 0
+49:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):128:4605:1 |==> -1
+50:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):128:4599:end - 1 |==> end % 1
+51:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):128:4599:end - 1 |==> end * 1
+52:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):128:4599:end - 1 |==> end + 1
+53:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):128:4599:end - 1 |==> end / 1
+54:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):129:4632:0 |==> 1
+55:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):129:4632:0 |==> -1
+56:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):129:4621:trailer == 0 |==> trailer <= 0
+57:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):129:4621:trailer == 0 |==> trailer >= 0
+58:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):129:4629:trailer == 0 |==> false
+59:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):129:4637:trailer == ' ' |==> trailer <= ' '
+60:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):129:4637:trailer == ' ' |==> trailer >= ' '
+61:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):129:4645:trailer == ' ' |==> false
+62:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):129:4621:trailer == 0 || trailer == ' ' |==> trailer == 0
+63:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):129:4637:trailer == 0 || trailer == ' ' |==> trailer == ' '
+64:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):129:4634:trailer == 0 || trailer == ' ' |==> true
+65:STD:<DEC>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):130:4666:end--; |==> <NO-OP>
+66:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):133:4803:1 |==> 0
+67:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):133:4803:1 |==> -1
+68:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):133:4799:end - 1 |==> end % 1
+69:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):133:4799:end - 1 |==> end * 1
+70:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):133:4799:end - 1 |==> end + 1
+71:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):133:4799:end - 1 |==> end / 1
+72:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):135:4858:1 |==> 0
+73:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):135:4858:1 |==> -1
+74:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):135:4852:end - 1 |==> end % 1
+75:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):135:4852:end - 1 |==> end * 1
+76:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):135:4852:end - 1 |==> end + 1
+77:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):135:4852:end - 1 |==> end / 1
+78:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):135:4835:trailer = buffer[end - 1]; |==> <NO-OP>
+79:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4891:1 |==> 0
+80:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4891:1 |==> -1
+81:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4885:end - 1 |==> end % 1
+82:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4885:end - 1 |==> end * 1
+83:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4885:end - 1 |==> end + 1
+84:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4885:end - 1 |==> end / 1
+85:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4877:start < end - 1 |==> start != end - 1
+86:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4877:start < end - 1 |==> start <= end - 1
+87:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4883:start < end - 1 |==> false
+88:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4908:0 |==> 1
+89:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4908:0 |==> -1
+90:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4897:trailer == 0 |==> trailer <= 0
+91:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4897:trailer == 0 |==> trailer >= 0
+92:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4905:trailer == 0 |==> false
+93:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4913:trailer == ' ' |==> trailer <= ' '
+94:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4913:trailer == ' ' |==> trailer >= ' '
+95:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4921:trailer == ' ' |==> false
+96:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4897:trailer == 0 || trailer == ' ' |==> trailer == 0
+97:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4913:trailer == 0 || trailer == ' ' |==> trailer == ' '
+98:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4910:trailer == 0 || trailer == ' ' |==> true
+99:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4877:start < end - 1 && (trailer == 0 || trailer == ' ') |==> start < end - 1 == (trailer == 0 || trailer == ' ')
+100:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4893:start < end - 1 && (trailer == 0 || trailer == ' ') |==> false
+101:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4877:start < end - 1 && (trailer == 0 || trailer == ' ') |==> start < end - 1
+102:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):136:4896:start < end - 1 && (trailer == 0 || trailer == ' ') |==> (trailer == 0 || trailer == ' ')
+103:STD:<DEC>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):137:4944:end--; |==> <NO-OP>
+104:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):138:4986:1 |==> 0
+105:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):138:4986:1 |==> -1
+106:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):138:4980:end - 1 |==> end % 1
+107:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):138:4980:end - 1 |==> end * 1
+108:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):138:4980:end - 1 |==> end + 1
+109:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):138:4980:end - 1 |==> end / 1
+110:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):138:4963:trailer = buffer[end - 1]; |==> <NO-OP>
+111:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):141:5016:start < end |==> start != end
+112:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):141:5016:start < end |==> start <= end
+113:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):141:5022:start < end |==> false
+114:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):144:5150:currentByte < '0' |==> currentByte != '0'
+115:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):144:5150:currentByte < '0' |==> currentByte <= '0'
+116:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):144:5162:currentByte < '0' |==> false
+117:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):144:5171:currentByte > '7' |==> currentByte != '7'
+118:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):144:5171:currentByte > '7' |==> currentByte >= '7'
+119:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):144:5183:currentByte > '7' |==> false
+120:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):144:5150:currentByte < '0' || currentByte > '7' |==> currentByte < '0'
+121:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):144:5171:currentByte < '0' || currentByte > '7' |==> currentByte > '7'
+122:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):144:5168:currentByte < '0' || currentByte > '7' |==> true
+123:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):148:5376:3 |==> 0
+124:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):148:5376:3 |==> -3
+125:SOR:<<(long,int):>>(long,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):148:5366:result << 3 |==> result >> 3
+126:SOR:<<(long,int):>>>(long,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):148:5366:result << 3 |==> result >>> 3
+127:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):148:5382:currentByte - '0' |==> currentByte % '0'
+128:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):148:5382:currentByte - '0' |==> currentByte * '0'
+129:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):148:5382:currentByte - '0' |==> currentByte + '0'
+130:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):148:5382:currentByte - '0' |==> currentByte / '0'
+131:AOR:+(long,long):%(long,long):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):148:5365:(result << 3) + (currentByte - '0') |==> (result << 3) % (currentByte - '0')
+132:AOR:+(long,long):*(long,long):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):148:5365:(result << 3) + (currentByte - '0') |==> (result << 3) * (currentByte - '0')
+133:AOR:+(long,long):-(long,long):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):148:5365:(result << 3) + (currentByte - '0') |==> (result << 3) - (currentByte - '0')
+134:AOR:+(long,long):/(long,long):org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):148:5365:(result << 3) + (currentByte - '0') |==> (result << 3) / (currentByte - '0')
+135:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@parseOctal(byte[],int,int):148:5356:result = (result << 3) + (currentByte - '0'); |==> <NO-OP>
+136:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseOctalOrBinary(byte[],int,int):175:6517:128 |==> 0
+137:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseOctalOrBinary(byte[],int,int):175:6517:128 |==> -128
+138:LOR:&(int,int):^(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctalOrBinary(byte[],int,int):175:6500:buffer[offset] & 128 |==> buffer[offset] ^ 128
+139:LOR:&(int,int):|(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctalOrBinary(byte[],int,int):175:6500:buffer[offset] & 128 |==> buffer[offset] | 128
+140:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@parseOctalOrBinary(byte[],int,int):175:6526:0 |==> 1
+141:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseOctalOrBinary(byte[],int,int):175:6526:0 |==> -1
+142:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctalOrBinary(byte[],int,int):175:6499:(buffer[offset] & 128) == 0 |==> (buffer[offset] & 128) <= 0
+143:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctalOrBinary(byte[],int,int):175:6499:(buffer[offset] & 128) == 0 |==> (buffer[offset] & 128) >= 0
+144:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctalOrBinary(byte[],int,int):175:6523:(buffer[offset] & 128) == 0 |==> false
+145:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseOctalOrBinary(byte[],int,int):178:6654:255 |==> 0
+146:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseOctalOrBinary(byte[],int,int):178:6654:255 |==> -255
+147:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctalOrBinary(byte[],int,int):178:6629:buffer[offset] == (byte)255 |==> buffer[offset] <= (byte)255
+148:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctalOrBinary(byte[],int,int):178:6629:buffer[offset] == (byte)255 |==> buffer[offset] >= (byte)255
+149:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctalOrBinary(byte[],int,int):178:6644:buffer[offset] == (byte)255 |==> false
+150:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseOctalOrBinary(byte[],int,int):179:6681:9 |==> 0
+151:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseOctalOrBinary(byte[],int,int):179:6681:9 |==> -9
+152:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctalOrBinary(byte[],int,int):179:6672:length < 9 |==> length != 9
+153:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctalOrBinary(byte[],int,int):179:6672:length < 9 |==> length <= 9
+154:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseOctalOrBinary(byte[],int,int):179:6679:length < 9 |==> false
+155:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):188:7070:9 |==> 0
+156:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):188:7070:9 |==> -9
+157:ROR:>=(int,int):==(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):188:7060:length >= 9 |==> length == 9
+158:ROR:>=(int,int):>(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):188:7060:length >= 9 |==> length > 9
+159:ROR:>=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):188:7067:length >= 9 |==> true
+160:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):194:7400:0 |==> 1
+161:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):194:7400:0 |==> -1
+162:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):195:7424:1 |==> 0
+163:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):195:7424:1 |==> -1
+164:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):195:7427:i < length |==> i != length
+165:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):195:7427:i < length |==> i <= length
+166:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):195:7429:i < length |==> false
+167:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):196:7472:8 |==> 0
+168:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):196:7472:8 |==> -8
+169:SOR:<<(long,int):>>(long,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):196:7465:val << 8 |==> val >> 8
+170:SOR:<<(long,int):>>>(long,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):196:7465:val << 8 |==> val >>> 8
+171:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):196:7485:offset + i |==> offset % i
+172:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):196:7485:offset + i |==> offset * i
+173:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):196:7485:offset + i |==> offset - i
+174:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):196:7485:offset + i |==> offset / i
+175:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):196:7499:255 |==> 0
+176:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):196:7499:255 |==> -255
+177:LOR:&(int,int):^(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):196:7478:buffer[offset + i] & 255 |==> buffer[offset + i] ^ 255
+178:LOR:&(int,int):|(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):196:7478:buffer[offset + i] & 255 |==> buffer[offset + i] | 255
+179:AOR:+(long,long):%(long,long):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):196:7464:(val << 8) + (buffer[offset + i] & 255) |==> (val << 8) % (buffer[offset + i] & 255)
+180:AOR:+(long,long):*(long,long):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):196:7464:(val << 8) + (buffer[offset + i] & 255) |==> (val << 8) * (buffer[offset + i] & 255)
+181:AOR:+(long,long):-(long,long):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):196:7464:(val << 8) + (buffer[offset + i] & 255) |==> (val << 8) - (buffer[offset + i] & 255)
+182:AOR:+(long,long):/(long,long):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):196:7464:(val << 8) + (buffer[offset + i] & 255) |==> (val << 8) / (buffer[offset + i] & 255)
+183:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):196:7458:val = (val << 8) + (buffer[offset + i] & 255); |==> <NO-OP>
+184:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):198:7528:negative |==> false
+185:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):198:7528:negative |==> true
+186:STD:<DEC>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):200:7582:val--; |==> <NO-OP>
+187:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):201:7624:2 |==> 0
+188:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):201:7624:2 |==> -2
+189:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):201:7637:1 |==> 0
+190:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):201:7637:1 |==> -1
+191:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):201:7628:length - 1 |==> length % 1
+192:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):201:7628:length - 1 |==> length * 1
+193:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):201:7628:length - 1 |==> length + 1
+194:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):201:7628:length - 1 |==> length / 1
+195:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):201:7642:8 |==> 0
+196:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):201:7642:8 |==> -8
+197:AOR:*(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):201:7627:(length - 1) * 8 |==> (length - 1) % 8
+198:AOR:*(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):201:7627:(length - 1) * 8 |==> (length - 1) + 8
+199:AOR:*(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):201:7627:(length - 1) * 8 |==> (length - 1) - 8
+200:AOR:*(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):201:7627:(length - 1) * 8 |==> (length - 1) / 8
+201:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):201:7647:1 |==> 0
+202:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):201:7647:1 |==> -1
+203:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):201:7608:(long)Math.pow(2, (length - 1) * 8) - 1 |==> (long)Math.pow(2, (length - 1) * 8) % 1
+204:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):201:7608:(long)Math.pow(2, (length - 1) * 8) - 1 |==> (long)Math.pow(2, (length - 1) * 8) * 1
+205:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):201:7608:(long)Math.pow(2, (length - 1) * 8) - 1 |==> (long)Math.pow(2, (length - 1) * 8) + 1
+206:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):201:7608:(long)Math.pow(2, (length - 1) * 8) - 1 |==> (long)Math.pow(2, (length - 1) * 8) / 1
+207:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):201:7601:val ^= (long)Math.pow(2, (length - 1) * 8) - 1; |==> <NO-OP>
+208:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):203:7675:negative |==> false
+209:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):203:7675:negative |==> true
+210:ORU:-(long):+(long):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):203:7686:-val |==> +val
+211:ORU:-(long):~(long):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryLong(byte[],int,int,boolean):203:7686:-val |==> ~val
+212:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):210:8017:1 |==> 0
+213:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):210:8017:1 |==> -1
+214:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):210:8008:length - 1 |==> length % 1
+215:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):210:8008:length - 1 |==> length * 1
+216:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):210:8008:length - 1 |==> length + 1
+217:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):210:8008:length - 1 |==> length / 1
+218:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):211:8063:1 |==> 0
+219:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):211:8063:1 |==> -1
+220:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):211:8054:offset + 1 |==> offset % 1
+221:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):211:8054:offset + 1 |==> offset * 1
+222:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):211:8054:offset + 1 |==> offset - 1
+223:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):211:8054:offset + 1 |==> offset / 1
+224:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):211:8077:0 |==> 1
+225:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):211:8077:0 |==> -1
+226:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):211:8089:1 |==> 0
+227:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):211:8089:1 |==> -1
+228:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):211:8080:length - 1 |==> length % 1
+229:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):211:8080:length - 1 |==> length * 1
+230:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):211:8080:length - 1 |==> length + 1
+231:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):211:8080:length - 1 |==> length / 1
+232:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):211:8029:System.arraycopy(buffer, offset + 1, remainder, 0, length - 1); |==> <NO-OP>
+233:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):213:8157:negative |==> false
+234:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):213:8157:negative |==> true
+235:LVR:NEG:0:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):215:8244:-1 |==> 0
+236:LVR:NEG:POS:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):215:8244:-1 |==> 1
+237:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):215:8211:val = val.add(BigInteger.valueOf(-1)).not(); |==> <NO-OP>
+238:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):217:8296:63 |==> 0
+239:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):217:8296:63 |==> -63
+240:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):217:8278:val.bitLength() > 63 |==> val.bitLength() != 63
+241:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):217:8278:val.bitLength() > 63 |==> val.bitLength() >= 63
+242:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):217:8294:val.bitLength() > 63 |==> false
+243:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):223:8623:negative |==> false
+244:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):223:8623:negative |==> true
+245:ORU:-(long):+(long):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):223:8634:-val.longValue() |==> +val.longValue()
+246:ORU:-(long):~(long):org.apache.commons.compress.archivers.tar.TarUtils@parseBinaryBigInteger(byte[],int,int,boolean):223:8634:-val.longValue() |==> ~val.longValue()
+247:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseBoolean(byte[],int):237:9195:1 |==> 0
+248:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseBoolean(byte[],int):237:9195:1 |==> -1
+249:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBoolean(byte[],int):237:9177:buffer[offset] == 1 |==> buffer[offset] <= 1
+250:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBoolean(byte[],int):237:9177:buffer[offset] == 1 |==> buffer[offset] >= 1
+251:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseBoolean(byte[],int):237:9192:buffer[offset] == 1 |==> false
+252:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@exceptionMessage(byte[],int,int,int,byte):252:9876:string = string.replaceAll("\u0000", "{NUL}"); |==> <NO-OP>
+253:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@exceptionMessage(byte[],int,int,int,byte):253:10031:current - offset |==> current % offset
+254:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@exceptionMessage(byte[],int,int,int,byte):253:10031:current - offset |==> current * offset
+255:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarUtils@exceptionMessage(byte[],int,int,int,byte):253:10031:current - offset |==> current + offset
+256:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@exceptionMessage(byte[],int,int,int,byte):253:10031:current - offset |==> current / offset
+257:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):298:11619:0 |==> 1
+258:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):298:11619:0 |==> -1
+259:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):298:11613:len > 0 |==> len != 0
+260:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):298:11613:len > 0 |==> len >= 0
+261:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):298:11617:len > 0 |==> false
+262:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):299:11654:offset + len |==> offset % len
+263:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):299:11654:offset + len |==> offset * len
+264:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):299:11654:offset + len |==> offset - len
+265:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):299:11654:offset + len |==> offset / len
+266:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):299:11669:1 |==> 0
+267:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):299:11669:1 |==> -1
+268:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):299:11654:offset + len - 1 |==> (offset + len) % 1
+269:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):299:11654:offset + len - 1 |==> (offset + len) * 1
+270:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):299:11654:offset + len - 1 |==> offset + len + 1
+271:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):299:11654:offset + len - 1 |==> (offset + len) / 1
+272:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):299:11675:0 |==> 1
+273:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):299:11675:0 |==> -1
+274:ROR:!=(int,int):<(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):299:11647:buffer[offset + len - 1] != 0 |==> buffer[offset + len - 1] < 0
+275:ROR:!=(int,int):>(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):299:11647:buffer[offset + len - 1] != 0 |==> buffer[offset + len - 1] > 0
+276:ROR:!=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):299:11672:buffer[offset + len - 1] != 0 |==> true
+277:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):303:11745:0 |==> 1
+278:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):303:11745:0 |==> -1
+279:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):303:11739:len > 0 |==> len != 0
+280:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):303:11739:len > 0 |==> len >= 0
+281:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):303:11743:len > 0 |==> false
+282:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):305:11836:0 |==> 1
+283:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):305:11836:0 |==> -1
+284:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@parseName(byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):305:11800:System.arraycopy(buffer, offset, b, 0, len); |==> <NO-OP>
+285:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):363:14124:b.limit() > length |==> b.limit() != length
+286:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):363:14124:b.limit() > length |==> b.limit() >= length
+287:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):363:14134:b.limit() > length |==> false
+288:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):363:14152:0 |==> 1
+289:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):363:14152:0 |==> -1
+290:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):363:14146:len > 0 |==> len != 0
+291:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):363:14146:len > 0 |==> len >= 0
+292:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):363:14150:len > 0 |==> false
+293:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):363:14124:b.limit() > length && len > 0 |==> b.limit() > length == len > 0
+294:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):363:14143:b.limit() > length && len > 0 |==> false
+295:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):363:14124:b.limit() > length && len > 0 |==> b.limit() > length
+296:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):363:14146:b.limit() > length && len > 0 |==> len > 0
+297:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):364:14204:0 |==> 1
+298:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):364:14204:0 |==> -1
+299:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):364:14169:b = encoding.encode(name.substring(0, --len)); |==> <NO-OP>
+300:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):366:14252:b.limit() - b.position() |==> b.limit() % b.position()
+301:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):366:14252:b.limit() - b.position() |==> b.limit() * b.position()
+302:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):366:14252:b.limit() - b.position() |==> b.limit() + b.position()
+303:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):366:14252:b.limit() - b.position() |==> b.limit() / b.position()
+304:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):367:14286:System.arraycopy(b.array(), b.arrayOffset(), buf, offset, limit); |==> <NO-OP>
+305:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):370:14432:i < length |==> i != length
+306:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):370:14432:i < length |==> i <= length
+307:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):370:14434:i < length |==> false
+308:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):371:14467:offset + i |==> offset % i
+309:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):371:14467:offset + i |==> offset * i
+310:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):371:14467:offset + i |==> offset - i
+311:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):371:14467:offset + i |==> offset / i
+312:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):371:14481:0 |==> 1
+313:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):371:14481:0 |==> -1
+314:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):371:14463:buf[offset + i] = 0; |==> <NO-OP>
+315:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):374:14510:offset + length |==> offset % length
+316:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):374:14510:offset + length |==> offset * length
+317:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):374:14510:offset + length |==> offset - length
+318:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatNameBytes(java.lang.String,byte[],int,int,org.apache.commons.compress.archivers.zip.ZipEncoding):374:14510:offset + length |==> offset / length
+319:STD:<DEC>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):389:15087:remaining--; |==> <NO-OP>
+320:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):390:15121:0 |==> 1
+321:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):390:15121:0 |==> -1
+322:ROR:==(long,long):<=(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):390:15112:value == 0 |==> value <= 0
+323:ROR:==(long,long):>=(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):390:15112:value == 0 |==> value >= 0
+324:ROR:==(long,long):FALSE(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):390:15118:value == 0 |==> false
+325:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):391:15145:offset + remaining-- |==> offset % remaining--
+326:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):391:15145:offset + remaining-- |==> offset * remaining--
+327:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):391:15145:offset + remaining-- |==> offset - remaining--
+328:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):391:15145:offset + remaining-- |==> offset / remaining--
+329:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):391:15138:buffer[offset + remaining--] = (byte)'0'; |==> <NO-OP>
+330:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):394:15260:0 |==> 1
+331:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):394:15260:0 |==> -1
+332:ROR:>=(int,int):==(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):394:15247:remaining >= 0 |==> remaining == 0
+333:ROR:>=(int,int):>(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):394:15247:remaining >= 0 |==> remaining > 0
+334:ROR:>=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):394:15257:remaining >= 0 |==> true
+335:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):394:15272:0 |==> 1
+336:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):394:15272:0 |==> -1
+337:ROR:!=(long,long):<(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):394:15265:val != 0 |==> val < 0
+338:ROR:!=(long,long):>(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):394:15265:val != 0 |==> val > 0
+339:ROR:!=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):394:15269:val != 0 |==> true
+340:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):394:15247:remaining >= 0 && val != 0 |==> remaining >= 0 == (val != 0)
+341:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):394:15262:remaining >= 0 && val != 0 |==> false
+342:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):394:15247:remaining >= 0 && val != 0 |==> remaining >= 0
+343:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):394:15265:remaining >= 0 && val != 0 |==> val != 0
+344:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):396:15359:offset + remaining |==> offset % remaining
+345:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):396:15359:offset + remaining |==> offset * remaining
+346:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):396:15359:offset + remaining |==> offset - remaining
+347:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):396:15359:offset + remaining |==> offset / remaining
+348:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):396:15416:7 |==> 0
+349:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):396:15416:7 |==> -7
+350:LOR:&(long,long):^(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):396:15410:val & 7 |==> val ^ 7
+351:LOR:&(long,long):|(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):396:15410:val & 7 |==> val | 7
+352:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):396:15389:(byte)'0' + (byte)(val & 7) |==> (byte)'0' % (byte)(val & 7)
+353:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):396:15389:(byte)'0' + (byte)(val & 7) |==> (byte)'0' * (byte)(val & 7)
+354:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):396:15389:(byte)'0' + (byte)(val & 7) |==> (byte)'0' - (byte)(val & 7)
+355:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):396:15389:(byte)'0' + (byte)(val & 7) |==> (byte)'0' / (byte)(val & 7)
+356:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):396:15352:buffer[offset + remaining] = (byte)((byte)'0' + (byte)(val & 7)); |==> <NO-OP>
+357:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):397:15451:3 |==> 0
+358:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):397:15451:3 |==> -3
+359:SOR:>>>(long,int):<<(long,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):397:15443:val >>> 3 |==> val << 3
+360:SOR:>>>(long,int):>>(long,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):397:15443:val >>> 3 |==> val >> 3
+361:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):397:15437:val = val >>> 3; |==> <NO-OP>
+362:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):400:15536:0 |==> 1
+363:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):400:15536:0 |==> -1
+364:ROR:!=(long,long):<(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):400:15529:val != 0 |==> val < 0
+365:ROR:!=(long,long):>(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):400:15529:val != 0 |==> val > 0
+366:ROR:!=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):400:15533:val != 0 |==> true
+367:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):406:15757:0 |==> 1
+368:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):406:15757:0 |==> -1
+369:ROR:>=(int,int):==(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):406:15744:remaining >= 0 |==> remaining == 0
+370:ROR:>=(int,int):>(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):406:15744:remaining >= 0 |==> remaining > 0
+371:ROR:>=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):406:15754:remaining >= 0 |==> true
+372:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):407:15811:offset + remaining |==> offset % remaining
+373:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):407:15811:offset + remaining |==> offset * remaining
+374:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):407:15811:offset + remaining |==> offset - remaining
+375:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):407:15811:offset + remaining |==> offset / remaining
+376:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatUnsignedOctalString(long,byte[],int,int):407:15804:buffer[offset + remaining] = (byte)'0'; |==> <NO-OP>
+377:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):427:16584:2 |==> 0
+378:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):427:16584:2 |==> -2
+379:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):427:16577:length - 2 |==> length % 2
+380:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):427:16577:length - 2 |==> length * 2
+381:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):427:16577:length - 2 |==> length + 2
+382:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):427:16577:length - 2 |==> length / 2
+383:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):428:16626:formatUnsignedOctalString(value, buf, offset, idx); |==> <NO-OP>
+384:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):430:16691:offset + idx++ |==> offset % idx++
+385:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):430:16691:offset + idx++ |==> offset * idx++
+386:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):430:16691:offset + idx++ |==> offset - idx++
+387:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):430:16691:offset + idx++ |==> offset / idx++
+388:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):430:16687:buf[offset + idx++] = (byte)' '; |==> <NO-OP>
+389:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):431:16751:offset + idx |==> offset % idx
+390:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):431:16751:offset + idx |==> offset * idx
+391:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):431:16751:offset + idx |==> offset - idx
+392:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):431:16751:offset + idx |==> offset / idx
+393:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):431:16769:0 |==> 1
+394:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):431:16769:0 |==> -1
+395:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):431:16747:buf[offset + idx] = 0; |==> <NO-OP>
+396:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):433:16805:offset + length |==> offset % length
+397:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):433:16805:offset + length |==> offset * length
+398:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):433:16805:offset + length |==> offset - length
+399:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatOctalBytes(long,byte[],int,int):433:16805:offset + length |==> offset / length
+400:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalBytes(long,byte[],int,int):452:17532:1 |==> 0
+401:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalBytes(long,byte[],int,int):452:17532:1 |==> -1
+402:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalBytes(long,byte[],int,int):452:17525:length - 1 |==> length % 1
+403:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalBytes(long,byte[],int,int):452:17525:length - 1 |==> length * 1
+404:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalBytes(long,byte[],int,int):452:17525:length - 1 |==> length + 1
+405:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalBytes(long,byte[],int,int):452:17525:length - 1 |==> length / 1
+406:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalBytes(long,byte[],int,int):454:17557:formatUnsignedOctalString(value, buf, offset, idx); |==> <NO-OP>
+407:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalBytes(long,byte[],int,int):455:17621:offset + idx |==> offset % idx
+408:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalBytes(long,byte[],int,int):455:17621:offset + idx |==> offset * idx
+409:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalBytes(long,byte[],int,int):455:17621:offset + idx |==> offset - idx
+410:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalBytes(long,byte[],int,int):455:17621:offset + idx |==> offset / idx
+411:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalBytes(long,byte[],int,int):455:17617:buf[offset + idx] = (byte)' '; |==> <NO-OP>
+412:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalBytes(long,byte[],int,int):457:17683:offset + length |==> offset % length
+413:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalBytes(long,byte[],int,int):457:17683:offset + length |==> offset * length
+414:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalBytes(long,byte[],int,int):457:17683:offset + length |==> offset - length
+415:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalBytes(long,byte[],int,int):457:17683:offset + length |==> offset / length
+416:ROR:==(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):481:18614:length == TarConstants.UIDLEN |==> length <= TarConstants.UIDLEN
+417:ROR:==(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):481:18614:length == TarConstants.UIDLEN |==> length >= TarConstants.UIDLEN
+418:ROR:==(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):481:18621:length == TarConstants.UIDLEN |==> false
+419:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):483:18731:0 |==> 1
+420:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):483:18731:0 |==> -1
+421:ROR:<(long,long):!=(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):483:18723:value < 0 |==> value != 0
+422:ROR:<(long,long):<=(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):483:18723:value < 0 |==> value <= 0
+423:ROR:<(long,long):FALSE(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):483:18729:value < 0 |==> false
+424:ROR:<=(long,long):<(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):484:18759:value <= maxAsOctalChar |==> value < maxAsOctalChar
+425:ROR:<=(long,long):==(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):484:18759:value <= maxAsOctalChar |==> value == maxAsOctalChar
+426:ROR:<=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):484:18765:value <= maxAsOctalChar |==> true
+427:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):484:18746:!negative && value <= maxAsOctalChar |==> !negative == value <= maxAsOctalChar
+428:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):484:18756:!negative && value <= maxAsOctalChar |==> false
+429:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):484:18746:!negative && value <= maxAsOctalChar |==> !negative
+430:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):484:18759:!negative && value <= maxAsOctalChar |==> value <= maxAsOctalChar
+431:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):488:18917:9 |==> 0
+432:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):488:18917:9 |==> -9
+433:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):488:18908:length < 9 |==> length != 9
+434:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):488:18908:length < 9 |==> length <= 9
+435:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):488:18915:length < 9 |==> false
+436:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):489:18934:formatLongBinary(value, buf, offset, length, negative); |==> <NO-OP>
+437:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):491:19008:formatBigIntegerBinary(value, buf, offset, length, negative); |==> <NO-OP>
+438:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):493:19101:negative |==> false
+439:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):493:19101:negative |==> true
+440:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):493:19112:255 |==> 0
+441:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):493:19112:255 |==> -255
+442:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):493:19119:128 |==> 0
+443:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):493:19119:128 |==> -128
+444:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):493:19079:buf[offset] = (byte)(negative ? 255 : 128); |==> <NO-OP>
+445:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):494:19141:offset + length |==> offset % length
+446:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):494:19141:offset + length |==> offset * length
+447:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):494:19141:offset + length |==> offset - length
+448:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongOctalOrBinaryBytes(long,byte[],int,int):494:19141:offset + length |==> offset / length
+449:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):500:19415:1 |==> 0
+450:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):500:19415:1 |==> -1
+451:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):500:19406:length - 1 |==> length % 1
+452:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):500:19406:length - 1 |==> length * 1
+453:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):500:19406:length - 1 |==> length + 1
+454:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):500:19406:length - 1 |==> length / 1
+455:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):500:19420:8 |==> 0
+456:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):500:19420:8 |==> -8
+457:AOR:*(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):500:19405:(length - 1) * 8 |==> (length - 1) % 8
+458:AOR:*(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):500:19405:(length - 1) * 8 |==> (length - 1) + 8
+459:AOR:*(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):500:19405:(length - 1) * 8 |==> (length - 1) - 8
+460:AOR:*(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):500:19405:(length - 1) * 8 |==> (length - 1) / 8
+461:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):501:19448:1L |==> 0L
+462:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):501:19448:1L |==> -1L
+463:SOR:<<(long,int):>>(long,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):501:19448:1L << bits |==> 1L >> bits
+464:SOR:<<(long,int):>>>(long,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):501:19448:1L << bits |==> 1L >>> bits
+465:ROR:>=(long,long):==(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):503:19508:val >= max |==> val == max
+466:ROR:>=(long,long):>(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):503:19508:val >= max |==> val > max
+467:ROR:>=(long,long):TRUE(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):503:19512:val >= max |==> true
+468:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):507:19675:negative |==> false
+469:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):507:19675:negative |==> true
+470:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):508:19712:1 |==> 0
+471:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):508:19712:1 |==> -1
+472:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):508:19706:max - 1 |==> max % 1
+473:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):508:19706:max - 1 |==> max * 1
+474:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):508:19706:max - 1 |==> max + 1
+475:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):508:19706:max - 1 |==> max / 1
+476:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):508:19699:val ^= max - 1; |==> <NO-OP>
+477:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):509:19734:255 |==> 0
+478:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):509:19734:255 |==> -255
+479:SOR:<<(int,int):>>(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):509:19734:255 << bits |==> 255 >> bits
+480:SOR:<<(int,int):>>>(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):509:19734:255 << bits |==> 255 >>> bits
+481:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):509:19727:val |= 255 << bits; |==> <NO-OP>
+482:STD:<INC>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):510:19760:val++; |==> <NO-OP>
+483:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):512:19798:offset + length |==> offset % length
+484:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):512:19798:offset + length |==> offset * length
+485:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):512:19798:offset + length |==> offset - length
+486:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):512:19798:offset + length |==> offset / length
+487:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):512:19816:1 |==> 0
+488:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):512:19816:1 |==> -1
+489:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):512:19798:offset + length - 1 |==> (offset + length) % 1
+490:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):512:19798:offset + length - 1 |==> (offset + length) * 1
+491:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):512:19798:offset + length - 1 |==> offset + length + 1
+492:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):512:19798:offset + length - 1 |==> (offset + length) / 1
+493:ROR:>=(int,int):==(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):512:19819:i >= offset |==> i == offset
+494:ROR:>=(int,int):>(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):512:19819:i >= offset |==> i > offset
+495:ROR:>=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):512:19821:i >= offset |==> true
+496:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):513:19851:buf[i] = (byte)val; |==> <NO-OP>
+497:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):514:19892:8 |==> 0
+498:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):514:19892:8 |==> -8
+499:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatLongBinary(long,byte[],int,int,boolean):514:19884:val >>= 8; |==> <NO-OP>
+500:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):525:20346:offset + length |==> offset % length
+501:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):525:20346:offset + length |==> offset * length
+502:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):525:20346:offset + length |==> offset - length
+503:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):525:20346:offset + length |==> offset / length
+504:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):525:20346:offset + length - len |==> (offset + length) % len
+505:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):525:20346:offset + length - len |==> (offset + length) * len
+506:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):525:20346:offset + length - len |==> offset + length + len
+507:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):525:20346:offset + length - len |==> (offset + length) / len
+508:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):526:20397:0 |==> 1
+509:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):526:20397:0 |==> -1
+510:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):526:20377:System.arraycopy(b, 0, buf, off, len); |==> <NO-OP>
+511:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):527:20450:negative |==> false
+512:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):527:20450:negative |==> true
+513:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):527:20461:255 |==> 0
+514:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):527:20461:255 |==> -255
+515:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):527:20468:0 |==> 1
+516:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):527:20468:0 |==> -1
+517:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):528:20502:1 |==> 0
+518:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):528:20502:1 |==> -1
+519:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):528:20493:offset + 1 |==> offset % 1
+520:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):528:20493:offset + 1 |==> offset * 1
+521:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):528:20493:offset + 1 |==> offset - 1
+522:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):528:20493:offset + 1 |==> offset / 1
+523:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):528:20505:i < off |==> i != off
+524:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):528:20505:i < off |==> i <= off
+525:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):528:20507:i < off |==> false
+526:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatBigIntegerBinary(long,byte[],int,int,boolean):529:20533:buf[i] = fill; |==> <NO-OP>
+527:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):549:21297:2 |==> 0
+528:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):549:21297:2 |==> -2
+529:AOR:-(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):549:21290:length - 2 |==> length % 2
+530:AOR:-(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):549:21290:length - 2 |==> length * 2
+531:AOR:-(int,int):+(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):549:21290:length - 2 |==> length + 2
+532:AOR:-(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):549:21290:length - 2 |==> length / 2
+533:STD:<CALL>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):550:21329:formatUnsignedOctalString(value, buf, offset, idx); |==> <NO-OP>
+534:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):552:21394:offset + idx++ |==> offset % idx++
+535:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):552:21394:offset + idx++ |==> offset * idx++
+536:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):552:21394:offset + idx++ |==> offset - idx++
+537:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):552:21394:offset + idx++ |==> offset / idx++
+538:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):552:21414:0 |==> 1
+539:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):552:21414:0 |==> -1
+540:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):552:21390:buf[offset + idx++] = 0; |==> <NO-OP>
+541:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):553:21446:offset + idx |==> offset % idx
+542:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):553:21446:offset + idx |==> offset * idx
+543:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):553:21446:offset + idx |==> offset - idx
+544:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):553:21446:offset + idx |==> offset / idx
+545:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):553:21442:buf[offset + idx] = (byte)' '; |==> <NO-OP>
+546:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):555:21512:offset + length |==> offset % length
+547:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):555:21512:offset + length |==> offset * length
+548:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):555:21512:offset + length |==> offset - length
+549:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@formatCheckSumOctalBytes(long,byte[],int,int):555:21512:offset + length |==> offset / length
+550:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@computeCheckSum(byte[]):565:21775:0 |==> 1
+551:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@computeCheckSum(byte[]):565:21775:0 |==> -1
+552:LOR:&(int,int):^(int,int):org.apache.commons.compress.archivers.tar.TarUtils@computeCheckSum(byte[]):568:21833:BYTE_MASK & element |==> BYTE_MASK ^ element
+553:LOR:&(int,int):|(int,int):org.apache.commons.compress.archivers.tar.TarUtils@computeCheckSum(byte[]):568:21833:BYTE_MASK & element |==> BYTE_MASK | element
+554:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@computeCheckSum(byte[]):568:21826:sum += BYTE_MASK & element; |==> <NO-OP>
+555:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):610:23910:0 |==> 1
+556:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):610:23910:0 |==> -1
+557:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):611:23940:0 |==> 1
+558:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):611:23940:0 |==> -1
+559:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):612:23968:0 |==> 1
+560:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):612:23968:0 |==> -1
+561:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):614:23993:0 |==> 1
+562:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):614:23993:0 |==> -1
+563:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):615:24017:0 |==> 1
+564:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):615:24017:0 |==> -1
+565:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):615:24020:i < header.length |==> i <= header.length
+566:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):615:24022:i < header.length |==> false
+567:ROR:<=(int,int):<(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):617:24094:CHKSUM_OFFSET <= i |==> CHKSUM_OFFSET < i
+568:ROR:<=(int,int):==(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):617:24094:CHKSUM_OFFSET <= i |==> CHKSUM_OFFSET == i
+569:ROR:<=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):617:24109:CHKSUM_OFFSET <= i |==> true
+570:AOR:+(int,int):%(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):617:24121:CHKSUM_OFFSET + CHKSUMLEN |==> CHKSUM_OFFSET % CHKSUMLEN
+571:AOR:+(int,int):*(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):617:24121:CHKSUM_OFFSET + CHKSUMLEN |==> CHKSUM_OFFSET * CHKSUMLEN
+572:AOR:+(int,int):-(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):617:24121:CHKSUM_OFFSET + CHKSUMLEN |==> CHKSUM_OFFSET - CHKSUMLEN
+573:AOR:+(int,int):/(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):617:24121:CHKSUM_OFFSET + CHKSUMLEN |==> CHKSUM_OFFSET / CHKSUMLEN
+574:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):617:24117:i < CHKSUM_OFFSET + CHKSUMLEN |==> i != CHKSUM_OFFSET + CHKSUMLEN
+575:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):617:24117:i < CHKSUM_OFFSET + CHKSUMLEN |==> i <= CHKSUM_OFFSET + CHKSUMLEN
+576:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):617:24119:i < CHKSUM_OFFSET + CHKSUMLEN |==> false
+577:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):617:24094:CHKSUM_OFFSET <= i && i < CHKSUM_OFFSET + CHKSUMLEN |==> CHKSUM_OFFSET <= i == i < CHKSUM_OFFSET + CHKSUMLEN
+578:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):617:24114:CHKSUM_OFFSET <= i && i < CHKSUM_OFFSET + CHKSUMLEN |==> false
+579:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):617:24094:CHKSUM_OFFSET <= i && i < CHKSUM_OFFSET + CHKSUMLEN |==> CHKSUM_OFFSET <= i
+580:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):617:24117:CHKSUM_OFFSET <= i && i < CHKSUM_OFFSET + CHKSUMLEN |==> i < CHKSUM_OFFSET + CHKSUMLEN
+581:ROR:<=(int,int):<(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):618:24170:'0' <= b |==> '0' < b
+582:ROR:<=(int,int):==(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):618:24170:'0' <= b |==> '0' == b
+583:ROR:<=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):618:24174:'0' <= b |==> true
+584:ROR:<=(int,int):<(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):618:24182:b <= '7' |==> b < '7'
+585:ROR:<=(int,int):==(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):618:24182:b <= '7' |==> b == '7'
+586:ROR:<=(int,int):TRUE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):618:24184:b <= '7' |==> true
+587:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):618:24170:'0' <= b && b <= '7' |==> '0' <= b == b <= '7'
+588:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):618:24179:'0' <= b && b <= '7' |==> false
+589:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):618:24170:'0' <= b && b <= '7' |==> '0' <= b
+590:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):618:24182:'0' <= b && b <= '7' |==> b <= '7'
+591:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):618:24205:6 |==> 0
+592:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):618:24205:6 |==> -6
+593:ROR:<(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):618:24194:digits++ < 6 |==> digits++ != 6
+594:ROR:<(int,int):<=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):618:24194:digits++ < 6 |==> digits++ <= 6
+595:ROR:<(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):618:24203:digits++ < 6 |==> false
+596:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):618:24170:'0' <= b && b <= '7' && digits++ < 6 |==> ('0' <= b && b <= '7') == digits++ < 6
+597:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):618:24191:'0' <= b && b <= '7' && digits++ < 6 |==> false
+598:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):618:24170:'0' <= b && b <= '7' && digits++ < 6 |==> '0' <= b && b <= '7'
+599:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):618:24194:'0' <= b && b <= '7' && digits++ < 6 |==> digits++ < 6
+600:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):619:24254:8 |==> 0
+601:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):619:24254:8 |==> -8
+602:AOR:*(long,long):%(long,long):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):619:24242:storedSum * 8 |==> storedSum % 8
+603:AOR:*(long,long):+(long,long):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):619:24242:storedSum * 8 |==> storedSum + 8
+604:AOR:*(long,long):-(long,long):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):619:24242:storedSum * 8 |==> storedSum - 8
+605:AOR:*(long,long):/(long,long):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):619:24242:storedSum * 8 |==> storedSum / 8
+606:AOR:+(long,long):%(long,long):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):619:24242:storedSum * 8 + b |==> storedSum * 8 % b
+607:AOR:+(long,long):*(long,long):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):619:24242:storedSum * 8 + b |==> storedSum * 8 * b
+608:AOR:+(long,long):-(long,long):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):619:24242:storedSum * 8 + b |==> storedSum * 8 - b
+609:AOR:+(long,long):/(long,long):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):619:24242:storedSum * 8 + b |==> storedSum * 8 / b
+610:AOR:-(long,long):%(long,long):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):619:24242:storedSum * 8 + b - '0' |==> (storedSum * 8 + b) % '0'
+611:AOR:-(long,long):*(long,long):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):619:24242:storedSum * 8 + b - '0' |==> (storedSum * 8 + b) * '0'
+612:AOR:-(long,long):+(long,long):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):619:24242:storedSum * 8 + b - '0' |==> storedSum * 8 + b + '0'
+613:AOR:-(long,long):/(long,long):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):619:24242:storedSum * 8 + b - '0' |==> (storedSum * 8 + b) / '0'
+614:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):619:24230:storedSum = storedSum * 8 + b - '0'; |==> <NO-OP>
+615:LVR:0:POS:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):620:24303:0 |==> 1
+616:LVR:0:NEG:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):620:24303:0 |==> -1
+617:ROR:>(int,int):!=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):620:24294:digits > 0 |==> digits != 0
+618:ROR:>(int,int):>=(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):620:24294:digits > 0 |==> digits >= 0
+619:ROR:>(int,int):FALSE(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):620:24301:digits > 0 |==> false
+620:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):621:24337:6 |==> 0
+621:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):621:24337:6 |==> -6
+622:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):621:24328:digits = 6; |==> <NO-OP>
+623:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):623:24421:b = ' '; |==> <NO-OP>
+624:LVR:POS:0:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):625:24471:255 |==> 0
+625:LVR:POS:NEG:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):625:24471:255 |==> -255
+626:LOR:&(int,int):^(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):625:24471:255 & b |==> 255 ^ b
+627:LOR:&(int,int):|(int,int):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):625:24471:255 & b |==> 255 | b
+628:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):625:24456:unsignedSum += 255 & b; |==> <NO-OP>
+629:STD:<ASSIGN>:<NO-OP>:org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):626:24493:signedSum += b; |==> <NO-OP>
+630:ROR:==(long,long):<=(long,long):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):629:24535:storedSum == unsignedSum |==> storedSum <= unsignedSum
+631:ROR:==(long,long):>=(long,long):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):629:24535:storedSum == unsignedSum |==> storedSum >= unsignedSum
+632:ROR:==(long,long):FALSE(long,long):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):629:24545:storedSum == unsignedSum |==> false
+633:ROR:==(long,long):<=(long,long):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):629:24563:storedSum == signedSum |==> storedSum <= signedSum
+634:ROR:==(long,long):>=(long,long):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):629:24563:storedSum == signedSum |==> storedSum >= signedSum
+635:ROR:==(long,long):FALSE(long,long):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):629:24573:storedSum == signedSum |==> false
+636:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):629:24535:storedSum == unsignedSum || storedSum == signedSum |==> storedSum == unsignedSum != (storedSum == signedSum)
+637:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):629:24535:storedSum == unsignedSum || storedSum == signedSum |==> storedSum == unsignedSum
+638:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):629:24563:storedSum == unsignedSum || storedSum == signedSum |==> storedSum == signedSum
+639:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):629:24560:storedSum == unsignedSum || storedSum == signedSum |==> true
+640:ROR:>(long,long):!=(long,long):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):630:24605:storedSum > unsignedSum |==> storedSum != unsignedSum
+641:ROR:>(long,long):>=(long,long):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):630:24605:storedSum > unsignedSum |==> storedSum >= unsignedSum
+642:ROR:>(long,long):FALSE(long,long):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):630:24615:storedSum > unsignedSum |==> false
+643:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):629:24535:storedSum == unsignedSum || storedSum == signedSum || storedSum > unsignedSum |==> (storedSum == unsignedSum || storedSum == signedSum) != storedSum > unsignedSum
+644:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):629:24535:storedSum == unsignedSum || storedSum == signedSum || storedSum > unsignedSum |==> storedSum == unsignedSum || storedSum == signedSum
+645:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):630:24605:storedSum == unsignedSum || storedSum == signedSum || storedSum > unsignedSum |==> storedSum > unsignedSum
+646:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.compress.archivers.tar.TarUtils@verifyCheckSum(byte[]):630:24602:storedSum == unsignedSum || storedSum == signedSum || storedSum > unsignedSum |==> true
