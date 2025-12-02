@@ -1,0 +1,112 @@
+1:STD:<ASSIGN>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@<init>(com.google.javascript.rhino.jstype.JSTypeRegistry,java.util.Set<com.google.javascript.rhino.jstype.JSType>):77:2780:this.alternates = alternates; |==> <NO-OP>
+2:STD:<CALL>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@forgiveUnknownNames():92:3140:type.forgiveUnknownNames(); |==> <NO-OP>
+3:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.javascript.rhino.jstype.UnionType@matchesNumberContext():106:3595:t.matchesNumberContext() |==> false
+4:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.javascript.rhino.jstype.UnionType@matchesNumberContext():106:3595:t.matchesNumberContext() |==> true
+5:LVR:TRUE:FALSE:com.google.javascript.rhino.jstype.UnionType@matchesNumberContext():107:3616:true |==> false
+6:LVR:FALSE:TRUE:com.google.javascript.rhino.jstype.UnionType@matchesNumberContext():110:3647:false |==> true
+7:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.javascript.rhino.jstype.UnionType@matchesStringContext():128:4326:t.matchesStringContext() |==> false
+8:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.javascript.rhino.jstype.UnionType@matchesStringContext():128:4326:t.matchesStringContext() |==> true
+9:LVR:TRUE:FALSE:com.google.javascript.rhino.jstype.UnionType@matchesStringContext():129:4347:true |==> false
+10:LVR:FALSE:TRUE:com.google.javascript.rhino.jstype.UnionType@matchesStringContext():132:4378:false |==> true
+11:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.javascript.rhino.jstype.UnionType@matchesObjectContext():155:5242:t.matchesObjectContext() |==> false
+12:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.javascript.rhino.jstype.UnionType@matchesObjectContext():155:5242:t.matchesObjectContext() |==> true
+13:LVR:TRUE:FALSE:com.google.javascript.rhino.jstype.UnionType@matchesObjectContext():156:5263:true |==> false
+14:LVR:FALSE:TRUE:com.google.javascript.rhino.jstype.UnionType@matchesObjectContext():159:5294:false |==> true
+15:COR:||(boolean,boolean):!=(boolean,boolean):com.google.javascript.rhino.jstype.UnionType@findPropertyType(java.lang.String):168:5509:alternate.isNullType() || alternate.isVoidType() |==> alternate.isNullType() != alternate.isVoidType()
+16:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.javascript.rhino.jstype.UnionType@findPropertyType(java.lang.String):168:5509:alternate.isNullType() || alternate.isVoidType() |==> alternate.isNullType()
+17:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.javascript.rhino.jstype.UnionType@findPropertyType(java.lang.String):168:5535:alternate.isNullType() || alternate.isVoidType() |==> alternate.isVoidType()
+18:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.javascript.rhino.jstype.UnionType@findPropertyType(java.lang.String):168:5532:alternate.isNullType() || alternate.isVoidType() |==> true
+19:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.javascript.rhino.jstype.UnionType@findPropertyType(java.lang.String):173:5687:altPropertyType == null |==> false
+20:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.javascript.rhino.jstype.UnionType@findPropertyType(java.lang.String):177:5748:propertyType == null |==> false
+21:STD:<ASSIGN>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@findPropertyType(java.lang.String):178:5767:propertyType = altPropertyType; |==> <NO-OP>
+22:STD:<ASSIGN>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@findPropertyType(java.lang.String):180:5822:propertyType = propertyType.getLeastSupertype(altPropertyType); |==> <NO-OP>
+23:LVR:TRUE:FALSE:com.google.javascript.rhino.jstype.UnionType@canAssignTo(com.google.javascript.rhino.jstype.JSType):189:6011:true |==> false
+24:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.javascript.rhino.jstype.UnionType@canAssignTo(com.google.javascript.rhino.jstype.JSType):191:6076:t.isUnknownType() |==> false
+25:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.javascript.rhino.jstype.UnionType@canAssignTo(com.google.javascript.rhino.jstype.JSType):191:6076:t.isUnknownType() |==> true
+26:LVR:TRUE:FALSE:com.google.javascript.rhino.jstype.UnionType@canAssignTo(com.google.javascript.rhino.jstype.JSType):192:6097:true |==> false
+27:STD:<ASSIGN>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@canAssignTo(com.google.javascript.rhino.jstype.JSType):194:6117:canAssign &= t.canAssignTo(that); |==> <NO-OP>
+28:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.javascript.rhino.jstype.UnionType@canBeCalled():202:6287:t.canBeCalled() |==> false
+29:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.javascript.rhino.jstype.UnionType@canBeCalled():202:6287:t.canBeCalled() |==> true
+30:LVR:FALSE:TRUE:com.google.javascript.rhino.jstype.UnionType@canBeCalled():203:6308:false |==> true
+31:LVR:TRUE:FALSE:com.google.javascript.rhino.jstype.UnionType@canBeCalled():206:6340:true |==> false
+32:STD:<CALL>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@restrictByNotNullOrUndefined():213:6518:restricted.addAlternate(t.restrictByNotNullOrUndefined()); |==> <NO-OP>
+33:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.javascript.rhino.jstype.UnionType@testForEquality(com.google.javascript.rhino.jstype.JSType):223:6818:result == null |==> false
+34:STD:<ASSIGN>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@testForEquality(com.google.javascript.rhino.jstype.JSType):224:6837:result = test; |==> <NO-OP>
+35:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.javascript.rhino.jstype.UnionType@testForEquality(com.google.javascript.rhino.jstype.JSType):225:6883:result.equals(test) |==> false
+36:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.javascript.rhino.jstype.UnionType@testForEquality(com.google.javascript.rhino.jstype.JSType):225:6883:result.equals(test) |==> true
+37:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.javascript.rhino.jstype.UnionType@isNullable():243:7344:t.isNullable() |==> false
+38:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.javascript.rhino.jstype.UnionType@isNullable():243:7344:t.isNullable() |==> true
+39:LVR:TRUE:FALSE:com.google.javascript.rhino.jstype.UnionType@isNullable():244:7365:true |==> false
+40:LVR:FALSE:TRUE:com.google.javascript.rhino.jstype.UnionType@isNullable():247:7396:false |==> true
+41:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.javascript.rhino.jstype.UnionType@isUnknownType():253:7514:t.isUnknownType() |==> false
+42:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.javascript.rhino.jstype.UnionType@isUnknownType():253:7514:t.isUnknownType() |==> true
+43:LVR:TRUE:FALSE:com.google.javascript.rhino.jstype.UnionType@isUnknownType():254:7535:true |==> false
+44:LVR:FALSE:TRUE:com.google.javascript.rhino.jstype.UnionType@isUnknownType():257:7566:false |==> true
+45:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.javascript.rhino.jstype.UnionType@getLeastSupertype(com.google.javascript.rhino.jstype.JSType):262:7666:that.isUnknownType() |==> false
+46:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.javascript.rhino.jstype.UnionType@getLeastSupertype(com.google.javascript.rhino.jstype.JSType):262:7666:that.isUnknownType() |==> true
+47:COR:&&(boolean,boolean):==(boolean,boolean):com.google.javascript.rhino.jstype.UnionType@getLeastSupertype(com.google.javascript.rhino.jstype.JSType):264:7728:!alternate.isUnknownType() && that.isSubtype(alternate) |==> !alternate.isUnknownType() == that.isSubtype(alternate)
+48:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.javascript.rhino.jstype.UnionType@getLeastSupertype(com.google.javascript.rhino.jstype.JSType):264:7755:!alternate.isUnknownType() && that.isSubtype(alternate) |==> false
+49:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.javascript.rhino.jstype.UnionType@getLeastSupertype(com.google.javascript.rhino.jstype.JSType):264:7728:!alternate.isUnknownType() && that.isSubtype(alternate) |==> !alternate.isUnknownType()
+50:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.javascript.rhino.jstype.UnionType@getLeastSupertype(com.google.javascript.rhino.jstype.JSType):264:7758:!alternate.isUnknownType() && that.isSubtype(alternate) |==> that.isSubtype(alternate)
+51:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.javascript.rhino.jstype.UnionType@meet(com.google.javascript.rhino.jstype.JSType):276:8045:alternate.isSubtype(that) |==> false
+52:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.javascript.rhino.jstype.UnionType@meet(com.google.javascript.rhino.jstype.JSType):276:8045:alternate.isSubtype(that) |==> true
+53:STD:<CALL>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@meet(com.google.javascript.rhino.jstype.JSType):277:8063:builder.addAlternate(alternate); |==> <NO-OP>
+54:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.javascript.rhino.jstype.UnionType@meet(com.google.javascript.rhino.jstype.JSType):283:8252:otherAlternate.isSubtype(this) |==> false
+55:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.javascript.rhino.jstype.UnionType@meet(com.google.javascript.rhino.jstype.JSType):283:8252:otherAlternate.isSubtype(this) |==> true
+56:STD:<CALL>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@meet(com.google.javascript.rhino.jstype.JSType):284:8272:builder.addAlternate(otherAlternate); |==> <NO-OP>
+57:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.javascript.rhino.jstype.UnionType@meet(com.google.javascript.rhino.jstype.JSType):287:8357:that.isSubtype(this) |==> false
+58:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.javascript.rhino.jstype.UnionType@meet(com.google.javascript.rhino.jstype.JSType):287:8357:that.isSubtype(this) |==> true
+59:STD:<CALL>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@meet(com.google.javascript.rhino.jstype.JSType):288:8373:builder.addAlternate(that); |==> <NO-OP>
+60:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.google.javascript.rhino.jstype.UnionType@meet(com.google.javascript.rhino.jstype.JSType):291:8459:result != null |==> true
+61:COR:&&(boolean,boolean):==(boolean,boolean):com.google.javascript.rhino.jstype.UnionType@meet(com.google.javascript.rhino.jstype.JSType):293:8506:this.isObject() && that.isObject() |==> this.isObject() == that.isObject()
+62:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.javascript.rhino.jstype.UnionType@meet(com.google.javascript.rhino.jstype.JSType):293:8522:this.isObject() && that.isObject() |==> false
+63:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.javascript.rhino.jstype.UnionType@meet(com.google.javascript.rhino.jstype.JSType):293:8506:this.isObject() && that.isObject() |==> this.isObject()
+64:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.javascript.rhino.jstype.UnionType@meet(com.google.javascript.rhino.jstype.JSType):293:8525:this.isObject() && that.isObject() |==> that.isObject()
+65:LVR:FALSE:TRUE:com.google.javascript.rhino.jstype.UnionType@equals(java.lang.Object):310:9006:false |==> true
+66:LVR:TRUE:FALSE:com.google.javascript.rhino.jstype.UnionType@isUnionType():321:9157:true |==> false
+67:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.javascript.rhino.jstype.UnionType@isObject():327:9281:alternate.isObject() |==> false
+68:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.javascript.rhino.jstype.UnionType@isObject():327:9281:alternate.isObject() |==> true
+69:LVR:FALSE:TRUE:com.google.javascript.rhino.jstype.UnionType@isObject():328:9302:false |==> true
+70:LVR:TRUE:FALSE:com.google.javascript.rhino.jstype.UnionType@isObject():331:9334:true |==> false
+71:COR:||(boolean,boolean):!=(boolean,boolean):com.google.javascript.rhino.jstype.UnionType@getRestrictedUnion(com.google.javascript.rhino.jstype.JSType):365:10443:t.isUnknownType() || !t.isSubtype(type) |==> t.isUnknownType() != !t.isSubtype(type)
+72:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.javascript.rhino.jstype.UnionType@getRestrictedUnion(com.google.javascript.rhino.jstype.JSType):365:10443:t.isUnknownType() || !t.isSubtype(type) |==> t.isUnknownType()
+73:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.javascript.rhino.jstype.UnionType@getRestrictedUnion(com.google.javascript.rhino.jstype.JSType):365:10464:t.isUnknownType() || !t.isSubtype(type) |==> !t.isSubtype(type)
+74:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.javascript.rhino.jstype.UnionType@getRestrictedUnion(com.google.javascript.rhino.jstype.JSType):365:10461:t.isUnknownType() || !t.isSubtype(type) |==> true
+75:STD:<CALL>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@getRestrictedUnion(com.google.javascript.rhino.jstype.JSType):366:10494:restricted.addAlternate(t); |==> <NO-OP>
+76:LVR:TRUE:FALSE:com.google.javascript.rhino.jstype.UnionType@toString():374:10688:true |==> false
+77:STD:<CALL>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@toString():376:10699:result.append("("); |==> <NO-OP>
+78:STD:<CALL>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@toString():378:10782:sorted.addAll(alternates); |==> <NO-OP>
+79:COR:<IDENTIFIER(boolean)>:FALSE:com.google.javascript.rhino.jstype.UnionType@toString():380:10850:firstAlternate |==> false
+80:COR:<IDENTIFIER(boolean)>:TRUE:com.google.javascript.rhino.jstype.UnionType@toString():380:10850:firstAlternate |==> true
+81:STD:<CALL>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@toString():381:10876:result.append("|"); |==> <NO-OP>
+82:STD:<CALL>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@toString():383:10910:result.append(t.toString()); |==> <NO-OP>
+83:LVR:FALSE:TRUE:com.google.javascript.rhino.jstype.UnionType@toString():384:10962:false |==> true
+84:STD:<ASSIGN>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@toString():384:10945:firstAlternate = false; |==> <NO-OP>
+85:STD:<CALL>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@toString():386:10979:result.append(")"); |==> <NO-OP>
+86:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.javascript.rhino.jstype.UnionType@isSubtype(com.google.javascript.rhino.jstype.JSType):393:11156:element.isSubtype(that) |==> false
+87:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.javascript.rhino.jstype.UnionType@isSubtype(com.google.javascript.rhino.jstype.JSType):393:11156:element.isSubtype(that) |==> true
+88:LVR:FALSE:TRUE:com.google.javascript.rhino.jstype.UnionType@isSubtype(com.google.javascript.rhino.jstype.JSType):394:11181:false |==> true
+89:LVR:TRUE:FALSE:com.google.javascript.rhino.jstype.UnionType@isSubtype(com.google.javascript.rhino.jstype.JSType):397:11213:true |==> false
+90:STD:<CALL>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@getRestrictedTypeGivenToBooleanOutcome(boolean):405:11463:restricted.addAlternate(element.getRestrictedTypeGivenToBooleanOutcome(outcome)); |==> <NO-OP>
+91:STD:<ASSIGN>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@getPossibleToBooleanOutcomes():415:11774:literals = literals.union(element.getPossibleToBooleanOutcomes()); |==> <NO-OP>
+92:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.javascript.rhino.jstype.UnionType@getPossibleToBooleanOutcomes():416:11860:literals == BooleanLiteralSet.BOTH |==> false
+93:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.google.javascript.rhino.jstype.UnionType@getTypesUnderEquality(com.google.javascript.rhino.jstype.JSType):429:12265:p.typeA != null |==> true
+94:STD:<CALL>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@getTypesUnderEquality(com.google.javascript.rhino.jstype.JSType):430:12284:thisRestricted.addAlternate(p.typeA); |==> <NO-OP>
+95:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.google.javascript.rhino.jstype.UnionType@getTypesUnderEquality(com.google.javascript.rhino.jstype.JSType):432:12348:p.typeB != null |==> true
+96:STD:<CALL>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@getTypesUnderEquality(com.google.javascript.rhino.jstype.JSType):433:12367:thatRestricted.addAlternate(p.typeB); |==> <NO-OP>
+97:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.google.javascript.rhino.jstype.UnionType@getTypesUnderInequality(com.google.javascript.rhino.jstype.JSType):447:12839:p.typeA != null |==> true
+98:STD:<CALL>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@getTypesUnderInequality(com.google.javascript.rhino.jstype.JSType):448:12858:thisRestricted.addAlternate(p.typeA); |==> <NO-OP>
+99:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.google.javascript.rhino.jstype.UnionType@getTypesUnderInequality(com.google.javascript.rhino.jstype.JSType):450:12922:p.typeB != null |==> true
+100:STD:<CALL>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@getTypesUnderInequality(com.google.javascript.rhino.jstype.JSType):451:12941:thatRestricted.addAlternate(p.typeB); |==> <NO-OP>
+101:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.google.javascript.rhino.jstype.UnionType@getTypesUnderShallowInequality(com.google.javascript.rhino.jstype.JSType):465:13427:p.typeA != null |==> true
+102:STD:<CALL>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@getTypesUnderShallowInequality(com.google.javascript.rhino.jstype.JSType):466:13446:thisRestricted.addAlternate(p.typeA); |==> <NO-OP>
+103:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.google.javascript.rhino.jstype.UnionType@getTypesUnderShallowInequality(com.google.javascript.rhino.jstype.JSType):468:13510:p.typeB != null |==> true
+104:STD:<CALL>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@getTypesUnderShallowInequality(com.google.javascript.rhino.jstype.JSType):469:13529:thatRestricted.addAlternate(p.typeB); |==> <NO-OP>
+105:STD:<CALL>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@resolveInternal(com.google.javascript.rhino.ErrorReporter,com.google.javascript.rhino.jstype.StaticScope<com.google.javascript.rhino.jstype.JSType>):484:13863:setResolvedTypeInternal(this); |==> <NO-OP>
+106:LVR:FALSE:TRUE:com.google.javascript.rhino.jstype.UnionType@resolveInternal(com.google.javascript.rhino.ErrorReporter,com.google.javascript.rhino.jstype.StaticScope<com.google.javascript.rhino.jstype.JSType>):486:13950:false |==> true
+107:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.google.javascript.rhino.jstype.UnionType@resolveInternal(com.google.javascript.rhino.ErrorReporter,com.google.javascript.rhino.jstype.StaticScope<com.google.javascript.rhino.jstype.JSType>):490:14157:alternate != newAlternate |==> true
+108:STD:<ASSIGN>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@resolveInternal(com.google.javascript.rhino.ErrorReporter,com.google.javascript.rhino.jstype.StaticScope<com.google.javascript.rhino.jstype.JSType>):490:14135:changed |= (alternate != newAlternate); |==> <NO-OP>
+109:STD:<CALL>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@resolveInternal(com.google.javascript.rhino.ErrorReporter,com.google.javascript.rhino.jstype.StaticScope<com.google.javascript.rhino.jstype.JSType>):491:14181:resolvedTypes.add(alternate); |==> <NO-OP>
+110:COR:<IDENTIFIER(boolean)>:FALSE:com.google.javascript.rhino.jstype.UnionType@resolveInternal(com.google.javascript.rhino.ErrorReporter,com.google.javascript.rhino.jstype.StaticScope<com.google.javascript.rhino.jstype.JSType>):493:14225:changed |==> false
+111:COR:<IDENTIFIER(boolean)>:TRUE:com.google.javascript.rhino.jstype.UnionType@resolveInternal(com.google.javascript.rhino.ErrorReporter,com.google.javascript.rhino.jstype.StaticScope<com.google.javascript.rhino.jstype.JSType>):493:14225:changed |==> true
+112:STD:<ASSIGN>:<NO-OP>:com.google.javascript.rhino.jstype.UnionType@resolveInternal(com.google.javascript.rhino.ErrorReporter,com.google.javascript.rhino.jstype.StaticScope<com.google.javascript.rhino.jstype.JSType>):494:14242:alternates = resolvedTypes.build(); |==> <NO-OP>
