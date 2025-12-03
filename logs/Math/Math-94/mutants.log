@@ -1,0 +1,850 @@
+1:AOR:+(long,long):%(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(int,int):77:2399:(long)x + (long)y |==> (long)x % (long)y
+2:AOR:+(long,long):*(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(int,int):77:2399:(long)x + (long)y |==> (long)x * (long)y
+3:AOR:+(long,long):-(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(int,int):77:2399:(long)x + (long)y |==> (long)x - (long)y
+4:AOR:+(long,long):/(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(int,int):77:2399:(long)x + (long)y |==> (long)x / (long)y
+5:ROR:<(long,long):!=(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(int,int):78:2430:s < Integer.MIN_VALUE |==> s != Integer.MIN_VALUE
+6:ROR:<(long,long):<=(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(int,int):78:2430:s < Integer.MIN_VALUE |==> s <= Integer.MIN_VALUE
+7:ROR:<(long,long):FALSE(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(int,int):78:2432:s < Integer.MIN_VALUE |==> false
+8:ROR:>(long,long):!=(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(int,int):78:2455:s > Integer.MAX_VALUE |==> s != Integer.MAX_VALUE
+9:ROR:>(long,long):>=(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(int,int):78:2455:s > Integer.MAX_VALUE |==> s >= Integer.MAX_VALUE
+10:ROR:>(long,long):FALSE(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(int,int):78:2457:s > Integer.MAX_VALUE |==> false
+11:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.math.util.MathUtils@addAndCheck(int,int):78:2430:s < Integer.MIN_VALUE || s > Integer.MAX_VALUE |==> s < Integer.MIN_VALUE
+12:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.math.util.MathUtils@addAndCheck(int,int):78:2455:s < Integer.MIN_VALUE || s > Integer.MAX_VALUE |==> s > Integer.MAX_VALUE
+13:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.math.util.MathUtils@addAndCheck(int,int):78:2452:s < Integer.MIN_VALUE || s > Integer.MAX_VALUE |==> true
+14:ROR:>(long,long):!=(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):111:3424:a > b |==> a != b
+15:ROR:>(long,long):>=(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):111:3424:a > b |==> a >= b
+16:ROR:>(long,long):FALSE(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):111:3426:a > b |==> false
+17:LVR:0:POS:org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):117:3606:0 |==> 1
+18:LVR:0:NEG:org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):117:3606:0 |==> -1
+19:ROR:<(long,long):!=(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):117:3602:a < 0 |==> a != 0
+20:ROR:<(long,long):<=(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):117:3602:a < 0 |==> a <= 0
+21:ROR:<(long,long):FALSE(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):117:3604:a < 0 |==> false
+22:LVR:0:POS:org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):118:3635:0 |==> 1
+23:LVR:0:NEG:org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):118:3635:0 |==> -1
+24:ROR:<(long,long):!=(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):118:3631:b < 0 |==> b != 0
+25:ROR:<(long,long):<=(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):118:3631:b < 0 |==> b <= 0
+26:ROR:<(long,long):FALSE(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):118:3633:b < 0 |==> false
+27:AOR:-(long,long):%(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):120:3715:Long.MIN_VALUE - b |==> Long.MIN_VALUE % b
+28:AOR:-(long,long):*(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):120:3715:Long.MIN_VALUE - b |==> Long.MIN_VALUE * b
+29:AOR:-(long,long):+(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):120:3715:Long.MIN_VALUE - b |==> Long.MIN_VALUE + b
+30:AOR:-(long,long):/(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):120:3715:Long.MIN_VALUE - b |==> Long.MIN_VALUE / b
+31:ROR:<=(long,long):<(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):120:3715:Long.MIN_VALUE - b <= a |==> Long.MIN_VALUE - b < a
+32:ROR:<=(long,long):==(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):120:3715:Long.MIN_VALUE - b <= a |==> Long.MIN_VALUE - b == a
+33:ROR:<=(long,long):TRUE(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):120:3734:Long.MIN_VALUE - b <= a |==> true
+34:AOR:+(long,long):%(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):121:3772:a + b |==> a % b
+35:AOR:+(long,long):*(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):121:3772:a + b |==> a * b
+36:AOR:+(long,long):-(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):121:3772:a + b |==> a - b
+37:AOR:+(long,long):/(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):121:3772:a + b |==> a / b
+38:AOR:+(long,long):%(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):127:4002:a + b |==> a % b
+39:AOR:+(long,long):*(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):127:4002:a + b |==> a * b
+40:AOR:+(long,long):-(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):127:4002:a + b |==> a - b
+41:AOR:+(long,long):/(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):127:4002:a + b |==> a / b
+42:AOR:-(long,long):%(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):134:4187:Long.MAX_VALUE - b |==> Long.MAX_VALUE % b
+43:AOR:-(long,long):*(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):134:4187:Long.MAX_VALUE - b |==> Long.MAX_VALUE * b
+44:AOR:-(long,long):+(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):134:4187:Long.MAX_VALUE - b |==> Long.MAX_VALUE + b
+45:AOR:-(long,long):/(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):134:4187:Long.MAX_VALUE - b |==> Long.MAX_VALUE / b
+46:ROR:<=(long,long):<(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):134:4182:a <= Long.MAX_VALUE - b |==> a < Long.MAX_VALUE - b
+47:ROR:<=(long,long):==(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):134:4182:a <= Long.MAX_VALUE - b |==> a == Long.MAX_VALUE - b
+48:ROR:<=(long,long):TRUE(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):134:4184:a <= Long.MAX_VALUE - b |==> true
+49:AOR:+(long,long):%(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):135:4235:a + b |==> a % b
+50:AOR:+(long,long):*(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):135:4235:a + b |==> a * b
+51:AOR:+(long,long):-(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):135:4235:a + b |==> a - b
+52:AOR:+(long,long):/(long,long):org.apache.commons.math.util.MathUtils@addAndCheck(long,long,java.lang.String):135:4235:a + b |==> a / b
+53:ROR:<(int,int):!=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):171:5627:n < k |==> n != k
+54:ROR:<(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):171:5627:n < k |==> n <= k
+55:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):171:5629:n < k |==> false
+56:LVR:0:POS:org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):175:5778:0 |==> 1
+57:LVR:0:NEG:org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):175:5778:0 |==> -1
+58:ROR:<(int,int):!=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):175:5774:n < 0 |==> n != 0
+59:ROR:<(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):175:5774:n < 0 |==> n <= 0
+60:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):175:5776:n < 0 |==> false
+61:ROR:==(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):179:5922:n == k |==> n <= k
+62:ROR:==(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):179:5922:n == k |==> n >= k
+63:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):179:5924:n == k |==> false
+64:LVR:0:POS:org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):179:5939:0 |==> 1
+65:LVR:0:NEG:org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):179:5939:0 |==> -1
+66:ROR:==(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):179:5934:k == 0 |==> k <= 0
+67:ROR:==(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):179:5934:k == 0 |==> k >= 0
+68:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):179:5936:k == 0 |==> false
+69:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):179:5921:(n == k) || (k == 0) |==> (n == k) != (k == 0)
+70:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):179:5921:(n == k) || (k == 0) |==> (n == k)
+71:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):179:5933:(n == k) || (k == 0) |==> (k == 0)
+72:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):179:5930:(n == k) || (k == 0) |==> true
+73:LVR:POS:0:org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):180:5964:1 |==> 0
+74:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):180:5964:1 |==> -1
+75:LVR:POS:0:org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):182:5995:1 |==> 0
+76:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):182:5995:1 |==> -1
+77:ROR:==(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):182:5990:k == 1 |==> k <= 1
+78:ROR:==(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):182:5990:k == 1 |==> k >= 1
+79:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):182:5992:k == 1 |==> false
+80:LVR:POS:0:org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):182:6011:1 |==> 0
+81:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):182:6011:1 |==> -1
+82:AOR:-(int,int):%(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):182:6007:n - 1 |==> n % 1
+83:AOR:-(int,int):*(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):182:6007:n - 1 |==> n * 1
+84:AOR:-(int,int):+(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):182:6007:n - 1 |==> n + 1
+85:AOR:-(int,int):/(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):182:6007:n - 1 |==> n / 1
+86:ROR:==(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):182:6002:k == n - 1 |==> k <= n - 1
+87:ROR:==(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):182:6002:k == n - 1 |==> k >= n - 1
+88:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):182:6004:k == n - 1 |==> false
+89:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):182:5989:(k == 1) || (k == n - 1) |==> (k == 1) != (k == n - 1)
+90:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):182:5989:(k == 1) || (k == n - 1) |==> (k == 1)
+91:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):182:6001:(k == 1) || (k == n - 1) |==> (k == n - 1)
+92:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):182:5998:(k == 1) || (k == n - 1) |==> true
+93:ROR:==(long,long):<=(long,long):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):187:6129:result == Long.MAX_VALUE |==> result <= Long.MAX_VALUE
+94:ROR:==(long,long):FALSE(long,long):org.apache.commons.math.util.MathUtils@binomialCoefficient(int,int):187:6136:result == Long.MAX_VALUE |==> false
+95:LVR:POS:0:org.apache.commons.math.util.MathUtils@binomialCoefficientDouble(int,int):217:7453:0.5 |==> 0.0
+96:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@binomialCoefficientDouble(int,int):217:7453:0.5 |==> -0.5
+97:AOR:+(double,double):%(double,double):org.apache.commons.math.util.MathUtils@binomialCoefficientDouble(int,int):217:7412:Math.exp(binomialCoefficientLog(n, k)) + 0.5 |==> Math.exp(binomialCoefficientLog(n, k)) % 0.5
+98:AOR:+(double,double):*(double,double):org.apache.commons.math.util.MathUtils@binomialCoefficientDouble(int,int):217:7412:Math.exp(binomialCoefficientLog(n, k)) + 0.5 |==> Math.exp(binomialCoefficientLog(n, k)) * 0.5
+99:AOR:+(double,double):-(double,double):org.apache.commons.math.util.MathUtils@binomialCoefficientDouble(int,int):217:7412:Math.exp(binomialCoefficientLog(n, k)) + 0.5 |==> Math.exp(binomialCoefficientLog(n, k)) - 0.5
+100:AOR:+(double,double):/(double,double):org.apache.commons.math.util.MathUtils@binomialCoefficientDouble(int,int):217:7412:Math.exp(binomialCoefficientLog(n, k)) + 0.5 |==> Math.exp(binomialCoefficientLog(n, k)) / 0.5
+101:ROR:<(int,int):!=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):239:8269:n < k |==> n != k
+102:ROR:<(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):239:8269:n < k |==> n <= k
+103:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):239:8271:n < k |==> false
+104:LVR:0:POS:org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):243:8420:0 |==> 1
+105:LVR:0:NEG:org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):243:8420:0 |==> -1
+106:ROR:<(int,int):!=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):243:8416:n < 0 |==> n != 0
+107:ROR:<(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):243:8416:n < 0 |==> n <= 0
+108:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):243:8418:n < 0 |==> false
+109:ROR:==(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):247:8564:n == k |==> n <= k
+110:ROR:==(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):247:8564:n == k |==> n >= k
+111:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):247:8566:n == k |==> false
+112:LVR:0:POS:org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):247:8581:0 |==> 1
+113:LVR:0:NEG:org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):247:8581:0 |==> -1
+114:ROR:==(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):247:8576:k == 0 |==> k <= 0
+115:ROR:==(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):247:8576:k == 0 |==> k >= 0
+116:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):247:8578:k == 0 |==> false
+117:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):247:8563:(n == k) || (k == 0) |==> (n == k) != (k == 0)
+118:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):247:8563:(n == k) || (k == 0) |==> (n == k)
+119:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):247:8575:(n == k) || (k == 0) |==> (k == 0)
+120:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):247:8572:(n == k) || (k == 0) |==> true
+121:LVR:0:POS:org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):248:8606:0 |==> 1
+122:LVR:0:NEG:org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):248:8606:0 |==> -1
+123:LVR:POS:0:org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):250:8637:1 |==> 0
+124:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):250:8637:1 |==> -1
+125:ROR:==(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):250:8632:k == 1 |==> k <= 1
+126:ROR:==(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):250:8632:k == 1 |==> k >= 1
+127:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):250:8634:k == 1 |==> false
+128:LVR:POS:0:org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):250:8653:1 |==> 0
+129:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):250:8653:1 |==> -1
+130:AOR:-(int,int):%(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):250:8649:n - 1 |==> n % 1
+131:AOR:-(int,int):*(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):250:8649:n - 1 |==> n * 1
+132:AOR:-(int,int):+(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):250:8649:n - 1 |==> n + 1
+133:AOR:-(int,int):/(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):250:8649:n - 1 |==> n / 1
+134:ROR:==(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):250:8644:k == n - 1 |==> k <= n - 1
+135:ROR:==(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):250:8644:k == n - 1 |==> k >= n - 1
+136:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):250:8646:k == n - 1 |==> false
+137:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):250:8631:(k == 1) || (k == n - 1) |==> (k == 1) != (k == n - 1)
+138:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):250:8631:(k == 1) || (k == n - 1) |==> (k == 1)
+139:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):250:8643:(k == 1) || (k == n - 1) |==> (k == n - 1)
+140:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):250:8640:(k == 1) || (k == n - 1) |==> true
+141:LVR:0:POS:org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):253:8733:0 |==> 1
+142:LVR:0:NEG:org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):253:8733:0 |==> -1
+143:LVR:POS:0:org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):256:8779:1 |==> 0
+144:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):256:8779:1 |==> -1
+145:AOR:+(int,int):%(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):256:8775:k + 1 |==> k % 1
+146:AOR:+(int,int):*(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):256:8775:k + 1 |==> k * 1
+147:AOR:+(int,int):-(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):256:8775:k + 1 |==> k - 1
+148:AOR:+(int,int):/(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):256:8775:k + 1 |==> k / 1
+149:ROR:<=(int,int):<(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):256:8782:i <= n |==> i < n
+150:ROR:<=(int,int):==(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):256:8782:i <= n |==> i == n
+151:ROR:<=(int,int):TRUE(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):256:8784:i <= n |==> true
+152:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):257:8809:logSum += Math.log((double)i); |==> <NO-OP>
+153:LVR:POS:0:org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):261:8900:2 |==> 0
+154:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):261:8900:2 |==> -2
+155:AOR:-(int,int):%(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):261:8908:n - k |==> n % k
+156:AOR:-(int,int):*(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):261:8908:n - k |==> n * k
+157:AOR:-(int,int):+(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):261:8908:n - k |==> n + k
+158:AOR:-(int,int):/(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):261:8908:n - k |==> n / k
+159:ROR:<=(int,int):<(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):261:8903:i <= n - k |==> i < n - k
+160:ROR:<=(int,int):==(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):261:8903:i <= n - k |==> i == n - k
+161:ROR:<=(int,int):TRUE(int,int):org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):261:8905:i <= n - k |==> true
+162:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@binomialCoefficientLog(int,int):262:8934:logSum -= Math.log((double)i); |==> <NO-OP>
+163:ORU:-(double):+(double):org.apache.commons.math.util.MathUtils@cosh(double):276:9338:-x |==> +x
+164:AOR:+(double,double):%(double,double):org.apache.commons.math.util.MathUtils@cosh(double):276:9315:Math.exp(x) + Math.exp(-x) |==> Math.exp(x) % Math.exp(-x)
+165:AOR:+(double,double):*(double,double):org.apache.commons.math.util.MathUtils@cosh(double):276:9315:Math.exp(x) + Math.exp(-x) |==> Math.exp(x) * Math.exp(-x)
+166:AOR:+(double,double):-(double,double):org.apache.commons.math.util.MathUtils@cosh(double):276:9315:Math.exp(x) + Math.exp(-x) |==> Math.exp(x) - Math.exp(-x)
+167:AOR:+(double,double):/(double,double):org.apache.commons.math.util.MathUtils@cosh(double):276:9315:Math.exp(x) + Math.exp(-x) |==> Math.exp(x) / Math.exp(-x)
+168:LVR:POS:0:org.apache.commons.math.util.MathUtils@cosh(double):276:9345:2.0 |==> 0.0
+169:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@cosh(double):276:9345:2.0 |==> -2.0
+170:AOR:/(double,double):%(double,double):org.apache.commons.math.util.MathUtils@cosh(double):276:9314:(Math.exp(x) + Math.exp(-x)) / 2.0 |==> (Math.exp(x) + Math.exp(-x)) % 2.0
+171:AOR:/(double,double):*(double,double):org.apache.commons.math.util.MathUtils@cosh(double):276:9314:(Math.exp(x) + Math.exp(-x)) / 2.0 |==> (Math.exp(x) + Math.exp(-x)) * 2.0
+172:AOR:/(double,double):+(double,double):org.apache.commons.math.util.MathUtils@cosh(double):276:9314:(Math.exp(x) + Math.exp(-x)) / 2.0 |==> (Math.exp(x) + Math.exp(-x)) + 2.0
+173:AOR:/(double,double):-(double,double):org.apache.commons.math.util.MathUtils@cosh(double):276:9314:(Math.exp(x) + Math.exp(-x)) / 2.0 |==> (Math.exp(x) + Math.exp(-x)) - 2.0
+174:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.math.util.MathUtils@equals(double,double):288:9665:Double.isNaN(x) && Double.isNaN(y) |==> Double.isNaN(x) == Double.isNaN(y)
+175:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.math.util.MathUtils@equals(double,double):288:9681:Double.isNaN(x) && Double.isNaN(y) |==> false
+176:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.math.util.MathUtils@equals(double,double):288:9665:Double.isNaN(x) && Double.isNaN(y) |==> Double.isNaN(x)
+177:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.math.util.MathUtils@equals(double,double):288:9684:Double.isNaN(x) && Double.isNaN(y) |==> Double.isNaN(y)
+178:ROR:==(double,double):<=(double,double):org.apache.commons.math.util.MathUtils@equals(double,double):288:9704:x == y |==> x <= y
+179:ROR:==(double,double):>=(double,double):org.apache.commons.math.util.MathUtils@equals(double,double):288:9704:x == y |==> x >= y
+180:ROR:==(double,double):FALSE(double,double):org.apache.commons.math.util.MathUtils@equals(double,double):288:9706:x == y |==> false
+181:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.math.util.MathUtils@equals(double,double):288:9664:(Double.isNaN(x) && Double.isNaN(y)) || x == y |==> (Double.isNaN(x) && Double.isNaN(y)) != (x == y)
+182:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.math.util.MathUtils@equals(double,double):288:9664:(Double.isNaN(x) && Double.isNaN(y)) || x == y |==> (Double.isNaN(x) && Double.isNaN(y))
+183:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.math.util.MathUtils@equals(double,double):288:9704:(Double.isNaN(x) && Double.isNaN(y)) || x == y |==> x == y
+184:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.math.util.MathUtils@equals(double,double):288:9701:(Double.isNaN(x) && Double.isNaN(y)) || x == y |==> true
+185:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.math.util.MathUtils@equals(double[],double[]):302:10134:x == null |==> false
+186:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.math.util.MathUtils@equals(double[],double[]):302:10149:y == null |==> false
+187:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.math.util.MathUtils@equals(double[],double[]):302:10131:(x == null) || (y == null) |==> (x == null) != (y == null)
+188:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.math.util.MathUtils@equals(double[],double[]):302:10131:(x == null) || (y == null) |==> (x == null)
+189:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.math.util.MathUtils@equals(double[],double[]):302:10146:(x == null) || (y == null) |==> (y == null)
+190:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.math.util.MathUtils@equals(double[],double[]):302:10143:(x == null) || (y == null) |==> true
+191:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.math.util.MathUtils@equals(double[],double[]):303:10185:x == null |==> false
+192:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.math.util.MathUtils@equals(double[],double[]):303:10199:y == null |==> false
+193:LOR:^(boolean,boolean):&(boolean,boolean):org.apache.commons.math.util.MathUtils@equals(double[],double[]):303:10182:(x == null) ^ (y == null) |==> (x == null) & (y == null)
+194:LOR:^(boolean,boolean):|(boolean,boolean):org.apache.commons.math.util.MathUtils@equals(double[],double[]):303:10182:(x == null) ^ (y == null) |==> (x == null) | (y == null)
+195:ROR:!=(int,int):<(int,int):org.apache.commons.math.util.MathUtils@equals(double[],double[]):305:10232:x.length != y.length |==> x.length < y.length
+196:ROR:!=(int,int):>(int,int):org.apache.commons.math.util.MathUtils@equals(double[],double[]):305:10232:x.length != y.length |==> x.length > y.length
+197:ROR:!=(int,int):TRUE(int,int):org.apache.commons.math.util.MathUtils@equals(double[],double[]):305:10241:x.length != y.length |==> true
+198:LVR:FALSE:TRUE:org.apache.commons.math.util.MathUtils@equals(double[],double[]):306:10275:false |==> true
+199:LVR:0:POS:org.apache.commons.math.util.MathUtils@equals(double[],double[]):308:10313:0 |==> 1
+200:LVR:0:NEG:org.apache.commons.math.util.MathUtils@equals(double[],double[]):308:10313:0 |==> -1
+201:ROR:<(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@equals(double[],double[]):308:10316:i < x.length |==> i <= x.length
+202:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@equals(double[],double[]):308:10318:i < x.length |==> false
+203:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.math.util.MathUtils@equals(double[],double[]):309:10360:equals(x[i], y[i]) |==> false
+204:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.math.util.MathUtils@equals(double[],double[]):309:10360:equals(x[i], y[i]) |==> true
+205:LVR:FALSE:TRUE:org.apache.commons.math.util.MathUtils@equals(double[],double[]):310:10399:false |==> true
+206:LVR:TRUE:FALSE:org.apache.commons.math.util.MathUtils@equals(double[],double[]):313:10445:true |==> false
+207:ROR:==(long,long):<=(long,long):org.apache.commons.math.util.MathUtils@factorial(int):340:11484:result == Long.MAX_VALUE |==> result <= Long.MAX_VALUE
+208:ROR:==(long,long):FALSE(long,long):org.apache.commons.math.util.MathUtils@factorial(int):340:11491:result == Long.MAX_VALUE |==> false
+209:LVR:0:POS:org.apache.commons.math.util.MathUtils@factorialDouble(int):368:12542:0 |==> 1
+210:LVR:0:NEG:org.apache.commons.math.util.MathUtils@factorialDouble(int):368:12542:0 |==> -1
+211:ROR:<(int,int):!=(int,int):org.apache.commons.math.util.MathUtils@factorialDouble(int):368:12538:n < 0 |==> n != 0
+212:ROR:<(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@factorialDouble(int):368:12538:n < 0 |==> n <= 0
+213:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@factorialDouble(int):368:12540:n < 0 |==> false
+214:LVR:POS:0:org.apache.commons.math.util.MathUtils@factorialDouble(int):371:12686:0.5 |==> 0.0
+215:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@factorialDouble(int):371:12686:0.5 |==> -0.5
+216:AOR:+(double,double):%(double,double):org.apache.commons.math.util.MathUtils@factorialDouble(int):371:12658:Math.exp(factorialLog(n)) + 0.5 |==> Math.exp(factorialLog(n)) % 0.5
+217:AOR:+(double,double):*(double,double):org.apache.commons.math.util.MathUtils@factorialDouble(int):371:12658:Math.exp(factorialLog(n)) + 0.5 |==> Math.exp(factorialLog(n)) * 0.5
+218:AOR:+(double,double):-(double,double):org.apache.commons.math.util.MathUtils@factorialDouble(int):371:12658:Math.exp(factorialLog(n)) + 0.5 |==> Math.exp(factorialLog(n)) - 0.5
+219:AOR:+(double,double):/(double,double):org.apache.commons.math.util.MathUtils@factorialDouble(int):371:12658:Math.exp(factorialLog(n)) + 0.5 |==> Math.exp(factorialLog(n)) / 0.5
+220:LVR:0:POS:org.apache.commons.math.util.MathUtils@factorialLog(int):388:13145:0 |==> 1
+221:LVR:0:NEG:org.apache.commons.math.util.MathUtils@factorialLog(int):388:13145:0 |==> -1
+222:ROR:<(int,int):!=(int,int):org.apache.commons.math.util.MathUtils@factorialLog(int):388:13141:n < 0 |==> n != 0
+223:ROR:<(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@factorialLog(int):388:13141:n < 0 |==> n <= 0
+224:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@factorialLog(int):388:13143:n < 0 |==> false
+225:LVR:0:POS:org.apache.commons.math.util.MathUtils@factorialLog(int):391:13258:0 |==> 1
+226:LVR:0:NEG:org.apache.commons.math.util.MathUtils@factorialLog(int):391:13258:0 |==> -1
+227:LVR:POS:0:org.apache.commons.math.util.MathUtils@factorialLog(int):392:13282:2 |==> 0
+228:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@factorialLog(int):392:13282:2 |==> -2
+229:ROR:<=(int,int):<(int,int):org.apache.commons.math.util.MathUtils@factorialLog(int):392:13285:i <= n |==> i < n
+230:ROR:<=(int,int):==(int,int):org.apache.commons.math.util.MathUtils@factorialLog(int):392:13285:i <= n |==> i == n
+231:ROR:<=(int,int):TRUE(int,int):org.apache.commons.math.util.MathUtils@factorialLog(int):392:13287:i <= n |==> true
+232:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@factorialLog(int):393:13312:logSum += Math.log((double)i); |==> <NO-OP>
+233:AOR:*(int,int):%(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):412:13873:u * v |==> u % v
+234:AOR:*(int,int):+(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):412:13873:u * v |==> u + v
+235:AOR:*(int,int):-(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):412:13873:u * v |==> u - v
+236:AOR:*(int,int):/(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):412:13873:u * v |==> u / v
+237:LVR:0:POS:org.apache.commons.math.util.MathUtils@gcd(int,int):412:13882:0 |==> 1
+238:LVR:0:NEG:org.apache.commons.math.util.MathUtils@gcd(int,int):412:13882:0 |==> -1
+239:ROR:==(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):412:13873:u * v == 0 |==> u * v <= 0
+240:ROR:==(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):412:13873:u * v == 0 |==> u * v >= 0
+241:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):412:13879:u * v == 0 |==> false
+242:AOR:+(int,int):%(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):413:13907:Math.abs(u) + Math.abs(v) |==> Math.abs(u) % Math.abs(v)
+243:AOR:+(int,int):*(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):413:13907:Math.abs(u) + Math.abs(v) |==> Math.abs(u) * Math.abs(v)
+244:AOR:+(int,int):-(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):413:13907:Math.abs(u) + Math.abs(v) |==> Math.abs(u) - Math.abs(v)
+245:AOR:+(int,int):/(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):413:13907:Math.abs(u) + Math.abs(v) |==> Math.abs(u) / Math.abs(v)
+246:LVR:0:POS:org.apache.commons.math.util.MathUtils@gcd(int,int):420:14229:0 |==> 1
+247:LVR:0:NEG:org.apache.commons.math.util.MathUtils@gcd(int,int):420:14229:0 |==> -1
+248:ROR:>(int,int):!=(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):420:14225:u > 0 |==> u != 0
+249:ROR:>(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):420:14225:u > 0 |==> u >= 0
+250:ROR:>(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):420:14227:u > 0 |==> false
+251:ORU:-(int):+(int):org.apache.commons.math.util.MathUtils@gcd(int,int):421:14250:-u |==> +u
+252:ORU:-(int):~(int):org.apache.commons.math.util.MathUtils@gcd(int,int):421:14250:-u |==> ~u
+253:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@gcd(int,int):421:14246:u = -u; |==> <NO-OP>
+254:LVR:0:POS:org.apache.commons.math.util.MathUtils@gcd(int,int):423:14299:0 |==> 1
+255:LVR:0:NEG:org.apache.commons.math.util.MathUtils@gcd(int,int):423:14299:0 |==> -1
+256:ROR:>(int,int):!=(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):423:14295:v > 0 |==> v != 0
+257:ROR:>(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):423:14295:v > 0 |==> v >= 0
+258:ROR:>(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):423:14297:v > 0 |==> false
+259:ORU:-(int):+(int):org.apache.commons.math.util.MathUtils@gcd(int,int):424:14320:-v |==> +v
+260:ORU:-(int):~(int):org.apache.commons.math.util.MathUtils@gcd(int,int):424:14320:-v |==> ~v
+261:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@gcd(int,int):424:14316:v = -v; |==> <NO-OP>
+262:LVR:0:POS:org.apache.commons.math.util.MathUtils@gcd(int,int):427:14402:0 |==> 1
+263:LVR:0:NEG:org.apache.commons.math.util.MathUtils@gcd(int,int):427:14402:0 |==> -1
+264:LVR:POS:0:org.apache.commons.math.util.MathUtils@gcd(int,int):428:14425:1 |==> 0
+265:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@gcd(int,int):428:14425:1 |==> -1
+266:LOR:&(int,int):^(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):428:14421:u & 1 |==> u ^ 1
+267:LOR:&(int,int):|(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):428:14421:u & 1 |==> u | 1
+268:LVR:0:POS:org.apache.commons.math.util.MathUtils@gcd(int,int):428:14431:0 |==> 1
+269:LVR:0:NEG:org.apache.commons.math.util.MathUtils@gcd(int,int):428:14431:0 |==> -1
+270:ROR:==(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):428:14420:(u & 1) == 0 |==> (u & 1) <= 0
+271:ROR:==(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):428:14420:(u & 1) == 0 |==> (u & 1) >= 0
+272:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):428:14428:(u & 1) == 0 |==> false
+273:LVR:POS:0:org.apache.commons.math.util.MathUtils@gcd(int,int):428:14441:1 |==> 0
+274:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@gcd(int,int):428:14441:1 |==> -1
+275:LOR:&(int,int):^(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):428:14437:v & 1 |==> v ^ 1
+276:LOR:&(int,int):|(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):428:14437:v & 1 |==> v | 1
+277:LVR:0:POS:org.apache.commons.math.util.MathUtils@gcd(int,int):428:14447:0 |==> 1
+278:LVR:0:NEG:org.apache.commons.math.util.MathUtils@gcd(int,int):428:14447:0 |==> -1
+279:ROR:==(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):428:14436:(v & 1) == 0 |==> (v & 1) <= 0
+280:ROR:==(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):428:14436:(v & 1) == 0 |==> (v & 1) >= 0
+281:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):428:14444:(v & 1) == 0 |==> false
+282:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.math.util.MathUtils@gcd(int,int):428:14420:(u & 1) == 0 && (v & 1) == 0 |==> (u & 1) == 0 == ((v & 1) == 0)
+283:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.math.util.MathUtils@gcd(int,int):428:14433:(u & 1) == 0 && (v & 1) == 0 |==> false
+284:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.math.util.MathUtils@gcd(int,int):428:14420:(u & 1) == 0 && (v & 1) == 0 |==> (u & 1) == 0
+285:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.math.util.MathUtils@gcd(int,int):428:14436:(u & 1) == 0 && (v & 1) == 0 |==> (v & 1) == 0
+286:LVR:POS:0:org.apache.commons.math.util.MathUtils@gcd(int,int):428:14456:31 |==> 0
+287:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@gcd(int,int):428:14456:31 |==> -31
+288:ROR:<(int,int):!=(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):428:14452:k < 31 |==> k != 31
+289:ROR:<(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):428:14452:k < 31 |==> k <= 31
+290:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):428:14454:k < 31 |==> false
+291:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.math.util.MathUtils@gcd(int,int):428:14420:(u & 1) == 0 && (v & 1) == 0 && k < 31 |==> ((u & 1) == 0 && (v & 1) == 0) == k < 31
+292:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.math.util.MathUtils@gcd(int,int):428:14449:(u & 1) == 0 && (v & 1) == 0 && k < 31 |==> false
+293:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.math.util.MathUtils@gcd(int,int):428:14420:(u & 1) == 0 && (v & 1) == 0 && k < 31 |==> (u & 1) == 0 && (v & 1) == 0
+294:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.math.util.MathUtils@gcd(int,int):428:14452:(u & 1) == 0 && (v & 1) == 0 && k < 31 |==> k < 31
+295:LVR:POS:0:org.apache.commons.math.util.MathUtils@gcd(int,int):430:14576:2 |==> 0
+296:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@gcd(int,int):430:14576:2 |==> -2
+297:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@gcd(int,int):430:14571:u /= 2; |==> <NO-OP>
+298:LVR:POS:0:org.apache.commons.math.util.MathUtils@gcd(int,int):431:14596:2 |==> 0
+299:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@gcd(int,int):431:14596:2 |==> -2
+300:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@gcd(int,int):431:14591:v /= 2; |==> <NO-OP>
+301:STD:<INC>:<NO-OP>:org.apache.commons.math.util.MathUtils@gcd(int,int):432:14611:k++; |==> <NO-OP>
+302:LVR:POS:0:org.apache.commons.math.util.MathUtils@gcd(int,int):434:14661:31 |==> 0
+303:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@gcd(int,int):434:14661:31 |==> -31
+304:ROR:==(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):434:14656:k == 31 |==> k <= 31
+305:ROR:==(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):434:14656:k == 31 |==> k >= 31
+306:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):434:14658:k == 31 |==> false
+307:LVR:POS:0:org.apache.commons.math.util.MathUtils@gcd(int,int):439:14863:1 |==> 0
+308:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@gcd(int,int):439:14863:1 |==> -1
+309:LOR:&(int,int):^(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):439:14859:u & 1 |==> u ^ 1
+310:LOR:&(int,int):|(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):439:14859:u & 1 |==> u | 1
+311:LVR:POS:0:org.apache.commons.math.util.MathUtils@gcd(int,int):439:14869:1 |==> 0
+312:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@gcd(int,int):439:14869:1 |==> -1
+313:ROR:==(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):439:14858:(u & 1) == 1 |==> (u & 1) <= 1
+314:ROR:==(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):439:14858:(u & 1) == 1 |==> (u & 1) >= 1
+315:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):439:14866:(u & 1) == 1 |==> false
+316:ORU:-(int):+(int):org.apache.commons.math.util.MathUtils@gcd(int,int):439:14878:-(u / 2) |==> +(u / 2)
+317:ORU:-(int):~(int):org.apache.commons.math.util.MathUtils@gcd(int,int):439:14878:-(u / 2) |==> ~(u / 2)
+318:LVR:POS:0:org.apache.commons.math.util.MathUtils@gcd(int,int):439:14884:2 |==> 0
+319:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@gcd(int,int):439:14884:2 |==> -2
+320:AOR:/(int,int):%(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):439:14880:u / 2 |==> u % 2
+321:AOR:/(int,int):*(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):439:14880:u / 2 |==> u * 2
+322:AOR:/(int,int):+(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):439:14880:u / 2 |==> u + 2
+323:AOR:/(int,int):-(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):439:14880:u / 2 |==> u - 2
+324:LVR:POS:0:org.apache.commons.math.util.MathUtils@gcd(int,int):445:15136:1 |==> 0
+325:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@gcd(int,int):445:15136:1 |==> -1
+326:LOR:&(int,int):^(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):445:15132:t & 1 |==> t ^ 1
+327:LOR:&(int,int):|(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):445:15132:t & 1 |==> t | 1
+328:LVR:0:POS:org.apache.commons.math.util.MathUtils@gcd(int,int):445:15142:0 |==> 1
+329:LVR:0:NEG:org.apache.commons.math.util.MathUtils@gcd(int,int):445:15142:0 |==> -1
+330:ROR:==(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):445:15131:(t & 1) == 0 |==> (t & 1) <= 0
+331:ROR:==(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):445:15131:(t & 1) == 0 |==> (t & 1) >= 0
+332:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):445:15139:(t & 1) == 0 |==> false
+333:LVR:POS:0:org.apache.commons.math.util.MathUtils@gcd(int,int):446:15189:2 |==> 0
+334:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@gcd(int,int):446:15189:2 |==> -2
+335:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@gcd(int,int):446:15184:t /= 2; |==> <NO-OP>
+336:LVR:0:POS:org.apache.commons.math.util.MathUtils@gcd(int,int):449:15278:0 |==> 1
+337:LVR:0:NEG:org.apache.commons.math.util.MathUtils@gcd(int,int):449:15278:0 |==> -1
+338:ROR:>(int,int):!=(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):449:15274:t > 0 |==> t != 0
+339:ROR:>(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):449:15274:t > 0 |==> t >= 0
+340:ROR:>(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):449:15276:t > 0 |==> false
+341:ORU:-(int):+(int):org.apache.commons.math.util.MathUtils@gcd(int,int):450:15303:-t |==> +t
+342:ORU:-(int):~(int):org.apache.commons.math.util.MathUtils@gcd(int,int):450:15303:-t |==> ~t
+343:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@gcd(int,int):450:15299:u = -t; |==> <NO-OP>
+344:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@gcd(int,int):452:15344:v = t; |==> <NO-OP>
+345:AOR:-(int,int):%(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):455:15446:v - u |==> v % u
+346:AOR:-(int,int):*(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):455:15446:v - u |==> v * u
+347:AOR:-(int,int):+(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):455:15446:v - u |==> v + u
+348:AOR:-(int,int):/(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):455:15446:v - u |==> v / u
+349:LVR:POS:0:org.apache.commons.math.util.MathUtils@gcd(int,int):455:15455:2 |==> 0
+350:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@gcd(int,int):455:15455:2 |==> -2
+351:AOR:/(int,int):%(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):455:15445:(v - u) / 2 |==> (v - u) % 2
+352:AOR:/(int,int):*(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):455:15445:(v - u) / 2 |==> (v - u) * 2
+353:AOR:/(int,int):+(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):455:15445:(v - u) / 2 |==> (v - u) + 2
+354:AOR:/(int,int):-(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):455:15445:(v - u) / 2 |==> (v - u) - 2
+355:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@gcd(int,int):455:15441:t = (v - u) / 2; |==> <NO-OP>
+356:LVR:0:POS:org.apache.commons.math.util.MathUtils@gcd(int,int):458:15580:0 |==> 1
+357:LVR:0:NEG:org.apache.commons.math.util.MathUtils@gcd(int,int):458:15580:0 |==> -1
+358:ROR:!=(int,int):<(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):458:15575:t != 0 |==> t < 0
+359:ROR:!=(int,int):>(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):458:15575:t != 0 |==> t > 0
+360:ROR:!=(int,int):TRUE(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):458:15577:t != 0 |==> true
+361:ORU:-(int):+(int):org.apache.commons.math.util.MathUtils@gcd(int,int):459:15599:-u |==> +u
+362:ORU:-(int):~(int):org.apache.commons.math.util.MathUtils@gcd(int,int):459:15599:-u |==> ~u
+363:LVR:POS:0:org.apache.commons.math.util.MathUtils@gcd(int,int):459:15605:1 |==> 0
+364:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@gcd(int,int):459:15605:1 |==> -1
+365:SOR:<<(int,int):>>(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):459:15605:1 << k |==> 1 >> k
+366:SOR:<<(int,int):>>>(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):459:15605:1 << k |==> 1 >>> k
+367:AOR:*(int,int):%(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):459:15599:-u * (1 << k) |==> -u % (1 << k)
+368:AOR:*(int,int):+(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):459:15599:-u * (1 << k) |==> -u + (1 << k)
+369:AOR:*(int,int):-(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):459:15599:-u * (1 << k) |==> -u - (1 << k)
+370:AOR:*(int,int):/(int,int):org.apache.commons.math.util.MathUtils@gcd(int,int):459:15599:-u * (1 << k) |==> -u / (1 << k)
+371:ROR:>=(int,int):==(int,int):org.apache.commons.math.util.MathUtils@indicator(byte):491:16484:x >= ZB |==> x == ZB
+372:ROR:>=(int,int):>(int,int):org.apache.commons.math.util.MathUtils@indicator(byte):491:16484:x >= ZB |==> x > ZB
+373:ROR:>=(int,int):TRUE(int,int):org.apache.commons.math.util.MathUtils@indicator(byte):491:16486:x >= ZB |==> true
+374:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.math.util.MathUtils@indicator(double):503:16875:Double.isNaN(x) |==> false
+375:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.math.util.MathUtils@indicator(double):503:16875:Double.isNaN(x) |==> true
+376:LVR:0:POS:org.apache.commons.math.util.MathUtils@indicator(double):506:16944:0.0 |==> 1.0
+377:LVR:0:NEG:org.apache.commons.math.util.MathUtils@indicator(double):506:16944:0.0 |==> -1.0
+378:ROR:>=(double,double):==(double,double):org.apache.commons.math.util.MathUtils@indicator(double):506:16939:x >= 0.0 |==> x == 0.0
+379:ROR:>=(double,double):>(double,double):org.apache.commons.math.util.MathUtils@indicator(double):506:16939:x >= 0.0 |==> x > 0.0
+380:ROR:>=(double,double):TRUE(double,double):org.apache.commons.math.util.MathUtils@indicator(double):506:16941:x >= 0.0 |==> true
+381:LVR:POS:0:org.apache.commons.math.util.MathUtils@indicator(double):506:16951:1.0 |==> 0.0
+382:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@indicator(double):506:16951:1.0 |==> -1.0
+383:ORU:-(double):+(double):org.apache.commons.math.util.MathUtils@indicator(double):506:16957:-1.0 |==> +1.0
+384:LVR:POS:0:org.apache.commons.math.util.MathUtils@indicator(double):506:16958:1.0 |==> 0.0
+385:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@indicator(double):506:16958:1.0 |==> -1.0
+386:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.math.util.MathUtils@indicator(float):517:17316:Float.isNaN(x) |==> false
+387:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.math.util.MathUtils@indicator(float):517:17316:Float.isNaN(x) |==> true
+388:LVR:0:POS:org.apache.commons.math.util.MathUtils@indicator(float):520:17384:0.0F |==> 1.0F
+389:LVR:0:NEG:org.apache.commons.math.util.MathUtils@indicator(float):520:17384:0.0F |==> -1.0F
+390:ROR:>=(float,float):==(float,float):org.apache.commons.math.util.MathUtils@indicator(float):520:17379:x >= 0.0F |==> x == 0.0F
+391:ROR:>=(float,float):>(float,float):org.apache.commons.math.util.MathUtils@indicator(float):520:17379:x >= 0.0F |==> x > 0.0F
+392:ROR:>=(float,float):TRUE(float,float):org.apache.commons.math.util.MathUtils@indicator(float):520:17381:x >= 0.0F |==> true
+393:LVR:POS:0:org.apache.commons.math.util.MathUtils@indicator(float):520:17392:1.0F |==> 0.0F
+394:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@indicator(float):520:17392:1.0F |==> -1.0F
+395:ORU:-(float):+(float):org.apache.commons.math.util.MathUtils@indicator(float):520:17399:-1.0F |==> +1.0F
+396:LVR:POS:0:org.apache.commons.math.util.MathUtils@indicator(float):520:17400:1.0F |==> 0.0F
+397:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@indicator(float):520:17400:1.0F |==> -1.0F
+398:LVR:0:POS:org.apache.commons.math.util.MathUtils@indicator(int):530:17668:0 |==> 1
+399:LVR:0:NEG:org.apache.commons.math.util.MathUtils@indicator(int):530:17668:0 |==> -1
+400:ROR:>=(int,int):==(int,int):org.apache.commons.math.util.MathUtils@indicator(int):530:17663:x >= 0 |==> x == 0
+401:ROR:>=(int,int):>(int,int):org.apache.commons.math.util.MathUtils@indicator(int):530:17663:x >= 0 |==> x > 0
+402:ROR:>=(int,int):TRUE(int,int):org.apache.commons.math.util.MathUtils@indicator(int):530:17665:x >= 0 |==> true
+403:LVR:POS:0:org.apache.commons.math.util.MathUtils@indicator(int):530:17673:1 |==> 0
+404:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@indicator(int):530:17673:1 |==> -1
+405:LVR:NEG:0:org.apache.commons.math.util.MathUtils@indicator(int):530:17677:-1 |==> 0
+406:LVR:NEG:POS:org.apache.commons.math.util.MathUtils@indicator(int):530:17677:-1 |==> 1
+407:LVR:0:POS:org.apache.commons.math.util.MathUtils@indicator(long):540:17949:0L |==> 1L
+408:LVR:0:NEG:org.apache.commons.math.util.MathUtils@indicator(long):540:17949:0L |==> -1L
+409:ROR:>=(long,long):==(long,long):org.apache.commons.math.util.MathUtils@indicator(long):540:17944:x >= 0L |==> x == 0L
+410:ROR:>=(long,long):>(long,long):org.apache.commons.math.util.MathUtils@indicator(long):540:17944:x >= 0L |==> x > 0L
+411:ROR:>=(long,long):TRUE(long,long):org.apache.commons.math.util.MathUtils@indicator(long):540:17946:x >= 0L |==> true
+412:LVR:POS:0:org.apache.commons.math.util.MathUtils@indicator(long):540:17955:1L |==> 0L
+413:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@indicator(long):540:17955:1L |==> -1L
+414:LVR:NEG:0:org.apache.commons.math.util.MathUtils@indicator(long):540:17960:-1L |==> 0L
+415:LVR:NEG:POS:org.apache.commons.math.util.MathUtils@indicator(long):540:17960:-1L |==> 1L
+416:ROR:>=(int,int):==(int,int):org.apache.commons.math.util.MathUtils@indicator(short):551:18271:x >= ZS |==> x == ZS
+417:ROR:>=(int,int):>(int,int):org.apache.commons.math.util.MathUtils@indicator(short):551:18271:x >= ZS |==> x > ZS
+418:ROR:>=(int,int):TRUE(int,int):org.apache.commons.math.util.MathUtils@indicator(short):551:18273:x >= ZS |==> true
+419:AOR:/(int,int):%(int,int):org.apache.commons.math.util.MathUtils@lcm(int,int):564:18706:a / gcd(a, b) |==> a % gcd(a, b)
+420:AOR:/(int,int):*(int,int):org.apache.commons.math.util.MathUtils@lcm(int,int):564:18706:a / gcd(a, b) |==> a * gcd(a, b)
+421:AOR:/(int,int):+(int,int):org.apache.commons.math.util.MathUtils@lcm(int,int):564:18706:a / gcd(a, b) |==> a + gcd(a, b)
+422:AOR:/(int,int):-(int,int):org.apache.commons.math.util.MathUtils@lcm(int,int):564:18706:a / gcd(a, b) |==> a - gcd(a, b)
+423:AOR:/(double,double):%(double,double):org.apache.commons.math.util.MathUtils@log(double,double):584:19544:Math.log(x) / Math.log(base) |==> Math.log(x) % Math.log(base)
+424:AOR:/(double,double):*(double,double):org.apache.commons.math.util.MathUtils@log(double,double):584:19544:Math.log(x) / Math.log(base) |==> Math.log(x) * Math.log(base)
+425:AOR:/(double,double):+(double,double):org.apache.commons.math.util.MathUtils@log(double,double):584:19544:Math.log(x) / Math.log(base) |==> Math.log(x) + Math.log(base)
+426:AOR:/(double,double):-(double,double):org.apache.commons.math.util.MathUtils@log(double,double):584:19544:Math.log(x) / Math.log(base) |==> Math.log(x) - Math.log(base)
+427:AOR:*(long,long):%(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(int,int):598:19932:((long)x) * ((long)y) |==> ((long)x) % ((long)y)
+428:AOR:*(long,long):+(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(int,int):598:19932:((long)x) * ((long)y) |==> ((long)x) + ((long)y)
+429:AOR:*(long,long):-(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(int,int):598:19932:((long)x) * ((long)y) |==> ((long)x) - ((long)y)
+430:AOR:*(long,long):/(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(int,int):598:19932:((long)x) * ((long)y) |==> ((long)x) / ((long)y)
+431:ROR:<(long,long):!=(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(int,int):599:19967:m < Integer.MIN_VALUE |==> m != Integer.MIN_VALUE
+432:ROR:<(long,long):<=(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(int,int):599:19967:m < Integer.MIN_VALUE |==> m <= Integer.MIN_VALUE
+433:ROR:<(long,long):FALSE(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(int,int):599:19969:m < Integer.MIN_VALUE |==> false
+434:ROR:>(long,long):!=(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(int,int):599:19992:m > Integer.MAX_VALUE |==> m != Integer.MAX_VALUE
+435:ROR:>(long,long):>=(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(int,int):599:19992:m > Integer.MAX_VALUE |==> m >= Integer.MAX_VALUE
+436:ROR:>(long,long):FALSE(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(int,int):599:19994:m > Integer.MAX_VALUE |==> false
+437:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.math.util.MathUtils@mulAndCheck(int,int):599:19967:m < Integer.MIN_VALUE || m > Integer.MAX_VALUE |==> m < Integer.MIN_VALUE
+438:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.math.util.MathUtils@mulAndCheck(int,int):599:19992:m < Integer.MIN_VALUE || m > Integer.MAX_VALUE |==> m > Integer.MAX_VALUE
+439:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.math.util.MathUtils@mulAndCheck(int,int):599:19989:m < Integer.MIN_VALUE || m > Integer.MAX_VALUE |==> true
+440:ROR:>(long,long):!=(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):618:20544:a > b |==> a != b
+441:ROR:>(long,long):>=(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):618:20544:a > b |==> a >= b
+442:ROR:>(long,long):FALSE(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):618:20546:a > b |==> false
+443:LVR:0:POS:org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):622:20679:0 |==> 1
+444:LVR:0:NEG:org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):622:20679:0 |==> -1
+445:ROR:<(long,long):!=(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):622:20675:a < 0 |==> a != 0
+446:ROR:<(long,long):<=(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):622:20675:a < 0 |==> a <= 0
+447:ROR:<(long,long):FALSE(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):622:20677:a < 0 |==> false
+448:LVR:0:POS:org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):623:20708:0 |==> 1
+449:LVR:0:NEG:org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):623:20708:0 |==> -1
+450:ROR:<(long,long):!=(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):623:20704:b < 0 |==> b != 0
+451:ROR:<(long,long):<=(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):623:20704:b < 0 |==> b <= 0
+452:ROR:<(long,long):FALSE(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):623:20706:b < 0 |==> false
+453:AOR:/(long,long):%(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):625:20821:Long.MAX_VALUE / b |==> Long.MAX_VALUE % b
+454:AOR:/(long,long):*(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):625:20821:Long.MAX_VALUE / b |==> Long.MAX_VALUE * b
+455:AOR:/(long,long):+(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):625:20821:Long.MAX_VALUE / b |==> Long.MAX_VALUE + b
+456:AOR:/(long,long):-(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):625:20821:Long.MAX_VALUE / b |==> Long.MAX_VALUE - b
+457:ROR:>=(long,long):==(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):625:20816:a >= Long.MAX_VALUE / b |==> a == Long.MAX_VALUE / b
+458:ROR:>=(long,long):>(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):625:20816:a >= Long.MAX_VALUE / b |==> a > Long.MAX_VALUE / b
+459:ROR:>=(long,long):TRUE(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):625:20818:a >= Long.MAX_VALUE / b |==> true
+460:AOR:*(long,long):%(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):626:20873:a * b |==> a % b
+461:AOR:*(long,long):+(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):626:20873:a * b |==> a + b
+462:AOR:*(long,long):-(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):626:20873:a * b |==> a - b
+463:AOR:*(long,long):/(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):626:20873:a * b |==> a / b
+464:LVR:0:POS:org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):630:21022:0 |==> 1
+465:LVR:0:NEG:org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):630:21022:0 |==> -1
+466:ROR:>(long,long):!=(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):630:21018:b > 0 |==> b != 0
+467:ROR:>(long,long):>=(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):630:21018:b > 0 |==> b >= 0
+468:ROR:>(long,long):FALSE(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):630:21020:b > 0 |==> false
+469:AOR:/(long,long):%(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):632:21130:Long.MIN_VALUE / b |==> Long.MIN_VALUE % b
+470:AOR:/(long,long):*(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):632:21130:Long.MIN_VALUE / b |==> Long.MIN_VALUE * b
+471:AOR:/(long,long):+(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):632:21130:Long.MIN_VALUE / b |==> Long.MIN_VALUE + b
+472:AOR:/(long,long):-(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):632:21130:Long.MIN_VALUE / b |==> Long.MIN_VALUE - b
+473:ROR:<=(long,long):<(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):632:21130:Long.MIN_VALUE / b <= a |==> Long.MIN_VALUE / b < a
+474:ROR:<=(long,long):==(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):632:21130:Long.MIN_VALUE / b <= a |==> Long.MIN_VALUE / b == a
+475:ROR:<=(long,long):TRUE(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):632:21149:Long.MIN_VALUE / b <= a |==> true
+476:AOR:*(long,long):%(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):633:21187:a * b |==> a % b
+477:AOR:*(long,long):+(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):633:21187:a * b |==> a + b
+478:AOR:*(long,long):-(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):633:21187:a * b |==> a - b
+479:AOR:*(long,long):/(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):633:21187:a * b |==> a / b
+480:LVR:0:POS:org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):640:21418:0 |==> 1
+481:LVR:0:NEG:org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):640:21418:0 |==> -1
+482:LVR:0:POS:org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):642:21466:0 |==> 1
+483:LVR:0:NEG:org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):642:21466:0 |==> -1
+484:ROR:>(long,long):!=(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):642:21462:a > 0 |==> a != 0
+485:ROR:>(long,long):>=(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):642:21462:a > 0 |==> a >= 0
+486:ROR:>(long,long):FALSE(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):642:21464:a > 0 |==> false
+487:AOR:/(long,long):%(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):647:21652:Long.MAX_VALUE / b |==> Long.MAX_VALUE % b
+488:AOR:/(long,long):*(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):647:21652:Long.MAX_VALUE / b |==> Long.MAX_VALUE * b
+489:AOR:/(long,long):+(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):647:21652:Long.MAX_VALUE / b |==> Long.MAX_VALUE + b
+490:AOR:/(long,long):-(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):647:21652:Long.MAX_VALUE / b |==> Long.MAX_VALUE - b
+491:ROR:<=(long,long):<(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):647:21647:a <= Long.MAX_VALUE / b |==> a < Long.MAX_VALUE / b
+492:ROR:<=(long,long):==(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):647:21647:a <= Long.MAX_VALUE / b |==> a == Long.MAX_VALUE / b
+493:ROR:<=(long,long):TRUE(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):647:21649:a <= Long.MAX_VALUE / b |==> true
+494:AOR:*(long,long):%(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):648:21700:a * b |==> a % b
+495:AOR:*(long,long):+(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):648:21700:a * b |==> a + b
+496:AOR:*(long,long):-(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):648:21700:a * b |==> a - b
+497:AOR:*(long,long):/(long,long):org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):648:21700:a * b |==> a / b
+498:LVR:0:POS:org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):654:21882:0 |==> 1
+499:LVR:0:NEG:org.apache.commons.math.util.MathUtils@mulAndCheck(long,long):654:21882:0 |==> -1
+500:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.math.util.MathUtils@nextAfter(double,double):680:22819:Double.isNaN(d) || Double.isInfinite(d) |==> Double.isNaN(d) != Double.isInfinite(d)
+501:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.math.util.MathUtils@nextAfter(double,double):680:22819:Double.isNaN(d) || Double.isInfinite(d) |==> Double.isNaN(d)
+502:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.math.util.MathUtils@nextAfter(double,double):680:22838:Double.isNaN(d) || Double.isInfinite(d) |==> Double.isInfinite(d)
+503:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.math.util.MathUtils@nextAfter(double,double):680:22835:Double.isNaN(d) || Double.isInfinite(d) |==> true
+504:LVR:0:POS:org.apache.commons.math.util.MathUtils@nextAfter(double,double):682:22912:0 |==> 1
+505:LVR:0:NEG:org.apache.commons.math.util.MathUtils@nextAfter(double,double):682:22912:0 |==> -1
+506:ROR:==(double,double):<=(double,double):org.apache.commons.math.util.MathUtils@nextAfter(double,double):682:22907:d == 0 |==> d <= 0
+507:ROR:==(double,double):>=(double,double):org.apache.commons.math.util.MathUtils@nextAfter(double,double):682:22907:d == 0 |==> d >= 0
+508:ROR:==(double,double):FALSE(double,double):org.apache.commons.math.util.MathUtils@nextAfter(double,double):682:22909:d == 0 |==> false
+509:LVR:0:POS:org.apache.commons.math.util.MathUtils@nextAfter(double,double):683:22953:0 |==> 1
+510:LVR:0:NEG:org.apache.commons.math.util.MathUtils@nextAfter(double,double):683:22953:0 |==> -1
+511:ROR:<(double,double):!=(double,double):org.apache.commons.math.util.MathUtils@nextAfter(double,double):683:22941:direction < 0 |==> direction != 0
+512:ROR:<(double,double):<=(double,double):org.apache.commons.math.util.MathUtils@nextAfter(double,double):683:22941:direction < 0 |==> direction <= 0
+513:ROR:<(double,double):FALSE(double,double):org.apache.commons.math.util.MathUtils@nextAfter(double,double):683:22951:direction < 0 |==> false
+514:ORU:-(double):+(double):org.apache.commons.math.util.MathUtils@nextAfter(double,double):683:22958:-Double.MIN_VALUE |==> +Double.MIN_VALUE
+515:LVR:NEG:0:org.apache.commons.math.util.MathUtils@nextAfter(double,double):690:23249:-9223372036854775808L |==> 0L
+516:LOR:&(long,long):^(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):690:23242:bits & -9223372036854775808L |==> bits ^ -9223372036854775808L
+517:LOR:&(long,long):|(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):690:23242:bits & -9223372036854775808L |==> bits | -9223372036854775808L
+518:LVR:POS:0:org.apache.commons.math.util.MathUtils@nextAfter(double,double):691:23301:9218868437227405312L |==> 0L
+519:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@nextAfter(double,double):691:23301:9218868437227405312L |==> -9218868437227405312L
+520:LOR:&(long,long):^(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):691:23294:bits & 9218868437227405312L |==> bits ^ 9218868437227405312L
+521:LOR:&(long,long):|(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):691:23294:bits & 9218868437227405312L |==> bits | 9218868437227405312L
+522:LVR:POS:0:org.apache.commons.math.util.MathUtils@nextAfter(double,double):692:23353:4503599627370495L |==> 0L
+523:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@nextAfter(double,double):692:23353:4503599627370495L |==> -4503599627370495L
+524:LOR:&(long,long):^(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):692:23346:bits & 4503599627370495L |==> bits ^ 4503599627370495L
+525:LOR:&(long,long):|(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):692:23346:bits & 4503599627370495L |==> bits | 4503599627370495L
+526:AOR:-(double,double):%(double,double):org.apache.commons.math.util.MathUtils@nextAfter(double,double):694:23392:direction - d |==> direction % d
+527:AOR:-(double,double):*(double,double):org.apache.commons.math.util.MathUtils@nextAfter(double,double):694:23392:direction - d |==> direction * d
+528:AOR:-(double,double):+(double,double):org.apache.commons.math.util.MathUtils@nextAfter(double,double):694:23392:direction - d |==> direction + d
+529:AOR:-(double,double):/(double,double):org.apache.commons.math.util.MathUtils@nextAfter(double,double):694:23392:direction - d |==> direction / d
+530:AOR:*(double,double):%(double,double):org.apache.commons.math.util.MathUtils@nextAfter(double,double):694:23387:d * (direction - d) |==> d % (direction - d)
+531:AOR:*(double,double):+(double,double):org.apache.commons.math.util.MathUtils@nextAfter(double,double):694:23387:d * (direction - d) |==> d + (direction - d)
+532:AOR:*(double,double):-(double,double):org.apache.commons.math.util.MathUtils@nextAfter(double,double):694:23387:d * (direction - d) |==> d - (direction - d)
+533:AOR:*(double,double):/(double,double):org.apache.commons.math.util.MathUtils@nextAfter(double,double):694:23387:d * (direction - d) |==> d / (direction - d)
+534:LVR:0:POS:org.apache.commons.math.util.MathUtils@nextAfter(double,double):694:23410:0 |==> 1
+535:LVR:0:NEG:org.apache.commons.math.util.MathUtils@nextAfter(double,double):694:23410:0 |==> -1
+536:ROR:>=(double,double):==(double,double):org.apache.commons.math.util.MathUtils@nextAfter(double,double):694:23387:d * (direction - d) >= 0 |==> d * (direction - d) == 0
+537:ROR:>=(double,double):>(double,double):org.apache.commons.math.util.MathUtils@nextAfter(double,double):694:23387:d * (direction - d) >= 0 |==> d * (direction - d) > 0
+538:ROR:>=(double,double):TRUE(double,double):org.apache.commons.math.util.MathUtils@nextAfter(double,double):694:23407:d * (direction - d) >= 0 |==> true
+539:LVR:POS:0:org.apache.commons.math.util.MathUtils@nextAfter(double,double):696:23498:4503599627370495L |==> 0L
+540:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@nextAfter(double,double):696:23498:4503599627370495L |==> -4503599627370495L
+541:ROR:==(long,long):<=(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):696:23486:mantissa == 4503599627370495L |==> mantissa <= 4503599627370495L
+542:ROR:==(long,long):>=(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):696:23486:mantissa == 4503599627370495L |==> mantissa >= 4503599627370495L
+543:ROR:==(long,long):FALSE(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):696:23495:mantissa == 4503599627370495L |==> false
+544:LVR:POS:0:org.apache.commons.math.util.MathUtils@nextAfter(double,double):698:23635:4503599627370496L |==> 0L
+545:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@nextAfter(double,double):698:23635:4503599627370496L |==> -4503599627370496L
+546:AOR:+(long,long):%(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):698:23624:exponent + 4503599627370496L |==> exponent % 4503599627370496L
+547:AOR:+(long,long):*(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):698:23624:exponent + 4503599627370496L |==> exponent * 4503599627370496L
+548:AOR:+(long,long):-(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):698:23624:exponent + 4503599627370496L |==> exponent - 4503599627370496L
+549:AOR:+(long,long):/(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):698:23624:exponent + 4503599627370496L |==> exponent / 4503599627370496L
+550:LOR:|(long,long):&(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):697:23576:sign | (exponent + 4503599627370496L) |==> sign & (exponent + 4503599627370496L)
+551:LOR:|(long,long):^(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):697:23576:sign | (exponent + 4503599627370496L) |==> sign ^ (exponent + 4503599627370496L)
+552:LOR:|(long,long):&(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):700:23738:sign | exponent |==> sign & exponent
+553:LOR:|(long,long):^(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):700:23738:sign | exponent |==> sign ^ exponent
+554:LVR:POS:0:org.apache.commons.math.util.MathUtils@nextAfter(double,double):701:23808:1 |==> 0
+555:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@nextAfter(double,double):701:23808:1 |==> -1
+556:AOR:+(long,long):%(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):701:23797:mantissa + 1 |==> mantissa % 1
+557:AOR:+(long,long):*(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):701:23797:mantissa + 1 |==> mantissa * 1
+558:AOR:+(long,long):-(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):701:23797:mantissa + 1 |==> mantissa - 1
+559:AOR:+(long,long):/(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):701:23797:mantissa + 1 |==> mantissa / 1
+560:LOR:|(long,long):&(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):700:23738:sign | exponent | (mantissa + 1) |==> (sign | exponent) & (mantissa + 1)
+561:LOR:|(long,long):^(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):700:23738:sign | exponent | (mantissa + 1) |==> (sign | exponent) ^ (mantissa + 1)
+562:LVR:0:POS:org.apache.commons.math.util.MathUtils@nextAfter(double,double):705:23931:0L |==> 1L
+563:LVR:0:NEG:org.apache.commons.math.util.MathUtils@nextAfter(double,double):705:23931:0L |==> -1L
+564:ROR:==(long,long):<=(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):705:23919:mantissa == 0L |==> mantissa <= 0L
+565:ROR:==(long,long):>=(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):705:23919:mantissa == 0L |==> mantissa >= 0L
+566:ROR:==(long,long):FALSE(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):705:23928:mantissa == 0L |==> false
+567:LVR:POS:0:org.apache.commons.math.util.MathUtils@nextAfter(double,double):707:24051:4503599627370496L |==> 0L
+568:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@nextAfter(double,double):707:24051:4503599627370496L |==> -4503599627370496L
+569:AOR:-(long,long):%(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):707:24040:exponent - 4503599627370496L |==> exponent % 4503599627370496L
+570:AOR:-(long,long):*(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):707:24040:exponent - 4503599627370496L |==> exponent * 4503599627370496L
+571:AOR:-(long,long):+(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):707:24040:exponent - 4503599627370496L |==> exponent + 4503599627370496L
+572:AOR:-(long,long):/(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):707:24040:exponent - 4503599627370496L |==> exponent / 4503599627370496L
+573:LOR:|(long,long):&(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):706:23992:sign | (exponent - 4503599627370496L) |==> sign & (exponent - 4503599627370496L)
+574:LOR:|(long,long):^(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):706:23992:sign | (exponent - 4503599627370496L) |==> sign ^ (exponent - 4503599627370496L)
+575:LVR:POS:0:org.apache.commons.math.util.MathUtils@nextAfter(double,double):708:24114:4503599627370495L |==> 0L
+576:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@nextAfter(double,double):708:24114:4503599627370495L |==> -4503599627370495L
+577:LOR:|(long,long):&(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):706:23992:sign | (exponent - 4503599627370496L) | 4503599627370495L |==> (sign | (exponent - 4503599627370496L)) & 4503599627370495L
+578:LOR:|(long,long):^(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):706:23992:sign | (exponent - 4503599627370496L) | 4503599627370495L |==> (sign | (exponent - 4503599627370496L)) ^ 4503599627370495L
+579:LOR:|(long,long):&(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):710:24216:sign | exponent |==> sign & exponent
+580:LOR:|(long,long):^(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):710:24216:sign | exponent |==> sign ^ exponent
+581:LVR:POS:0:org.apache.commons.math.util.MathUtils@nextAfter(double,double):711:24286:1 |==> 0
+582:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@nextAfter(double,double):711:24286:1 |==> -1
+583:AOR:-(long,long):%(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):711:24275:mantissa - 1 |==> mantissa % 1
+584:AOR:-(long,long):*(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):711:24275:mantissa - 1 |==> mantissa * 1
+585:AOR:-(long,long):+(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):711:24275:mantissa - 1 |==> mantissa + 1
+586:AOR:-(long,long):/(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):711:24275:mantissa - 1 |==> mantissa / 1
+587:LOR:|(long,long):&(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):710:24216:sign | exponent | (mantissa - 1) |==> (sign | exponent) & (mantissa - 1)
+588:LOR:|(long,long):^(long,long):org.apache.commons.math.util.MathUtils@nextAfter(double,double):710:24216:sign | exponent | (mantissa - 1) |==> (sign | exponent) ^ (mantissa - 1)
+589:LVR:0:POS:org.apache.commons.math.util.MathUtils@scalb(double,int):729:24792:0 |==> 1
+590:LVR:0:NEG:org.apache.commons.math.util.MathUtils@scalb(double,int):729:24792:0 |==> -1
+591:ROR:==(double,double):<=(double,double):org.apache.commons.math.util.MathUtils@scalb(double,int):729:24787:d == 0 |==> d <= 0
+592:ROR:==(double,double):>=(double,double):org.apache.commons.math.util.MathUtils@scalb(double,int):729:24787:d == 0 |==> d >= 0
+593:ROR:==(double,double):FALSE(double,double):org.apache.commons.math.util.MathUtils@scalb(double,int):729:24789:d == 0 |==> false
+594:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.math.util.MathUtils@scalb(double,int):729:24786:(d == 0) || Double.isNaN(d) |==> (d == 0) != Double.isNaN(d)
+595:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.math.util.MathUtils@scalb(double,int):729:24786:(d == 0) || Double.isNaN(d) |==> (d == 0)
+596:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.math.util.MathUtils@scalb(double,int):729:24798:(d == 0) || Double.isNaN(d) |==> Double.isNaN(d)
+597:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.math.util.MathUtils@scalb(double,int):729:24795:(d == 0) || Double.isNaN(d) |==> true
+598:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.math.util.MathUtils@scalb(double,int):729:24786:(d == 0) || Double.isNaN(d) || Double.isInfinite(d) |==> ((d == 0) || Double.isNaN(d)) != Double.isInfinite(d)
+599:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.math.util.MathUtils@scalb(double,int):729:24786:(d == 0) || Double.isNaN(d) || Double.isInfinite(d) |==> (d == 0) || Double.isNaN(d)
+600:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.math.util.MathUtils@scalb(double,int):729:24817:(d == 0) || Double.isNaN(d) || Double.isInfinite(d) |==> Double.isInfinite(d)
+601:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.math.util.MathUtils@scalb(double,int):729:24814:(d == 0) || Double.isNaN(d) || Double.isInfinite(d) |==> true
+602:LVR:POS:0:org.apache.commons.math.util.MathUtils@scalb(double,int):735:25015:9218868437227405312L |==> 0L
+603:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@scalb(double,int):735:25015:9218868437227405312L |==> -9218868437227405312L
+604:LOR:&(long,long):^(long,long):org.apache.commons.math.util.MathUtils@scalb(double,int):735:25008:bits & 9218868437227405312L |==> bits ^ 9218868437227405312L
+605:LOR:&(long,long):|(long,long):org.apache.commons.math.util.MathUtils@scalb(double,int):735:25008:bits & 9218868437227405312L |==> bits | 9218868437227405312L
+606:LVR:NEG:0:org.apache.commons.math.util.MathUtils@scalb(double,int):736:25073:-9218868437227405313L |==> 0L
+607:LVR:NEG:POS:org.apache.commons.math.util.MathUtils@scalb(double,int):736:25073:-9218868437227405313L |==> 9218868437227405313L
+608:LOR:&(long,long):^(long,long):org.apache.commons.math.util.MathUtils@scalb(double,int):736:25066:bits & -9218868437227405313L |==> bits ^ -9218868437227405313L
+609:LOR:&(long,long):|(long,long):org.apache.commons.math.util.MathUtils@scalb(double,int):736:25066:bits & -9218868437227405313L |==> bits | -9218868437227405313L
+610:LVR:POS:0:org.apache.commons.math.util.MathUtils@scalb(double,int):739:25198:52 |==> 0
+611:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@scalb(double,int):739:25198:52 |==> -52
+612:SOR:<<(long,int):>>(long,int):org.apache.commons.math.util.MathUtils@scalb(double,int):739:25174:((long)scaleFactor) << 52 |==> ((long)scaleFactor) >> 52
+613:SOR:<<(long,int):>>>(long,int):org.apache.commons.math.util.MathUtils@scalb(double,int):739:25174:((long)scaleFactor) << 52 |==> ((long)scaleFactor) >>> 52
+614:AOR:+(long,long):%(long,long):org.apache.commons.math.util.MathUtils@scalb(double,int):739:25162:exponent + (((long)scaleFactor) << 52) |==> exponent % (((long)scaleFactor) << 52)
+615:AOR:+(long,long):*(long,long):org.apache.commons.math.util.MathUtils@scalb(double,int):739:25162:exponent + (((long)scaleFactor) << 52) |==> exponent * (((long)scaleFactor) << 52)
+616:AOR:+(long,long):-(long,long):org.apache.commons.math.util.MathUtils@scalb(double,int):739:25162:exponent + (((long)scaleFactor) << 52) |==> exponent - (((long)scaleFactor) << 52)
+617:AOR:+(long,long):/(long,long):org.apache.commons.math.util.MathUtils@scalb(double,int):739:25162:exponent + (((long)scaleFactor) << 52) |==> exponent / (((long)scaleFactor) << 52)
+618:LOR:|(long,long):&(long,long):org.apache.commons.math.util.MathUtils@scalb(double,int):739:25154:rest | (exponent + (((long)scaleFactor) << 52)) |==> rest & (exponent + (((long)scaleFactor) << 52))
+619:LOR:|(long,long):^(long,long):org.apache.commons.math.util.MathUtils@scalb(double,int):739:25154:rest | (exponent + (((long)scaleFactor) << 52)) |==> rest ^ (exponent + (((long)scaleFactor) << 52))
+620:AOR:+(double,double):%(double,double):org.apache.commons.math.util.MathUtils@normalizeAngle(double,double):764:26402:a + Math.PI |==> a % Math.PI
+621:AOR:+(double,double):*(double,double):org.apache.commons.math.util.MathUtils@normalizeAngle(double,double):764:26402:a + Math.PI |==> a * Math.PI
+622:AOR:+(double,double):-(double,double):org.apache.commons.math.util.MathUtils@normalizeAngle(double,double):764:26402:a + Math.PI |==> a - Math.PI
+623:AOR:+(double,double):/(double,double):org.apache.commons.math.util.MathUtils@normalizeAngle(double,double):764:26402:a + Math.PI |==> a / Math.PI
+624:AOR:-(double,double):%(double,double):org.apache.commons.math.util.MathUtils@normalizeAngle(double,double):764:26402:a + Math.PI - center |==> (a + Math.PI) % center
+625:AOR:-(double,double):*(double,double):org.apache.commons.math.util.MathUtils@normalizeAngle(double,double):764:26402:a + Math.PI - center |==> (a + Math.PI) * center
+626:AOR:-(double,double):+(double,double):org.apache.commons.math.util.MathUtils@normalizeAngle(double,double):764:26402:a + Math.PI - center |==> a + Math.PI + center
+627:AOR:-(double,double):/(double,double):org.apache.commons.math.util.MathUtils@normalizeAngle(double,double):764:26402:a + Math.PI - center |==> (a + Math.PI) / center
+628:AOR:/(double,double):%(double,double):org.apache.commons.math.util.MathUtils@normalizeAngle(double,double):764:26401:(a + Math.PI - center) / TWO_PI |==> (a + Math.PI - center) % TWO_PI
+629:AOR:/(double,double):*(double,double):org.apache.commons.math.util.MathUtils@normalizeAngle(double,double):764:26401:(a + Math.PI - center) / TWO_PI |==> (a + Math.PI - center) * TWO_PI
+630:AOR:/(double,double):+(double,double):org.apache.commons.math.util.MathUtils@normalizeAngle(double,double):764:26401:(a + Math.PI - center) / TWO_PI |==> (a + Math.PI - center) + TWO_PI
+631:AOR:/(double,double):-(double,double):org.apache.commons.math.util.MathUtils@normalizeAngle(double,double):764:26401:(a + Math.PI - center) / TWO_PI |==> (a + Math.PI - center) - TWO_PI
+632:AOR:*(double,double):%(double,double):org.apache.commons.math.util.MathUtils@normalizeAngle(double,double):764:26381:TWO_PI * Math.floor((a + Math.PI - center) / TWO_PI) |==> TWO_PI % Math.floor((a + Math.PI - center) / TWO_PI)
+633:AOR:*(double,double):+(double,double):org.apache.commons.math.util.MathUtils@normalizeAngle(double,double):764:26381:TWO_PI * Math.floor((a + Math.PI - center) / TWO_PI) |==> TWO_PI + Math.floor((a + Math.PI - center) / TWO_PI)
+634:AOR:*(double,double):-(double,double):org.apache.commons.math.util.MathUtils@normalizeAngle(double,double):764:26381:TWO_PI * Math.floor((a + Math.PI - center) / TWO_PI) |==> TWO_PI - Math.floor((a + Math.PI - center) / TWO_PI)
+635:AOR:*(double,double):/(double,double):org.apache.commons.math.util.MathUtils@normalizeAngle(double,double):764:26381:TWO_PI * Math.floor((a + Math.PI - center) / TWO_PI) |==> TWO_PI / Math.floor((a + Math.PI - center) / TWO_PI)
+636:AOR:-(double,double):%(double,double):org.apache.commons.math.util.MathUtils@normalizeAngle(double,double):764:26377:a - TWO_PI * Math.floor((a + Math.PI - center) / TWO_PI) |==> a % (TWO_PI * Math.floor((a + Math.PI - center) / TWO_PI))
+637:AOR:-(double,double):*(double,double):org.apache.commons.math.util.MathUtils@normalizeAngle(double,double):764:26377:a - TWO_PI * Math.floor((a + Math.PI - center) / TWO_PI) |==> a * (TWO_PI * Math.floor((a + Math.PI - center) / TWO_PI))
+638:AOR:-(double,double):+(double,double):org.apache.commons.math.util.MathUtils@normalizeAngle(double,double):764:26377:a - TWO_PI * Math.floor((a + Math.PI - center) / TWO_PI) |==> a + TWO_PI * Math.floor((a + Math.PI - center) / TWO_PI)
+639:AOR:-(double,double):/(double,double):org.apache.commons.math.util.MathUtils@normalizeAngle(double,double):764:26377:a - TWO_PI * Math.floor((a + Math.PI - center) / TWO_PI) |==> a / (TWO_PI * Math.floor((a + Math.PI - center) / TWO_PI))
+640:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.math.util.MathUtils@round(double,int,int):799:27696:Double.isInfinite(x) |==> false
+641:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.math.util.MathUtils@round(double,int,int):799:27696:Double.isInfinite(x) |==> true
+642:LVR:POS:0:org.apache.commons.math.util.MathUtils@round(float,int,int):834:28895:10.0F |==> 0.0F
+643:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@round(float,int,int):834:28895:10.0F |==> -10.0F
+644:AOR:*(float,float):%(float,float):org.apache.commons.math.util.MathUtils@round(float,int,int):834:28879:(float)Math.pow(10.0F, scale) * sign |==> (float)Math.pow(10.0F, scale) % sign
+645:AOR:*(float,float):+(float,float):org.apache.commons.math.util.MathUtils@round(float,int,int):834:28879:(float)Math.pow(10.0F, scale) * sign |==> (float)Math.pow(10.0F, scale) + sign
+646:AOR:*(float,float):-(float,float):org.apache.commons.math.util.MathUtils@round(float,int,int):834:28879:(float)Math.pow(10.0F, scale) * sign |==> (float)Math.pow(10.0F, scale) - sign
+647:AOR:*(float,float):/(float,float):org.apache.commons.math.util.MathUtils@round(float,int,int):834:28879:(float)Math.pow(10.0F, scale) * sign |==> (float)Math.pow(10.0F, scale) / sign
+648:AOR:*(float,float):%(float,float):org.apache.commons.math.util.MathUtils@round(float,int,int):835:28953:x * factor |==> x % factor
+649:AOR:*(float,float):+(float,float):org.apache.commons.math.util.MathUtils@round(float,int,int):835:28953:x * factor |==> x + factor
+650:AOR:*(float,float):-(float,float):org.apache.commons.math.util.MathUtils@round(float,int,int):835:28953:x * factor |==> x - factor
+651:AOR:*(float,float):/(float,float):org.apache.commons.math.util.MathUtils@round(float,int,int):835:28953:x * factor |==> x / factor
+652:AOR:/(float,float):%(float,float):org.apache.commons.math.util.MathUtils@round(float,int,int):835:28932:(float)roundUnscaled(x * factor, sign, roundingMethod) / factor |==> (float)roundUnscaled(x * factor, sign, roundingMethod) % factor
+653:AOR:/(float,float):*(float,float):org.apache.commons.math.util.MathUtils@round(float,int,int):835:28932:(float)roundUnscaled(x * factor, sign, roundingMethod) / factor |==> (float)roundUnscaled(x * factor, sign, roundingMethod) * factor
+654:AOR:/(float,float):+(float,float):org.apache.commons.math.util.MathUtils@round(float,int,int):835:28932:(float)roundUnscaled(x * factor, sign, roundingMethod) / factor |==> (float)roundUnscaled(x * factor, sign, roundingMethod) + factor
+655:AOR:/(float,float):-(float,float):org.apache.commons.math.util.MathUtils@round(float,int,int):835:28932:(float)roundUnscaled(x * factor, sign, roundingMethod) / factor |==> (float)roundUnscaled(x * factor, sign, roundingMethod) - factor
+656:LVR:NEG:0:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):854:29668:-1 |==> 0
+657:LVR:NEG:POS:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):854:29668:-1 |==> 1
+658:ROR:==(double,double):<=(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):854:29660:sign == -1 |==> sign <= -1
+659:ROR:==(double,double):>=(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):854:29660:sign == -1 |==> sign >= -1
+660:ROR:==(double,double):FALSE(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):854:29665:sign == -1 |==> false
+661:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):855:29690:unscaled = Math.floor(nextAfter(unscaled, Double.NEGATIVE_INFINITY)); |==> <NO-OP>
+662:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):857:29797:unscaled = Math.ceil(nextAfter(unscaled, Double.POSITIVE_INFINITY)); |==> <NO-OP>
+663:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):861:29948:unscaled = Math.floor(nextAfter(unscaled, Double.NEGATIVE_INFINITY)); |==> <NO-OP>
+664:LVR:NEG:0:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):864:30099:-1 |==> 0
+665:LVR:NEG:POS:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):864:30099:-1 |==> 1
+666:ROR:==(double,double):<=(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):864:30091:sign == -1 |==> sign <= -1
+667:ROR:==(double,double):>=(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):864:30091:sign == -1 |==> sign >= -1
+668:ROR:==(double,double):FALSE(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):864:30096:sign == -1 |==> false
+669:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):865:30121:unscaled = Math.ceil(nextAfter(unscaled, Double.POSITIVE_INFINITY)); |==> <NO-OP>
+670:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):867:30227:unscaled = Math.floor(nextAfter(unscaled, Double.NEGATIVE_INFINITY)); |==> <NO-OP>
+671:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):871:30386:unscaled = nextAfter(unscaled, Double.NEGATIVE_INFINITY); |==> <NO-OP>
+672:AOR:-(double,double):%(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):872:30474:unscaled - Math.floor(unscaled) |==> unscaled % Math.floor(unscaled)
+673:AOR:-(double,double):*(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):872:30474:unscaled - Math.floor(unscaled) |==> unscaled * Math.floor(unscaled)
+674:AOR:-(double,double):+(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):872:30474:unscaled - Math.floor(unscaled) |==> unscaled + Math.floor(unscaled)
+675:AOR:-(double,double):/(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):872:30474:unscaled - Math.floor(unscaled) |==> unscaled / Math.floor(unscaled)
+676:LVR:POS:0:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):873:30534:0.5 |==> 0.0
+677:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):873:30534:0.5 |==> -0.5
+678:ROR:>(double,double):!=(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):873:30523:fraction > 0.5 |==> fraction != 0.5
+679:ROR:>(double,double):>=(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):873:30523:fraction > 0.5 |==> fraction >= 0.5
+680:ROR:>(double,double):FALSE(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):873:30532:fraction > 0.5 |==> false
+681:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):874:30557:unscaled = Math.ceil(unscaled); |==> <NO-OP>
+682:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):876:30626:unscaled = Math.floor(unscaled); |==> <NO-OP>
+683:AOR:-(double,double):%(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):881:30776:unscaled - Math.floor(unscaled) |==> unscaled % Math.floor(unscaled)
+684:AOR:-(double,double):*(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):881:30776:unscaled - Math.floor(unscaled) |==> unscaled * Math.floor(unscaled)
+685:AOR:-(double,double):+(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):881:30776:unscaled - Math.floor(unscaled) |==> unscaled + Math.floor(unscaled)
+686:AOR:-(double,double):/(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):881:30776:unscaled - Math.floor(unscaled) |==> unscaled / Math.floor(unscaled)
+687:LVR:POS:0:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):882:30836:0.5 |==> 0.0
+688:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):882:30836:0.5 |==> -0.5
+689:ROR:>(double,double):!=(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):882:30825:fraction > 0.5 |==> fraction != 0.5
+690:ROR:>(double,double):>=(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):882:30825:fraction > 0.5 |==> fraction >= 0.5
+691:ROR:>(double,double):FALSE(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):882:30834:fraction > 0.5 |==> false
+692:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):883:30859:unscaled = Math.ceil(unscaled); |==> <NO-OP>
+693:LVR:POS:0:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):884:30925:0.5 |==> 0.0
+694:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):884:30925:0.5 |==> -0.5
+695:ROR:<(double,double):!=(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):884:30914:fraction < 0.5 |==> fraction != 0.5
+696:ROR:<(double,double):<=(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):884:30914:fraction < 0.5 |==> fraction <= 0.5
+697:ROR:<(double,double):FALSE(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):884:30923:fraction < 0.5 |==> false
+698:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):885:30948:unscaled = Math.floor(unscaled); |==> <NO-OP>
+699:LVR:POS:0:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):888:31140:2.0 |==> 0.0
+700:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):888:31140:2.0 |==> -2.0
+701:AOR:/(double,double):%(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):888:31117:Math.floor(unscaled) / 2.0 |==> Math.floor(unscaled) % 2.0
+702:AOR:/(double,double):*(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):888:31117:Math.floor(unscaled) / 2.0 |==> Math.floor(unscaled) * 2.0
+703:AOR:/(double,double):+(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):888:31117:Math.floor(unscaled) / 2.0 |==> Math.floor(unscaled) + 2.0
+704:AOR:/(double,double):-(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):888:31117:Math.floor(unscaled) / 2.0 |==> Math.floor(unscaled) - 2.0
+705:LVR:POS:0:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):889:31202:2.0 |==> 0.0
+706:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):889:31202:2.0 |==> -2.0
+707:AOR:/(double,double):%(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):888:31158:Math.floor(unscaled) / 2.0 |==> Math.floor(unscaled) % 2.0
+708:AOR:/(double,double):*(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):888:31158:Math.floor(unscaled) / 2.0 |==> Math.floor(unscaled) * 2.0
+709:AOR:/(double,double):+(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):888:31158:Math.floor(unscaled) / 2.0 |==> Math.floor(unscaled) + 2.0
+710:AOR:/(double,double):-(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):888:31158:Math.floor(unscaled) / 2.0 |==> Math.floor(unscaled) - 2.0
+711:ROR:==(double,double):<=(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):888:31117:Math.floor(unscaled) / 2.0 == Math.floor(Math.floor(unscaled) / 2.0) |==> Math.floor(unscaled) / 2.0 <= Math.floor(Math.floor(unscaled) / 2.0)
+712:ROR:==(double,double):>=(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):888:31117:Math.floor(unscaled) / 2.0 == Math.floor(Math.floor(unscaled) / 2.0) |==> Math.floor(unscaled) / 2.0 >= Math.floor(Math.floor(unscaled) / 2.0)
+713:ROR:==(double,double):FALSE(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):888:31144:Math.floor(unscaled) / 2.0 == Math.floor(Math.floor(unscaled) / 2.0) |==> false
+714:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):890:31238:unscaled = Math.floor(unscaled); |==> <NO-OP>
+715:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):892:31323:unscaled = Math.ceil(unscaled); |==> <NO-OP>
+716:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):898:31470:unscaled = nextAfter(unscaled, Double.POSITIVE_INFINITY); |==> <NO-OP>
+717:AOR:-(double,double):%(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):899:31558:unscaled - Math.floor(unscaled) |==> unscaled % Math.floor(unscaled)
+718:AOR:-(double,double):*(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):899:31558:unscaled - Math.floor(unscaled) |==> unscaled * Math.floor(unscaled)
+719:AOR:-(double,double):+(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):899:31558:unscaled - Math.floor(unscaled) |==> unscaled + Math.floor(unscaled)
+720:AOR:-(double,double):/(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):899:31558:unscaled - Math.floor(unscaled) |==> unscaled / Math.floor(unscaled)
+721:LVR:POS:0:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):900:31619:0.5 |==> 0.0
+722:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):900:31619:0.5 |==> -0.5
+723:ROR:>=(double,double):==(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):900:31607:fraction >= 0.5 |==> fraction == 0.5
+724:ROR:>=(double,double):>(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):900:31607:fraction >= 0.5 |==> fraction > 0.5
+725:ROR:>=(double,double):TRUE(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):900:31616:fraction >= 0.5 |==> true
+726:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):901:31642:unscaled = Math.ceil(unscaled); |==> <NO-OP>
+727:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):903:31711:unscaled = Math.floor(unscaled); |==> <NO-OP>
+728:ROR:!=(double,double):<(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):908:31847:unscaled != Math.floor(unscaled) |==> unscaled < Math.floor(unscaled)
+729:ROR:!=(double,double):>(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):908:31847:unscaled != Math.floor(unscaled) |==> unscaled > Math.floor(unscaled)
+730:ROR:!=(double,double):TRUE(double,double):org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):908:31856:unscaled != Math.floor(unscaled) |==> true
+731:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.util.MathUtils@roundUnscaled(double,double,int):913:32042:unscaled = Math.ceil(nextAfter(unscaled, Double.POSITIVE_INFINITY)); |==> <NO-OP>
+732:ROR:==(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@sign(byte):932:32716:x == ZB |==> x <= ZB
+733:ROR:==(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@sign(byte):932:32716:x == ZB |==> x >= ZB
+734:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@sign(byte):932:32718:x == ZB |==> false
+735:ROR:>(int,int):!=(int,int):org.apache.commons.math.util.MathUtils@sign(byte):932:32733:x > ZB |==> x != ZB
+736:ROR:>(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@sign(byte):932:32733:x > ZB |==> x >= ZB
+737:ROR:>(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@sign(byte):932:32735:x > ZB |==> false
+738:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.math.util.MathUtils@sign(double):948:33365:Double.isNaN(x) |==> false
+739:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.math.util.MathUtils@sign(double):948:33365:Double.isNaN(x) |==> true
+740:LVR:0:POS:org.apache.commons.math.util.MathUtils@sign(double):951:33434:0.0 |==> 1.0
+741:LVR:0:NEG:org.apache.commons.math.util.MathUtils@sign(double):951:33434:0.0 |==> -1.0
+742:ROR:==(double,double):<=(double,double):org.apache.commons.math.util.MathUtils@sign(double):951:33429:x == 0.0 |==> x <= 0.0
+743:ROR:==(double,double):>=(double,double):org.apache.commons.math.util.MathUtils@sign(double):951:33429:x == 0.0 |==> x >= 0.0
+744:ROR:==(double,double):FALSE(double,double):org.apache.commons.math.util.MathUtils@sign(double):951:33431:x == 0.0 |==> false
+745:LVR:0:POS:org.apache.commons.math.util.MathUtils@sign(double):951:33441:0.0 |==> 1.0
+746:LVR:0:NEG:org.apache.commons.math.util.MathUtils@sign(double):951:33441:0.0 |==> -1.0
+747:LVR:0:POS:org.apache.commons.math.util.MathUtils@sign(double):951:33452:0.0 |==> 1.0
+748:LVR:0:NEG:org.apache.commons.math.util.MathUtils@sign(double):951:33452:0.0 |==> -1.0
+749:ROR:>(double,double):!=(double,double):org.apache.commons.math.util.MathUtils@sign(double):951:33448:x > 0.0 |==> x != 0.0
+750:ROR:>(double,double):>=(double,double):org.apache.commons.math.util.MathUtils@sign(double):951:33448:x > 0.0 |==> x >= 0.0
+751:ROR:>(double,double):FALSE(double,double):org.apache.commons.math.util.MathUtils@sign(double):951:33450:x > 0.0 |==> false
+752:LVR:POS:0:org.apache.commons.math.util.MathUtils@sign(double):951:33459:1.0 |==> 0.0
+753:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@sign(double):951:33459:1.0 |==> -1.0
+754:ORU:-(double):+(double):org.apache.commons.math.util.MathUtils@sign(double):951:33465:-1.0 |==> +1.0
+755:LVR:POS:0:org.apache.commons.math.util.MathUtils@sign(double):951:33466:1.0 |==> 0.0
+756:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@sign(double):951:33466:1.0 |==> -1.0
+757:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.math.util.MathUtils@sign(float):966:33983:Float.isNaN(x) |==> false
+758:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.math.util.MathUtils@sign(float):966:33983:Float.isNaN(x) |==> true
+759:LVR:0:POS:org.apache.commons.math.util.MathUtils@sign(float):969:34051:0.0F |==> 1.0F
+760:LVR:0:NEG:org.apache.commons.math.util.MathUtils@sign(float):969:34051:0.0F |==> -1.0F
+761:ROR:==(float,float):<=(float,float):org.apache.commons.math.util.MathUtils@sign(float):969:34046:x == 0.0F |==> x <= 0.0F
+762:ROR:==(float,float):>=(float,float):org.apache.commons.math.util.MathUtils@sign(float):969:34046:x == 0.0F |==> x >= 0.0F
+763:ROR:==(float,float):FALSE(float,float):org.apache.commons.math.util.MathUtils@sign(float):969:34048:x == 0.0F |==> false
+764:LVR:0:POS:org.apache.commons.math.util.MathUtils@sign(float):969:34059:0.0F |==> 1.0F
+765:LVR:0:NEG:org.apache.commons.math.util.MathUtils@sign(float):969:34059:0.0F |==> -1.0F
+766:LVR:0:POS:org.apache.commons.math.util.MathUtils@sign(float):969:34071:0.0F |==> 1.0F
+767:LVR:0:NEG:org.apache.commons.math.util.MathUtils@sign(float):969:34071:0.0F |==> -1.0F
+768:ROR:>(float,float):!=(float,float):org.apache.commons.math.util.MathUtils@sign(float):969:34067:x > 0.0F |==> x != 0.0F
+769:ROR:>(float,float):>=(float,float):org.apache.commons.math.util.MathUtils@sign(float):969:34067:x > 0.0F |==> x >= 0.0F
+770:ROR:>(float,float):FALSE(float,float):org.apache.commons.math.util.MathUtils@sign(float):969:34069:x > 0.0F |==> false
+771:LVR:POS:0:org.apache.commons.math.util.MathUtils@sign(float):969:34079:1.0F |==> 0.0F
+772:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@sign(float):969:34079:1.0F |==> -1.0F
+773:ORU:-(float):+(float):org.apache.commons.math.util.MathUtils@sign(float):969:34086:-1.0F |==> +1.0F
+774:LVR:POS:0:org.apache.commons.math.util.MathUtils@sign(float):969:34087:1.0F |==> 0.0F
+775:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@sign(float):969:34087:1.0F |==> -1.0F
+776:LVR:0:POS:org.apache.commons.math.util.MathUtils@sign(int):983:34503:0 |==> 1
+777:LVR:0:NEG:org.apache.commons.math.util.MathUtils@sign(int):983:34503:0 |==> -1
+778:ROR:==(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@sign(int):983:34498:x == 0 |==> x <= 0
+779:ROR:==(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@sign(int):983:34498:x == 0 |==> x >= 0
+780:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@sign(int):983:34500:x == 0 |==> false
+781:LVR:0:POS:org.apache.commons.math.util.MathUtils@sign(int):983:34508:0 |==> 1
+782:LVR:0:NEG:org.apache.commons.math.util.MathUtils@sign(int):983:34508:0 |==> -1
+783:LVR:0:POS:org.apache.commons.math.util.MathUtils@sign(int):983:34517:0 |==> 1
+784:LVR:0:NEG:org.apache.commons.math.util.MathUtils@sign(int):983:34517:0 |==> -1
+785:ROR:>(int,int):!=(int,int):org.apache.commons.math.util.MathUtils@sign(int):983:34513:x > 0 |==> x != 0
+786:ROR:>(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@sign(int):983:34513:x > 0 |==> x >= 0
+787:ROR:>(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@sign(int):983:34515:x > 0 |==> false
+788:LVR:POS:0:org.apache.commons.math.util.MathUtils@sign(int):983:34522:1 |==> 0
+789:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@sign(int):983:34522:1 |==> -1
+790:LVR:NEG:0:org.apache.commons.math.util.MathUtils@sign(int):983:34526:-1 |==> 0
+791:LVR:NEG:POS:org.apache.commons.math.util.MathUtils@sign(int):983:34526:-1 |==> 1
+792:LVR:0:POS:org.apache.commons.math.util.MathUtils@sign(long):997:34949:0L |==> 1L
+793:LVR:0:NEG:org.apache.commons.math.util.MathUtils@sign(long):997:34949:0L |==> -1L
+794:ROR:==(long,long):<=(long,long):org.apache.commons.math.util.MathUtils@sign(long):997:34944:x == 0L |==> x <= 0L
+795:ROR:==(long,long):>=(long,long):org.apache.commons.math.util.MathUtils@sign(long):997:34944:x == 0L |==> x >= 0L
+796:ROR:==(long,long):FALSE(long,long):org.apache.commons.math.util.MathUtils@sign(long):997:34946:x == 0L |==> false
+797:LVR:0:POS:org.apache.commons.math.util.MathUtils@sign(long):997:34955:0L |==> 1L
+798:LVR:0:NEG:org.apache.commons.math.util.MathUtils@sign(long):997:34955:0L |==> -1L
+799:LVR:0:POS:org.apache.commons.math.util.MathUtils@sign(long):997:34965:0L |==> 1L
+800:LVR:0:NEG:org.apache.commons.math.util.MathUtils@sign(long):997:34965:0L |==> -1L
+801:ROR:>(long,long):!=(long,long):org.apache.commons.math.util.MathUtils@sign(long):997:34961:x > 0L |==> x != 0L
+802:ROR:>(long,long):>=(long,long):org.apache.commons.math.util.MathUtils@sign(long):997:34961:x > 0L |==> x >= 0L
+803:ROR:>(long,long):FALSE(long,long):org.apache.commons.math.util.MathUtils@sign(long):997:34963:x > 0L |==> false
+804:LVR:POS:0:org.apache.commons.math.util.MathUtils@sign(long):997:34971:1L |==> 0L
+805:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@sign(long):997:34971:1L |==> -1L
+806:LVR:NEG:0:org.apache.commons.math.util.MathUtils@sign(long):997:34976:-1L |==> 0L
+807:LVR:NEG:POS:org.apache.commons.math.util.MathUtils@sign(long):997:34976:-1L |==> 1L
+808:ROR:==(int,int):<=(int,int):org.apache.commons.math.util.MathUtils@sign(short):1012:35463:x == ZS |==> x <= ZS
+809:ROR:==(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@sign(short):1012:35463:x == ZS |==> x >= ZS
+810:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@sign(short):1012:35465:x == ZS |==> false
+811:ROR:>(int,int):!=(int,int):org.apache.commons.math.util.MathUtils@sign(short):1012:35480:x > ZS |==> x != ZS
+812:ROR:>(int,int):>=(int,int):org.apache.commons.math.util.MathUtils@sign(short):1012:35480:x > ZS |==> x >= ZS
+813:ROR:>(int,int):FALSE(int,int):org.apache.commons.math.util.MathUtils@sign(short):1012:35482:x > ZS |==> false
+814:ORU:-(double):+(double):org.apache.commons.math.util.MathUtils@sinh(double):1023:35826:-x |==> +x
+815:AOR:-(double,double):%(double,double):org.apache.commons.math.util.MathUtils@sinh(double):1023:35803:Math.exp(x) - Math.exp(-x) |==> Math.exp(x) % Math.exp(-x)
+816:AOR:-(double,double):*(double,double):org.apache.commons.math.util.MathUtils@sinh(double):1023:35803:Math.exp(x) - Math.exp(-x) |==> Math.exp(x) * Math.exp(-x)
+817:AOR:-(double,double):+(double,double):org.apache.commons.math.util.MathUtils@sinh(double):1023:35803:Math.exp(x) - Math.exp(-x) |==> Math.exp(x) + Math.exp(-x)
+818:AOR:-(double,double):/(double,double):org.apache.commons.math.util.MathUtils@sinh(double):1023:35803:Math.exp(x) - Math.exp(-x) |==> Math.exp(x) / Math.exp(-x)
+819:LVR:POS:0:org.apache.commons.math.util.MathUtils@sinh(double):1023:35833:2.0 |==> 0.0
+820:LVR:POS:NEG:org.apache.commons.math.util.MathUtils@sinh(double):1023:35833:2.0 |==> -2.0
+821:AOR:/(double,double):%(double,double):org.apache.commons.math.util.MathUtils@sinh(double):1023:35802:(Math.exp(x) - Math.exp(-x)) / 2.0 |==> (Math.exp(x) - Math.exp(-x)) % 2.0
+822:AOR:/(double,double):*(double,double):org.apache.commons.math.util.MathUtils@sinh(double):1023:35802:(Math.exp(x) - Math.exp(-x)) / 2.0 |==> (Math.exp(x) - Math.exp(-x)) * 2.0
+823:AOR:/(double,double):+(double,double):org.apache.commons.math.util.MathUtils@sinh(double):1023:35802:(Math.exp(x) - Math.exp(-x)) / 2.0 |==> (Math.exp(x) - Math.exp(-x)) + 2.0
+824:AOR:/(double,double):-(double,double):org.apache.commons.math.util.MathUtils@sinh(double):1023:35802:(Math.exp(x) - Math.exp(-x)) / 2.0 |==> (Math.exp(x) - Math.exp(-x)) - 2.0
+825:AOR:-(long,long):%(long,long):org.apache.commons.math.util.MathUtils@subAndCheck(int,int):1037:36210:(long)x - (long)y |==> (long)x % (long)y
+826:AOR:-(long,long):*(long,long):org.apache.commons.math.util.MathUtils@subAndCheck(int,int):1037:36210:(long)x - (long)y |==> (long)x * (long)y
+827:AOR:-(long,long):+(long,long):org.apache.commons.math.util.MathUtils@subAndCheck(int,int):1037:36210:(long)x - (long)y |==> (long)x + (long)y
+828:AOR:-(long,long):/(long,long):org.apache.commons.math.util.MathUtils@subAndCheck(int,int):1037:36210:(long)x - (long)y |==> (long)x / (long)y
+829:ROR:<(long,long):!=(long,long):org.apache.commons.math.util.MathUtils@subAndCheck(int,int):1038:36241:s < Integer.MIN_VALUE |==> s != Integer.MIN_VALUE
+830:ROR:<(long,long):<=(long,long):org.apache.commons.math.util.MathUtils@subAndCheck(int,int):1038:36241:s < Integer.MIN_VALUE |==> s <= Integer.MIN_VALUE
+831:ROR:<(long,long):FALSE(long,long):org.apache.commons.math.util.MathUtils@subAndCheck(int,int):1038:36243:s < Integer.MIN_VALUE |==> false
+832:ROR:>(long,long):!=(long,long):org.apache.commons.math.util.MathUtils@subAndCheck(int,int):1038:36266:s > Integer.MAX_VALUE |==> s != Integer.MAX_VALUE
+833:ROR:>(long,long):>=(long,long):org.apache.commons.math.util.MathUtils@subAndCheck(int,int):1038:36266:s > Integer.MAX_VALUE |==> s >= Integer.MAX_VALUE
+834:ROR:>(long,long):FALSE(long,long):org.apache.commons.math.util.MathUtils@subAndCheck(int,int):1038:36268:s > Integer.MAX_VALUE |==> false
+835:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.math.util.MathUtils@subAndCheck(int,int):1038:36241:s < Integer.MIN_VALUE || s > Integer.MAX_VALUE |==> s < Integer.MIN_VALUE
+836:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.math.util.MathUtils@subAndCheck(int,int):1038:36266:s < Integer.MIN_VALUE || s > Integer.MAX_VALUE |==> s > Integer.MAX_VALUE
+837:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.math.util.MathUtils@subAndCheck(int,int):1038:36263:s < Integer.MIN_VALUE || s > Integer.MAX_VALUE |==> true
+838:ROR:==(long,long):>=(long,long):org.apache.commons.math.util.MathUtils@subAndCheck(long,long):1057:36824:b == Long.MIN_VALUE |==> b >= Long.MIN_VALUE
+839:ROR:==(long,long):FALSE(long,long):org.apache.commons.math.util.MathUtils@subAndCheck(long,long):1057:36826:b == Long.MIN_VALUE |==> false
+840:LVR:0:POS:org.apache.commons.math.util.MathUtils@subAndCheck(long,long):1058:36867:0 |==> 1
+841:LVR:0:NEG:org.apache.commons.math.util.MathUtils@subAndCheck(long,long):1058:36867:0 |==> -1
+842:ROR:<(long,long):!=(long,long):org.apache.commons.math.util.MathUtils@subAndCheck(long,long):1058:36863:a < 0 |==> a != 0
+843:ROR:<(long,long):<=(long,long):org.apache.commons.math.util.MathUtils@subAndCheck(long,long):1058:36863:a < 0 |==> a <= 0
+844:ROR:<(long,long):FALSE(long,long):org.apache.commons.math.util.MathUtils@subAndCheck(long,long):1058:36865:a < 0 |==> false
+845:AOR:-(long,long):%(long,long):org.apache.commons.math.util.MathUtils@subAndCheck(long,long):1059:36894:a - b |==> a % b
+846:AOR:-(long,long):*(long,long):org.apache.commons.math.util.MathUtils@subAndCheck(long,long):1059:36894:a - b |==> a * b
+847:AOR:-(long,long):+(long,long):org.apache.commons.math.util.MathUtils@subAndCheck(long,long):1059:36894:a - b |==> a + b
+848:AOR:-(long,long):/(long,long):org.apache.commons.math.util.MathUtils@subAndCheck(long,long):1059:36894:a - b |==> a / b
+849:ORU:-(long):+(long):org.apache.commons.math.util.MathUtils@subAndCheck(long,long):1065:37074:-b |==> +b
+850:ORU:-(long):~(long):org.apache.commons.math.util.MathUtils@subAndCheck(long,long):1065:37074:-b |==> ~b
