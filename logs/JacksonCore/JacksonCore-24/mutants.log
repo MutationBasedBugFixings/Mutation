@@ -1,0 +1,984 @@
+1:LVR:POS:0:com.fasterxml.jackson.core.base.ParserBase:78:2382:1 |==> 0
+2:LVR:POS:NEG:com.fasterxml.jackson.core.base.ParserBase:78:2382:1 |==> -1
+3:LVR:POS:0:com.fasterxml.jackson.core.base.ParserBase:107:3362:1 |==> 0
+4:LVR:POS:NEG:com.fasterxml.jackson.core.base.ParserBase:107:3362:1 |==> -1
+5:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.core.base.ParserBase@<init>(com.fasterxml.jackson.core.io.IOContext,int):236:7111:Feature.STRICT_DUPLICATE_DETECTION.enabledIn(features) |==> false
+6:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.core.base.ParserBase@<init>(com.fasterxml.jackson.core.io.IOContext,int):236:7111:Feature.STRICT_DUPLICATE_DETECTION.enabledIn(features) |==> true
+7:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@<init>(com.fasterxml.jackson.core.io.IOContext,int):238:7187:_parsingContext = JsonReadContext.createRootContext(dups); |==> <NO-OP>
+8:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@setCurrentValue(java.lang.Object):250:7503:_parsingContext.setCurrentValue(v); |==> <NO-OP>
+9:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@enable(com.fasterxml.jackson.core.JsonParser.Feature):261:7796:_features |= f.getMask(); |==> <NO-OP>
+10:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@enable(com.fasterxml.jackson.core.JsonParser.Feature):262:7836:f == Feature.STRICT_DUPLICATE_DETECTION |==> false
+11:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@enable(com.fasterxml.jackson.core.JsonParser.Feature):263:7953:_parsingContext.getDupDetector() == null |==> false
+12:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@enable(com.fasterxml.jackson.core.JsonParser.Feature):264:8014:_parsingContext = _parsingContext.withDupDetector(DupDetector.rootDetector(this)); |==> <NO-OP>
+13:ORU:~(int):+(int):com.fasterxml.jackson.core.base.ParserBase@disable(com.fasterxml.jackson.core.JsonParser.Feature):272:8227:~f.getMask() |==> +f.getMask()
+14:ORU:~(int):-(int):com.fasterxml.jackson.core.base.ParserBase@disable(com.fasterxml.jackson.core.JsonParser.Feature):272:8227:~f.getMask() |==> -f.getMask()
+15:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@disable(com.fasterxml.jackson.core.JsonParser.Feature):272:8214:_features &= ~f.getMask(); |==> <NO-OP>
+16:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@disable(com.fasterxml.jackson.core.JsonParser.Feature):273:8255:f == Feature.STRICT_DUPLICATE_DETECTION |==> false
+17:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@disable(com.fasterxml.jackson.core.JsonParser.Feature):274:8308:_parsingContext = _parsingContext.withDupDetector(null); |==> <NO-OP>
+18:LOR:^(int,int):&(int,int):com.fasterxml.jackson.core.base.ParserBase@setFeatureMask(int):282:8508:_features ^ newMask |==> _features & newMask
+19:LOR:^(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@setFeatureMask(int):282:8508:_features ^ newMask |==> _features | newMask
+20:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@setFeatureMask(int):283:8553:0 |==> 1
+21:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@setFeatureMask(int):283:8553:0 |==> -1
+22:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@setFeatureMask(int):283:8542:changes != 0 |==> changes < 0
+23:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@setFeatureMask(int):283:8542:changes != 0 |==> changes > 0
+24:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@setFeatureMask(int):283:8550:changes != 0 |==> true
+25:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@setFeatureMask(int):284:8570:_features = newMask; |==> <NO-OP>
+26:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@setFeatureMask(int):285:8603:_checkStdFeatureChanges(newMask, changes); |==> <NO-OP>
+27:ORU:~(int):+(int):com.fasterxml.jackson.core.base.ParserBase@overrideStdFeatures(int,int):293:8846:~mask |==> +mask
+28:ORU:~(int):-(int):com.fasterxml.jackson.core.base.ParserBase@overrideStdFeatures(int,int):293:8846:~mask |==> -mask
+29:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@overrideStdFeatures(int,int):293:8835:oldState & ~mask |==> oldState ^ ~mask
+30:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@overrideStdFeatures(int,int):293:8835:oldState & ~mask |==> oldState | ~mask
+31:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@overrideStdFeatures(int,int):293:8856:values & mask |==> values ^ mask
+32:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@overrideStdFeatures(int,int):293:8856:values & mask |==> values | mask
+33:LOR:|(int,int):&(int,int):com.fasterxml.jackson.core.base.ParserBase@overrideStdFeatures(int,int):293:8834:(oldState & ~mask) | (values & mask) |==> (oldState & ~mask) & (values & mask)
+34:LOR:|(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@overrideStdFeatures(int,int):293:8834:(oldState & ~mask) | (values & mask) |==> (oldState & ~mask) ^ (values & mask)
+35:LOR:^(int,int):&(int,int):com.fasterxml.jackson.core.base.ParserBase@overrideStdFeatures(int,int):294:8894:oldState ^ newState |==> oldState & newState
+36:LOR:^(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@overrideStdFeatures(int,int):294:8894:oldState ^ newState |==> oldState | newState
+37:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@overrideStdFeatures(int,int):295:8938:0 |==> 1
+38:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@overrideStdFeatures(int,int):295:8938:0 |==> -1
+39:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@overrideStdFeatures(int,int):295:8927:changed != 0 |==> changed < 0
+40:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@overrideStdFeatures(int,int):295:8927:changed != 0 |==> changed > 0
+41:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@overrideStdFeatures(int,int):295:8935:changed != 0 |==> true
+42:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@overrideStdFeatures(int,int):296:8955:_features = newState; |==> <NO-OP>
+43:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@overrideStdFeatures(int,int):297:8989:_checkStdFeatureChanges(newState, changed); |==> <NO-OP>
+44:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@_checkStdFeatureChanges(int,int):315:9543:changedFeatures & f |==> changedFeatures ^ f
+45:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@_checkStdFeatureChanges(int,int):315:9543:changedFeatures & f |==> changedFeatures | f
+46:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@_checkStdFeatureChanges(int,int):315:9567:0 |==> 1
+47:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@_checkStdFeatureChanges(int,int):315:9567:0 |==> -1
+48:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@_checkStdFeatureChanges(int,int):315:9542:(changedFeatures & f) != 0 |==> (changedFeatures & f) < 0
+49:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@_checkStdFeatureChanges(int,int):315:9542:(changedFeatures & f) != 0 |==> (changedFeatures & f) > 0
+50:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@_checkStdFeatureChanges(int,int):315:9564:(changedFeatures & f) != 0 |==> true
+51:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@_checkStdFeatureChanges(int,int):316:9589:newFeatureFlags & f |==> newFeatureFlags ^ f
+52:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@_checkStdFeatureChanges(int,int):316:9589:newFeatureFlags & f |==> newFeatureFlags | f
+53:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@_checkStdFeatureChanges(int,int):316:9613:0 |==> 1
+54:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@_checkStdFeatureChanges(int,int):316:9613:0 |==> -1
+55:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@_checkStdFeatureChanges(int,int):316:9588:(newFeatureFlags & f) != 0 |==> (newFeatureFlags & f) < 0
+56:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@_checkStdFeatureChanges(int,int):316:9588:(newFeatureFlags & f) != 0 |==> (newFeatureFlags & f) > 0
+57:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@_checkStdFeatureChanges(int,int):316:9610:(newFeatureFlags & f) != 0 |==> true
+58:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@_checkStdFeatureChanges(int,int):317:9671:_parsingContext.getDupDetector() == null |==> false
+59:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_checkStdFeatureChanges(int,int):318:9702:_parsingContext = _parsingContext.withDupDetector(DupDetector.rootDetector(this)); |==> <NO-OP>
+60:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_checkStdFeatureChanges(int,int):320:9843:_parsingContext = _parsingContext.withDupDetector(null); |==> <NO-OP>
+61:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@getCurrentName():338:10388:_currToken == JsonToken.START_OBJECT |==> false
+62:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@getCurrentName():338:10428:_currToken == JsonToken.START_ARRAY |==> false
+63:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@getCurrentName():338:10377:_currToken == JsonToken.START_OBJECT || _currToken == JsonToken.START_ARRAY |==> _currToken == JsonToken.START_OBJECT
+64:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@getCurrentName():338:10417:_currToken == JsonToken.START_OBJECT || _currToken == JsonToken.START_ARRAY |==> _currToken == JsonToken.START_ARRAY
+65:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@getCurrentName():338:10414:_currToken == JsonToken.START_OBJECT || _currToken == JsonToken.START_ARRAY |==> true
+66:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@getCurrentName():340:10545:parent != null |==> true
+67:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@overrideCurrentName(java.lang.String):350:10897:_currToken == JsonToken.START_OBJECT |==> false
+68:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@overrideCurrentName(java.lang.String):350:10937:_currToken == JsonToken.START_ARRAY |==> false
+69:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@overrideCurrentName(java.lang.String):350:10886:_currToken == JsonToken.START_OBJECT || _currToken == JsonToken.START_ARRAY |==> _currToken == JsonToken.START_OBJECT
+70:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@overrideCurrentName(java.lang.String):350:10926:_currToken == JsonToken.START_OBJECT || _currToken == JsonToken.START_ARRAY |==> _currToken == JsonToken.START_ARRAY
+71:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@overrideCurrentName(java.lang.String):350:10923:_currToken == JsonToken.START_OBJECT || _currToken == JsonToken.START_ARRAY |==> true
+72:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@overrideCurrentName(java.lang.String):351:10977:ctxt = ctxt.getParent(); |==> <NO-OP>
+73:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@overrideCurrentName(java.lang.String):357:11169:ctxt.setCurrentName(name); |==> <NO-OP>
+74:COR:<IDENTIFIER(boolean)>:FALSE:com.fasterxml.jackson.core.base.ParserBase@close():364:11363:_closed |==> false
+75:COR:<IDENTIFIER(boolean)>:TRUE:com.fasterxml.jackson.core.base.ParserBase@close():364:11363:_closed |==> true
+76:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@close():366:11484:_inputPtr = Math.max(_inputPtr, _inputEnd); |==> <NO-OP>
+77:LVR:TRUE:FALSE:com.fasterxml.jackson.core.base.ParserBase@close():367:11550:true |==> false
+78:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@close():367:11540:_closed = true; |==> <NO-OP>
+79:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@close():369:11590:_closeInput(); |==> <NO-OP>
+80:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@close():373:11778:_releaseBuffers(); |==> <NO-OP>
+81:LVR:NEG:0:com.fasterxml.jackson.core.base.ParserBase@getTokenLocation():389:12294:-1L |==> 0L
+82:LVR:NEG:POS:com.fasterxml.jackson.core.base.ParserBase@getTokenLocation():389:12294:-1L |==> 1L
+83:AOR:-(int,int):%(int,int):com.fasterxml.jackson.core.base.ParserBase@getCurrentLocation():400:12628:_inputPtr - _currInputRowStart |==> _inputPtr % _currInputRowStart
+84:AOR:-(int,int):*(int,int):com.fasterxml.jackson.core.base.ParserBase@getCurrentLocation():400:12628:_inputPtr - _currInputRowStart |==> _inputPtr * _currInputRowStart
+85:AOR:-(int,int):+(int,int):com.fasterxml.jackson.core.base.ParserBase@getCurrentLocation():400:12628:_inputPtr - _currInputRowStart |==> _inputPtr + _currInputRowStart
+86:AOR:-(int,int):/(int,int):com.fasterxml.jackson.core.base.ParserBase@getCurrentLocation():400:12628:_inputPtr - _currInputRowStart |==> _inputPtr / _currInputRowStart
+87:LVR:POS:0:com.fasterxml.jackson.core.base.ParserBase@getCurrentLocation():400:12661:1 |==> 0
+88:LVR:POS:NEG:com.fasterxml.jackson.core.base.ParserBase@getCurrentLocation():400:12661:1 |==> -1
+89:AOR:+(int,int):%(int,int):com.fasterxml.jackson.core.base.ParserBase@getCurrentLocation():400:12628:_inputPtr - _currInputRowStart + 1 |==> (_inputPtr - _currInputRowStart) % 1
+90:AOR:+(int,int):*(int,int):com.fasterxml.jackson.core.base.ParserBase@getCurrentLocation():400:12628:_inputPtr - _currInputRowStart + 1 |==> (_inputPtr - _currInputRowStart) * 1
+91:AOR:+(int,int):-(int,int):com.fasterxml.jackson.core.base.ParserBase@getCurrentLocation():400:12628:_inputPtr - _currInputRowStart + 1 |==> _inputPtr - _currInputRowStart - 1
+92:AOR:+(int,int):/(int,int):com.fasterxml.jackson.core.base.ParserBase@getCurrentLocation():400:12628:_inputPtr - _currInputRowStart + 1 |==> (_inputPtr - _currInputRowStart) / 1
+93:LVR:NEG:0:com.fasterxml.jackson.core.base.ParserBase@getCurrentLocation():402:12746:-1L |==> 0L
+94:LVR:NEG:POS:com.fasterxml.jackson.core.base.ParserBase@getCurrentLocation():402:12746:-1L |==> 1L
+95:AOR:+(long,long):%(long,long):com.fasterxml.jackson.core.base.ParserBase@getCurrentLocation():402:12751:_currInputProcessed + _inputPtr |==> _currInputProcessed % _inputPtr
+96:AOR:+(long,long):*(long,long):com.fasterxml.jackson.core.base.ParserBase@getCurrentLocation():402:12751:_currInputProcessed + _inputPtr |==> _currInputProcessed * _inputPtr
+97:AOR:+(long,long):-(long,long):com.fasterxml.jackson.core.base.ParserBase@getCurrentLocation():402:12751:_currInputProcessed + _inputPtr |==> _currInputProcessed - _inputPtr
+98:AOR:+(long,long):/(long,long):com.fasterxml.jackson.core.base.ParserBase@getCurrentLocation():402:12751:_currInputProcessed + _inputPtr |==> _currInputProcessed / _inputPtr
+99:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@hasTextCharacters():414:13131:_currToken == JsonToken.VALUE_STRING |==> false
+100:LVR:TRUE:FALSE:com.fasterxml.jackson.core.base.ParserBase@hasTextCharacters():414:13167:true |==> false
+101:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@hasTextCharacters():415:13222:_currToken == JsonToken.FIELD_NAME |==> false
+102:LVR:FALSE:TRUE:com.fasterxml.jackson.core.base.ParserBase@hasTextCharacters():416:13286:false |==> true
+103:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@getBinaryValue(com.fasterxml.jackson.core.Base64Variant):423:13467:_binaryValue == null |==> false
+104:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@getBinaryValue(com.fasterxml.jackson.core.Base64Variant):424:13505:_currToken != JsonToken.VALUE_STRING |==> true
+105:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@getBinaryValue(com.fasterxml.jackson.core.Base64Variant):425:13550:_reportError("Current token (" + _currToken + ") not VALUE_STRING, can not access as binary"); |==> <NO-OP>
+106:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@getBinaryValue(com.fasterxml.jackson.core.Base64Variant):428:13730:_decodeBase64(getText(), builder, variant); |==> <NO-OP>
+107:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@getBinaryValue(com.fasterxml.jackson.core.Base64Variant):429:13786:_binaryValue = builder.toByteArray(); |==> <NO-OP>
+108:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@getTokenColumnNr():445:14364:0 |==> 1
+109:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@getTokenColumnNr():445:14364:0 |==> -1
+110:ROR:<(int,int):!=(int,int):com.fasterxml.jackson.core.base.ParserBase@getTokenColumnNr():445:14358:col < 0 |==> col != 0
+111:ROR:<(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@getTokenColumnNr():445:14358:col < 0 |==> col <= 0
+112:ROR:<(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@getTokenColumnNr():445:14362:col < 0 |==> false
+113:LVR:POS:0:com.fasterxml.jackson.core.base.ParserBase@getTokenColumnNr():445:14382:1 |==> 0
+114:LVR:POS:NEG:com.fasterxml.jackson.core.base.ParserBase@getTokenColumnNr():445:14382:1 |==> -1
+115:AOR:+(int,int):%(int,int):com.fasterxml.jackson.core.base.ParserBase@getTokenColumnNr():445:14376:col + 1 |==> col % 1
+116:AOR:+(int,int):*(int,int):com.fasterxml.jackson.core.base.ParserBase@getTokenColumnNr():445:14376:col + 1 |==> col * 1
+117:AOR:+(int,int):-(int,int):com.fasterxml.jackson.core.base.ParserBase@getTokenColumnNr():445:14376:col + 1 |==> col - 1
+118:AOR:+(int,int):/(int,int):com.fasterxml.jackson.core.base.ParserBase@getTokenColumnNr():445:14376:col + 1 |==> col / 1
+119:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_releaseBuffers():469:15151:_textBuffer.releaseBuffers(); |==> <NO-OP>
+120:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@_releaseBuffers():471:15235:buf != null |==> true
+121:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_releaseBuffers():472:15258:_nameCopyBuffer = null; |==> <NO-OP>
+122:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_releaseBuffers():473:15294:_ioContext.releaseNameCopyBuffer(buf); |==> <NO-OP>
+123:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.core.base.ParserBase@_handleEOF():484:15640:_parsingContext.inRoot() |==> false
+124:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.core.base.ParserBase@_handleEOF():484:15640:_parsingContext.inRoot() |==> true
+125:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.core.base.ParserBase@_handleEOF():485:15697:_parsingContext.inArray() |==> false
+126:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.core.base.ParserBase@_handleEOF():485:15697:_parsingContext.inArray() |==> true
+127:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_handleEOF():486:15734:_reportInvalidEOF(String.format(": expected close marker for %s (start marker at %s)", marker, _parsingContext.getStartLocation(_getSourceReference())), null); |==> <NO-OP>
+128:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_eofAsNextChar():498:16103:_handleEOF(); |==> <NO-OP>
+129:LVR:NEG:0:com.fasterxml.jackson.core.base.ParserBase@_eofAsNextChar():499:16132:-1 |==> 0
+130:LVR:NEG:POS:com.fasterxml.jackson.core.base.ParserBase@_eofAsNextChar():499:16132:-1 |==> 1
+131:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@_getByteArrayBuilder():510:16436:_byteArrayBuilder == null |==> false
+132:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_getByteArrayBuilder():511:16459:_byteArrayBuilder = new ByteArrayBuilder(); |==> <NO-OP>
+133:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_getByteArrayBuilder():513:16532:_byteArrayBuilder.reset(); |==> <NO-OP>
+134:LVR:POS:0:com.fasterxml.jackson.core.base.ParserBase@reset(boolean,int,int,int):528:16971:1 |==> 0
+135:LVR:POS:NEG:com.fasterxml.jackson.core.base.ParserBase@reset(boolean,int,int,int):528:16971:1 |==> -1
+136:ROR:<(int,int):!=(int,int):com.fasterxml.jackson.core.base.ParserBase@reset(boolean,int,int,int):528:16960:fractLen < 1 |==> fractLen != 1
+137:ROR:<(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@reset(boolean,int,int,int):528:16960:fractLen < 1 |==> fractLen <= 1
+138:ROR:<(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@reset(boolean,int,int,int):528:16969:fractLen < 1 |==> false
+139:LVR:POS:0:com.fasterxml.jackson.core.base.ParserBase@reset(boolean,int,int,int):528:16985:1 |==> 0
+140:LVR:POS:NEG:com.fasterxml.jackson.core.base.ParserBase@reset(boolean,int,int,int):528:16985:1 |==> -1
+141:ROR:<(int,int):!=(int,int):com.fasterxml.jackson.core.base.ParserBase@reset(boolean,int,int,int):528:16976:expLen < 1 |==> expLen != 1
+142:ROR:<(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@reset(boolean,int,int,int):528:16976:expLen < 1 |==> expLen <= 1
+143:ROR:<(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@reset(boolean,int,int,int):528:16983:expLen < 1 |==> false
+144:COR:&&(boolean,boolean):==(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@reset(boolean,int,int,int):528:16960:fractLen < 1 && expLen < 1 |==> fractLen < 1 == expLen < 1
+145:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@reset(boolean,int,int,int):528:16973:fractLen < 1 && expLen < 1 |==> false
+146:COR:&&(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@reset(boolean,int,int,int):528:16960:fractLen < 1 && expLen < 1 |==> fractLen < 1
+147:COR:&&(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@reset(boolean,int,int,int):528:16976:fractLen < 1 && expLen < 1 |==> expLen < 1
+148:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@resetInt(boolean,int):536:17219:_numberNegative = negative; |==> <NO-OP>
+149:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@resetInt(boolean,int):537:17255:_intLength = intLen; |==> <NO-OP>
+150:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@resetInt(boolean,int):538:17299:0 |==> 1
+151:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@resetInt(boolean,int):538:17299:0 |==> -1
+152:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@resetInt(boolean,int):538:17284:_fractLength = 0; |==> <NO-OP>
+153:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@resetInt(boolean,int):539:17323:0 |==> 1
+154:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@resetInt(boolean,int):539:17323:0 |==> -1
+155:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@resetInt(boolean,int):539:17310:_expLength = 0; |==> <NO-OP>
+156:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@resetInt(boolean,int):540:17334:_numTypesValid = NR_UNKNOWN; |==> <NO-OP>
+157:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@resetFloat(boolean,int,int,int):546:17548:_numberNegative = negative; |==> <NO-OP>
+158:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@resetFloat(boolean,int,int,int):547:17584:_intLength = intLen; |==> <NO-OP>
+159:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@resetFloat(boolean,int,int,int):548:17613:_fractLength = fractLen; |==> <NO-OP>
+160:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@resetFloat(boolean,int,int,int):549:17646:_expLength = expLen; |==> <NO-OP>
+161:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@resetFloat(boolean,int,int,int):550:17675:_numTypesValid = NR_UNKNOWN; |==> <NO-OP>
+162:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@resetAsNaN(java.lang.String,double):556:17866:_textBuffer.resetWithString(valueStr); |==> <NO-OP>
+163:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@resetAsNaN(java.lang.String,double):557:17913:_numberDouble = value; |==> <NO-OP>
+164:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@resetAsNaN(java.lang.String,double):558:17944:_numTypesValid = NR_DOUBLE; |==> <NO-OP>
+165:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@isNaN():564:18090:_currToken == JsonToken.VALUE_NUMBER_FLOAT |==> false
+166:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@isNaN():565:18142:_numTypesValid & NR_DOUBLE |==> _numTypesValid ^ NR_DOUBLE
+167:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@isNaN():565:18142:_numTypesValid & NR_DOUBLE |==> _numTypesValid | NR_DOUBLE
+168:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@isNaN():565:18173:0 |==> 1
+169:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@isNaN():565:18173:0 |==> -1
+170:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@isNaN():565:18141:(_numTypesValid & NR_DOUBLE) != 0 |==> (_numTypesValid & NR_DOUBLE) < 0
+171:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@isNaN():565:18141:(_numTypesValid & NR_DOUBLE) != 0 |==> (_numTypesValid & NR_DOUBLE) > 0
+172:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@isNaN():565:18170:(_numTypesValid & NR_DOUBLE) != 0 |==> true
+173:COR:||(boolean,boolean):!=(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@isNaN():568:18328:Double.isNaN(d) || Double.isInfinite(d) |==> Double.isNaN(d) != Double.isInfinite(d)
+174:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@isNaN():568:18328:Double.isNaN(d) || Double.isInfinite(d) |==> Double.isNaN(d)
+175:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@isNaN():568:18347:Double.isNaN(d) || Double.isInfinite(d) |==> Double.isInfinite(d)
+176:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@isNaN():568:18344:Double.isNaN(d) || Double.isInfinite(d) |==> true
+177:LVR:FALSE:TRUE:com.fasterxml.jackson.core.base.ParserBase@isNaN():571:18422:false |==> true
+178:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():583:18709:_numTypesValid == NR_UNKNOWN |==> _numTypesValid <= NR_UNKNOWN
+179:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():583:18709:_numTypesValid == NR_UNKNOWN |==> _numTypesValid >= NR_UNKNOWN
+180:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():583:18724:_numTypesValid == NR_UNKNOWN |==> false
+181:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@getNumberValue():584:18753:_parseNumericValue(NR_UNKNOWN); |==> <NO-OP>
+182:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():587:18888:_currToken == JsonToken.VALUE_NUMBER_INT |==> false
+183:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():588:18938:_numTypesValid & NR_INT |==> _numTypesValid ^ NR_INT
+184:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():588:18938:_numTypesValid & NR_INT |==> _numTypesValid | NR_INT
+185:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@getNumberValue():588:18966:0 |==> 1
+186:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@getNumberValue():588:18966:0 |==> -1
+187:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():588:18937:(_numTypesValid & NR_INT) != 0 |==> (_numTypesValid & NR_INT) < 0
+188:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():588:18937:(_numTypesValid & NR_INT) != 0 |==> (_numTypesValid & NR_INT) > 0
+189:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():588:18963:(_numTypesValid & NR_INT) != 0 |==> true
+190:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():591:19037:_numTypesValid & NR_LONG |==> _numTypesValid ^ NR_LONG
+191:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():591:19037:_numTypesValid & NR_LONG |==> _numTypesValid | NR_LONG
+192:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@getNumberValue():591:19066:0 |==> 1
+193:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@getNumberValue():591:19066:0 |==> -1
+194:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():591:19036:(_numTypesValid & NR_LONG) != 0 |==> (_numTypesValid & NR_LONG) < 0
+195:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():591:19036:(_numTypesValid & NR_LONG) != 0 |==> (_numTypesValid & NR_LONG) > 0
+196:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():591:19063:(_numTypesValid & NR_LONG) != 0 |==> true
+197:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():594:19138:_numTypesValid & NR_BIGINT |==> _numTypesValid ^ NR_BIGINT
+198:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():594:19138:_numTypesValid & NR_BIGINT |==> _numTypesValid | NR_BIGINT
+199:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@getNumberValue():594:19169:0 |==> 1
+200:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@getNumberValue():594:19169:0 |==> -1
+201:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():594:19137:(_numTypesValid & NR_BIGINT) != 0 |==> (_numTypesValid & NR_BIGINT) < 0
+202:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():594:19137:(_numTypesValid & NR_BIGINT) != 0 |==> (_numTypesValid & NR_BIGINT) > 0
+203:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():594:19166:(_numTypesValid & NR_BIGINT) != 0 |==> true
+204:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():604:19481:_numTypesValid & NR_BIGDECIMAL |==> _numTypesValid ^ NR_BIGDECIMAL
+205:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():604:19481:_numTypesValid & NR_BIGDECIMAL |==> _numTypesValid | NR_BIGDECIMAL
+206:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@getNumberValue():604:19516:0 |==> 1
+207:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@getNumberValue():604:19516:0 |==> -1
+208:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():604:19480:(_numTypesValid & NR_BIGDECIMAL) != 0 |==> (_numTypesValid & NR_BIGDECIMAL) < 0
+209:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():604:19480:(_numTypesValid & NR_BIGDECIMAL) != 0 |==> (_numTypesValid & NR_BIGDECIMAL) > 0
+210:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():604:19513:(_numTypesValid & NR_BIGDECIMAL) != 0 |==> true
+211:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():607:19582:_numTypesValid & NR_DOUBLE |==> _numTypesValid ^ NR_DOUBLE
+212:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():607:19582:_numTypesValid & NR_DOUBLE |==> _numTypesValid | NR_DOUBLE
+213:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@getNumberValue():607:19613:0 |==> 1
+214:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@getNumberValue():607:19613:0 |==> -1
+215:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():607:19581:(_numTypesValid & NR_DOUBLE) == 0 |==> (_numTypesValid & NR_DOUBLE) <= 0
+216:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():607:19581:(_numTypesValid & NR_DOUBLE) == 0 |==> (_numTypesValid & NR_DOUBLE) >= 0
+217:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberValue():607:19610:(_numTypesValid & NR_DOUBLE) == 0 |==> false
+218:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@getNumberValue():608:19646:_throwInternal(); |==> <NO-OP>
+219:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberType():616:19804:_numTypesValid == NR_UNKNOWN |==> _numTypesValid <= NR_UNKNOWN
+220:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberType():616:19804:_numTypesValid == NR_UNKNOWN |==> _numTypesValid >= NR_UNKNOWN
+221:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberType():616:19819:_numTypesValid == NR_UNKNOWN |==> false
+222:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@getNumberType():617:19848:_parseNumericValue(NR_UNKNOWN); |==> <NO-OP>
+223:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@getNumberType():619:19943:_currToken == JsonToken.VALUE_NUMBER_INT |==> false
+224:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberType():620:19993:_numTypesValid & NR_INT |==> _numTypesValid ^ NR_INT
+225:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberType():620:19993:_numTypesValid & NR_INT |==> _numTypesValid | NR_INT
+226:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@getNumberType():620:20021:0 |==> 1
+227:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@getNumberType():620:20021:0 |==> -1
+228:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberType():620:19992:(_numTypesValid & NR_INT) != 0 |==> (_numTypesValid & NR_INT) < 0
+229:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberType():620:19992:(_numTypesValid & NR_INT) != 0 |==> (_numTypesValid & NR_INT) > 0
+230:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberType():620:20018:(_numTypesValid & NR_INT) != 0 |==> true
+231:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberType():623:20096:_numTypesValid & NR_LONG |==> _numTypesValid ^ NR_LONG
+232:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberType():623:20096:_numTypesValid & NR_LONG |==> _numTypesValid | NR_LONG
+233:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@getNumberType():623:20125:0 |==> 1
+234:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@getNumberType():623:20125:0 |==> -1
+235:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberType():623:20095:(_numTypesValid & NR_LONG) != 0 |==> (_numTypesValid & NR_LONG) < 0
+236:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberType():623:20095:(_numTypesValid & NR_LONG) != 0 |==> (_numTypesValid & NR_LONG) > 0
+237:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberType():623:20122:(_numTypesValid & NR_LONG) != 0 |==> true
+238:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberType():635:20547:_numTypesValid & NR_BIGDECIMAL |==> _numTypesValid ^ NR_BIGDECIMAL
+239:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberType():635:20547:_numTypesValid & NR_BIGDECIMAL |==> _numTypesValid | NR_BIGDECIMAL
+240:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@getNumberType():635:20582:0 |==> 1
+241:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@getNumberType():635:20582:0 |==> -1
+242:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberType():635:20546:(_numTypesValid & NR_BIGDECIMAL) != 0 |==> (_numTypesValid & NR_BIGDECIMAL) < 0
+243:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberType():635:20546:(_numTypesValid & NR_BIGDECIMAL) != 0 |==> (_numTypesValid & NR_BIGDECIMAL) > 0
+244:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@getNumberType():635:20579:(_numTypesValid & NR_BIGDECIMAL) != 0 |==> true
+245:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@getIntValue():644:20766:_numTypesValid & NR_INT |==> _numTypesValid ^ NR_INT
+246:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@getIntValue():644:20766:_numTypesValid & NR_INT |==> _numTypesValid | NR_INT
+247:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@getIntValue():644:20794:0 |==> 1
+248:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@getIntValue():644:20794:0 |==> -1
+249:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@getIntValue():644:20765:(_numTypesValid & NR_INT) == 0 |==> (_numTypesValid & NR_INT) <= 0
+250:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@getIntValue():644:20765:(_numTypesValid & NR_INT) == 0 |==> (_numTypesValid & NR_INT) >= 0
+251:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@getIntValue():644:20791:(_numTypesValid & NR_INT) == 0 |==> false
+252:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@getIntValue():645:20815:_numTypesValid == NR_UNKNOWN |==> _numTypesValid <= NR_UNKNOWN
+253:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@getIntValue():645:20815:_numTypesValid == NR_UNKNOWN |==> _numTypesValid >= NR_UNKNOWN
+254:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@getIntValue():645:20830:_numTypesValid == NR_UNKNOWN |==> false
+255:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@getIntValue():648:20940:_numTypesValid & NR_INT |==> _numTypesValid ^ NR_INT
+256:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@getIntValue():648:20940:_numTypesValid & NR_INT |==> _numTypesValid | NR_INT
+257:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@getIntValue():648:20968:0 |==> 1
+258:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@getIntValue():648:20968:0 |==> -1
+259:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@getIntValue():648:20939:(_numTypesValid & NR_INT) == 0 |==> (_numTypesValid & NR_INT) <= 0
+260:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@getIntValue():648:20939:(_numTypesValid & NR_INT) == 0 |==> (_numTypesValid & NR_INT) >= 0
+261:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@getIntValue():648:20965:(_numTypesValid & NR_INT) == 0 |==> false
+262:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@getIntValue():649:21016:convertNumberToInt(); |==> <NO-OP>
+263:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@getLongValue():658:21216:_numTypesValid & NR_LONG |==> _numTypesValid ^ NR_LONG
+264:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@getLongValue():658:21216:_numTypesValid & NR_LONG |==> _numTypesValid | NR_LONG
+265:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@getLongValue():658:21245:0 |==> 1
+266:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@getLongValue():658:21245:0 |==> -1
+267:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@getLongValue():658:21215:(_numTypesValid & NR_LONG) == 0 |==> (_numTypesValid & NR_LONG) <= 0
+268:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@getLongValue():658:21215:(_numTypesValid & NR_LONG) == 0 |==> (_numTypesValid & NR_LONG) >= 0
+269:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@getLongValue():658:21242:(_numTypesValid & NR_LONG) == 0 |==> false
+270:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@getLongValue():659:21266:_numTypesValid == NR_UNKNOWN |==> _numTypesValid <= NR_UNKNOWN
+271:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@getLongValue():659:21266:_numTypesValid == NR_UNKNOWN |==> _numTypesValid >= NR_UNKNOWN
+272:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@getLongValue():659:21281:_numTypesValid == NR_UNKNOWN |==> false
+273:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@getLongValue():660:21314:_parseNumericValue(NR_LONG); |==> <NO-OP>
+274:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@getLongValue():662:21374:_numTypesValid & NR_LONG |==> _numTypesValid ^ NR_LONG
+275:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@getLongValue():662:21374:_numTypesValid & NR_LONG |==> _numTypesValid | NR_LONG
+276:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@getLongValue():662:21403:0 |==> 1
+277:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@getLongValue():662:21403:0 |==> -1
+278:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@getLongValue():662:21373:(_numTypesValid & NR_LONG) == 0 |==> (_numTypesValid & NR_LONG) <= 0
+279:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@getLongValue():662:21373:(_numTypesValid & NR_LONG) == 0 |==> (_numTypesValid & NR_LONG) >= 0
+280:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@getLongValue():662:21400:(_numTypesValid & NR_LONG) == 0 |==> false
+281:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@getLongValue():663:21424:convertNumberToLong(); |==> <NO-OP>
+282:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@getBigIntegerValue():672:21605:_numTypesValid & NR_BIGINT |==> _numTypesValid ^ NR_BIGINT
+283:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@getBigIntegerValue():672:21605:_numTypesValid & NR_BIGINT |==> _numTypesValid | NR_BIGINT
+284:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@getBigIntegerValue():672:21636:0 |==> 1
+285:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@getBigIntegerValue():672:21636:0 |==> -1
+286:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@getBigIntegerValue():672:21604:(_numTypesValid & NR_BIGINT) == 0 |==> (_numTypesValid & NR_BIGINT) <= 0
+287:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@getBigIntegerValue():672:21604:(_numTypesValid & NR_BIGINT) == 0 |==> (_numTypesValid & NR_BIGINT) >= 0
+288:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@getBigIntegerValue():672:21633:(_numTypesValid & NR_BIGINT) == 0 |==> false
+289:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@getBigIntegerValue():673:21657:_numTypesValid == NR_UNKNOWN |==> _numTypesValid <= NR_UNKNOWN
+290:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@getBigIntegerValue():673:21657:_numTypesValid == NR_UNKNOWN |==> _numTypesValid >= NR_UNKNOWN
+291:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@getBigIntegerValue():673:21672:_numTypesValid == NR_UNKNOWN |==> false
+292:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@getBigIntegerValue():674:21705:_parseNumericValue(NR_BIGINT); |==> <NO-OP>
+293:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@getBigIntegerValue():676:21767:_numTypesValid & NR_BIGINT |==> _numTypesValid ^ NR_BIGINT
+294:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@getBigIntegerValue():676:21767:_numTypesValid & NR_BIGINT |==> _numTypesValid | NR_BIGINT
+295:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@getBigIntegerValue():676:21798:0 |==> 1
+296:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@getBigIntegerValue():676:21798:0 |==> -1
+297:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@getBigIntegerValue():676:21766:(_numTypesValid & NR_BIGINT) == 0 |==> (_numTypesValid & NR_BIGINT) <= 0
+298:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@getBigIntegerValue():676:21766:(_numTypesValid & NR_BIGINT) == 0 |==> (_numTypesValid & NR_BIGINT) >= 0
+299:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@getBigIntegerValue():676:21795:(_numTypesValid & NR_BIGINT) == 0 |==> false
+300:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@getBigIntegerValue():677:21819:convertNumberToBigInteger(); |==> <NO-OP>
+301:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@getDoubleValue():701:22467:_numTypesValid & NR_DOUBLE |==> _numTypesValid ^ NR_DOUBLE
+302:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@getDoubleValue():701:22467:_numTypesValid & NR_DOUBLE |==> _numTypesValid | NR_DOUBLE
+303:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@getDoubleValue():701:22498:0 |==> 1
+304:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@getDoubleValue():701:22498:0 |==> -1
+305:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@getDoubleValue():701:22466:(_numTypesValid & NR_DOUBLE) == 0 |==> (_numTypesValid & NR_DOUBLE) <= 0
+306:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@getDoubleValue():701:22466:(_numTypesValid & NR_DOUBLE) == 0 |==> (_numTypesValid & NR_DOUBLE) >= 0
+307:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@getDoubleValue():701:22495:(_numTypesValid & NR_DOUBLE) == 0 |==> false
+308:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@getDoubleValue():702:22519:_numTypesValid == NR_UNKNOWN |==> _numTypesValid <= NR_UNKNOWN
+309:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@getDoubleValue():702:22519:_numTypesValid == NR_UNKNOWN |==> _numTypesValid >= NR_UNKNOWN
+310:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@getDoubleValue():702:22534:_numTypesValid == NR_UNKNOWN |==> false
+311:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@getDoubleValue():703:22567:_parseNumericValue(NR_DOUBLE); |==> <NO-OP>
+312:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@getDoubleValue():705:22629:_numTypesValid & NR_DOUBLE |==> _numTypesValid ^ NR_DOUBLE
+313:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@getDoubleValue():705:22629:_numTypesValid & NR_DOUBLE |==> _numTypesValid | NR_DOUBLE
+314:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@getDoubleValue():705:22660:0 |==> 1
+315:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@getDoubleValue():705:22660:0 |==> -1
+316:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@getDoubleValue():705:22628:(_numTypesValid & NR_DOUBLE) == 0 |==> (_numTypesValid & NR_DOUBLE) <= 0
+317:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@getDoubleValue():705:22628:(_numTypesValid & NR_DOUBLE) == 0 |==> (_numTypesValid & NR_DOUBLE) >= 0
+318:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@getDoubleValue():705:22657:(_numTypesValid & NR_DOUBLE) == 0 |==> false
+319:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@getDoubleValue():706:22681:convertNumberToDouble(); |==> <NO-OP>
+320:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@getDecimalValue():715:22863:_numTypesValid & NR_BIGDECIMAL |==> _numTypesValid ^ NR_BIGDECIMAL
+321:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@getDecimalValue():715:22863:_numTypesValid & NR_BIGDECIMAL |==> _numTypesValid | NR_BIGDECIMAL
+322:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@getDecimalValue():715:22898:0 |==> 1
+323:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@getDecimalValue():715:22898:0 |==> -1
+324:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@getDecimalValue():715:22862:(_numTypesValid & NR_BIGDECIMAL) == 0 |==> (_numTypesValid & NR_BIGDECIMAL) <= 0
+325:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@getDecimalValue():715:22862:(_numTypesValid & NR_BIGDECIMAL) == 0 |==> (_numTypesValid & NR_BIGDECIMAL) >= 0
+326:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@getDecimalValue():715:22895:(_numTypesValid & NR_BIGDECIMAL) == 0 |==> false
+327:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@getDecimalValue():716:22919:_numTypesValid == NR_UNKNOWN |==> _numTypesValid <= NR_UNKNOWN
+328:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@getDecimalValue():716:22919:_numTypesValid == NR_UNKNOWN |==> _numTypesValid >= NR_UNKNOWN
+329:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@getDecimalValue():716:22934:_numTypesValid == NR_UNKNOWN |==> false
+330:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@getDecimalValue():717:22967:_parseNumericValue(NR_BIGDECIMAL); |==> <NO-OP>
+331:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@getDecimalValue():719:23033:_numTypesValid & NR_BIGDECIMAL |==> _numTypesValid ^ NR_BIGDECIMAL
+332:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@getDecimalValue():719:23033:_numTypesValid & NR_BIGDECIMAL |==> _numTypesValid | NR_BIGDECIMAL
+333:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@getDecimalValue():719:23068:0 |==> 1
+334:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@getDecimalValue():719:23068:0 |==> -1
+335:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@getDecimalValue():719:23032:(_numTypesValid & NR_BIGDECIMAL) == 0 |==> (_numTypesValid & NR_BIGDECIMAL) <= 0
+336:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@getDecimalValue():719:23032:(_numTypesValid & NR_BIGDECIMAL) == 0 |==> (_numTypesValid & NR_BIGDECIMAL) >= 0
+337:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@getDecimalValue():719:23065:(_numTypesValid & NR_BIGDECIMAL) == 0 |==> false
+338:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@getDecimalValue():720:23089:convertNumberToBigDecimal(); |==> <NO-OP>
+339:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):744:23961:_currToken == JsonToken.VALUE_NUMBER_INT |==> false
+340:LVR:POS:0:com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):747:24101:9 |==> 0
+341:LVR:POS:NEG:com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):747:24101:9 |==> -9
+342:ROR:<=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):747:24094:len <= 9 |==> len < 9
+343:ROR:<=(int,int):==(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):747:24094:len <= 9 |==> len == 9
+344:ROR:<=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):747:24098:len <= 9 |==> true
+345:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):749:24191:_numberInt = i; |==> <NO-OP>
+346:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):750:24223:_numTypesValid = NR_INT; |==> <NO-OP>
+347:LVR:POS:0:com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):753:24309:18 |==> 0
+348:LVR:POS:NEG:com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):753:24309:18 |==> -18
+349:ROR:<=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):753:24302:len <= 18 |==> len < 18
+350:ROR:<=(int,int):==(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):753:24302:len <= 18 |==> len == 18
+351:ROR:<=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):753:24306:len <= 18 |==> true
+352:LVR:POS:0:com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):756:24533:10 |==> 0
+353:LVR:POS:NEG:com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):756:24533:10 |==> -10
+354:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):756:24526:len == 10 |==> len <= 10
+355:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):756:24526:len == 10 |==> len >= 10
+356:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):756:24530:len == 10 |==> false
+357:COR:<IDENTIFIER(boolean)>:FALSE:com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):757:24563:_numberNegative |==> false
+358:COR:<IDENTIFIER(boolean)>:TRUE:com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):757:24563:_numberNegative |==> true
+359:ROR:>=(long,long):==(long,long):com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):758:24610:l >= MIN_INT_L |==> l == MIN_INT_L
+360:ROR:>=(long,long):>(long,long):com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):758:24610:l >= MIN_INT_L |==> l > MIN_INT_L
+361:ROR:>=(long,long):TRUE(long,long):com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):758:24612:l >= MIN_INT_L |==> true
+362:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):759:24656:_numberInt = (int)l; |==> <NO-OP>
+363:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):760:24706:_numTypesValid = NR_INT; |==> <NO-OP>
+364:ROR:<=(long,long):<(long,long):com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):764:24850:l <= MAX_INT_L |==> l < MAX_INT_L
+365:ROR:<=(long,long):==(long,long):com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):764:24850:l <= MAX_INT_L |==> l == MAX_INT_L
+366:ROR:<=(long,long):TRUE(long,long):com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):764:24852:l <= MAX_INT_L |==> true
+367:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):765:24896:_numberInt = (int)l; |==> <NO-OP>
+368:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):766:24946:_numTypesValid = NR_INT; |==> <NO-OP>
+369:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):771:25089:_numberLong = l; |==> <NO-OP>
+370:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):772:25122:_numTypesValid = NR_LONG; |==> <NO-OP>
+371:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):775:25198:_parseSlowInt(expType); |==> <NO-OP>
+372:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):778:25275:_currToken == JsonToken.VALUE_NUMBER_FLOAT |==> false
+373:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):779:25322:_parseSlowFloat(expType); |==> <NO-OP>
+374:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseNumericValue(int):782:25386:_reportError("Current token (%s) not numeric, can not use numeric value accessors", _currToken); |==> <NO-OP>
+375:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@_parseIntValue():791:25665:_currToken == JsonToken.VALUE_NUMBER_INT |==> false
+376:LVR:POS:0:com.fasterxml.jackson.core.base.ParserBase@_parseIntValue():792:25728:9 |==> 0
+377:LVR:POS:NEG:com.fasterxml.jackson.core.base.ParserBase@_parseIntValue():792:25728:9 |==> -9
+378:ROR:<=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseIntValue():792:25714:_intLength <= 9 |==> _intLength < 9
+379:ROR:<=(int,int):==(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseIntValue():792:25714:_intLength <= 9 |==> _intLength == 9
+380:ROR:<=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseIntValue():792:25725:_intLength <= 9 |==> true
+381:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseIntValue():794:25817:_numberInt = i; |==> <NO-OP>
+382:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseIntValue():795:25849:_numTypesValid = NR_INT; |==> <NO-OP>
+383:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseIntValue():800:25980:_parseNumericValue(NR_INT); |==> <NO-OP>
+384:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseIntValue():801:26021:_numTypesValid & NR_INT |==> _numTypesValid ^ NR_INT
+385:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseIntValue():801:26021:_numTypesValid & NR_INT |==> _numTypesValid | NR_INT
+386:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@_parseIntValue():801:26049:0 |==> 1
+387:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@_parseIntValue():801:26049:0 |==> -1
+388:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseIntValue():801:26020:(_numTypesValid & NR_INT) == 0 |==> (_numTypesValid & NR_INT) <= 0
+389:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseIntValue():801:26020:(_numTypesValid & NR_INT) == 0 |==> (_numTypesValid & NR_INT) >= 0
+390:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseIntValue():801:26046:(_numTypesValid & NR_INT) == 0 |==> false
+391:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseIntValue():802:26066:convertNumberToInt(); |==> <NO-OP>
+392:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseSlowFloat(int):817:26619:expType == NR_BIGDECIMAL |==> expType <= NR_BIGDECIMAL
+393:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseSlowFloat(int):817:26619:expType == NR_BIGDECIMAL |==> expType >= NR_BIGDECIMAL
+394:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseSlowFloat(int):817:26627:expType == NR_BIGDECIMAL |==> false
+395:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseSlowFloat(int):818:26663:_numberBigDecimal = _textBuffer.contentsAsDecimal(); |==> <NO-OP>
+396:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseSlowFloat(int):819:26732:_numTypesValid = NR_BIGDECIMAL; |==> <NO-OP>
+397:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseSlowFloat(int):822:26847:_numberDouble = _textBuffer.contentsAsDouble(); |==> <NO-OP>
+398:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseSlowFloat(int):823:26911:_numTypesValid = NR_DOUBLE; |==> <NO-OP>
+399:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseSlowFloat(int):827:27071:_wrapError("Malformed numeric value (" + _longNumberDesc(_textBuffer.contentsAsString()) + ")", nex); |==> <NO-OP>
+400:COR:<IDENTIFIER(boolean)>:FALSE:com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):838:27483:_numberNegative |==> false
+401:COR:<IDENTIFIER(boolean)>:TRUE:com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):838:27483:_numberNegative |==> true
+402:STD:<INC>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):839:27518:++offset; |==> <NO-OP>
+403:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):842:27621:NumberInput.inLongRange(buf, offset, len, _numberNegative) |==> false
+404:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):842:27621:NumberInput.inLongRange(buf, offset, len, _numberNegative) |==> true
+405:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):844:27769:_numberLong = Long.parseLong(numStr); |==> <NO-OP>
+406:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):845:27823:_numTypesValid = NR_LONG; |==> <NO-OP>
+407:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):848:27985:expType == NR_INT |==> expType <= NR_INT
+408:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):848:27985:expType == NR_INT |==> expType >= NR_INT
+409:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):848:27993:expType == NR_INT |==> false
+410:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):848:28008:expType == NR_LONG |==> expType <= NR_LONG
+411:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):848:28008:expType == NR_LONG |==> expType >= NR_LONG
+412:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):848:28016:expType == NR_LONG |==> false
+413:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):848:27984:(expType == NR_INT) || (expType == NR_LONG) |==> (expType == NR_INT)
+414:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):848:28007:(expType == NR_INT) || (expType == NR_LONG) |==> (expType == NR_LONG)
+415:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):848:28004:(expType == NR_INT) || (expType == NR_LONG) |==> true
+416:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):849:28051:_reportTooLongIntegral(expType, numStr); |==> <NO-OP>
+417:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):851:28131:expType == NR_DOUBLE |==> expType <= NR_DOUBLE
+418:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):851:28131:expType == NR_DOUBLE |==> expType >= NR_DOUBLE
+419:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):851:28139:expType == NR_DOUBLE |==> false
+420:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):851:28157:expType == NR_FLOAT |==> expType <= NR_FLOAT
+421:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):851:28157:expType == NR_FLOAT |==> expType >= NR_FLOAT
+422:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):851:28165:expType == NR_FLOAT |==> false
+423:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):851:28130:(expType == NR_DOUBLE) || (expType == NR_FLOAT) |==> (expType == NR_DOUBLE)
+424:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):851:28156:(expType == NR_DOUBLE) || (expType == NR_FLOAT) |==> (expType == NR_FLOAT)
+425:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):851:28153:(expType == NR_DOUBLE) || (expType == NR_FLOAT) |==> true
+426:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):852:28201:_numberDouble = NumberInput.parseDouble(numStr); |==> <NO-OP>
+427:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):853:28270:_numTypesValid = NR_DOUBLE; |==> <NO-OP>
+428:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):856:28407:_numberBigInt = new BigInteger(numStr); |==> <NO-OP>
+429:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):857:28467:_numTypesValid = NR_BIGINT; |==> <NO-OP>
+430:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_parseSlowInt(int):862:28645:_wrapError("Malformed numeric value (" + _longNumberDesc(numStr) + ")", nex); |==> <NO-OP>
+431:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@_reportTooLongIntegral(int,java.lang.String):871:28996:expType == NR_LONG |==> expType <= NR_LONG
+432:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@_reportTooLongIntegral(int,java.lang.String):871:28996:expType == NR_LONG |==> expType >= NR_LONG
+433:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@_reportTooLongIntegral(int,java.lang.String):871:29004:expType == NR_LONG |==> false
+434:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_reportTooLongIntegral(int,java.lang.String):870:28916:_reportError("Numeric value (%s) out of range of %s", numDesc, (expType == NR_LONG) ? "long" : "int"); |==> <NO-OP>
+435:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():883:29355:_numTypesValid & NR_LONG |==> _numTypesValid ^ NR_LONG
+436:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():883:29355:_numTypesValid & NR_LONG |==> _numTypesValid | NR_LONG
+437:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():883:29384:0 |==> 1
+438:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():883:29384:0 |==> -1
+439:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():883:29354:(_numTypesValid & NR_LONG) != 0 |==> (_numTypesValid & NR_LONG) < 0
+440:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():883:29354:(_numTypesValid & NR_LONG) != 0 |==> (_numTypesValid & NR_LONG) > 0
+441:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():883:29381:(_numTypesValid & NR_LONG) != 0 |==> true
+442:ROR:!=(long,long):<(long,long):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():886:29522:((long)result) != _numberLong |==> ((long)result) < _numberLong
+443:ROR:!=(long,long):>(long,long):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():886:29522:((long)result) != _numberLong |==> ((long)result) > _numberLong
+444:ROR:!=(long,long):TRUE(long,long):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():886:29538:((long)result) != _numberLong |==> true
+445:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():887:29572:_reportError("Numeric value (" + getText() + ") out of range of int"); |==> <NO-OP>
+446:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():889:29665:_numberInt = result; |==> <NO-OP>
+447:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():890:29706:_numTypesValid & NR_BIGINT |==> _numTypesValid ^ NR_BIGINT
+448:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():890:29706:_numTypesValid & NR_BIGINT |==> _numTypesValid | NR_BIGINT
+449:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():890:29737:0 |==> 1
+450:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():890:29737:0 |==> -1
+451:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():890:29705:(_numTypesValid & NR_BIGINT) != 0 |==> (_numTypesValid & NR_BIGINT) < 0
+452:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():890:29705:(_numTypesValid & NR_BIGINT) != 0 |==> (_numTypesValid & NR_BIGINT) > 0
+453:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():890:29734:(_numTypesValid & NR_BIGINT) != 0 |==> true
+454:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():891:29796:0 |==> 1
+455:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():891:29796:0 |==> -1
+456:ROR:>(int,int):!=(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():891:29758:BI_MIN_INT.compareTo(_numberBigInt) > 0 |==> BI_MIN_INT.compareTo(_numberBigInt) != 0
+457:ROR:>(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():891:29758:BI_MIN_INT.compareTo(_numberBigInt) > 0 |==> BI_MIN_INT.compareTo(_numberBigInt) >= 0
+458:ROR:>(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():891:29794:BI_MIN_INT.compareTo(_numberBigInt) > 0 |==> false
+459:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():892:29860:0 |==> 1
+460:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():892:29860:0 |==> -1
+461:ROR:<(int,int):!=(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():892:29822:BI_MAX_INT.compareTo(_numberBigInt) < 0 |==> BI_MAX_INT.compareTo(_numberBigInt) != 0
+462:ROR:<(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():892:29822:BI_MAX_INT.compareTo(_numberBigInt) < 0 |==> BI_MAX_INT.compareTo(_numberBigInt) <= 0
+463:ROR:<(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():892:29858:BI_MAX_INT.compareTo(_numberBigInt) < 0 |==> false
+464:COR:||(boolean,boolean):!=(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():891:29758:BI_MIN_INT.compareTo(_numberBigInt) > 0 || BI_MAX_INT.compareTo(_numberBigInt) < 0 |==> BI_MIN_INT.compareTo(_numberBigInt) > 0 != BI_MAX_INT.compareTo(_numberBigInt) < 0
+465:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():891:29758:BI_MIN_INT.compareTo(_numberBigInt) > 0 || BI_MAX_INT.compareTo(_numberBigInt) < 0 |==> BI_MIN_INT.compareTo(_numberBigInt) > 0
+466:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():892:29822:BI_MIN_INT.compareTo(_numberBigInt) > 0 || BI_MAX_INT.compareTo(_numberBigInt) < 0 |==> BI_MAX_INT.compareTo(_numberBigInt) < 0
+467:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():892:29819:BI_MIN_INT.compareTo(_numberBigInt) > 0 || BI_MAX_INT.compareTo(_numberBigInt) < 0 |==> true
+468:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():893:29881:reportOverflowInt(); |==> <NO-OP>
+469:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():895:29928:_numberInt = _numberBigInt.intValue(); |==> <NO-OP>
+470:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():896:29987:_numTypesValid & NR_DOUBLE |==> _numTypesValid ^ NR_DOUBLE
+471:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():896:29987:_numTypesValid & NR_DOUBLE |==> _numTypesValid | NR_DOUBLE
+472:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():896:30018:0 |==> 1
+473:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():896:30018:0 |==> -1
+474:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():896:29986:(_numTypesValid & NR_DOUBLE) != 0 |==> (_numTypesValid & NR_DOUBLE) < 0
+475:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():896:29986:(_numTypesValid & NR_DOUBLE) != 0 |==> (_numTypesValid & NR_DOUBLE) > 0
+476:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():896:30015:(_numTypesValid & NR_DOUBLE) != 0 |==> true
+477:ROR:<(double,double):!=(double,double):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():898:30079:_numberDouble < MIN_INT_D |==> _numberDouble != MIN_INT_D
+478:ROR:<(double,double):<=(double,double):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():898:30079:_numberDouble < MIN_INT_D |==> _numberDouble <= MIN_INT_D
+479:ROR:<(double,double):FALSE(double,double):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():898:30093:_numberDouble < MIN_INT_D |==> false
+480:ROR:>(double,double):!=(double,double):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():898:30108:_numberDouble > MAX_INT_D |==> _numberDouble != MAX_INT_D
+481:ROR:>(double,double):>=(double,double):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():898:30108:_numberDouble > MAX_INT_D |==> _numberDouble >= MAX_INT_D
+482:ROR:>(double,double):FALSE(double,double):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():898:30122:_numberDouble > MAX_INT_D |==> false
+483:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():898:30079:_numberDouble < MIN_INT_D || _numberDouble > MAX_INT_D |==> _numberDouble < MIN_INT_D
+484:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():898:30108:_numberDouble < MIN_INT_D || _numberDouble > MAX_INT_D |==> _numberDouble > MAX_INT_D
+485:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():898:30105:_numberDouble < MIN_INT_D || _numberDouble > MAX_INT_D |==> true
+486:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():899:30153:reportOverflowInt(); |==> <NO-OP>
+487:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():901:30200:_numberInt = (int)_numberDouble; |==> <NO-OP>
+488:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():902:30254:_numTypesValid & NR_BIGDECIMAL |==> _numTypesValid ^ NR_BIGDECIMAL
+489:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():902:30254:_numTypesValid & NR_BIGDECIMAL |==> _numTypesValid | NR_BIGDECIMAL
+490:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():902:30289:0 |==> 1
+491:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():902:30289:0 |==> -1
+492:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():902:30253:(_numTypesValid & NR_BIGDECIMAL) != 0 |==> (_numTypesValid & NR_BIGDECIMAL) < 0
+493:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():902:30253:(_numTypesValid & NR_BIGDECIMAL) != 0 |==> (_numTypesValid & NR_BIGDECIMAL) > 0
+494:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():902:30286:(_numTypesValid & NR_BIGDECIMAL) != 0 |==> true
+495:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():903:30352:0 |==> 1
+496:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():903:30352:0 |==> -1
+497:ROR:>(int,int):!=(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():903:30310:BD_MIN_INT.compareTo(_numberBigDecimal) > 0 |==> BD_MIN_INT.compareTo(_numberBigDecimal) != 0
+498:ROR:>(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():903:30310:BD_MIN_INT.compareTo(_numberBigDecimal) > 0 |==> BD_MIN_INT.compareTo(_numberBigDecimal) >= 0
+499:ROR:>(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():903:30350:BD_MIN_INT.compareTo(_numberBigDecimal) > 0 |==> false
+500:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():904:30416:0 |==> 1
+501:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():904:30416:0 |==> -1
+502:ROR:<(int,int):!=(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():904:30374:BD_MAX_INT.compareTo(_numberBigDecimal) < 0 |==> BD_MAX_INT.compareTo(_numberBigDecimal) != 0
+503:ROR:<(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():904:30374:BD_MAX_INT.compareTo(_numberBigDecimal) < 0 |==> BD_MAX_INT.compareTo(_numberBigDecimal) <= 0
+504:ROR:<(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():904:30414:BD_MAX_INT.compareTo(_numberBigDecimal) < 0 |==> false
+505:COR:||(boolean,boolean):!=(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():903:30310:BD_MIN_INT.compareTo(_numberBigDecimal) > 0 || BD_MAX_INT.compareTo(_numberBigDecimal) < 0 |==> BD_MIN_INT.compareTo(_numberBigDecimal) > 0 != BD_MAX_INT.compareTo(_numberBigDecimal) < 0
+506:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():903:30310:BD_MIN_INT.compareTo(_numberBigDecimal) > 0 || BD_MAX_INT.compareTo(_numberBigDecimal) < 0 |==> BD_MIN_INT.compareTo(_numberBigDecimal) > 0
+507:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():904:30374:BD_MIN_INT.compareTo(_numberBigDecimal) > 0 || BD_MAX_INT.compareTo(_numberBigDecimal) < 0 |==> BD_MAX_INT.compareTo(_numberBigDecimal) < 0
+508:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():904:30371:BD_MIN_INT.compareTo(_numberBigDecimal) > 0 || BD_MAX_INT.compareTo(_numberBigDecimal) < 0 |==> true
+509:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():905:30437:reportOverflowInt(); |==> <NO-OP>
+510:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():907:30484:_numberInt = _numberBigDecimal.intValue(); |==> <NO-OP>
+511:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():909:30556:_throwInternal(); |==> <NO-OP>
+512:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToInt():911:30592:_numTypesValid |= NR_INT; |==> <NO-OP>
+513:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():916:30708:_numTypesValid & NR_INT |==> _numTypesValid ^ NR_INT
+514:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():916:30708:_numTypesValid & NR_INT |==> _numTypesValid | NR_INT
+515:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():916:30736:0 |==> 1
+516:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():916:30736:0 |==> -1
+517:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():916:30707:(_numTypesValid & NR_INT) != 0 |==> (_numTypesValid & NR_INT) < 0
+518:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():916:30707:(_numTypesValid & NR_INT) != 0 |==> (_numTypesValid & NR_INT) > 0
+519:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():916:30733:(_numTypesValid & NR_INT) != 0 |==> true
+520:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():917:30753:_numberLong = (long)_numberInt; |==> <NO-OP>
+521:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():918:30806:_numTypesValid & NR_BIGINT |==> _numTypesValid ^ NR_BIGINT
+522:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():918:30806:_numTypesValid & NR_BIGINT |==> _numTypesValid | NR_BIGINT
+523:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():918:30837:0 |==> 1
+524:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():918:30837:0 |==> -1
+525:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():918:30805:(_numTypesValid & NR_BIGINT) != 0 |==> (_numTypesValid & NR_BIGINT) < 0
+526:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():918:30805:(_numTypesValid & NR_BIGINT) != 0 |==> (_numTypesValid & NR_BIGINT) > 0
+527:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():918:30834:(_numTypesValid & NR_BIGINT) != 0 |==> true
+528:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():919:30897:0 |==> 1
+529:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():919:30897:0 |==> -1
+530:ROR:>(int,int):!=(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():919:30858:BI_MIN_LONG.compareTo(_numberBigInt) > 0 |==> BI_MIN_LONG.compareTo(_numberBigInt) != 0
+531:ROR:>(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():919:30858:BI_MIN_LONG.compareTo(_numberBigInt) > 0 |==> BI_MIN_LONG.compareTo(_numberBigInt) >= 0
+532:ROR:>(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():919:30895:BI_MIN_LONG.compareTo(_numberBigInt) > 0 |==> false
+533:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():920:30962:0 |==> 1
+534:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():920:30962:0 |==> -1
+535:ROR:<(int,int):!=(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():920:30923:BI_MAX_LONG.compareTo(_numberBigInt) < 0 |==> BI_MAX_LONG.compareTo(_numberBigInt) != 0
+536:ROR:<(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():920:30923:BI_MAX_LONG.compareTo(_numberBigInt) < 0 |==> BI_MAX_LONG.compareTo(_numberBigInt) <= 0
+537:ROR:<(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():920:30960:BI_MAX_LONG.compareTo(_numberBigInt) < 0 |==> false
+538:COR:||(boolean,boolean):!=(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():919:30858:BI_MIN_LONG.compareTo(_numberBigInt) > 0 || BI_MAX_LONG.compareTo(_numberBigInt) < 0 |==> BI_MIN_LONG.compareTo(_numberBigInt) > 0 != BI_MAX_LONG.compareTo(_numberBigInt) < 0
+539:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():919:30858:BI_MIN_LONG.compareTo(_numberBigInt) > 0 || BI_MAX_LONG.compareTo(_numberBigInt) < 0 |==> BI_MIN_LONG.compareTo(_numberBigInt) > 0
+540:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():920:30923:BI_MIN_LONG.compareTo(_numberBigInt) > 0 || BI_MAX_LONG.compareTo(_numberBigInt) < 0 |==> BI_MAX_LONG.compareTo(_numberBigInt) < 0
+541:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():920:30920:BI_MIN_LONG.compareTo(_numberBigInt) > 0 || BI_MAX_LONG.compareTo(_numberBigInt) < 0 |==> true
+542:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():921:30983:reportOverflowLong(); |==> <NO-OP>
+543:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():923:31031:_numberLong = _numberBigInt.longValue(); |==> <NO-OP>
+544:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():924:31092:_numTypesValid & NR_DOUBLE |==> _numTypesValid ^ NR_DOUBLE
+545:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():924:31092:_numTypesValid & NR_DOUBLE |==> _numTypesValid | NR_DOUBLE
+546:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():924:31123:0 |==> 1
+547:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():924:31123:0 |==> -1
+548:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():924:31091:(_numTypesValid & NR_DOUBLE) != 0 |==> (_numTypesValid & NR_DOUBLE) < 0
+549:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():924:31091:(_numTypesValid & NR_DOUBLE) != 0 |==> (_numTypesValid & NR_DOUBLE) > 0
+550:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():924:31120:(_numTypesValid & NR_DOUBLE) != 0 |==> true
+551:ROR:<(double,double):!=(double,double):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():926:31184:_numberDouble < MIN_LONG_D |==> _numberDouble != MIN_LONG_D
+552:ROR:<(double,double):<=(double,double):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():926:31184:_numberDouble < MIN_LONG_D |==> _numberDouble <= MIN_LONG_D
+553:ROR:<(double,double):FALSE(double,double):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():926:31198:_numberDouble < MIN_LONG_D |==> false
+554:ROR:>(double,double):!=(double,double):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():926:31214:_numberDouble > MAX_LONG_D |==> _numberDouble != MAX_LONG_D
+555:ROR:>(double,double):>=(double,double):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():926:31214:_numberDouble > MAX_LONG_D |==> _numberDouble >= MAX_LONG_D
+556:ROR:>(double,double):FALSE(double,double):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():926:31228:_numberDouble > MAX_LONG_D |==> false
+557:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():926:31184:_numberDouble < MIN_LONG_D || _numberDouble > MAX_LONG_D |==> _numberDouble < MIN_LONG_D
+558:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():926:31214:_numberDouble < MIN_LONG_D || _numberDouble > MAX_LONG_D |==> _numberDouble > MAX_LONG_D
+559:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():926:31211:_numberDouble < MIN_LONG_D || _numberDouble > MAX_LONG_D |==> true
+560:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():927:31260:reportOverflowLong(); |==> <NO-OP>
+561:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():929:31308:_numberLong = (long)_numberDouble; |==> <NO-OP>
+562:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():930:31364:_numTypesValid & NR_BIGDECIMAL |==> _numTypesValid ^ NR_BIGDECIMAL
+563:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():930:31364:_numTypesValid & NR_BIGDECIMAL |==> _numTypesValid | NR_BIGDECIMAL
+564:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():930:31399:0 |==> 1
+565:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():930:31399:0 |==> -1
+566:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():930:31363:(_numTypesValid & NR_BIGDECIMAL) != 0 |==> (_numTypesValid & NR_BIGDECIMAL) < 0
+567:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():930:31363:(_numTypesValid & NR_BIGDECIMAL) != 0 |==> (_numTypesValid & NR_BIGDECIMAL) > 0
+568:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():930:31396:(_numTypesValid & NR_BIGDECIMAL) != 0 |==> true
+569:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():931:31463:0 |==> 1
+570:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():931:31463:0 |==> -1
+571:ROR:>(int,int):!=(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():931:31420:BD_MIN_LONG.compareTo(_numberBigDecimal) > 0 |==> BD_MIN_LONG.compareTo(_numberBigDecimal) != 0
+572:ROR:>(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():931:31420:BD_MIN_LONG.compareTo(_numberBigDecimal) > 0 |==> BD_MIN_LONG.compareTo(_numberBigDecimal) >= 0
+573:ROR:>(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():931:31461:BD_MIN_LONG.compareTo(_numberBigDecimal) > 0 |==> false
+574:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():932:31528:0 |==> 1
+575:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():932:31528:0 |==> -1
+576:ROR:<(int,int):!=(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():932:31485:BD_MAX_LONG.compareTo(_numberBigDecimal) < 0 |==> BD_MAX_LONG.compareTo(_numberBigDecimal) != 0
+577:ROR:<(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():932:31485:BD_MAX_LONG.compareTo(_numberBigDecimal) < 0 |==> BD_MAX_LONG.compareTo(_numberBigDecimal) <= 0
+578:ROR:<(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():932:31526:BD_MAX_LONG.compareTo(_numberBigDecimal) < 0 |==> false
+579:COR:||(boolean,boolean):!=(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():931:31420:BD_MIN_LONG.compareTo(_numberBigDecimal) > 0 || BD_MAX_LONG.compareTo(_numberBigDecimal) < 0 |==> BD_MIN_LONG.compareTo(_numberBigDecimal) > 0 != BD_MAX_LONG.compareTo(_numberBigDecimal) < 0
+580:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():931:31420:BD_MIN_LONG.compareTo(_numberBigDecimal) > 0 || BD_MAX_LONG.compareTo(_numberBigDecimal) < 0 |==> BD_MIN_LONG.compareTo(_numberBigDecimal) > 0
+581:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():932:31485:BD_MIN_LONG.compareTo(_numberBigDecimal) > 0 || BD_MAX_LONG.compareTo(_numberBigDecimal) < 0 |==> BD_MAX_LONG.compareTo(_numberBigDecimal) < 0
+582:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():932:31482:BD_MIN_LONG.compareTo(_numberBigDecimal) > 0 || BD_MAX_LONG.compareTo(_numberBigDecimal) < 0 |==> true
+583:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():933:31549:reportOverflowLong(); |==> <NO-OP>
+584:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():935:31597:_numberLong = _numberBigDecimal.longValue(); |==> <NO-OP>
+585:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():937:31671:_throwInternal(); |==> <NO-OP>
+586:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToLong():939:31707:_numTypesValid |= NR_LONG; |==> <NO-OP>
+587:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():944:31830:_numTypesValid & NR_BIGDECIMAL |==> _numTypesValid ^ NR_BIGDECIMAL
+588:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():944:31830:_numTypesValid & NR_BIGDECIMAL |==> _numTypesValid | NR_BIGDECIMAL
+589:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():944:31865:0 |==> 1
+590:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():944:31865:0 |==> -1
+591:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():944:31829:(_numTypesValid & NR_BIGDECIMAL) != 0 |==> (_numTypesValid & NR_BIGDECIMAL) < 0
+592:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():944:31829:(_numTypesValid & NR_BIGDECIMAL) != 0 |==> (_numTypesValid & NR_BIGDECIMAL) > 0
+593:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():944:31862:(_numTypesValid & NR_BIGDECIMAL) != 0 |==> true
+594:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():946:31949:_numberBigInt = _numberBigDecimal.toBigInteger(); |==> <NO-OP>
+595:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():947:32019:_numTypesValid & NR_LONG |==> _numTypesValid ^ NR_LONG
+596:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():947:32019:_numTypesValid & NR_LONG |==> _numTypesValid | NR_LONG
+597:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():947:32048:0 |==> 1
+598:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():947:32048:0 |==> -1
+599:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():947:32018:(_numTypesValid & NR_LONG) != 0 |==> (_numTypesValid & NR_LONG) < 0
+600:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():947:32018:(_numTypesValid & NR_LONG) != 0 |==> (_numTypesValid & NR_LONG) > 0
+601:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():947:32045:(_numTypesValid & NR_LONG) != 0 |==> true
+602:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():948:32065:_numberBigInt = BigInteger.valueOf(_numberLong); |==> <NO-OP>
+603:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():949:32134:_numTypesValid & NR_INT |==> _numTypesValid ^ NR_INT
+604:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():949:32134:_numTypesValid & NR_INT |==> _numTypesValid | NR_INT
+605:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():949:32162:0 |==> 1
+606:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():949:32162:0 |==> -1
+607:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():949:32133:(_numTypesValid & NR_INT) != 0 |==> (_numTypesValid & NR_INT) < 0
+608:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():949:32133:(_numTypesValid & NR_INT) != 0 |==> (_numTypesValid & NR_INT) > 0
+609:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():949:32159:(_numTypesValid & NR_INT) != 0 |==> true
+610:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():950:32179:_numberBigInt = BigInteger.valueOf(_numberInt); |==> <NO-OP>
+611:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():951:32247:_numTypesValid & NR_DOUBLE |==> _numTypesValid ^ NR_DOUBLE
+612:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():951:32247:_numTypesValid & NR_DOUBLE |==> _numTypesValid | NR_DOUBLE
+613:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():951:32278:0 |==> 1
+614:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():951:32278:0 |==> -1
+615:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():951:32246:(_numTypesValid & NR_DOUBLE) != 0 |==> (_numTypesValid & NR_DOUBLE) < 0
+616:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():951:32246:(_numTypesValid & NR_DOUBLE) != 0 |==> (_numTypesValid & NR_DOUBLE) > 0
+617:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():951:32275:(_numTypesValid & NR_DOUBLE) != 0 |==> true
+618:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():952:32295:_numberBigInt = BigDecimal.valueOf(_numberDouble).toBigInteger(); |==> <NO-OP>
+619:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():954:32390:_throwInternal(); |==> <NO-OP>
+620:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigInteger():956:32426:_numTypesValid |= NR_BIGINT; |==> <NO-OP>
+621:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():967:32792:_numTypesValid & NR_BIGDECIMAL |==> _numTypesValid ^ NR_BIGDECIMAL
+622:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():967:32792:_numTypesValid & NR_BIGDECIMAL |==> _numTypesValid | NR_BIGDECIMAL
+623:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():967:32827:0 |==> 1
+624:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():967:32827:0 |==> -1
+625:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():967:32791:(_numTypesValid & NR_BIGDECIMAL) != 0 |==> (_numTypesValid & NR_BIGDECIMAL) < 0
+626:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():967:32791:(_numTypesValid & NR_BIGDECIMAL) != 0 |==> (_numTypesValid & NR_BIGDECIMAL) > 0
+627:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():967:32824:(_numTypesValid & NR_BIGDECIMAL) != 0 |==> true
+628:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():968:32844:_numberDouble = _numberBigDecimal.doubleValue(); |==> <NO-OP>
+629:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():969:32913:_numTypesValid & NR_BIGINT |==> _numTypesValid ^ NR_BIGINT
+630:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():969:32913:_numTypesValid & NR_BIGINT |==> _numTypesValid | NR_BIGINT
+631:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():969:32944:0 |==> 1
+632:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():969:32944:0 |==> -1
+633:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():969:32912:(_numTypesValid & NR_BIGINT) != 0 |==> (_numTypesValid & NR_BIGINT) < 0
+634:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():969:32912:(_numTypesValid & NR_BIGINT) != 0 |==> (_numTypesValid & NR_BIGINT) > 0
+635:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():969:32941:(_numTypesValid & NR_BIGINT) != 0 |==> true
+636:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():970:32961:_numberDouble = _numberBigInt.doubleValue(); |==> <NO-OP>
+637:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():971:33026:_numTypesValid & NR_LONG |==> _numTypesValid ^ NR_LONG
+638:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():971:33026:_numTypesValid & NR_LONG |==> _numTypesValid | NR_LONG
+639:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():971:33055:0 |==> 1
+640:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():971:33055:0 |==> -1
+641:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():971:33025:(_numTypesValid & NR_LONG) != 0 |==> (_numTypesValid & NR_LONG) < 0
+642:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():971:33025:(_numTypesValid & NR_LONG) != 0 |==> (_numTypesValid & NR_LONG) > 0
+643:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():971:33052:(_numTypesValid & NR_LONG) != 0 |==> true
+644:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():972:33072:_numberDouble = (double)_numberLong; |==> <NO-OP>
+645:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():973:33130:_numTypesValid & NR_INT |==> _numTypesValid ^ NR_INT
+646:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():973:33130:_numTypesValid & NR_INT |==> _numTypesValid | NR_INT
+647:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():973:33158:0 |==> 1
+648:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():973:33158:0 |==> -1
+649:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():973:33129:(_numTypesValid & NR_INT) != 0 |==> (_numTypesValid & NR_INT) < 0
+650:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():973:33129:(_numTypesValid & NR_INT) != 0 |==> (_numTypesValid & NR_INT) > 0
+651:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():973:33155:(_numTypesValid & NR_INT) != 0 |==> true
+652:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():974:33175:_numberDouble = (double)_numberInt; |==> <NO-OP>
+653:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():976:33241:_throwInternal(); |==> <NO-OP>
+654:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToDouble():978:33277:_numTypesValid |= NR_DOUBLE; |==> <NO-OP>
+655:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():989:33647:_numTypesValid & NR_DOUBLE |==> _numTypesValid ^ NR_DOUBLE
+656:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():989:33647:_numTypesValid & NR_DOUBLE |==> _numTypesValid | NR_DOUBLE
+657:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():989:33678:0 |==> 1
+658:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():989:33678:0 |==> -1
+659:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():989:33646:(_numTypesValid & NR_DOUBLE) != 0 |==> (_numTypesValid & NR_DOUBLE) < 0
+660:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():989:33646:(_numTypesValid & NR_DOUBLE) != 0 |==> (_numTypesValid & NR_DOUBLE) > 0
+661:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():989:33675:(_numTypesValid & NR_DOUBLE) != 0 |==> true
+662:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():993:33864:_numberBigDecimal = NumberInput.parseBigDecimal(getText()); |==> <NO-OP>
+663:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():994:33944:_numTypesValid & NR_BIGINT |==> _numTypesValid ^ NR_BIGINT
+664:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():994:33944:_numTypesValid & NR_BIGINT |==> _numTypesValid | NR_BIGINT
+665:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():994:33975:0 |==> 1
+666:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():994:33975:0 |==> -1
+667:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():994:33943:(_numTypesValid & NR_BIGINT) != 0 |==> (_numTypesValid & NR_BIGINT) < 0
+668:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():994:33943:(_numTypesValid & NR_BIGINT) != 0 |==> (_numTypesValid & NR_BIGINT) > 0
+669:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():994:33972:(_numTypesValid & NR_BIGINT) != 0 |==> true
+670:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():995:33992:_numberBigDecimal = new BigDecimal(_numberBigInt); |==> <NO-OP>
+671:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():996:34063:_numTypesValid & NR_LONG |==> _numTypesValid ^ NR_LONG
+672:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():996:34063:_numTypesValid & NR_LONG |==> _numTypesValid | NR_LONG
+673:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():996:34092:0 |==> 1
+674:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():996:34092:0 |==> -1
+675:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():996:34062:(_numTypesValid & NR_LONG) != 0 |==> (_numTypesValid & NR_LONG) < 0
+676:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():996:34062:(_numTypesValid & NR_LONG) != 0 |==> (_numTypesValid & NR_LONG) > 0
+677:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():996:34089:(_numTypesValid & NR_LONG) != 0 |==> true
+678:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():997:34109:_numberBigDecimal = BigDecimal.valueOf(_numberLong); |==> <NO-OP>
+679:LOR:&(int,int):^(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():998:34182:_numTypesValid & NR_INT |==> _numTypesValid ^ NR_INT
+680:LOR:&(int,int):|(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():998:34182:_numTypesValid & NR_INT |==> _numTypesValid | NR_INT
+681:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():998:34210:0 |==> 1
+682:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():998:34210:0 |==> -1
+683:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():998:34181:(_numTypesValid & NR_INT) != 0 |==> (_numTypesValid & NR_INT) < 0
+684:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():998:34181:(_numTypesValid & NR_INT) != 0 |==> (_numTypesValid & NR_INT) > 0
+685:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():998:34207:(_numTypesValid & NR_INT) != 0 |==> true
+686:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():999:34227:_numberBigDecimal = BigDecimal.valueOf(_numberInt); |==> <NO-OP>
+687:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():1001:34308:_throwInternal(); |==> <NO-OP>
+688:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@convertNumberToBigDecimal():1003:34344:_numTypesValid |= NR_BIGDECIMAL; |==> <NO-OP>
+689:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_reportMismatchedEndMarker(int,char):1014:34734:_reportError(String.format("Unexpected close marker \'%s\': expected \'%c\' (for %s starting at %s)", (char)actCh, expCh, ctxt.typeDesc(), ctxt.getStartLocation(_getSourceReference()))); |==> <NO-OP>
+690:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.core.base.ParserBase@_handleUnrecognizedCharacterEscape(char):1022:35144:isEnabled(Feature.ALLOW_BACKSLASH_ESCAPING_ANY_CHARACTER) |==> false
+691:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.core.base.ParserBase@_handleUnrecognizedCharacterEscape(char):1022:35144:isEnabled(Feature.ALLOW_BACKSLASH_ESCAPING_ANY_CHARACTER) |==> true
+692:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@_handleUnrecognizedCharacterEscape(char):1026:35270:ch == '\'' |==> ch <= '\''
+693:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@_handleUnrecognizedCharacterEscape(char):1026:35270:ch == '\'' |==> ch >= '\''
+694:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@_handleUnrecognizedCharacterEscape(char):1026:35273:ch == '\'' |==> false
+695:COR:&&(boolean,boolean):==(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@_handleUnrecognizedCharacterEscape(char):1026:35270:ch == '\'' && isEnabled(Feature.ALLOW_SINGLE_QUOTES) |==> ch == '\'' == isEnabled(Feature.ALLOW_SINGLE_QUOTES)
+696:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@_handleUnrecognizedCharacterEscape(char):1026:35281:ch == '\'' && isEnabled(Feature.ALLOW_SINGLE_QUOTES) |==> false
+697:COR:&&(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@_handleUnrecognizedCharacterEscape(char):1026:35270:ch == '\'' && isEnabled(Feature.ALLOW_SINGLE_QUOTES) |==> ch == '\''
+698:COR:&&(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@_handleUnrecognizedCharacterEscape(char):1026:35284:ch == '\'' && isEnabled(Feature.ALLOW_SINGLE_QUOTES) |==> isEnabled(Feature.ALLOW_SINGLE_QUOTES)
+699:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_handleUnrecognizedCharacterEscape(char):1029:35367:_reportError("Unrecognized character escape " + _getCharDesc(ch)); |==> <NO-OP>
+700:ROR:>(int,int):!=(int,int):com.fasterxml.jackson.core.base.ParserBase@_throwUnquotedSpace(int,java.lang.String):1041:35939:i > INT_SPACE |==> i != INT_SPACE
+701:ROR:>(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@_throwUnquotedSpace(int,java.lang.String):1041:35939:i > INT_SPACE |==> i >= INT_SPACE
+702:ROR:>(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@_throwUnquotedSpace(int,java.lang.String):1041:35941:i > INT_SPACE |==> false
+703:COR:||(boolean,boolean):!=(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@_throwUnquotedSpace(int,java.lang.String):1041:35887:!isEnabled(Feature.ALLOW_UNQUOTED_CONTROL_CHARS) || i > INT_SPACE |==> !isEnabled(Feature.ALLOW_UNQUOTED_CONTROL_CHARS) != i > INT_SPACE
+704:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@_throwUnquotedSpace(int,java.lang.String):1041:35887:!isEnabled(Feature.ALLOW_UNQUOTED_CONTROL_CHARS) || i > INT_SPACE |==> !isEnabled(Feature.ALLOW_UNQUOTED_CONTROL_CHARS)
+705:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@_throwUnquotedSpace(int,java.lang.String):1041:35939:!isEnabled(Feature.ALLOW_UNQUOTED_CONTROL_CHARS) || i > INT_SPACE |==> i > INT_SPACE
+706:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@_throwUnquotedSpace(int,java.lang.String):1041:35936:!isEnabled(Feature.ALLOW_UNQUOTED_CONTROL_CHARS) || i > INT_SPACE |==> true
+707:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_throwUnquotedSpace(int,java.lang.String):1044:36139:_reportError(msg); |==> <NO-OP>
+708:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,int,int):1066:36874:ch != '\\' |==> ch < '\\'
+709:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,int,int):1066:36874:ch != '\\' |==> ch > '\\'
+710:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,int,int):1066:36877:ch != '\\' |==> true
+711:ROR:<=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,int,int):1071:37085:unescaped <= INT_SPACE |==> unescaped < INT_SPACE
+712:ROR:<=(int,int):==(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,int,int):1071:37085:unescaped <= INT_SPACE |==> unescaped == INT_SPACE
+713:ROR:<=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,int,int):1071:37095:unescaped <= INT_SPACE |==> true
+714:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,int,int):1072:37136:0 |==> 1
+715:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,int,int):1072:37136:0 |==> -1
+716:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,int,int):1072:37127:index == 0 |==> index <= 0
+717:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,int,int):1072:37127:index == 0 |==> index >= 0
+718:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,int,int):1072:37133:index == 0 |==> false
+719:LVR:NEG:0:com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,int,int):1073:37222:-1 |==> 0
+720:LVR:NEG:POS:com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,int,int):1073:37222:-1 |==> 1
+721:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,int,int):1078:37382:0 |==> 1
+722:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,int,int):1078:37382:0 |==> -1
+723:ROR:<(int,int):!=(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,int,int):1078:37375:bits < 0 |==> bits != 0
+724:ROR:<(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,int,int):1078:37375:bits < 0 |==> bits <= 0
+725:ROR:<(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,int,int):1078:37380:bits < 0 |==> false
+726:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,int,int):1079:37403:bits != Base64Variant.BASE64_VALUE_PADDING |==> bits < Base64Variant.BASE64_VALUE_PADDING
+727:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,int,int):1079:37403:bits != Base64Variant.BASE64_VALUE_PADDING |==> bits > Base64Variant.BASE64_VALUE_PADDING
+728:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,int,int):1079:37408:bits != Base64Variant.BASE64_VALUE_PADDING |==> true
+729:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1088:37709:ch != '\\' |==> ch < '\\'
+730:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1088:37709:ch != '\\' |==> ch > '\\'
+731:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1088:37712:ch != '\\' |==> true
+732:ROR:<=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1093:37921:unescaped <= INT_SPACE |==> unescaped < INT_SPACE
+733:ROR:<=(int,int):==(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1093:37921:unescaped <= INT_SPACE |==> unescaped == INT_SPACE
+734:ROR:<=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1093:37931:unescaped <= INT_SPACE |==> true
+735:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1094:37972:0 |==> 1
+736:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1094:37972:0 |==> -1
+737:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1094:37963:index == 0 |==> index <= 0
+738:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1094:37963:index == 0 |==> index >= 0
+739:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1094:37969:index == 0 |==> false
+740:LVR:NEG:0:com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1095:38058:-1 |==> 0
+741:LVR:NEG:POS:com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1095:38058:-1 |==> 1
+742:LVR:0:POS:com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1100:38218:0 |==> 1
+743:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1100:38218:0 |==> -1
+744:ROR:<(int,int):!=(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1100:38211:bits < 0 |==> bits != 0
+745:ROR:<(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1100:38211:bits < 0 |==> bits <= 0
+746:ROR:<(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1100:38216:bits < 0 |==> false
+747:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1102:38327:bits != Base64Variant.BASE64_VALUE_PADDING |==> bits < Base64Variant.BASE64_VALUE_PADDING
+748:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1102:38327:bits != Base64Variant.BASE64_VALUE_PADDING |==> bits > Base64Variant.BASE64_VALUE_PADDING
+749:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1102:38332:bits != Base64Variant.BASE64_VALUE_PADDING |==> true
+750:LVR:POS:0:com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1102:38383:2 |==> 0
+751:LVR:POS:NEG:com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1102:38383:2 |==> -2
+752:ROR:<(int,int):!=(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1102:38375:index < 2 |==> index != 2
+753:ROR:<(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1102:38375:index < 2 |==> index <= 2
+754:ROR:<(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1102:38381:index < 2 |==> false
+755:COR:||(boolean,boolean):!=(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1102:38326:(bits != Base64Variant.BASE64_VALUE_PADDING) || (index < 2) |==> (bits != Base64Variant.BASE64_VALUE_PADDING) != (index < 2)
+756:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1102:38326:(bits != Base64Variant.BASE64_VALUE_PADDING) || (index < 2) |==> (bits != Base64Variant.BASE64_VALUE_PADDING)
+757:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1102:38374:(bits != Base64Variant.BASE64_VALUE_PADDING) || (index < 2) |==> (index < 2)
+758:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@_decodeBase64Escape(com.fasterxml.jackson.core.Base64Variant,char,int):1102:38371:(bits != Base64Variant.BASE64_VALUE_PADDING) || (index < 2) |==> true
+759:ROR:<=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1119:39072:ch <= INT_SPACE |==> ch < INT_SPACE
+760:ROR:<=(int,int):==(int,int):com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1119:39072:ch <= INT_SPACE |==> ch == INT_SPACE
+761:ROR:<=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1119:39075:ch <= INT_SPACE |==> true
+762:LVR:POS:0:com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1121:39290:1 |==> 0
+763:LVR:POS:NEG:com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1121:39290:1 |==> -1
+764:AOR:+(int,int):%(int,int):com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1121:39283:bindex + 1 |==> bindex % 1
+765:AOR:+(int,int):*(int,int):com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1121:39283:bindex + 1 |==> bindex * 1
+766:AOR:+(int,int):-(int,int):com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1121:39283:bindex + 1 |==> bindex - 1
+767:AOR:+(int,int):/(int,int):com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1121:39283:bindex + 1 |==> bindex / 1
+768:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1122:39340:b64variant.usesPaddingChar(ch) |==> false
+769:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1122:39340:b64variant.usesPaddingChar(ch) |==> true
+770:LVR:POS:0:com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1123:39457:1 |==> 0
+771:LVR:POS:NEG:com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1123:39457:1 |==> -1
+772:AOR:+(int,int):%(int,int):com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1123:39450:bindex + 1 |==> bindex % 1
+773:AOR:+(int,int):*(int,int):com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1123:39450:bindex + 1 |==> bindex * 1
+774:AOR:+(int,int):-(int,int):com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1123:39450:bindex + 1 |==> bindex - 1
+775:AOR:+(int,int):/(int,int):com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1123:39450:bindex + 1 |==> bindex / 1
+776:COR:||(boolean,boolean):!=(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1124:39549:!Character.isDefined(ch) || Character.isISOControl(ch) |==> !Character.isDefined(ch) != Character.isISOControl(ch)
+777:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1124:39549:!Character.isDefined(ch) || Character.isISOControl(ch) |==> !Character.isDefined(ch)
+778:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1124:39577:!Character.isDefined(ch) || Character.isISOControl(ch) |==> Character.isISOControl(ch)
+779:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1124:39574:!Character.isDefined(ch) || Character.isISOControl(ch) |==> true
+780:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1130:39963:msg != null |==> true
+781:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@reportInvalidBase64Char(com.fasterxml.jackson.core.Base64Variant,int,int,java.lang.String):1131:39986:base = base + ": " + msg; |==> <NO-OP>
+782:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@_handleBase64MissingPadding(com.fasterxml.jackson.core.Base64Variant):1139:40205:_reportError(b64variant.missingPaddingMessage()); |==> <NO-OP>
+783:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.core.base.ParserBase@_getSourceReference():1155:40746:JsonParser.Feature.INCLUDE_SOURCE_IN_LOCATION.enabledIn(_features) |==> false
+784:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.core.base.ParserBase@_getSourceReference():1155:40746:JsonParser.Feature.INCLUDE_SOURCE_IN_LOCATION.enabledIn(_features) |==> true
+785:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserBase@growArrayBy(int[],int):1163:40933:arr == null |==> false
+786:AOR:+(int,int):%(int,int):com.fasterxml.jackson.core.base.ParserBase@growArrayBy(int[],int):1166:41022:arr.length + more |==> arr.length % more
+787:AOR:+(int,int):*(int,int):com.fasterxml.jackson.core.base.ParserBase@growArrayBy(int[],int):1166:41022:arr.length + more |==> arr.length * more
+788:AOR:+(int,int):-(int,int):com.fasterxml.jackson.core.base.ParserBase@growArrayBy(int[],int):1166:41022:arr.length + more |==> arr.length - more
+789:AOR:+(int,int):/(int,int):com.fasterxml.jackson.core.base.ParserBase@growArrayBy(int[],int):1166:41022:arr.length + more |==> arr.length / more
+790:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.core.base.ParserBase@loadMoreGuaranteed():1178:41414:loadMore() |==> false
+791:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.core.base.ParserBase@loadMoreGuaranteed():1178:41414:loadMore() |==> true
+792:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserBase@loadMoreGuaranteed():1178:41420:_reportInvalidEOF(); |==> <NO-OP>
+793:LVR:FALSE:TRUE:com.fasterxml.jackson.core.base.ParserBase@loadMore():1182:41540:false |==> true
+794:LVR:0:POS:com.fasterxml.jackson.core.base.ParserMinimalBase:62:2260:0 |==> 1
+795:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase:62:2260:0 |==> -1
+796:LVR:0:POS:com.fasterxml.jackson.core.base.ParserMinimalBase:67:2350:0 |==> 1
+797:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase:67:2350:0 |==> -1
+798:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@currentTokenId():189:6488:t == null |==> false
+799:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@getCurrentTokenId():195:6721:t == null |==> false
+800:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@hasCurrentToken():198:6840:_currToken != null |==> true
+801:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@hasTokenId(int):201:6955:t == null |==> false
+802:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@hasTokenId(int):202:6986:JsonTokenId.ID_NO_TOKEN == id |==> JsonTokenId.ID_NO_TOKEN <= id
+803:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@hasTokenId(int):202:6986:JsonTokenId.ID_NO_TOKEN == id |==> JsonTokenId.ID_NO_TOKEN >= id
+804:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@hasTokenId(int):202:7010:JsonTokenId.ID_NO_TOKEN == id |==> false
+805:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@hasTokenId(int):204:7043:t.id() == id |==> t.id() <= id
+806:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@hasTokenId(int):204:7043:t.id() == id |==> t.id() >= id
+807:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@hasTokenId(int):204:7050:t.id() == id |==> false
+808:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@hasToken(com.fasterxml.jackson.core.JsonToken):208:7144:_currToken == t |==> false
+809:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@isExpectedStartArrayToken():211:7239:_currToken == JsonToken.START_ARRAY |==> false
+810:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@isExpectedStartObjectToken():212:7345:_currToken == JsonToken.START_OBJECT |==> false
+811:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@nextValue():219:7668:t == JsonToken.FIELD_NAME |==> false
+812:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@nextValue():220:7707:t = nextToken(); |==> <NO-OP>
+813:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@skipChildren():228:7858:_currToken != JsonToken.START_OBJECT |==> true
+814:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@skipChildren():229:7910:_currToken != JsonToken.START_ARRAY |==> true
+815:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@skipChildren():229:7896:_currToken != JsonToken.START_OBJECT && _currToken != JsonToken.START_ARRAY |==> false
+816:COR:&&(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@skipChildren():228:7847:_currToken != JsonToken.START_OBJECT && _currToken != JsonToken.START_ARRAY |==> _currToken != JsonToken.START_OBJECT
+817:COR:&&(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@skipChildren():229:7899:_currToken != JsonToken.START_OBJECT && _currToken != JsonToken.START_ARRAY |==> _currToken != JsonToken.START_ARRAY
+818:LVR:POS:0:com.fasterxml.jackson.core.base.ParserMinimalBase@skipChildren():232:7992:1 |==> 0
+819:LVR:POS:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase@skipChildren():232:7992:1 |==> -1
+820:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@skipChildren():238:8205:t == null |==> false
+821:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@skipChildren():239:8232:_handleEOF(); |==> <NO-OP>
+822:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.core.base.ParserMinimalBase@skipChildren():246:8530:t.isStructStart() |==> false
+823:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.core.base.ParserMinimalBase@skipChildren():246:8530:t.isStructStart() |==> true
+824:STD:<INC>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@skipChildren():247:8552:++open; |==> <NO-OP>
+825:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.core.base.ParserMinimalBase@skipChildren():248:8596:t.isStructEnd() |==> false
+826:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.core.base.ParserMinimalBase@skipChildren():248:8596:t.isStructEnd() |==> true
+827:LVR:0:POS:com.fasterxml.jackson.core.base.ParserMinimalBase@skipChildren():249:8632:0 |==> 1
+828:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase@skipChildren():249:8632:0 |==> -1
+829:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@skipChildren():249:8622:--open == 0 |==> --open <= 0
+830:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@skipChildren():249:8622:--open == 0 |==> --open >= 0
+831:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@skipChildren():249:8629:--open == 0 |==> false
+832:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@skipChildren():253:8800:t == JsonToken.NOT_AVAILABLE |==> false
+833:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@skipChildren():256:8997:_reportError("Not enough content available for `skipChildren()`: non-blocking parser? (%s)", getClass().getName()); |==> <NO-OP>
+834:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@clearCurrentToken():287:10009:_currToken != null |==> true
+835:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@clearCurrentToken():288:10032:_lastClearedToken = _currToken; |==> <NO-OP>
+836:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@clearCurrentToken():289:10076:_currToken = null; |==> <NO-OP>
+837:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsBoolean(boolean):327:11452:t != null |==> true
+838:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsBoolean(boolean):331:11601:"true".equals(str) |==> false
+839:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsBoolean(boolean):331:11601:"true".equals(str) |==> true
+840:LVR:TRUE:FALSE:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsBoolean(boolean):332:11637:true |==> false
+841:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsBoolean(boolean):334:11695:"false".equals(str) |==> false
+842:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsBoolean(boolean):334:11695:"false".equals(str) |==> true
+843:LVR:FALSE:TRUE:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsBoolean(boolean):335:11731:false |==> true
+844:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsBoolean(boolean):337:11791:_hasTextualNull(str) |==> false
+845:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsBoolean(boolean):337:11791:_hasTextualNull(str) |==> true
+846:LVR:FALSE:TRUE:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsBoolean(boolean):338:11827:false |==> true
+847:LVR:0:POS:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsBoolean(boolean):342:11947:0 |==> 1
+848:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsBoolean(boolean):342:11947:0 |==> -1
+849:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsBoolean(boolean):342:11930:getIntValue() != 0 |==> getIntValue() < 0
+850:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsBoolean(boolean):342:11930:getIntValue() != 0 |==> getIntValue() > 0
+851:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsBoolean(boolean):342:11944:getIntValue() != 0 |==> true
+852:LVR:TRUE:FALSE:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsBoolean(boolean):344:11999:true |==> false
+853:LVR:FALSE:TRUE:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsBoolean(boolean):347:12081:false |==> true
+854:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt():364:12510:t == JsonToken.VALUE_NUMBER_INT |==> false
+855:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt():364:12547:t == JsonToken.VALUE_NUMBER_FLOAT |==> false
+856:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt():364:12507:(t == JsonToken.VALUE_NUMBER_INT) || (t == JsonToken.VALUE_NUMBER_FLOAT) |==> (t == JsonToken.VALUE_NUMBER_INT)
+857:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt():364:12544:(t == JsonToken.VALUE_NUMBER_INT) || (t == JsonToken.VALUE_NUMBER_FLOAT) |==> (t == JsonToken.VALUE_NUMBER_FLOAT)
+858:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt():364:12541:(t == JsonToken.VALUE_NUMBER_INT) || (t == JsonToken.VALUE_NUMBER_FLOAT) |==> true
+859:LVR:0:POS:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt():367:12656:0 |==> 1
+860:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt():367:12656:0 |==> -1
+861:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt(int):374:12802:t == JsonToken.VALUE_NUMBER_INT |==> false
+862:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt(int):374:12839:t == JsonToken.VALUE_NUMBER_FLOAT |==> false
+863:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt(int):374:12799:(t == JsonToken.VALUE_NUMBER_INT) || (t == JsonToken.VALUE_NUMBER_FLOAT) |==> (t == JsonToken.VALUE_NUMBER_INT)
+864:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt(int):374:12836:(t == JsonToken.VALUE_NUMBER_INT) || (t == JsonToken.VALUE_NUMBER_FLOAT) |==> (t == JsonToken.VALUE_NUMBER_FLOAT)
+865:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt(int):374:12833:(t == JsonToken.VALUE_NUMBER_INT) || (t == JsonToken.VALUE_NUMBER_FLOAT) |==> true
+866:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt(int):377:12933:t != null |==> true
+867:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt(int):381:13077:_hasTextualNull(str) |==> false
+868:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt(int):381:13077:_hasTextualNull(str) |==> true
+869:LVR:0:POS:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt(int):382:13113:0 |==> 1
+870:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt(int):382:13113:0 |==> -1
+871:LVR:POS:0:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt(int):386:13249:1 |==> 0
+872:LVR:POS:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt(int):386:13249:1 |==> -1
+873:LVR:0:POS:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt(int):388:13302:0 |==> 1
+874:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt(int):388:13302:0 |==> -1
+875:LVR:0:POS:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt(int):390:13354:0 |==> 1
+876:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsInt(int):390:13354:0 |==> -1
+877:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsLong():405:13748:t == JsonToken.VALUE_NUMBER_INT |==> false
+878:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsLong():405:13785:t == JsonToken.VALUE_NUMBER_FLOAT |==> false
+879:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsLong():405:13745:(t == JsonToken.VALUE_NUMBER_INT) || (t == JsonToken.VALUE_NUMBER_FLOAT) |==> (t == JsonToken.VALUE_NUMBER_INT)
+880:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsLong():405:13782:(t == JsonToken.VALUE_NUMBER_INT) || (t == JsonToken.VALUE_NUMBER_FLOAT) |==> (t == JsonToken.VALUE_NUMBER_FLOAT)
+881:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsLong():405:13779:(t == JsonToken.VALUE_NUMBER_INT) || (t == JsonToken.VALUE_NUMBER_FLOAT) |==> true
+882:LVR:0:POS:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsLong():408:13896:0L |==> 1L
+883:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsLong():408:13896:0L |==> -1L
+884:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsLong(long):415:14050:t == JsonToken.VALUE_NUMBER_INT |==> false
+885:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsLong(long):415:14087:t == JsonToken.VALUE_NUMBER_FLOAT |==> false
+886:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsLong(long):415:14047:(t == JsonToken.VALUE_NUMBER_INT) || (t == JsonToken.VALUE_NUMBER_FLOAT) |==> (t == JsonToken.VALUE_NUMBER_INT)
+887:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsLong(long):415:14084:(t == JsonToken.VALUE_NUMBER_INT) || (t == JsonToken.VALUE_NUMBER_FLOAT) |==> (t == JsonToken.VALUE_NUMBER_FLOAT)
+888:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsLong(long):415:14081:(t == JsonToken.VALUE_NUMBER_INT) || (t == JsonToken.VALUE_NUMBER_FLOAT) |==> true
+889:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsLong(long):418:14182:t != null |==> true
+890:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsLong(long):422:14326:_hasTextualNull(str) |==> false
+891:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsLong(long):422:14326:_hasTextualNull(str) |==> true
+892:LVR:0:POS:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsLong(long):423:14362:0L |==> 1L
+893:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsLong(long):423:14362:0L |==> -1L
+894:LVR:POS:0:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsLong(long):427:14500:1L |==> 0L
+895:LVR:POS:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsLong(long):427:14500:1L |==> -1L
+896:LVR:0:POS:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsLong(long):430:14580:0L |==> 1L
+897:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsLong(long):430:14580:0L |==> -1L
+898:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsDouble(double):445:14998:t != null |==> true
+899:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsDouble(double):449:15142:_hasTextualNull(str) |==> false
+900:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsDouble(double):449:15142:_hasTextualNull(str) |==> true
+901:LVR:0:POS:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsDouble(double):450:15178:0L |==> 1L
+902:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsDouble(double):450:15178:0L |==> -1L
+903:LVR:POS:0:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsDouble(double):457:15425:1.0 |==> 0.0
+904:LVR:POS:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsDouble(double):457:15425:1.0 |==> -1.0
+905:LVR:0:POS:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsDouble(double):460:15506:0.0 |==> 1.0
+906:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsDouble(double):460:15506:0.0 |==> -1.0
+907:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsString():473:15884:_currToken == JsonToken.VALUE_STRING |==> false
+908:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsString():476:15976:_currToken == JsonToken.FIELD_NAME |==> false
+909:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsString(java.lang.String):484:16214:_currToken == JsonToken.VALUE_STRING |==> false
+910:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsString(java.lang.String):487:16306:_currToken == JsonToken.FIELD_NAME |==> false
+911:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsString(java.lang.String):490:16403:_currToken == null |==> false
+912:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsString(java.lang.String):490:16425:_currToken == JsonToken.VALUE_NULL |==> false
+913:COR:||(boolean,boolean):!=(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsString(java.lang.String):490:16392:_currToken == null || _currToken == JsonToken.VALUE_NULL |==> _currToken == null != (_currToken == JsonToken.VALUE_NULL)
+914:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsString(java.lang.String):490:16392:_currToken == null || _currToken == JsonToken.VALUE_NULL |==> _currToken == null
+915:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsString(java.lang.String):490:16414:_currToken == null || _currToken == JsonToken.VALUE_NULL |==> _currToken == JsonToken.VALUE_NULL
+916:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsString(java.lang.String):490:16411:_currToken == null || _currToken == JsonToken.VALUE_NULL |==> true
+917:COR:||(boolean,boolean):!=(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsString(java.lang.String):490:16392:_currToken == null || _currToken == JsonToken.VALUE_NULL || !_currToken.isScalarValue() |==> (_currToken == null || _currToken == JsonToken.VALUE_NULL) != !_currToken.isScalarValue()
+918:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsString(java.lang.String):490:16392:_currToken == null || _currToken == JsonToken.VALUE_NULL || !_currToken.isScalarValue() |==> _currToken == null || _currToken == JsonToken.VALUE_NULL
+919:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsString(java.lang.String):490:16452:_currToken == null || _currToken == JsonToken.VALUE_NULL || !_currToken.isScalarValue() |==> !_currToken.isScalarValue()
+920:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@getValueAsString(java.lang.String):490:16449:_currToken == null || _currToken == JsonToken.VALUE_NULL || !_currToken.isScalarValue() |==> true
+921:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@_decodeBase64(java.lang.String,com.fasterxml.jackson.core.util.ByteArrayBuilder,com.fasterxml.jackson.core.Base64Variant):509:17025:b64variant.decode(str, builder); |==> <NO-OP>
+922:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@_decodeBase64(java.lang.String,com.fasterxml.jackson.core.util.ByteArrayBuilder,com.fasterxml.jackson.core.Base64Variant):511:17117:_reportError(e.getMessage()); |==> <NO-OP>
+923:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@reportUnexpectedNumberChar(int,java.lang.String):538:18093:comment != null |==> true
+924:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@reportUnexpectedNumberChar(int,java.lang.String):539:18116:msg += ": " + comment; |==> <NO-OP>
+925:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@reportUnexpectedNumberChar(int,java.lang.String):541:18155:_reportError(msg); |==> <NO-OP>
+926:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@reportInvalidNumber(java.lang.String):551:18553:_reportError("Invalid numeric value: " + msg); |==> <NO-OP>
+927:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@reportOverflowInt():560:18930:reportOverflowInt(getText()); |==> <NO-OP>
+928:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@reportOverflowInt(java.lang.String):565:19068:_reportError(String.format("Numeric value (%s) out of range of int (%d - %s)", _longIntegerDesc(numDesc), Integer.MIN_VALUE, Integer.MAX_VALUE)); |==> <NO-OP>
+929:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@reportOverflowLong():577:19584:reportOverflowLong(getText()); |==> <NO-OP>
+930:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@reportOverflowLong(java.lang.String):582:19724:_reportError(String.format("Numeric value (%s) out of range of long (%d - %s)", _longIntegerDesc(numDesc), Long.MIN_VALUE, Long.MAX_VALUE)); |==> <NO-OP>
+931:LVR:POS:0:com.fasterxml.jackson.core.base.ParserMinimalBase@_longIntegerDesc(java.lang.String):599:20298:1000 |==> 0
+932:LVR:POS:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase@_longIntegerDesc(java.lang.String):599:20298:1000 |==> -1000
+933:ROR:<(int,int):!=(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@_longIntegerDesc(java.lang.String):599:20289:rawLen < 1000 |==> rawLen != 1000
+934:ROR:<(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@_longIntegerDesc(java.lang.String):599:20289:rawLen < 1000 |==> rawLen <= 1000
+935:ROR:<(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@_longIntegerDesc(java.lang.String):599:20296:rawLen < 1000 |==> false
+936:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.core.base.ParserMinimalBase@_longIntegerDesc(java.lang.String):602:20372:rawNum.startsWith("-") |==> false
+937:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.core.base.ParserMinimalBase@_longIntegerDesc(java.lang.String):602:20372:rawNum.startsWith("-") |==> true
+938:LVR:POS:0:com.fasterxml.jackson.core.base.ParserMinimalBase@_longIntegerDesc(java.lang.String):603:20403:1 |==> 0
+939:LVR:POS:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase@_longIntegerDesc(java.lang.String):603:20403:1 |==> -1
+940:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@_longIntegerDesc(java.lang.String):603:20393:rawLen -= 1; |==> <NO-OP>
+941:LVR:POS:0:com.fasterxml.jackson.core.base.ParserMinimalBase@_longNumberDesc(java.lang.String):611:20622:1000 |==> 0
+942:LVR:POS:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase@_longNumberDesc(java.lang.String):611:20622:1000 |==> -1000
+943:ROR:<(int,int):!=(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@_longNumberDesc(java.lang.String):611:20613:rawLen < 1000 |==> rawLen != 1000
+944:ROR:<(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@_longNumberDesc(java.lang.String):611:20613:rawLen < 1000 |==> rawLen <= 1000
+945:ROR:<(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@_longNumberDesc(java.lang.String):611:20620:rawLen < 1000 |==> false
+946:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.core.base.ParserMinimalBase@_longNumberDesc(java.lang.String):614:20696:rawNum.startsWith("-") |==> false
+947:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.core.base.ParserMinimalBase@_longNumberDesc(java.lang.String):614:20696:rawNum.startsWith("-") |==> true
+948:LVR:POS:0:com.fasterxml.jackson.core.base.ParserMinimalBase@_longNumberDesc(java.lang.String):615:20727:1 |==> 0
+949:LVR:POS:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase@_longNumberDesc(java.lang.String):615:20727:1 |==> -1
+950:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@_longNumberDesc(java.lang.String):615:20717:rawLen -= 1; |==> <NO-OP>
+951:LVR:0:POS:com.fasterxml.jackson.core.base.ParserMinimalBase@_reportUnexpectedChar(int,java.lang.String):622:20930:0 |==> 1
+952:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase@_reportUnexpectedChar(int,java.lang.String):622:20930:0 |==> -1
+953:ROR:<(int,int):!=(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@_reportUnexpectedChar(int,java.lang.String):622:20925:ch < 0 |==> ch != 0
+954:ROR:<(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@_reportUnexpectedChar(int,java.lang.String):622:20925:ch < 0 |==> ch <= 0
+955:ROR:<(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@_reportUnexpectedChar(int,java.lang.String):622:20928:ch < 0 |==> false
+956:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@_reportUnexpectedChar(int,java.lang.String):623:20963:_reportInvalidEOF(); |==> <NO-OP>
+957:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@_reportUnexpectedChar(int,java.lang.String):626:21097:comment != null |==> true
+958:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@_reportUnexpectedChar(int,java.lang.String):627:21120:msg += ": " + comment; |==> <NO-OP>
+959:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@_reportUnexpectedChar(int,java.lang.String):629:21159:_reportError(msg); |==> <NO-OP>
+960:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@_reportInvalidEOF():633:21260:_reportInvalidEOF(" in " + _currToken, _currToken); |==> <NO-OP>
+961:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@_reportInvalidEOFInValue(com.fasterxml.jackson.core.JsonToken):641:21476:type == JsonToken.VALUE_STRING |==> false
+962:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@_reportInvalidEOFInValue(com.fasterxml.jackson.core.JsonToken):643:21570:type == JsonToken.VALUE_NUMBER_INT |==> false
+963:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.base.ParserMinimalBase@_reportInvalidEOFInValue(com.fasterxml.jackson.core.JsonToken):644:21626:type == JsonToken.VALUE_NUMBER_FLOAT |==> false
+964:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@_reportInvalidEOFInValue(com.fasterxml.jackson.core.JsonToken):643:21564:(type == JsonToken.VALUE_NUMBER_INT) || (type == JsonToken.VALUE_NUMBER_FLOAT) |==> (type == JsonToken.VALUE_NUMBER_INT)
+965:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@_reportInvalidEOFInValue(com.fasterxml.jackson.core.JsonToken):644:21620:(type == JsonToken.VALUE_NUMBER_INT) || (type == JsonToken.VALUE_NUMBER_FLOAT) |==> (type == JsonToken.VALUE_NUMBER_FLOAT)
+966:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.core.base.ParserMinimalBase@_reportInvalidEOFInValue(com.fasterxml.jackson.core.JsonToken):644:21617:(type == JsonToken.VALUE_NUMBER_INT) || (type == JsonToken.VALUE_NUMBER_FLOAT) |==> true
+967:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@_reportInvalidEOFInValue(com.fasterxml.jackson.core.JsonToken):649:21770:_reportInvalidEOF(msg, type); |==> <NO-OP>
+968:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@_reportInvalidEOFInValue():664:22244:_reportInvalidEOF(" in a value"); |==> <NO-OP>
+969:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@_reportMissingRootWS(int):676:22672:_reportUnexpectedChar(ch, "Expected space separating root-level values"); |==> <NO-OP>
+970:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@_throwInvalidSpace(int):682:22997:_reportError(msg); |==> <NO-OP>
+971:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.core.base.ParserMinimalBase@_getCharDesc(int):694:23322:Character.isISOControl(c) |==> false
+972:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.core.base.ParserMinimalBase@_getCharDesc(int):694:23322:Character.isISOControl(c) |==> true
+973:LVR:POS:0:com.fasterxml.jackson.core.base.ParserMinimalBase@_getCharDesc(int):697:23403:255 |==> 0
+974:LVR:POS:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase@_getCharDesc(int):697:23403:255 |==> -255
+975:ROR:>(int,int):!=(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@_getCharDesc(int):697:23398:ch > 255 |==> ch != 255
+976:ROR:>(int,int):>=(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@_getCharDesc(int):697:23398:ch > 255 |==> ch >= 255
+977:ROR:>(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@_getCharDesc(int):697:23401:ch > 255 |==> false
+978:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@_throwInternal():722:24214:VersionUtil.throwInternal(); |==> <NO-OP>
+979:LVR:0:POS:com.fasterxml.jackson.core.base.ParserMinimalBase@_asciiBytes(java.lang.String):731:24510:0 |==> 1
+980:LVR:0:NEG:com.fasterxml.jackson.core.base.ParserMinimalBase@_asciiBytes(java.lang.String):731:24510:0 |==> -1
+981:ROR:<(int,int):!=(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@_asciiBytes(java.lang.String):731:24533:i < len |==> i != len
+982:ROR:<(int,int):<=(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@_asciiBytes(java.lang.String):731:24533:i < len |==> i <= len
+983:ROR:<(int,int):FALSE(int,int):com.fasterxml.jackson.core.base.ParserMinimalBase@_asciiBytes(java.lang.String):731:24535:i < len |==> false
+984:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.base.ParserMinimalBase@_asciiBytes(java.lang.String):732:24561:b[i] = (byte)str.charAt(i); |==> <NO-OP>

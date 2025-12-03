@@ -1,0 +1,52 @@
+1:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@setEncoding(com.fasterxml.jackson.core.JsonEncoding):109:3385:_encoding = enc; |==> <NO-OP>
+2:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@withEncoding(com.fasterxml.jackson.core.JsonEncoding):116:3505:_encoding = enc; |==> <NO-OP>
+3:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@allocReadIOBuffer():146:4399:_verifyAlloc(_readIOBuffer); |==> <NO-OP>
+4:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@allocReadIOBuffer(int):154:4630:_verifyAlloc(_readIOBuffer); |==> <NO-OP>
+5:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@allocWriteEncodingBuffer():159:4836:_verifyAlloc(_writeEncodingBuffer); |==> <NO-OP>
+6:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@allocWriteEncodingBuffer(int):167:5095:_verifyAlloc(_writeEncodingBuffer); |==> <NO-OP>
+7:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@allocBase64Buffer():175:5349:_verifyAlloc(_base64Buffer); |==> <NO-OP>
+8:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@allocTokenBuffer():180:5543:_verifyAlloc(_tokenCBuffer); |==> <NO-OP>
+9:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@allocTokenBuffer(int):188:5771:_verifyAlloc(_tokenCBuffer); |==> <NO-OP>
+10:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@allocConcatBuffer():193:5968:_verifyAlloc(_concatCBuffer); |==> <NO-OP>
+11:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@allocNameCopyBuffer(int):198:6168:_verifyAlloc(_nameCopyBuffer); |==> <NO-OP>
+12:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.io.IOContext@releaseReadIOBuffer(byte[]):207:6488:buf != null |==> true
+13:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@releaseReadIOBuffer(byte[]):211:6674:_verifyRelease(buf, _readIOBuffer); |==> <NO-OP>
+14:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@releaseReadIOBuffer(byte[]):212:6722:_readIOBuffer = null; |==> <NO-OP>
+15:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@releaseReadIOBuffer(byte[]):213:6756:_bufferRecycler.releaseByteBuffer(BufferRecycler.BYTE_READ_IO_BUFFER, buf); |==> <NO-OP>
+16:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.io.IOContext@releaseWriteEncodingBuffer(byte[]):218:6922:buf != null |==> true
+17:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@releaseWriteEncodingBuffer(byte[]):222:7108:_verifyRelease(buf, _writeEncodingBuffer); |==> <NO-OP>
+18:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@releaseWriteEncodingBuffer(byte[]):223:7163:_writeEncodingBuffer = null; |==> <NO-OP>
+19:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@releaseWriteEncodingBuffer(byte[]):224:7204:_bufferRecycler.releaseByteBuffer(BufferRecycler.BYTE_WRITE_ENCODING_BUFFER, buf); |==> <NO-OP>
+20:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.io.IOContext@releaseBase64Buffer(byte[]):229:7370:buf != null |==> true
+21:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@releaseBase64Buffer(byte[]):230:7457:_verifyRelease(buf, _base64Buffer); |==> <NO-OP>
+22:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@releaseBase64Buffer(byte[]):231:7505:_base64Buffer = null; |==> <NO-OP>
+23:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@releaseBase64Buffer(byte[]):232:7539:_bufferRecycler.releaseByteBuffer(BufferRecycler.BYTE_BASE64_CODEC_BUFFER, buf); |==> <NO-OP>
+24:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.io.IOContext@releaseTokenBuffer(char[]):237:7706:buf != null |==> true
+25:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@releaseTokenBuffer(char[]):238:7729:_verifyRelease(buf, _tokenCBuffer); |==> <NO-OP>
+26:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@releaseTokenBuffer(char[]):239:7777:_tokenCBuffer = null; |==> <NO-OP>
+27:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@releaseTokenBuffer(char[]):240:7811:_bufferRecycler.releaseCharBuffer(BufferRecycler.CHAR_TOKEN_BUFFER, buf); |==> <NO-OP>
+28:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.io.IOContext@releaseConcatBuffer(char[]):245:7968:buf != null |==> true
+29:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@releaseConcatBuffer(char[]):247:8078:_verifyRelease(buf, _concatCBuffer); |==> <NO-OP>
+30:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@releaseConcatBuffer(char[]):248:8127:_concatCBuffer = null; |==> <NO-OP>
+31:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@releaseConcatBuffer(char[]):249:8162:_bufferRecycler.releaseCharBuffer(BufferRecycler.CHAR_CONCAT_BUFFER, buf); |==> <NO-OP>
+32:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.io.IOContext@releaseNameCopyBuffer(char[]):254:8322:buf != null |==> true
+33:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@releaseNameCopyBuffer(char[]):256:8432:_verifyRelease(buf, _nameCopyBuffer); |==> <NO-OP>
+34:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@releaseNameCopyBuffer(char[]):257:8482:_nameCopyBuffer = null; |==> <NO-OP>
+35:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.core.io.IOContext@releaseNameCopyBuffer(char[]):258:8518:_bufferRecycler.releaseCharBuffer(BufferRecycler.CHAR_NAME_COPY_BUFFER, buf); |==> <NO-OP>
+36:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.io.IOContext@_verifyAlloc(java.lang.Object):269:8855:buffer != null |==> true
+37:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.io.IOContext@_verifyRelease(byte[],byte[]):274:9138:toRelease != src |==> true
+38:ROR:<=(int,int):<(int,int):com.fasterxml.jackson.core.io.IOContext@_verifyRelease(byte[],byte[]):274:9150:toRelease.length <= src.length |==> toRelease.length < src.length
+39:ROR:<=(int,int):==(int,int):com.fasterxml.jackson.core.io.IOContext@_verifyRelease(byte[],byte[]):274:9150:toRelease.length <= src.length |==> toRelease.length == src.length
+40:ROR:<=(int,int):TRUE(int,int):com.fasterxml.jackson.core.io.IOContext@_verifyRelease(byte[],byte[]):274:9167:toRelease.length <= src.length |==> true
+41:COR:&&(boolean,boolean):==(boolean,boolean):com.fasterxml.jackson.core.io.IOContext@_verifyRelease(byte[],byte[]):274:9127:(toRelease != src) && (toRelease.length <= src.length) |==> (toRelease != src) == (toRelease.length <= src.length)
+42:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.fasterxml.jackson.core.io.IOContext@_verifyRelease(byte[],byte[]):274:9146:(toRelease != src) && (toRelease.length <= src.length) |==> false
+43:COR:&&(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.io.IOContext@_verifyRelease(byte[],byte[]):274:9127:(toRelease != src) && (toRelease.length <= src.length) |==> (toRelease != src)
+44:COR:&&(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.io.IOContext@_verifyRelease(byte[],byte[]):274:9149:(toRelease != src) && (toRelease.length <= src.length) |==> (toRelease.length <= src.length)
+45:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.core.io.IOContext@_verifyRelease(char[],char[]):279:9389:toRelease != src |==> true
+46:ROR:<=(int,int):<(int,int):com.fasterxml.jackson.core.io.IOContext@_verifyRelease(char[],char[]):279:9401:toRelease.length <= src.length |==> toRelease.length < src.length
+47:ROR:<=(int,int):==(int,int):com.fasterxml.jackson.core.io.IOContext@_verifyRelease(char[],char[]):279:9401:toRelease.length <= src.length |==> toRelease.length == src.length
+48:ROR:<=(int,int):TRUE(int,int):com.fasterxml.jackson.core.io.IOContext@_verifyRelease(char[],char[]):279:9418:toRelease.length <= src.length |==> true
+49:COR:&&(boolean,boolean):==(boolean,boolean):com.fasterxml.jackson.core.io.IOContext@_verifyRelease(char[],char[]):279:9378:(toRelease != src) && (toRelease.length <= src.length) |==> (toRelease != src) == (toRelease.length <= src.length)
+50:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.fasterxml.jackson.core.io.IOContext@_verifyRelease(char[],char[]):279:9397:(toRelease != src) && (toRelease.length <= src.length) |==> false
+51:COR:&&(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.core.io.IOContext@_verifyRelease(char[],char[]):279:9378:(toRelease != src) && (toRelease.length <= src.length) |==> (toRelease != src)
+52:COR:&&(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.core.io.IOContext@_verifyRelease(char[],char[]):279:9400:(toRelease != src) && (toRelease.length <= src.length) |==> (toRelease.length <= src.length)
