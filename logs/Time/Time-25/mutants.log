@@ -1,0 +1,431 @@
+1:LVR:0:POS:org.joda.time.DateTimeZone:95:3926:0 |==> 1
+2:LVR:0:NEG:org.joda.time.DateTimeZone:95:3926:0 |==> -1
+3:LVR:0:POS:org.joda.time.DateTimeZone:95:3929:0 |==> 1
+4:LVR:0:NEG:org.joda.time.DateTimeZone:95:3929:0 |==> -1
+5:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone:115:4701:setProvider0(null); |==> <NO-OP>
+6:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone:116:4729:setNameProvider0(null); |==> <NO-OP>
+7:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@getDefault():134:5476:zone == null |==> false
+8:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@getDefault():136:5550:zone = cDefault; |==> <NO-OP>
+9:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@getDefault():137:5592:zone == null |==> false
+10:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@getDefault():142:5817:id != null |==> true
+11:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@getDefault():143:5897:temp = forID(id); |==> <NO-OP>
+12:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@getDefault():148:6099:temp == null |==> false
+13:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@getDefault():149:6138:temp = forTimeZone(TimeZone.getDefault()); |==> <NO-OP>
+14:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@getDefault():154:6353:temp == null |==> false
+15:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@getDefault():155:6388:temp = UTC; |==> <NO-OP>
+16:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@getDefault():157:6442:cDefault = zone = temp; |==> <NO-OP>
+17:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@setDefault(org.joda.time.DateTimeZone):175:7068:sm != null |==> true
+18:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@setDefault(org.joda.time.DateTimeZone):176:7091:sm.checkPermission(new JodaTimePermission("DateTimeZone.setDefault")); |==> <NO-OP>
+19:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@setDefault(org.joda.time.DateTimeZone):178:7189:zone == null |==> false
+20:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@setDefault(org.joda.time.DateTimeZone):182:7351:cDefault = zone; |==> <NO-OP>
+21:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@forID(java.lang.String):204:8241:id == null |==> false
+22:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.joda.time.DateTimeZone@forID(java.lang.String):207:8316:id.equals("UTC") |==> false
+23:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.joda.time.DateTimeZone@forID(java.lang.String):207:8316:id.equals("UTC") |==> true
+24:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@forID(java.lang.String):211:8442:zone != null |==> true
+25:COR:||(boolean,boolean):!=(boolean,boolean):org.joda.time.DateTimeZone@forID(java.lang.String):214:8500:id.startsWith("+") || id.startsWith("-") |==> id.startsWith("+") != id.startsWith("-")
+26:COR:||(boolean,boolean):LHS(boolean,boolean):org.joda.time.DateTimeZone@forID(java.lang.String):214:8500:id.startsWith("+") || id.startsWith("-") |==> id.startsWith("+")
+27:COR:||(boolean,boolean):RHS(boolean,boolean):org.joda.time.DateTimeZone@forID(java.lang.String):214:8522:id.startsWith("+") || id.startsWith("-") |==> id.startsWith("-")
+28:COR:||(boolean,boolean):TRUE(boolean,boolean):org.joda.time.DateTimeZone@forID(java.lang.String):214:8519:id.startsWith("+") || id.startsWith("-") |==> true
+29:LVR:0:POS:org.joda.time.DateTimeZone@forID(java.lang.String):216:8612:0L |==> 1L
+30:LVR:0:NEG:org.joda.time.DateTimeZone@forID(java.lang.String):216:8612:0L |==> -1L
+31:ROR:==(long,long):<=(long,long):org.joda.time.DateTimeZone@forID(java.lang.String):216:8602:offset == 0L |==> offset <= 0L
+32:ROR:==(long,long):>=(long,long):org.joda.time.DateTimeZone@forID(java.lang.String):216:8602:offset == 0L |==> offset >= 0L
+33:ROR:==(long,long):FALSE(long,long):org.joda.time.DateTimeZone@forID(java.lang.String):216:8609:offset == 0L |==> false
+34:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@forID(java.lang.String):219:8696:id = printOffset(offset); |==> <NO-OP>
+35:LVR:0:POS:org.joda.time.DateTimeZone@forOffsetHours(int):237:9484:0 |==> 1
+36:LVR:0:NEG:org.joda.time.DateTimeZone@forOffsetHours(int):237:9484:0 |==> -1
+37:LVR:0:POS:org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):254:10375:0 |==> 1
+38:LVR:0:NEG:org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):254:10375:0 |==> -1
+39:ROR:==(int,int):<=(int,int):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):254:10360:hoursOffset == 0 |==> hoursOffset <= 0
+40:ROR:==(int,int):>=(int,int):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):254:10360:hoursOffset == 0 |==> hoursOffset >= 0
+41:ROR:==(int,int):FALSE(int,int):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):254:10372:hoursOffset == 0 |==> false
+42:LVR:0:POS:org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):254:10397:0 |==> 1
+43:LVR:0:NEG:org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):254:10397:0 |==> -1
+44:ROR:==(int,int):<=(int,int):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):254:10380:minutesOffset == 0 |==> minutesOffset <= 0
+45:ROR:==(int,int):>=(int,int):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):254:10380:minutesOffset == 0 |==> minutesOffset >= 0
+46:ROR:==(int,int):FALSE(int,int):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):254:10394:minutesOffset == 0 |==> false
+47:COR:&&(boolean,boolean):==(boolean,boolean):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):254:10360:hoursOffset == 0 && minutesOffset == 0 |==> hoursOffset == 0 == (minutesOffset == 0)
+48:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):254:10377:hoursOffset == 0 && minutesOffset == 0 |==> false
+49:COR:&&(boolean,boolean):LHS(boolean,boolean):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):254:10360:hoursOffset == 0 && minutesOffset == 0 |==> hoursOffset == 0
+50:COR:&&(boolean,boolean):RHS(boolean,boolean):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):254:10380:hoursOffset == 0 && minutesOffset == 0 |==> minutesOffset == 0
+51:LVR:0:POS:org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):257:10477:0 |==> 1
+52:LVR:0:NEG:org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):257:10477:0 |==> -1
+53:ROR:<(int,int):!=(int,int):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):257:10461:minutesOffset < 0 |==> minutesOffset != 0
+54:ROR:<(int,int):<=(int,int):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):257:10461:minutesOffset < 0 |==> minutesOffset <= 0
+55:ROR:<(int,int):FALSE(int,int):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):257:10475:minutesOffset < 0 |==> false
+56:LVR:POS:0:org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):257:10498:59 |==> 0
+57:LVR:POS:NEG:org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):257:10498:59 |==> -59
+58:ROR:>(int,int):!=(int,int):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):257:10482:minutesOffset > 59 |==> minutesOffset != 59
+59:ROR:>(int,int):>=(int,int):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):257:10482:minutesOffset > 59 |==> minutesOffset >= 59
+60:ROR:>(int,int):FALSE(int,int):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):257:10496:minutesOffset > 59 |==> false
+61:COR:||(boolean,boolean):LHS(boolean,boolean):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):257:10461:minutesOffset < 0 || minutesOffset > 59 |==> minutesOffset < 0
+62:COR:||(boolean,boolean):RHS(boolean,boolean):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):257:10482:minutesOffset < 0 || minutesOffset > 59 |==> minutesOffset > 59
+63:COR:||(boolean,boolean):TRUE(boolean,boolean):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):257:10479:minutesOffset < 0 || minutesOffset > 59 |==> true
+64:LVR:POS:0:org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):262:10712:60 |==> 0
+65:LVR:POS:NEG:org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):262:10712:60 |==> -60
+66:LVR:0:POS:org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):263:10750:0 |==> 1
+67:LVR:0:NEG:org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):263:10750:0 |==> -1
+68:ROR:<(int,int):!=(int,int):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):263:10733:hoursInMinutes < 0 |==> hoursInMinutes != 0
+69:ROR:<(int,int):<=(int,int):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):263:10733:hoursInMinutes < 0 |==> hoursInMinutes <= 0
+70:ROR:<(int,int):FALSE(int,int):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):263:10748:hoursInMinutes < 0 |==> false
+71:ORU:-(int):+(int):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):264:10822:-minutesOffset |==> +minutesOffset
+72:ORU:-(int):~(int):org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):264:10822:-minutesOffset |==> ~minutesOffset
+73:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):264:10771:minutesOffset = FieldUtils.safeAdd(hoursInMinutes, -minutesOffset); |==> <NO-OP>
+74:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):266:10876:minutesOffset = FieldUtils.safeAdd(hoursInMinutes, minutesOffset); |==> <NO-OP>
+75:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@forOffsetHoursMinutes(int,int):268:10969:offset = FieldUtils.safeMultiply(minutesOffset, DateTimeConstants.MILLIS_PER_MINUTE); |==> <NO-OP>
+76:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):302:12371:zone == null |==> false
+77:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):306:12486:id.equals("UTC") |==> false
+78:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):306:12486:id.equals("UTC") |==> true
+79:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):313:12725:convId != null |==> true
+80:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):314:12748:dtz = cProvider.getZone(convId); |==> <NO-OP>
+81:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):316:12807:dtz == null |==> false
+82:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):317:12830:dtz = cProvider.getZone(id); |==> <NO-OP>
+83:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):319:12885:dtz != null |==> true
+84:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):324:12989:convId == null |==> false
+85:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):325:13012:convId = zone.getDisplayName(); |==> <NO-OP>
+86:COR:||(boolean,boolean):!=(boolean,boolean):org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):326:13060:convId.startsWith("GMT+") || convId.startsWith("GMT-") |==> convId.startsWith("GMT+") != convId.startsWith("GMT-")
+87:COR:||(boolean,boolean):LHS(boolean,boolean):org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):326:13060:convId.startsWith("GMT+") || convId.startsWith("GMT-") |==> convId.startsWith("GMT+")
+88:COR:||(boolean,boolean):RHS(boolean,boolean):org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):326:13089:convId.startsWith("GMT+") || convId.startsWith("GMT-") |==> convId.startsWith("GMT-")
+89:COR:||(boolean,boolean):TRUE(boolean,boolean):org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):326:13086:convId.startsWith("GMT+") || convId.startsWith("GMT-") |==> true
+90:LVR:POS:0:org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):327:13160:3 |==> 0
+91:LVR:POS:NEG:org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):327:13160:3 |==> -3
+92:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):327:13134:convId = convId.substring(3); |==> <NO-OP>
+93:LVR:0:POS:org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):329:13244:0L |==> 1L
+94:LVR:0:NEG:org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):329:13244:0L |==> -1L
+95:ROR:==(long,long):<=(long,long):org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):329:13234:offset == 0L |==> offset <= 0L
+96:ROR:==(long,long):>=(long,long):org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):329:13234:offset == 0L |==> offset >= 0L
+97:ROR:==(long,long):FALSE(long,long):org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):329:13241:offset == 0L |==> false
+98:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@forTimeZone(java.util.TimeZone):332:13340:convId = printOffset(offset); |==> <NO-OP>
+99:LVR:0:POS:org.joda.time.DateTimeZone@fixedOffsetZone(java.lang.String,int):349:13935:0 |==> 1
+100:LVR:0:NEG:org.joda.time.DateTimeZone@fixedOffsetZone(java.lang.String,int):349:13935:0 |==> -1
+101:ROR:==(int,int):<=(int,int):org.joda.time.DateTimeZone@fixedOffsetZone(java.lang.String,int):349:13925:offset == 0 |==> offset <= 0
+102:ROR:==(int,int):>=(int,int):org.joda.time.DateTimeZone@fixedOffsetZone(java.lang.String,int):349:13925:offset == 0 |==> offset >= 0
+103:ROR:==(int,int):FALSE(int,int):org.joda.time.DateTimeZone@fixedOffsetZone(java.lang.String,int):349:13932:offset == 0 |==> false
+104:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@fixedOffsetZone(java.lang.String,int):352:14017:iFixedOffsetCache == null |==> false
+105:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@fixedOffsetZone(java.lang.String,int):353:14040:iFixedOffsetCache = new HashMap<String, SoftReference<DateTimeZone>>(); |==> <NO-OP>
+106:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@fixedOffsetZone(java.lang.String,int):357:14230:ref != null |==> true
+107:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@fixedOffsetZone(java.lang.String,int):359:14292:zone != null |==> true
+108:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@fixedOffsetZone(java.lang.String,int):364:14428:iFixedOffsetCache.put(id, new SoftReference<DateTimeZone>(zone)); |==> <NO-OP>
+109:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@setProvider(org.joda.time.tz.Provider):402:15663:sm != null |==> true
+110:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@setProvider(org.joda.time.tz.Provider):403:15686:sm.checkPermission(new JodaTimePermission("DateTimeZone.setProvider")); |==> <NO-OP>
+111:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@setProvider(org.joda.time.tz.Provider):405:15776:setProvider0(provider); |==> <NO-OP>
+112:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@setProvider0(org.joda.time.tz.Provider):415:16115:provider == null |==> false
+113:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@setProvider0(org.joda.time.tz.Provider):416:16138:provider = getDefaultProvider(); |==> <NO-OP>
+114:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@setProvider0(org.joda.time.tz.Provider):419:16251:ids == null |==> false
+115:LVR:0:POS:org.joda.time.DateTimeZone@setProvider0(org.joda.time.tz.Provider):419:16276:0 |==> 1
+116:LVR:0:NEG:org.joda.time.DateTimeZone@setProvider0(org.joda.time.tz.Provider):419:16276:0 |==> -1
+117:ROR:==(int,int):>=(int,int):org.joda.time.DateTimeZone@setProvider0(org.joda.time.tz.Provider):419:16262:ids.size() == 0 |==> ids.size() >= 0
+118:ROR:==(int,int):FALSE(int,int):org.joda.time.DateTimeZone@setProvider0(org.joda.time.tz.Provider):419:16273:ids.size() == 0 |==> false
+119:COR:||(boolean,boolean):!=(boolean,boolean):org.joda.time.DateTimeZone@setProvider0(org.joda.time.tz.Provider):419:16247:ids == null || ids.size() == 0 |==> ids == null != (ids.size() == 0)
+120:COR:||(boolean,boolean):LHS(boolean,boolean):org.joda.time.DateTimeZone@setProvider0(org.joda.time.tz.Provider):419:16247:ids == null || ids.size() == 0 |==> ids == null
+121:COR:||(boolean,boolean):RHS(boolean,boolean):org.joda.time.DateTimeZone@setProvider0(org.joda.time.tz.Provider):419:16262:ids == null || ids.size() == 0 |==> ids.size() == 0
+122:COR:||(boolean,boolean):TRUE(boolean,boolean):org.joda.time.DateTimeZone@setProvider0(org.joda.time.tz.Provider):419:16259:ids == null || ids.size() == 0 |==> true
+123:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.joda.time.DateTimeZone@setProvider0(org.joda.time.tz.Provider):423:16428:ids.contains("UTC") |==> false
+124:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.joda.time.DateTimeZone@setProvider0(org.joda.time.tz.Provider):423:16428:ids.contains("UTC") |==> true
+125:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.joda.time.DateTimeZone@setProvider0(org.joda.time.tz.Provider):426:16556:UTC.equals(provider.getZone("UTC")) |==> false
+126:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.joda.time.DateTimeZone@setProvider0(org.joda.time.tz.Provider):426:16556:UTC.equals(provider.getZone("UTC")) |==> true
+127:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@setProvider0(org.joda.time.tz.Provider):429:16680:cProvider = provider; |==> <NO-OP>
+128:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@setProvider0(org.joda.time.tz.Provider):430:16710:cAvailableIDs = ids; |==> <NO-OP>
+129:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@getDefaultProvider():448:17323:providerClass != null |==> true
+130:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@getDefaultProvider():450:17376:provider = (Provider)Class.forName(providerClass).newInstance(); |==> <NO-OP>
+131:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getDefaultProvider():453:17563:thread.getThreadGroup().uncaughtException(thread, ex); |==> <NO-OP>
+132:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@getDefaultProvider():460:17746:provider == null |==> false
+133:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@getDefaultProvider():462:17791:provider = new ZoneInfoProvider("org/joda/time/tz/data"); |==> <NO-OP>
+134:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getDefaultProvider():465:17958:thread.getThreadGroup().uncaughtException(thread, ex); |==> <NO-OP>
+135:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@getDefaultProvider():469:18059:provider == null |==> false
+136:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@getDefaultProvider():470:18082:provider = new UTCProvider(); |==> <NO-OP>
+137:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@setNameProvider(org.joda.time.tz.NameProvider):501:19111:sm != null |==> true
+138:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@setNameProvider(org.joda.time.tz.NameProvider):502:19134:sm.checkPermission(new JodaTimePermission("DateTimeZone.setNameProvider")); |==> <NO-OP>
+139:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@setNameProvider(org.joda.time.tz.NameProvider):504:19228:setNameProvider0(nameProvider); |==> <NO-OP>
+140:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@setNameProvider0(org.joda.time.tz.NameProvider):514:19595:nameProvider == null |==> false
+141:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@setNameProvider0(org.joda.time.tz.NameProvider):515:19618:nameProvider = getDefaultNameProvider(); |==> <NO-OP>
+142:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@setNameProvider0(org.joda.time.tz.NameProvider):517:19677:cNameProvider = nameProvider; |==> <NO-OP>
+143:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@getDefaultNameProvider():532:20210:providerClass != null |==> true
+144:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@getDefaultNameProvider():534:20263:nameProvider = (NameProvider)Class.forName(providerClass).newInstance(); |==> <NO-OP>
+145:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getDefaultNameProvider():537:20458:thread.getThreadGroup().uncaughtException(thread, ex); |==> <NO-OP>
+146:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@getDefaultNameProvider():544:20644:nameProvider == null |==> false
+147:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@getDefaultNameProvider():545:20667:nameProvider = new DefaultNameProvider(); |==> <NO-OP>
+148:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@getConvertedId(java.lang.String):560:21131:map == null |==> false
+149:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):562:21208:map = new HashMap<String, String>(); |==> <NO-OP>
+150:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):563:21257:map.put("GMT", "UTC"); |==> <NO-OP>
+151:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):564:21292:map.put("MIT", "Pacific/Apia"); |==> <NO-OP>
+152:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):565:21336:map.put("HST", "Pacific/Honolulu"); |==> <NO-OP>
+153:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):566:21384:map.put("AST", "America/Anchorage"); |==> <NO-OP>
+154:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):567:21433:map.put("PST", "America/Los_Angeles"); |==> <NO-OP>
+155:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):568:21484:map.put("MST", "America/Denver"); |==> <NO-OP>
+156:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):569:21530:map.put("PNT", "America/Phoenix"); |==> <NO-OP>
+157:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):570:21577:map.put("CST", "America/Chicago"); |==> <NO-OP>
+158:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):571:21624:map.put("EST", "America/New_York"); |==> <NO-OP>
+159:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):572:21672:map.put("IET", "America/Indianapolis"); |==> <NO-OP>
+160:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):573:21724:map.put("PRT", "America/Puerto_Rico"); |==> <NO-OP>
+161:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):574:21775:map.put("CNT", "America/St_Johns"); |==> <NO-OP>
+162:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):575:21823:map.put("AGT", "America/Buenos_Aires"); |==> <NO-OP>
+163:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):576:21875:map.put("BET", "America/Sao_Paulo"); |==> <NO-OP>
+164:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):577:21924:map.put("WET", "Europe/London"); |==> <NO-OP>
+165:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):578:21969:map.put("ECT", "Europe/Paris"); |==> <NO-OP>
+166:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):579:22013:map.put("ART", "Africa/Cairo"); |==> <NO-OP>
+167:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):580:22057:map.put("CAT", "Africa/Harare"); |==> <NO-OP>
+168:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):581:22102:map.put("EET", "Europe/Bucharest"); |==> <NO-OP>
+169:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):582:22150:map.put("EAT", "Africa/Addis_Ababa"); |==> <NO-OP>
+170:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):583:22200:map.put("MET", "Asia/Tehran"); |==> <NO-OP>
+171:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):584:22243:map.put("NET", "Asia/Yerevan"); |==> <NO-OP>
+172:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):585:22287:map.put("PLT", "Asia/Karachi"); |==> <NO-OP>
+173:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):586:22331:map.put("IST", "Asia/Calcutta"); |==> <NO-OP>
+174:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):587:22376:map.put("BST", "Asia/Dhaka"); |==> <NO-OP>
+175:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):588:22418:map.put("VST", "Asia/Saigon"); |==> <NO-OP>
+176:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):589:22461:map.put("CTT", "Asia/Shanghai"); |==> <NO-OP>
+177:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):590:22506:map.put("JST", "Asia/Tokyo"); |==> <NO-OP>
+178:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):591:22548:map.put("ACT", "Australia/Darwin"); |==> <NO-OP>
+179:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):592:22596:map.put("AET", "Australia/Sydney"); |==> <NO-OP>
+180:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):593:22644:map.put("SST", "Pacific/Guadalcanal"); |==> <NO-OP>
+181:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):594:22695:map.put("NST", "Pacific/Auckland"); |==> <NO-OP>
+182:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@getConvertedId(java.lang.String):595:22743:cZoneIdConversion = map; |==> <NO-OP>
+183:ORU:-(int):+(int):org.joda.time.DateTimeZone@parseOffset(java.lang.String):617:23439:-(int)offsetFormatter().withChronology(chrono).parseMillis(str) |==> +(int)offsetFormatter().withChronology(chrono).parseMillis(str)
+184:ORU:-(int):~(int):org.joda.time.DateTimeZone@parseOffset(java.lang.String):617:23439:-(int)offsetFormatter().withChronology(chrono).parseMillis(str) |==> ~(int)offsetFormatter().withChronology(chrono).parseMillis(str)
+185:LVR:0:POS:org.joda.time.DateTimeZone@printOffset(int):631:23913:0 |==> 1
+186:LVR:0:NEG:org.joda.time.DateTimeZone@printOffset(int):631:23913:0 |==> -1
+187:ROR:>=(int,int):==(int,int):org.joda.time.DateTimeZone@printOffset(int):631:23903:offset >= 0 |==> offset == 0
+188:ROR:>=(int,int):>(int,int):org.joda.time.DateTimeZone@printOffset(int):631:23903:offset >= 0 |==> offset > 0
+189:ROR:>=(int,int):TRUE(int,int):org.joda.time.DateTimeZone@printOffset(int):631:23910:offset >= 0 |==> true
+190:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@printOffset(int):632:23930:buf.append('+'); |==> <NO-OP>
+191:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@printOffset(int):634:23976:buf.append('-'); |==> <NO-OP>
+192:ORU:-(int):+(int):org.joda.time.DateTimeZone@printOffset(int):635:24014:-offset |==> +offset
+193:ORU:-(int):~(int):org.joda.time.DateTimeZone@printOffset(int):635:24014:-offset |==> ~offset
+194:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@printOffset(int):635:24005:offset = -offset; |==> <NO-OP>
+195:AOR:/(int,int):%(int,int):org.joda.time.DateTimeZone@printOffset(int):638:24054:offset / DateTimeConstants.MILLIS_PER_HOUR |==> offset % DateTimeConstants.MILLIS_PER_HOUR
+196:AOR:/(int,int):*(int,int):org.joda.time.DateTimeZone@printOffset(int):638:24054:offset / DateTimeConstants.MILLIS_PER_HOUR |==> offset * DateTimeConstants.MILLIS_PER_HOUR
+197:AOR:/(int,int):+(int,int):org.joda.time.DateTimeZone@printOffset(int):638:24054:offset / DateTimeConstants.MILLIS_PER_HOUR |==> offset + DateTimeConstants.MILLIS_PER_HOUR
+198:AOR:/(int,int):-(int,int):org.joda.time.DateTimeZone@printOffset(int):638:24054:offset / DateTimeConstants.MILLIS_PER_HOUR |==> offset - DateTimeConstants.MILLIS_PER_HOUR
+199:LVR:POS:0:org.joda.time.DateTimeZone@printOffset(int):639:24150:2 |==> 0
+200:LVR:POS:NEG:org.joda.time.DateTimeZone@printOffset(int):639:24150:2 |==> -2
+201:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@printOffset(int):639:24106:FormatUtils.appendPaddedInteger(buf, hours, 2); |==> <NO-OP>
+202:AOR:*(int,int):%(int,int):org.joda.time.DateTimeZone@printOffset(int):640:24172:hours * (int)DateTimeConstants.MILLIS_PER_HOUR |==> hours % (int)DateTimeConstants.MILLIS_PER_HOUR
+203:AOR:*(int,int):+(int,int):org.joda.time.DateTimeZone@printOffset(int):640:24172:hours * (int)DateTimeConstants.MILLIS_PER_HOUR |==> hours + (int)DateTimeConstants.MILLIS_PER_HOUR
+204:AOR:*(int,int):-(int,int):org.joda.time.DateTimeZone@printOffset(int):640:24172:hours * (int)DateTimeConstants.MILLIS_PER_HOUR |==> hours - (int)DateTimeConstants.MILLIS_PER_HOUR
+205:AOR:*(int,int):/(int,int):org.joda.time.DateTimeZone@printOffset(int):640:24172:hours * (int)DateTimeConstants.MILLIS_PER_HOUR |==> hours / (int)DateTimeConstants.MILLIS_PER_HOUR
+206:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@printOffset(int):640:24162:offset -= hours * (int)DateTimeConstants.MILLIS_PER_HOUR; |==> <NO-OP>
+207:AOR:/(int,int):%(int,int):org.joda.time.DateTimeZone@printOffset(int):642:24244:offset / DateTimeConstants.MILLIS_PER_MINUTE |==> offset % DateTimeConstants.MILLIS_PER_MINUTE
+208:AOR:/(int,int):*(int,int):org.joda.time.DateTimeZone@printOffset(int):642:24244:offset / DateTimeConstants.MILLIS_PER_MINUTE |==> offset * DateTimeConstants.MILLIS_PER_MINUTE
+209:AOR:/(int,int):+(int,int):org.joda.time.DateTimeZone@printOffset(int):642:24244:offset / DateTimeConstants.MILLIS_PER_MINUTE |==> offset + DateTimeConstants.MILLIS_PER_MINUTE
+210:AOR:/(int,int):-(int,int):org.joda.time.DateTimeZone@printOffset(int):642:24244:offset / DateTimeConstants.MILLIS_PER_MINUTE |==> offset - DateTimeConstants.MILLIS_PER_MINUTE
+211:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@printOffset(int):643:24298:buf.append(':'); |==> <NO-OP>
+212:LVR:POS:0:org.joda.time.DateTimeZone@printOffset(int):644:24369:2 |==> 0
+213:LVR:POS:NEG:org.joda.time.DateTimeZone@printOffset(int):644:24369:2 |==> -2
+214:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@printOffset(int):644:24323:FormatUtils.appendPaddedInteger(buf, minutes, 2); |==> <NO-OP>
+215:AOR:*(int,int):%(int,int):org.joda.time.DateTimeZone@printOffset(int):645:24391:minutes * DateTimeConstants.MILLIS_PER_MINUTE |==> minutes % DateTimeConstants.MILLIS_PER_MINUTE
+216:AOR:*(int,int):+(int,int):org.joda.time.DateTimeZone@printOffset(int):645:24391:minutes * DateTimeConstants.MILLIS_PER_MINUTE |==> minutes + DateTimeConstants.MILLIS_PER_MINUTE
+217:AOR:*(int,int):-(int,int):org.joda.time.DateTimeZone@printOffset(int):645:24391:minutes * DateTimeConstants.MILLIS_PER_MINUTE |==> minutes - DateTimeConstants.MILLIS_PER_MINUTE
+218:AOR:*(int,int):/(int,int):org.joda.time.DateTimeZone@printOffset(int):645:24391:minutes * DateTimeConstants.MILLIS_PER_MINUTE |==> minutes / DateTimeConstants.MILLIS_PER_MINUTE
+219:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@printOffset(int):645:24381:offset -= minutes * DateTimeConstants.MILLIS_PER_MINUTE; |==> <NO-OP>
+220:LVR:0:POS:org.joda.time.DateTimeZone@printOffset(int):646:24460:0 |==> 1
+221:LVR:0:NEG:org.joda.time.DateTimeZone@printOffset(int):646:24460:0 |==> -1
+222:ROR:==(int,int):<=(int,int):org.joda.time.DateTimeZone@printOffset(int):646:24450:offset == 0 |==> offset <= 0
+223:ROR:==(int,int):>=(int,int):org.joda.time.DateTimeZone@printOffset(int):646:24450:offset == 0 |==> offset >= 0
+224:ROR:==(int,int):FALSE(int,int):org.joda.time.DateTimeZone@printOffset(int):646:24457:offset == 0 |==> false
+225:AOR:/(int,int):%(int,int):org.joda.time.DateTimeZone@printOffset(int):650:24533:offset / DateTimeConstants.MILLIS_PER_SECOND |==> offset % DateTimeConstants.MILLIS_PER_SECOND
+226:AOR:/(int,int):*(int,int):org.joda.time.DateTimeZone@printOffset(int):650:24533:offset / DateTimeConstants.MILLIS_PER_SECOND |==> offset * DateTimeConstants.MILLIS_PER_SECOND
+227:AOR:/(int,int):+(int,int):org.joda.time.DateTimeZone@printOffset(int):650:24533:offset / DateTimeConstants.MILLIS_PER_SECOND |==> offset + DateTimeConstants.MILLIS_PER_SECOND
+228:AOR:/(int,int):-(int,int):org.joda.time.DateTimeZone@printOffset(int):650:24533:offset / DateTimeConstants.MILLIS_PER_SECOND |==> offset - DateTimeConstants.MILLIS_PER_SECOND
+229:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@printOffset(int):651:24587:buf.append(':'); |==> <NO-OP>
+230:LVR:POS:0:org.joda.time.DateTimeZone@printOffset(int):652:24658:2 |==> 0
+231:LVR:POS:NEG:org.joda.time.DateTimeZone@printOffset(int):652:24658:2 |==> -2
+232:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@printOffset(int):652:24612:FormatUtils.appendPaddedInteger(buf, seconds, 2); |==> <NO-OP>
+233:AOR:*(int,int):%(int,int):org.joda.time.DateTimeZone@printOffset(int):653:24680:seconds * DateTimeConstants.MILLIS_PER_SECOND |==> seconds % DateTimeConstants.MILLIS_PER_SECOND
+234:AOR:*(int,int):+(int,int):org.joda.time.DateTimeZone@printOffset(int):653:24680:seconds * DateTimeConstants.MILLIS_PER_SECOND |==> seconds + DateTimeConstants.MILLIS_PER_SECOND
+235:AOR:*(int,int):-(int,int):org.joda.time.DateTimeZone@printOffset(int):653:24680:seconds * DateTimeConstants.MILLIS_PER_SECOND |==> seconds - DateTimeConstants.MILLIS_PER_SECOND
+236:AOR:*(int,int):/(int,int):org.joda.time.DateTimeZone@printOffset(int):653:24680:seconds * DateTimeConstants.MILLIS_PER_SECOND |==> seconds / DateTimeConstants.MILLIS_PER_SECOND
+237:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@printOffset(int):653:24670:offset -= seconds * DateTimeConstants.MILLIS_PER_SECOND; |==> <NO-OP>
+238:LVR:0:POS:org.joda.time.DateTimeZone@printOffset(int):654:24749:0 |==> 1
+239:LVR:0:NEG:org.joda.time.DateTimeZone@printOffset(int):654:24749:0 |==> -1
+240:ROR:==(int,int):<=(int,int):org.joda.time.DateTimeZone@printOffset(int):654:24739:offset == 0 |==> offset <= 0
+241:ROR:==(int,int):>=(int,int):org.joda.time.DateTimeZone@printOffset(int):654:24739:offset == 0 |==> offset >= 0
+242:ROR:==(int,int):FALSE(int,int):org.joda.time.DateTimeZone@printOffset(int):654:24746:offset == 0 |==> false
+243:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@printOffset(int):658:24808:buf.append('.'); |==> <NO-OP>
+244:LVR:POS:0:org.joda.time.DateTimeZone@printOffset(int):659:24878:3 |==> 0
+245:LVR:POS:NEG:org.joda.time.DateTimeZone@printOffset(int):659:24878:3 |==> -3
+246:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@printOffset(int):659:24833:FormatUtils.appendPaddedInteger(buf, offset, 3); |==> <NO-OP>
+247:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@offsetFormatter():669:25140:cOffsetFormatter == null |==> false
+248:LVR:TRUE:FALSE:org.joda.time.DateTimeZone@offsetFormatter():671:25257:true |==> false
+249:LVR:POS:0:org.joda.time.DateTimeZone@offsetFormatter():671:25263:2 |==> 0
+250:LVR:POS:NEG:org.joda.time.DateTimeZone@offsetFormatter():671:25263:2 |==> -2
+251:LVR:POS:0:org.joda.time.DateTimeZone@offsetFormatter():671:25266:4 |==> 0
+252:LVR:POS:NEG:org.joda.time.DateTimeZone@offsetFormatter():671:25266:4 |==> -4
+253:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@offsetFormatter():670:25163:cOffsetFormatter = new DateTimeFormatterBuilder().appendTimeZoneOffset(null, true, 2, 4).toFormatter(); |==> <NO-OP>
+254:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@<init>(java.lang.String):689:25682:id == null |==> false
+255:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@getShortName(long,java.util.Locale):743:27540:locale == null |==> false
+256:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@getShortName(long,java.util.Locale):744:27563:locale = Locale.getDefault(); |==> <NO-OP>
+257:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@getShortName(long,java.util.Locale):747:27669:nameKey == null |==> false
+258:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@getShortName(long,java.util.Locale):751:27803:name != null |==> true
+259:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@getName(long,java.util.Locale):783:28963:locale == null |==> false
+260:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@getName(long,java.util.Locale):784:28986:locale = Locale.getDefault(); |==> <NO-OP>
+261:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@getName(long,java.util.Locale):787:29092:nameKey == null |==> false
+262:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@getName(long,java.util.Locale):791:29221:name != null |==> true
+263:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@getOffset(org.joda.time.ReadableInstant):812:29927:instant == null |==> false
+264:ROR:==(int,int):<=(int,int):org.joda.time.DateTimeZone@isStandardOffset(long):843:31238:getOffset(instant) == getStandardOffset(instant) |==> getOffset(instant) <= getStandardOffset(instant)
+265:ROR:==(int,int):>=(int,int):org.joda.time.DateTimeZone@isStandardOffset(long):843:31238:getOffset(instant) == getStandardOffset(instant) |==> getOffset(instant) >= getStandardOffset(instant)
+266:ROR:==(int,int):FALSE(int,int):org.joda.time.DateTimeZone@isStandardOffset(long):843:31257:getOffset(instant) == getStandardOffset(instant) |==> false
+267:AOR:-(long,long):%(long,long):org.joda.time.DateTimeZone@getOffsetFromLocal(long):883:33167:instantLocal - offsetLocal |==> instantLocal % offsetLocal
+268:AOR:-(long,long):*(long,long):org.joda.time.DateTimeZone@getOffsetFromLocal(long):883:33167:instantLocal - offsetLocal |==> instantLocal * offsetLocal
+269:AOR:-(long,long):+(long,long):org.joda.time.DateTimeZone@getOffsetFromLocal(long):883:33167:instantLocal - offsetLocal |==> instantLocal + offsetLocal
+270:AOR:-(long,long):/(long,long):org.joda.time.DateTimeZone@getOffsetFromLocal(long):883:33167:instantLocal - offsetLocal |==> instantLocal / offsetLocal
+271:ROR:!=(int,int):<(int,int):org.joda.time.DateTimeZone@getOffsetFromLocal(long):886:33335:offsetLocal != offsetAdjusted |==> offsetLocal < offsetAdjusted
+272:ROR:!=(int,int):>(int,int):org.joda.time.DateTimeZone@getOffsetFromLocal(long):886:33335:offsetLocal != offsetAdjusted |==> offsetLocal > offsetAdjusted
+273:ROR:!=(int,int):TRUE(int,int):org.joda.time.DateTimeZone@getOffsetFromLocal(long):886:33347:offsetLocal != offsetAdjusted |==> true
+274:AOR:-(int,int):%(int,int):org.joda.time.DateTimeZone@getOffsetFromLocal(long):889:33537:offsetLocal - offsetAdjusted |==> offsetLocal % offsetAdjusted
+275:AOR:-(int,int):*(int,int):org.joda.time.DateTimeZone@getOffsetFromLocal(long):889:33537:offsetLocal - offsetAdjusted |==> offsetLocal * offsetAdjusted
+276:AOR:-(int,int):+(int,int):org.joda.time.DateTimeZone@getOffsetFromLocal(long):889:33537:offsetLocal - offsetAdjusted |==> offsetLocal + offsetAdjusted
+277:AOR:-(int,int):/(int,int):org.joda.time.DateTimeZone@getOffsetFromLocal(long):889:33537:offsetLocal - offsetAdjusted |==> offsetLocal / offsetAdjusted
+278:LVR:0:POS:org.joda.time.DateTimeZone@getOffsetFromLocal(long):889:33569:0 |==> 1
+279:LVR:0:NEG:org.joda.time.DateTimeZone@getOffsetFromLocal(long):889:33569:0 |==> -1
+280:ROR:<(int,int):!=(int,int):org.joda.time.DateTimeZone@getOffsetFromLocal(long):889:33536:(offsetLocal - offsetAdjusted) < 0 |==> (offsetLocal - offsetAdjusted) != 0
+281:ROR:<(int,int):<=(int,int):org.joda.time.DateTimeZone@getOffsetFromLocal(long):889:33536:(offsetLocal - offsetAdjusted) < 0 |==> (offsetLocal - offsetAdjusted) <= 0
+282:ROR:<(int,int):FALSE(int,int):org.joda.time.DateTimeZone@getOffsetFromLocal(long):889:33567:(offsetLocal - offsetAdjusted) < 0 |==> false
+283:AOR:-(long,long):%(long,long):org.joda.time.DateTimeZone@getOffsetFromLocal(long):894:33881:instantLocal - offsetAdjusted |==> instantLocal % offsetAdjusted
+284:AOR:-(long,long):*(long,long):org.joda.time.DateTimeZone@getOffsetFromLocal(long):894:33881:instantLocal - offsetAdjusted |==> instantLocal * offsetAdjusted
+285:AOR:-(long,long):+(long,long):org.joda.time.DateTimeZone@getOffsetFromLocal(long):894:33881:instantLocal - offsetAdjusted |==> instantLocal + offsetAdjusted
+286:AOR:-(long,long):/(long,long):org.joda.time.DateTimeZone@getOffsetFromLocal(long):894:33881:instantLocal - offsetAdjusted |==> instantLocal / offsetAdjusted
+287:ROR:!=(long,long):<(long,long):org.joda.time.DateTimeZone@getOffsetFromLocal(long):895:33933:nextLocal != nextAdjusted |==> nextLocal < nextAdjusted
+288:ROR:!=(long,long):>(long,long):org.joda.time.DateTimeZone@getOffsetFromLocal(long):895:33933:nextLocal != nextAdjusted |==> nextLocal > nextAdjusted
+289:ROR:!=(long,long):TRUE(long,long):org.joda.time.DateTimeZone@getOffsetFromLocal(long):895:33943:nextLocal != nextAdjusted |==> true
+290:LVR:0:POS:org.joda.time.DateTimeZone@getOffsetFromLocal(long):899:34067:0 |==> 1
+291:LVR:0:NEG:org.joda.time.DateTimeZone@getOffsetFromLocal(long):899:34067:0 |==> -1
+292:ROR:>(int,int):!=(int,int):org.joda.time.DateTimeZone@getOffsetFromLocal(long):899:34053:offsetLocal > 0 |==> offsetLocal != 0
+293:ROR:>(int,int):>=(int,int):org.joda.time.DateTimeZone@getOffsetFromLocal(long):899:34053:offsetLocal > 0 |==> offsetLocal >= 0
+294:ROR:>(int,int):FALSE(int,int):org.joda.time.DateTimeZone@getOffsetFromLocal(long):899:34065:offsetLocal > 0 |==> false
+295:ROR:<(long,long):!=(long,long):org.joda.time.DateTimeZone@getOffsetFromLocal(long):901:34149:prev < instantAdjusted |==> prev != instantAdjusted
+296:ROR:<(long,long):<=(long,long):org.joda.time.DateTimeZone@getOffsetFromLocal(long):901:34149:prev < instantAdjusted |==> prev <= instantAdjusted
+297:ROR:<(long,long):FALSE(long,long):org.joda.time.DateTimeZone@getOffsetFromLocal(long):901:34154:prev < instantAdjusted |==> false
+298:AOR:-(int,int):%(int,int):org.joda.time.DateTimeZone@getOffsetFromLocal(long):903:34252:offsetPrev - offsetLocal |==> offsetPrev % offsetLocal
+299:AOR:-(int,int):*(int,int):org.joda.time.DateTimeZone@getOffsetFromLocal(long):903:34252:offsetPrev - offsetLocal |==> offsetPrev * offsetLocal
+300:AOR:-(int,int):+(int,int):org.joda.time.DateTimeZone@getOffsetFromLocal(long):903:34252:offsetPrev - offsetLocal |==> offsetPrev + offsetLocal
+301:AOR:-(int,int):/(int,int):org.joda.time.DateTimeZone@getOffsetFromLocal(long):903:34252:offsetPrev - offsetLocal |==> offsetPrev / offsetLocal
+302:AOR:-(long,long):%(long,long):org.joda.time.DateTimeZone@getOffsetFromLocal(long):904:34298:instantAdjusted - prev |==> instantAdjusted % prev
+303:AOR:-(long,long):*(long,long):org.joda.time.DateTimeZone@getOffsetFromLocal(long):904:34298:instantAdjusted - prev |==> instantAdjusted * prev
+304:AOR:-(long,long):+(long,long):org.joda.time.DateTimeZone@getOffsetFromLocal(long):904:34298:instantAdjusted - prev |==> instantAdjusted + prev
+305:AOR:-(long,long):/(long,long):org.joda.time.DateTimeZone@getOffsetFromLocal(long):904:34298:instantAdjusted - prev |==> instantAdjusted / prev
+306:ROR:<=(long,long):<(long,long):org.joda.time.DateTimeZone@getOffsetFromLocal(long):904:34298:instantAdjusted - prev <= diff |==> instantAdjusted - prev < diff
+307:ROR:<=(long,long):==(long,long):org.joda.time.DateTimeZone@getOffsetFromLocal(long):904:34298:instantAdjusted - prev <= diff |==> instantAdjusted - prev == diff
+308:ROR:<=(long,long):TRUE(long,long):org.joda.time.DateTimeZone@getOffsetFromLocal(long):904:34321:instantAdjusted - prev <= diff |==> true
+309:AOR:+(long,long):%(long,long):org.joda.time.DateTimeZone@convertUTCToLocal(long):924:35020:instantUTC + offset |==> instantUTC % offset
+310:AOR:+(long,long):*(long,long):org.joda.time.DateTimeZone@convertUTCToLocal(long):924:35020:instantUTC + offset |==> instantUTC * offset
+311:AOR:+(long,long):-(long,long):org.joda.time.DateTimeZone@convertUTCToLocal(long):924:35020:instantUTC + offset |==> instantUTC - offset
+312:AOR:+(long,long):/(long,long):org.joda.time.DateTimeZone@convertUTCToLocal(long):924:35020:instantUTC + offset |==> instantUTC / offset
+313:LOR:^(long,long):&(long,long):org.joda.time.DateTimeZone@convertUTCToLocal(long):926:35133:instantUTC ^ instantLocal |==> instantUTC & instantLocal
+314:LOR:^(long,long):|(long,long):org.joda.time.DateTimeZone@convertUTCToLocal(long):926:35133:instantUTC ^ instantLocal |==> instantUTC | instantLocal
+315:LVR:0:POS:org.joda.time.DateTimeZone@convertUTCToLocal(long):926:35162:0 |==> 1
+316:LVR:0:NEG:org.joda.time.DateTimeZone@convertUTCToLocal(long):926:35162:0 |==> -1
+317:ROR:<(long,long):!=(long,long):org.joda.time.DateTimeZone@convertUTCToLocal(long):926:35132:(instantUTC ^ instantLocal) < 0 |==> (instantUTC ^ instantLocal) != 0
+318:ROR:<(long,long):<=(long,long):org.joda.time.DateTimeZone@convertUTCToLocal(long):926:35132:(instantUTC ^ instantLocal) < 0 |==> (instantUTC ^ instantLocal) <= 0
+319:ROR:<(long,long):FALSE(long,long):org.joda.time.DateTimeZone@convertUTCToLocal(long):926:35160:(instantUTC ^ instantLocal) < 0 |==> false
+320:LOR:^(long,long):&(long,long):org.joda.time.DateTimeZone@convertUTCToLocal(long):926:35168:instantUTC ^ offset |==> instantUTC & offset
+321:LOR:^(long,long):|(long,long):org.joda.time.DateTimeZone@convertUTCToLocal(long):926:35168:instantUTC ^ offset |==> instantUTC | offset
+322:LVR:0:POS:org.joda.time.DateTimeZone@convertUTCToLocal(long):926:35192:0 |==> 1
+323:LVR:0:NEG:org.joda.time.DateTimeZone@convertUTCToLocal(long):926:35192:0 |==> -1
+324:ROR:>=(long,long):==(long,long):org.joda.time.DateTimeZone@convertUTCToLocal(long):926:35167:(instantUTC ^ offset) >= 0 |==> (instantUTC ^ offset) == 0
+325:ROR:>=(long,long):>(long,long):org.joda.time.DateTimeZone@convertUTCToLocal(long):926:35167:(instantUTC ^ offset) >= 0 |==> (instantUTC ^ offset) > 0
+326:ROR:>=(long,long):TRUE(long,long):org.joda.time.DateTimeZone@convertUTCToLocal(long):926:35189:(instantUTC ^ offset) >= 0 |==> true
+327:COR:&&(boolean,boolean):==(boolean,boolean):org.joda.time.DateTimeZone@convertUTCToLocal(long):926:35132:(instantUTC ^ instantLocal) < 0 && (instantUTC ^ offset) >= 0 |==> (instantUTC ^ instantLocal) < 0 == (instantUTC ^ offset) >= 0
+328:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.joda.time.DateTimeZone@convertUTCToLocal(long):926:35164:(instantUTC ^ instantLocal) < 0 && (instantUTC ^ offset) >= 0 |==> false
+329:COR:&&(boolean,boolean):LHS(boolean,boolean):org.joda.time.DateTimeZone@convertUTCToLocal(long):926:35132:(instantUTC ^ instantLocal) < 0 && (instantUTC ^ offset) >= 0 |==> (instantUTC ^ instantLocal) < 0
+330:COR:&&(boolean,boolean):RHS(boolean,boolean):org.joda.time.DateTimeZone@convertUTCToLocal(long):926:35167:(instantUTC ^ instantLocal) < 0 && (instantUTC ^ offset) >= 0 |==> (instantUTC ^ offset) >= 0
+331:AOR:-(long,long):%(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean,long):951:36418:instantLocal - offsetOriginal |==> instantLocal % offsetOriginal
+332:AOR:-(long,long):*(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean,long):951:36418:instantLocal - offsetOriginal |==> instantLocal * offsetOriginal
+333:AOR:-(long,long):+(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean,long):951:36418:instantLocal - offsetOriginal |==> instantLocal + offsetOriginal
+334:AOR:-(long,long):/(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean,long):951:36418:instantLocal - offsetOriginal |==> instantLocal / offsetOriginal
+335:ROR:==(int,int):<=(int,int):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean,long):953:36522:offsetLocalFromOriginal == offsetOriginal |==> offsetLocalFromOriginal <= offsetOriginal
+336:ROR:==(int,int):>=(int,int):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean,long):953:36522:offsetLocalFromOriginal == offsetOriginal |==> offsetLocalFromOriginal >= offsetOriginal
+337:ROR:==(int,int):FALSE(int,int):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean,long):953:36546:offsetLocalFromOriginal == offsetOriginal |==> false
+338:AOR:-(long,long):%(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):975:37560:instantLocal - offsetLocal |==> instantLocal % offsetLocal
+339:AOR:-(long,long):*(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):975:37560:instantLocal - offsetLocal |==> instantLocal * offsetLocal
+340:AOR:-(long,long):+(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):975:37560:instantLocal - offsetLocal |==> instantLocal + offsetLocal
+341:AOR:-(long,long):/(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):975:37560:instantLocal - offsetLocal |==> instantLocal / offsetLocal
+342:ROR:!=(int,int):<(int,int):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):977:37666:offsetLocal != offset |==> offsetLocal < offset
+343:ROR:!=(int,int):>(int,int):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):977:37666:offsetLocal != offset |==> offsetLocal > offset
+344:ROR:!=(int,int):TRUE(int,int):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):977:37678:offsetLocal != offset |==> true
+345:LVR:0:POS:org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):981:37936:0 |==> 1
+346:LVR:0:NEG:org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):981:37936:0 |==> -1
+347:ROR:<(int,int):!=(int,int):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):981:37922:offsetLocal < 0 |==> offsetLocal != 0
+348:ROR:<(int,int):<=(int,int):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):981:37922:offsetLocal < 0 |==> offsetLocal <= 0
+349:ROR:<(int,int):FALSE(int,int):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):981:37934:offsetLocal < 0 |==> false
+350:COR:||(boolean,boolean):!=(boolean,boolean):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):981:37912:strict || offsetLocal < 0 |==> strict != offsetLocal < 0
+351:COR:||(boolean,boolean):LHS(boolean,boolean):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):981:37912:strict || offsetLocal < 0 |==> strict
+352:COR:||(boolean,boolean):RHS(boolean,boolean):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):981:37922:strict || offsetLocal < 0 |==> offsetLocal < 0
+353:COR:||(boolean,boolean):TRUE(boolean,boolean):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):981:37919:strict || offsetLocal < 0 |==> true
+354:AOR:-(long,long):%(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):983:38043:instantLocal - offsetLocal |==> instantLocal % offsetLocal
+355:AOR:-(long,long):*(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):983:38043:instantLocal - offsetLocal |==> instantLocal * offsetLocal
+356:AOR:-(long,long):+(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):983:38043:instantLocal - offsetLocal |==> instantLocal + offsetLocal
+357:AOR:-(long,long):/(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):983:38043:instantLocal - offsetLocal |==> instantLocal / offsetLocal
+358:AOR:-(long,long):%(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):984:38106:instantLocal - offsetLocal |==> instantLocal % offsetLocal
+359:AOR:-(long,long):*(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):984:38106:instantLocal - offsetLocal |==> instantLocal * offsetLocal
+360:AOR:-(long,long):+(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):984:38106:instantLocal - offsetLocal |==> instantLocal + offsetLocal
+361:AOR:-(long,long):/(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):984:38106:instantLocal - offsetLocal |==> instantLocal / offsetLocal
+362:ROR:==(long,long):<=(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):984:38092:nextLocal == (instantLocal - offsetLocal) |==> nextLocal <= (instantLocal - offsetLocal)
+363:ROR:==(long,long):>=(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):984:38092:nextLocal == (instantLocal - offsetLocal) |==> nextLocal >= (instantLocal - offsetLocal)
+364:ROR:==(long,long):FALSE(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):984:38102:nextLocal == (instantLocal - offsetLocal) |==> false
+365:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):985:38157:nextLocal = Long.MAX_VALUE; |==> <NO-OP>
+366:AOR:-(long,long):%(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):987:38254:instantLocal - offset |==> instantLocal % offset
+367:AOR:-(long,long):*(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):987:38254:instantLocal - offset |==> instantLocal * offset
+368:AOR:-(long,long):+(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):987:38254:instantLocal - offset |==> instantLocal + offset
+369:AOR:-(long,long):/(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):987:38254:instantLocal - offset |==> instantLocal / offset
+370:AOR:-(long,long):%(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):988:38315:instantLocal - offset |==> instantLocal % offset
+371:AOR:-(long,long):*(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):988:38315:instantLocal - offset |==> instantLocal * offset
+372:AOR:-(long,long):+(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):988:38315:instantLocal - offset |==> instantLocal + offset
+373:AOR:-(long,long):/(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):988:38315:instantLocal - offset |==> instantLocal / offset
+374:ROR:==(long,long):<=(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):988:38298:nextAdjusted == (instantLocal - offset) |==> nextAdjusted <= (instantLocal - offset)
+375:ROR:==(long,long):>=(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):988:38298:nextAdjusted == (instantLocal - offset) |==> nextAdjusted >= (instantLocal - offset)
+376:ROR:==(long,long):FALSE(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):988:38311:nextAdjusted == (instantLocal - offset) |==> false
+377:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):989:38361:nextAdjusted = Long.MAX_VALUE; |==> <NO-OP>
+378:ROR:!=(long,long):<(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):991:38430:nextLocal != nextAdjusted |==> nextLocal < nextAdjusted
+379:ROR:!=(long,long):>(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):991:38430:nextLocal != nextAdjusted |==> nextLocal > nextAdjusted
+380:ROR:!=(long,long):TRUE(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):991:38440:nextLocal != nextAdjusted |==> true
+381:COR:<IDENTIFIER(boolean)>:FALSE:org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):993:38532:strict |==> false
+382:COR:<IDENTIFIER(boolean)>:TRUE:org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):993:38532:strict |==> true
+383:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1002:39177:offset = offsetLocal; |==> <NO-OP>
+384:AOR:-(long,long):%(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1008:39319:instantLocal - offset |==> instantLocal % offset
+385:AOR:-(long,long):*(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1008:39319:instantLocal - offset |==> instantLocal * offset
+386:AOR:-(long,long):+(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1008:39319:instantLocal - offset |==> instantLocal + offset
+387:AOR:-(long,long):/(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1008:39319:instantLocal - offset |==> instantLocal / offset
+388:LOR:^(long,long):&(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1010:39436:instantLocal ^ instantUTC |==> instantLocal & instantUTC
+389:LOR:^(long,long):|(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1010:39436:instantLocal ^ instantUTC |==> instantLocal | instantUTC
+390:LVR:0:POS:org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1010:39465:0 |==> 1
+391:LVR:0:NEG:org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1010:39465:0 |==> -1
+392:ROR:<(long,long):!=(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1010:39435:(instantLocal ^ instantUTC) < 0 |==> (instantLocal ^ instantUTC) != 0
+393:ROR:<(long,long):<=(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1010:39435:(instantLocal ^ instantUTC) < 0 |==> (instantLocal ^ instantUTC) <= 0
+394:ROR:<(long,long):FALSE(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1010:39463:(instantLocal ^ instantUTC) < 0 |==> false
+395:LOR:^(long,long):&(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1010:39471:instantLocal ^ offset |==> instantLocal & offset
+396:LOR:^(long,long):|(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1010:39471:instantLocal ^ offset |==> instantLocal | offset
+397:LVR:0:POS:org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1010:39496:0 |==> 1
+398:LVR:0:NEG:org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1010:39496:0 |==> -1
+399:ROR:<(long,long):!=(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1010:39470:(instantLocal ^ offset) < 0 |==> (instantLocal ^ offset) != 0
+400:ROR:<(long,long):<=(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1010:39470:(instantLocal ^ offset) < 0 |==> (instantLocal ^ offset) <= 0
+401:ROR:<(long,long):FALSE(long,long):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1010:39494:(instantLocal ^ offset) < 0 |==> false
+402:COR:&&(boolean,boolean):==(boolean,boolean):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1010:39435:(instantLocal ^ instantUTC) < 0 && (instantLocal ^ offset) < 0 |==> (instantLocal ^ instantUTC) < 0 == (instantLocal ^ offset) < 0
+403:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1010:39467:(instantLocal ^ instantUTC) < 0 && (instantLocal ^ offset) < 0 |==> false
+404:COR:&&(boolean,boolean):LHS(boolean,boolean):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1010:39435:(instantLocal ^ instantUTC) < 0 && (instantLocal ^ offset) < 0 |==> (instantLocal ^ instantUTC) < 0
+405:COR:&&(boolean,boolean):RHS(boolean,boolean):org.joda.time.DateTimeZone@convertLocalToUTC(long,boolean):1010:39470:(instantLocal ^ instantUTC) < 0 && (instantLocal ^ offset) < 0 |==> (instantLocal ^ offset) < 0
+406:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@getMillisKeepLocal(org.joda.time.DateTimeZone,long):1027:40215:newZone == null |==> false
+407:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone@getMillisKeepLocal(org.joda.time.DateTimeZone,long):1028:40238:newZone = DateTimeZone.getDefault(); |==> <NO-OP>
+408:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.joda.time.DateTimeZone@getMillisKeepLocal(org.joda.time.DateTimeZone,long):1030:40305:newZone == this |==> false
+409:AOR:+(long,long):%(long,long):org.joda.time.DateTimeZone@getMillisKeepLocal(org.joda.time.DateTimeZone,long):1033:40385:oldInstant + getOffset(oldInstant) |==> oldInstant % getOffset(oldInstant)
+410:AOR:+(long,long):*(long,long):org.joda.time.DateTimeZone@getMillisKeepLocal(org.joda.time.DateTimeZone,long):1033:40385:oldInstant + getOffset(oldInstant) |==> oldInstant * getOffset(oldInstant)
+411:AOR:+(long,long):-(long,long):org.joda.time.DateTimeZone@getMillisKeepLocal(org.joda.time.DateTimeZone,long):1033:40385:oldInstant + getOffset(oldInstant) |==> oldInstant - getOffset(oldInstant)
+412:AOR:+(long,long):/(long,long):org.joda.time.DateTimeZone@getMillisKeepLocal(org.joda.time.DateTimeZone,long):1033:40385:oldInstant + getOffset(oldInstant) |==> oldInstant / getOffset(oldInstant)
+413:AOR:-(long,long):%(long,long):org.joda.time.DateTimeZone@getMillisKeepLocal(org.joda.time.DateTimeZone,long):1034:40436:instantLocal - newZone.getOffsetFromLocal(instantLocal) |==> instantLocal % newZone.getOffsetFromLocal(instantLocal)
+414:AOR:-(long,long):*(long,long):org.joda.time.DateTimeZone@getMillisKeepLocal(org.joda.time.DateTimeZone,long):1034:40436:instantLocal - newZone.getOffsetFromLocal(instantLocal) |==> instantLocal * newZone.getOffsetFromLocal(instantLocal)
+415:AOR:-(long,long):+(long,long):org.joda.time.DateTimeZone@getMillisKeepLocal(org.joda.time.DateTimeZone,long):1034:40436:instantLocal - newZone.getOffsetFromLocal(instantLocal) |==> instantLocal + newZone.getOffsetFromLocal(instantLocal)
+416:AOR:-(long,long):/(long,long):org.joda.time.DateTimeZone@getMillisKeepLocal(org.joda.time.DateTimeZone,long):1034:40436:instantLocal - newZone.getOffsetFromLocal(instantLocal) |==> instantLocal / newZone.getOffsetFromLocal(instantLocal)
+417:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.joda.time.DateTimeZone@isLocalDateTimeGap(org.joda.time.LocalDateTime):1144:45537:isFixed() |==> false
+418:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.joda.time.DateTimeZone@isLocalDateTimeGap(org.joda.time.LocalDateTime):1144:45537:isFixed() |==> true
+419:LVR:FALSE:TRUE:org.joda.time.DateTimeZone@isLocalDateTimeGap(org.joda.time.LocalDateTime):1145:45562:false |==> true
+420:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone@isLocalDateTimeGap(org.joda.time.LocalDateTime):1148:45605:localDateTime.toDateTime(this); |==> <NO-OP>
+421:LVR:FALSE:TRUE:org.joda.time.DateTimeZone@isLocalDateTimeGap(org.joda.time.LocalDateTime):1149:45656:false |==> true
+422:LVR:TRUE:FALSE:org.joda.time.DateTimeZone@isLocalDateTimeGap(org.joda.time.LocalDateTime):1151:45730:true |==> false
+423:LVR:POS:0:org.joda.time.DateTimeZone@hashCode():1209:47513:57 |==> 0
+424:LVR:POS:NEG:org.joda.time.DateTimeZone@hashCode():1209:47513:57 |==> -57
+425:AOR:+(int,int):%(int,int):org.joda.time.DateTimeZone@hashCode():1209:47513:57 + getID().hashCode() |==> 57 % getID().hashCode()
+426:AOR:+(int,int):*(int,int):org.joda.time.DateTimeZone@hashCode():1209:47513:57 + getID().hashCode() |==> 57 * getID().hashCode()
+427:AOR:+(int,int):-(int,int):org.joda.time.DateTimeZone@hashCode():1209:47513:57 + getID().hashCode() |==> 57 - getID().hashCode()
+428:AOR:+(int,int):/(int,int):org.joda.time.DateTimeZone@hashCode():1209:47513:57 + getID().hashCode() |==> 57 / getID().hashCode()
+429:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone$Stub@<init>(java.lang.String):1244:48527:iID = id; |==> <NO-OP>
+430:STD:<CALL>:<NO-OP>:org.joda.time.DateTimeZone$Stub@writeObject(java.io.ObjectOutputStream):1248:48638:out.writeUTF(iID); |==> <NO-OP>
+431:STD:<ASSIGN>:<NO-OP>:org.joda.time.DateTimeZone$Stub@readObject(java.io.ObjectInputStream):1252:48755:iID = in.readUTF(); |==> <NO-OP>
