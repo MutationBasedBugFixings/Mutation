@@ -1,0 +1,211 @@
+1:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@<init>(java.lang.String,org.jsoup.nodes.Attributes):32:859:Validate.notNull(baseUri); |==> <NO-OP>
+2:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@<init>(java.lang.String,org.jsoup.nodes.Attributes):33:894:Validate.notNull(attributes); |==> <NO-OP>
+3:LVR:POS:0:org.jsoup.nodes.Node@<init>(java.lang.String,org.jsoup.nodes.Attributes):35:974:4 |==> 0
+4:LVR:POS:NEG:org.jsoup.nodes.Node@<init>(java.lang.String,org.jsoup.nodes.Attributes):35:974:4 |==> -4
+5:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Node@<init>(java.lang.String,org.jsoup.nodes.Attributes):35:941:childNodes = new ArrayList<Node>(4); |==> <NO-OP>
+6:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Node@<init>(java.lang.String,org.jsoup.nodes.Attributes):36:986:this.baseUri = baseUri.trim(); |==> <NO-OP>
+7:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Node@<init>(java.lang.String,org.jsoup.nodes.Attributes):37:1025:this.attributes = attributes; |==> <NO-OP>
+8:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Node@<init>():48:1289:childNodes = Collections.emptyList(); |==> <NO-OP>
+9:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Node@<init>():49:1335:attributes = null; |==> <NO-OP>
+10:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@attr(java.lang.String):71:2153:Validate.notNull(attributeKey); |==> <NO-OP>
+11:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Node@attr(java.lang.String):73:2215:attributes.hasKey(attributeKey) |==> false
+12:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Node@attr(java.lang.String):73:2215:attributes.hasKey(attributeKey) |==> true
+13:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Node@attr(java.lang.String):75:2334:attributeKey.toLowerCase().startsWith("abs:") |==> false
+14:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Node@attr(java.lang.String):75:2334:attributeKey.toLowerCase().startsWith("abs:") |==> true
+15:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@attr(java.lang.String,java.lang.String):95:2982:attributes.put(attributeKey, attributeValue); |==> <NO-OP>
+16:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@hasAttr(java.lang.String):105:3290:Validate.notNull(attributeKey); |==> <NO-OP>
+17:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@removeAttr(java.lang.String):116:3585:Validate.notNull(attributeKey); |==> <NO-OP>
+18:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@removeAttr(java.lang.String):117:3625:attributes.remove(attributeKey); |==> <NO-OP>
+19:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@setBaseUri(java.lang.String):134:3965:Validate.notNull(baseUri); |==> <NO-OP>
+20:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Node@setBaseUri(java.lang.String):135:4000:this.baseUri = baseUri; |==> <NO-OP>
+21:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@absUrl(java.lang.String):159:5136:Validate.notEmpty(attributeKey); |==> <NO-OP>
+22:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Node@absUrl(java.lang.String):162:5234:hasAttr(attributeKey) |==> false
+23:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Node@absUrl(java.lang.String):162:5234:hasAttr(attributeKey) |==> true
+24:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Node@absUrl(java.lang.String):175:5852:relUrl.startsWith("?") |==> false
+25:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Node@absUrl(java.lang.String):175:5852:relUrl.startsWith("?") |==> true
+26:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Node@absUrl(java.lang.String):176:5879:relUrl = base.getPath() + relUrl; |==> <NO-OP>
+27:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Node@ownerDocument():222:7251:parentNode == null |==> false
+28:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@remove():232:7509:Validate.notNull(parentNode); |==> <NO-OP>
+29:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@remove():233:7547:parentNode.removeChild(this); |==> <NO-OP>
+30:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@before(java.lang.String):243:7855:addSiblingHtml(siblingIndex(), html); |==> <NO-OP>
+31:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@before(org.jsoup.nodes.Node):254:8183:Validate.notNull(node); |==> <NO-OP>
+32:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@before(org.jsoup.nodes.Node):255:8215:Validate.notNull(parentNode); |==> <NO-OP>
+33:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@before(org.jsoup.nodes.Node):257:8254:parentNode.addChildren(siblingIndex(), node); |==> <NO-OP>
+34:LVR:POS:0:org.jsoup.nodes.Node@after(java.lang.String):268:8626:1 |==> 0
+35:LVR:POS:NEG:org.jsoup.nodes.Node@after(java.lang.String):268:8626:1 |==> -1
+36:AOR:+(int,int):%(int,int):org.jsoup.nodes.Node@after(java.lang.String):268:8611:siblingIndex() + 1 |==> siblingIndex() % 1
+37:AOR:+(int,int):*(int,int):org.jsoup.nodes.Node@after(java.lang.String):268:8611:siblingIndex() + 1 |==> siblingIndex() * 1
+38:AOR:+(int,int):-(int,int):org.jsoup.nodes.Node@after(java.lang.String):268:8611:siblingIndex() + 1 |==> siblingIndex() - 1
+39:AOR:+(int,int):/(int,int):org.jsoup.nodes.Node@after(java.lang.String):268:8611:siblingIndex() + 1 |==> siblingIndex() / 1
+40:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@after(java.lang.String):268:8596:addSiblingHtml(siblingIndex() + 1, html); |==> <NO-OP>
+41:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@after(org.jsoup.nodes.Node):279:8923:Validate.notNull(node); |==> <NO-OP>
+42:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@after(org.jsoup.nodes.Node):280:8955:Validate.notNull(parentNode); |==> <NO-OP>
+43:LVR:POS:0:org.jsoup.nodes.Node@after(org.jsoup.nodes.Node):282:9032:1 |==> 0
+44:LVR:POS:NEG:org.jsoup.nodes.Node@after(org.jsoup.nodes.Node):282:9032:1 |==> -1
+45:AOR:+(int,int):%(int,int):org.jsoup.nodes.Node@after(org.jsoup.nodes.Node):282:9017:siblingIndex() + 1 |==> siblingIndex() % 1
+46:AOR:+(int,int):*(int,int):org.jsoup.nodes.Node@after(org.jsoup.nodes.Node):282:9017:siblingIndex() + 1 |==> siblingIndex() * 1
+47:AOR:+(int,int):-(int,int):org.jsoup.nodes.Node@after(org.jsoup.nodes.Node):282:9017:siblingIndex() + 1 |==> siblingIndex() - 1
+48:AOR:+(int,int):/(int,int):org.jsoup.nodes.Node@after(org.jsoup.nodes.Node):282:9017:siblingIndex() + 1 |==> siblingIndex() / 1
+49:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@after(org.jsoup.nodes.Node):282:8994:parentNode.addChildren(siblingIndex() + 1, node); |==> <NO-OP>
+50:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@addSiblingHtml(int,java.lang.String):287:9136:Validate.notNull(html); |==> <NO-OP>
+51:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@addSiblingHtml(int,java.lang.String):288:9168:Validate.notNull(parentNode); |==> <NO-OP>
+52:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@addSiblingHtml(int,java.lang.String):292:9373:parentNode.addChildren(index, nodes.toArray(new Node[nodes.size()])); |==> <NO-OP>
+53:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@wrap(java.lang.String):301:9709:Validate.notEmpty(html); |==> <NO-OP>
+54:LVR:0:POS:org.jsoup.nodes.Node@wrap(java.lang.String):305:9941:0 |==> 1
+55:LVR:0:NEG:org.jsoup.nodes.Node@wrap(java.lang.String):305:9941:0 |==> -1
+56:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Node@wrap(java.lang.String):306:9966:wrapNode == null |==> false
+57:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.nodes.Node@wrap(java.lang.String):306:9957:wrapNode == null || !(wrapNode instanceof Element) |==> wrapNode == null != !(wrapNode instanceof Element)
+58:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.nodes.Node@wrap(java.lang.String):306:9957:wrapNode == null || !(wrapNode instanceof Element) |==> wrapNode == null
+59:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.nodes.Node@wrap(java.lang.String):306:9977:wrapNode == null || !(wrapNode instanceof Element) |==> !(wrapNode instanceof Element)
+60:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.nodes.Node@wrap(java.lang.String):306:9974:wrapNode == null || !(wrapNode instanceof Element) |==> true
+61:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@wrap(java.lang.String):311:10162:parentNode.replaceChild(this, wrap); |==> <NO-OP>
+62:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@wrap(java.lang.String):312:10207:deepest.addChildren(this); |==> <NO-OP>
+63:LVR:0:POS:org.jsoup.nodes.Node@wrap(java.lang.String):315:10356:0 |==> 1
+64:LVR:0:NEG:org.jsoup.nodes.Node@wrap(java.lang.String):315:10356:0 |==> -1
+65:ROR:>(int,int):>=(int,int):org.jsoup.nodes.Node@wrap(java.lang.String):315:10334:wrapChildren.size() > 0 |==> wrapChildren.size() >= 0
+66:ROR:>(int,int):FALSE(int,int):org.jsoup.nodes.Node@wrap(java.lang.String):315:10354:wrapChildren.size() > 0 |==> false
+67:LVR:0:POS:org.jsoup.nodes.Node@wrap(java.lang.String):316:10386:0 |==> 1
+68:LVR:0:NEG:org.jsoup.nodes.Node@wrap(java.lang.String):316:10386:0 |==> -1
+69:ROR:<(int,int):<=(int,int):org.jsoup.nodes.Node@wrap(java.lang.String):316:10389:i < wrapChildren.size() |==> i <= wrapChildren.size()
+70:ROR:<(int,int):FALSE(int,int):org.jsoup.nodes.Node@wrap(java.lang.String):316:10391:i < wrapChildren.size() |==> false
+71:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@wrap(java.lang.String):318:10491:remainder.parentNode.removeChild(remainder); |==> <NO-OP>
+72:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@wrap(java.lang.String):319:10552:wrap.appendChild(remainder); |==> <NO-OP>
+73:LVR:0:POS:org.jsoup.nodes.Node@getDeepChild(org.jsoup.nodes.Element):327:10758:0 |==> 1
+74:LVR:0:NEG:org.jsoup.nodes.Node@getDeepChild(org.jsoup.nodes.Element):327:10758:0 |==> -1
+75:ROR:>(int,int):>=(int,int):org.jsoup.nodes.Node@getDeepChild(org.jsoup.nodes.Element):327:10740:children.size() > 0 |==> children.size() >= 0
+76:ROR:>(int,int):FALSE(int,int):org.jsoup.nodes.Node@getDeepChild(org.jsoup.nodes.Element):327:10756:children.size() > 0 |==> false
+77:LVR:0:POS:org.jsoup.nodes.Node@getDeepChild(org.jsoup.nodes.Element):328:10806:0 |==> 1
+78:LVR:0:NEG:org.jsoup.nodes.Node@getDeepChild(org.jsoup.nodes.Element):328:10806:0 |==> -1
+79:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@replaceWith(org.jsoup.nodes.Node):338:11049:Validate.notNull(in); |==> <NO-OP>
+80:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@replaceWith(org.jsoup.nodes.Node):339:11079:Validate.notNull(parentNode); |==> <NO-OP>
+81:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@replaceWith(org.jsoup.nodes.Node):340:11117:parentNode.replaceChild(this, in); |==> <NO-OP>
+82:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Node@setParentNode(org.jsoup.nodes.Node):344:11239:this.parentNode != null |==> true
+83:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@setParentNode(org.jsoup.nodes.Node):345:11260:this.parentNode.removeChild(this); |==> <NO-OP>
+84:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Node@setParentNode(org.jsoup.nodes.Node):346:11303:this.parentNode = parentNode; |==> <NO-OP>
+85:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Node@replaceChild(org.jsoup.nodes.Node,org.jsoup.nodes.Node):350:11432:out.parentNode == this |==> false
+86:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@replaceChild(org.jsoup.nodes.Node,org.jsoup.nodes.Node):350:11401:Validate.isTrue(out.parentNode == this); |==> <NO-OP>
+87:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@replaceChild(org.jsoup.nodes.Node,org.jsoup.nodes.Node):351:11450:Validate.notNull(in); |==> <NO-OP>
+88:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Node@replaceChild(org.jsoup.nodes.Node,org.jsoup.nodes.Node):352:11498:in.parentNode != null |==> true
+89:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@replaceChild(org.jsoup.nodes.Node,org.jsoup.nodes.Node):353:11519:in.parentNode.removeChild(in); |==> <NO-OP>
+90:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@replaceChild(org.jsoup.nodes.Node,org.jsoup.nodes.Node):356:11611:childNodes.set(index, in); |==> <NO-OP>
+91:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Node@replaceChild(org.jsoup.nodes.Node,org.jsoup.nodes.Node):357:11646:in.parentNode = this; |==> <NO-OP>
+92:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@replaceChild(org.jsoup.nodes.Node,org.jsoup.nodes.Node):358:11676:in.setSiblingIndex(index); |==> <NO-OP>
+93:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Node@replaceChild(org.jsoup.nodes.Node,org.jsoup.nodes.Node):359:11711:out.parentNode = null; |==> <NO-OP>
+94:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Node@removeChild(org.jsoup.nodes.Node):363:11823:out.parentNode == this |==> false
+95:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@removeChild(org.jsoup.nodes.Node):363:11792:Validate.isTrue(out.parentNode == this); |==> <NO-OP>
+96:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@removeChild(org.jsoup.nodes.Node):365:11881:childNodes.remove(index); |==> <NO-OP>
+97:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@removeChild(org.jsoup.nodes.Node):366:11915:reindexChildren(); |==> <NO-OP>
+98:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Node@removeChild(org.jsoup.nodes.Node):367:11942:out.parentNode = null; |==> <NO-OP>
+99:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@addChildren(org.jsoup.nodes.Node[]):373:12168:reparentChild(child); |==> <NO-OP>
+100:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@addChildren(org.jsoup.nodes.Node[]):374:12202:childNodes.add(child); |==> <NO-OP>
+101:LVR:POS:0:org.jsoup.nodes.Node@addChildren(org.jsoup.nodes.Node[]):375:12277:1 |==> 0
+102:LVR:POS:NEG:org.jsoup.nodes.Node@addChildren(org.jsoup.nodes.Node[]):375:12277:1 |==> -1
+103:AOR:-(int,int):%(int,int):org.jsoup.nodes.Node@addChildren(org.jsoup.nodes.Node[]):375:12259:childNodes.size() - 1 |==> childNodes.size() % 1
+104:AOR:-(int,int):*(int,int):org.jsoup.nodes.Node@addChildren(org.jsoup.nodes.Node[]):375:12259:childNodes.size() - 1 |==> childNodes.size() * 1
+105:AOR:-(int,int):+(int,int):org.jsoup.nodes.Node@addChildren(org.jsoup.nodes.Node[]):375:12259:childNodes.size() - 1 |==> childNodes.size() + 1
+106:AOR:-(int,int):/(int,int):org.jsoup.nodes.Node@addChildren(org.jsoup.nodes.Node[]):375:12259:childNodes.size() - 1 |==> childNodes.size() / 1
+107:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@addChildren(org.jsoup.nodes.Node[]):375:12237:child.setSiblingIndex(childNodes.size() - 1); |==> <NO-OP>
+108:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@addChildren(int,org.jsoup.nodes.Node[]):380:12368:Validate.noNullElements(children); |==> <NO-OP>
+109:LVR:POS:0:org.jsoup.nodes.Node@addChildren(int,org.jsoup.nodes.Node[]):381:12442:1 |==> 0
+110:LVR:POS:NEG:org.jsoup.nodes.Node@addChildren(int,org.jsoup.nodes.Node[]):381:12442:1 |==> -1
+111:AOR:-(int,int):%(int,int):org.jsoup.nodes.Node@addChildren(int,org.jsoup.nodes.Node[]):381:12424:children.length - 1 |==> children.length % 1
+112:AOR:-(int,int):*(int,int):org.jsoup.nodes.Node@addChildren(int,org.jsoup.nodes.Node[]):381:12424:children.length - 1 |==> children.length * 1
+113:AOR:-(int,int):+(int,int):org.jsoup.nodes.Node@addChildren(int,org.jsoup.nodes.Node[]):381:12424:children.length - 1 |==> children.length + 1
+114:AOR:-(int,int):/(int,int):org.jsoup.nodes.Node@addChildren(int,org.jsoup.nodes.Node[]):381:12424:children.length - 1 |==> children.length / 1
+115:LVR:0:POS:org.jsoup.nodes.Node@addChildren(int,org.jsoup.nodes.Node[]):381:12450:0 |==> 1
+116:LVR:0:NEG:org.jsoup.nodes.Node@addChildren(int,org.jsoup.nodes.Node[]):381:12450:0 |==> -1
+117:ROR:>=(int,int):==(int,int):org.jsoup.nodes.Node@addChildren(int,org.jsoup.nodes.Node[]):381:12445:i >= 0 |==> i == 0
+118:ROR:>=(int,int):>(int,int):org.jsoup.nodes.Node@addChildren(int,org.jsoup.nodes.Node[]):381:12445:i >= 0 |==> i > 0
+119:ROR:>=(int,int):TRUE(int,int):org.jsoup.nodes.Node@addChildren(int,org.jsoup.nodes.Node[]):381:12447:i >= 0 |==> true
+120:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@addChildren(int,org.jsoup.nodes.Node[]):383:12507:reparentChild(in); |==> <NO-OP>
+121:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@addChildren(int,org.jsoup.nodes.Node[]):384:12538:childNodes.add(index, in); |==> <NO-OP>
+122:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@addChildren(int,org.jsoup.nodes.Node[]):386:12583:reindexChildren(); |==> <NO-OP>
+123:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Node@reparentChild(org.jsoup.nodes.Node):390:12683:child.parentNode != null |==> true
+124:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@reparentChild(org.jsoup.nodes.Node):391:12704:child.parentNode.removeChild(child); |==> <NO-OP>
+125:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@reparentChild(org.jsoup.nodes.Node):392:12749:child.setParentNode(this); |==> <NO-OP>
+126:LVR:0:POS:org.jsoup.nodes.Node@reindexChildren():396:12845:0 |==> 1
+127:LVR:0:NEG:org.jsoup.nodes.Node@reindexChildren():396:12845:0 |==> -1
+128:ROR:<(int,int):<=(int,int):org.jsoup.nodes.Node@reindexChildren():396:12848:i < childNodes.size() |==> i <= childNodes.size()
+129:ROR:<(int,int):FALSE(int,int):org.jsoup.nodes.Node@reindexChildren():396:12850:i < childNodes.size() |==> false
+130:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@reindexChildren():397:12890:childNodes.get(i).setSiblingIndex(i); |==> <NO-OP>
+131:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Node@nextSibling():414:13440:parentNode == null |==> false
+132:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@nextSibling():419:13592:Validate.notNull(index); |==> <NO-OP>
+133:LVR:POS:0:org.jsoup.nodes.Node@nextSibling():420:13653:1 |==> 0
+134:LVR:POS:NEG:org.jsoup.nodes.Node@nextSibling():420:13653:1 |==> -1
+135:AOR:+(int,int):%(int,int):org.jsoup.nodes.Node@nextSibling():420:13647:index + 1 |==> index % 1
+136:AOR:+(int,int):*(int,int):org.jsoup.nodes.Node@nextSibling():420:13647:index + 1 |==> index * 1
+137:AOR:+(int,int):-(int,int):org.jsoup.nodes.Node@nextSibling():420:13647:index + 1 |==> index - 1
+138:AOR:+(int,int):/(int,int):org.jsoup.nodes.Node@nextSibling():420:13647:index + 1 |==> index / 1
+139:ROR:>(int,int):!=(int,int):org.jsoup.nodes.Node@nextSibling():420:13629:siblings.size() > index + 1 |==> siblings.size() != index + 1
+140:ROR:>(int,int):>=(int,int):org.jsoup.nodes.Node@nextSibling():420:13629:siblings.size() > index + 1 |==> siblings.size() >= index + 1
+141:ROR:>(int,int):FALSE(int,int):org.jsoup.nodes.Node@nextSibling():420:13645:siblings.size() > index + 1 |==> false
+142:LVR:POS:0:org.jsoup.nodes.Node@nextSibling():421:13694:1 |==> 0
+143:LVR:POS:NEG:org.jsoup.nodes.Node@nextSibling():421:13694:1 |==> -1
+144:AOR:+(int,int):%(int,int):org.jsoup.nodes.Node@nextSibling():421:13688:index + 1 |==> index % 1
+145:AOR:+(int,int):*(int,int):org.jsoup.nodes.Node@nextSibling():421:13688:index + 1 |==> index * 1
+146:AOR:+(int,int):-(int,int):org.jsoup.nodes.Node@nextSibling():421:13688:index + 1 |==> index - 1
+147:AOR:+(int,int):/(int,int):org.jsoup.nodes.Node@nextSibling():421:13688:index + 1 |==> index / 1
+148:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@previousSibling():433:14007:Validate.notNull(index); |==> <NO-OP>
+149:LVR:0:POS:org.jsoup.nodes.Node@previousSibling():434:14052:0 |==> 1
+150:LVR:0:NEG:org.jsoup.nodes.Node@previousSibling():434:14052:0 |==> -1
+151:ROR:>(int,int):!=(int,int):org.jsoup.nodes.Node@previousSibling():434:14044:index > 0 |==> index != 0
+152:ROR:>(int,int):>=(int,int):org.jsoup.nodes.Node@previousSibling():434:14044:index > 0 |==> index >= 0
+153:ROR:>(int,int):FALSE(int,int):org.jsoup.nodes.Node@previousSibling():434:14050:index > 0 |==> false
+154:LVR:POS:0:org.jsoup.nodes.Node@previousSibling():435:14093:1 |==> 0
+155:LVR:POS:NEG:org.jsoup.nodes.Node@previousSibling():435:14093:1 |==> -1
+156:AOR:-(int,int):%(int,int):org.jsoup.nodes.Node@previousSibling():435:14087:index - 1 |==> index % 1
+157:AOR:-(int,int):*(int,int):org.jsoup.nodes.Node@previousSibling():435:14087:index - 1 |==> index * 1
+158:AOR:-(int,int):+(int,int):org.jsoup.nodes.Node@previousSibling():435:14087:index - 1 |==> index + 1
+159:AOR:-(int,int):/(int,int):org.jsoup.nodes.Node@previousSibling():435:14087:index - 1 |==> index / 1
+160:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Node@setSiblingIndex(int):451:14519:this.siblingIndex = siblingIndex; |==> <NO-OP>
+161:LVR:POS:0:org.jsoup.nodes.Node@outerHtml():459:14712:32 |==> 0
+162:LVR:POS:NEG:org.jsoup.nodes.Node@outerHtml():459:14712:32 |==> -32
+163:LVR:POS:0:org.jsoup.nodes.Node@outerHtml():459:14715:1024 |==> 0
+164:LVR:POS:NEG:org.jsoup.nodes.Node@outerHtml():459:14715:1024 |==> -1024
+165:AOR:*(int,int):%(int,int):org.jsoup.nodes.Node@outerHtml():459:14712:32 * 1024 |==> 32 % 1024
+166:AOR:*(int,int):+(int,int):org.jsoup.nodes.Node@outerHtml():459:14712:32 * 1024 |==> 32 + 1024
+167:AOR:*(int,int):-(int,int):org.jsoup.nodes.Node@outerHtml():459:14712:32 * 1024 |==> 32 - 1024
+168:AOR:*(int,int):/(int,int):org.jsoup.nodes.Node@outerHtml():459:14712:32 * 1024 |==> 32 / 1024
+169:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@outerHtml():460:14730:outerHtml(accum); |==> <NO-OP>
+170:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@outerHtml(java.lang.StringBuilder):465:14848:new NodeTraversor(new OuterHtmlVisitor(accum, getOutputSettings())).traverse(this); |==> <NO-OP>
+171:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Node@getOutputSettings():470:15114:ownerDocument() != null |==> true
+172:AOR:*(int,int):%(int,int):org.jsoup.nodes.Node@indent(java.lang.StringBuilder,int,org.jsoup.nodes.Document.OutputSettings):486:15704:depth * out.indentAmount() |==> depth % out.indentAmount()
+173:AOR:*(int,int):+(int,int):org.jsoup.nodes.Node@indent(java.lang.StringBuilder,int,org.jsoup.nodes.Document.OutputSettings):486:15704:depth * out.indentAmount() |==> depth + out.indentAmount()
+174:AOR:*(int,int):-(int,int):org.jsoup.nodes.Node@indent(java.lang.StringBuilder,int,org.jsoup.nodes.Document.OutputSettings):486:15704:depth * out.indentAmount() |==> depth - out.indentAmount()
+175:AOR:*(int,int):/(int,int):org.jsoup.nodes.Node@indent(java.lang.StringBuilder,int,org.jsoup.nodes.Document.OutputSettings):486:15704:depth * out.indentAmount() |==> depth / out.indentAmount()
+176:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@indent(java.lang.StringBuilder,int,org.jsoup.nodes.Document.OutputSettings):486:15659:accum.append("\n").append(StringUtil.padding(depth * out.indentAmount())); |==> <NO-OP>
+177:LVR:TRUE:FALSE:org.jsoup.nodes.Node@equals(java.lang.Object):491:15823:true |==> false
+178:LVR:FALSE:TRUE:org.jsoup.nodes.Node@equals(java.lang.Object):493:15939:false |==> true
+179:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Node@hashCode():498:16027:parentNode != null |==> true
+180:LVR:0:POS:org.jsoup.nodes.Node@hashCode():498:16061:0 |==> 1
+181:LVR:0:NEG:org.jsoup.nodes.Node@hashCode():498:16061:0 |==> -1
+182:LVR:POS:0:org.jsoup.nodes.Node@hashCode():500:16156:31 |==> 0
+183:LVR:POS:NEG:org.jsoup.nodes.Node@hashCode():500:16156:31 |==> -31
+184:AOR:*(int,int):%(int,int):org.jsoup.nodes.Node@hashCode():500:16156:31 * result |==> 31 % result
+185:AOR:*(int,int):+(int,int):org.jsoup.nodes.Node@hashCode():500:16156:31 * result |==> 31 + result
+186:AOR:*(int,int):-(int,int):org.jsoup.nodes.Node@hashCode():500:16156:31 * result |==> 31 - result
+187:AOR:*(int,int):/(int,int):org.jsoup.nodes.Node@hashCode():500:16156:31 * result |==> 31 / result
+188:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Node@hashCode():500:16182:attributes != null |==> true
+189:LVR:0:POS:org.jsoup.nodes.Node@hashCode():500:16216:0 |==> 1
+190:LVR:0:NEG:org.jsoup.nodes.Node@hashCode():500:16216:0 |==> -1
+191:AOR:+(int,int):%(int,int):org.jsoup.nodes.Node@hashCode():500:16156:31 * result + (attributes != null ? attributes.hashCode() : 0) |==> 31 * result % (attributes != null ? attributes.hashCode() : 0)
+192:AOR:+(int,int):*(int,int):org.jsoup.nodes.Node@hashCode():500:16156:31 * result + (attributes != null ? attributes.hashCode() : 0) |==> 31 * result * (attributes != null ? attributes.hashCode() : 0)
+193:AOR:+(int,int):-(int,int):org.jsoup.nodes.Node@hashCode():500:16156:31 * result + (attributes != null ? attributes.hashCode() : 0) |==> 31 * result - (attributes != null ? attributes.hashCode() : 0)
+194:AOR:+(int,int):/(int,int):org.jsoup.nodes.Node@hashCode():500:16156:31 * result + (attributes != null ? attributes.hashCode() : 0) |==> 31 * result / (attributes != null ? attributes.hashCode() : 0)
+195:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Node@hashCode():500:16147:result = 31 * result + (attributes != null ? attributes.hashCode() : 0); |==> <NO-OP>
+196:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Node@doClone(org.jsoup.nodes.Node):525:17021:clone.parentNode = parent; |==> <NO-OP>
+197:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Node@doClone(org.jsoup.nodes.Node):526:17126:parent == null |==> false
+198:LVR:0:POS:org.jsoup.nodes.Node@doClone(org.jsoup.nodes.Node):526:17136:0 |==> 1
+199:LVR:0:NEG:org.jsoup.nodes.Node@doClone(org.jsoup.nodes.Node):526:17136:0 |==> -1
+200:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Node@doClone(org.jsoup.nodes.Node):526:17098:clone.siblingIndex = parent == null ? 0 : siblingIndex; |==> <NO-OP>
+201:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Node@doClone(org.jsoup.nodes.Node):527:17192:attributes != null |==> true
+202:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Node@doClone(org.jsoup.nodes.Node):527:17162:clone.attributes = attributes != null ? attributes.clone() : null; |==> <NO-OP>
+203:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Node@doClone(org.jsoup.nodes.Node):528:17237:clone.baseUri = baseUri; |==> <NO-OP>
+204:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Node@doClone(org.jsoup.nodes.Node):529:17270:clone.childNodes = new ArrayList<Node>(childNodes.size()); |==> <NO-OP>
+205:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node@doClone(org.jsoup.nodes.Node):531:17378:clone.childNodes.add(child.doClone(clone)); |==> <NO-OP>
+206:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Node$OuterHtmlVisitor@<init>(java.lang.StringBuilder,org.jsoup.nodes.Document.OutputSettings):541:17742:this.accum = accum; |==> <NO-OP>
+207:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Node$OuterHtmlVisitor@<init>(java.lang.StringBuilder,org.jsoup.nodes.Document.OutputSettings):542:17774:this.out = out; |==> <NO-OP>
+208:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node$OuterHtmlVisitor@head(org.jsoup.nodes.Node,int):546:17862:node.outerHtmlHead(accum, depth, out); |==> <NO-OP>
+209:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Node$OuterHtmlVisitor@tail(org.jsoup.nodes.Node,int):550:18000:node.nodeName().equals("#text") |==> false
+210:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Node$OuterHtmlVisitor@tail(org.jsoup.nodes.Node,int):550:18000:node.nodeName().equals("#text") |==> true
+211:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Node$OuterHtmlVisitor@tail(org.jsoup.nodes.Node,int):551:18048:node.outerHtmlTail(accum, depth, out); |==> <NO-OP>

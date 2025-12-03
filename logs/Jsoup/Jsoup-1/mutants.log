@@ -1,0 +1,25 @@
+1:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Document@createShell(java.lang.String):31:765:Validate.notNull(baseUri); |==> <NO-OP>
+2:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Document@createShell(java.lang.String):35:897:html.appendElement("head"); |==> <NO-OP>
+3:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Document@createShell(java.lang.String):36:933:html.appendElement("body"); |==> <NO-OP>
+4:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Document@title():63:1603:titleEl != null |==> true
+5:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Document@title(java.lang.String):72:1886:Validate.notNull(title); |==> <NO-OP>
+6:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Document@title(java.lang.String):74:1992:titleEl == null |==> false
+7:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Document@title(java.lang.String):75:2030:head().appendElement("title").text(title); |==> <NO-OP>
+8:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Document@title(java.lang.String):77:2102:titleEl.text(title); |==> <NO-OP>
+9:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Document@normalise():96:2784:select("html").isEmpty() |==> false
+10:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Document@normalise():96:2784:select("html").isEmpty() |==> true
+11:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Document@normalise():97:2800:appendElement("html"); |==> <NO-OP>
+12:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Document@normalise():98:2842:head() == null |==> false
+13:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Document@normalise():99:2863:select("html").first().prependElement("head"); |==> <NO-OP>
+14:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Document@normalise():100:2929:body() == null |==> false
+15:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Document@normalise():101:2950:select("html").first().appendElement("body"); |==> <NO-OP>
+16:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Document@normalise():105:3182:normalise(head()); |==> <NO-OP>
+17:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Document@normalise():106:3209:normalise(select("html").first()); |==> <NO-OP>
+18:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Document@normalise():107:3252:normalise(this); |==> <NO-OP>
+19:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Document@normalise(org.jsoup.nodes.Element):118:3596:tn.isBlank() |==> false
+20:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Document@normalise(org.jsoup.nodes.Element):118:3596:tn.isBlank() |==> true
+21:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Document@normalise(org.jsoup.nodes.Element):119:3620:toMove.add(tn); |==> <NO-OP>
+22:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Document@normalise(org.jsoup.nodes.Element):124:3707:element.removeChild(node); |==> <NO-OP>
+23:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Document@normalise(org.jsoup.nodes.Element):125:3746:body().appendChild(new TextNode(" ", "")); |==> <NO-OP>
+24:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Document@normalise(org.jsoup.nodes.Element):126:3801:body().appendChild(node); |==> <NO-OP>
+25:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Document@text(java.lang.String):142:4194:body().text(text); |==> <NO-OP>

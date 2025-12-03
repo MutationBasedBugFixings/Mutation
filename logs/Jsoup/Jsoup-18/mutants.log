@@ -1,0 +1,185 @@
+1:LVR:0:POS:org.jsoup.parser.CharacterReader:13:295:0 |==> 1
+2:LVR:0:NEG:org.jsoup.parser.CharacterReader:13:295:0 |==> -1
+3:LVR:0:POS:org.jsoup.parser.CharacterReader:14:321:0 |==> 1
+4:LVR:0:NEG:org.jsoup.parser.CharacterReader:14:321:0 |==> -1
+5:STD:<CALL>:<NO-OP>:org.jsoup.parser.CharacterReader@<init>(java.lang.String):17:369:Validate.notNull(input); |==> <NO-OP>
+6:ROR:>=(int,int):==(int,int):org.jsoup.parser.CharacterReader@isEmpty():28:550:pos >= length |==> pos == length
+7:ROR:>=(int,int):>(int,int):org.jsoup.parser.CharacterReader@isEmpty():28:550:pos >= length |==> pos > length
+8:ROR:>=(int,int):TRUE(int,int):org.jsoup.parser.CharacterReader@isEmpty():28:554:pos >= length |==> true
+9:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.CharacterReader@current():32:615:isEmpty() |==> false
+10:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.CharacterReader@current():32:615:isEmpty() |==> true
+11:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.CharacterReader@consume():36:699:isEmpty() |==> false
+12:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.CharacterReader@consume():36:699:isEmpty() |==> true
+13:STD:<INC>:<NO-OP>:org.jsoup.parser.CharacterReader@consume():37:737:pos++; |==> <NO-OP>
+14:STD:<DEC>:<NO-OP>:org.jsoup.parser.CharacterReader@unconsume():42:802:pos--; |==> <NO-OP>
+15:STD:<INC>:<NO-OP>:org.jsoup.parser.CharacterReader@advance():46:845:pos++; |==> <NO-OP>
+16:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.CharacterReader@mark():50:885:mark = pos; |==> <NO-OP>
+17:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.CharacterReader@rewindToMark():54:938:pos = mark; |==> <NO-OP>
+18:LVR:NEG:0:org.jsoup.parser.CharacterReader@consumeTo(char):63:1136:-1 |==> 0
+19:LVR:NEG:POS:org.jsoup.parser.CharacterReader@consumeTo(char):63:1136:-1 |==> 1
+20:ROR:!=(int,int):<(int,int):org.jsoup.parser.CharacterReader@consumeTo(char):63:1126:offset != -1 |==> offset < -1
+21:ROR:!=(int,int):>(int,int):org.jsoup.parser.CharacterReader@consumeTo(char):63:1126:offset != -1 |==> offset > -1
+22:ROR:!=(int,int):TRUE(int,int):org.jsoup.parser.CharacterReader@consumeTo(char):63:1133:offset != -1 |==> true
+23:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.CharacterReader@consumeTo(char):65:1214:pos += consumed.length(); |==> <NO-OP>
+24:LVR:NEG:0:org.jsoup.parser.CharacterReader@consumeTo(java.lang.String):74:1441:-1 |==> 0
+25:LVR:NEG:POS:org.jsoup.parser.CharacterReader@consumeTo(java.lang.String):74:1441:-1 |==> 1
+26:ROR:!=(int,int):<(int,int):org.jsoup.parser.CharacterReader@consumeTo(java.lang.String):74:1431:offset != -1 |==> offset < -1
+27:ROR:!=(int,int):>(int,int):org.jsoup.parser.CharacterReader@consumeTo(java.lang.String):74:1431:offset != -1 |==> offset > -1
+28:ROR:!=(int,int):TRUE(int,int):org.jsoup.parser.CharacterReader@consumeTo(java.lang.String):74:1438:offset != -1 |==> true
+29:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.CharacterReader@consumeTo(java.lang.String):76:1519:pos += consumed.length(); |==> <NO-OP>
+30:ROR:==(int,int):<=(int,int):org.jsoup.parser.CharacterReader@consumeToAny(char[]):89:1840:seek == c |==> seek <= c
+31:ROR:==(int,int):>=(int,int):org.jsoup.parser.CharacterReader@consumeToAny(char[]):89:1840:seek == c |==> seek >= c
+32:ROR:==(int,int):FALSE(int,int):org.jsoup.parser.CharacterReader@consumeToAny(char[]):89:1845:seek == c |==> false
+33:STD:<INC>:<NO-OP>:org.jsoup.parser.CharacterReader@consumeToAny(char[]):92:1910:pos++; |==> <NO-OP>
+34:ROR:>(int,int):!=(int,int):org.jsoup.parser.CharacterReader@consumeToAny(char[]):95:1943:pos > start |==> pos != start
+35:ROR:>(int,int):>=(int,int):org.jsoup.parser.CharacterReader@consumeToAny(char[]):95:1943:pos > start |==> pos >= start
+36:ROR:>(int,int):FALSE(int,int):org.jsoup.parser.CharacterReader@consumeToAny(char[]):95:1947:pos > start |==> false
+37:LVR:POS:0:org.jsoup.parser.CharacterReader@consumeToEnd():99:2086:1 |==> 0
+38:LVR:POS:NEG:org.jsoup.parser.CharacterReader@consumeToEnd():99:2086:1 |==> -1
+39:AOR:-(int,int):%(int,int):org.jsoup.parser.CharacterReader@consumeToEnd():99:2069:input.length() - 1 |==> input.length() % 1
+40:AOR:-(int,int):*(int,int):org.jsoup.parser.CharacterReader@consumeToEnd():99:2069:input.length() - 1 |==> input.length() * 1
+41:AOR:-(int,int):+(int,int):org.jsoup.parser.CharacterReader@consumeToEnd():99:2069:input.length() - 1 |==> input.length() + 1
+42:AOR:-(int,int):/(int,int):org.jsoup.parser.CharacterReader@consumeToEnd():99:2069:input.length() - 1 |==> input.length() / 1
+43:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.CharacterReader@consumeToEnd():100:2098:pos = input.length(); |==> <NO-OP>
+44:ROR:>=(int,int):==(int,int):org.jsoup.parser.CharacterReader@consumeLetterSequence():108:2296:c >= 'A' |==> c == 'A'
+45:ROR:>=(int,int):>(int,int):org.jsoup.parser.CharacterReader@consumeLetterSequence():108:2296:c >= 'A' |==> c > 'A'
+46:ROR:>=(int,int):TRUE(int,int):org.jsoup.parser.CharacterReader@consumeLetterSequence():108:2298:c >= 'A' |==> true
+47:ROR:<=(int,int):<(int,int):org.jsoup.parser.CharacterReader@consumeLetterSequence():108:2308:c <= 'Z' |==> c < 'Z'
+48:ROR:<=(int,int):==(int,int):org.jsoup.parser.CharacterReader@consumeLetterSequence():108:2308:c <= 'Z' |==> c == 'Z'
+49:ROR:<=(int,int):TRUE(int,int):org.jsoup.parser.CharacterReader@consumeLetterSequence():108:2310:c <= 'Z' |==> true
+50:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.CharacterReader@consumeLetterSequence():108:2305:c >= 'A' && c <= 'Z' |==> false
+51:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.CharacterReader@consumeLetterSequence():108:2296:c >= 'A' && c <= 'Z' |==> c >= 'A'
+52:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.CharacterReader@consumeLetterSequence():108:2308:c >= 'A' && c <= 'Z' |==> c <= 'Z'
+53:ROR:>=(int,int):==(int,int):org.jsoup.parser.CharacterReader@consumeLetterSequence():108:2322:c >= 'a' |==> c == 'a'
+54:ROR:>=(int,int):>(int,int):org.jsoup.parser.CharacterReader@consumeLetterSequence():108:2322:c >= 'a' |==> c > 'a'
+55:ROR:>=(int,int):TRUE(int,int):org.jsoup.parser.CharacterReader@consumeLetterSequence():108:2324:c >= 'a' |==> true
+56:ROR:<=(int,int):<(int,int):org.jsoup.parser.CharacterReader@consumeLetterSequence():108:2334:c <= 'z' |==> c < 'z'
+57:ROR:<=(int,int):==(int,int):org.jsoup.parser.CharacterReader@consumeLetterSequence():108:2334:c <= 'z' |==> c == 'z'
+58:ROR:<=(int,int):TRUE(int,int):org.jsoup.parser.CharacterReader@consumeLetterSequence():108:2336:c <= 'z' |==> true
+59:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.CharacterReader@consumeLetterSequence():108:2331:c >= 'a' && c <= 'z' |==> false
+60:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.CharacterReader@consumeLetterSequence():108:2322:c >= 'a' && c <= 'z' |==> c >= 'a'
+61:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.CharacterReader@consumeLetterSequence():108:2334:c >= 'a' && c <= 'z' |==> c <= 'z'
+62:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.CharacterReader@consumeLetterSequence():108:2295:(c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') |==> (c >= 'A' && c <= 'Z')
+63:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.CharacterReader@consumeLetterSequence():108:2321:(c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') |==> (c >= 'a' && c <= 'z')
+64:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.CharacterReader@consumeLetterSequence():108:2318:(c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') |==> true
+65:STD:<INC>:<NO-OP>:org.jsoup.parser.CharacterReader@consumeLetterSequence():109:2361:pos++; |==> <NO-OP>
+66:ROR:>=(int,int):==(int,int):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2615:c >= '0' |==> c == '0'
+67:ROR:>=(int,int):>(int,int):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2615:c >= '0' |==> c > '0'
+68:ROR:>=(int,int):TRUE(int,int):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2617:c >= '0' |==> true
+69:ROR:<=(int,int):<(int,int):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2627:c <= '9' |==> c < '9'
+70:ROR:<=(int,int):==(int,int):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2627:c <= '9' |==> c == '9'
+71:ROR:<=(int,int):TRUE(int,int):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2629:c <= '9' |==> true
+72:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2624:c >= '0' && c <= '9' |==> false
+73:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2615:c >= '0' && c <= '9' |==> c >= '0'
+74:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2627:c >= '0' && c <= '9' |==> c <= '9'
+75:ROR:>=(int,int):==(int,int):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2641:c >= 'A' |==> c == 'A'
+76:ROR:>=(int,int):>(int,int):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2641:c >= 'A' |==> c > 'A'
+77:ROR:>=(int,int):TRUE(int,int):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2643:c >= 'A' |==> true
+78:ROR:<=(int,int):<(int,int):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2653:c <= 'F' |==> c < 'F'
+79:ROR:<=(int,int):==(int,int):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2653:c <= 'F' |==> c == 'F'
+80:ROR:<=(int,int):TRUE(int,int):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2655:c <= 'F' |==> true
+81:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2650:c >= 'A' && c <= 'F' |==> false
+82:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2641:c >= 'A' && c <= 'F' |==> c >= 'A'
+83:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2653:c >= 'A' && c <= 'F' |==> c <= 'F'
+84:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2614:(c >= '0' && c <= '9') || (c >= 'A' && c <= 'F') |==> (c >= '0' && c <= '9')
+85:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2640:(c >= '0' && c <= '9') || (c >= 'A' && c <= 'F') |==> (c >= 'A' && c <= 'F')
+86:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2637:(c >= '0' && c <= '9') || (c >= 'A' && c <= 'F') |==> true
+87:ROR:>=(int,int):==(int,int):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2667:c >= 'a' |==> c == 'a'
+88:ROR:>=(int,int):>(int,int):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2667:c >= 'a' |==> c > 'a'
+89:ROR:>=(int,int):TRUE(int,int):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2669:c >= 'a' |==> true
+90:ROR:<=(int,int):<(int,int):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2679:c <= 'f' |==> c < 'f'
+91:ROR:<=(int,int):==(int,int):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2679:c <= 'f' |==> c == 'f'
+92:ROR:<=(int,int):TRUE(int,int):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2681:c <= 'f' |==> true
+93:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2676:c >= 'a' && c <= 'f' |==> false
+94:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2667:c >= 'a' && c <= 'f' |==> c >= 'a'
+95:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2679:c >= 'a' && c <= 'f' |==> c <= 'f'
+96:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2614:(c >= '0' && c <= '9') || (c >= 'A' && c <= 'F') || (c >= 'a' && c <= 'f') |==> (c >= '0' && c <= '9') || (c >= 'A' && c <= 'F')
+97:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2666:(c >= '0' && c <= '9') || (c >= 'A' && c <= 'F') || (c >= 'a' && c <= 'f') |==> (c >= 'a' && c <= 'f')
+98:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.CharacterReader@consumeHexSequence():121:2663:(c >= '0' && c <= '9') || (c >= 'A' && c <= 'F') || (c >= 'a' && c <= 'f') |==> true
+99:STD:<INC>:<NO-OP>:org.jsoup.parser.CharacterReader@consumeHexSequence():122:2706:pos++; |==> <NO-OP>
+100:ROR:>=(int,int):==(int,int):org.jsoup.parser.CharacterReader@consumeDigitSequence():133:2960:c >= '0' |==> c == '0'
+101:ROR:>=(int,int):>(int,int):org.jsoup.parser.CharacterReader@consumeDigitSequence():133:2960:c >= '0' |==> c > '0'
+102:ROR:>=(int,int):TRUE(int,int):org.jsoup.parser.CharacterReader@consumeDigitSequence():133:2962:c >= '0' |==> true
+103:ROR:<=(int,int):<(int,int):org.jsoup.parser.CharacterReader@consumeDigitSequence():133:2972:c <= '9' |==> c < '9'
+104:ROR:<=(int,int):==(int,int):org.jsoup.parser.CharacterReader@consumeDigitSequence():133:2972:c <= '9' |==> c == '9'
+105:ROR:<=(int,int):TRUE(int,int):org.jsoup.parser.CharacterReader@consumeDigitSequence():133:2974:c <= '9' |==> true
+106:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.CharacterReader@consumeDigitSequence():133:2969:c >= '0' && c <= '9' |==> false
+107:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.CharacterReader@consumeDigitSequence():133:2960:c >= '0' && c <= '9' |==> c >= '0'
+108:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.CharacterReader@consumeDigitSequence():133:2972:c >= '0' && c <= '9' |==> c <= '9'
+109:STD:<INC>:<NO-OP>:org.jsoup.parser.CharacterReader@consumeDigitSequence():134:2998:pos++; |==> <NO-OP>
+110:ROR:==(int,int):<=(int,int):org.jsoup.parser.CharacterReader@matches(char):142:3165:input.charAt(pos) == c |==> input.charAt(pos) <= c
+111:ROR:==(int,int):>=(int,int):org.jsoup.parser.CharacterReader@matches(char):142:3165:input.charAt(pos) == c |==> input.charAt(pos) >= c
+112:ROR:==(int,int):FALSE(int,int):org.jsoup.parser.CharacterReader@matches(char):142:3183:input.charAt(pos) == c |==> false
+113:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.parser.CharacterReader@matches(char):142:3151:!isEmpty() && input.charAt(pos) == c |==> !isEmpty() == (input.charAt(pos) == c)
+114:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.CharacterReader@matches(char):142:3162:!isEmpty() && input.charAt(pos) == c |==> false
+115:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.CharacterReader@matches(char):142:3151:!isEmpty() && input.charAt(pos) == c |==> !isEmpty()
+116:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.CharacterReader@matches(char):142:3165:!isEmpty() && input.charAt(pos) == c |==> input.charAt(pos) == c
+117:LVR:TRUE:FALSE:org.jsoup.parser.CharacterReader@matchesIgnoreCase(java.lang.String):151:3360:true |==> false
+118:LVR:0:POS:org.jsoup.parser.CharacterReader@matchesIgnoreCase(java.lang.String):151:3376:0 |==> 1
+119:LVR:0:NEG:org.jsoup.parser.CharacterReader@matchesIgnoreCase(java.lang.String):151:3376:0 |==> -1
+120:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.CharacterReader@matchesAny(char[]):155:3458:isEmpty() |==> false
+121:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.CharacterReader@matchesAny(char[]):155:3458:isEmpty() |==> true
+122:LVR:FALSE:TRUE:org.jsoup.parser.CharacterReader@matchesAny(char[]):156:3481:false |==> true
+123:ROR:==(int,int):<=(int,int):org.jsoup.parser.CharacterReader@matchesAny(char[]):160:3573:seek == c |==> seek <= c
+124:ROR:==(int,int):>=(int,int):org.jsoup.parser.CharacterReader@matchesAny(char[]):160:3573:seek == c |==> seek >= c
+125:ROR:==(int,int):FALSE(int,int):org.jsoup.parser.CharacterReader@matchesAny(char[]):160:3578:seek == c |==> false
+126:LVR:TRUE:FALSE:org.jsoup.parser.CharacterReader@matchesAny(char[]):161:3607:true |==> false
+127:LVR:FALSE:TRUE:org.jsoup.parser.CharacterReader@matchesAny(char[]):163:3638:false |==> true
+128:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.CharacterReader@matchesLetter():167:3701:isEmpty() |==> false
+129:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.CharacterReader@matchesLetter():167:3701:isEmpty() |==> true
+130:LVR:FALSE:TRUE:org.jsoup.parser.CharacterReader@matchesLetter():168:3724:false |==> true
+131:ROR:>=(int,int):==(int,int):org.jsoup.parser.CharacterReader@matchesLetter():170:3783:c >= 'A' |==> c == 'A'
+132:ROR:>=(int,int):>(int,int):org.jsoup.parser.CharacterReader@matchesLetter():170:3783:c >= 'A' |==> c > 'A'
+133:ROR:>=(int,int):TRUE(int,int):org.jsoup.parser.CharacterReader@matchesLetter():170:3785:c >= 'A' |==> true
+134:ROR:<=(int,int):<(int,int):org.jsoup.parser.CharacterReader@matchesLetter():170:3795:c <= 'Z' |==> c < 'Z'
+135:ROR:<=(int,int):==(int,int):org.jsoup.parser.CharacterReader@matchesLetter():170:3795:c <= 'Z' |==> c == 'Z'
+136:ROR:<=(int,int):TRUE(int,int):org.jsoup.parser.CharacterReader@matchesLetter():170:3797:c <= 'Z' |==> true
+137:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.CharacterReader@matchesLetter():170:3792:c >= 'A' && c <= 'Z' |==> false
+138:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.CharacterReader@matchesLetter():170:3783:c >= 'A' && c <= 'Z' |==> c >= 'A'
+139:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.CharacterReader@matchesLetter():170:3795:c >= 'A' && c <= 'Z' |==> c <= 'Z'
+140:ROR:>=(int,int):==(int,int):org.jsoup.parser.CharacterReader@matchesLetter():170:3809:c >= 'a' |==> c == 'a'
+141:ROR:>=(int,int):>(int,int):org.jsoup.parser.CharacterReader@matchesLetter():170:3809:c >= 'a' |==> c > 'a'
+142:ROR:>=(int,int):TRUE(int,int):org.jsoup.parser.CharacterReader@matchesLetter():170:3811:c >= 'a' |==> true
+143:ROR:<=(int,int):<(int,int):org.jsoup.parser.CharacterReader@matchesLetter():170:3821:c <= 'z' |==> c < 'z'
+144:ROR:<=(int,int):==(int,int):org.jsoup.parser.CharacterReader@matchesLetter():170:3821:c <= 'z' |==> c == 'z'
+145:ROR:<=(int,int):TRUE(int,int):org.jsoup.parser.CharacterReader@matchesLetter():170:3823:c <= 'z' |==> true
+146:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.CharacterReader@matchesLetter():170:3818:c >= 'a' && c <= 'z' |==> false
+147:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.CharacterReader@matchesLetter():170:3809:c >= 'a' && c <= 'z' |==> c >= 'a'
+148:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.CharacterReader@matchesLetter():170:3821:c >= 'a' && c <= 'z' |==> c <= 'z'
+149:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.CharacterReader@matchesLetter():170:3782:(c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') |==> (c >= 'A' && c <= 'Z')
+150:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.CharacterReader@matchesLetter():170:3808:(c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') |==> (c >= 'a' && c <= 'z')
+151:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.CharacterReader@matchesLetter():170:3805:(c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') |==> true
+152:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.CharacterReader@matchesDigit():174:3887:isEmpty() |==> false
+153:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.CharacterReader@matchesDigit():174:3887:isEmpty() |==> true
+154:LVR:FALSE:TRUE:org.jsoup.parser.CharacterReader@matchesDigit():175:3910:false |==> true
+155:ROR:>=(int,int):==(int,int):org.jsoup.parser.CharacterReader@matchesDigit():177:3969:c >= '0' |==> c == '0'
+156:ROR:>=(int,int):>(int,int):org.jsoup.parser.CharacterReader@matchesDigit():177:3969:c >= '0' |==> c > '0'
+157:ROR:>=(int,int):TRUE(int,int):org.jsoup.parser.CharacterReader@matchesDigit():177:3971:c >= '0' |==> true
+158:ROR:<=(int,int):<(int,int):org.jsoup.parser.CharacterReader@matchesDigit():177:3981:c <= '9' |==> c < '9'
+159:ROR:<=(int,int):==(int,int):org.jsoup.parser.CharacterReader@matchesDigit():177:3981:c <= '9' |==> c == '9'
+160:ROR:<=(int,int):TRUE(int,int):org.jsoup.parser.CharacterReader@matchesDigit():177:3983:c <= '9' |==> true
+161:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.CharacterReader@matchesDigit():177:3978:c >= '0' && c <= '9' |==> false
+162:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.CharacterReader@matchesDigit():177:3969:c >= '0' && c <= '9' |==> c >= '0'
+163:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.CharacterReader@matchesDigit():177:3981:c >= '0' && c <= '9' |==> c <= '9'
+164:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.CharacterReader@matchConsume(java.lang.String):181:4057:matches(seq) |==> false
+165:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.CharacterReader@matchConsume(java.lang.String):181:4057:matches(seq) |==> true
+166:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.CharacterReader@matchConsume(java.lang.String):182:4078:pos += seq.length(); |==> <NO-OP>
+167:LVR:TRUE:FALSE:org.jsoup.parser.CharacterReader@matchConsume(java.lang.String):183:4118:true |==> false
+168:LVR:FALSE:TRUE:org.jsoup.parser.CharacterReader@matchConsume(java.lang.String):185:4160:false |==> true
+169:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.CharacterReader@matchConsumeIgnoreCase(java.lang.String):190:4262:matchesIgnoreCase(seq) |==> false
+170:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.CharacterReader@matchConsumeIgnoreCase(java.lang.String):190:4262:matchesIgnoreCase(seq) |==> true
+171:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.CharacterReader@matchConsumeIgnoreCase(java.lang.String):191:4283:pos += seq.length(); |==> <NO-OP>
+172:LVR:TRUE:FALSE:org.jsoup.parser.CharacterReader@matchConsumeIgnoreCase(java.lang.String):192:4323:true |==> false
+173:LVR:FALSE:TRUE:org.jsoup.parser.CharacterReader@matchConsumeIgnoreCase(java.lang.String):194:4365:false |==> true
+174:LVR:NEG:0:org.jsoup.parser.CharacterReader@containsIgnoreCase(java.lang.String):202:4650:-1 |==> 0
+175:LVR:NEG:POS:org.jsoup.parser.CharacterReader@containsIgnoreCase(java.lang.String):202:4650:-1 |==> 1
+176:ROR:>(int,int):>=(int,int):org.jsoup.parser.CharacterReader@containsIgnoreCase(java.lang.String):202:4621:input.indexOf(loScan, pos) > -1 |==> input.indexOf(loScan, pos) >= -1
+177:ROR:>(int,int):FALSE(int,int):org.jsoup.parser.CharacterReader@containsIgnoreCase(java.lang.String):202:4648:input.indexOf(loScan, pos) > -1 |==> false
+178:LVR:NEG:0:org.jsoup.parser.CharacterReader@containsIgnoreCase(java.lang.String):202:4687:-1 |==> 0
+179:LVR:NEG:POS:org.jsoup.parser.CharacterReader@containsIgnoreCase(java.lang.String):202:4687:-1 |==> 1
+180:ROR:>(int,int):>=(int,int):org.jsoup.parser.CharacterReader@containsIgnoreCase(java.lang.String):202:4658:input.indexOf(hiScan, pos) > -1 |==> input.indexOf(hiScan, pos) >= -1
+181:ROR:>(int,int):FALSE(int,int):org.jsoup.parser.CharacterReader@containsIgnoreCase(java.lang.String):202:4685:input.indexOf(hiScan, pos) > -1 |==> false
+182:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.parser.CharacterReader@containsIgnoreCase(java.lang.String):202:4620:(input.indexOf(loScan, pos) > -1) || (input.indexOf(hiScan, pos) > -1) |==> (input.indexOf(loScan, pos) > -1) != (input.indexOf(hiScan, pos) > -1)
+183:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.CharacterReader@containsIgnoreCase(java.lang.String):202:4620:(input.indexOf(loScan, pos) > -1) || (input.indexOf(hiScan, pos) > -1) |==> (input.indexOf(loScan, pos) > -1)
+184:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.CharacterReader@containsIgnoreCase(java.lang.String):202:4657:(input.indexOf(loScan, pos) > -1) || (input.indexOf(hiScan, pos) > -1) |==> (input.indexOf(hiScan, pos) > -1)
+185:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.CharacterReader@containsIgnoreCase(java.lang.String):202:4654:(input.indexOf(loScan, pos) > -1) || (input.indexOf(hiScan, pos) > -1) |==> true

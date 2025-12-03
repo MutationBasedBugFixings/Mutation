@@ -1,0 +1,763 @@
+1:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@<init>(org.jsoup.parser.Tag,java.lang.String,org.jsoup.nodes.Attributes):37:1082:Validate.notNull(tag); |==> <NO-OP>
+2:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Element@id():93:2447:id == null |==> false
+3:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@attr(java.lang.String,java.lang.String):103:2771:super.attr(attributeKey, attributeValue); |==> <NO-OP>
+4:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@parents():118:3168:accumulateParents(this, parents); |==> <NO-OP>
+5:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Element@accumulateParents(org.jsoup.nodes.Element,org.jsoup.select.Elements):124:3364:parent != null |==> true
+6:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.nodes.Element@accumulateParents(org.jsoup.nodes.Element,org.jsoup.select.Elements):124:3357:parent != null && !parent.tagName().equals("#root") |==> parent != null == !parent.tagName().equals("#root")
+7:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.nodes.Element@accumulateParents(org.jsoup.nodes.Element,org.jsoup.select.Elements):124:3372:parent != null && !parent.tagName().equals("#root") |==> false
+8:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.nodes.Element@accumulateParents(org.jsoup.nodes.Element,org.jsoup.select.Elements):124:3357:parent != null && !parent.tagName().equals("#root") |==> parent != null
+9:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.nodes.Element@accumulateParents(org.jsoup.nodes.Element,org.jsoup.select.Elements):124:3375:parent != null && !parent.tagName().equals("#root") |==> !parent.tagName().equals("#root")
+10:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@accumulateParents(org.jsoup.nodes.Element,org.jsoup.select.Elements):125:3424:parents.add(parent); |==> <NO-OP>
+11:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@accumulateParents(org.jsoup.nodes.Element,org.jsoup.select.Elements):126:3457:accumulateParents(parent, parents); |==> <NO-OP>
+12:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@children():157:4643:elements.add((Element)node); |==> <NO-OP>
+13:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@appendChild(org.jsoup.nodes.Node):190:5931:Validate.notNull(child); |==> <NO-OP>
+14:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@appendChild(org.jsoup.nodes.Node):192:5973:child.setParentNode(this); |==> <NO-OP>
+15:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@appendChild(org.jsoup.nodes.Node):193:6008:childNodes.add(child); |==> <NO-OP>
+16:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@prependChild(org.jsoup.nodes.Node):204:6344:Validate.notNull(child); |==> <NO-OP>
+17:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@prependChild(org.jsoup.nodes.Node):206:6386:child.setParentNode(this); |==> <NO-OP>
+18:LVR:0:POS:org.jsoup.nodes.Element@prependChild(org.jsoup.nodes.Node):207:6436:0 |==> 1
+19:LVR:0:NEG:org.jsoup.nodes.Element@prependChild(org.jsoup.nodes.Node):207:6436:0 |==> -1
+20:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@prependChild(org.jsoup.nodes.Node):207:6421:childNodes.add(0, child); |==> <NO-OP>
+21:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@appendElement(java.lang.String):220:6919:appendChild(child); |==> <NO-OP>
+22:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@prependElement(java.lang.String):233:7415:prependChild(child); |==> <NO-OP>
+23:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@appendText(java.lang.String):245:7731:appendChild(node); |==> <NO-OP>
+24:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@prependText(java.lang.String):257:8046:prependChild(node); |==> <NO-OP>
+25:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@append(java.lang.String):268:8417:Validate.notNull(html); |==> <NO-OP>
+26:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Element@append(java.lang.String):272:8587:node.parentNode = null; |==> <NO-OP>
+27:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@append(java.lang.String):273:8623:appendChild(node); |==> <NO-OP>
+28:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@prepend(java.lang.String):285:9008:Validate.notNull(html); |==> <NO-OP>
+29:LVR:POS:0:org.jsoup.nodes.Element@prepend(java.lang.String):289:9202:1 |==> 0
+30:LVR:POS:NEG:org.jsoup.nodes.Element@prepend(java.lang.String):289:9202:1 |==> -1
+31:AOR:-(int,int):%(int,int):org.jsoup.nodes.Element@prepend(java.lang.String):289:9187:nodes.size() - 1 |==> nodes.size() % 1
+32:AOR:-(int,int):*(int,int):org.jsoup.nodes.Element@prepend(java.lang.String):289:9187:nodes.size() - 1 |==> nodes.size() * 1
+33:AOR:-(int,int):+(int,int):org.jsoup.nodes.Element@prepend(java.lang.String):289:9187:nodes.size() - 1 |==> nodes.size() + 1
+34:AOR:-(int,int):/(int,int):org.jsoup.nodes.Element@prepend(java.lang.String):289:9187:nodes.size() - 1 |==> nodes.size() / 1
+35:LVR:0:POS:org.jsoup.nodes.Element@prepend(java.lang.String):289:9210:0 |==> 1
+36:LVR:0:NEG:org.jsoup.nodes.Element@prepend(java.lang.String):289:9210:0 |==> -1
+37:ROR:>=(int,int):==(int,int):org.jsoup.nodes.Element@prepend(java.lang.String):289:9205:i >= 0 |==> i == 0
+38:ROR:>=(int,int):>(int,int):org.jsoup.nodes.Element@prepend(java.lang.String):289:9205:i >= 0 |==> i > 0
+39:ROR:>=(int,int):TRUE(int,int):org.jsoup.nodes.Element@prepend(java.lang.String):289:9207:i >= 0 |==> true
+40:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Element@prepend(java.lang.String):291:9270:node.parentNode = null; |==> <NO-OP>
+41:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@prepend(java.lang.String):292:9306:prependChild(node); |==> <NO-OP>
+42:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@empty():302:9528:childNodes.clear(); |==> <NO-OP>
+43:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@wrap(java.lang.String):312:9844:Validate.notEmpty(html); |==> <NO-OP>
+44:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Element@wrap(java.lang.String):317:10060:wrap == null |==> false
+45:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@wrap(java.lang.String):321:10179:parentNode.replaceChild(this, wrap); |==> <NO-OP>
+46:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@wrap(java.lang.String):322:10224:deepest.addChild(this); |==> <NO-OP>
+47:LVR:POS:0:org.jsoup.nodes.Element@wrap(java.lang.String):325:10372:1 |==> 0
+48:LVR:POS:NEG:org.jsoup.nodes.Element@wrap(java.lang.String):325:10372:1 |==> -1
+49:ROR:>(int,int):!=(int,int):org.jsoup.nodes.Element@wrap(java.lang.String):325:10350:wrapChildren.size() > 1 |==> wrapChildren.size() != 1
+50:ROR:>(int,int):>=(int,int):org.jsoup.nodes.Element@wrap(java.lang.String):325:10350:wrapChildren.size() > 1 |==> wrapChildren.size() >= 1
+51:ROR:>(int,int):FALSE(int,int):org.jsoup.nodes.Element@wrap(java.lang.String):325:10370:wrapChildren.size() > 1 |==> false
+52:LVR:POS:0:org.jsoup.nodes.Element@wrap(java.lang.String):326:10402:1 |==> 0
+53:LVR:POS:NEG:org.jsoup.nodes.Element@wrap(java.lang.String):326:10402:1 |==> -1
+54:ROR:<(int,int):!=(int,int):org.jsoup.nodes.Element@wrap(java.lang.String):326:10405:i < wrapChildren.size() |==> i != wrapChildren.size()
+55:ROR:<(int,int):<=(int,int):org.jsoup.nodes.Element@wrap(java.lang.String):326:10405:i < wrapChildren.size() |==> i <= wrapChildren.size()
+56:ROR:<(int,int):FALSE(int,int):org.jsoup.nodes.Element@wrap(java.lang.String):326:10407:i < wrapChildren.size() |==> false
+57:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@wrap(java.lang.String):328:10524:remainder.parentNode.removeChild(remainder); |==> <NO-OP>
+58:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@wrap(java.lang.String):329:10585:wrap.appendChild(remainder); |==> <NO-OP>
+59:LVR:0:POS:org.jsoup.nodes.Element@getDeepChild(org.jsoup.nodes.Element):337:10791:0 |==> 1
+60:LVR:0:NEG:org.jsoup.nodes.Element@getDeepChild(org.jsoup.nodes.Element):337:10791:0 |==> -1
+61:ROR:>(int,int):>=(int,int):org.jsoup.nodes.Element@getDeepChild(org.jsoup.nodes.Element):337:10773:children.size() > 0 |==> children.size() >= 0
+62:ROR:>(int,int):FALSE(int,int):org.jsoup.nodes.Element@getDeepChild(org.jsoup.nodes.Element):337:10789:children.size() > 0 |==> false
+63:LVR:0:POS:org.jsoup.nodes.Element@getDeepChild(org.jsoup.nodes.Element):338:10839:0 |==> 1
+64:LVR:0:NEG:org.jsoup.nodes.Element@getDeepChild(org.jsoup.nodes.Element):338:10839:0 |==> -1
+65:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@nextElementSibling():362:11619:Validate.notNull(index); |==> <NO-OP>
+66:LVR:POS:0:org.jsoup.nodes.Element@nextElementSibling():363:11680:1 |==> 0
+67:LVR:POS:NEG:org.jsoup.nodes.Element@nextElementSibling():363:11680:1 |==> -1
+68:AOR:+(int,int):%(int,int):org.jsoup.nodes.Element@nextElementSibling():363:11674:index + 1 |==> index % 1
+69:AOR:+(int,int):*(int,int):org.jsoup.nodes.Element@nextElementSibling():363:11674:index + 1 |==> index * 1
+70:AOR:+(int,int):-(int,int):org.jsoup.nodes.Element@nextElementSibling():363:11674:index + 1 |==> index - 1
+71:AOR:+(int,int):/(int,int):org.jsoup.nodes.Element@nextElementSibling():363:11674:index + 1 |==> index / 1
+72:ROR:>(int,int):!=(int,int):org.jsoup.nodes.Element@nextElementSibling():363:11656:siblings.size() > index + 1 |==> siblings.size() != index + 1
+73:ROR:>(int,int):>=(int,int):org.jsoup.nodes.Element@nextElementSibling():363:11656:siblings.size() > index + 1 |==> siblings.size() >= index + 1
+74:ROR:>(int,int):FALSE(int,int):org.jsoup.nodes.Element@nextElementSibling():363:11672:siblings.size() > index + 1 |==> false
+75:LVR:POS:0:org.jsoup.nodes.Element@nextElementSibling():364:11721:1 |==> 0
+76:LVR:POS:NEG:org.jsoup.nodes.Element@nextElementSibling():364:11721:1 |==> -1
+77:AOR:+(int,int):%(int,int):org.jsoup.nodes.Element@nextElementSibling():364:11715:index + 1 |==> index % 1
+78:AOR:+(int,int):*(int,int):org.jsoup.nodes.Element@nextElementSibling():364:11715:index + 1 |==> index * 1
+79:AOR:+(int,int):-(int,int):org.jsoup.nodes.Element@nextElementSibling():364:11715:index + 1 |==> index - 1
+80:AOR:+(int,int):/(int,int):org.jsoup.nodes.Element@nextElementSibling():364:11715:index + 1 |==> index / 1
+81:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@previousElementSibling():377:12116:Validate.notNull(index); |==> <NO-OP>
+82:LVR:0:POS:org.jsoup.nodes.Element@previousElementSibling():378:12161:0 |==> 1
+83:LVR:0:NEG:org.jsoup.nodes.Element@previousElementSibling():378:12161:0 |==> -1
+84:ROR:>(int,int):!=(int,int):org.jsoup.nodes.Element@previousElementSibling():378:12153:index > 0 |==> index != 0
+85:ROR:>(int,int):>=(int,int):org.jsoup.nodes.Element@previousElementSibling():378:12153:index > 0 |==> index >= 0
+86:ROR:>(int,int):FALSE(int,int):org.jsoup.nodes.Element@previousElementSibling():378:12159:index > 0 |==> false
+87:LVR:POS:0:org.jsoup.nodes.Element@previousElementSibling():379:12202:1 |==> 0
+88:LVR:POS:NEG:org.jsoup.nodes.Element@previousElementSibling():379:12202:1 |==> -1
+89:AOR:-(int,int):%(int,int):org.jsoup.nodes.Element@previousElementSibling():379:12196:index - 1 |==> index % 1
+90:AOR:-(int,int):*(int,int):org.jsoup.nodes.Element@previousElementSibling():379:12196:index - 1 |==> index * 1
+91:AOR:-(int,int):+(int,int):org.jsoup.nodes.Element@previousElementSibling():379:12196:index - 1 |==> index + 1
+92:AOR:-(int,int):/(int,int):org.jsoup.nodes.Element@previousElementSibling():379:12196:index - 1 |==> index / 1
+93:LVR:POS:0:org.jsoup.nodes.Element@firstElementSibling():391:12597:1 |==> 0
+94:LVR:POS:NEG:org.jsoup.nodes.Element@firstElementSibling():391:12597:1 |==> -1
+95:ROR:>(int,int):!=(int,int):org.jsoup.nodes.Element@firstElementSibling():391:12579:siblings.size() > 1 |==> siblings.size() != 1
+96:ROR:>(int,int):>=(int,int):org.jsoup.nodes.Element@firstElementSibling():391:12579:siblings.size() > 1 |==> siblings.size() >= 1
+97:ROR:>(int,int):FALSE(int,int):org.jsoup.nodes.Element@firstElementSibling():391:12595:siblings.size() > 1 |==> false
+98:LVR:0:POS:org.jsoup.nodes.Element@firstElementSibling():391:12614:0 |==> 1
+99:LVR:0:NEG:org.jsoup.nodes.Element@firstElementSibling():391:12614:0 |==> -1
+100:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Element@elementSiblingIndex():400:12895:parent() == null |==> false
+101:LVR:0:POS:org.jsoup.nodes.Element@elementSiblingIndex():400:12911:0 |==> 1
+102:LVR:0:NEG:org.jsoup.nodes.Element@elementSiblingIndex():400:12911:0 |==> -1
+103:LVR:POS:0:org.jsoup.nodes.Element@lastElementSibling():410:13264:1 |==> 0
+104:LVR:POS:NEG:org.jsoup.nodes.Element@lastElementSibling():410:13264:1 |==> -1
+105:ROR:>(int,int):!=(int,int):org.jsoup.nodes.Element@lastElementSibling():410:13246:siblings.size() > 1 |==> siblings.size() != 1
+106:ROR:>(int,int):>=(int,int):org.jsoup.nodes.Element@lastElementSibling():410:13246:siblings.size() > 1 |==> siblings.size() >= 1
+107:ROR:>(int,int):FALSE(int,int):org.jsoup.nodes.Element@lastElementSibling():410:13262:siblings.size() > 1 |==> false
+108:LVR:POS:0:org.jsoup.nodes.Element@lastElementSibling():410:13299:1 |==> 0
+109:LVR:POS:NEG:org.jsoup.nodes.Element@lastElementSibling():410:13299:1 |==> -1
+110:AOR:-(int,int):%(int,int):org.jsoup.nodes.Element@lastElementSibling():410:13281:siblings.size() - 1 |==> siblings.size() % 1
+111:AOR:-(int,int):*(int,int):org.jsoup.nodes.Element@lastElementSibling():410:13281:siblings.size() - 1 |==> siblings.size() * 1
+112:AOR:-(int,int):+(int,int):org.jsoup.nodes.Element@lastElementSibling():410:13281:siblings.size() - 1 |==> siblings.size() + 1
+113:AOR:-(int,int):/(int,int):org.jsoup.nodes.Element@lastElementSibling():410:13281:siblings.size() - 1 |==> siblings.size() / 1
+114:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@getElementsByTag(java.lang.String):421:13709:Validate.notEmpty(tagName); |==> <NO-OP>
+115:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Element@getElementsByTag(java.lang.String):422:13745:tagName = tagName.toLowerCase().trim(); |==> <NO-OP>
+116:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@getElementById(java.lang.String):437:14428:Validate.notEmpty(id); |==> <NO-OP>
+117:LVR:0:POS:org.jsoup.nodes.Element@getElementById(java.lang.String):440:14565:0 |==> 1
+118:LVR:0:NEG:org.jsoup.nodes.Element@getElementById(java.lang.String):440:14565:0 |==> -1
+119:ROR:>(int,int):>=(int,int):org.jsoup.nodes.Element@getElementById(java.lang.String):440:14547:elements.size() > 0 |==> elements.size() >= 0
+120:ROR:>(int,int):FALSE(int,int):org.jsoup.nodes.Element@getElementById(java.lang.String):440:14563:elements.size() > 0 |==> false
+121:LVR:0:POS:org.jsoup.nodes.Element@getElementById(java.lang.String):441:14600:0 |==> 1
+122:LVR:0:NEG:org.jsoup.nodes.Element@getElementById(java.lang.String):441:14600:0 |==> -1
+123:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@getElementsByClass(java.lang.String):458:15231:Validate.notEmpty(className); |==> <NO-OP>
+124:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@getElementsByAttribute(java.lang.String):470:15605:Validate.notEmpty(key); |==> <NO-OP>
+125:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Element@getElementsByAttribute(java.lang.String):471:15637:key = key.trim().toLowerCase(); |==> <NO-OP>
+126:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@text():574:19510:text(sb); |==> <NO-OP>
+127:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Element@text(java.lang.StringBuilder):584:19843:preserveWhitespace() |==> false
+128:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Element@text(java.lang.StringBuilder):584:19843:preserveWhitespace() |==> true
+129:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Element@text(java.lang.StringBuilder):585:19869:text = TextNode.normaliseWhitespace(text); |==> <NO-OP>
+130:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Element@text(java.lang.StringBuilder):586:19965:TextNode.lastCharIsWhitespace(accum) |==> false
+131:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Element@text(java.lang.StringBuilder):586:19965:TextNode.lastCharIsWhitespace(accum) |==> true
+132:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Element@text(java.lang.StringBuilder):587:19998:text = TextNode.stripLeadingWhitespace(text); |==> <NO-OP>
+133:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@text(java.lang.StringBuilder):589:20078:accum.append(text); |==> <NO-OP>
+134:LVR:0:POS:org.jsoup.nodes.Element@text(java.lang.StringBuilder):593:20238:0 |==> 1
+135:LVR:0:NEG:org.jsoup.nodes.Element@text(java.lang.StringBuilder):593:20238:0 |==> -1
+136:ROR:>(int,int):>=(int,int):org.jsoup.nodes.Element@text(java.lang.StringBuilder):593:20221:accum.length() > 0 |==> accum.length() >= 0
+137:ROR:>(int,int):FALSE(int,int):org.jsoup.nodes.Element@text(java.lang.StringBuilder):593:20236:accum.length() > 0 |==> false
+138:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.nodes.Element@text(java.lang.StringBuilder):593:20221:accum.length() > 0 && element.isBlock() |==> accum.length() > 0 == element.isBlock()
+139:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.nodes.Element@text(java.lang.StringBuilder):593:20240:accum.length() > 0 && element.isBlock() |==> false
+140:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.nodes.Element@text(java.lang.StringBuilder):593:20221:accum.length() > 0 && element.isBlock() |==> accum.length() > 0
+141:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.nodes.Element@text(java.lang.StringBuilder):593:20243:accum.length() > 0 && element.isBlock() |==> element.isBlock()
+142:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.nodes.Element@text(java.lang.StringBuilder):593:20221:accum.length() > 0 && element.isBlock() && !TextNode.lastCharIsWhitespace(accum) |==> (accum.length() > 0 && element.isBlock()) == !TextNode.lastCharIsWhitespace(accum)
+143:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.nodes.Element@text(java.lang.StringBuilder):593:20261:accum.length() > 0 && element.isBlock() && !TextNode.lastCharIsWhitespace(accum) |==> false
+144:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.nodes.Element@text(java.lang.StringBuilder):593:20221:accum.length() > 0 && element.isBlock() && !TextNode.lastCharIsWhitespace(accum) |==> accum.length() > 0 && element.isBlock()
+145:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.nodes.Element@text(java.lang.StringBuilder):593:20264:accum.length() > 0 && element.isBlock() && !TextNode.lastCharIsWhitespace(accum) |==> !TextNode.lastCharIsWhitespace(accum)
+146:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@text(java.lang.StringBuilder):594:20323:accum.append(" "); |==> <NO-OP>
+147:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@text(java.lang.StringBuilder):595:20358:element.text(accum); |==> <NO-OP>
+148:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Element@preserveWhitespace():601:20497:parent() != null |==> true
+149:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.nodes.Element@preserveWhitespace():601:20488:parent() != null && parent().preserveWhitespace() |==> parent() != null == parent().preserveWhitespace()
+150:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.nodes.Element@preserveWhitespace():601:20505:parent() != null && parent().preserveWhitespace() |==> false
+151:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.nodes.Element@preserveWhitespace():601:20488:parent() != null && parent().preserveWhitespace() |==> parent() != null
+152:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.nodes.Element@preserveWhitespace():601:20508:parent() != null && parent().preserveWhitespace() |==> parent().preserveWhitespace()
+153:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.nodes.Element@preserveWhitespace():601:20460:tag.preserveWhitespace() || parent() != null && parent().preserveWhitespace() |==> tag.preserveWhitespace() != (parent() != null && parent().preserveWhitespace())
+154:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.nodes.Element@preserveWhitespace():601:20460:tag.preserveWhitespace() || parent() != null && parent().preserveWhitespace() |==> tag.preserveWhitespace()
+155:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.nodes.Element@preserveWhitespace():601:20488:tag.preserveWhitespace() || parent() != null && parent().preserveWhitespace() |==> parent() != null && parent().preserveWhitespace()
+156:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.nodes.Element@preserveWhitespace():601:20485:tag.preserveWhitespace() || parent() != null && parent().preserveWhitespace() |==> true
+157:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@text(java.lang.String):610:20765:Validate.notNull(text); |==> <NO-OP>
+158:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@text(java.lang.String):612:20798:empty(); |==> <NO-OP>
+159:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@text(java.lang.String):614:20872:appendChild(textNode); |==> <NO-OP>
+160:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Element@hasText():627:21281:textNode.isBlank() |==> false
+161:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Element@hasText():627:21281:textNode.isBlank() |==> true
+162:LVR:TRUE:FALSE:org.jsoup.nodes.Element@hasText():628:21312:true |==> false
+163:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Element@hasText():631:21445:el.hasText() |==> false
+164:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Element@hasText():631:21445:el.hasText() |==> true
+165:LVR:TRUE:FALSE:org.jsoup.nodes.Element@hasText():632:21476:true |==> false
+166:LVR:FALSE:TRUE:org.jsoup.nodes.Element@hasText():635:21521:false |==> true
+167:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@data():648:21934:sb.append(data.getWholeData()); |==> <NO-OP>
+168:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@data():652:22145:sb.append(elementData); |==> <NO-OP>
+169:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Element@className():664:22626:attributes.hasKey("class") |==> false
+170:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Element@className():664:22626:attributes.hasKey("class") |==> true
+171:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Element@classNames():674:23139:classNames == null |==> false
+172:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Element@classNames():676:23218:classNames = new LinkedHashSet<String>(Arrays.asList(names)); |==> <NO-OP>
+173:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@classNames(java.util.Set<java.lang.String>):687:23558:Validate.notNull(classNames); |==> <NO-OP>
+174:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@classNames(java.util.Set<java.lang.String>):688:23596:attributes.put("class", StringUtils.join(classNames, " ")); |==> <NO-OP>
+175:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@addClass(java.lang.String):707:24145:Validate.notNull(className); |==> <NO-OP>
+176:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@addClass(java.lang.String):710:24227:classes.add(className); |==> <NO-OP>
+177:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@addClass(java.lang.String):711:24259:classNames(classes); |==> <NO-OP>
+178:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@removeClass(java.lang.String):722:24523:Validate.notNull(className); |==> <NO-OP>
+179:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@removeClass(java.lang.String):725:24605:classes.remove(className); |==> <NO-OP>
+180:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@removeClass(java.lang.String):726:24640:classNames(classes); |==> <NO-OP>
+181:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@toggleClass(java.lang.String):737:24943:Validate.notNull(className); |==> <NO-OP>
+182:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Element@toggleClass(java.lang.String):740:25045:classes.contains(className) |==> false
+183:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Element@toggleClass(java.lang.String):740:25045:classes.contains(className) |==> true
+184:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@toggleClass(java.lang.String):741:25070:classes.remove(className); |==> <NO-OP>
+185:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@toggleClass(java.lang.String):743:25122:classes.add(className); |==> <NO-OP>
+186:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@toggleClass(java.lang.String):744:25154:classNames(classes); |==> <NO-OP>
+187:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Element@val():754:25415:tagName().equals("textarea") |==> false
+188:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Element@val():754:25415:tagName().equals("textarea") |==> true
+189:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Element@val(java.lang.String):766:25736:tagName().equals("textarea") |==> false
+190:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Element@val(java.lang.String):766:25736:tagName().equals("textarea") |==> true
+191:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@val(java.lang.String):767:25762:text(value); |==> <NO-OP>
+192:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@val(java.lang.String):769:25800:attr("value", value); |==> <NO-OP>
+193:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):774:25927:parent() != null |==> true
+194:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):774:25918:parent() != null && parent().tag().canContainBlock() |==> parent() != null == parent().tag().canContainBlock()
+195:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):774:25935:parent() != null && parent().tag().canContainBlock() |==> false
+196:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):774:25918:parent() != null && parent().tag().canContainBlock() |==> parent() != null
+197:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):774:25938:parent() != null && parent().tag().canContainBlock() |==> parent().tag().canContainBlock()
+198:LVR:0:POS:org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):774:25992:0 |==> 1
+199:LVR:0:NEG:org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):774:25992:0 |==> -1
+200:ROR:==(int,int):<=(int,int):org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):774:25974:siblingIndex() == 0 |==> siblingIndex() <= 0
+201:ROR:==(int,int):>=(int,int):org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):774:25974:siblingIndex() == 0 |==> siblingIndex() >= 0
+202:ROR:==(int,int):FALSE(int,int):org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):774:25989:siblingIndex() == 0 |==> false
+203:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):774:25918:parent() != null && parent().tag().canContainBlock() && siblingIndex() == 0 |==> (parent() != null && parent().tag().canContainBlock()) == (siblingIndex() == 0)
+204:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):774:25971:parent() != null && parent().tag().canContainBlock() && siblingIndex() == 0 |==> false
+205:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):774:25918:parent() != null && parent().tag().canContainBlock() && siblingIndex() == 0 |==> parent() != null && parent().tag().canContainBlock()
+206:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):774:25974:parent() != null && parent().tag().canContainBlock() && siblingIndex() == 0 |==> siblingIndex() == 0
+207:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):774:25904:isBlock() || (parent() != null && parent().tag().canContainBlock() && siblingIndex() == 0) |==> isBlock() != (parent() != null && parent().tag().canContainBlock() && siblingIndex() == 0)
+208:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):774:25904:isBlock() || (parent() != null && parent().tag().canContainBlock() && siblingIndex() == 0) |==> isBlock()
+209:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):774:25917:isBlock() || (parent() != null && parent().tag().canContainBlock() && siblingIndex() == 0) |==> (parent() != null && parent().tag().canContainBlock() && siblingIndex() == 0)
+210:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):774:25914:isBlock() || (parent() != null && parent().tag().canContainBlock() && siblingIndex() == 0) |==> true
+211:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):775:26008:indent(accum); |==> <NO-OP>
+212:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):776:26031:accum.append("<").append(tagName()).append(attributes.html()); |==> <NO-OP>
+213:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):781:26158:childNodes.isEmpty() && tag.isEmpty() |==> childNodes.isEmpty() == tag.isEmpty()
+214:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):781:26179:childNodes.isEmpty() && tag.isEmpty() |==> false
+215:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):781:26158:childNodes.isEmpty() && tag.isEmpty() |==> childNodes.isEmpty()
+216:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):781:26182:childNodes.isEmpty() && tag.isEmpty() |==> tag.isEmpty()
+217:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):782:26211:accum.append(" />"); |==> <NO-OP>
+218:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):784:26261:accum.append(">"); |==> <NO-OP>
+219:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):785:26292:html(accum); |==> <NO-OP>
+220:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):786:26340:tag.canContainBlock() |==> false
+221:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):786:26340:tag.canContainBlock() |==> true
+222:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):786:26344:indent(accum); |==> <NO-OP>
+223:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@outerHtml(java.lang.StringBuilder):787:26371:accum.append("</").append(tagName()).append(">"); |==> <NO-OP>
+224:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@html():800:26808:html(accum); |==> <NO-OP>
+225:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@html(java.lang.StringBuilder):806:26963:node.outerHtml(accum); |==> <NO-OP>
+226:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@html(java.lang.String):816:27245:empty(); |==> <NO-OP>
+227:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Element@html(java.lang.String):817:27262:append(html); |==> <NO-OP>
+228:LVR:TRUE:FALSE:org.jsoup.nodes.Element@equals(java.lang.Object):827:27452:true |==> false
+229:LVR:FALSE:TRUE:org.jsoup.nodes.Element@equals(java.lang.Object):828:27502:false |==> true
+230:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Element@equals(java.lang.Object):829:27534:super.equals(o) |==> false
+231:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Element@equals(java.lang.Object):829:27534:super.equals(o) |==> true
+232:LVR:FALSE:TRUE:org.jsoup.nodes.Element@equals(java.lang.Object):829:27546:false |==> true
+233:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Element@equals(java.lang.Object):833:27610:tag != null |==> true
+234:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Element@equals(java.lang.Object):833:27659:element.tag != null |==> true
+235:LVR:FALSE:TRUE:org.jsoup.nodes.Element@equals(java.lang.Object):833:27675:false |==> true
+236:LVR:TRUE:FALSE:org.jsoup.nodes.Element@equals(java.lang.Object):835:27698:true |==> false
+237:LVR:POS:0:org.jsoup.nodes.Element@hashCode():841:27809:31 |==> 0
+238:LVR:POS:NEG:org.jsoup.nodes.Element@hashCode():841:27809:31 |==> -31
+239:AOR:*(int,int):%(int,int):org.jsoup.nodes.Element@hashCode():841:27809:31 * result |==> 31 % result
+240:AOR:*(int,int):+(int,int):org.jsoup.nodes.Element@hashCode():841:27809:31 * result |==> 31 + result
+241:AOR:*(int,int):-(int,int):org.jsoup.nodes.Element@hashCode():841:27809:31 * result |==> 31 - result
+242:AOR:*(int,int):/(int,int):org.jsoup.nodes.Element@hashCode():841:27809:31 * result |==> 31 / result
+243:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Element@hashCode():841:27828:tag != null |==> true
+244:LVR:0:POS:org.jsoup.nodes.Element@hashCode():841:27855:0 |==> 1
+245:LVR:0:NEG:org.jsoup.nodes.Element@hashCode():841:27855:0 |==> -1
+246:AOR:+(int,int):%(int,int):org.jsoup.nodes.Element@hashCode():841:27809:31 * result + (tag != null ? tag.hashCode() : 0) |==> 31 * result % (tag != null ? tag.hashCode() : 0)
+247:AOR:+(int,int):*(int,int):org.jsoup.nodes.Element@hashCode():841:27809:31 * result + (tag != null ? tag.hashCode() : 0) |==> 31 * result * (tag != null ? tag.hashCode() : 0)
+248:AOR:+(int,int):-(int,int):org.jsoup.nodes.Element@hashCode():841:27809:31 * result + (tag != null ? tag.hashCode() : 0) |==> 31 * result - (tag != null ? tag.hashCode() : 0)
+249:AOR:+(int,int):/(int,int):org.jsoup.nodes.Element@hashCode():841:27809:31 * result + (tag != null ? tag.hashCode() : 0) |==> 31 * result / (tag != null ? tag.hashCode() : 0)
+250:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Element@hashCode():841:27800:result = 31 * result + (tag != null ? tag.hashCode() : 0); |==> <NO-OP>
+251:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:17:534:tags.put(defaultAncestor.tagName, defaultAncestor); |==> <NO-OP>
+252:LVR:TRUE:FALSE:org.jsoup.parser.Tag:21:651:true |==> false
+253:LVR:TRUE:FALSE:org.jsoup.parser.Tag:22:714:true |==> false
+254:LVR:TRUE:FALSE:org.jsoup.parser.Tag:23:798:true |==> false
+255:LVR:FALSE:TRUE:org.jsoup.parser.Tag:24:864:false |==> true
+256:LVR:FALSE:TRUE:org.jsoup.parser.Tag:25:955:false |==> true
+257:LVR:FALSE:TRUE:org.jsoup.parser.Tag:26:1033:false |==> true
+258:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@<init>(java.lang.String):30:1208:this.tagName = tagName.toLowerCase(); |==> <NO-OP>
+259:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag@valueOf(java.lang.String):45:1727:Validate.notNull(tagName); |==> <NO-OP>
+260:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@valueOf(java.lang.String):46:1762:tagName = tagName.trim().toLowerCase(); |==> <NO-OP>
+261:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag@valueOf(java.lang.String):47:1810:Validate.notEmpty(tagName); |==> <NO-OP>
+262:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.parser.Tag@valueOf(java.lang.String):51:1930:tag == null |==> false
+263:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@valueOf(java.lang.String):53:2054:tag = new Tag(tagName); |==> <NO-OP>
+264:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag@valueOf(java.lang.String):54:2094:tag.setAncestor(defaultAncestor.tagName); |==> <NO-OP>
+265:LVR:FALSE:TRUE:org.jsoup.parser.Tag@valueOf(java.lang.String):55:2166:false |==> true
+266:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@valueOf(java.lang.String):55:2152:tag.isBlock = false; |==> <NO-OP>
+267:LVR:TRUE:FALSE:org.jsoup.parser.Tag@valueOf(java.lang.String):56:2211:true |==> false
+268:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@valueOf(java.lang.String):56:2189:tag.canContainBlock = true; |==> <NO-OP>
+269:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):68:2494:Validate.notNull(child); |==> <NO-OP>
+270:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):70:2532:child.isBlock && !this.canContainBlock |==> child.isBlock == !this.canContainBlock
+271:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):70:2546:child.isBlock && !this.canContainBlock |==> false
+272:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):70:2532:child.isBlock && !this.canContainBlock |==> child.isBlock
+273:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):70:2549:child.isBlock && !this.canContainBlock |==> !this.canContainBlock
+274:LVR:FALSE:TRUE:org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):71:2591:false |==> true
+275:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):73:2611:!child.isBlock && !this.canContainInline |==> !child.isBlock == !this.canContainInline
+276:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):73:2626:!child.isBlock && !this.canContainInline |==> false
+277:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):73:2611:!child.isBlock && !this.canContainInline |==> !child.isBlock
+278:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):73:2629:!child.isBlock && !this.canContainInline |==> !this.canContainInline
+279:LVR:FALSE:TRUE:org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):74:2695:false |==> true
+280:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):76:2715:this.optionalClosing && this.equals(child) |==> this.optionalClosing == this.equals(child)
+281:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):76:2736:this.optionalClosing && this.equals(child) |==> false
+282:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):76:2715:this.optionalClosing && this.equals(child) |==> this.optionalClosing
+283:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):76:2739:this.optionalClosing && this.equals(child) |==> this.equals(child)
+284:LVR:FALSE:TRUE:org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):77:2778:false |==> true
+285:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):79:2798:this.empty || this.isData() |==> this.empty != this.isData()
+286:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):79:2798:this.empty || this.isData() |==> this.empty
+287:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):79:2812:this.empty || this.isData() |==> this.isData()
+288:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):79:2809:this.empty || this.isData() |==> true
+289:LVR:FALSE:TRUE:org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):80:2846:false |==> true
+290:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):84:3043:this.tagName.equals("head") |==> false
+291:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):84:3043:this.tagName.equals("head") |==> true
+292:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):85:3071:child.tagName.equals("base") || child.tagName.equals("script") |==> child.tagName.equals("base") != child.tagName.equals("script")
+293:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):85:3071:child.tagName.equals("base") || child.tagName.equals("script") |==> child.tagName.equals("base")
+294:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):85:3103:child.tagName.equals("base") || child.tagName.equals("script") |==> child.tagName.equals("script")
+295:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):85:3100:child.tagName.equals("base") || child.tagName.equals("script") |==> true
+296:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):85:3071:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") |==> (child.tagName.equals("base") || child.tagName.equals("script")) != child.tagName.equals("noscript")
+297:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):85:3071:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") |==> child.tagName.equals("base") || child.tagName.equals("script")
+298:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):85:3137:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") |==> child.tagName.equals("noscript")
+299:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):85:3134:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") |==> true
+300:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):85:3071:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") |==> (child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript")) != child.tagName.equals("link")
+301:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):85:3071:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") |==> child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript")
+302:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):85:3173:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") |==> child.tagName.equals("link")
+303:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):85:3170:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") |==> true
+304:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):85:3071:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") || child.tagName.equals("meta") |==> (child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link")) != child.tagName.equals("meta")
+305:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):85:3071:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") || child.tagName.equals("meta") |==> child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link")
+306:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):86:3225:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") || child.tagName.equals("meta") |==> child.tagName.equals("meta")
+307:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):85:3202:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") || child.tagName.equals("meta") |==> true
+308:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):85:3071:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") || child.tagName.equals("meta") || child.tagName.equals("title") |==> (child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") || child.tagName.equals("meta")) != child.tagName.equals("title")
+309:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):85:3071:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") || child.tagName.equals("meta") || child.tagName.equals("title") |==> child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") || child.tagName.equals("meta")
+310:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):86:3257:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") || child.tagName.equals("meta") || child.tagName.equals("title") |==> child.tagName.equals("title")
+311:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):86:3254:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") || child.tagName.equals("meta") || child.tagName.equals("title") |==> true
+312:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):85:3071:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") || child.tagName.equals("meta") || child.tagName.equals("title") || child.tagName.equals("style") |==> (child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") || child.tagName.equals("meta") || child.tagName.equals("title")) != child.tagName.equals("style")
+313:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):85:3071:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") || child.tagName.equals("meta") || child.tagName.equals("title") || child.tagName.equals("style") |==> child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") || child.tagName.equals("meta") || child.tagName.equals("title")
+314:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):86:3290:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") || child.tagName.equals("meta") || child.tagName.equals("title") || child.tagName.equals("style") |==> child.tagName.equals("style")
+315:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):86:3287:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") || child.tagName.equals("meta") || child.tagName.equals("title") || child.tagName.equals("style") |==> true
+316:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):85:3071:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") || child.tagName.equals("meta") || child.tagName.equals("title") || child.tagName.equals("style") || child.tagName.equals("object") |==> (child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") || child.tagName.equals("meta") || child.tagName.equals("title") || child.tagName.equals("style")) != child.tagName.equals("object")
+317:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):85:3071:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") || child.tagName.equals("meta") || child.tagName.equals("title") || child.tagName.equals("style") || child.tagName.equals("object") |==> child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") || child.tagName.equals("meta") || child.tagName.equals("title") || child.tagName.equals("style")
+318:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):86:3323:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") || child.tagName.equals("meta") || child.tagName.equals("title") || child.tagName.equals("style") || child.tagName.equals("object") |==> child.tagName.equals("object")
+319:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):86:3320:child.tagName.equals("base") || child.tagName.equals("script") || child.tagName.equals("noscript") || child.tagName.equals("link") || child.tagName.equals("meta") || child.tagName.equals("title") || child.tagName.equals("style") || child.tagName.equals("object") |==> true
+320:LVR:TRUE:FALSE:org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):87:3380:true |==> false
+321:LVR:FALSE:TRUE:org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):89:3419:false |==> true
+322:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):93:3486:this.tagName.equals("dt") && child.tagName.equals("dd") |==> this.tagName.equals("dt") == child.tagName.equals("dd")
+323:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):93:3512:this.tagName.equals("dt") && child.tagName.equals("dd") |==> false
+324:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):93:3486:this.tagName.equals("dt") && child.tagName.equals("dd") |==> this.tagName.equals("dt")
+325:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):93:3515:this.tagName.equals("dt") && child.tagName.equals("dd") |==> child.tagName.equals("dd")
+326:LVR:FALSE:TRUE:org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):94:3562:false |==> true
+327:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):95:3581:this.tagName.equals("dd") && child.tagName.equals("dt") |==> this.tagName.equals("dd") == child.tagName.equals("dt")
+328:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):95:3607:this.tagName.equals("dd") && child.tagName.equals("dt") |==> false
+329:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):95:3581:this.tagName.equals("dd") && child.tagName.equals("dt") |==> this.tagName.equals("dd")
+330:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):95:3610:this.tagName.equals("dd") && child.tagName.equals("dt") |==> child.tagName.equals("dt")
+331:LVR:FALSE:TRUE:org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):96:3657:false |==> true
+332:LVR:TRUE:FALSE:org.jsoup.parser.Tag@canContain(org.jsoup.parser.Tag):100:3756:true |==> false
+333:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.parser.Tag@isData():132:4400:!canContainInline && !isEmpty() |==> !canContainInline == !isEmpty()
+334:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.Tag@isData():132:4418:!canContainInline && !isEmpty() |==> false
+335:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tag@isData():132:4400:!canContainInline && !isEmpty() |==> !canContainInline
+336:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tag@isData():132:4421:!canContainInline && !isEmpty() |==> !isEmpty()
+337:LVR:0:POS:org.jsoup.parser.Tag@getImplicitParent():152:4878:0 |==> 1
+338:LVR:0:NEG:org.jsoup.parser.Tag@getImplicitParent():152:4878:0 |==> -1
+339:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Tag@isValidParent(org.jsoup.parser.Tag):158:4972:child.ancestors.isEmpty() |==> false
+340:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Tag@isValidParent(org.jsoup.parser.Tag):158:4972:child.ancestors.isEmpty() |==> true
+341:LVR:TRUE:FALSE:org.jsoup.parser.Tag@isValidParent(org.jsoup.parser.Tag):159:4995:true |==> false
+342:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Tag@isValidParent(org.jsoup.parser.Tag):162:5083:this.equals(tag) |==> false
+343:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Tag@isValidParent(org.jsoup.parser.Tag):162:5083:this.equals(tag) |==> true
+344:LVR:TRUE:FALSE:org.jsoup.parser.Tag@isValidParent(org.jsoup.parser.Tag):163:5113:true |==> false
+345:LVR:FALSE:TRUE:org.jsoup.parser.Tag@isValidParent(org.jsoup.parser.Tag):165:5144:false |==> true
+346:LVR:TRUE:FALSE:org.jsoup.parser.Tag@equals(java.lang.Object):170:5240:true |==> false
+347:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.parser.Tag@equals(java.lang.Object):171:5260:o == null |==> false
+348:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.parser.Tag@equals(java.lang.Object):171:5282:getClass() != o.getClass() |==> true
+349:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.parser.Tag@equals(java.lang.Object):171:5258:o == null || getClass() != o.getClass() |==> o == null != (getClass() != o.getClass())
+350:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tag@equals(java.lang.Object):171:5258:o == null || getClass() != o.getClass() |==> o == null
+351:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tag@equals(java.lang.Object):171:5271:o == null || getClass() != o.getClass() |==> getClass() != o.getClass()
+352:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.Tag@equals(java.lang.Object):171:5268:o == null || getClass() != o.getClass() |==> true
+353:LVR:FALSE:TRUE:org.jsoup.parser.Tag@equals(java.lang.Object):171:5306:false |==> true
+354:ROR:!=(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tag@equals(java.lang.Object):175:5354:canContainBlock != tag.canContainBlock |==> canContainBlock
+355:ROR:!=(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tag@equals(java.lang.Object):175:5373:canContainBlock != tag.canContainBlock |==> tag.canContainBlock
+356:ROR:!=(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.Tag@equals(java.lang.Object):175:5370:canContainBlock != tag.canContainBlock |==> true
+357:LVR:FALSE:TRUE:org.jsoup.parser.Tag@equals(java.lang.Object):175:5401:false |==> true
+358:ROR:!=(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tag@equals(java.lang.Object):176:5420:canContainInline != tag.canContainInline |==> canContainInline
+359:ROR:!=(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tag@equals(java.lang.Object):176:5440:canContainInline != tag.canContainInline |==> tag.canContainInline
+360:ROR:!=(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.Tag@equals(java.lang.Object):176:5437:canContainInline != tag.canContainInline |==> true
+361:LVR:FALSE:TRUE:org.jsoup.parser.Tag@equals(java.lang.Object):176:5469:false |==> true
+362:ROR:!=(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tag@equals(java.lang.Object):177:5488:empty != tag.empty |==> empty
+363:ROR:!=(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tag@equals(java.lang.Object):177:5497:empty != tag.empty |==> tag.empty
+364:ROR:!=(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.Tag@equals(java.lang.Object):177:5494:empty != tag.empty |==> true
+365:LVR:FALSE:TRUE:org.jsoup.parser.Tag@equals(java.lang.Object):177:5515:false |==> true
+366:ROR:!=(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tag@equals(java.lang.Object):178:5534:isBlock != tag.isBlock |==> isBlock
+367:ROR:!=(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tag@equals(java.lang.Object):178:5545:isBlock != tag.isBlock |==> tag.isBlock
+368:ROR:!=(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.Tag@equals(java.lang.Object):178:5542:isBlock != tag.isBlock |==> true
+369:LVR:FALSE:TRUE:org.jsoup.parser.Tag@equals(java.lang.Object):178:5565:false |==> true
+370:ROR:!=(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tag@equals(java.lang.Object):179:5584:optionalClosing != tag.optionalClosing |==> optionalClosing
+371:ROR:!=(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tag@equals(java.lang.Object):179:5603:optionalClosing != tag.optionalClosing |==> tag.optionalClosing
+372:ROR:!=(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.Tag@equals(java.lang.Object):179:5600:optionalClosing != tag.optionalClosing |==> true
+373:LVR:FALSE:TRUE:org.jsoup.parser.Tag@equals(java.lang.Object):179:5631:false |==> true
+374:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.parser.Tag@equals(java.lang.Object):180:5658:tagName != null |==> true
+375:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.parser.Tag@equals(java.lang.Object):180:5711:tag.tagName != null |==> true
+376:LVR:FALSE:TRUE:org.jsoup.parser.Tag@equals(java.lang.Object):180:5727:false |==> true
+377:LVR:TRUE:FALSE:org.jsoup.parser.Tag@equals(java.lang.Object):182:5750:true |==> false
+378:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.parser.Tag@hashCode():187:5834:tagName != null |==> true
+379:LVR:0:POS:org.jsoup.parser.Tag@hashCode():187:5865:0 |==> 1
+380:LVR:0:NEG:org.jsoup.parser.Tag@hashCode():187:5865:0 |==> -1
+381:LVR:POS:0:org.jsoup.parser.Tag@hashCode():188:5885:31 |==> 0
+382:LVR:POS:NEG:org.jsoup.parser.Tag@hashCode():188:5885:31 |==> -31
+383:AOR:*(int,int):%(int,int):org.jsoup.parser.Tag@hashCode():188:5885:31 * result |==> 31 % result
+384:AOR:*(int,int):+(int,int):org.jsoup.parser.Tag@hashCode():188:5885:31 * result |==> 31 + result
+385:AOR:*(int,int):-(int,int):org.jsoup.parser.Tag@hashCode():188:5885:31 * result |==> 31 - result
+386:AOR:*(int,int):/(int,int):org.jsoup.parser.Tag@hashCode():188:5885:31 * result |==> 31 / result
+387:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.parser.Tag@hashCode():188:5900:isBlock |==> false
+388:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.parser.Tag@hashCode():188:5900:isBlock |==> true
+389:LVR:POS:0:org.jsoup.parser.Tag@hashCode():188:5910:1 |==> 0
+390:LVR:POS:NEG:org.jsoup.parser.Tag@hashCode():188:5910:1 |==> -1
+391:LVR:0:POS:org.jsoup.parser.Tag@hashCode():188:5914:0 |==> 1
+392:LVR:0:NEG:org.jsoup.parser.Tag@hashCode():188:5914:0 |==> -1
+393:AOR:+(int,int):%(int,int):org.jsoup.parser.Tag@hashCode():188:5885:31 * result + (isBlock ? 1 : 0) |==> 31 * result % (isBlock ? 1 : 0)
+394:AOR:+(int,int):*(int,int):org.jsoup.parser.Tag@hashCode():188:5885:31 * result + (isBlock ? 1 : 0) |==> 31 * result * (isBlock ? 1 : 0)
+395:AOR:+(int,int):-(int,int):org.jsoup.parser.Tag@hashCode():188:5885:31 * result + (isBlock ? 1 : 0) |==> 31 * result - (isBlock ? 1 : 0)
+396:AOR:+(int,int):/(int,int):org.jsoup.parser.Tag@hashCode():188:5885:31 * result + (isBlock ? 1 : 0) |==> 31 * result / (isBlock ? 1 : 0)
+397:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@hashCode():188:5876:result = 31 * result + (isBlock ? 1 : 0); |==> <NO-OP>
+398:LVR:POS:0:org.jsoup.parser.Tag@hashCode():189:5935:31 |==> 0
+399:LVR:POS:NEG:org.jsoup.parser.Tag@hashCode():189:5935:31 |==> -31
+400:AOR:*(int,int):%(int,int):org.jsoup.parser.Tag@hashCode():189:5935:31 * result |==> 31 % result
+401:AOR:*(int,int):+(int,int):org.jsoup.parser.Tag@hashCode():189:5935:31 * result |==> 31 + result
+402:AOR:*(int,int):-(int,int):org.jsoup.parser.Tag@hashCode():189:5935:31 * result |==> 31 - result
+403:AOR:*(int,int):/(int,int):org.jsoup.parser.Tag@hashCode():189:5935:31 * result |==> 31 / result
+404:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.parser.Tag@hashCode():189:5950:canContainBlock |==> false
+405:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.parser.Tag@hashCode():189:5950:canContainBlock |==> true
+406:LVR:POS:0:org.jsoup.parser.Tag@hashCode():189:5968:1 |==> 0
+407:LVR:POS:NEG:org.jsoup.parser.Tag@hashCode():189:5968:1 |==> -1
+408:LVR:0:POS:org.jsoup.parser.Tag@hashCode():189:5972:0 |==> 1
+409:LVR:0:NEG:org.jsoup.parser.Tag@hashCode():189:5972:0 |==> -1
+410:AOR:+(int,int):%(int,int):org.jsoup.parser.Tag@hashCode():189:5935:31 * result + (canContainBlock ? 1 : 0) |==> 31 * result % (canContainBlock ? 1 : 0)
+411:AOR:+(int,int):*(int,int):org.jsoup.parser.Tag@hashCode():189:5935:31 * result + (canContainBlock ? 1 : 0) |==> 31 * result * (canContainBlock ? 1 : 0)
+412:AOR:+(int,int):-(int,int):org.jsoup.parser.Tag@hashCode():189:5935:31 * result + (canContainBlock ? 1 : 0) |==> 31 * result - (canContainBlock ? 1 : 0)
+413:AOR:+(int,int):/(int,int):org.jsoup.parser.Tag@hashCode():189:5935:31 * result + (canContainBlock ? 1 : 0) |==> 31 * result / (canContainBlock ? 1 : 0)
+414:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@hashCode():189:5926:result = 31 * result + (canContainBlock ? 1 : 0); |==> <NO-OP>
+415:LVR:POS:0:org.jsoup.parser.Tag@hashCode():190:5993:31 |==> 0
+416:LVR:POS:NEG:org.jsoup.parser.Tag@hashCode():190:5993:31 |==> -31
+417:AOR:*(int,int):%(int,int):org.jsoup.parser.Tag@hashCode():190:5993:31 * result |==> 31 % result
+418:AOR:*(int,int):+(int,int):org.jsoup.parser.Tag@hashCode():190:5993:31 * result |==> 31 + result
+419:AOR:*(int,int):-(int,int):org.jsoup.parser.Tag@hashCode():190:5993:31 * result |==> 31 - result
+420:AOR:*(int,int):/(int,int):org.jsoup.parser.Tag@hashCode():190:5993:31 * result |==> 31 / result
+421:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.parser.Tag@hashCode():190:6008:canContainInline |==> false
+422:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.parser.Tag@hashCode():190:6008:canContainInline |==> true
+423:LVR:POS:0:org.jsoup.parser.Tag@hashCode():190:6027:1 |==> 0
+424:LVR:POS:NEG:org.jsoup.parser.Tag@hashCode():190:6027:1 |==> -1
+425:LVR:0:POS:org.jsoup.parser.Tag@hashCode():190:6031:0 |==> 1
+426:LVR:0:NEG:org.jsoup.parser.Tag@hashCode():190:6031:0 |==> -1
+427:AOR:+(int,int):%(int,int):org.jsoup.parser.Tag@hashCode():190:5993:31 * result + (canContainInline ? 1 : 0) |==> 31 * result % (canContainInline ? 1 : 0)
+428:AOR:+(int,int):*(int,int):org.jsoup.parser.Tag@hashCode():190:5993:31 * result + (canContainInline ? 1 : 0) |==> 31 * result * (canContainInline ? 1 : 0)
+429:AOR:+(int,int):-(int,int):org.jsoup.parser.Tag@hashCode():190:5993:31 * result + (canContainInline ? 1 : 0) |==> 31 * result - (canContainInline ? 1 : 0)
+430:AOR:+(int,int):/(int,int):org.jsoup.parser.Tag@hashCode():190:5993:31 * result + (canContainInline ? 1 : 0) |==> 31 * result / (canContainInline ? 1 : 0)
+431:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@hashCode():190:5984:result = 31 * result + (canContainInline ? 1 : 0); |==> <NO-OP>
+432:LVR:POS:0:org.jsoup.parser.Tag@hashCode():191:6052:31 |==> 0
+433:LVR:POS:NEG:org.jsoup.parser.Tag@hashCode():191:6052:31 |==> -31
+434:AOR:*(int,int):%(int,int):org.jsoup.parser.Tag@hashCode():191:6052:31 * result |==> 31 % result
+435:AOR:*(int,int):+(int,int):org.jsoup.parser.Tag@hashCode():191:6052:31 * result |==> 31 + result
+436:AOR:*(int,int):-(int,int):org.jsoup.parser.Tag@hashCode():191:6052:31 * result |==> 31 - result
+437:AOR:*(int,int):/(int,int):org.jsoup.parser.Tag@hashCode():191:6052:31 * result |==> 31 / result
+438:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.parser.Tag@hashCode():191:6067:optionalClosing |==> false
+439:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.parser.Tag@hashCode():191:6067:optionalClosing |==> true
+440:LVR:POS:0:org.jsoup.parser.Tag@hashCode():191:6085:1 |==> 0
+441:LVR:POS:NEG:org.jsoup.parser.Tag@hashCode():191:6085:1 |==> -1
+442:LVR:0:POS:org.jsoup.parser.Tag@hashCode():191:6089:0 |==> 1
+443:LVR:0:NEG:org.jsoup.parser.Tag@hashCode():191:6089:0 |==> -1
+444:AOR:+(int,int):%(int,int):org.jsoup.parser.Tag@hashCode():191:6052:31 * result + (optionalClosing ? 1 : 0) |==> 31 * result % (optionalClosing ? 1 : 0)
+445:AOR:+(int,int):*(int,int):org.jsoup.parser.Tag@hashCode():191:6052:31 * result + (optionalClosing ? 1 : 0) |==> 31 * result * (optionalClosing ? 1 : 0)
+446:AOR:+(int,int):-(int,int):org.jsoup.parser.Tag@hashCode():191:6052:31 * result + (optionalClosing ? 1 : 0) |==> 31 * result - (optionalClosing ? 1 : 0)
+447:AOR:+(int,int):/(int,int):org.jsoup.parser.Tag@hashCode():191:6052:31 * result + (optionalClosing ? 1 : 0) |==> 31 * result / (optionalClosing ? 1 : 0)
+448:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@hashCode():191:6043:result = 31 * result + (optionalClosing ? 1 : 0); |==> <NO-OP>
+449:LVR:POS:0:org.jsoup.parser.Tag@hashCode():192:6110:31 |==> 0
+450:LVR:POS:NEG:org.jsoup.parser.Tag@hashCode():192:6110:31 |==> -31
+451:AOR:*(int,int):%(int,int):org.jsoup.parser.Tag@hashCode():192:6110:31 * result |==> 31 % result
+452:AOR:*(int,int):+(int,int):org.jsoup.parser.Tag@hashCode():192:6110:31 * result |==> 31 + result
+453:AOR:*(int,int):-(int,int):org.jsoup.parser.Tag@hashCode():192:6110:31 * result |==> 31 - result
+454:AOR:*(int,int):/(int,int):org.jsoup.parser.Tag@hashCode():192:6110:31 * result |==> 31 / result
+455:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.parser.Tag@hashCode():192:6125:empty |==> false
+456:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.parser.Tag@hashCode():192:6125:empty |==> true
+457:LVR:POS:0:org.jsoup.parser.Tag@hashCode():192:6133:1 |==> 0
+458:LVR:POS:NEG:org.jsoup.parser.Tag@hashCode():192:6133:1 |==> -1
+459:LVR:0:POS:org.jsoup.parser.Tag@hashCode():192:6137:0 |==> 1
+460:LVR:0:NEG:org.jsoup.parser.Tag@hashCode():192:6137:0 |==> -1
+461:AOR:+(int,int):%(int,int):org.jsoup.parser.Tag@hashCode():192:6110:31 * result + (empty ? 1 : 0) |==> 31 * result % (empty ? 1 : 0)
+462:AOR:+(int,int):*(int,int):org.jsoup.parser.Tag@hashCode():192:6110:31 * result + (empty ? 1 : 0) |==> 31 * result * (empty ? 1 : 0)
+463:AOR:+(int,int):-(int,int):org.jsoup.parser.Tag@hashCode():192:6110:31 * result + (empty ? 1 : 0) |==> 31 * result - (empty ? 1 : 0)
+464:AOR:+(int,int):/(int,int):org.jsoup.parser.Tag@hashCode():192:6110:31 * result + (empty ? 1 : 0) |==> 31 * result / (empty ? 1 : 0)
+465:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@hashCode():192:6101:result = 31 * result + (empty ? 1 : 0); |==> <NO-OP>
+466:LVR:0:POS:org.jsoup.parser.Tag:208:6582:0 |==> 1
+467:LVR:0:NEG:org.jsoup.parser.Tag:208:6582:0 |==> -1
+468:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:208:6539:createBlock("HTML").setAncestor(new String[0]); |==> <NO-OP>
+469:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:209:6625:createBlock("HEAD").setAncestor("HTML"); |==> <NO-OP>
+470:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:210:6739:createBlock("BODY").setAncestor("HTML"); |==> <NO-OP>
+471:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:211:6818:createBlock("FRAMESET").setAncestor("HTML"); |==> <NO-OP>
+472:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:215:6979:createBlock("SCRIPT").setAncestor("HEAD", "BODY").setContainDataOnly(); |==> <NO-OP>
+473:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:216:7059:createBlock("NOSCRIPT").setAncestor("HEAD", "BODY"); |==> <NO-OP>
+474:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:217:7120:createBlock("STYLE").setAncestor("HEAD", "BODY").setContainDataOnly(); |==> <NO-OP>
+475:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:218:7199:createBlock("META").setAncestor("HEAD", "BODY").setEmpty(); |==> <NO-OP>
+476:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:219:7267:createBlock("LINK").setAncestor("HEAD", "BODY").setEmpty(); |==> <NO-OP>
+477:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:220:7355:createInline("OBJECT").setAncestor("HEAD", "BODY"); |==> <NO-OP>
+478:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:221:7447:createBlock("TITLE").setAncestor("HEAD", "BODY").setContainDataOnly(); |==> <NO-OP>
+479:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:222:7526:createInline("BASE").setAncestor("HEAD", "BODY").setEmpty(); |==> <NO-OP>
+480:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:224:7596:createBlock("FRAME").setAncestor("FRAMESET").setEmpty(); |==> <NO-OP>
+481:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:225:7661:createBlock("NOFRAMES").setAncestor("FRAMESET").setContainDataOnly(); |==> <NO-OP>
+482:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:230:7763:createInline("FONT"); |==> <NO-OP>
+483:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:231:7793:createInline("TT"); |==> <NO-OP>
+484:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:232:7821:createInline("I"); |==> <NO-OP>
+485:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:233:7848:createInline("B"); |==> <NO-OP>
+486:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:234:7875:createInline("BIG"); |==> <NO-OP>
+487:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:235:7904:createInline("SMALL"); |==> <NO-OP>
+488:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:238:7954:createInline("EM"); |==> <NO-OP>
+489:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:239:7982:createInline("STRONG"); |==> <NO-OP>
+490:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:240:8014:createInline("DFN"); |==> <NO-OP>
+491:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:241:8043:createInline("CODE"); |==> <NO-OP>
+492:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:242:8073:createInline("SAMP"); |==> <NO-OP>
+493:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:243:8103:createInline("KBD"); |==> <NO-OP>
+494:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:244:8132:createInline("VAR"); |==> <NO-OP>
+495:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:245:8161:createInline("CITE"); |==> <NO-OP>
+496:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:246:8191:createInline("ABBR"); |==> <NO-OP>
+497:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:247:8221:createInline("ACRONYM"); |==> <NO-OP>
+498:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:250:8274:createInline("A").setOptionalClosing(); |==> <NO-OP>
+499:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:251:8345:createInline("IMG").setEmpty(); |==> <NO-OP>
+500:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:252:8385:createInline("BR").setEmpty(); |==> <NO-OP>
+501:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:253:8424:createInline("MAP"); |==> <NO-OP>
+502:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:254:8538:createInline("Q"); |==> <NO-OP>
+503:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:255:8565:createInline("SUB"); |==> <NO-OP>
+504:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:256:8594:createInline("SUP"); |==> <NO-OP>
+505:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:257:8623:createInline("SPAN"); |==> <NO-OP>
+506:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:258:8653:createInline("BDO"); |==> <NO-OP>
+507:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:265:9055:createBlock("P").setContainInlineOnly(); |==> <NO-OP>
+508:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:266:9126:createBlock("H1").setContainInlineOnly(); |==> <NO-OP>
+509:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:267:9176:createBlock("H2").setContainInlineOnly(); |==> <NO-OP>
+510:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:268:9226:createBlock("H3").setContainInlineOnly(); |==> <NO-OP>
+511:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:269:9276:createBlock("H4").setContainInlineOnly(); |==> <NO-OP>
+512:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:270:9326:createBlock("H5").setContainInlineOnly(); |==> <NO-OP>
+513:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:271:9376:createBlock("H6").setContainInlineOnly(); |==> <NO-OP>
+514:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:272:9426:createBlock("UL"); |==> <NO-OP>
+515:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:273:9453:createBlock("OL"); |==> <NO-OP>
+516:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:274:9480:createBlock("PRE").setContainInlineOnly().setPreserveWhitespace(); |==> <NO-OP>
+517:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:275:9555:createBlock("DIV"); |==> <NO-OP>
+518:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:276:9583:createBlock("BLOCKQUOTE"); |==> <NO-OP>
+519:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:277:9618:createBlock("HR").setEmpty(); |==> <NO-OP>
+520:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:278:9656:createBlock("ADDRESS").setContainInlineOnly(); |==> <NO-OP>
+521:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:282:9733:createBlock("FORM").setOptionalClosing(); |==> <NO-OP>
+522:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:283:9805:createInline("INPUT").setAncestor("FORM").setEmpty(); |==> <NO-OP>
+523:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:284:9867:createInline("SELECT").setAncestor("FORM"); |==> <NO-OP>
+524:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:285:9954:createInline("TEXTAREA").setAncestor("FORM").setContainDataOnly(); |==> <NO-OP>
+525:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:286:10029:createInline("LABEL").setAncestor("FORM").setOptionalClosing(); |==> <NO-OP>
+526:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:287:10113:createInline("BUTTON").setAncestor("FORM"); |==> <NO-OP>
+527:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:288:10198:createInline("OPTGROUP").setAncestor("SELECT"); |==> <NO-OP>
+528:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:289:10254:createInline("OPTION").setAncestor("SELECT").setContainDataOnly(); |==> <NO-OP>
+529:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:290:10329:createBlock("FIELDSET").setAncestor("FORM"); |==> <NO-OP>
+530:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:291:10382:createInline("LEGEND").setAncestor("FIELDSET"); |==> <NO-OP>
+531:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:294:10456:createInline("AREA").setEmpty(); |==> <NO-OP>
+532:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:295:10521:createInline("PARAM").setAncestor("OBJECT").setEmpty(); |==> <NO-OP>
+533:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:296:10585:createBlock("INS"); |==> <NO-OP>
+534:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:297:10633:createBlock("DEL"); |==> <NO-OP>
+535:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:299:10682:createBlock("DL"); |==> <NO-OP>
+536:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:300:10709:createInline("DT").setAncestor("DL").setOptionalClosing(); |==> <NO-OP>
+537:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:301:10776:createInline("DD").setAncestor("DL").setOptionalClosing(); |==> <NO-OP>
+538:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:303:10844:createBlock("LI").setAncestor("UL", "OL").setOptionalClosing(); |==> <NO-OP>
+539:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:306:10960:createBlock("TABLE"); |==> <NO-OP>
+540:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:307:11060:createBlock("CAPTION").setAncestor("TABLE"); |==> <NO-OP>
+541:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:308:11113:createBlock("THEAD").setAncestor("TABLE").setOptionalClosing(); |==> <NO-OP>
+542:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:309:11185:createBlock("TFOOT").setAncestor("TABLE").setOptionalClosing(); |==> <NO-OP>
+543:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:310:11257:createBlock("TBODY").setAncestor("TABLE").setOptionalClosing(); |==> <NO-OP>
+544:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:311:11329:createBlock("COLGROUP").setAncestor("TABLE").setOptionalClosing(); |==> <NO-OP>
+545:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:312:11404:createBlock("COL").setAncestor("COLGROUP").setEmpty(); |==> <NO-OP>
+546:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:313:11467:createBlock("TR").setAncestor("TABLE").setOptionalClosing(); |==> <NO-OP>
+547:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:314:11536:createBlock("TH").setAncestor("TR").setOptionalClosing(); |==> <NO-OP>
+548:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag:315:11602:createBlock("TD").setAncestor("TR").setOptionalClosing(); |==> <NO-OP>
+549:LVR:FALSE:TRUE:org.jsoup.parser.Tag@createInline(java.lang.String):324:11888:false |==> true
+550:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@createInline(java.lang.String):324:11871:inline.isBlock = false; |==> <NO-OP>
+551:LVR:FALSE:TRUE:org.jsoup.parser.Tag@createInline(java.lang.String):325:11928:false |==> true
+552:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@createInline(java.lang.String):325:11903:inline.canContainBlock = false; |==> <NO-OP>
+553:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag@register(org.jsoup.parser.Tag):330:12026:tag.setAncestor(defaultAncestor.tagName); |==> <NO-OP>
+554:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag@register(org.jsoup.parser.Tag):332:12110:tags.put(tag.tagName, tag); |==> <NO-OP>
+555:LVR:FALSE:TRUE:org.jsoup.parser.Tag@setContainInlineOnly():338:12242:false |==> true
+556:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@setContainInlineOnly():338:12224:canContainBlock = false; |==> <NO-OP>
+557:LVR:TRUE:FALSE:org.jsoup.parser.Tag@setContainInlineOnly():339:12276:true |==> false
+558:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@setContainInlineOnly():339:12257:canContainInline = true; |==> <NO-OP>
+559:LVR:FALSE:TRUE:org.jsoup.parser.Tag@setContainDataOnly():344:12375:false |==> true
+560:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@setContainDataOnly():344:12357:canContainBlock = false; |==> <NO-OP>
+561:LVR:FALSE:TRUE:org.jsoup.parser.Tag@setContainDataOnly():345:12409:false |==> true
+562:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@setContainDataOnly():345:12390:canContainInline = false; |==> <NO-OP>
+563:LVR:TRUE:FALSE:org.jsoup.parser.Tag@setContainDataOnly():346:12445:true |==> false
+564:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@setContainDataOnly():346:12424:preserveWhitespace = true; |==> <NO-OP>
+565:LVR:FALSE:TRUE:org.jsoup.parser.Tag@setEmpty():351:12534:false |==> true
+566:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@setEmpty():351:12516:canContainBlock = false; |==> <NO-OP>
+567:LVR:FALSE:TRUE:org.jsoup.parser.Tag@setEmpty():352:12568:false |==> true
+568:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@setEmpty():352:12549:canContainInline = false; |==> <NO-OP>
+569:LVR:TRUE:FALSE:org.jsoup.parser.Tag@setEmpty():353:12591:true |==> false
+570:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@setEmpty():353:12583:empty = true; |==> <NO-OP>
+571:LVR:TRUE:FALSE:org.jsoup.parser.Tag@setOptionalClosing():358:12690:true |==> false
+572:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@setOptionalClosing():358:12672:optionalClosing = true; |==> <NO-OP>
+573:LVR:TRUE:FALSE:org.jsoup.parser.Tag@setPreserveWhitespace():363:12795:true |==> false
+574:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@setPreserveWhitespace():363:12774:preserveWhitespace = true; |==> <NO-OP>
+575:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.parser.Tag@setAncestor(java.lang.String[]):368:12900:tagNames == null |==> false
+576:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@setAncestor(java.lang.String[]):369:12923:ancestors = Collections.emptyList(); |==> <NO-OP>
+577:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tag@setAncestor(java.lang.String[]):371:12989:ancestors = new ArrayList<Tag>(tagNames.length); |==> <NO-OP>
+578:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tag@setAncestor(java.lang.String[]):373:13097:ancestors.add(Tag.valueOf(name)); |==> <NO-OP>
+579:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@<init>(java.lang.String,java.lang.String,boolean):28:940:Validate.notNull(html); |==> <NO-OP>
+580:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@<init>(java.lang.String,java.lang.String,boolean):29:972:Validate.notNull(baseUri); |==> <NO-OP>
+581:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Parser@<init>(java.lang.String,java.lang.String,boolean):33:1086:this.baseUri = baseUri; |==> <NO-OP>
+582:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.parser.Parser@<init>(java.lang.String,java.lang.String,boolean):35:1123:isBodyFragment |==> false
+583:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.parser.Parser@<init>(java.lang.String,java.lang.String,boolean):35:1123:isBodyFragment |==> true
+584:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@<init>(java.lang.String,java.lang.String,boolean):37:1202:stack.add(doc.body()); |==> <NO-OP>
+585:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@<init>(java.lang.String,java.lang.String,boolean):40:1295:stack.add(doc); |==> <NO-OP>
+586:LVR:FALSE:TRUE:org.jsoup.parser.Parser@parse(java.lang.String,java.lang.String):51:1653:false |==> true
+587:LVR:TRUE:FALSE:org.jsoup.parser.Parser@parseBodyFragment(java.lang.String,java.lang.String):62:2122:true |==> false
+588:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Parser@parse():76:2676:tq.matches("<!--") |==> false
+589:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Parser@parse():76:2676:tq.matches("<!--") |==> true
+590:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parse():77:2704:parseComment(); |==> <NO-OP>
+591:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Parser@parse():78:2753:tq.matches("<![CDATA[") |==> false
+592:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Parser@parse():78:2753:tq.matches("<![CDATA[") |==> true
+593:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parse():79:2786:parseCdata(); |==> <NO-OP>
+594:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.parser.Parser@parse():80:2823:tq.matches("<?") || tq.matches("<!") |==> tq.matches("<?") != tq.matches("<!")
+595:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Parser@parse():80:2823:tq.matches("<?") || tq.matches("<!") |==> tq.matches("<?")
+596:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Parser@parse():80:2843:tq.matches("<?") || tq.matches("<!") |==> tq.matches("<!")
+597:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.Parser@parse():80:2840:tq.matches("<?") || tq.matches("<!") |==> true
+598:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parse():81:2879:parseXmlDecl(); |==> <NO-OP>
+599:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Parser@parse():82:2928:tq.matches("</") |==> false
+600:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Parser@parse():82:2928:tq.matches("</") |==> true
+601:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parse():83:2954:parseEndTag(); |==> <NO-OP>
+602:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Parser@parse():84:3002:tq.matches("<") |==> false
+603:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Parser@parse():84:3002:tq.matches("<") |==> true
+604:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parse():85:3027:parseStartTag(); |==> <NO-OP>
+605:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parse():87:3081:parseTextNode(); |==> <NO-OP>
+606:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseComment():94:3203:tq.consume("<!--"); |==> <NO-OP>
+607:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Parser@parseComment():97:3289:data.endsWith("-") |==> false
+608:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Parser@parseComment():97:3289:data.endsWith("-") |==> true
+609:LVR:0:POS:org.jsoup.parser.Parser@parseComment():98:3346:0 |==> 1
+610:LVR:0:NEG:org.jsoup.parser.Parser@parseComment():98:3346:0 |==> -1
+611:LVR:POS:0:org.jsoup.parser.Parser@parseComment():98:3363:1 |==> 0
+612:LVR:POS:NEG:org.jsoup.parser.Parser@parseComment():98:3363:1 |==> -1
+613:AOR:-(int,int):%(int,int):org.jsoup.parser.Parser@parseComment():98:3349:data.length() - 1 |==> data.length() % 1
+614:AOR:-(int,int):*(int,int):org.jsoup.parser.Parser@parseComment():98:3349:data.length() - 1 |==> data.length() * 1
+615:AOR:-(int,int):+(int,int):org.jsoup.parser.Parser@parseComment():98:3349:data.length() - 1 |==> data.length() + 1
+616:AOR:-(int,int):/(int,int):org.jsoup.parser.Parser@parseComment():98:3349:data.length() - 1 |==> data.length() / 1
+617:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Parser@parseComment():98:3324:data = data.substring(0, data.length() - 1); |==> <NO-OP>
+618:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseComment():100:3429:last().appendChild(comment); |==> <NO-OP>
+619:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseXmlDecl():104:3507:tq.consume("<"); |==> <NO-OP>
+620:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseXmlDecl():110:3787:last().appendChild(decl); |==> <NO-OP>
+621:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseEndTag():114:3861:tq.consume("</"); |==> <NO-OP>
+622:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseEndTag():116:3930:tq.chompTo(">"); |==> <NO-OP>
+623:LVR:0:POS:org.jsoup.parser.Parser@parseEndTag():118:3980:0 |==> 1
+624:LVR:0:NEG:org.jsoup.parser.Parser@parseEndTag():118:3980:0 |==> -1
+625:ROR:!=(int,int):<(int,int):org.jsoup.parser.Parser@parseEndTag():118:3960:tagName.length() != 0 |==> tagName.length() < 0
+626:ROR:!=(int,int):TRUE(int,int):org.jsoup.parser.Parser@parseEndTag():118:3977:tagName.length() != 0 |==> true
+627:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseEndTag():120:4041:popStackToClose(tag); |==> <NO-OP>
+628:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseStartTag():125:4123:tq.consume("<"); |==> <NO-OP>
+629:LVR:0:POS:org.jsoup.parser.Parser@parseStartTag():128:4216:0 |==> 1
+630:LVR:0:NEG:org.jsoup.parser.Parser@parseStartTag():128:4216:0 |==> -1
+631:ROR:==(int,int):>=(int,int):org.jsoup.parser.Parser@parseStartTag():128:4196:tagName.length() == 0 |==> tagName.length() >= 0
+632:ROR:==(int,int):FALSE(int,int):org.jsoup.parser.Parser@parseStartTag():128:4213:tagName.length() == 0 |==> false
+633:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseStartTag():129:4316:tq.addFirst("&lt;"); |==> <NO-OP>
+634:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseStartTag():130:4349:parseTextNode(); |==> <NO-OP>
+635:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.parser.Parser@parseStartTag():135:4462:!tq.matchesAny("<", "/>", ">") && !tq.isEmpty() |==> !tq.matchesAny("<", "/>", ">") == !tq.isEmpty()
+636:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.Parser@parseStartTag():135:4493:!tq.matchesAny("<", "/>", ">") && !tq.isEmpty() |==> false
+637:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Parser@parseStartTag():135:4462:!tq.matchesAny("<", "/>", ">") && !tq.isEmpty() |==> !tq.matchesAny("<", "/>", ">")
+638:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Parser@parseStartTag():135:4496:!tq.matchesAny("<", "/>", ">") && !tq.isEmpty() |==> !tq.isEmpty()
+639:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.parser.Parser@parseStartTag():137:4591:attribute != null |==> true
+640:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseStartTag():138:4616:attributes.put(attribute); |==> <NO-OP>
+641:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Parser@parseStartTag():145:4898:tq.matchChomp("/>") |==> false
+642:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Parser@parseStartTag():145:4898:tq.matchChomp("/>") |==> true
+643:LVR:TRUE:FALSE:org.jsoup.parser.Parser@parseStartTag():146:4967:true |==> false
+644:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Parser@parseStartTag():146:4950:isEmptyElement = true; |==> <NO-OP>
+645:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseStartTag():148:5002:tq.matchChomp(">"); |==> <NO-OP>
+646:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseStartTag():150:5040:addChildToParent(child, isEmptyElement); |==> <NO-OP>
+647:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Parser@parseStartTag():153:5196:tag.isData() |==> false
+648:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Parser@parseStartTag():153:5196:tag.isData() |==> true
+649:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseStartTag():155:5268:tq.chompTo(">"); |==> <NO-OP>
+650:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseStartTag():156:5297:popStackToClose(tag); |==> <NO-OP>
+651:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.parser.Parser@parseStartTag():159:5375:tag.equals(titleTag) || tag.equals(textareaTag) |==> tag.equals(titleTag) != tag.equals(textareaTag)
+652:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Parser@parseStartTag():159:5375:tag.equals(titleTag) || tag.equals(textareaTag) |==> tag.equals(titleTag)
+653:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Parser@parseStartTag():159:5399:tag.equals(titleTag) || tag.equals(textareaTag) |==> tag.equals(textareaTag)
+654:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.Parser@parseStartTag():159:5396:tag.equals(titleTag) || tag.equals(textareaTag) |==> true
+655:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseStartTag():163:5699:child.appendChild(dataNode); |==> <NO-OP>
+656:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Parser@parseStartTag():167:5820:child.tagName().equals("base") |==> false
+657:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Parser@parseStartTag():167:5820:child.tagName().equals("base") |==> true
+658:LVR:0:POS:org.jsoup.parser.Parser@parseStartTag():169:5913:0 |==> 1
+659:LVR:0:NEG:org.jsoup.parser.Parser@parseStartTag():169:5913:0 |==> -1
+660:ROR:!=(int,int):<(int,int):org.jsoup.parser.Parser@parseStartTag():169:5896:href.length() != 0 |==> href.length() < 0
+661:ROR:!=(int,int):TRUE(int,int):org.jsoup.parser.Parser@parseStartTag():169:5910:href.length() != 0 |==> true
+662:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Parser@parseStartTag():170:5962:baseUri = href; |==> <NO-OP>
+663:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseStartTag():171:5994:doc.setBaseUri(href); |==> <NO-OP>
+664:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseAttribute():177:6162:tq.consumeWhitespace(); |==> <NO-OP>
+665:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseAttribute():180:6268:tq.consumeWhitespace(); |==> <NO-OP>
+666:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Parser@parseAttribute():181:6317:tq.matchChomp("=") |==> false
+667:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Parser@parseAttribute():181:6317:tq.matchChomp("=") |==> true
+668:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseAttribute():182:6338:tq.consumeWhitespace(); |==> <NO-OP>
+669:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Parser@parseAttribute():184:6392:tq.matchChomp(SQ) |==> false
+670:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Parser@parseAttribute():184:6392:tq.matchChomp(SQ) |==> true
+671:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Parser@parseAttribute():185:6416:value = tq.chompTo(SQ); |==> <NO-OP>
+672:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Parser@parseAttribute():186:6476:tq.matchChomp(DQ) |==> false
+673:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Parser@parseAttribute():186:6476:tq.matchChomp(DQ) |==> true
+674:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Parser@parseAttribute():187:6500:value = tq.chompTo(DQ); |==> <NO-OP>
+675:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.parser.Parser@parseAttribute():191:6721:!tq.matchesAny("<", "/>", ">") && !tq.matchesWhitespace() |==> !tq.matchesAny("<", "/>", ">") == !tq.matchesWhitespace()
+676:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.Parser@parseAttribute():191:6752:!tq.matchesAny("<", "/>", ">") && !tq.matchesWhitespace() |==> false
+677:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Parser@parseAttribute():191:6721:!tq.matchesAny("<", "/>", ">") && !tq.matchesWhitespace() |==> !tq.matchesAny("<", "/>", ">")
+678:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Parser@parseAttribute():191:6755:!tq.matchesAny("<", "/>", ">") && !tq.matchesWhitespace() |==> !tq.matchesWhitespace()
+679:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.parser.Parser@parseAttribute():191:6721:!tq.matchesAny("<", "/>", ">") && !tq.matchesWhitespace() && !tq.isEmpty() |==> (!tq.matchesAny("<", "/>", ">") && !tq.matchesWhitespace()) == !tq.isEmpty()
+680:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.Parser@parseAttribute():191:6779:!tq.matchesAny("<", "/>", ">") && !tq.matchesWhitespace() && !tq.isEmpty() |==> false
+681:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Parser@parseAttribute():191:6721:!tq.matchesAny("<", "/>", ">") && !tq.matchesWhitespace() && !tq.isEmpty() |==> !tq.matchesAny("<", "/>", ">") && !tq.matchesWhitespace()
+682:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Parser@parseAttribute():191:6782:!tq.matchesAny("<", "/>", ">") && !tq.matchesWhitespace() && !tq.isEmpty() |==> !tq.isEmpty()
+683:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseAttribute():192:6819:valueAccum.append(tq.consume()); |==> <NO-OP>
+684:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Parser@parseAttribute():194:6886:value = valueAccum.toString(); |==> <NO-OP>
+685:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseAttribute():196:6943:tq.consumeWhitespace(); |==> <NO-OP>
+686:LVR:0:POS:org.jsoup.parser.Parser@parseAttribute():198:7005:0 |==> 1
+687:LVR:0:NEG:org.jsoup.parser.Parser@parseAttribute():198:7005:0 |==> -1
+688:ROR:!=(int,int):<(int,int):org.jsoup.parser.Parser@parseAttribute():198:6989:key.length() != 0 |==> key.length() < 0
+689:ROR:!=(int,int):TRUE(int,int):org.jsoup.parser.Parser@parseAttribute():198:7002:key.length() != 0 |==> true
+690:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseAttribute():201:7095:tq.consume(); |==> <NO-OP>
+691:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseTextNode():209:7353:last().appendChild(textNode); |==> <NO-OP>
+692:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseCdata():213:7430:tq.consume("<![CDATA["); |==> <NO-OP>
+693:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseCdata():216:7598:last().appendChild(textNode); |==> <NO-OP>
+694:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.parser.Parser@addChildToParent(org.jsoup.nodes.Element,boolean):224:7893:validAncestor |==> false
+695:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.parser.Parser@addChildToParent(org.jsoup.nodes.Element,boolean):224:7893:validAncestor |==> true
+696:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Parser@addChildToParent(org.jsoup.nodes.Element,boolean):229:8199:child.tag().equals(bodyTag) |==> false
+697:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Parser@addChildToParent(org.jsoup.nodes.Element,boolean):229:8199:child.tag().equals(bodyTag) |==> true
+698:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@addChildToParent(org.jsoup.nodes.Element,boolean):231:8290:implicit.appendChild(head); |==> <NO-OP>
+699:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@addChildToParent(org.jsoup.nodes.Element,boolean):233:8344:implicit.appendChild(child); |==> <NO-OP>
+700:LVR:FALSE:TRUE:org.jsoup.parser.Parser@addChildToParent(org.jsoup.nodes.Element,boolean):236:8485:false |==> true
+701:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.parser.Parser@addChildToParent(org.jsoup.nodes.Element,boolean):237:8510:isEmptyElement |==> false
+702:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.parser.Parser@addChildToParent(org.jsoup.nodes.Element,boolean):237:8510:isEmptyElement |==> true
+703:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@addChildToParent(org.jsoup.nodes.Element,boolean):238:8542:stack.addLast(child); |==> <NO-OP>
+704:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@addChildToParent(org.jsoup.nodes.Element,boolean):242:8608:parent.appendChild(child); |==> <NO-OP>
+705:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.parser.Parser@addChildToParent(org.jsoup.nodes.Element,boolean):244:8649:isEmptyElement |==> false
+706:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.parser.Parser@addChildToParent(org.jsoup.nodes.Element,boolean):244:8649:isEmptyElement |==> true
+707:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@addChildToParent(org.jsoup.nodes.Element,boolean):245:8677:stack.addLast(child); |==> <NO-OP>
+708:LVR:POS:0:org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):250:8813:1 |==> 0
+709:LVR:POS:NEG:org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):250:8813:1 |==> -1
+710:ROR:==(int,int):<=(int,int):org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):250:8797:stack.size() == 1 |==> stack.size() <= 1
+711:ROR:==(int,int):>=(int,int):org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):250:8797:stack.size() == 1 |==> stack.size() >= 1
+712:ROR:==(int,int):FALSE(int,int):org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):250:8810:stack.size() == 1 |==> false
+713:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):250:8797:stack.size() == 1 && childTag.equals(htmlTag) |==> stack.size() == 1 == childTag.equals(htmlTag)
+714:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):250:8815:stack.size() == 1 && childTag.equals(htmlTag) |==> false
+715:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):250:8797:stack.size() == 1 && childTag.equals(htmlTag) |==> stack.size() == 1
+716:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):250:8818:stack.size() == 1 && childTag.equals(htmlTag) |==> childTag.equals(htmlTag)
+717:LVR:TRUE:FALSE:org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):251:8863:true |==> false
+718:LVR:POS:0:org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):255:8997:1 |==> 0
+719:LVR:POS:NEG:org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):255:8997:1 |==> -1
+720:AOR:-(int,int):%(int,int):org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):255:8983:stack.size() - 1 |==> stack.size() % 1
+721:AOR:-(int,int):*(int,int):org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):255:8983:stack.size() - 1 |==> stack.size() * 1
+722:AOR:-(int,int):+(int,int):org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):255:8983:stack.size() - 1 |==> stack.size() + 1
+723:AOR:-(int,int):/(int,int):org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):255:8983:stack.size() - 1 |==> stack.size() / 1
+724:LVR:0:POS:org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):255:9005:0 |==> 1
+725:LVR:0:NEG:org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):255:9005:0 |==> -1
+726:ROR:>=(int,int):==(int,int):org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):255:9000:i >= 0 |==> i == 0
+727:ROR:>=(int,int):>(int,int):org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):255:9000:i >= 0 |==> i > 0
+728:ROR:>=(int,int):TRUE(int,int):org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):255:9002:i >= 0 |==> true
+729:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):258:9127:parent2.isValidParent(childTag) |==> false
+730:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):258:9127:parent2.isValidParent(childTag) |==> true
+731:LVR:TRUE:FALSE:org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):259:9164:true |==> false
+732:LVR:FALSE:TRUE:org.jsoup.parser.Parser@stackHasValidParent(org.jsoup.parser.Tag):262:9209:false |==> true
+733:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Parser@popStackToSuitableContainer(org.jsoup.parser.Tag):267:9356:last().tag().canContain(tag) |==> false
+734:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Parser@popStackToSuitableContainer(org.jsoup.parser.Tag):267:9356:last().tag().canContain(tag) |==> true
+735:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@popStackToSuitableContainer(org.jsoup.parser.Tag):270:9427:stack.removeLast(); |==> <NO-OP>
+736:LVR:0:POS:org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):277:9649:0 |==> 1
+737:LVR:0:NEG:org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):277:9649:0 |==> -1
+738:LVR:POS:0:org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):279:9721:1 |==> 0
+739:LVR:POS:NEG:org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):279:9721:1 |==> -1
+740:AOR:-(int,int):%(int,int):org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):279:9707:stack.size() - 1 |==> stack.size() % 1
+741:AOR:-(int,int):*(int,int):org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):279:9707:stack.size() - 1 |==> stack.size() * 1
+742:AOR:-(int,int):+(int,int):org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):279:9707:stack.size() - 1 |==> stack.size() + 1
+743:AOR:-(int,int):/(int,int):org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):279:9707:stack.size() - 1 |==> stack.size() / 1
+744:LVR:0:POS:org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):279:9728:0 |==> 1
+745:LVR:0:NEG:org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):279:9728:0 |==> -1
+746:ROR:>(int,int):!=(int,int):org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):279:9724:i > 0 |==> i != 0
+747:ROR:>(int,int):>=(int,int):org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):279:9724:i > 0 |==> i >= 0
+748:ROR:>(int,int):FALSE(int,int):org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):279:9726:i > 0 |==> false
+749:STD:<INC>:<NO-OP>:org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):280:9750:counter++; |==> <NO-OP>
+750:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):283:9850:elTag.equals(bodyTag) || elTag.equals(htmlTag) |==> elTag.equals(bodyTag) != elTag.equals(htmlTag)
+751:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):283:9850:elTag.equals(bodyTag) || elTag.equals(htmlTag) |==> elTag.equals(bodyTag)
+752:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):283:9875:elTag.equals(bodyTag) || elTag.equals(htmlTag) |==> elTag.equals(htmlTag)
+753:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):283:9872:elTag.equals(bodyTag) || elTag.equals(htmlTag) |==> true
+754:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):285:9997:elTag.equals(tag) |==> false
+755:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):285:9997:elTag.equals(tag) |==> true
+756:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):286:10022:elToClose = el; |==> <NO-OP>
+757:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):290:10107:elToClose != null |==> true
+758:LVR:0:POS:org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):291:10143:0 |==> 1
+759:LVR:0:NEG:org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):291:10143:0 |==> -1
+760:ROR:<(int,int):!=(int,int):org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):291:10146:i < counter |==> i != counter
+761:ROR:<(int,int):<=(int,int):org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):291:10146:i < counter |==> i <= counter
+762:ROR:<(int,int):FALSE(int,int):org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):291:10148:i < counter |==> false
+763:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@popStackToClose(org.jsoup.parser.Tag):292:10182:stack.removeLast(); |==> <NO-OP>

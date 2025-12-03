@@ -1,0 +1,91 @@
+1:STD:<ASSIGN>:<NO-OP>:org.jsoup.safety.Whitelist@<init>():171:6721:tagNames = new HashSet<TagName>(); |==> <NO-OP>
+2:STD:<ASSIGN>:<NO-OP>:org.jsoup.safety.Whitelist@<init>():172:6764:attributes = new HashMap<TagName, Set<AttributeKey>>(); |==> <NO-OP>
+3:STD:<ASSIGN>:<NO-OP>:org.jsoup.safety.Whitelist@<init>():173:6828:enforcedAttributes = new HashMap<TagName, Map<AttributeKey, AttributeValue>>(); |==> <NO-OP>
+4:STD:<ASSIGN>:<NO-OP>:org.jsoup.safety.Whitelist@<init>():174:6916:protocols = new HashMap<TagName, Map<AttributeKey, Set<Protocol>>>(); |==> <NO-OP>
+5:LVR:FALSE:TRUE:org.jsoup.safety.Whitelist@<init>():175:7018:false |==> true
+6:STD:<ASSIGN>:<NO-OP>:org.jsoup.safety.Whitelist@<init>():175:6994:preserveRelativeLinks = false; |==> <NO-OP>
+7:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@addTags(java.lang.String[]):185:7286:Validate.notNull(tags); |==> <NO-OP>
+8:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@addTags(java.lang.String[]):188:7361:Validate.notEmpty(tagName); |==> <NO-OP>
+9:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@addTags(java.lang.String[]):189:7401:tagNames.add(TagName.valueOf(tagName)); |==> <NO-OP>
+10:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@addAttributes(java.lang.String,java.lang.String[]):205:7976:Validate.notEmpty(tag); |==> <NO-OP>
+11:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@addAttributes(java.lang.String,java.lang.String[]):206:8008:Validate.notNull(keys); |==> <NO-OP>
+12:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@addAttributes(java.lang.String,java.lang.String[]):211:8197:Validate.notEmpty(key); |==> <NO-OP>
+13:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@addAttributes(java.lang.String,java.lang.String[]):212:8233:attributeSet.add(AttributeKey.valueOf(key)); |==> <NO-OP>
+14:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.safety.Whitelist@addAttributes(java.lang.String,java.lang.String[]):214:8322:attributes.containsKey(tagName) |==> false
+15:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.safety.Whitelist@addAttributes(java.lang.String,java.lang.String[]):214:8322:attributes.containsKey(tagName) |==> true
+16:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@addAttributes(java.lang.String,java.lang.String[]):216:8415:currentSet.addAll(attributeSet); |==> <NO-OP>
+17:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@addAttributes(java.lang.String,java.lang.String[]):218:8477:attributes.put(tagName, attributeSet); |==> <NO-OP>
+18:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@addEnforcedAttribute(java.lang.String,java.lang.String,java.lang.String):236:9181:Validate.notEmpty(tag); |==> <NO-OP>
+19:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@addEnforcedAttribute(java.lang.String,java.lang.String,java.lang.String):237:9213:Validate.notEmpty(key); |==> <NO-OP>
+20:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@addEnforcedAttribute(java.lang.String,java.lang.String,java.lang.String):238:9245:Validate.notEmpty(value); |==> <NO-OP>
+21:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.safety.Whitelist@addEnforcedAttribute(java.lang.String,java.lang.String,java.lang.String):244:9485:enforcedAttributes.containsKey(tagName) |==> false
+22:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.safety.Whitelist@addEnforcedAttribute(java.lang.String,java.lang.String,java.lang.String):244:9485:enforcedAttributes.containsKey(tagName) |==> true
+23:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@addEnforcedAttribute(java.lang.String,java.lang.String,java.lang.String):245:9510:enforcedAttributes.get(tagName).put(attrKey, attrVal); |==> <NO-OP>
+24:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@addEnforcedAttribute(java.lang.String,java.lang.String,java.lang.String):248:9695:attrMap.put(attrKey, attrVal); |==> <NO-OP>
+25:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@addEnforcedAttribute(java.lang.String,java.lang.String,java.lang.String):249:9738:enforcedAttributes.put(tagName, attrMap); |==> <NO-OP>
+26:STD:<ASSIGN>:<NO-OP>:org.jsoup.safety.Whitelist@preserveRelativeLinks(boolean):269:10735:preserveRelativeLinks = preserve; |==> <NO-OP>
+27:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@addProtocols(java.lang.String,java.lang.String,java.lang.String[]):285:11306:Validate.notEmpty(tag); |==> <NO-OP>
+28:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@addProtocols(java.lang.String,java.lang.String,java.lang.String[]):286:11338:Validate.notEmpty(key); |==> <NO-OP>
+29:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@addProtocols(java.lang.String,java.lang.String,java.lang.String[]):287:11370:Validate.notNull(protocols); |==> <NO-OP>
+30:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.safety.Whitelist@addProtocols(java.lang.String,java.lang.String,java.lang.String[]):294:11626:this.protocols.containsKey(tagName) |==> false
+31:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.safety.Whitelist@addProtocols(java.lang.String,java.lang.String,java.lang.String[]):294:11626:this.protocols.containsKey(tagName) |==> true
+32:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@addProtocols(java.lang.String,java.lang.String,java.lang.String[]):298:11785:this.protocols.put(tagName, attrMap); |==> <NO-OP>
+33:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.safety.Whitelist@addProtocols(java.lang.String,java.lang.String,java.lang.String[]):300:11864:attrMap.containsKey(attrKey) |==> false
+34:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.safety.Whitelist@addProtocols(java.lang.String,java.lang.String,java.lang.String[]):300:11864:attrMap.containsKey(attrKey) |==> true
+35:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@addProtocols(java.lang.String,java.lang.String,java.lang.String[]):304:11997:attrMap.put(attrKey, protSet); |==> <NO-OP>
+36:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@addProtocols(java.lang.String,java.lang.String,java.lang.String[]):307:12094:Validate.notEmpty(protocol); |==> <NO-OP>
+37:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@addProtocols(java.lang.String,java.lang.String,java.lang.String[]):309:12191:protSet.add(prot); |==> <NO-OP>
+38:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.safety.Whitelist@isSafeAttribute(java.lang.String,org.jsoup.nodes.Element,org.jsoup.nodes.Attribute):322:12568:attributes.containsKey(tag) |==> false
+39:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.safety.Whitelist@isSafeAttribute(java.lang.String,org.jsoup.nodes.Element,org.jsoup.nodes.Attribute):322:12568:attributes.containsKey(tag) |==> true
+40:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.safety.Whitelist@isSafeAttribute(java.lang.String,org.jsoup.nodes.Element,org.jsoup.nodes.Attribute):323:12621:attributes.get(tag).contains(key) |==> false
+41:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.safety.Whitelist@isSafeAttribute(java.lang.String,org.jsoup.nodes.Element,org.jsoup.nodes.Attribute):323:12621:attributes.get(tag).contains(key) |==> true
+42:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.safety.Whitelist@isSafeAttribute(java.lang.String,org.jsoup.nodes.Element,org.jsoup.nodes.Attribute):324:12671:protocols.containsKey(tag) |==> false
+43:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.safety.Whitelist@isSafeAttribute(java.lang.String,org.jsoup.nodes.Element,org.jsoup.nodes.Attribute):324:12671:protocols.containsKey(tag) |==> true
+44:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.safety.Whitelist@isSafeAttribute(java.lang.String,org.jsoup.nodes.Element,org.jsoup.nodes.Attribute):327:12858:!attrProts.containsKey(key) || testValidProtocol(el, attr, attrProts.get(key)) |==> !attrProts.containsKey(key) != testValidProtocol(el, attr, attrProts.get(key))
+45:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.safety.Whitelist@isSafeAttribute(java.lang.String,org.jsoup.nodes.Element,org.jsoup.nodes.Attribute):327:12858:!attrProts.containsKey(key) || testValidProtocol(el, attr, attrProts.get(key)) |==> !attrProts.containsKey(key)
+46:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.safety.Whitelist@isSafeAttribute(java.lang.String,org.jsoup.nodes.Element,org.jsoup.nodes.Attribute):327:12889:!attrProts.containsKey(key) || testValidProtocol(el, attr, attrProts.get(key)) |==> testValidProtocol(el, attr, attrProts.get(key))
+47:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.safety.Whitelist@isSafeAttribute(java.lang.String,org.jsoup.nodes.Element,org.jsoup.nodes.Attribute):327:12886:!attrProts.containsKey(key) || testValidProtocol(el, attr, attrProts.get(key)) |==> true
+48:LVR:TRUE:FALSE:org.jsoup.safety.Whitelist@isSafeAttribute(java.lang.String,org.jsoup.nodes.Element,org.jsoup.nodes.Attribute):329:13038:true |==> false
+49:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.safety.Whitelist@isSafeAttribute(java.lang.String,org.jsoup.nodes.Element,org.jsoup.nodes.Attribute):333:13159:!tagName.equals(":all") && isSafeAttribute(":all", el, attr) |==> !tagName.equals(":all") == isSafeAttribute(":all", el, attr)
+50:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.safety.Whitelist@isSafeAttribute(java.lang.String,org.jsoup.nodes.Element,org.jsoup.nodes.Attribute):333:13183:!tagName.equals(":all") && isSafeAttribute(":all", el, attr) |==> false
+51:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.safety.Whitelist@isSafeAttribute(java.lang.String,org.jsoup.nodes.Element,org.jsoup.nodes.Attribute):333:13159:!tagName.equals(":all") && isSafeAttribute(":all", el, attr) |==> !tagName.equals(":all")
+52:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.safety.Whitelist@isSafeAttribute(java.lang.String,org.jsoup.nodes.Element,org.jsoup.nodes.Attribute):333:13186:!tagName.equals(":all") && isSafeAttribute(":all", el, attr) |==> isSafeAttribute(":all", el, attr)
+53:LVR:FALSE:TRUE:org.jsoup.safety.Whitelist@isSafeAttribute(java.lang.String,org.jsoup.nodes.Element,org.jsoup.nodes.Attribute):335:13246:false |==> true
+54:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.safety.Whitelist@testValidProtocol(org.jsoup.nodes.Element,org.jsoup.nodes.Attribute,java.util.Set<org.jsoup.safety.Whitelist.Protocol>):342:13569:preserveRelativeLinks |==> false
+55:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.safety.Whitelist@testValidProtocol(org.jsoup.nodes.Element,org.jsoup.nodes.Attribute,java.util.Set<org.jsoup.safety.Whitelist.Protocol>):342:13569:preserveRelativeLinks |==> true
+56:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@testValidProtocol(org.jsoup.nodes.Element,org.jsoup.nodes.Attribute,java.util.Set<org.jsoup.safety.Whitelist.Protocol>):343:13604:attr.setValue(value); |==> <NO-OP>
+57:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.safety.Whitelist@testValidProtocol(org.jsoup.nodes.Element,org.jsoup.nodes.Attribute,java.util.Set<org.jsoup.safety.Whitelist.Protocol>):347:13780:value.toLowerCase().startsWith(prot) |==> false
+58:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.safety.Whitelist@testValidProtocol(org.jsoup.nodes.Element,org.jsoup.nodes.Attribute,java.util.Set<org.jsoup.safety.Whitelist.Protocol>):347:13780:value.toLowerCase().startsWith(prot) |==> true
+59:LVR:TRUE:FALSE:org.jsoup.safety.Whitelist@testValidProtocol(org.jsoup.nodes.Element,org.jsoup.nodes.Attribute,java.util.Set<org.jsoup.safety.Whitelist.Protocol>):348:13813:true |==> false
+60:LVR:FALSE:TRUE:org.jsoup.safety.Whitelist@testValidProtocol(org.jsoup.nodes.Element,org.jsoup.nodes.Attribute,java.util.Set<org.jsoup.safety.Whitelist.Protocol>):351:13858:false |==> true
+61:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.safety.Whitelist@getEnforcedAttributes(java.lang.String):357:14062:enforcedAttributes.containsKey(tag) |==> false
+62:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.safety.Whitelist@getEnforcedAttributes(java.lang.String):357:14062:enforcedAttributes.containsKey(tag) |==> true
+63:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist@getEnforcedAttributes(java.lang.String):360:14259:attrs.put(entry.getKey().toString(), entry.getValue().toString()); |==> <NO-OP>
+64:STD:<CALL>:<NO-OP>:org.jsoup.safety.Whitelist$TypedValue@<init>(java.lang.String):412:15503:Validate.notNull(value); |==> <NO-OP>
+65:STD:<ASSIGN>:<NO-OP>:org.jsoup.safety.Whitelist$TypedValue@<init>(java.lang.String):413:15540:this.value = value; |==> <NO-OP>
+66:LVR:POS:0:org.jsoup.safety.Whitelist$TypedValue@hashCode():419:15680:1 |==> 0
+67:LVR:POS:NEG:org.jsoup.safety.Whitelist$TypedValue@hashCode():419:15680:1 |==> -1
+68:AOR:*(int,int):%(int,int):org.jsoup.safety.Whitelist$TypedValue@hashCode():420:15704:prime * result |==> prime % result
+69:AOR:*(int,int):+(int,int):org.jsoup.safety.Whitelist$TypedValue@hashCode():420:15704:prime * result |==> prime + result
+70:AOR:*(int,int):-(int,int):org.jsoup.safety.Whitelist$TypedValue@hashCode():420:15704:prime * result |==> prime - result
+71:AOR:*(int,int):/(int,int):org.jsoup.safety.Whitelist$TypedValue@hashCode():420:15704:prime * result |==> prime / result
+72:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.safety.Whitelist$TypedValue@hashCode():420:15729:value == null |==> false
+73:LVR:0:POS:org.jsoup.safety.Whitelist$TypedValue@hashCode():420:15740:0 |==> 1
+74:LVR:0:NEG:org.jsoup.safety.Whitelist$TypedValue@hashCode():420:15740:0 |==> -1
+75:AOR:+(int,int):%(int,int):org.jsoup.safety.Whitelist$TypedValue@hashCode():420:15704:prime * result + ((value == null) ? 0 : value.hashCode()) |==> prime * result % ((value == null) ? 0 : value.hashCode())
+76:AOR:+(int,int):*(int,int):org.jsoup.safety.Whitelist$TypedValue@hashCode():420:15704:prime * result + ((value == null) ? 0 : value.hashCode()) |==> prime * result * ((value == null) ? 0 : value.hashCode())
+77:AOR:+(int,int):-(int,int):org.jsoup.safety.Whitelist$TypedValue@hashCode():420:15704:prime * result + ((value == null) ? 0 : value.hashCode()) |==> prime * result - ((value == null) ? 0 : value.hashCode())
+78:AOR:+(int,int):/(int,int):org.jsoup.safety.Whitelist$TypedValue@hashCode():420:15704:prime * result + ((value == null) ? 0 : value.hashCode()) |==> prime * result / ((value == null) ? 0 : value.hashCode())
+79:STD:<ASSIGN>:<NO-OP>:org.jsoup.safety.Whitelist$TypedValue@hashCode():420:15695:result = prime * result + ((value == null) ? 0 : value.hashCode()); |==> <NO-OP>
+80:LVR:TRUE:FALSE:org.jsoup.safety.Whitelist$TypedValue@equals(java.lang.Object):426:15899:true |==> false
+81:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.safety.Whitelist$TypedValue@equals(java.lang.Object):427:15925:obj == null |==> false
+82:LVR:FALSE:TRUE:org.jsoup.safety.Whitelist$TypedValue@equals(java.lang.Object):427:15941:false |==> true
+83:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.safety.Whitelist$TypedValue@equals(java.lang.Object):428:15975:getClass() != obj.getClass() |==> true
+84:LVR:FALSE:TRUE:org.jsoup.safety.Whitelist$TypedValue@equals(java.lang.Object):428:16001:false |==> true
+85:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.safety.Whitelist$TypedValue@equals(java.lang.Object):430:16079:value == null |==> false
+86:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.safety.Whitelist$TypedValue@equals(java.lang.Object):431:16122:other.value != null |==> true
+87:LVR:FALSE:TRUE:org.jsoup.safety.Whitelist$TypedValue@equals(java.lang.Object):431:16138:false |==> true
+88:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.safety.Whitelist$TypedValue@equals(java.lang.Object):432:16181:value.equals(other.value) |==> false
+89:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.safety.Whitelist$TypedValue@equals(java.lang.Object):432:16181:value.equals(other.value) |==> true
+90:LVR:FALSE:TRUE:org.jsoup.safety.Whitelist$TypedValue@equals(java.lang.Object):432:16203:false |==> true
+91:LVR:TRUE:FALSE:org.jsoup.safety.Whitelist$TypedValue@equals(java.lang.Object):433:16229:true |==> false

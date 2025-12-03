@@ -1,0 +1,157 @@
+1:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@<init>(java.lang.String,org.jsoup.nodes.Element):66:6334:Validate.notNull(query); |==> <NO-OP>
+2:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.Selector@<init>(java.lang.String,org.jsoup.nodes.Element):67:6367:query = query.trim(); |==> <NO-OP>
+3:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@<init>(java.lang.String,org.jsoup.nodes.Element):68:6397:Validate.notEmpty(query); |==> <NO-OP>
+4:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@<init>(java.lang.String,org.jsoup.nodes.Element):69:6431:Validate.notNull(root); |==> <NO-OP>
+5:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@select(java.lang.String,java.lang.Iterable<org.jsoup.nodes.Element>):94:7171:Validate.notEmpty(query); |==> <NO-OP>
+6:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@select(java.lang.String,java.lang.Iterable<org.jsoup.nodes.Element>):95:7205:Validate.notNull(roots); |==> <NO-OP>
+7:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@select(java.lang.String,java.lang.Iterable<org.jsoup.nodes.Element>):99:7352:elements.addAll(select(query, root)); |==> <NO-OP>
+8:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@select():105:7486:tq.consumeWhitespace(); |==> <NO-OP>
+9:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@select():107:7544:tq.matchesAny(combinators) |==> false
+10:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@select():107:7544:tq.matchesAny(combinators) |==> true
+11:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@select():108:7626:elements.add(root); |==> <NO-OP>
+12:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@select():109:7658:combinator(tq.consume()); |==> <NO-OP>
+13:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@select():110:7713:tq.matches(":has(") |==> false
+14:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@select():110:7713:tq.matches(":has(") |==> true
+15:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@select():111:7738:elements.addAll(root.getAllElements()); |==> <NO-OP>
+16:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@select():113:7807:addElements(findElements()); |==> <NO-OP>
+17:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@select():120:8082:tq.matchChomp(",") |==> false
+18:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@select():120:8082:tq.matchChomp(",") |==> true
+19:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@select():123:8218:elements.addAll(select(subQuery, root)); |==> <NO-OP>
+20:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@select():125:8313:tq.matchesAny(combinators) |==> false
+21:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@select():125:8313:tq.matchesAny(combinators) |==> true
+22:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@select():126:8346:combinator(tq.consume()); |==> <NO-OP>
+23:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.select.Selector@select():127:8395:seenWhite |==> false
+24:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.select.Selector@select():127:8395:seenWhite |==> true
+25:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@select():128:8424:combinator(' '); |==> <NO-OP>
+26:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@select():131:8601:intersectElements(filterForSelf(elements, candidates)); |==> <NO-OP>
+27:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@combinator(char):138:8786:tq.consumeWhitespace(); |==> <NO-OP>
+28:ROR:==(int,int):<=(int,int):org.jsoup.select.Selector@combinator(char):142:8912:combinator == '>' |==> combinator <= '>'
+29:ROR:==(int,int):>=(int,int):org.jsoup.select.Selector@combinator(char):142:8912:combinator == '>' |==> combinator >= '>'
+30:ROR:==(int,int):FALSE(int,int):org.jsoup.select.Selector@combinator(char):142:8923:combinator == '>' |==> false
+31:ROR:==(int,int):<=(int,int):org.jsoup.select.Selector@combinator(char):144:9026:combinator == ' ' |==> combinator <= ' '
+32:ROR:==(int,int):>=(int,int):org.jsoup.select.Selector@combinator(char):144:9026:combinator == ' ' |==> combinator >= ' '
+33:ROR:==(int,int):FALSE(int,int):org.jsoup.select.Selector@combinator(char):144:9037:combinator == ' ' |==> false
+34:ROR:==(int,int):<=(int,int):org.jsoup.select.Selector@combinator(char):146:9143:combinator == '+' |==> combinator <= '+'
+35:ROR:==(int,int):>=(int,int):org.jsoup.select.Selector@combinator(char):146:9143:combinator == '+' |==> combinator >= '+'
+36:ROR:==(int,int):FALSE(int,int):org.jsoup.select.Selector@combinator(char):146:9154:combinator == '+' |==> false
+37:ROR:==(int,int):<=(int,int):org.jsoup.select.Selector@combinator(char):148:9261:combinator == '~' |==> combinator <= '~'
+38:ROR:==(int,int):>=(int,int):org.jsoup.select.Selector@combinator(char):148:9261:combinator == '~' |==> combinator >= '~'
+39:ROR:==(int,int):FALSE(int,int):org.jsoup.select.Selector@combinator(char):148:9272:combinator == '~' |==> false
+40:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@combinator(char):153:9473:elements.clear(); |==> <NO-OP>
+41:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@combinator(char):153:9491:elements.addAll(output); |==> <NO-OP>
+42:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@findElements():158:9591:tq.matchChomp("#") |==> false
+43:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@findElements():158:9591:tq.matchChomp("#") |==> true
+44:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@findElements():160:9659:tq.matchChomp(".") |==> false
+45:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@findElements():160:9659:tq.matchChomp(".") |==> true
+46:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@findElements():162:9731:tq.matchesWord() |==> false
+47:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@findElements():162:9731:tq.matchesWord() |==> true
+48:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@findElements():164:9794:tq.matches("[") |==> false
+49:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@findElements():164:9794:tq.matches("[") |==> true
+50:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@findElements():166:9869:tq.matchChomp("*") |==> false
+51:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@findElements():166:9869:tq.matchChomp("*") |==> true
+52:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@findElements():168:9944:tq.matchChomp(":lt(") |==> false
+53:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@findElements():168:9944:tq.matchChomp(":lt(") |==> true
+54:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@findElements():170:10024:tq.matchChomp(":gt(") |==> false
+55:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@findElements():170:10024:tq.matchChomp(":gt(") |==> true
+56:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@findElements():172:10107:tq.matchChomp(":eq(") |==> false
+57:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@findElements():172:10107:tq.matchChomp(":eq(") |==> true
+58:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@findElements():174:10182:tq.matches(":has(") |==> false
+59:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@findElements():174:10182:tq.matches(":has(") |==> true
+60:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@findElements():176:10250:tq.matches(":contains(") |==> false
+61:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@findElements():176:10250:tq.matches(":contains(") |==> true
+62:LVR:FALSE:TRUE:org.jsoup.select.Selector@findElements():177:10296:false |==> true
+63:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@findElements():178:10333:tq.matches(":containsOwn(") |==> false
+64:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@findElements():178:10333:tq.matches(":containsOwn(") |==> true
+65:LVR:TRUE:FALSE:org.jsoup.select.Selector@findElements():179:10382:true |==> false
+66:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@findElements():180:10418:tq.matches(":matches(") |==> false
+67:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@findElements():180:10418:tq.matches(":matches(") |==> true
+68:LVR:FALSE:TRUE:org.jsoup.select.Selector@findElements():181:10462:false |==> true
+69:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@findElements():182:10499:tq.matches(":matchesOwn(") |==> false
+70:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@findElements():182:10499:tq.matches(":matchesOwn(") |==> true
+71:LVR:TRUE:FALSE:org.jsoup.select.Selector@findElements():183:10546:true |==> false
+72:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@findElements():184:10582:tq.matches(":not(") |==> false
+73:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@findElements():184:10582:tq.matches(":not(") |==> true
+74:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@addElements(java.util.Collection<org.jsoup.nodes.Element>):192:10861:elements.addAll(add); |==> <NO-OP>
+75:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@intersectElements(java.util.Collection<org.jsoup.nodes.Element>):196:10970:elements.retainAll(intersect); |==> <NO-OP>
+76:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@byId():201:11093:Validate.notEmpty(id); |==> <NO-OP>
+77:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.select.Selector@byId():205:11223:found != null |==> true
+78:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@byId():206:11244:byId.add(found); |==> <NO-OP>
+79:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@byClass():212:11384:Validate.notEmpty(className); |==> <NO-OP>
+80:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@byTag():219:11566:Validate.notEmpty(tagName); |==> <NO-OP>
+81:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@byTag():222:11721:tagName.contains("|") |==> false
+82:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@byTag():222:11721:tagName.contains("|") |==> true
+83:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.Selector@byTag():223:11740:tagName = tagName.replace("|", ":"); |==> <NO-OP>
+84:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@byAttribute():230:12083:Validate.notEmpty(key); |==> <NO-OP>
+85:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@byAttribute():231:12115:cq.consumeWhitespace(); |==> <NO-OP>
+86:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@byAttribute():233:12162:cq.isEmpty() |==> false
+87:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@byAttribute():233:12162:cq.isEmpty() |==> true
+88:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@byAttribute():234:12201:key.startsWith("^") |==> false
+89:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@byAttribute():234:12201:key.startsWith("^") |==> true
+90:LVR:POS:0:org.jsoup.select.Selector@byAttribute():234:12259:1 |==> 0
+91:LVR:POS:NEG:org.jsoup.select.Selector@byAttribute():234:12259:1 |==> -1
+92:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@byAttribute():236:12345:cq.matchChomp("=") |==> false
+93:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@byAttribute():236:12345:cq.matchChomp("=") |==> true
+94:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@byAttribute():239:12465:cq.matchChomp("!=") |==> false
+95:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@byAttribute():239:12465:cq.matchChomp("!=") |==> true
+96:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@byAttribute():242:12589:cq.matchChomp("^=") |==> false
+97:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@byAttribute():242:12589:cq.matchChomp("^=") |==> true
+98:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@byAttribute():245:12718:cq.matchChomp("$=") |==> false
+99:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@byAttribute():245:12718:cq.matchChomp("$=") |==> true
+100:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@byAttribute():248:12845:cq.matchChomp("*=") |==> false
+101:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@byAttribute():248:12845:cq.matchChomp("*=") |==> true
+102:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@byAttribute():251:12988:cq.matchChomp("~=") |==> false
+103:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@byAttribute():251:12988:cq.matchChomp("~=") |==> true
+104:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@consumeIndex():278:13821:Validate.isTrue(StringUtil.isNumeric(indexS), "Index must be numeric"); |==> <NO-OP>
+105:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@has():284:14010:tq.consume(":has"); |==> <NO-OP>
+106:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@has():286:14091:Validate.notEmpty(subQuery, ":has(el) subselect must not be empty"); |==> <NO-OP>
+107:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.select.Selector@contains(boolean):293:14378:own |==> false
+108:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.select.Selector@contains(boolean):293:14378:own |==> true
+109:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@contains(boolean):293:14367:tq.consume(own ? ":containsOwn" : ":contains"); |==> <NO-OP>
+110:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@contains(boolean):295:14499:Validate.notEmpty(searchText, ":contains(text) query must not be empty"); |==> <NO-OP>
+111:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.select.Selector@contains(boolean):297:14597:own |==> false
+112:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.select.Selector@contains(boolean):297:14597:own |==> true
+113:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.select.Selector@matches(boolean):302:14811:own |==> false
+114:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.select.Selector@matches(boolean):302:14811:own |==> true
+115:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@matches(boolean):302:14800:tq.consume(own ? ":matchesOwn" : ":matches"); |==> <NO-OP>
+116:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@matches(boolean):304:14953:Validate.notEmpty(regex, ":matches(regex) query must not be empty"); |==> <NO-OP>
+117:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.select.Selector@matches(boolean):306:15046:own |==> false
+118:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.select.Selector@matches(boolean):306:15046:own |==> true
+119:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@not():311:15196:tq.consume(":not"); |==> <NO-OP>
+120:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@not():313:15278:Validate.notEmpty(subQuery, ":not(selector) subselect must not be empty"); |==> <NO-OP>
+121:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.select.Selector@filterForChildren(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):323:15736:c.parent() != null |==> true
+122:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.select.Selector@filterForChildren(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):323:15725:c.parent() != null && c.parent().equals(p) |==> c.parent() != null == c.parent().equals(p)
+123:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.select.Selector@filterForChildren(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):323:15744:c.parent() != null && c.parent().equals(p) |==> false
+124:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.Selector@filterForChildren(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):323:15725:c.parent() != null && c.parent().equals(p) |==> c.parent() != null
+125:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.Selector@filterForChildren(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):323:15747:c.parent() != null && c.parent().equals(p) |==> c.parent().equals(p)
+126:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@filterForChildren(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):324:15791:children.add(c); |==> <NO-OP>
+127:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@filterForDescendants(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):338:16370:c.equals(p) |==> false
+128:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@filterForDescendants(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):338:16370:c.equals(p) |==> true
+129:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@filterForDescendants(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):342:16457:children.add(c); |==> <NO-OP>
+130:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@filterForParentsOfDescendants(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):352:16880:c.parents().contains(p) |==> false
+131:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@filterForParentsOfDescendants(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):352:16880:c.parents().contains(p) |==> true
+132:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@filterForParentsOfDescendants(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):353:16907:filteredParents.add(p); |==> <NO-OP>
+133:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@filterForAdjacentSiblings(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):365:17328:e.parent().equals(c.parent()) |==> false
+134:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@filterForAdjacentSiblings(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):365:17328:e.parent().equals(c.parent()) |==> true
+135:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.select.Selector@filterForAdjacentSiblings(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):368:17470:previousSib != null |==> true
+136:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.select.Selector@filterForAdjacentSiblings(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):368:17458:previousSib != null && previousSib.equals(e) |==> previousSib != null == previousSib.equals(e)
+137:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.select.Selector@filterForAdjacentSiblings(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):368:17478:previousSib != null && previousSib.equals(e) |==> false
+138:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.Selector@filterForAdjacentSiblings(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):368:17458:previousSib != null && previousSib.equals(e) |==> previousSib != null
+139:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.Selector@filterForAdjacentSiblings(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):368:17481:previousSib != null && previousSib.equals(e) |==> previousSib.equals(e)
+140:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@filterForAdjacentSiblings(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):369:17526:siblings.add(c); |==> <NO-OP>
+141:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@filterForGeneralSiblings(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):382:17970:e.parent().equals(c.parent()) |==> false
+142:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@filterForGeneralSiblings(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):382:17970:e.parent().equals(c.parent()) |==> true
+143:ROR:>(int,int):!=(int,int):org.jsoup.select.Selector@filterForGeneralSiblings(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):386:18138:cPos > ePos |==> cPos != ePos
+144:ROR:>(int,int):>=(int,int):org.jsoup.select.Selector@filterForGeneralSiblings(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):386:18138:cPos > ePos |==> cPos >= ePos
+145:ROR:>(int,int):FALSE(int,int):org.jsoup.select.Selector@filterForGeneralSiblings(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):386:18143:cPos > ePos |==> false
+146:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@filterForGeneralSiblings(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):387:18173:output.add(c); |==> <NO-OP>
+147:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@filterForSelf(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):400:18619:c.equals(p) |==> false
+148:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@filterForSelf(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):400:18619:c.equals(p) |==> true
+149:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@filterForSelf(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):401:18646:children.add(c); |==> <NO-OP>
+150:LVR:FALSE:TRUE:org.jsoup.select.Selector@filterOut(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):413:19052:false |==> true
+151:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Selector@filterOut(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):415:19126:el.equals(out) |==> false
+152:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Selector@filterOut(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):415:19126:el.equals(out) |==> true
+153:LVR:TRUE:FALSE:org.jsoup.select.Selector@filterOut(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):416:19163:true |==> false
+154:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.Selector@filterOut(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):416:19155:found = true; |==> <NO-OP>
+155:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.select.Selector@filterOut(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):420:19245:found |==> false
+156:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.select.Selector@filterOut(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):420:19245:found |==> true
+157:STD:<CALL>:<NO-OP>:org.jsoup.select.Selector@filterOut(java.util.Collection<org.jsoup.nodes.Element>,java.util.Collection<org.jsoup.nodes.Element>):421:19268:output.add(el); |==> <NO-OP>
