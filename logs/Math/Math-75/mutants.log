@@ -1,0 +1,108 @@
+1:STD:<CALL>:<NO-OP>:org.apache.commons.math.stat.Frequency@toString():83:2988:outBuffer.append("Value \t Freq. \t Pct. \t Cum Pct. \n"); |==> <NO-OP>
+2:STD:<CALL>:<NO-OP>:org.apache.commons.math.stat.Frequency@toString():87:3209:outBuffer.append(value); |==> <NO-OP>
+3:STD:<CALL>:<NO-OP>:org.apache.commons.math.stat.Frequency@toString():88:3246:outBuffer.append('\t'); |==> <NO-OP>
+4:STD:<CALL>:<NO-OP>:org.apache.commons.math.stat.Frequency@toString():89:3282:outBuffer.append(getCount(value)); |==> <NO-OP>
+5:STD:<CALL>:<NO-OP>:org.apache.commons.math.stat.Frequency@toString():90:3329:outBuffer.append('\t'); |==> <NO-OP>
+6:STD:<CALL>:<NO-OP>:org.apache.commons.math.stat.Frequency@toString():91:3365:outBuffer.append(nf.format(getPct(value))); |==> <NO-OP>
+7:STD:<CALL>:<NO-OP>:org.apache.commons.math.stat.Frequency@toString():92:3421:outBuffer.append('\t'); |==> <NO-OP>
+8:STD:<CALL>:<NO-OP>:org.apache.commons.math.stat.Frequency@toString():93:3457:outBuffer.append(nf.format(getCumPct(value))); |==> <NO-OP>
+9:STD:<CALL>:<NO-OP>:org.apache.commons.math.stat.Frequency@toString():94:3516:outBuffer.append('\n'); |==> <NO-OP>
+10:STD:<CALL>:<NO-OP>:org.apache.commons.math.stat.Frequency@addValue(java.lang.Object):114:4154:addValue((Comparable<?>)v); |==> <NO-OP>
+11:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.stat.Frequency@addValue(java.lang.Comparable<?>):135:4871:obj = Long.valueOf(((Integer)v).longValue()); |==> <NO-OP>
+12:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.math.stat.Frequency@addValue(java.lang.Comparable<?>):139:5009:count == null |==> false
+13:LVR:POS:0:org.apache.commons.math.stat.Frequency@addValue(java.lang.Comparable<?>):140:5068:1 |==> 0
+14:LVR:POS:NEG:org.apache.commons.math.stat.Frequency@addValue(java.lang.Comparable<?>):140:5068:1 |==> -1
+15:STD:<CALL>:<NO-OP>:org.apache.commons.math.stat.Frequency@addValue(java.lang.Comparable<?>):140:5036:freqTable.put(obj, Long.valueOf(1)); |==> <NO-OP>
+16:LVR:POS:0:org.apache.commons.math.stat.Frequency@addValue(java.lang.Comparable<?>):142:5162:1 |==> 0
+17:LVR:POS:NEG:org.apache.commons.math.stat.Frequency@addValue(java.lang.Comparable<?>):142:5162:1 |==> -1
+18:AOR:+(long,long):%(long,long):org.apache.commons.math.stat.Frequency@addValue(java.lang.Comparable<?>):142:5142:count.longValue() + 1 |==> count.longValue() % 1
+19:AOR:+(long,long):*(long,long):org.apache.commons.math.stat.Frequency@addValue(java.lang.Comparable<?>):142:5142:count.longValue() + 1 |==> count.longValue() * 1
+20:AOR:+(long,long):-(long,long):org.apache.commons.math.stat.Frequency@addValue(java.lang.Comparable<?>):142:5142:count.longValue() + 1 |==> count.longValue() - 1
+21:AOR:+(long,long):/(long,long):org.apache.commons.math.stat.Frequency@addValue(java.lang.Comparable<?>):142:5142:count.longValue() + 1 |==> count.longValue() / 1
+22:STD:<CALL>:<NO-OP>:org.apache.commons.math.stat.Frequency@addValue(java.lang.Comparable<?>):142:5110:freqTable.put(obj, Long.valueOf(count.longValue() + 1)); |==> <NO-OP>
+23:STD:<CALL>:<NO-OP>:org.apache.commons.math.stat.Frequency@addValue(int):158:5649:addValue(Long.valueOf(v)); |==> <NO-OP>
+24:STD:<CALL>:<NO-OP>:org.apache.commons.math.stat.Frequency@addValue(java.lang.Integer):168:5875:addValue(Long.valueOf(v.longValue())); |==> <NO-OP>
+25:STD:<CALL>:<NO-OP>:org.apache.commons.math.stat.Frequency@addValue(long):177:6065:addValue(Long.valueOf(v)); |==> <NO-OP>
+26:STD:<CALL>:<NO-OP>:org.apache.commons.math.stat.Frequency@addValue(char):186:6243:addValue(Character.valueOf(v)); |==> <NO-OP>
+27:STD:<CALL>:<NO-OP>:org.apache.commons.math.stat.Frequency@clear():191:6354:freqTable.clear(); |==> <NO-OP>
+28:LVR:0:POS:org.apache.commons.math.stat.Frequency@getSumFreq():215:7082:0 |==> 1
+29:LVR:0:NEG:org.apache.commons.math.stat.Frequency@getSumFreq():215:7082:0 |==> -1
+30:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.stat.Frequency@getSumFreq():218:7200:result += iterator.next().longValue(); |==> <NO-OP>
+31:LVR:0:POS:org.apache.commons.math.stat.Frequency@getCount(java.lang.Comparable<?>):247:7992:0 |==> 1
+32:LVR:0:NEG:org.apache.commons.math.stat.Frequency@getCount(java.lang.Comparable<?>):247:7992:0 |==> -1
+33:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.math.stat.Frequency@getCount(java.lang.Comparable<?>):250:8075:count != null |==> true
+34:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.stat.Frequency@getCount(java.lang.Comparable<?>):251:8102:result = count.longValue(); |==> <NO-OP>
+35:LVR:0:POS:org.apache.commons.math.stat.Frequency@getPct(java.lang.Comparable<?>):317:9935:0 |==> 1
+36:LVR:0:NEG:org.apache.commons.math.stat.Frequency@getPct(java.lang.Comparable<?>):317:9935:0 |==> -1
+37:ROR:==(long,long):<=(long,long):org.apache.commons.math.stat.Frequency@getPct(java.lang.Comparable<?>):317:9924:sumFreq == 0 |==> sumFreq <= 0
+38:ROR:==(long,long):>=(long,long):org.apache.commons.math.stat.Frequency@getPct(java.lang.Comparable<?>):317:9924:sumFreq == 0 |==> sumFreq >= 0
+39:ROR:==(long,long):FALSE(long,long):org.apache.commons.math.stat.Frequency@getPct(java.lang.Comparable<?>):317:9932:sumFreq == 0 |==> false
+40:AOR:/(double,double):%(double,double):org.apache.commons.math.stat.Frequency@getPct(java.lang.Comparable<?>):320:9996:(double)getCount(v) / (double)sumFreq |==> (double)getCount(v) % (double)sumFreq
+41:AOR:/(double,double):*(double,double):org.apache.commons.math.stat.Frequency@getPct(java.lang.Comparable<?>):320:9996:(double)getCount(v) / (double)sumFreq |==> (double)getCount(v) * (double)sumFreq
+42:AOR:/(double,double):+(double,double):org.apache.commons.math.stat.Frequency@getPct(java.lang.Comparable<?>):320:9996:(double)getCount(v) / (double)sumFreq |==> (double)getCount(v) + (double)sumFreq
+43:AOR:/(double,double):-(double,double):org.apache.commons.math.stat.Frequency@getPct(java.lang.Comparable<?>):320:9996:(double)getCount(v) / (double)sumFreq |==> (double)getCount(v) - (double)sumFreq
+44:LVR:0:POS:org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):382:11841:0 |==> 1
+45:LVR:0:NEG:org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):382:11841:0 |==> -1
+46:ROR:==(long,long):<=(long,long):org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):382:11825:getSumFreq() == 0 |==> getSumFreq() <= 0
+47:ROR:==(long,long):>=(long,long):org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):382:11825:getSumFreq() == 0 |==> getSumFreq() >= 0
+48:ROR:==(long,long):FALSE(long,long):org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):382:11838:getSumFreq() == 0 |==> false
+49:LVR:0:POS:org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):383:11865:0 |==> 1
+50:LVR:0:NEG:org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):383:11865:0 |==> -1
+51:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):389:12086:c == null |==> false
+52:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):390:12109:c = new NaturalComparator(); |==> <NO-OP>
+53:LVR:0:POS:org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):392:12170:0 |==> 1
+54:LVR:0:NEG:org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):392:12170:0 |==> -1
+55:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):396:12253:value != null |==> true
+56:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):397:12280:result = value.longValue(); |==> <NO-OP>
+57:LVR:0:POS:org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):403:12476:0 |==> 1
+58:LVR:0:NEG:org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):403:12476:0 |==> -1
+59:ROR:<(int,int):!=(int,int):org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):403:12439:c.compare(v, freqTable.firstKey()) < 0 |==> c.compare(v, freqTable.firstKey()) != 0
+60:ROR:<(int,int):<=(int,int):org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):403:12439:c.compare(v, freqTable.firstKey()) < 0 |==> c.compare(v, freqTable.firstKey()) <= 0
+61:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):403:12474:c.compare(v, freqTable.firstKey()) < 0 |==> false
+62:LVR:0:POS:org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):404:12500:0 |==> 1
+63:LVR:0:NEG:org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):404:12500:0 |==> -1
+64:LVR:0:POS:org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):407:12610:0 |==> 1
+65:LVR:0:NEG:org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):407:12610:0 |==> -1
+66:ROR:>=(int,int):==(int,int):org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):407:12573:c.compare(v, freqTable.lastKey()) >= 0 |==> c.compare(v, freqTable.lastKey()) == 0
+67:ROR:>=(int,int):>(int,int):org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):407:12573:c.compare(v, freqTable.lastKey()) >= 0 |==> c.compare(v, freqTable.lastKey()) > 0
+68:ROR:>=(int,int):TRUE(int,int):org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):407:12607:c.compare(v, freqTable.lastKey()) >= 0 |==> true
+69:LVR:0:POS:org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):414:12903:0 |==> 1
+70:LVR:0:NEG:org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):414:12903:0 |==> -1
+71:ROR:>(int,int):!=(int,int):org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):414:12877:c.compare(v, nextValue) > 0 |==> c.compare(v, nextValue) != 0
+72:ROR:>(int,int):>=(int,int):org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):414:12877:c.compare(v, nextValue) > 0 |==> c.compare(v, nextValue) >= 0
+73:ROR:>(int,int):FALSE(int,int):org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):414:12901:c.compare(v, nextValue) > 0 |==> false
+74:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.stat.Frequency@getCumFreq(java.lang.Comparable<?>):415:12924:result += getCount(nextValue); |==> <NO-OP>
+75:LVR:0:POS:org.apache.commons.math.stat.Frequency@getCumPct(java.lang.Comparable<?>):492:15362:0 |==> 1
+76:LVR:0:NEG:org.apache.commons.math.stat.Frequency@getCumPct(java.lang.Comparable<?>):492:15362:0 |==> -1
+77:ROR:==(long,long):<=(long,long):org.apache.commons.math.stat.Frequency@getCumPct(java.lang.Comparable<?>):492:15351:sumFreq == 0 |==> sumFreq <= 0
+78:ROR:==(long,long):>=(long,long):org.apache.commons.math.stat.Frequency@getCumPct(java.lang.Comparable<?>):492:15351:sumFreq == 0 |==> sumFreq >= 0
+79:ROR:==(long,long):FALSE(long,long):org.apache.commons.math.stat.Frequency@getCumPct(java.lang.Comparable<?>):492:15359:sumFreq == 0 |==> false
+80:AOR:/(double,double):%(double,double):org.apache.commons.math.stat.Frequency@getCumPct(java.lang.Comparable<?>):495:15423:(double)getCumFreq(v) / (double)sumFreq |==> (double)getCumFreq(v) % (double)sumFreq
+81:AOR:/(double,double):*(double,double):org.apache.commons.math.stat.Frequency@getCumPct(java.lang.Comparable<?>):495:15423:(double)getCumFreq(v) / (double)sumFreq |==> (double)getCumFreq(v) * (double)sumFreq
+82:AOR:/(double,double):+(double,double):org.apache.commons.math.stat.Frequency@getCumPct(java.lang.Comparable<?>):495:15423:(double)getCumFreq(v) / (double)sumFreq |==> (double)getCumFreq(v) + (double)sumFreq
+83:AOR:/(double,double):-(double,double):org.apache.commons.math.stat.Frequency@getCumPct(java.lang.Comparable<?>):495:15423:(double)getCumFreq(v) / (double)sumFreq |==> (double)getCumFreq(v) - (double)sumFreq
+84:LVR:POS:0:org.apache.commons.math.stat.Frequency@hashCode():569:18052:1 |==> 0
+85:LVR:POS:NEG:org.apache.commons.math.stat.Frequency@hashCode():569:18052:1 |==> -1
+86:AOR:*(int,int):%(int,int):org.apache.commons.math.stat.Frequency@hashCode():570:18072:prime * result |==> prime % result
+87:AOR:*(int,int):+(int,int):org.apache.commons.math.stat.Frequency@hashCode():570:18072:prime * result |==> prime + result
+88:AOR:*(int,int):-(int,int):org.apache.commons.math.stat.Frequency@hashCode():570:18072:prime * result |==> prime - result
+89:AOR:*(int,int):/(int,int):org.apache.commons.math.stat.Frequency@hashCode():570:18072:prime * result |==> prime / result
+90:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.math.stat.Frequency@hashCode():571:18118:freqTable == null |==> false
+91:LVR:0:POS:org.apache.commons.math.stat.Frequency@hashCode():571:18129:0 |==> 1
+92:LVR:0:NEG:org.apache.commons.math.stat.Frequency@hashCode():571:18129:0 |==> -1
+93:AOR:+(int,int):%(int,int):org.apache.commons.math.stat.Frequency@hashCode():570:18072:prime * result + ((freqTable == null) ? 0 : freqTable.hashCode()) |==> prime * result % ((freqTable == null) ? 0 : freqTable.hashCode())
+94:AOR:+(int,int):*(int,int):org.apache.commons.math.stat.Frequency@hashCode():570:18072:prime * result + ((freqTable == null) ? 0 : freqTable.hashCode()) |==> prime * result * ((freqTable == null) ? 0 : freqTable.hashCode())
+95:AOR:+(int,int):-(int,int):org.apache.commons.math.stat.Frequency@hashCode():570:18072:prime * result + ((freqTable == null) ? 0 : freqTable.hashCode()) |==> prime * result - ((freqTable == null) ? 0 : freqTable.hashCode())
+96:AOR:+(int,int):/(int,int):org.apache.commons.math.stat.Frequency@hashCode():570:18072:prime * result + ((freqTable == null) ? 0 : freqTable.hashCode()) |==> prime * result / ((freqTable == null) ? 0 : freqTable.hashCode())
+97:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.stat.Frequency@hashCode():570:18063:result = prime * result + ((freqTable == null) ? 0 : freqTable.hashCode()); |==> <NO-OP>
+98:LVR:TRUE:FALSE:org.apache.commons.math.stat.Frequency@equals(java.lang.Object):579:18309:true |==> false
+99:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.math.stat.Frequency@equals(java.lang.Object):580:18331:obj == null |==> false
+100:LVR:FALSE:TRUE:org.apache.commons.math.stat.Frequency@equals(java.lang.Object):581:18359:false |==> true
+101:LVR:FALSE:TRUE:org.apache.commons.math.stat.Frequency@equals(java.lang.Object):583:18426:false |==> true
+102:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.math.stat.Frequency@equals(java.lang.Object):585:18498:freqTable == null |==> false
+103:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.math.stat.Frequency@equals(java.lang.Object):586:18541:other.freqTable != null |==> true
+104:LVR:FALSE:TRUE:org.apache.commons.math.stat.Frequency@equals(java.lang.Object):587:18573:false |==> true
+105:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.math.stat.Frequency@equals(java.lang.Object):588:18616:freqTable.equals(other.freqTable) |==> false
+106:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.math.stat.Frequency@equals(java.lang.Object):588:18616:freqTable.equals(other.freqTable) |==> true
+107:LVR:FALSE:TRUE:org.apache.commons.math.stat.Frequency@equals(java.lang.Object):589:18654:false |==> true
+108:LVR:TRUE:FALSE:org.apache.commons.math.stat.Frequency@equals(java.lang.Object):590:18676:true |==> false

@@ -1,0 +1,65 @@
+1:LVR:0:POS:org.apache.commons.math.distribution.PoissonDistributionImpl@<init>(double,double,int):93:3323:0 |==> 1
+2:LVR:0:NEG:org.apache.commons.math.distribution.PoissonDistributionImpl@<init>(double,double,int):93:3323:0 |==> -1
+3:ROR:<=(double,double):<(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@<init>(double,double,int):93:3318:p <= 0 |==> p < 0
+4:ROR:<=(double,double):==(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@<init>(double,double,int):93:3318:p <= 0 |==> p == 0
+5:ROR:<=(double,double):TRUE(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@<init>(double,double,int):93:3320:p <= 0 |==> true
+6:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.distribution.PoissonDistributionImpl@<init>(double,double,int):96:3464:mean = p; |==> <NO-OP>
+7:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.distribution.PoissonDistributionImpl@<init>(double,double,int):97:3482:normal = new NormalDistributionImpl(p, FastMath.sqrt(p)); |==> <NO-OP>
+8:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.distribution.PoissonDistributionImpl@<init>(double,double,int):98:3548:this.epsilon = epsilon; |==> <NO-OP>
+9:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.distribution.PoissonDistributionImpl@<init>(double,double,int):99:3580:this.maxIterations = maxIterations; |==> <NO-OP>
+10:LVR:0:POS:org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):142:4880:0 |==> 1
+11:LVR:0:NEG:org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):142:4880:0 |==> -1
+12:ROR:<(int,int):!=(int,int):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):142:4876:x < 0 |==> x != 0
+13:ROR:<(int,int):<=(int,int):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):142:4876:x < 0 |==> x <= 0
+14:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):142:4878:x < 0 |==> false
+15:ROR:==(int,int):<=(int,int):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):142:4885:x == Integer.MAX_VALUE |==> x <= Integer.MAX_VALUE
+16:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):142:4887:x == Integer.MAX_VALUE |==> false
+17:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):142:4876:x < 0 || x == Integer.MAX_VALUE |==> x < 0
+18:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):142:4885:x < 0 || x == Integer.MAX_VALUE |==> x == Integer.MAX_VALUE
+19:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):142:4882:x < 0 || x == Integer.MAX_VALUE |==> true
+20:LVR:0:POS:org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):143:4929:0.0 |==> 1.0
+21:LVR:0:NEG:org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):143:4929:0.0 |==> -1.0
+22:LVR:0:POS:org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):144:4958:0 |==> 1
+23:LVR:0:NEG:org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):144:4958:0 |==> -1
+24:ROR:==(int,int):<=(int,int):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):144:4953:x == 0 |==> x <= 0
+25:ROR:==(int,int):>=(int,int):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):144:4953:x == 0 |==> x >= 0
+26:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):144:4955:x == 0 |==> false
+27:ORU:-(double):+(double):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):145:4994:-mean |==> +mean
+28:ORU:-(double):+(double):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):147:5050:-SaddlePointExpansion.getStirlingError(x) |==> +SaddlePointExpansion.getStirlingError(x)
+29:AOR:-(double,double):%(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):147:5050:-SaddlePointExpansion.getStirlingError(x) - SaddlePointExpansion.getDeviancePart(x, mean) |==> -SaddlePointExpansion.getStirlingError(x) % SaddlePointExpansion.getDeviancePart(x, mean)
+30:AOR:-(double,double):*(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):147:5050:-SaddlePointExpansion.getStirlingError(x) - SaddlePointExpansion.getDeviancePart(x, mean) |==> -SaddlePointExpansion.getStirlingError(x) * SaddlePointExpansion.getDeviancePart(x, mean)
+31:AOR:-(double,double):+(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):147:5050:-SaddlePointExpansion.getStirlingError(x) - SaddlePointExpansion.getDeviancePart(x, mean) |==> -SaddlePointExpansion.getStirlingError(x) + SaddlePointExpansion.getDeviancePart(x, mean)
+32:AOR:-(double,double):/(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):147:5050:-SaddlePointExpansion.getStirlingError(x) - SaddlePointExpansion.getDeviancePart(x, mean) |==> -SaddlePointExpansion.getStirlingError(x) / SaddlePointExpansion.getDeviancePart(x, mean)
+33:AOR:*(double,double):%(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):149:5193:MathUtils.TWO_PI * x |==> MathUtils.TWO_PI % x
+34:AOR:*(double,double):+(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):149:5193:MathUtils.TWO_PI * x |==> MathUtils.TWO_PI + x
+35:AOR:*(double,double):-(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):149:5193:MathUtils.TWO_PI * x |==> MathUtils.TWO_PI - x
+36:AOR:*(double,double):/(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):149:5193:MathUtils.TWO_PI * x |==> MathUtils.TWO_PI / x
+37:AOR:/(double,double):%(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):147:5037:FastMath.exp(-SaddlePointExpansion.getStirlingError(x) - SaddlePointExpansion.getDeviancePart(x, mean)) / FastMath.sqrt(MathUtils.TWO_PI * x) |==> FastMath.exp(-SaddlePointExpansion.getStirlingError(x) - SaddlePointExpansion.getDeviancePart(x, mean)) % FastMath.sqrt(MathUtils.TWO_PI * x)
+38:AOR:/(double,double):*(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):147:5037:FastMath.exp(-SaddlePointExpansion.getStirlingError(x) - SaddlePointExpansion.getDeviancePart(x, mean)) / FastMath.sqrt(MathUtils.TWO_PI * x) |==> FastMath.exp(-SaddlePointExpansion.getStirlingError(x) - SaddlePointExpansion.getDeviancePart(x, mean)) * FastMath.sqrt(MathUtils.TWO_PI * x)
+39:AOR:/(double,double):+(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):147:5037:FastMath.exp(-SaddlePointExpansion.getStirlingError(x) - SaddlePointExpansion.getDeviancePart(x, mean)) / FastMath.sqrt(MathUtils.TWO_PI * x) |==> FastMath.exp(-SaddlePointExpansion.getStirlingError(x) - SaddlePointExpansion.getDeviancePart(x, mean)) + FastMath.sqrt(MathUtils.TWO_PI * x)
+40:AOR:/(double,double):-(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@probability(int):147:5037:FastMath.exp(-SaddlePointExpansion.getStirlingError(x) - SaddlePointExpansion.getDeviancePart(x, mean)) / FastMath.sqrt(MathUtils.TWO_PI * x) |==> FastMath.exp(-SaddlePointExpansion.getStirlingError(x) - SaddlePointExpansion.getDeviancePart(x, mean)) - FastMath.sqrt(MathUtils.TWO_PI * x)
+41:LVR:0:POS:org.apache.commons.math.distribution.PoissonDistributionImpl@cumulativeProbability(int):165:5727:0 |==> 1
+42:LVR:0:NEG:org.apache.commons.math.distribution.PoissonDistributionImpl@cumulativeProbability(int):165:5727:0 |==> -1
+43:ROR:<(int,int):!=(int,int):org.apache.commons.math.distribution.PoissonDistributionImpl@cumulativeProbability(int):165:5723:x < 0 |==> x != 0
+44:ROR:<(int,int):<=(int,int):org.apache.commons.math.distribution.PoissonDistributionImpl@cumulativeProbability(int):165:5723:x < 0 |==> x <= 0
+45:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.distribution.PoissonDistributionImpl@cumulativeProbability(int):165:5725:x < 0 |==> false
+46:LVR:0:POS:org.apache.commons.math.distribution.PoissonDistributionImpl@cumulativeProbability(int):166:5751:0 |==> 1
+47:LVR:0:NEG:org.apache.commons.math.distribution.PoissonDistributionImpl@cumulativeProbability(int):166:5751:0 |==> -1
+48:ROR:==(int,int):<=(int,int):org.apache.commons.math.distribution.PoissonDistributionImpl@cumulativeProbability(int):168:5776:x == Integer.MAX_VALUE |==> x <= Integer.MAX_VALUE
+49:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.distribution.PoissonDistributionImpl@cumulativeProbability(int):168:5778:x == Integer.MAX_VALUE |==> false
+50:LVR:POS:0:org.apache.commons.math.distribution.PoissonDistributionImpl@cumulativeProbability(int):169:5821:1 |==> 0
+51:LVR:POS:NEG:org.apache.commons.math.distribution.PoissonDistributionImpl@cumulativeProbability(int):169:5821:1 |==> -1
+52:LVR:POS:0:org.apache.commons.math.distribution.PoissonDistributionImpl@cumulativeProbability(int):171:5886:1 |==> 0
+53:LVR:POS:NEG:org.apache.commons.math.distribution.PoissonDistributionImpl@cumulativeProbability(int):171:5886:1 |==> -1
+54:AOR:+(double,double):%(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@cumulativeProbability(int):171:5873:(double)x + 1 |==> (double)x % 1
+55:AOR:+(double,double):*(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@cumulativeProbability(int):171:5873:(double)x + 1 |==> (double)x * 1
+56:AOR:+(double,double):-(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@cumulativeProbability(int):171:5873:(double)x + 1 |==> (double)x - 1
+57:AOR:+(double,double):/(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@cumulativeProbability(int):171:5873:(double)x + 1 |==> (double)x / 1
+58:LVR:POS:0:org.apache.commons.math.distribution.PoissonDistributionImpl@normalApproximateProbability(int):191:6723:0.5 |==> 0.0
+59:LVR:POS:NEG:org.apache.commons.math.distribution.PoissonDistributionImpl@normalApproximateProbability(int):191:6723:0.5 |==> -0.5
+60:AOR:+(double,double):%(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@normalApproximateProbability(int):191:6719:x + 0.5 |==> x % 0.5
+61:AOR:+(double,double):*(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@normalApproximateProbability(int):191:6719:x + 0.5 |==> x * 0.5
+62:AOR:+(double,double):-(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@normalApproximateProbability(int):191:6719:x + 0.5 |==> x - 0.5
+63:AOR:+(double,double):/(double,double):org.apache.commons.math.distribution.PoissonDistributionImpl@normalApproximateProbability(int):191:6719:x + 0.5 |==> x / 0.5
+64:LVR:0:POS:org.apache.commons.math.distribution.PoissonDistributionImpl@getDomainLowerBound(double):226:8078:0 |==> 1
+65:LVR:0:NEG:org.apache.commons.math.distribution.PoissonDistributionImpl@getDomainLowerBound(double):226:8078:0 |==> -1

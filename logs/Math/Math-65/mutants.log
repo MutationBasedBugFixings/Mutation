@@ -1,0 +1,160 @@
+1:STD:<CALL>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@<init>():117:4318:setConvergenceChecker(new SimpleVectorialValueChecker()); |==> <NO-OP>
+2:STD:<CALL>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@<init>():118:4384:setMaxIterations(DEFAULT_MAX_ITERATIONS); |==> <NO-OP>
+3:STD:<CALL>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@<init>():119:4434:setMaxEvaluations(Integer.MAX_VALUE); |==> <NO-OP>
+4:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@setMaxIterations(int):124:4566:this.maxIterations = maxIterations; |==> <NO-OP>
+5:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@setMaxEvaluations(int):139:4888:this.maxEvaluations = maxEvaluations; |==> <NO-OP>
+6:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@setConvergenceChecker(org.apache.commons.math.optimization.VectorialConvergenceChecker):159:5367:this.checker = convergenceChecker; |==> <NO-OP>
+7:ROR:>(int,int):!=(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@incrementIterationsCounter():173:5779:++iterations > maxIterations |==> ++iterations != maxIterations
+8:ROR:>(int,int):>=(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@incrementIterationsCounter():173:5779:++iterations > maxIterations |==> ++iterations >= maxIterations
+9:ROR:>(int,int):FALSE(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@incrementIterationsCounter():173:5792:++iterations > maxIterations |==> false
+10:STD:<INC>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateJacobian():184:6203:++jacobianEvaluations; |==> <NO-OP>
+11:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateJacobian():185:6234:jacobian = jF.value(point); |==> <NO-OP>
+12:ROR:!=(int,int):<(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateJacobian():186:6274:jacobian.length != rows |==> jacobian.length < rows
+13:ROR:!=(int,int):>(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateJacobian():186:6274:jacobian.length != rows |==> jacobian.length > rows
+14:ROR:!=(int,int):TRUE(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateJacobian():186:6290:jacobian.length != rows |==> true
+15:LVR:0:POS:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateJacobian():190:6508:0 |==> 1
+16:LVR:0:NEG:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateJacobian():190:6508:0 |==> -1
+17:ROR:<(int,int):!=(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateJacobian():190:6511:i < rows |==> i != rows
+18:ROR:<(int,int):<=(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateJacobian():190:6511:i < rows |==> i <= rows
+19:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateJacobian():190:6513:i < rows |==> false
+20:ORU:-(double):+(double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateJacobian():192:6607:-Math.sqrt(residualsWeights[i]) |==> +Math.sqrt(residualsWeights[i])
+21:LVR:0:POS:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateJacobian():193:6665:0 |==> 1
+22:LVR:0:NEG:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateJacobian():193:6665:0 |==> -1
+23:ROR:<(int,int):!=(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateJacobian():193:6668:j < cols |==> j != cols
+24:ROR:<(int,int):<=(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateJacobian():193:6668:j < cols |==> j <= cols
+25:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateJacobian():193:6670:j < cols |==> false
+26:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateJacobian():194:6701:ji[j] *= factor; |==> <NO-OP>
+27:ROR:>(int,int):!=(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():208:7119:++objectiveEvaluations > maxEvaluations |==> ++objectiveEvaluations != maxEvaluations
+28:ROR:>(int,int):>=(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():208:7119:++objectiveEvaluations > maxEvaluations |==> ++objectiveEvaluations >= maxEvaluations
+29:ROR:>(int,int):FALSE(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():208:7142:++objectiveEvaluations > maxEvaluations |==> false
+30:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():212:7341:objective = function.value(point); |==> <NO-OP>
+31:ROR:!=(int,int):<(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():213:7388:objective.length != rows |==> objective.length < rows
+32:ROR:!=(int,int):>(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():213:7388:objective.length != rows |==> objective.length > rows
+33:ROR:!=(int,int):TRUE(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():213:7405:objective.length != rows |==> true
+34:LVR:0:POS:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():217:7618:0 |==> 1
+35:LVR:0:NEG:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():217:7618:0 |==> -1
+36:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():217:7611:cost = 0; |==> <NO-OP>
+37:LVR:0:POS:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():218:7641:0 |==> 1
+38:LVR:0:NEG:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():218:7641:0 |==> -1
+39:LVR:0:POS:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():219:7665:0 |==> 1
+40:LVR:0:NEG:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():219:7665:0 |==> -1
+41:ROR:<(int,int):!=(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():219:7668:i < rows |==> i != rows
+42:ROR:<(int,int):<=(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():219:7668:i < rows |==> i <= rows
+43:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():219:7670:i < rows |==> false
+44:AOR:-(double,double):%(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():220:7721:targetValues[i] - objective[i] |==> targetValues[i] % objective[i]
+45:AOR:-(double,double):*(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():220:7721:targetValues[i] - objective[i] |==> targetValues[i] * objective[i]
+46:AOR:-(double,double):+(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():220:7721:targetValues[i] - objective[i] |==> targetValues[i] + objective[i]
+47:AOR:-(double,double):/(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():220:7721:targetValues[i] - objective[i] |==> targetValues[i] / objective[i]
+48:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():221:7765:residuals[i] = residual; |==> <NO-OP>
+49:AOR:*(double,double):%(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():222:7810:residualsWeights[i] * residual |==> residualsWeights[i] % residual
+50:AOR:*(double,double):+(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():222:7810:residualsWeights[i] * residual |==> residualsWeights[i] + residual
+51:AOR:*(double,double):-(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():222:7810:residualsWeights[i] * residual |==> residualsWeights[i] - residual
+52:AOR:*(double,double):/(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():222:7810:residualsWeights[i] * residual |==> residualsWeights[i] / residual
+53:AOR:*(double,double):%(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():222:7810:residualsWeights[i] * residual * residual |==> residualsWeights[i] * residual % residual
+54:AOR:*(double,double):+(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():222:7810:residualsWeights[i] * residual * residual |==> residualsWeights[i] * residual + residual
+55:AOR:*(double,double):-(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():222:7810:residualsWeights[i] * residual * residual |==> residualsWeights[i] * residual - residual
+56:AOR:*(double,double):/(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():222:7810:residualsWeights[i] * residual * residual |==> residualsWeights[i] * residual / residual
+57:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():222:7802:cost += residualsWeights[i] * residual * residual; |==> <NO-OP>
+58:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():223:7865:index += cols; |==> <NO-OP>
+59:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@updateResidualsAndCost():225:7898:cost = Math.sqrt(cost); |==> <NO-OP>
+60:LVR:0:POS:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getRMS():240:8413:0 |==> 1
+61:LVR:0:NEG:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getRMS():240:8413:0 |==> -1
+62:LVR:0:POS:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getRMS():241:8437:0 |==> 1
+63:LVR:0:NEG:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getRMS():241:8437:0 |==> -1
+64:ROR:<(int,int):!=(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getRMS():241:8440:i < rows |==> i != rows
+65:ROR:<(int,int):<=(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getRMS():241:8440:i < rows |==> i <= rows
+66:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getRMS():241:8442:i < rows |==> false
+67:AOR:*(double,double):%(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getRMS():243:8532:residual * residual |==> residual % residual
+68:AOR:*(double,double):+(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getRMS():243:8532:residual * residual |==> residual + residual
+69:AOR:*(double,double):-(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getRMS():243:8532:residual * residual |==> residual - residual
+70:AOR:*(double,double):/(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getRMS():243:8532:residual * residual |==> residual / residual
+71:AOR:*(double,double):%(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getRMS():243:8532:residual * residual * residualsWeights[i] |==> residual * residual % residualsWeights[i]
+72:AOR:*(double,double):+(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getRMS():243:8532:residual * residual * residualsWeights[i] |==> residual * residual + residualsWeights[i]
+73:AOR:*(double,double):-(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getRMS():243:8532:residual * residual * residualsWeights[i] |==> residual * residual - residualsWeights[i]
+74:AOR:*(double,double):/(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getRMS():243:8532:residual * residual * residualsWeights[i] |==> residual * residual / residualsWeights[i]
+75:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getRMS():243:8519:criterion += residual * residual * residualsWeights[i]; |==> <NO-OP>
+76:AOR:/(double,double):%(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getRMS():245:8610:criterion / rows |==> criterion % rows
+77:AOR:/(double,double):*(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getRMS():245:8610:criterion / rows |==> criterion * rows
+78:AOR:/(double,double):+(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getRMS():245:8610:criterion / rows |==> criterion + rows
+79:AOR:/(double,double):-(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getRMS():245:8610:criterion / rows |==> criterion - rows
+80:LVR:0:POS:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getChiSquare():255:8928:0 |==> 1
+81:LVR:0:NEG:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getChiSquare():255:8928:0 |==> -1
+82:LVR:0:POS:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getChiSquare():256:8952:0 |==> 1
+83:LVR:0:NEG:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getChiSquare():256:8952:0 |==> -1
+84:ROR:<(int,int):!=(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getChiSquare():256:8955:i < rows |==> i != rows
+85:ROR:<(int,int):<=(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getChiSquare():256:8955:i < rows |==> i <= rows
+86:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getChiSquare():256:8957:i < rows |==> false
+87:AOR:*(double,double):%(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getChiSquare():258:9047:residual * residual |==> residual % residual
+88:AOR:*(double,double):+(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getChiSquare():258:9047:residual * residual |==> residual + residual
+89:AOR:*(double,double):-(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getChiSquare():258:9047:residual * residual |==> residual - residual
+90:AOR:*(double,double):/(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getChiSquare():258:9047:residual * residual |==> residual / residual
+91:AOR:/(double,double):%(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getChiSquare():258:9047:residual * residual / residualsWeights[i] |==> residual * residual % residualsWeights[i]
+92:AOR:/(double,double):*(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getChiSquare():258:9047:residual * residual / residualsWeights[i] |==> residual * residual * residualsWeights[i]
+93:AOR:/(double,double):+(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getChiSquare():258:9047:residual * residual / residualsWeights[i] |==> residual * residual + residualsWeights[i]
+94:AOR:/(double,double):-(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getChiSquare():258:9047:residual * residual / residualsWeights[i] |==> residual * residual - residualsWeights[i]
+95:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getChiSquare():258:9034:chiSquare += residual * residual / residualsWeights[i]; |==> <NO-OP>
+96:STD:<CALL>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():275:9595:updateJacobian(); |==> <NO-OP>
+97:LVR:0:POS:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():279:9763:0 |==> 1
+98:LVR:0:NEG:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():279:9763:0 |==> -1
+99:ROR:<(int,int):!=(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():279:9766:i < cols |==> i != cols
+100:ROR:<(int,int):<=(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():279:9766:i < cols |==> i <= cols
+101:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():279:9768:i < cols |==> false
+102:ROR:<(int,int):!=(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():280:9811:j < cols |==> j != cols
+103:ROR:<(int,int):<=(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():280:9811:j < cols |==> j <= cols
+104:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():280:9813:j < cols |==> false
+105:LVR:0:POS:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():281:9857:0 |==> 1
+106:LVR:0:NEG:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():281:9857:0 |==> -1
+107:LVR:0:POS:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():282:9889:0 |==> 1
+108:LVR:0:NEG:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():282:9889:0 |==> -1
+109:ROR:<(int,int):!=(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():282:9892:k < rows |==> k != rows
+110:ROR:<(int,int):<=(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():282:9892:k < rows |==> k <= rows
+111:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():282:9894:k < rows |==> false
+112:AOR:*(double,double):%(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():283:9936:jacobian[k][i] * jacobian[k][j] |==> jacobian[k][i] % jacobian[k][j]
+113:AOR:*(double,double):+(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():283:9936:jacobian[k][i] * jacobian[k][j] |==> jacobian[k][i] + jacobian[k][j]
+114:AOR:*(double,double):-(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():283:9936:jacobian[k][i] * jacobian[k][j] |==> jacobian[k][i] - jacobian[k][j]
+115:AOR:*(double,double):/(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():283:9936:jacobian[k][i] * jacobian[k][j] |==> jacobian[k][i] / jacobian[k][j]
+116:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():283:9929:sum += jacobian[k][i] * jacobian[k][j]; |==> <NO-OP>
+117:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():285:10003:jTj[i][j] = sum; |==> <NO-OP>
+118:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@getCovariances():286:10036:jTj[j][i] = sum; |==> <NO-OP>
+119:ROR:<=(int,int):<(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@guessParametersErrors():312:11109:rows <= cols |==> rows < cols
+120:ROR:<=(int,int):==(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@guessParametersErrors():312:11109:rows <= cols |==> rows == cols
+121:ROR:<=(int,int):TRUE(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@guessParametersErrors():312:11114:rows <= cols |==> true
+122:AOR:-(int,int):%(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@guessParametersErrors():318:11370:rows - cols |==> rows % cols
+123:AOR:-(int,int):*(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@guessParametersErrors():318:11370:rows - cols |==> rows * cols
+124:AOR:-(int,int):+(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@guessParametersErrors():318:11370:rows - cols |==> rows + cols
+125:AOR:-(int,int):/(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@guessParametersErrors():318:11370:rows - cols |==> rows / cols
+126:AOR:/(double,double):%(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@guessParametersErrors():318:11352:getChiSquare() / (rows - cols) |==> getChiSquare() % (rows - cols)
+127:AOR:/(double,double):*(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@guessParametersErrors():318:11352:getChiSquare() / (rows - cols) |==> getChiSquare() * (rows - cols)
+128:AOR:/(double,double):+(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@guessParametersErrors():318:11352:getChiSquare() / (rows - cols) |==> getChiSquare() + (rows - cols)
+129:AOR:/(double,double):-(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@guessParametersErrors():318:11352:getChiSquare() / (rows - cols) |==> getChiSquare() - (rows - cols)
+130:LVR:0:POS:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@guessParametersErrors():320:11451:0 |==> 1
+131:LVR:0:NEG:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@guessParametersErrors():320:11451:0 |==> -1
+132:ROR:<(int,int):<=(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@guessParametersErrors():320:11454:i < errors.length |==> i <= errors.length
+133:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@guessParametersErrors():320:11456:i < errors.length |==> false
+134:AOR:*(double,double):%(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@guessParametersErrors():321:11504:Math.sqrt(covar[i][i]) * c |==> Math.sqrt(covar[i][i]) % c
+135:AOR:*(double,double):+(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@guessParametersErrors():321:11504:Math.sqrt(covar[i][i]) * c |==> Math.sqrt(covar[i][i]) + c
+136:AOR:*(double,double):-(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@guessParametersErrors():321:11504:Math.sqrt(covar[i][i]) * c |==> Math.sqrt(covar[i][i]) - c
+137:AOR:*(double,double):/(double,double):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@guessParametersErrors():321:11504:Math.sqrt(covar[i][i]) * c |==> Math.sqrt(covar[i][i]) / c
+138:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@guessParametersErrors():321:11492:errors[i] = Math.sqrt(covar[i][i]) * c; |==> <NO-OP>
+139:ROR:!=(int,int):<(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math.analysis.DifferentiableMultivariateVectorialFunction,double[],double[],double[]):332:11963:target.length != weights.length |==> target.length < weights.length
+140:ROR:!=(int,int):>(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math.analysis.DifferentiableMultivariateVectorialFunction,double[],double[],double[]):332:11963:target.length != weights.length |==> target.length > weights.length
+141:ROR:!=(int,int):TRUE(int,int):org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math.analysis.DifferentiableMultivariateVectorialFunction,double[],double[],double[]):332:11977:target.length != weights.length |==> true
+142:LVR:0:POS:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math.analysis.DifferentiableMultivariateVectorialFunction,double[],double[],double[]):338:12231:0 |==> 1
+143:LVR:0:NEG:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math.analysis.DifferentiableMultivariateVectorialFunction,double[],double[],double[]):338:12231:0 |==> -1
+144:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math.analysis.DifferentiableMultivariateVectorialFunction,double[],double[],double[]):338:12208:iterations = 0; |==> <NO-OP>
+145:LVR:0:POS:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math.analysis.DifferentiableMultivariateVectorialFunction,double[],double[],double[]):339:12265:0 |==> 1
+146:LVR:0:NEG:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math.analysis.DifferentiableMultivariateVectorialFunction,double[],double[],double[]):339:12265:0 |==> -1
+147:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math.analysis.DifferentiableMultivariateVectorialFunction,double[],double[],double[]):339:12242:objectiveEvaluations = 0; |==> <NO-OP>
+148:LVR:0:POS:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math.analysis.DifferentiableMultivariateVectorialFunction,double[],double[],double[]):340:12299:0 |==> 1
+149:LVR:0:NEG:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math.analysis.DifferentiableMultivariateVectorialFunction,double[],double[],double[]):340:12299:0 |==> -1
+150:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math.analysis.DifferentiableMultivariateVectorialFunction,double[],double[],double[]):340:12276:jacobianEvaluations = 0; |==> <NO-OP>
+151:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math.analysis.DifferentiableMultivariateVectorialFunction,double[],double[],double[]):343:12366:function = f; |==> <NO-OP>
+152:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math.analysis.DifferentiableMultivariateVectorialFunction,double[],double[],double[]):344:12396:jF = f.jacobian(); |==> <NO-OP>
+153:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math.analysis.DifferentiableMultivariateVectorialFunction,double[],double[],double[]):345:12437:targetValues = target.clone(); |==> <NO-OP>
+154:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math.analysis.DifferentiableMultivariateVectorialFunction,double[],double[],double[]):346:12480:residualsWeights = weights.clone(); |==> <NO-OP>
+155:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math.analysis.DifferentiableMultivariateVectorialFunction,double[],double[],double[]):347:12524:this.point = startPoint.clone(); |==> <NO-OP>
+156:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math.analysis.DifferentiableMultivariateVectorialFunction,double[],double[],double[]):348:12571:this.residuals = new double[target.length]; |==> <NO-OP>
+157:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math.analysis.DifferentiableMultivariateVectorialFunction,double[],double[],double[]):351:12682:rows = target.length; |==> <NO-OP>
+158:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math.analysis.DifferentiableMultivariateVectorialFunction,double[],double[],double[]):352:12717:cols = point.length; |==> <NO-OP>
+159:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math.analysis.DifferentiableMultivariateVectorialFunction,double[],double[],double[]):353:12751:jacobian = new double[rows][cols]; |==> <NO-OP>
+160:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math.analysis.DifferentiableMultivariateVectorialFunction,double[],double[],double[]):355:12796:cost = Double.POSITIVE_INFINITY; |==> <NO-OP>
