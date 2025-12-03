@@ -1,0 +1,417 @@
+1:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@connect(java.lang.String):38:1295:con.url(url); |==> <NO-OP>
+2:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@connect(java.net.URL):44:1439:con.url(url); |==> <NO-OP>
+3:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection@encodeUrl(java.lang.String):49:1536:url == null |==> false
+4:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection@encodeMimeName(java.lang.String):55:1676:val == null |==> false
+5:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection@<init>():64:1871:req = new Request(); |==> <NO-OP>
+6:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection@<init>():65:1900:res = new Response(); |==> <NO-OP>
+7:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@url(java.net.URL):69:1974:req.url(url); |==> <NO-OP>
+8:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@url(java.lang.String):74:2064:Validate.notEmpty(url, "Must supply a valid URL"); |==> <NO-OP>
+9:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@url(java.lang.String):76:2141:req.url(new URL(encodeUrl(url))); |==> <NO-OP>
+10:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@userAgent(java.lang.String):84:2393:Validate.notNull(userAgent, "User agent must not be null"); |==> <NO-OP>
+11:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@userAgent(java.lang.String):85:2461:req.header("User-Agent", userAgent); |==> <NO-OP>
+12:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@timeout(int):90:2578:req.timeout(millis); |==> <NO-OP>
+13:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@maxBodySize(int):95:2682:req.maxBodySize(bytes); |==> <NO-OP>
+14:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@followRedirects(boolean):100:2807:req.followRedirects(followRedirects); |==> <NO-OP>
+15:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@referrer(java.lang.String):105:2931:Validate.notNull(referrer, "Referrer must not be null"); |==> <NO-OP>
+16:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@referrer(java.lang.String):106:2996:req.header("Referer", referrer); |==> <NO-OP>
+17:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@method(org.jsoup.Connection.Method):111:3111:req.method(method); |==> <NO-OP>
+18:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@ignoreHttpErrors(boolean):116:3228:req.ignoreHttpErrors(ignoreHttpErrors); |==> <NO-OP>
+19:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@ignoreContentType(boolean):121:3364:req.ignoreContentType(ignoreContentType); |==> <NO-OP>
+20:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@validateTLSCertificates(boolean):126:3505:req.validateTLSCertificates(value); |==> <NO-OP>
+21:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@data(java.lang.String,java.lang.String):131:3632:req.data(KeyVal.create(key, value)); |==> <NO-OP>
+22:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@data(java.lang.String,java.lang.String,java.io.InputStream):136:3788:req.data(KeyVal.create(key, filename, inputStream)); |==> <NO-OP>
+23:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@data(java.util.Map<java.lang.String,java.lang.String>):141:3932:Validate.notNull(data, "Data map must not be null"); |==> <NO-OP>
+24:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@data(java.util.Map<java.lang.String,java.lang.String>):143:4063:req.data(KeyVal.create(entry.getKey(), entry.getValue())); |==> <NO-OP>
+25:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@data(java.lang.String[]):149:4216:Validate.notNull(keyvals, "Data key value pairs must not be null"); |==> <NO-OP>
+26:LVR:POS:0:org.jsoup.helper.HttpConnection@data(java.lang.String[]):150:4324:2 |==> 0
+27:AOR:%(int,int):*(int,int):org.jsoup.helper.HttpConnection@data(java.lang.String[]):150:4308:keyvals.length % 2 |==> keyvals.length * 2
+28:AOR:%(int,int):+(int,int):org.jsoup.helper.HttpConnection@data(java.lang.String[]):150:4308:keyvals.length % 2 |==> keyvals.length + 2
+29:AOR:%(int,int):-(int,int):org.jsoup.helper.HttpConnection@data(java.lang.String[]):150:4308:keyvals.length % 2 |==> keyvals.length - 2
+30:AOR:%(int,int):/(int,int):org.jsoup.helper.HttpConnection@data(java.lang.String[]):150:4308:keyvals.length % 2 |==> keyvals.length / 2
+31:LVR:0:POS:org.jsoup.helper.HttpConnection@data(java.lang.String[]):150:4329:0 |==> 1
+32:LVR:0:NEG:org.jsoup.helper.HttpConnection@data(java.lang.String[]):150:4329:0 |==> -1
+33:ROR:==(int,int):<=(int,int):org.jsoup.helper.HttpConnection@data(java.lang.String[]):150:4308:keyvals.length % 2 == 0 |==> keyvals.length % 2 <= 0
+34:ROR:==(int,int):>=(int,int):org.jsoup.helper.HttpConnection@data(java.lang.String[]):150:4308:keyvals.length % 2 == 0 |==> keyvals.length % 2 >= 0
+35:ROR:==(int,int):FALSE(int,int):org.jsoup.helper.HttpConnection@data(java.lang.String[]):150:4326:keyvals.length % 2 == 0 |==> false
+36:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@data(java.lang.String[]):150:4292:Validate.isTrue(keyvals.length % 2 == 0, "Must supply an even number of key value pairs"); |==> <NO-OP>
+37:LVR:0:POS:org.jsoup.helper.HttpConnection@data(java.lang.String[]):151:4403:0 |==> 1
+38:LVR:0:NEG:org.jsoup.helper.HttpConnection@data(java.lang.String[]):151:4403:0 |==> -1
+39:ROR:<(int,int):!=(int,int):org.jsoup.helper.HttpConnection@data(java.lang.String[]):151:4406:i < keyvals.length |==> i != keyvals.length
+40:ROR:<(int,int):<=(int,int):org.jsoup.helper.HttpConnection@data(java.lang.String[]):151:4406:i < keyvals.length |==> i <= keyvals.length
+41:ROR:<(int,int):FALSE(int,int):org.jsoup.helper.HttpConnection@data(java.lang.String[]):151:4408:i < keyvals.length |==> false
+42:LVR:POS:0:org.jsoup.helper.HttpConnection@data(java.lang.String[]):151:4431:2 |==> 0
+43:LVR:POS:NEG:org.jsoup.helper.HttpConnection@data(java.lang.String[]):151:4431:2 |==> -2
+44:LVR:POS:0:org.jsoup.helper.HttpConnection@data(java.lang.String[]):153:4510:1 |==> 0
+45:LVR:POS:NEG:org.jsoup.helper.HttpConnection@data(java.lang.String[]):153:4510:1 |==> -1
+46:AOR:+(int,int):%(int,int):org.jsoup.helper.HttpConnection@data(java.lang.String[]):153:4508:i + 1 |==> i % 1
+47:AOR:+(int,int):*(int,int):org.jsoup.helper.HttpConnection@data(java.lang.String[]):153:4508:i + 1 |==> i * 1
+48:AOR:+(int,int):-(int,int):org.jsoup.helper.HttpConnection@data(java.lang.String[]):153:4508:i + 1 |==> i - 1
+49:AOR:+(int,int):/(int,int):org.jsoup.helper.HttpConnection@data(java.lang.String[]):153:4508:i + 1 |==> i / 1
+50:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@data(java.lang.String[]):154:4526:Validate.notEmpty(key, "Data key must not be empty"); |==> <NO-OP>
+51:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@data(java.lang.String[]):155:4592:Validate.notNull(value, "Data value must not be null"); |==> <NO-OP>
+52:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@data(java.lang.String[]):156:4660:req.data(KeyVal.create(key, value)); |==> <NO-OP>
+53:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@data(java.util.Collection<org.jsoup.Connection.KeyVal>):162:4808:Validate.notNull(data, "Data collection must not be null"); |==> <NO-OP>
+54:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@data(java.util.Collection<org.jsoup.Connection.KeyVal>):164:4926:req.data(entry); |==> <NO-OP>
+55:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@header(java.lang.String,java.lang.String):170:5047:req.header(name, value); |==> <NO-OP>
+56:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@cookie(java.lang.String,java.lang.String):175:5166:req.cookie(name, value); |==> <NO-OP>
+57:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@cookies(java.util.Map<java.lang.String,java.lang.String>):180:5288:Validate.notNull(cookies, "Cookie map must not be null"); |==> <NO-OP>
+58:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@cookies(java.util.Map<java.lang.String,java.lang.String>):182:5427:req.cookie(entry.getKey(), entry.getValue()); |==> <NO-OP>
+59:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@parser(org.jsoup.parser.Parser):188:5565:req.parser(parser); |==> <NO-OP>
+60:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@get():193:5668:req.method(Method.GET); |==> <NO-OP>
+61:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@get():194:5700:execute(); |==> <NO-OP>
+62:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@post():199:5802:req.method(Method.POST); |==> <NO-OP>
+63:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@post():200:5835:execute(); |==> <NO-OP>
+64:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection@execute():205:5951:res = Response.execute(req); |==> <NO-OP>
+65:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection@request(org.jsoup.Connection.Request):214:6144:req = request; |==> <NO-OP>
+66:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection@response(org.jsoup.Connection.Response):223:6329:res = response; |==> <NO-OP>
+67:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection@postDataCharset(java.lang.String):228:6437:req.postDataCharset(charset); |==> <NO-OP>
+68:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@<init>():240:6782:headers = new LinkedHashMap<String, String>(); |==> <NO-OP>
+69:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@<init>():241:6841:cookies = new LinkedHashMap<String, String>(); |==> <NO-OP>
+70:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@url(java.net.URL):249:7005:Validate.notNull(url, "URL must not be null"); |==> <NO-OP>
+71:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@url(java.net.URL):250:7064:this.url = url; |==> <NO-OP>
+72:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@method(org.jsoup.Connection.Method):259:7244:Validate.notNull(method, "Method must not be null"); |==> <NO-OP>
+73:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@method(org.jsoup.Connection.Method):260:7309:this.method = method; |==> <NO-OP>
+74:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@header(java.lang.String):265:7427:Validate.notNull(name, "Header name must not be null"); |==> <NO-OP>
+75:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@header(java.lang.String,java.lang.String):270:7610:Validate.notEmpty(name, "Header name must not be empty"); |==> <NO-OP>
+76:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@header(java.lang.String,java.lang.String):271:7680:Validate.notNull(value, "Header value must not be null"); |==> <NO-OP>
+77:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@header(java.lang.String,java.lang.String):272:7750:removeHeader(name); |==> <NO-OP>
+78:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@header(java.lang.String,java.lang.String):273:7851:headers.put(name, value); |==> <NO-OP>
+79:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@hasHeader(java.lang.String):278:7977:Validate.notEmpty(name, "Header name must not be empty"); |==> <NO-OP>
+80:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Base@hasHeader(java.lang.String):279:8085:getHeaderCaseInsensitive(name) != null |==> true
+81:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.helper.HttpConnection$Base@hasHeaderWithValue(java.lang.String,java.lang.String):286:8299:hasHeader(name) && header(name).equalsIgnoreCase(value) |==> hasHeader(name) == header(name).equalsIgnoreCase(value)
+82:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.helper.HttpConnection$Base@hasHeaderWithValue(java.lang.String,java.lang.String):286:8315:hasHeader(name) && header(name).equalsIgnoreCase(value) |==> false
+83:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.HttpConnection$Base@hasHeaderWithValue(java.lang.String,java.lang.String):286:8299:hasHeader(name) && header(name).equalsIgnoreCase(value) |==> hasHeader(name)
+84:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.HttpConnection$Base@hasHeaderWithValue(java.lang.String,java.lang.String):286:8318:hasHeader(name) && header(name).equalsIgnoreCase(value) |==> header(name).equalsIgnoreCase(value)
+85:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@removeHeader(java.lang.String):290:8424:Validate.notEmpty(name, "Header name must not be empty"); |==> <NO-OP>
+86:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Base@removeHeader(java.lang.String):292:8603:entry != null |==> true
+87:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@removeHeader(java.lang.String):293:8628:headers.remove(entry.getKey()); |==> <NO-OP>
+88:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@getHeaderCaseInsensitive(java.lang.String):302:8885:Validate.notNull(name, "Header name must not be null"); |==> <NO-OP>
+89:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Base@getHeaderCaseInsensitive(java.lang.String):305:9099:value == null |==> false
+90:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@getHeaderCaseInsensitive(java.lang.String):306:9124:value = headers.get(name.toLowerCase()); |==> <NO-OP>
+91:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Base@getHeaderCaseInsensitive(java.lang.String):307:9187:value == null |==> false
+92:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Base@getHeaderCaseInsensitive(java.lang.String):309:9293:entry != null |==> true
+93:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@getHeaderCaseInsensitive(java.lang.String):310:9322:value = entry.getValue(); |==> <NO-OP>
+94:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.HttpConnection$Base@scanHeaders(java.lang.String):318:9640:entry.getKey().toLowerCase().equals(lc) |==> false
+95:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.HttpConnection$Base@scanHeaders(java.lang.String):318:9640:entry.getKey().toLowerCase().equals(lc) |==> true
+96:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@cookie(java.lang.String):325:9786:Validate.notEmpty(name, "Cookie name must not be empty"); |==> <NO-OP>
+97:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@cookie(java.lang.String,java.lang.String):330:9958:Validate.notEmpty(name, "Cookie name must not be empty"); |==> <NO-OP>
+98:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@cookie(java.lang.String,java.lang.String):331:10028:Validate.notNull(value, "Cookie value must not be null"); |==> <NO-OP>
+99:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@cookie(java.lang.String,java.lang.String):332:10098:cookies.put(name, value); |==> <NO-OP>
+100:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@hasCookie(java.lang.String):337:10224:Validate.notEmpty(name, "Cookie name must not be empty"); |==> <NO-OP>
+101:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@removeCookie(java.lang.String):342:10396:Validate.notEmpty(name, "Cookie name must not be empty"); |==> <NO-OP>
+102:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Base@removeCookie(java.lang.String):343:10466:cookies.remove(name); |==> <NO-OP>
+103:LVR:FALSE:TRUE:org.jsoup.helper.HttpConnection$Request:357:10947:false |==> true
+104:LVR:FALSE:TRUE:org.jsoup.helper.HttpConnection$Request:358:10998:false |==> true
+105:LVR:FALSE:TRUE:org.jsoup.helper.HttpConnection$Request:360:11076:false |==> true
+106:LVR:TRUE:FALSE:org.jsoup.helper.HttpConnection$Request:361:11178:true |==> false
+107:LVR:POS:0:org.jsoup.helper.HttpConnection$Request@<init>():365:11313:3000 |==> 0
+108:LVR:POS:NEG:org.jsoup.helper.HttpConnection$Request@<init>():365:11313:3000 |==> -3000
+109:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Request@<init>():365:11291:timeoutMilliseconds = 3000; |==> <NO-OP>
+110:LVR:POS:0:org.jsoup.helper.HttpConnection$Request@<init>():366:11350:1024 |==> 0
+111:LVR:POS:NEG:org.jsoup.helper.HttpConnection$Request@<init>():366:11350:1024 |==> -1024
+112:LVR:POS:0:org.jsoup.helper.HttpConnection$Request@<init>():366:11357:1024 |==> 0
+113:LVR:POS:NEG:org.jsoup.helper.HttpConnection$Request@<init>():366:11357:1024 |==> -1024
+114:AOR:*(int,int):%(int,int):org.jsoup.helper.HttpConnection$Request@<init>():366:11350:1024 * 1024 |==> 1024 % 1024
+115:AOR:*(int,int):+(int,int):org.jsoup.helper.HttpConnection$Request@<init>():366:11350:1024 * 1024 |==> 1024 + 1024
+116:AOR:*(int,int):-(int,int):org.jsoup.helper.HttpConnection$Request@<init>():366:11350:1024 * 1024 |==> 1024 - 1024
+117:AOR:*(int,int):/(int,int):org.jsoup.helper.HttpConnection$Request@<init>():366:11350:1024 * 1024 |==> 1024 / 1024
+118:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Request@<init>():366:11331:maxBodySizeBytes = 1024 * 1024; |==> <NO-OP>
+119:LVR:TRUE:FALSE:org.jsoup.helper.HttpConnection$Request@<init>():367:11400:true |==> false
+120:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Request@<init>():367:11382:followRedirects = true; |==> <NO-OP>
+121:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Request@<init>():368:11418:data = new ArrayList<Connection.KeyVal>(); |==> <NO-OP>
+122:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Request@<init>():369:11473:method = Method.GET; |==> <NO-OP>
+123:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Request@<init>():370:11506:headers.put("Accept-Encoding", "gzip"); |==> <NO-OP>
+124:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Request@<init>():371:11558:parser = Parser.htmlParser(); |==> <NO-OP>
+125:LVR:0:POS:org.jsoup.helper.HttpConnection$Request@timeout(int):379:11764:0 |==> 1
+126:LVR:0:NEG:org.jsoup.helper.HttpConnection$Request@timeout(int):379:11764:0 |==> -1
+127:ROR:>=(int,int):==(int,int):org.jsoup.helper.HttpConnection$Request@timeout(int):379:11754:millis >= 0 |==> millis == 0
+128:ROR:>=(int,int):>(int,int):org.jsoup.helper.HttpConnection$Request@timeout(int):379:11754:millis >= 0 |==> millis > 0
+129:ROR:>=(int,int):TRUE(int,int):org.jsoup.helper.HttpConnection$Request@timeout(int):379:11761:millis >= 0 |==> true
+130:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Request@timeout(int):379:11738:Validate.isTrue(millis >= 0, "Timeout milliseconds must be 0 (infinite) or greater"); |==> <NO-OP>
+131:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Request@timeout(int):380:11836:timeoutMilliseconds = millis; |==> <NO-OP>
+132:LVR:0:POS:org.jsoup.helper.HttpConnection$Request@maxBodySize(int):389:12081:0 |==> 1
+133:LVR:0:NEG:org.jsoup.helper.HttpConnection$Request@maxBodySize(int):389:12081:0 |==> -1
+134:ROR:>=(int,int):==(int,int):org.jsoup.helper.HttpConnection$Request@maxBodySize(int):389:12072:bytes >= 0 |==> bytes == 0
+135:ROR:>=(int,int):>(int,int):org.jsoup.helper.HttpConnection$Request@maxBodySize(int):389:12072:bytes >= 0 |==> bytes > 0
+136:ROR:>=(int,int):TRUE(int,int):org.jsoup.helper.HttpConnection$Request@maxBodySize(int):389:12078:bytes >= 0 |==> true
+137:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Request@maxBodySize(int):389:12056:Validate.isTrue(bytes >= 0, "maxSize must be 0 (unlimited) or larger"); |==> <NO-OP>
+138:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Request@maxBodySize(int):390:12140:maxBodySizeBytes = bytes; |==> <NO-OP>
+139:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Request@followRedirects(boolean):399:12381:this.followRedirects = followRedirects; |==> <NO-OP>
+140:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Request@validateTLSCertificates(boolean):412:12728:validateTSLCertificates = value; |==> <NO-OP>
+141:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Request@ignoreHttpErrors(boolean):416:12863:this.ignoreHttpErrors = ignoreHttpErrors; |==> <NO-OP>
+142:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Request@ignoreContentType(boolean):425:13128:this.ignoreContentType = ignoreContentType; |==> <NO-OP>
+143:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Request@data(org.jsoup.Connection.KeyVal):430:13276:Validate.notNull(keyval, "Key val must not be null"); |==> <NO-OP>
+144:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Request@data(org.jsoup.Connection.KeyVal):431:13342:data.add(keyval); |==> <NO-OP>
+145:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Request@parser(org.jsoup.parser.Parser):440:13545:this.parser = parser; |==> <NO-OP>
+146:LVR:TRUE:FALSE:org.jsoup.helper.HttpConnection$Request@parser(org.jsoup.parser.Parser):441:13595:true |==> false
+147:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Request@parser(org.jsoup.parser.Parser):441:13579:parserDefined = true; |==> <NO-OP>
+148:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Request@postDataCharset(java.lang.String):450:13788:Validate.notNull(charset, "Charset must not be null"); |==> <NO-OP>
+149:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.HttpConnection$Request@postDataCharset(java.lang.String):451:13879:Charset.isSupported(charset) |==> false
+150:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.HttpConnection$Request@postDataCharset(java.lang.String):451:13879:Charset.isSupported(charset) |==> true
+151:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Request@postDataCharset(java.lang.String):452:13950:this.postDataCharset = charset; |==> <NO-OP>
+152:LVR:FALSE:TRUE:org.jsoup.helper.HttpConnection$Response:470:14608:false |==> true
+153:LVR:0:POS:org.jsoup.helper.HttpConnection$Response:471:14650:0 |==> 1
+154:LVR:0:NEG:org.jsoup.helper.HttpConnection$Response:471:14650:0 |==> -1
+155:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Response@<init>(org.jsoup.helper.HttpConnection.Response):485:15102:previousResponse != null |==> true
+156:LVR:POS:0:org.jsoup.helper.HttpConnection$Response@<init>(org.jsoup.helper.HttpConnection.Response):486:15176:1 |==> 0
+157:LVR:POS:NEG:org.jsoup.helper.HttpConnection$Response@<init>(org.jsoup.helper.HttpConnection.Response):486:15176:1 |==> -1
+158:AOR:+(int,int):%(int,int):org.jsoup.helper.HttpConnection$Response@<init>(org.jsoup.helper.HttpConnection.Response):486:15144:previousResponse.numRedirects + 1 |==> previousResponse.numRedirects % 1
+159:AOR:+(int,int):*(int,int):org.jsoup.helper.HttpConnection$Response@<init>(org.jsoup.helper.HttpConnection.Response):486:15144:previousResponse.numRedirects + 1 |==> previousResponse.numRedirects * 1
+160:AOR:+(int,int):-(int,int):org.jsoup.helper.HttpConnection$Response@<init>(org.jsoup.helper.HttpConnection.Response):486:15144:previousResponse.numRedirects + 1 |==> previousResponse.numRedirects - 1
+161:AOR:+(int,int):/(int,int):org.jsoup.helper.HttpConnection$Response@<init>(org.jsoup.helper.HttpConnection.Response):486:15144:previousResponse.numRedirects + 1 |==> previousResponse.numRedirects / 1
+162:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@<init>(org.jsoup.helper.HttpConnection.Response):486:15129:numRedirects = previousResponse.numRedirects + 1; |==> <NO-OP>
+163:ROR:>=(int,int):==(int,int):org.jsoup.helper.HttpConnection$Response@<init>(org.jsoup.helper.HttpConnection.Response):487:15199:numRedirects >= MAX_REDIRECTS |==> numRedirects == MAX_REDIRECTS
+164:ROR:>=(int,int):>(int,int):org.jsoup.helper.HttpConnection$Response@<init>(org.jsoup.helper.HttpConnection.Response):487:15199:numRedirects >= MAX_REDIRECTS |==> numRedirects > MAX_REDIRECTS
+165:ROR:>=(int,int):TRUE(int,int):org.jsoup.helper.HttpConnection$Response@<init>(org.jsoup.helper.HttpConnection.Response):487:15212:numRedirects >= MAX_REDIRECTS |==> true
+166:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):497:15633:Validate.notNull(req, "Request must not be null"); |==> <NO-OP>
+167:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):499:15755:!protocol.equals("http") && !protocol.equals("https") |==> !protocol.equals("http") == !protocol.equals("https")
+168:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):499:15780:!protocol.equals("http") && !protocol.equals("https") |==> false
+169:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):499:15755:!protocol.equals("http") && !protocol.equals("https") |==> !protocol.equals("http")
+170:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):499:15783:!protocol.equals("http") && !protocol.equals("https") |==> !protocol.equals("https")
+171:LVR:0:POS:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):504:16052:0 |==> 1
+172:LVR:0:NEG:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):504:16052:0 |==> -1
+173:ROR:>(int,int):>=(int,int):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):504:16032:req.data().size() > 0 |==> req.data().size() >= 0
+174:ROR:>(int,int):FALSE(int,int):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):504:16050:req.data().size() > 0 |==> false
+175:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):504:16005:!req.method().hasBody() && req.data().size() > 0 |==> !req.method().hasBody() == req.data().size() > 0
+176:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):504:16029:!req.method().hasBody() && req.data().size() > 0 |==> false
+177:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):504:16005:!req.method().hasBody() && req.data().size() > 0 |==> !req.method().hasBody()
+178:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):504:16032:!req.method().hasBody() && req.data().size() > 0 |==> req.data().size() > 0
+179:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):505:16073:serialiseRequestUrl(req); |==> <NO-OP>
+180:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):506:16166:req.method().hasBody() |==> false
+181:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):506:16166:req.method().hasBody() |==> true
+182:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):507:16188:mimeBoundary = setOutputContentType(req); |==> <NO-OP>
+183:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):512:16364:conn.connect(); |==> <NO-OP>
+184:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):513:16416:conn.getDoOutput() |==> false
+185:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):513:16416:conn.getDoOutput() |==> true
+186:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):514:16440:writePost(req, conn.getOutputStream(), mimeBoundary); |==> <NO-OP>
+187:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):518:16618:res.setupFromConnection(conn, previousResponse); |==> <NO-OP>
+188:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):519:16683:res.req = req; |==> <NO-OP>
+189:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):522:16799:res.hasHeader(LOCATION) && req.followRedirects() |==> res.hasHeader(LOCATION) == req.followRedirects()
+190:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):522:16823:res.hasHeader(LOCATION) && req.followRedirects() |==> false
+191:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):522:16799:res.hasHeader(LOCATION) && req.followRedirects() |==> res.hasHeader(LOCATION)
+192:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):522:16826:res.hasHeader(LOCATION) && req.followRedirects() |==> req.followRedirects()
+193:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):523:16871:req.method(Method.GET); |==> <NO-OP>
+194:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):524:16992:req.data().clear(); |==> <NO-OP>
+195:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):527:17106:location != null |==> true
+196:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):527:17097:location != null && location.startsWith("http:/") |==> location != null == location.startsWith("http:/")
+197:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):527:17114:location != null && location.startsWith("http:/") |==> false
+198:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):527:17097:location != null && location.startsWith("http:/") |==> location != null
+199:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):527:17117:location != null && location.startsWith("http:/") |==> location.startsWith("http:/")
+200:LVR:POS:0:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):527:17166:6 |==> 0
+201:LVR:POS:NEG:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):527:17166:6 |==> -6
+202:ROR:!=(int,int):<(int,int):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):527:17150:location.charAt(6) != '/' |==> location.charAt(6) < '/'
+203:ROR:!=(int,int):>(int,int):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):527:17150:location.charAt(6) != '/' |==> location.charAt(6) > '/'
+204:ROR:!=(int,int):TRUE(int,int):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):527:17169:location.charAt(6) != '/' |==> true
+205:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):527:17097:location != null && location.startsWith("http:/") && location.charAt(6) != '/' |==> (location != null && location.startsWith("http:/")) == (location.charAt(6) != '/')
+206:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):527:17147:location != null && location.startsWith("http:/") && location.charAt(6) != '/' |==> false
+207:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):527:17097:location != null && location.startsWith("http:/") && location.charAt(6) != '/' |==> location != null && location.startsWith("http:/")
+208:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):527:17150:location != null && location.startsWith("http:/") && location.charAt(6) != '/' |==> location.charAt(6) != '/'
+209:LVR:POS:0:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):528:17287:6 |==> 0
+210:LVR:POS:NEG:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):528:17287:6 |==> -6
+211:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):528:17257:location = location.substring(6); |==> <NO-OP>
+212:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):529:17311:req.url(StringUtil.resolve(req.url(), encodeUrl(location))); |==> <NO-OP>
+213:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):532:17541:req.cookie(cookie.getKey(), cookie.getValue()); |==> <NO-OP>
+214:LVR:POS:0:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):536:17705:200 |==> 0
+215:LVR:POS:NEG:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):536:17705:200 |==> -200
+216:ROR:<(int,int):!=(int,int):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):536:17696:status < 200 |==> status != 200
+217:ROR:<(int,int):<=(int,int):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):536:17696:status < 200 |==> status <= 200
+218:ROR:<(int,int):FALSE(int,int):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):536:17703:status < 200 |==> false
+219:LVR:POS:0:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):536:17722:400 |==> 0
+220:LVR:POS:NEG:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):536:17722:400 |==> -400
+221:ROR:>=(int,int):==(int,int):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):536:17712:status >= 400 |==> status == 400
+222:ROR:>=(int,int):>(int,int):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):536:17712:status >= 400 |==> status > 400
+223:ROR:>=(int,int):TRUE(int,int):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):536:17719:status >= 400 |==> true
+224:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):536:17696:status < 200 || status >= 400 |==> status < 200
+225:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):536:17712:status < 200 || status >= 400 |==> status >= 400
+226:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):536:17709:status < 200 || status >= 400 |==> true
+227:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):536:17695:(status < 200 || status >= 400) && !req.ignoreHttpErrors() |==> (status < 200 || status >= 400) == !req.ignoreHttpErrors()
+228:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):536:17727:(status < 200 || status >= 400) && !req.ignoreHttpErrors() |==> false
+229:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):536:17695:(status < 200 || status >= 400) && !req.ignoreHttpErrors() |==> (status < 200 || status >= 400)
+230:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):536:17730:(status < 200 || status >= 400) && !req.ignoreHttpErrors() |==> !req.ignoreHttpErrors()
+231:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):541:18060:contentType != null |==> true
+232:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):541:18048:contentType != null && !req.ignoreContentType() |==> contentType != null == !req.ignoreContentType()
+233:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):542:18092:contentType != null && !req.ignoreContentType() |==> false
+234:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):541:18048:contentType != null && !req.ignoreContentType() |==> contentType != null
+235:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):542:18095:contentType != null && !req.ignoreContentType() |==> !req.ignoreContentType()
+236:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):541:18048:contentType != null && !req.ignoreContentType() && !contentType.startsWith("text/") |==> (contentType != null && !req.ignoreContentType()) == !contentType.startsWith("text/")
+237:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):543:18144:contentType != null && !req.ignoreContentType() && !contentType.startsWith("text/") |==> false
+238:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):541:18048:contentType != null && !req.ignoreContentType() && !contentType.startsWith("text/") |==> contentType != null && !req.ignoreContentType()
+239:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):543:18147:contentType != null && !req.ignoreContentType() && !contentType.startsWith("text/") |==> !contentType.startsWith("text/")
+240:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):541:18048:contentType != null && !req.ignoreContentType() && !contentType.startsWith("text/") && !xmlContentTypeRxp.matcher(contentType).matches() |==> (contentType != null && !req.ignoreContentType() && !contentType.startsWith("text/")) == !xmlContentTypeRxp.matcher(contentType).matches()
+241:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):544:18204:contentType != null && !req.ignoreContentType() && !contentType.startsWith("text/") && !xmlContentTypeRxp.matcher(contentType).matches() |==> false
+242:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):541:18048:contentType != null && !req.ignoreContentType() && !contentType.startsWith("text/") && !xmlContentTypeRxp.matcher(contentType).matches() |==> contentType != null && !req.ignoreContentType() && !contentType.startsWith("text/")
+243:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):544:18207:contentType != null && !req.ignoreContentType() && !contentType.startsWith("text/") && !xmlContentTypeRxp.matcher(contentType).matches() |==> !xmlContentTypeRxp.matcher(contentType).matches()
+244:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):550:18625:contentType != null |==> true
+245:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):550:18613:contentType != null && xmlContentTypeRxp.matcher(contentType).matches() |==> contentType != null == xmlContentTypeRxp.matcher(contentType).matches()
+246:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):550:18633:contentType != null && xmlContentTypeRxp.matcher(contentType).matches() |==> false
+247:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):550:18613:contentType != null && xmlContentTypeRxp.matcher(contentType).matches() |==> contentType != null
+248:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):550:18636:contentType != null && xmlContentTypeRxp.matcher(contentType).matches() |==> xmlContentTypeRxp.matcher(contentType).matches()
+249:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):552:18818:req instanceof HttpConnection.Request && !((Request)req).parserDefined |==> req instanceof HttpConnection.Request == !((Request)req).parserDefined
+250:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):552:18856:req instanceof HttpConnection.Request && !((Request)req).parserDefined |==> false
+251:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):552:18818:req instanceof HttpConnection.Request && !((Request)req).parserDefined |==> req instanceof HttpConnection.Request
+252:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):552:18859:req instanceof HttpConnection.Request && !((Request)req).parserDefined |==> !((Request)req).parserDefined
+253:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):553:18917:req.parser(Parser.xmlParser()); |==> <NO-OP>
+254:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):557:19006:res.charset = DataUtil.getCharsetFromContentType(res.contentType); |==> <NO-OP>
+255:LVR:0:POS:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):558:19166:0 |==> 1
+256:LVR:0:NEG:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):558:19166:0 |==> -1
+257:ROR:!=(int,int):<(int,int):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):558:19139:conn.getContentLength() != 0 |==> conn.getContentLength() < 0
+258:ROR:!=(int,int):>(int,int):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):558:19139:conn.getContentLength() != 0 |==> conn.getContentLength() > 0
+259:ROR:!=(int,int):TRUE(int,int):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):558:19163:conn.getContentLength() != 0 |==> true
+260:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):562:19472:conn.getErrorStream() != null |==> true
+261:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):562:19437:dataStream = conn.getErrorStream() != null ? conn.getErrorStream() : conn.getInputStream(); |==> <NO-OP>
+262:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):563:19588:res.hasHeaderWithValue(CONTENT_ENCODING, "gzip") |==> false
+263:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):563:19588:res.hasHeaderWithValue(CONTENT_ENCODING, "gzip") |==> true
+264:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):563:19553:bodyStream = res.hasHeaderWithValue(CONTENT_ENCODING, "gzip") ? new BufferedInputStream(new GZIPInputStream(dataStream)) : new BufferedInputStream(dataStream); |==> <NO-OP>
+265:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):567:19802:res.byteData = DataUtil.readToByteBuffer(bodyStream, req.maxBodySize()); |==> <NO-OP>
+266:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):569:19946:bodyStream != null |==> true
+267:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):569:19955:bodyStream.close(); |==> <NO-OP>
+268:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):570:20014:dataStream != null |==> true
+269:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):570:20023:dataStream.close(); |==> <NO-OP>
+270:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):573:20110:res.byteData = DataUtil.emptyByteBuffer(); |==> <NO-OP>
+271:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):578:20442:conn.disconnect(); |==> <NO-OP>
+272:LVR:TRUE:FALSE:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):581:20503:true |==> false
+273:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@execute(org.jsoup.Connection.Request,org.jsoup.helper.HttpConnection.Response):581:20488:res.executed = true; |==> <NO-OP>
+274:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@parse():602:20924:Validate.isTrue(executed, "Request must be executed (with .execute(), .get(), or .post() before parsing response"); |==> <NO-OP>
+275:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@parse():604:21158:byteData.rewind(); |==> <NO-OP>
+276:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@parse():605:21189:charset = doc.outputSettings().charset().name(); |==> <NO-OP>
+277:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@body():610:21360:Validate.isTrue(executed, "Request must be executed (with .execute(), .get(), or .post() before getting response body"); |==> <NO-OP>
+278:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Response@body():613:21648:charset == null |==> false
+279:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@body():617:21856:byteData.rewind(); |==> <NO-OP>
+280:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@bodyAsBytes():622:21961:Validate.isTrue(executed, "Request must be executed (with .execute(), .get(), or .post() before getting response body"); |==> <NO-OP>
+281:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@createConnection(org.jsoup.Connection.Request):630:22395:conn.setRequestMethod(req.method().name()); |==> <NO-OP>
+282:LVR:FALSE:TRUE:org.jsoup.helper.HttpConnection$Response@createConnection(org.jsoup.Connection.Request):631:22483:false |==> true
+283:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@createConnection(org.jsoup.Connection.Request):631:22451:conn.setInstanceFollowRedirects(false); |==> <NO-OP>
+284:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@createConnection(org.jsoup.Connection.Request):632:22547:conn.setConnectTimeout(req.timeout()); |==> <NO-OP>
+285:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@createConnection(org.jsoup.Connection.Request):633:22598:conn.setReadTimeout(req.timeout()); |==> <NO-OP>
+286:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.HttpConnection$Response@createConnection(org.jsoup.Connection.Request):636:22737:req.validateTLSCertificates() |==> false
+287:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.HttpConnection$Response@createConnection(org.jsoup.Connection.Request):636:22737:req.validateTLSCertificates() |==> true
+288:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@createConnection(org.jsoup.Connection.Request):637:22763:initUnSecureTSL(); |==> <NO-OP>
+289:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@createConnection(org.jsoup.Connection.Request):638:22802:((HttpsURLConnection)conn).setSSLSocketFactory(sslSocketFactory); |==> <NO-OP>
+290:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@createConnection(org.jsoup.Connection.Request):639:22888:((HttpsURLConnection)conn).setHostnameVerifier(getInsecureVerifier()); |==> <NO-OP>
+291:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.HttpConnection$Response@createConnection(org.jsoup.Connection.Request):643:23028:req.method().hasBody() |==> false
+292:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.HttpConnection$Response@createConnection(org.jsoup.Connection.Request):643:23028:req.method().hasBody() |==> true
+293:LVR:TRUE:FALSE:org.jsoup.helper.HttpConnection$Response@createConnection(org.jsoup.Connection.Request):644:23065:true |==> false
+294:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@createConnection(org.jsoup.Connection.Request):644:23048:conn.setDoOutput(true); |==> <NO-OP>
+295:LVR:0:POS:org.jsoup.helper.HttpConnection$Response@createConnection(org.jsoup.Connection.Request):645:23111:0 |==> 1
+296:LVR:0:NEG:org.jsoup.helper.HttpConnection$Response@createConnection(org.jsoup.Connection.Request):645:23111:0 |==> -1
+297:ROR:>(int,int):>=(int,int):org.jsoup.helper.HttpConnection$Response@createConnection(org.jsoup.Connection.Request):645:23088:req.cookies().size() > 0 |==> req.cookies().size() >= 0
+298:ROR:>(int,int):FALSE(int,int):org.jsoup.helper.HttpConnection$Response@createConnection(org.jsoup.Connection.Request):645:23109:req.cookies().size() > 0 |==> false
+299:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@createConnection(org.jsoup.Connection.Request):646:23130:conn.addRequestProperty("Cookie", getRequestCookieString(req)); |==> <NO-OP>
+300:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@createConnection(org.jsoup.Connection.Request):648:23290:conn.addRequestProperty(header.getKey(), header.getValue()); |==> <NO-OP>
+301:LVR:TRUE:FALSE:org.jsoup.helper.HttpConnection$Response$1@verify(java.lang.String,javax.net.ssl.SSLSession):663:23886:true |==> false
+302:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Response@initUnSecureTSL():678:24374:sslSocketFactory == null |==> false
+303:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@initUnSecureTSL():697:25184:sslContext.init(null, trustAllCerts, new java.security.SecureRandom()); |==> <NO-OP>
+304:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@initUnSecureTSL():699:25358:sslSocketFactory = sslContext.getSocketFactory(); |==> <NO-OP>
+305:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@setupFromConnection(java.net.HttpURLConnection,org.jsoup.Connection.Response):711:25907:method = Method.valueOf(conn.getRequestMethod()); |==> <NO-OP>
+306:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@setupFromConnection(java.net.HttpURLConnection,org.jsoup.Connection.Response):712:25969:url = conn.getURL(); |==> <NO-OP>
+307:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@setupFromConnection(java.net.HttpURLConnection,org.jsoup.Connection.Response):713:26002:statusCode = conn.getResponseCode(); |==> <NO-OP>
+308:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@setupFromConnection(java.net.HttpURLConnection,org.jsoup.Connection.Response):714:26051:statusMessage = conn.getResponseMessage(); |==> <NO-OP>
+309:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@setupFromConnection(java.net.HttpURLConnection,org.jsoup.Connection.Response):715:26106:contentType = conn.getContentType(); |==> <NO-OP>
+310:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@setupFromConnection(java.net.HttpURLConnection,org.jsoup.Connection.Response):718:26230:processResponseHeaders(resHeaders); |==> <NO-OP>
+311:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Response@setupFromConnection(java.net.HttpURLConnection,org.jsoup.Connection.Response):721:26384:previousResponse != null |==> true
+312:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.HttpConnection$Response@setupFromConnection(java.net.HttpURLConnection,org.jsoup.Connection.Response):723:26530:hasCookie(prevCookie.getKey()) |==> false
+313:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.HttpConnection$Response@setupFromConnection(java.net.HttpURLConnection,org.jsoup.Connection.Response):723:26530:hasCookie(prevCookie.getKey()) |==> true
+314:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@setupFromConnection(java.net.HttpURLConnection,org.jsoup.Connection.Response):724:26577:cookie(prevCookie.getKey(), prevCookie.getValue()); |==> <NO-OP>
+315:LVR:0:POS:org.jsoup.helper.HttpConnection$Response@createHeaderMap(java.net.HttpURLConnection):732:26997:0 |==> 1
+316:LVR:0:NEG:org.jsoup.helper.HttpConnection$Response@createHeaderMap(java.net.HttpURLConnection):732:26997:0 |==> -1
+317:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Response@createHeaderMap(java.net.HttpURLConnection):736:27172:key == null |==> false
+318:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Response@createHeaderMap(java.net.HttpURLConnection):736:27187:val == null |==> false
+319:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.helper.HttpConnection$Response@createHeaderMap(java.net.HttpURLConnection):736:27168:key == null && val == null |==> key == null == (val == null)
+320:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.helper.HttpConnection$Response@createHeaderMap(java.net.HttpURLConnection):736:27180:key == null && val == null |==> false
+321:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@createHeaderMap(java.net.HttpURLConnection):736:27168:key == null && val == null |==> key == null
+322:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@createHeaderMap(java.net.HttpURLConnection):736:27183:key == null && val == null |==> val == null
+323:STD:<INC>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@createHeaderMap(java.net.HttpURLConnection):738:27239:i++; |==> <NO-OP>
+324:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Response@createHeaderMap(java.net.HttpURLConnection):739:27268:key == null |==> false
+325:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Response@createHeaderMap(java.net.HttpURLConnection):739:27283:val == null |==> false
+326:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.helper.HttpConnection$Response@createHeaderMap(java.net.HttpURLConnection):739:27264:key == null || val == null |==> key == null != (val == null)
+327:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@createHeaderMap(java.net.HttpURLConnection):739:27264:key == null || val == null |==> key == null
+328:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.HttpConnection$Response@createHeaderMap(java.net.HttpURLConnection):739:27279:key == null || val == null |==> val == null
+329:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.helper.HttpConnection$Response@createHeaderMap(java.net.HttpURLConnection):739:27276:key == null || val == null |==> true
+330:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.HttpConnection$Response@createHeaderMap(java.net.HttpURLConnection):742:27383:headers.containsKey(key) |==> false
+331:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.HttpConnection$Response@createHeaderMap(java.net.HttpURLConnection):742:27383:headers.containsKey(key) |==> true
+332:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@createHeaderMap(java.net.HttpURLConnection):743:27410:headers.get(key).add(val); |==> <NO-OP>
+333:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@createHeaderMap(java.net.HttpURLConnection):746:27556:vals.add(val); |==> <NO-OP>
+334:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@createHeaderMap(java.net.HttpURLConnection):747:27591:headers.put(key, vals); |==> <NO-OP>
+335:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Response@processResponseHeaders(java.util.Map<java.lang.String,java.util.List<java.lang.String>>):756:27915:name == null |==> false
+336:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.HttpConnection$Response@processResponseHeaders(java.util.Map<java.lang.String,java.util.List<java.lang.String>>):760:28069:name.equalsIgnoreCase("Set-Cookie") |==> false
+337:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.HttpConnection$Response@processResponseHeaders(java.util.Map<java.lang.String,java.util.List<java.lang.String>>):760:28069:name.equalsIgnoreCase("Set-Cookie") |==> true
+338:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Response@processResponseHeaders(java.util.Map<java.lang.String,java.util.List<java.lang.String>>):762:28171:value == null |==> false
+339:LVR:0:POS:org.jsoup.helper.HttpConnection$Response@processResponseHeaders(java.util.Map<java.lang.String,java.util.List<java.lang.String>>):769:28619:0 |==> 1
+340:LVR:0:NEG:org.jsoup.helper.HttpConnection$Response@processResponseHeaders(java.util.Map<java.lang.String,java.util.List<java.lang.String>>):769:28619:0 |==> -1
+341:ROR:>(int,int):>=(int,int):org.jsoup.helper.HttpConnection$Response@processResponseHeaders(java.util.Map<java.lang.String,java.util.List<java.lang.String>>):769:28597:cookieName.length() > 0 |==> cookieName.length() >= 0
+342:ROR:>(int,int):FALSE(int,int):org.jsoup.helper.HttpConnection$Response@processResponseHeaders(java.util.Map<java.lang.String,java.util.List<java.lang.String>>):769:28617:cookieName.length() > 0 |==> false
+343:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@processResponseHeaders(java.util.Map<java.lang.String,java.util.List<java.lang.String>>):770:28650:cookie(cookieName, cookieVal); |==> <NO-OP>
+344:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.HttpConnection$Response@processResponseHeaders(java.util.Map<java.lang.String,java.util.List<java.lang.String>>):773:28869:values.isEmpty() |==> false
+345:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.HttpConnection$Response@processResponseHeaders(java.util.Map<java.lang.String,java.util.List<java.lang.String>>):773:28869:values.isEmpty() |==> true
+346:LVR:0:POS:org.jsoup.helper.HttpConnection$Response@processResponseHeaders(java.util.Map<java.lang.String,java.util.List<java.lang.String>>):774:28921:0 |==> 1
+347:LVR:0:NEG:org.jsoup.helper.HttpConnection$Response@processResponseHeaders(java.util.Map<java.lang.String,java.util.List<java.lang.String>>):774:28921:0 |==> -1
+348:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@processResponseHeaders(java.util.Map<java.lang.String,java.util.List<java.lang.String>>):774:28897:header(name, values.get(0)); |==> <NO-OP>
+349:LVR:FALSE:TRUE:org.jsoup.helper.HttpConnection$Response@setOutputContentType(org.jsoup.Connection.Request):781:29214:false |==> true
+350:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.HttpConnection$Response@setOutputContentType(org.jsoup.Connection.Request):783:29320:keyVal.hasInputStream() |==> false
+351:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.HttpConnection$Response@setOutputContentType(org.jsoup.Connection.Request):783:29320:keyVal.hasInputStream() |==> true
+352:LVR:TRUE:FALSE:org.jsoup.helper.HttpConnection$Response@setOutputContentType(org.jsoup.Connection.Request):784:29359:true |==> false
+353:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@setOutputContentType(org.jsoup.Connection.Request):784:29346:needsMulti = true; |==> <NO-OP>
+354:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.helper.HttpConnection$Response@setOutputContentType(org.jsoup.Connection.Request):789:29473:needsMulti |==> false
+355:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.helper.HttpConnection$Response@setOutputContentType(org.jsoup.Connection.Request):789:29473:needsMulti |==> true
+356:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@setOutputContentType(org.jsoup.Connection.Request):790:29503:bound = DataUtil.mimeBoundary(); |==> <NO-OP>
+357:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@setOutputContentType(org.jsoup.Connection.Request):791:29552:req.header(CONTENT_TYPE, MULTIPART_FORM_DATA + "; boundary=" + bound); |==> <NO-OP>
+358:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@setOutputContentType(org.jsoup.Connection.Request):793:29660:req.header(CONTENT_TYPE, FORM_URL_ENCODED + "; charset=" + req.postDataCharset()); |==> <NO-OP>
+359:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):802:30146:bound != null |==> true
+360:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):805:30300:w.write("--"); |==> <NO-OP>
+361:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):806:30335:w.write(bound); |==> <NO-OP>
+362:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):807:30371:w.write("\r\n"); |==> <NO-OP>
+363:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):808:30408:w.write("Content-Disposition: form-data; name=\""); |==> <NO-OP>
+364:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):809:30480:w.write(encodeMimeName(keyVal.key())); |==> <NO-OP>
+365:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):810:30559:w.write("\""); |==> <NO-OP>
+366:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):811:30619:keyVal.hasInputStream() |==> false
+367:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):811:30619:keyVal.hasInputStream() |==> true
+368:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):812:30649:w.write("; filename=\""); |==> <NO-OP>
+369:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):813:30699:w.write(encodeMimeName(keyVal.value())); |==> <NO-OP>
+370:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):814:30764:w.write("\"\r\nContent-Type: application/octet-stream\r\n\r\n"); |==> <NO-OP>
+371:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):815:30853:w.flush(); |==> <NO-OP>
+372:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):816:30897:DataUtil.crossStreams(keyVal.inputStream(), outputStream); |==> <NO-OP>
+373:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):817:30980:outputStream.flush(); |==> <NO-OP>
+374:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):819:31055:w.write("\r\n\r\n"); |==> <NO-OP>
+375:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):820:31100:w.write(keyVal.value()); |==> <NO-OP>
+376:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):822:31167:w.write("\r\n"); |==> <NO-OP>
+377:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):824:31218:w.write("--"); |==> <NO-OP>
+378:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):825:31249:w.write(bound); |==> <NO-OP>
+379:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):826:31281:w.write("--"); |==> <NO-OP>
+380:LVR:TRUE:FALSE:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):829:31422:true |==> false
+381:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):831:31509:first |==> false
+382:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):831:31509:first |==> true
+383:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):832:31540:w.append('&'); |==> <NO-OP>
+384:LVR:FALSE:TRUE:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):834:31612:false |==> true
+385:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):834:31604:first = false; |==> <NO-OP>
+386:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):836:31640:w.write(URLEncoder.encode(keyVal.key(), req.postDataCharset())); |==> <NO-OP>
+387:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):837:31725:w.write('='); |==> <NO-OP>
+388:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):838:31759:w.write(URLEncoder.encode(keyVal.value(), req.postDataCharset())); |==> <NO-OP>
+389:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@writePost(org.jsoup.Connection.Request,java.io.OutputStream,java.lang.String):841:31870:w.close(); |==> <NO-OP>
+390:LVR:TRUE:FALSE:org.jsoup.helper.HttpConnection$Response@getRequestCookieString(org.jsoup.Connection.Request):846:32051:true |==> false
+391:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.helper.HttpConnection$Response@getRequestCookieString(org.jsoup.Connection.Request):848:32158:first |==> false
+392:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.helper.HttpConnection$Response@getRequestCookieString(org.jsoup.Connection.Request):848:32158:first |==> true
+393:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@getRequestCookieString(org.jsoup.Connection.Request):849:32185:sb.append("; "); |==> <NO-OP>
+394:LVR:FALSE:TRUE:org.jsoup.helper.HttpConnection$Response@getRequestCookieString(org.jsoup.Connection.Request):851:32251:false |==> true
+395:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@getRequestCookieString(org.jsoup.Connection.Request):851:32243:first = false; |==> <NO-OP>
+396:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@getRequestCookieString(org.jsoup.Connection.Request):852:32274:sb.append(cookie.getKey()).append('=').append(cookie.getValue()); |==> <NO-OP>
+397:LVR:TRUE:FALSE:org.jsoup.helper.HttpConnection$Response@serialiseRequestUrl(org.jsoup.Connection.Request):862:32790:true |==> false
+398:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@serialiseRequestUrl(org.jsoup.Connection.Request):864:32865:url.append(in.getProtocol()).append("://").append(in.getAuthority()).append(in.getPath()).append("?"); |==> <NO-OP>
+399:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$Response@serialiseRequestUrl(org.jsoup.Connection.Request):870:33106:in.getQuery() != null |==> true
+400:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@serialiseRequestUrl(org.jsoup.Connection.Request):871:33133:url.append(in.getQuery()); |==> <NO-OP>
+401:LVR:FALSE:TRUE:org.jsoup.helper.HttpConnection$Response@serialiseRequestUrl(org.jsoup.Connection.Request):872:33184:false |==> true
+402:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@serialiseRequestUrl(org.jsoup.Connection.Request):872:33176:first = false; |==> <NO-OP>
+403:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.helper.HttpConnection$Response@serialiseRequestUrl(org.jsoup.Connection.Request):875:33284:first |==> false
+404:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.helper.HttpConnection$Response@serialiseRequestUrl(org.jsoup.Connection.Request):875:33284:first |==> true
+405:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@serialiseRequestUrl(org.jsoup.Connection.Request):876:33311:url.append('&'); |==> <NO-OP>
+406:LVR:FALSE:TRUE:org.jsoup.helper.HttpConnection$Response@serialiseRequestUrl(org.jsoup.Connection.Request):878:33377:false |==> true
+407:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@serialiseRequestUrl(org.jsoup.Connection.Request):878:33369:first = false; |==> <NO-OP>
+408:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@serialiseRequestUrl(org.jsoup.Connection.Request):879:33400:url.append(URLEncoder.encode(keyVal.key(), DataUtil.defaultCharset)).append('=').append(URLEncoder.encode(keyVal.value(), DataUtil.defaultCharset)); |==> <NO-OP>
+409:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@serialiseRequestUrl(org.jsoup.Connection.Request):884:33638:req.url(new URL(url.toString())); |==> <NO-OP>
+410:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$Response@serialiseRequestUrl(org.jsoup.Connection.Request):885:33684:req.data().clear(); |==> <NO-OP>
+411:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$KeyVal@key(java.lang.String):905:34297:Validate.notEmpty(key, "Data key must not be empty"); |==> <NO-OP>
+412:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$KeyVal@key(java.lang.String):906:34363:this.key = key; |==> <NO-OP>
+413:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$KeyVal@value(java.lang.String):915:34536:Validate.notNull(value, "Data value must not be null"); |==> <NO-OP>
+414:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$KeyVal@value(java.lang.String):916:34604:this.value = value; |==> <NO-OP>
+415:STD:<CALL>:<NO-OP>:org.jsoup.helper.HttpConnection$KeyVal@inputStream(java.io.InputStream):925:34802:Validate.notNull(value, "Data input stream must not be null"); |==> <NO-OP>
+416:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.HttpConnection$KeyVal@inputStream(java.io.InputStream):926:34877:this.stream = inputStream; |==> <NO-OP>
+417:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.helper.HttpConnection$KeyVal@hasInputStream():935:35089:stream != null |==> true

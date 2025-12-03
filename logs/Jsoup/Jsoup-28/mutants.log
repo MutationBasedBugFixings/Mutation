@@ -1,0 +1,273 @@
+1:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Parser@<init>(org.jsoup.parser.TreeBuilder):25:754:this.treeBuilder = treeBuilder; |==> <NO-OP>
+2:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Parser@parseInput(java.lang.String,java.lang.String):29:889:isTrackErrors() |==> false
+3:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Parser@parseInput(java.lang.String,java.lang.String):29:889:isTrackErrors() |==> true
+4:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Parser@parseInput(java.lang.String,java.lang.String):29:867:errors = isTrackErrors() ? ParseErrorList.tracking(maxErrors) : ParseErrorList.noTracking(); |==> <NO-OP>
+5:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Parser@setTreeBuilder(org.jsoup.parser.TreeBuilder):49:1466:this.treeBuilder = treeBuilder; |==> <NO-OP>
+6:LVR:0:POS:org.jsoup.parser.Parser@isTrackErrors():58:1697:0 |==> 1
+7:LVR:0:NEG:org.jsoup.parser.Parser@isTrackErrors():58:1697:0 |==> -1
+8:ROR:>(int,int):!=(int,int):org.jsoup.parser.Parser@isTrackErrors():58:1685:maxErrors > 0 |==> maxErrors != 0
+9:ROR:>(int,int):>=(int,int):org.jsoup.parser.Parser@isTrackErrors():58:1685:maxErrors > 0 |==> maxErrors >= 0
+10:ROR:>(int,int):FALSE(int,int):org.jsoup.parser.Parser@isTrackErrors():58:1695:maxErrors > 0 |==> false
+11:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Parser@setTrackErrors(int):67:1965:this.maxErrors = maxErrors; |==> <NO-OP>
+12:STD:<CALL>:<NO-OP>:org.jsoup.parser.Parser@parseBodyFragment(java.lang.String,java.lang.String):122:4315:body.appendChild(node); |==> <NO-OP>
+13:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Entities$EscapeMode@<init>(java.util.Map<java.lang.Character,java.lang.String>):28:827:this.map = map; |==> <NO-OP>
+14:LVR:POS:0:org.jsoup.nodes.Entities@escape(java.lang.String,java.nio.charset.CharsetEncoder,org.jsoup.nodes.Entities.EscapeMode):76:2608:2 |==> 0
+15:LVR:POS:NEG:org.jsoup.nodes.Entities@escape(java.lang.String,java.nio.charset.CharsetEncoder,org.jsoup.nodes.Entities.EscapeMode):76:2608:2 |==> -2
+16:AOR:*(int,int):%(int,int):org.jsoup.nodes.Entities@escape(java.lang.String,java.nio.charset.CharsetEncoder,org.jsoup.nodes.Entities.EscapeMode):76:2590:string.length() * 2 |==> string.length() % 2
+17:AOR:*(int,int):+(int,int):org.jsoup.nodes.Entities@escape(java.lang.String,java.nio.charset.CharsetEncoder,org.jsoup.nodes.Entities.EscapeMode):76:2590:string.length() * 2 |==> string.length() + 2
+18:AOR:*(int,int):-(int,int):org.jsoup.nodes.Entities@escape(java.lang.String,java.nio.charset.CharsetEncoder,org.jsoup.nodes.Entities.EscapeMode):76:2590:string.length() * 2 |==> string.length() - 2
+19:AOR:*(int,int):/(int,int):org.jsoup.nodes.Entities@escape(java.lang.String,java.nio.charset.CharsetEncoder,org.jsoup.nodes.Entities.EscapeMode):76:2590:string.length() * 2 |==> string.length() / 2
+20:LVR:0:POS:org.jsoup.nodes.Entities@escape(java.lang.String,java.nio.charset.CharsetEncoder,org.jsoup.nodes.Entities.EscapeMode):79:2694:0 |==> 1
+21:LVR:0:NEG:org.jsoup.nodes.Entities@escape(java.lang.String,java.nio.charset.CharsetEncoder,org.jsoup.nodes.Entities.EscapeMode):79:2694:0 |==> -1
+22:ROR:<(int,int):!=(int,int):org.jsoup.nodes.Entities@escape(java.lang.String,java.nio.charset.CharsetEncoder,org.jsoup.nodes.Entities.EscapeMode):79:2697:pos < string.length() |==> pos != string.length()
+23:ROR:<(int,int):<=(int,int):org.jsoup.nodes.Entities@escape(java.lang.String,java.nio.charset.CharsetEncoder,org.jsoup.nodes.Entities.EscapeMode):79:2697:pos < string.length() |==> pos <= string.length()
+24:ROR:<(int,int):FALSE(int,int):org.jsoup.nodes.Entities@escape(java.lang.String,java.nio.charset.CharsetEncoder,org.jsoup.nodes.Entities.EscapeMode):79:2701:pos < string.length() |==> false
+25:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Entities@escape(java.lang.String,java.nio.charset.CharsetEncoder,org.jsoup.nodes.Entities.EscapeMode):81:2806:map.containsKey(c) |==> false
+26:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Entities@escape(java.lang.String,java.nio.charset.CharsetEncoder,org.jsoup.nodes.Entities.EscapeMode):81:2806:map.containsKey(c) |==> true
+27:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@escape(java.lang.String,java.nio.charset.CharsetEncoder,org.jsoup.nodes.Entities.EscapeMode):82:2827:accum.append('&').append(map.get(c)).append(';'); |==> <NO-OP>
+28:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Entities@escape(java.lang.String,java.nio.charset.CharsetEncoder,org.jsoup.nodes.Entities.EscapeMode):83:2915:encoder.canEncode(c) |==> false
+29:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Entities@escape(java.lang.String,java.nio.charset.CharsetEncoder,org.jsoup.nodes.Entities.EscapeMode):83:2915:encoder.canEncode(c) |==> true
+30:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@escape(java.lang.String,java.nio.charset.CharsetEncoder,org.jsoup.nodes.Entities.EscapeMode):84:2936:accum.append(c.charValue()); |==> <NO-OP>
+31:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@escape(java.lang.String,java.nio.charset.CharsetEncoder,org.jsoup.nodes.Entities.EscapeMode):86:2998:accum.append("&#").append((int)c).append(';'); |==> <NO-OP>
+32:LVR:FALSE:TRUE:org.jsoup.nodes.Entities@unescape(java.lang.String):93:3173:false |==> true
+33:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):103:3460:string.contains("&") |==> false
+34:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):103:3460:string.contains("&") |==> true
+35:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):105:3514:strict |==> false
+36:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):105:3514:strict |==> true
+37:LVR:NEG:0:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):108:3712:-1 |==> 0
+38:LVR:NEG:POS:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):108:3712:-1 |==> 1
+39:LVR:POS:0:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):109:3749:3 |==> 0
+40:LVR:POS:NEG:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):109:3749:3 |==> -3
+41:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):110:3773:num != null |==> true
+42:LVR:POS:0:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):112:3845:2 |==> 0
+43:LVR:POS:NEG:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):112:3845:2 |==> -2
+44:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):112:3848:m.group(2) != null |==> true
+45:LVR:POS:0:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):112:3858:16 |==> 0
+46:LVR:POS:NEG:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):112:3858:16 |==> -16
+47:LVR:POS:0:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):112:3863:10 |==> 0
+48:LVR:POS:NEG:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):112:3863:10 |==> -10
+49:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):113:3887:charval = Integer.valueOf(num, base); |==> <NO-OP>
+50:LVR:POS:0:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):117:4054:1 |==> 0
+51:LVR:POS:NEG:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):117:4054:1 |==> -1
+52:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):118:4094:full.containsKey(name) |==> false
+53:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):118:4094:full.containsKey(name) |==> true
+54:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):119:4122:charval = full.get(name); |==> <NO-OP>
+55:LVR:NEG:0:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):121:4189:-1 |==> 0
+56:LVR:NEG:POS:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):121:4189:-1 |==> 1
+57:ROR:!=(int,int):<(int,int):org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):121:4178:charval != -1 |==> charval < -1
+58:ROR:!=(int,int):>(int,int):org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):121:4178:charval != -1 |==> charval > -1
+59:ROR:!=(int,int):TRUE(int,int):org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):121:4186:charval != -1 |==> true
+60:LVR:POS:0:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):121:4205:65535 |==> 0
+61:LVR:POS:NEG:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):121:4205:65535 |==> -65535
+62:ROR:>(int,int):!=(int,int):org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):121:4195:charval > 65535 |==> charval != 65535
+63:ROR:>(int,int):>=(int,int):org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):121:4195:charval > 65535 |==> charval >= 65535
+64:ROR:>(int,int):FALSE(int,int):org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):121:4203:charval > 65535 |==> false
+65:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):121:4178:charval != -1 || charval > 65535 |==> charval != -1 != charval > 65535
+66:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):121:4178:charval != -1 || charval > 65535 |==> charval != -1
+67:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):121:4195:charval != -1 || charval > 65535 |==> charval > 65535
+68:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):121:4192:charval != -1 || charval > 65535 |==> true
+69:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):123:4294:m.appendReplacement(accum, Matcher.quoteReplacement(c)); |==> <NO-OP>
+70:LVR:0:POS:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):125:4448:0 |==> 1
+71:LVR:0:NEG:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):125:4448:0 |==> -1
+72:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):125:4388:m.appendReplacement(accum, Matcher.quoteReplacement(m.group(0))); |==> <NO-OP>
+73:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@unescape(java.lang.String,boolean):128:4486:m.appendTail(accum); |==> <NO-OP>
+74:LVR:POS:0:org.jsoup.nodes.Entities:134:4656:34 |==> 0
+75:LVR:POS:NEG:org.jsoup.nodes.Entities:134:4656:34 |==> -34
+76:LVR:POS:0:org.jsoup.nodes.Entities:135:4686:38 |==> 0
+77:LVR:POS:NEG:org.jsoup.nodes.Entities:135:4686:38 |==> -38
+78:LVR:POS:0:org.jsoup.nodes.Entities:136:4717:39 |==> 0
+79:LVR:POS:NEG:org.jsoup.nodes.Entities:136:4717:39 |==> -39
+80:LVR:POS:0:org.jsoup.nodes.Entities:137:4746:60 |==> 0
+81:LVR:POS:NEG:org.jsoup.nodes.Entities:137:4746:60 |==> -60
+82:LVR:POS:0:org.jsoup.nodes.Entities:138:4775:62 |==> 0
+83:LVR:POS:NEG:org.jsoup.nodes.Entities:138:4775:62 |==> -62
+84:LVR:POS:0:org.jsoup.nodes.Entities:149:5226:1 |==> 0
+85:LVR:POS:NEG:org.jsoup.nodes.Entities:149:5226:1 |==> -1
+86:LVR:0:POS:org.jsoup.nodes.Entities:150:5290:0 |==> 1
+87:LVR:0:NEG:org.jsoup.nodes.Entities:150:5290:0 |==> -1
+88:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities:150:5255:xhtmlByVal.put(c, ((String)entity[0])); |==> <NO-OP>
+89:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@loadEntities(java.lang.String):159:5614:properties.load(in); |==> <NO-OP>
+90:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@loadEntities(java.lang.String):160:5647:in.close(); |==> <NO-OP>
+91:LVR:POS:0:org.jsoup.nodes.Entities@loadEntities(java.lang.String):166:5980:16 |==> 0
+92:LVR:POS:NEG:org.jsoup.nodes.Entities@loadEntities(java.lang.String):166:5980:16 |==> -16
+93:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@loadEntities(java.lang.String):168:6049:entities.put(name, val); |==> <NO-OP>
+94:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Entities@toCharacterKey(java.util.Map<java.lang.String,java.lang.Character>):179:6477:outMap.containsKey(character) |==> false
+95:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Entities@toCharacterKey(java.util.Map<java.lang.String,java.lang.Character>):179:6477:outMap.containsKey(character) |==> true
+96:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Entities@toCharacterKey(java.util.Map<java.lang.String,java.lang.Character>):181:6592:name.toLowerCase().equals(name) |==> false
+97:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Entities@toCharacterKey(java.util.Map<java.lang.String,java.lang.Character>):181:6592:name.toLowerCase().equals(name) |==> true
+98:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@toCharacterKey(java.util.Map<java.lang.String,java.lang.Character>):182:6620:outMap.put(character, name); |==> <NO-OP>
+99:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@toCharacterKey(java.util.Map<java.lang.String,java.lang.Character>):184:6686:outMap.put(character, name); |==> <NO-OP>
+100:LVR:FALSE:TRUE:org.jsoup.parser.Tokeniser:20:611:false |==> true
+101:LVR:TRUE:FALSE:org.jsoup.parser.Tokeniser:28:1108:true |==> false
+102:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tokeniser@<init>(org.jsoup.parser.CharacterReader,org.jsoup.parser.ParseErrorList):31:1186:this.reader = reader; |==> <NO-OP>
+103:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tokeniser@<init>(org.jsoup.parser.CharacterReader,org.jsoup.parser.ParseErrorList):32:1216:this.errors = errors; |==> <NO-OP>
+104:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.parser.Tokeniser@read():36:1277:selfClosingFlagAcknowledged |==> false
+105:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.parser.Tokeniser@read():36:1277:selfClosingFlagAcknowledged |==> true
+106:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@read():37:1320:error("Self closing flag not acknowledged"); |==> <NO-OP>
+107:LVR:TRUE:FALSE:org.jsoup.parser.Tokeniser@read():38:1407:true |==> false
+108:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tokeniser@read():38:1377:selfClosingFlagAcknowledged = true; |==> <NO-OP>
+109:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@read():42:1467:state.read(this, reader); |==> <NO-OP>
+110:LVR:0:POS:org.jsoup.parser.Tokeniser@read():45:1651:0 |==> 1
+111:LVR:0:NEG:org.jsoup.parser.Tokeniser@read():45:1651:0 |==> -1
+112:ROR:>(int,int):>=(int,int):org.jsoup.parser.Tokeniser@read():45:1629:charBuffer.length() > 0 |==> charBuffer.length() >= 0
+113:ROR:>(int,int):FALSE(int,int):org.jsoup.parser.Tokeniser@read():45:1649:charBuffer.length() > 0 |==> false
+114:LVR:0:POS:org.jsoup.parser.Tokeniser@read():47:1734:0 |==> 1
+115:LVR:0:NEG:org.jsoup.parser.Tokeniser@read():47:1734:0 |==> -1
+116:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@read():47:1716:charBuffer.delete(0, charBuffer.length()); |==> <NO-OP>
+117:LVR:FALSE:TRUE:org.jsoup.parser.Tokeniser@read():50:1849:false |==> true
+118:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tokeniser@read():50:1833:isEmitPending = false; |==> <NO-OP>
+119:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@emit(org.jsoup.parser.Token):56:1942:Validate.isFalse(isEmitPending, "There is an unread token pending!"); |==> <NO-OP>
+120:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tokeniser@emit(org.jsoup.parser.Token):58:2021:emitPending = token; |==> <NO-OP>
+121:LVR:TRUE:FALSE:org.jsoup.parser.Tokeniser@emit(org.jsoup.parser.Token):59:2066:true |==> false
+122:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tokeniser@emit(org.jsoup.parser.Token):59:2050:isEmitPending = true; |==> <NO-OP>
+123:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.parser.Tokeniser@emit(org.jsoup.parser.Token):61:2096:token.type == Token.TokenType.StartTag |==> false
+124:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tokeniser@emit(org.jsoup.parser.Token):63:2201:lastStartTag = startTag; |==> <NO-OP>
+125:COR:<MEMBER_SELECT(boolean)>:FALSE:org.jsoup.parser.Tokeniser@emit(org.jsoup.parser.Token):64:2250:startTag.selfClosing |==> false
+126:COR:<MEMBER_SELECT(boolean)>:TRUE:org.jsoup.parser.Tokeniser@emit(org.jsoup.parser.Token):64:2250:startTag.selfClosing |==> true
+127:LVR:FALSE:TRUE:org.jsoup.parser.Tokeniser@emit(org.jsoup.parser.Token):65:2310:false |==> true
+128:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tokeniser@emit(org.jsoup.parser.Token):65:2280:selfClosingFlagAcknowledged = false; |==> <NO-OP>
+129:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.parser.Tokeniser@emit(org.jsoup.parser.Token):66:2347:token.type == Token.TokenType.EndTag |==> false
+130:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.parser.Tokeniser@emit(org.jsoup.parser.Token):68:2466:endTag.attributes != null |==> true
+131:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@emit(org.jsoup.parser.Token):69:2491:error("Attributes incorrectly present on end tag"); |==> <NO-OP>
+132:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@emit(java.lang.String):76:2768:charBuffer.append(str); |==> <NO-OP>
+133:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@emit(char):80:2831:charBuffer.append(c); |==> <NO-OP>
+134:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tokeniser@transition(org.jsoup.parser.TokeniserState):88:2973:this.state = state; |==> <NO-OP>
+135:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@advanceTransition(org.jsoup.parser.TokeniserState):92:3059:reader.advance(); |==> <NO-OP>
+136:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tokeniser@advanceTransition(org.jsoup.parser.TokeniserState):93:3085:this.state = state; |==> <NO-OP>
+137:LVR:TRUE:FALSE:org.jsoup.parser.Tokeniser@acknowledgeSelfClosingFlag():97:3190:true |==> false
+138:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tokeniser@acknowledgeSelfClosingFlag():97:3160:selfClosingFlagAcknowledged = true; |==> <NO-OP>
+139:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):101:3330:reader.isEmpty() |==> false
+140:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):101:3330:reader.isEmpty() |==> true
+141:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):103:3398:additionalAllowedCharacter != null |==> true
+142:ROR:==(int,int):<=(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):103:3409:additionalAllowedCharacter == reader.current() |==> additionalAllowedCharacter <= reader.current()
+143:ROR:==(int,int):>=(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):103:3409:additionalAllowedCharacter == reader.current() |==> additionalAllowedCharacter >= reader.current()
+144:ROR:==(int,int):FALSE(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):103:3436:additionalAllowedCharacter == reader.current() |==> false
+145:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):103:3371:additionalAllowedCharacter != null && additionalAllowedCharacter == reader.current() |==> additionalAllowedCharacter != null == (additionalAllowedCharacter == reader.current())
+146:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):103:3406:additionalAllowedCharacter != null && additionalAllowedCharacter == reader.current() |==> false
+147:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):103:3371:additionalAllowedCharacter != null && additionalAllowedCharacter == reader.current() |==> additionalAllowedCharacter != null
+148:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):103:3409:additionalAllowedCharacter != null && additionalAllowedCharacter == reader.current() |==> additionalAllowedCharacter == reader.current()
+149:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):105:3511:reader.matchesAny('\t', '\n', '\r', '\f', ' ', '<', '&') |==> false
+150:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):105:3511:reader.matchesAny('\t', '\n', '\r', '\f', ' ', '<', '&') |==> true
+151:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):108:3586:reader.mark(); |==> <NO-OP>
+152:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):109:3632:reader.matchConsume("#") |==> false
+153:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):109:3632:reader.matchConsume("#") |==> true
+154:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):111:3749:isHexMode |==> false
+155:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):111:3749:isHexMode |==> true
+156:LVR:0:POS:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):112:3857:0 |==> 1
+157:LVR:0:NEG:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):112:3857:0 |==> -1
+158:ROR:==(int,int):>=(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):112:3838:numRef.length() == 0 |==> numRef.length() >= 0
+159:ROR:==(int,int):FALSE(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):112:3854:numRef.length() == 0 |==> false
+160:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):113:3903:characterReferenceError("numeric reference with no numerals"); |==> <NO-OP>
+161:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):114:3982:reader.rewindToMark(); |==> <NO-OP>
+162:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):117:4084:reader.matchConsume(";") |==> false
+163:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):117:4084:reader.matchConsume(";") |==> true
+164:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):118:4107:characterReferenceError("missing semicolon"); |==> <NO-OP>
+165:LVR:NEG:0:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):119:4195:-1 |==> 0
+166:LVR:NEG:POS:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):119:4195:-1 |==> 1
+167:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):121:4244:isHexMode |==> false
+168:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):121:4244:isHexMode |==> true
+169:LVR:POS:0:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):121:4256:16 |==> 0
+170:LVR:POS:NEG:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):121:4256:16 |==> -16
+171:LVR:POS:0:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):121:4261:10 |==> 0
+172:LVR:POS:NEG:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):121:4261:10 |==> -10
+173:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):122:4281:charval = Integer.valueOf(numRef, base); |==> <NO-OP>
+174:LVR:NEG:0:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4419:-1 |==> 0
+175:LVR:NEG:POS:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4419:-1 |==> 1
+176:ROR:==(int,int):<=(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4408:charval == -1 |==> charval <= -1
+177:ROR:==(int,int):>=(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4408:charval == -1 |==> charval >= -1
+178:ROR:==(int,int):FALSE(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4416:charval == -1 |==> false
+179:LVR:POS:0:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4437:55296 |==> 0
+180:LVR:POS:NEG:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4437:55296 |==> -55296
+181:ROR:>=(int,int):==(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4426:charval >= 55296 |==> charval == 55296
+182:ROR:>=(int,int):>(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4426:charval >= 55296 |==> charval > 55296
+183:ROR:>=(int,int):TRUE(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4434:charval >= 55296 |==> true
+184:LVR:POS:0:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4458:57343 |==> 0
+185:LVR:POS:NEG:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4458:57343 |==> -57343
+186:ROR:<=(int,int):<(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4447:charval <= 57343 |==> charval < 57343
+187:ROR:<=(int,int):==(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4447:charval <= 57343 |==> charval == 57343
+188:ROR:<=(int,int):TRUE(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4455:charval <= 57343 |==> true
+189:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4444:charval >= 55296 && charval <= 57343 |==> false
+190:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4426:charval >= 55296 && charval <= 57343 |==> charval >= 55296
+191:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4447:charval >= 55296 && charval <= 57343 |==> charval <= 57343
+192:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4408:charval == -1 || (charval >= 55296 && charval <= 57343) |==> charval == -1
+193:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4425:charval == -1 || (charval >= 55296 && charval <= 57343) |==> (charval >= 55296 && charval <= 57343)
+194:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4422:charval == -1 || (charval >= 55296 && charval <= 57343) |==> true
+195:LVR:POS:0:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4479:1114111 |==> 0
+196:LVR:POS:NEG:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4479:1114111 |==> -1114111
+197:ROR:>(int,int):!=(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4469:charval > 1114111 |==> charval != 1114111
+198:ROR:>(int,int):>=(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4469:charval > 1114111 |==> charval >= 1114111
+199:ROR:>(int,int):FALSE(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4477:charval > 1114111 |==> false
+200:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4408:charval == -1 || (charval >= 55296 && charval <= 57343) || charval > 1114111 |==> charval == -1 || (charval >= 55296 && charval <= 57343)
+201:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4469:charval == -1 || (charval >= 55296 && charval <= 57343) || charval > 1114111 |==> charval > 1114111
+202:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):125:4466:charval == -1 || (charval >= 55296 && charval <= 57343) || charval > 1114111 |==> true
+203:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):126:4507:characterReferenceError("character outside of valid range"); |==> <NO-OP>
+204:LVR:FALSE:TRUE:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):139:5225:false |==> true
+205:LVR:0:POS:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):140:5270:0 |==> 1
+206:LVR:0:NEG:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):140:5270:0 |==> -1
+207:ROR:>(int,int):>=(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):140:5251:nameRef.length() > 0 |==> nameRef.length() >= 0
+208:ROR:>(int,int):FALSE(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):140:5268:nameRef.length() > 0 |==> false
+209:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):140:5251:nameRef.length() > 0 && !found |==> nameRef.length() > 0 == !found
+210:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):140:5272:nameRef.length() > 0 && !found |==> false
+211:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):140:5251:nameRef.length() > 0 && !found |==> nameRef.length() > 0
+212:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):140:5275:nameRef.length() > 0 && !found |==> !found
+213:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):141:5327:Entities.isNamedEntity(nameRef) |==> false
+214:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):141:5327:Entities.isNamedEntity(nameRef) |==> true
+215:LVR:TRUE:FALSE:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):142:5366:true |==> false
+216:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):142:5358:found = true; |==> <NO-OP>
+217:LVR:0:POS:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):144:5443:0 |==> 1
+218:LVR:0:NEG:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):144:5443:0 |==> -1
+219:LVR:POS:0:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):144:5463:1 |==> 0
+220:LVR:POS:NEG:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):144:5463:1 |==> -1
+221:AOR:-(int,int):%(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):144:5446:nameRef.length() - 1 |==> nameRef.length() % 1
+222:AOR:-(int,int):*(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):144:5446:nameRef.length() - 1 |==> nameRef.length() * 1
+223:AOR:-(int,int):+(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):144:5446:nameRef.length() - 1 |==> nameRef.length() + 1
+224:AOR:-(int,int):/(int,int):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):144:5446:nameRef.length() - 1 |==> nameRef.length() / 1
+225:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):144:5415:nameRef = nameRef.substring(0, nameRef.length() - 1); |==> <NO-OP>
+226:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):145:5487:reader.unconsume(); |==> <NO-OP>
+227:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):149:5557:found |==> false
+228:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):149:5557:found |==> true
+229:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):150:5582:reader.rewindToMark(); |==> <NO-OP>
+230:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):151:5625:looksLegit |==> false
+231:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):151:5625:looksLegit |==> true
+232:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):152:5681:characterReferenceError(String.format("invalid named referenece \'%s\'", origNameRef)); |==> <NO-OP>
+233:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):155:5842:reader.matchesLetter() || reader.matchesDigit() |==> reader.matchesLetter() != reader.matchesDigit()
+234:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):155:5842:reader.matchesLetter() || reader.matchesDigit() |==> reader.matchesLetter()
+235:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):155:5868:reader.matchesLetter() || reader.matchesDigit() |==> reader.matchesDigit()
+236:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):155:5865:reader.matchesLetter() || reader.matchesDigit() |==> true
+237:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):155:5842:reader.matchesLetter() || reader.matchesDigit() || reader.matchesAny('=', '-', '_') |==> (reader.matchesLetter() || reader.matchesDigit()) != reader.matchesAny('=', '-', '_')
+238:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):155:5842:reader.matchesLetter() || reader.matchesDigit() || reader.matchesAny('=', '-', '_') |==> reader.matchesLetter() || reader.matchesDigit()
+239:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):155:5893:reader.matchesLetter() || reader.matchesDigit() || reader.matchesAny('=', '-', '_') |==> reader.matchesAny('=', '-', '_')
+240:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):155:5890:reader.matchesLetter() || reader.matchesDigit() || reader.matchesAny('=', '-', '_') |==> true
+241:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):155:5826:inAttribute && (reader.matchesLetter() || reader.matchesDigit() || reader.matchesAny('=', '-', '_')) |==> inAttribute == (reader.matchesLetter() || reader.matchesDigit() || reader.matchesAny('=', '-', '_'))
+242:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):155:5838:inAttribute && (reader.matchesLetter() || reader.matchesDigit() || reader.matchesAny('=', '-', '_')) |==> false
+243:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):155:5826:inAttribute && (reader.matchesLetter() || reader.matchesDigit() || reader.matchesAny('=', '-', '_')) |==> inAttribute
+244:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):155:5841:inAttribute && (reader.matchesLetter() || reader.matchesDigit() || reader.matchesAny('=', '-', '_')) |==> (reader.matchesLetter() || reader.matchesDigit() || reader.matchesAny('=', '-', '_'))
+245:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):157:5990:reader.rewindToMark(); |==> <NO-OP>
+246:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):160:6092:reader.matchConsume(";") |==> false
+247:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):160:6092:reader.matchConsume(";") |==> true
+248:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@consumeCharacterReference(java.lang.Character,boolean):161:6115:characterReferenceError("missing semicolon"); |==> <NO-OP>
+249:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.parser.Tokeniser@createTagPending(boolean):167:6320:start |==> false
+250:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.parser.Tokeniser@createTagPending(boolean):167:6320:start |==> true
+251:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tokeniser@createTagPending(boolean):167:6307:tagPending = start ? new Token.StartTag() : new Token.EndTag(); |==> <NO-OP>
+252:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@emitTagPending():172:6441:tagPending.finaliseTag(); |==> <NO-OP>
+253:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@emitTagPending():173:6475:emit(tagPending); |==> <NO-OP>
+254:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tokeniser@createCommentPending():177:6542:commentPending = new Token.Comment(); |==> <NO-OP>
+255:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@emitCommentPending():181:6627:emit(commentPending); |==> <NO-OP>
+256:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tokeniser@createDoctypePending():185:6698:doctypePending = new Token.Doctype(); |==> <NO-OP>
+257:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@emitDoctypePending():189:6783:emit(doctypePending); |==> <NO-OP>
+258:STD:<ASSIGN>:<NO-OP>:org.jsoup.parser.Tokeniser@createTempBuffer():193:6850:dataBuffer = new StringBuilder(); |==> <NO-OP>
+259:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.parser.Tokeniser@isAppropriateEndTagToken():197:6957:lastStartTag == null |==> false
+260:LVR:FALSE:TRUE:org.jsoup.parser.Tokeniser@isAppropriateEndTagToken():198:6985:false |==> true
+261:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Tokeniser@error(org.jsoup.parser.TokeniserState):207:7213:errors.canAddError() |==> false
+262:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Tokeniser@error(org.jsoup.parser.TokeniserState):207:7213:errors.canAddError() |==> true
+263:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@error(org.jsoup.parser.TokeniserState):208:7229:errors.add(new ParseError(reader.pos(), "Unexpected character \'%s\' in input state [%s]", reader.current(), state)); |==> <NO-OP>
+264:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Tokeniser@eofError(org.jsoup.parser.TokeniserState):212:7424:errors.canAddError() |==> false
+265:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Tokeniser@eofError(org.jsoup.parser.TokeniserState):212:7424:errors.canAddError() |==> true
+266:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@eofError(org.jsoup.parser.TokeniserState):213:7440:errors.add(new ParseError(reader.pos(), "Unexpectedly reached end of file (EOF) in input state [%s]", state)); |==> <NO-OP>
+267:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Tokeniser@characterReferenceError(java.lang.String):217:7647:errors.canAddError() |==> false
+268:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Tokeniser@characterReferenceError(java.lang.String):217:7647:errors.canAddError() |==> true
+269:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@characterReferenceError(java.lang.String):218:7663:errors.add(new ParseError(reader.pos(), "Invalid character reference: %s", message)); |==> <NO-OP>
+270:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.parser.Tokeniser@error(java.lang.String):222:7828:errors.canAddError() |==> false
+271:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.parser.Tokeniser@error(java.lang.String):222:7828:errors.canAddError() |==> true
+272:STD:<CALL>:<NO-OP>:org.jsoup.parser.Tokeniser@error(java.lang.String):223:7844:errors.add(new ParseError(reader.pos(), errorMsg)); |==> <NO-OP>
+273:LVR:TRUE:FALSE:org.jsoup.parser.Tokeniser@currentNodeInHtmlNS():228:8002:true |==> false

@@ -1,0 +1,30 @@
+1:STD:<CALL>:<NO-OP>:org.jsoup.safety.Cleaner@<init>(org.jsoup.safety.Whitelist):29:1059:Validate.notNull(whitelist); |==> <NO-OP>
+2:STD:<ASSIGN>:<NO-OP>:org.jsoup.safety.Cleaner@<init>(org.jsoup.safety.Whitelist):30:1096:this.whitelist = whitelist; |==> <NO-OP>
+3:STD:<CALL>:<NO-OP>:org.jsoup.safety.Cleaner@clean(org.jsoup.nodes.Document):40:1530:Validate.notNull(dirtyDocument); |==> <NO-OP>
+4:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.safety.Cleaner@clean(org.jsoup.nodes.Document):43:1669:dirtyDocument.body() != null |==> true
+5:STD:<CALL>:<NO-OP>:org.jsoup.safety.Cleaner@clean(org.jsoup.nodes.Document):44:1767:copySafeNodes(dirtyDocument.body(), clean.body()); |==> <NO-OP>
+6:STD:<CALL>:<NO-OP>:org.jsoup.safety.Cleaner@isValid(org.jsoup.nodes.Document):60:2563:Validate.notNull(dirtyDocument); |==> <NO-OP>
+7:LVR:0:POS:org.jsoup.safety.Cleaner@isValid(org.jsoup.nodes.Document):64:2778:0 |==> 1
+8:LVR:0:NEG:org.jsoup.safety.Cleaner@isValid(org.jsoup.nodes.Document):64:2778:0 |==> -1
+9:ROR:==(int,int):<=(int,int):org.jsoup.safety.Cleaner@isValid(org.jsoup.nodes.Document):64:2762:numDiscarded == 0 |==> numDiscarded <= 0
+10:ROR:==(int,int):>=(int,int):org.jsoup.safety.Cleaner@isValid(org.jsoup.nodes.Document):64:2762:numDiscarded == 0 |==> numDiscarded >= 0
+11:ROR:==(int,int):FALSE(int,int):org.jsoup.safety.Cleaner@isValid(org.jsoup.nodes.Document):64:2775:numDiscarded == 0 |==> false
+12:LVR:0:POS:org.jsoup.safety.Cleaner@copySafeNodes(org.jsoup.nodes.Element,org.jsoup.nodes.Element):72:3049:0 |==> 1
+13:LVR:0:NEG:org.jsoup.safety.Cleaner@copySafeNodes(org.jsoup.nodes.Element,org.jsoup.nodes.Element):72:3049:0 |==> -1
+14:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.safety.Cleaner@copySafeNodes(org.jsoup.nodes.Element,org.jsoup.nodes.Element):78:3236:whitelist.isSafeTag(sourceEl.tagName()) |==> false
+15:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.safety.Cleaner@copySafeNodes(org.jsoup.nodes.Element,org.jsoup.nodes.Element):78:3236:whitelist.isSafeTag(sourceEl.tagName()) |==> true
+16:STD:<CALL>:<NO-OP>:org.jsoup.safety.Cleaner@copySafeNodes(org.jsoup.nodes.Element,org.jsoup.nodes.Element):81:3432:destination.appendChild(destChild); |==> <NO-OP>
+17:STD:<ASSIGN>:<NO-OP>:org.jsoup.safety.Cleaner@copySafeNodes(org.jsoup.nodes.Element,org.jsoup.nodes.Element):83:3489:numDiscarded += meta.numAttribsDiscarded; |==> <NO-OP>
+18:STD:<ASSIGN>:<NO-OP>:org.jsoup.safety.Cleaner@copySafeNodes(org.jsoup.nodes.Element,org.jsoup.nodes.Element):84:3551:numDiscarded += copySafeNodes(sourceEl, destChild); |==> <NO-OP>
+19:STD:<INC>:<NO-OP>:org.jsoup.safety.Cleaner@copySafeNodes(org.jsoup.nodes.Element,org.jsoup.nodes.Element):86:3648:numDiscarded++; |==> <NO-OP>
+20:STD:<ASSIGN>:<NO-OP>:org.jsoup.safety.Cleaner@copySafeNodes(org.jsoup.nodes.Element,org.jsoup.nodes.Element):87:3684:numDiscarded += copySafeNodes(sourceEl, destination); |==> <NO-OP>
+21:STD:<CALL>:<NO-OP>:org.jsoup.safety.Cleaner@copySafeNodes(org.jsoup.nodes.Element,org.jsoup.nodes.Element):92:3977:destination.appendChild(destText); |==> <NO-OP>
+22:LVR:0:POS:org.jsoup.safety.Cleaner@createSafeElement(org.jsoup.nodes.Element):104:4350:0 |==> 1
+23:LVR:0:NEG:org.jsoup.safety.Cleaner@createSafeElement(org.jsoup.nodes.Element):104:4350:0 |==> -1
+24:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.safety.Cleaner@createSafeElement(org.jsoup.nodes.Element):108:4502:whitelist.isSafeAttribute(sourceTag, sourceEl, sourceAttr) |==> false
+25:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.safety.Cleaner@createSafeElement(org.jsoup.nodes.Element):108:4502:whitelist.isSafeAttribute(sourceTag, sourceEl, sourceAttr) |==> true
+26:STD:<CALL>:<NO-OP>:org.jsoup.safety.Cleaner@createSafeElement(org.jsoup.nodes.Element):109:4553:destAttrs.put(sourceAttr); |==> <NO-OP>
+27:STD:<INC>:<NO-OP>:org.jsoup.safety.Cleaner@createSafeElement(org.jsoup.nodes.Element):111:4613:numDiscarded++; |==> <NO-OP>
+28:STD:<CALL>:<NO-OP>:org.jsoup.safety.Cleaner@createSafeElement(org.jsoup.nodes.Element):114:4726:destAttrs.addAll(enforcedAttrs); |==> <NO-OP>
+29:STD:<ASSIGN>:<NO-OP>:org.jsoup.safety.Cleaner$ElementMeta@<init>(org.jsoup.nodes.Element,int):124:4983:this.el = el; |==> <NO-OP>
+30:STD:<ASSIGN>:<NO-OP>:org.jsoup.safety.Cleaner$ElementMeta@<init>(org.jsoup.nodes.Element,int):125:5009:this.numAttribsDiscarded = numAttribsDiscarded; |==> <NO-OP>

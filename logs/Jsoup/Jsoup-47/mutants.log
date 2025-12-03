@@ -1,0 +1,102 @@
+1:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Entities$EscapeMode@<init>(java.util.Map<java.lang.Character,java.lang.String>):28:825:this.map = map; |==> <NO-OP>
+2:LVR:POS:0:org.jsoup.nodes.Entities@escape(java.lang.String,org.jsoup.nodes.Document.OutputSettings):73:2343:2 |==> 0
+3:LVR:POS:NEG:org.jsoup.nodes.Entities@escape(java.lang.String,org.jsoup.nodes.Document.OutputSettings):73:2343:2 |==> -2
+4:AOR:*(int,int):%(int,int):org.jsoup.nodes.Entities@escape(java.lang.String,org.jsoup.nodes.Document.OutputSettings):73:2325:string.length() * 2 |==> string.length() % 2
+5:AOR:*(int,int):+(int,int):org.jsoup.nodes.Entities@escape(java.lang.String,org.jsoup.nodes.Document.OutputSettings):73:2325:string.length() * 2 |==> string.length() + 2
+6:AOR:*(int,int):-(int,int):org.jsoup.nodes.Entities@escape(java.lang.String,org.jsoup.nodes.Document.OutputSettings):73:2325:string.length() * 2 |==> string.length() - 2
+7:AOR:*(int,int):/(int,int):org.jsoup.nodes.Entities@escape(java.lang.String,org.jsoup.nodes.Document.OutputSettings):73:2325:string.length() * 2 |==> string.length() / 2
+8:LVR:FALSE:TRUE:org.jsoup.nodes.Entities@escape(java.lang.String,org.jsoup.nodes.Document.OutputSettings):74:2382:false |==> true
+9:LVR:FALSE:TRUE:org.jsoup.nodes.Entities@escape(java.lang.String,org.jsoup.nodes.Document.OutputSettings):74:2389:false |==> true
+10:LVR:FALSE:TRUE:org.jsoup.nodes.Entities@escape(java.lang.String,org.jsoup.nodes.Document.OutputSettings):74:2396:false |==> true
+11:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@escape(java.lang.String,org.jsoup.nodes.Document.OutputSettings):74:2355:escape(accum, string, out, false, false, false); |==> <NO-OP>
+12:LVR:FALSE:TRUE:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):82:2771:false |==> true
+13:LVR:FALSE:TRUE:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):83:2812:false |==> true
+14:LVR:0:POS:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):91:3173:0 |==> 1
+15:LVR:0:NEG:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):91:3173:0 |==> -1
+16:ROR:<(int,int):!=(int,int):org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):91:3176:offset < length |==> offset != length
+17:ROR:<(int,int):<=(int,int):org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):91:3176:offset < length |==> offset <= length
+18:ROR:<(int,int):FALSE(int,int):org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):91:3183:offset < length |==> false
+19:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):94:3306:normaliseWhite |==> false
+20:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):94:3306:normaliseWhite |==> true
+21:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):95:3367:StringUtil.isWhitespace(codePoint) |==> false
+22:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):95:3367:StringUtil.isWhitespace(codePoint) |==> true
+23:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):96:3407:stripLeadingWhite && !reachedNonWhite |==> stripLeadingWhite == !reachedNonWhite
+24:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):96:3425:stripLeadingWhite && !reachedNonWhite |==> false
+25:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):96:3407:stripLeadingWhite && !reachedNonWhite |==> stripLeadingWhite
+26:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):96:3428:stripLeadingWhite && !reachedNonWhite |==> !reachedNonWhite
+27:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):96:3406:(stripLeadingWhite && !reachedNonWhite) || lastWasWhite |==> (stripLeadingWhite && !reachedNonWhite) != lastWasWhite
+28:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):96:3406:(stripLeadingWhite && !reachedNonWhite) || lastWasWhite |==> (stripLeadingWhite && !reachedNonWhite)
+29:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):96:3449:(stripLeadingWhite && !reachedNonWhite) || lastWasWhite |==> lastWasWhite
+30:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):96:3446:(stripLeadingWhite && !reachedNonWhite) || lastWasWhite |==> true
+31:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):98:3517:accum.append(' '); |==> <NO-OP>
+32:LVR:TRUE:FALSE:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):99:3571:true |==> false
+33:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):99:3556:lastWasWhite = true; |==> <NO-OP>
+34:LVR:FALSE:TRUE:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):102:3667:false |==> true
+35:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):102:3652:lastWasWhite = false; |==> <NO-OP>
+36:LVR:TRUE:FALSE:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):103:3712:true |==> false
+37:STD:<ASSIGN>:<NO-OP>:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):103:3694:reachedNonWhite = true; |==> <NO-OP>
+38:ROR:<(int,int):!=(int,int):org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):107:3895:codePoint < Character.MIN_SUPPLEMENTARY_CODE_POINT |==> codePoint != Character.MIN_SUPPLEMENTARY_CODE_POINT
+39:ROR:<(int,int):<=(int,int):org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):107:3895:codePoint < Character.MIN_SUPPLEMENTARY_CODE_POINT |==> codePoint <= Character.MIN_SUPPLEMENTARY_CODE_POINT
+40:ROR:<(int,int):FALSE(int,int):org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):107:3905:codePoint < Character.MIN_SUPPLEMENTARY_CODE_POINT |==> false
+41:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):112:4136:accum.append("&amp;"); |==> <NO-OP>
+42:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):115:4260:escapeMode != EscapeMode.xhtml |==> true
+43:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):116:4309:accum.append("&nbsp;"); |==> <NO-OP>
+44:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):118:4390:accum.append("&#xa0;"); |==> <NO-OP>
+45:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):122:4620:inAttribute |==> false
+46:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):122:4620:inAttribute |==> true
+47:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):123:4661:accum.append("&lt;"); |==> <NO-OP>
+48:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):125:4740:accum.append(c); |==> <NO-OP>
+49:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):128:4847:inAttribute |==> false
+50:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):128:4847:inAttribute |==> true
+51:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):129:4888:accum.append("&gt;"); |==> <NO-OP>
+52:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):131:4967:accum.append(c); |==> <NO-OP>
+53:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):134:5073:inAttribute |==> false
+54:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):134:5073:inAttribute |==> true
+55:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):135:5114:accum.append("&quot;"); |==> <NO-OP>
+56:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):137:5195:accum.append(c); |==> <NO-OP>
+57:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):140:5309:canEncode(coreCharset, c, encoder) |==> false
+58:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):140:5309:canEncode(coreCharset, c, encoder) |==> true
+59:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):141:5364:accum.append(c); |==> <NO-OP>
+60:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):142:5429:map.containsKey(c) |==> false
+61:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):142:5429:map.containsKey(c) |==> true
+62:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):143:5462:accum.append('&').append(map.get(c)).append(';'); |==> <NO-OP>
+63:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):145:5569:accum.append("&#x").append(Integer.toHexString(codePoint)).append(';'); |==> <NO-OP>
+64:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):149:5792:encoder.canEncode(c) |==> false
+65:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):149:5792:encoder.canEncode(c) |==> true
+66:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):150:5857:accum.append(c); |==> <NO-OP>
+67:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@escape(java.lang.StringBuilder,java.lang.String,org.jsoup.nodes.Document.OutputSettings,boolean,boolean,boolean):152:5915:accum.append("&#x").append(Integer.toHexString(codePoint)).append(';'); |==> <NO-OP>
+68:LVR:FALSE:TRUE:org.jsoup.nodes.Entities@unescape(java.lang.String):158:6094:false |==> true
+69:LVR:POS:0:org.jsoup.nodes.Entities@canEncode(org.jsoup.nodes.Entities.CoreCharset,char,java.nio.charset.CharsetEncoder):189:7303:128 |==> 0
+70:LVR:POS:NEG:org.jsoup.nodes.Entities@canEncode(org.jsoup.nodes.Entities.CoreCharset,char,java.nio.charset.CharsetEncoder):189:7303:128 |==> -128
+71:ROR:<(int,int):!=(int,int):org.jsoup.nodes.Entities@canEncode(org.jsoup.nodes.Entities.CoreCharset,char,java.nio.charset.CharsetEncoder):189:7299:c < 128 |==> c != 128
+72:ROR:<(int,int):<=(int,int):org.jsoup.nodes.Entities@canEncode(org.jsoup.nodes.Entities.CoreCharset,char,java.nio.charset.CharsetEncoder):189:7299:c < 128 |==> c <= 128
+73:ROR:<(int,int):FALSE(int,int):org.jsoup.nodes.Entities@canEncode(org.jsoup.nodes.Entities.CoreCharset,char,java.nio.charset.CharsetEncoder):189:7301:c < 128 |==> false
+74:LVR:TRUE:FALSE:org.jsoup.nodes.Entities@canEncode(org.jsoup.nodes.Entities.CoreCharset,char,java.nio.charset.CharsetEncoder):191:7354:true |==> false
+75:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Entities$CoreCharset@byName(java.lang.String):201:7691:name.equals("US-ASCII") |==> false
+76:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Entities$CoreCharset@byName(java.lang.String):201:7691:name.equals("US-ASCII") |==> true
+77:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Entities$CoreCharset@byName(java.lang.String):203:7766:name.startsWith("UTF-") |==> false
+78:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Entities$CoreCharset@byName(java.lang.String):203:7766:name.startsWith("UTF-") |==> true
+79:LVR:POS:0:org.jsoup.nodes.Entities:212:7991:34 |==> 0
+80:LVR:POS:NEG:org.jsoup.nodes.Entities:212:7991:34 |==> -34
+81:LVR:POS:0:org.jsoup.nodes.Entities:213:8021:38 |==> 0
+82:LVR:POS:NEG:org.jsoup.nodes.Entities:213:8021:38 |==> -38
+83:LVR:POS:0:org.jsoup.nodes.Entities:214:8050:60 |==> 0
+84:LVR:POS:NEG:org.jsoup.nodes.Entities:214:8050:60 |==> -60
+85:LVR:POS:0:org.jsoup.nodes.Entities:215:8079:62 |==> 0
+86:LVR:POS:NEG:org.jsoup.nodes.Entities:215:8079:62 |==> -62
+87:LVR:POS:0:org.jsoup.nodes.Entities:226:8530:1 |==> 0
+88:LVR:POS:NEG:org.jsoup.nodes.Entities:226:8530:1 |==> -1
+89:LVR:0:POS:org.jsoup.nodes.Entities:227:8594:0 |==> 1
+90:LVR:0:NEG:org.jsoup.nodes.Entities:227:8594:0 |==> -1
+91:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities:227:8559:xhtmlByVal.put(c, ((String)entity[0])); |==> <NO-OP>
+92:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@loadEntities(java.lang.String):236:8918:properties.load(in); |==> <NO-OP>
+93:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@loadEntities(java.lang.String):237:8951:in.close(); |==> <NO-OP>
+94:LVR:POS:0:org.jsoup.nodes.Entities@loadEntities(java.lang.String):243:9284:16 |==> 0
+95:LVR:POS:NEG:org.jsoup.nodes.Entities@loadEntities(java.lang.String):243:9284:16 |==> -16
+96:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@loadEntities(java.lang.String):245:9353:entities.put(name, val); |==> <NO-OP>
+97:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Entities@toCharacterKey(java.util.Map<java.lang.String,java.lang.Character>):256:9781:outMap.containsKey(character) |==> false
+98:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Entities@toCharacterKey(java.util.Map<java.lang.String,java.lang.Character>):256:9781:outMap.containsKey(character) |==> true
+99:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.nodes.Entities@toCharacterKey(java.util.Map<java.lang.String,java.lang.Character>):258:9896:name.toLowerCase().equals(name) |==> false
+100:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.nodes.Entities@toCharacterKey(java.util.Map<java.lang.String,java.lang.Character>):258:9896:name.toLowerCase().equals(name) |==> true
+101:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@toCharacterKey(java.util.Map<java.lang.String,java.lang.Character>):259:9924:outMap.put(character, name); |==> <NO-OP>
+102:STD:<CALL>:<NO-OP>:org.jsoup.nodes.Entities@toCharacterKey(java.util.Map<java.lang.String,java.lang.Character>):261:9990:outMap.put(character, name); |==> <NO-OP>

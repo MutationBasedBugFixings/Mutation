@@ -1,0 +1,120 @@
+1:LVR:NEG:0:org.jsoup.helper.DataUtil@crossStreams(java.io.InputStream,java.io.OutputStream):80:3170:-1 |==> 0
+2:LVR:NEG:POS:org.jsoup.helper.DataUtil@crossStreams(java.io.InputStream,java.io.OutputStream):80:3170:-1 |==> 1
+3:ROR:!=(int,int):<(int,int):org.jsoup.helper.DataUtil@crossStreams(java.io.InputStream,java.io.OutputStream):80:3143:(len = in.read(buffer)) != -1 |==> (len = in.read(buffer)) < -1
+4:ROR:!=(int,int):>(int,int):org.jsoup.helper.DataUtil@crossStreams(java.io.InputStream,java.io.OutputStream):80:3143:(len = in.read(buffer)) != -1 |==> (len = in.read(buffer)) > -1
+5:LVR:0:POS:org.jsoup.helper.DataUtil@crossStreams(java.io.InputStream,java.io.OutputStream):81:3206:0 |==> 1
+6:LVR:0:NEG:org.jsoup.helper.DataUtil@crossStreams(java.io.InputStream,java.io.OutputStream):81:3206:0 |==> -1
+7:STD:<CALL>:<NO-OP>:org.jsoup.helper.DataUtil@crossStreams(java.io.InputStream,java.io.OutputStream):81:3188:out.write(buffer, 0, len); |==> <NO-OP>
+8:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):94:3732:charsetName == null |==> false
+9:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):97:4007:doc = parser.parseInput(docData, baseUri); |==> <NO-OP>
+10:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):99:4166:meta != null |==> true
+11:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):101:4302:meta.hasAttr("http-equiv") |==> false
+12:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):101:4302:meta.hasAttr("http-equiv") |==> true
+13:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):102:4340:foundCharset = getCharsetFromContentType(meta.attr("content")); |==> <NO-OP>
+14:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):104:4455:foundCharset == null |==> false
+15:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):104:4442:foundCharset == null && meta.hasAttr("charset") |==> foundCharset == null == meta.hasAttr("charset")
+16:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):104:4463:foundCharset == null && meta.hasAttr("charset") |==> false
+17:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):104:4442:foundCharset == null && meta.hasAttr("charset") |==> foundCharset == null
+18:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):104:4466:foundCharset == null && meta.hasAttr("charset") |==> meta.hasAttr("charset")
+19:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):106:4566:Charset.isSupported(meta.attr("charset")) |==> false
+20:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):106:4566:Charset.isSupported(meta.attr("charset")) |==> true
+21:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):107:4620:foundCharset = meta.attr("charset"); |==> <NO-OP>
+22:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):110:4769:foundCharset = null; |==> <NO-OP>
+23:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):114:4864:foundCharset != null |==> true
+24:LVR:0:POS:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):114:4900:0 |==> 1
+25:LVR:0:NEG:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):114:4900:0 |==> -1
+26:ROR:!=(int,int):<(int,int):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):114:4875:foundCharset.length() != 0 |==> foundCharset.length() < 0
+27:ROR:!=(int,int):TRUE(int,int):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):114:4897:foundCharset.length() != 0 |==> true
+28:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):114:4851:foundCharset != null && foundCharset.length() != 0 |==> foundCharset != null == (foundCharset.length() != 0)
+29:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):114:4872:foundCharset != null && foundCharset.length() != 0 |==> false
+30:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):114:4851:foundCharset != null && foundCharset.length() != 0 |==> foundCharset != null
+31:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):114:4875:foundCharset != null && foundCharset.length() != 0 |==> foundCharset.length() != 0
+32:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):114:4851:foundCharset != null && foundCharset.length() != 0 && !foundCharset.equals(defaultCharset) |==> (foundCharset != null && foundCharset.length() != 0) == !foundCharset.equals(defaultCharset)
+33:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):114:4902:foundCharset != null && foundCharset.length() != 0 && !foundCharset.equals(defaultCharset) |==> false
+34:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):114:4851:foundCharset != null && foundCharset.length() != 0 && !foundCharset.equals(defaultCharset) |==> foundCharset != null && foundCharset.length() != 0
+35:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):114:4905:foundCharset != null && foundCharset.length() != 0 && !foundCharset.equals(defaultCharset) |==> !foundCharset.equals(defaultCharset)
+36:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):115:4986:foundCharset = foundCharset.trim().replaceAll("[\"\']", ""); |==> <NO-OP>
+37:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):116:5066:charsetName = foundCharset; |==> <NO-OP>
+38:STD:<CALL>:<NO-OP>:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):117:5114:byteData.rewind(); |==> <NO-OP>
+39:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):118:5153:docData = Charset.forName(foundCharset).decode(byteData).toString(); |==> <NO-OP>
+40:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):119:5242:doc = null; |==> <NO-OP>
+41:STD:<CALL>:<NO-OP>:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):123:5377:Validate.notEmpty(charsetName, "Must set charset arg to character set of file to parse. Set to null to attempt to detect from HTML"); |==> <NO-OP>
+42:LVR:0:POS:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):126:5632:0 |==> 1
+43:LVR:0:NEG:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):126:5632:0 |==> -1
+44:ROR:>(int,int):>=(int,int):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):126:5613:docData.length() > 0 |==> docData.length() >= 0
+45:ROR:>(int,int):FALSE(int,int):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):126:5630:docData.length() > 0 |==> false
+46:LVR:0:POS:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):126:5652:0 |==> 1
+47:LVR:0:NEG:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):126:5652:0 |==> -1
+48:ROR:==(int,int):<=(int,int):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):126:5637:docData.charAt(0) == UNICODE_BOM |==> docData.charAt(0) <= UNICODE_BOM
+49:ROR:==(int,int):>=(int,int):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):126:5637:docData.charAt(0) == UNICODE_BOM |==> docData.charAt(0) >= UNICODE_BOM
+50:ROR:==(int,int):FALSE(int,int):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):126:5655:docData.charAt(0) == UNICODE_BOM |==> false
+51:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):126:5613:docData.length() > 0 && docData.charAt(0) == UNICODE_BOM |==> docData.length() > 0 == (docData.charAt(0) == UNICODE_BOM)
+52:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):126:5634:docData.length() > 0 && docData.charAt(0) == UNICODE_BOM |==> false
+53:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):126:5613:docData.length() > 0 && docData.charAt(0) == UNICODE_BOM |==> docData.length() > 0
+54:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):126:5637:docData.length() > 0 && docData.charAt(0) == UNICODE_BOM |==> docData.charAt(0) == UNICODE_BOM
+55:STD:<CALL>:<NO-OP>:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):127:5685:byteData.rewind(); |==> <NO-OP>
+56:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):128:5716:docData = Charset.forName(defaultCharset).decode(byteData).toString(); |==> <NO-OP>
+57:LVR:POS:0:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):129:5827:1 |==> 0
+58:LVR:POS:NEG:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):129:5827:1 |==> -1
+59:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):129:5799:docData = docData.substring(1); |==> <NO-OP>
+60:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):130:5843:charsetName = defaultCharset; |==> <NO-OP>
+61:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):131:5885:doc = null; |==> <NO-OP>
+62:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):133:5923:doc == null |==> false
+63:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):134:5946:doc = parser.parseInput(docData, baseUri); |==> <NO-OP>
+64:STD:<CALL>:<NO-OP>:org.jsoup.helper.DataUtil@parseByteData(java.nio.ByteBuffer,java.lang.String,java.lang.String,org.jsoup.parser.Parser):135:6001:doc.outputSettings().charset(charsetName); |==> <NO-OP>
+65:LVR:0:POS:org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):148:6554:0 |==> 1
+66:LVR:0:NEG:org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):148:6554:0 |==> -1
+67:ROR:>=(int,int):==(int,int):org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):148:6543:maxSize >= 0 |==> maxSize == 0
+68:ROR:>=(int,int):>(int,int):org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):148:6543:maxSize >= 0 |==> maxSize > 0
+69:ROR:>=(int,int):TRUE(int,int):org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):148:6551:maxSize >= 0 |==> true
+70:STD:<CALL>:<NO-OP>:org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):148:6527:Validate.isTrue(maxSize >= 0, "maxSize must be 0 (unlimited) or larger"); |==> <NO-OP>
+71:LVR:0:POS:org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):149:6642:0 |==> 1
+72:LVR:0:NEG:org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):149:6642:0 |==> -1
+73:ROR:>(int,int):!=(int,int):org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):149:6632:maxSize > 0 |==> maxSize != 0
+74:ROR:>(int,int):>=(int,int):org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):149:6632:maxSize > 0 |==> maxSize >= 0
+75:ROR:>(int,int):FALSE(int,int):org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):149:6640:maxSize > 0 |==> false
+76:LVR:NEG:0:org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):157:6913:-1 |==> 0
+77:LVR:NEG:POS:org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):157:6913:-1 |==> 1
+78:ROR:==(int,int):<=(int,int):org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):157:6905:read == -1 |==> read <= -1
+79:ROR:==(int,int):>=(int,int):org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):157:6905:read == -1 |==> read >= -1
+80:ROR:==(int,int):FALSE(int,int):org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):157:6910:read == -1 |==> false
+81:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):158:6940:capped |==> false
+82:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):158:6940:capped |==> true
+83:ROR:>(int,int):!=(int,int):org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):159:6970:read > remaining |==> read != remaining
+84:ROR:>(int,int):>=(int,int):org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):159:6970:read > remaining |==> read >= remaining
+85:ROR:>(int,int):FALSE(int,int):org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):159:6975:read > remaining |==> false
+86:LVR:0:POS:org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):160:7034:0 |==> 1
+87:LVR:0:NEG:org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):160:7034:0 |==> -1
+88:STD:<CALL>:<NO-OP>:org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):160:7010:outStream.write(buffer, 0, remaining); |==> <NO-OP>
+89:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):163:7110:remaining -= read; |==> <NO-OP>
+90:LVR:0:POS:org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):165:7179:0 |==> 1
+91:LVR:0:NEG:org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):165:7179:0 |==> -1
+92:STD:<CALL>:<NO-OP>:org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream,int):165:7155:outStream.write(buffer, 0, read); |==> <NO-OP>
+93:LVR:0:POS:org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream):171:7387:0 |==> 1
+94:LVR:0:NEG:org.jsoup.helper.DataUtil@readToByteBuffer(java.io.InputStream):171:7387:0 |==> -1
+95:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.DataUtil@readFileToByteBuffer(java.io.File):177:7549:randomAccessFile = new RandomAccessFile(file, "r"); |==> <NO-OP>
+96:STD:<CALL>:<NO-OP>:org.jsoup.helper.DataUtil@readFileToByteBuffer(java.io.File):179:7683:randomAccessFile.readFully(bytes); |==> <NO-OP>
+97:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.helper.DataUtil@readFileToByteBuffer(java.io.File):182:7814:randomAccessFile != null |==> true
+98:STD:<CALL>:<NO-OP>:org.jsoup.helper.DataUtil@readFileToByteBuffer(java.io.File):183:7839:randomAccessFile.close(); |==> <NO-OP>
+99:LVR:0:POS:org.jsoup.helper.DataUtil@emptyByteBuffer():188:7959:0 |==> 1
+100:LVR:0:NEG:org.jsoup.helper.DataUtil@emptyByteBuffer():188:7959:0 |==> -1
+101:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.helper.DataUtil@getCharsetFromContentType(java.lang.String):198:8356:contentType == null |==> false
+102:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.DataUtil@getCharsetFromContentType(java.lang.String):200:8453:m.find() |==> false
+103:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.DataUtil@getCharsetFromContentType(java.lang.String):200:8453:m.find() |==> true
+104:LVR:POS:0:org.jsoup.helper.DataUtil@getCharsetFromContentType(java.lang.String):201:8496:1 |==> 0
+105:LVR:POS:NEG:org.jsoup.helper.DataUtil@getCharsetFromContentType(java.lang.String):201:8496:1 |==> -1
+106:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.DataUtil@getCharsetFromContentType(java.lang.String):202:8519:charset = charset.replace("charset=", ""); |==> <NO-OP>
+107:LVR:0:POS:org.jsoup.helper.DataUtil@getCharsetFromContentType(java.lang.String):203:8598:0 |==> 1
+108:LVR:0:NEG:org.jsoup.helper.DataUtil@getCharsetFromContentType(java.lang.String):203:8598:0 |==> -1
+109:ROR:==(int,int):>=(int,int):org.jsoup.helper.DataUtil@getCharsetFromContentType(java.lang.String):203:8578:charset.length() == 0 |==> charset.length() >= 0
+110:ROR:==(int,int):FALSE(int,int):org.jsoup.helper.DataUtil@getCharsetFromContentType(java.lang.String):203:8595:charset.length() == 0 |==> false
+111:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.DataUtil@getCharsetFromContentType(java.lang.String):205:8671:Charset.isSupported(charset) |==> false
+112:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.DataUtil@getCharsetFromContentType(java.lang.String):205:8671:Charset.isSupported(charset) |==> true
+113:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.DataUtil@getCharsetFromContentType(java.lang.String):206:8714:charset = charset.toUpperCase(Locale.ENGLISH); |==> <NO-OP>
+114:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.DataUtil@getCharsetFromContentType(java.lang.String):207:8800:Charset.isSupported(charset) |==> false
+115:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.DataUtil@getCharsetFromContentType(java.lang.String):207:8800:Charset.isSupported(charset) |==> true
+116:LVR:0:POS:org.jsoup.helper.DataUtil@mimeBoundary():222:9301:0 |==> 1
+117:LVR:0:NEG:org.jsoup.helper.DataUtil@mimeBoundary():222:9301:0 |==> -1
+118:ROR:<(int,int):<=(int,int):org.jsoup.helper.DataUtil@mimeBoundary():222:9304:i < boundaryLength |==> i <= boundaryLength
+119:ROR:<(int,int):FALSE(int,int):org.jsoup.helper.DataUtil@mimeBoundary():222:9306:i < boundaryLength |==> false
+120:STD:<CALL>:<NO-OP>:org.jsoup.helper.DataUtil@mimeBoundary():223:9343:mime.append(mimeBoundaryChars[rand.nextInt(mimeBoundaryChars.length)]); |==> <NO-OP>

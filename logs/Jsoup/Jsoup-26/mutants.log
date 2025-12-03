@@ -1,0 +1,29 @@
+1:STD:<CALL>:<NO-OP>:org.jsoup.safety.Cleaner@<init>(org.jsoup.safety.Whitelist):29:1059:Validate.notNull(whitelist); |==> <NO-OP>
+2:STD:<ASSIGN>:<NO-OP>:org.jsoup.safety.Cleaner@<init>(org.jsoup.safety.Whitelist):30:1096:this.whitelist = whitelist; |==> <NO-OP>
+3:STD:<CALL>:<NO-OP>:org.jsoup.safety.Cleaner@clean(org.jsoup.nodes.Document):40:1530:Validate.notNull(dirtyDocument); |==> <NO-OP>
+4:STD:<CALL>:<NO-OP>:org.jsoup.safety.Cleaner@clean(org.jsoup.nodes.Document):43:1648:copySafeNodes(dirtyDocument.body(), clean.body()); |==> <NO-OP>
+5:STD:<CALL>:<NO-OP>:org.jsoup.safety.Cleaner@isValid(org.jsoup.nodes.Document):59:2444:Validate.notNull(dirtyDocument); |==> <NO-OP>
+6:LVR:0:POS:org.jsoup.safety.Cleaner@isValid(org.jsoup.nodes.Document):63:2659:0 |==> 1
+7:LVR:0:NEG:org.jsoup.safety.Cleaner@isValid(org.jsoup.nodes.Document):63:2659:0 |==> -1
+8:ROR:==(int,int):<=(int,int):org.jsoup.safety.Cleaner@isValid(org.jsoup.nodes.Document):63:2643:numDiscarded == 0 |==> numDiscarded <= 0
+9:ROR:==(int,int):>=(int,int):org.jsoup.safety.Cleaner@isValid(org.jsoup.nodes.Document):63:2643:numDiscarded == 0 |==> numDiscarded >= 0
+10:ROR:==(int,int):FALSE(int,int):org.jsoup.safety.Cleaner@isValid(org.jsoup.nodes.Document):63:2656:numDiscarded == 0 |==> false
+11:LVR:0:POS:org.jsoup.safety.Cleaner@copySafeNodes(org.jsoup.nodes.Element,org.jsoup.nodes.Element):74:3083:0 |==> 1
+12:LVR:0:NEG:org.jsoup.safety.Cleaner@copySafeNodes(org.jsoup.nodes.Element,org.jsoup.nodes.Element):74:3083:0 |==> -1
+13:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.safety.Cleaner@copySafeNodes(org.jsoup.nodes.Element,org.jsoup.nodes.Element):80:3285:whitelist.isSafeTag(sourceEl.tagName()) |==> false
+14:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.safety.Cleaner@copySafeNodes(org.jsoup.nodes.Element,org.jsoup.nodes.Element):80:3285:whitelist.isSafeTag(sourceEl.tagName()) |==> true
+15:STD:<CALL>:<NO-OP>:org.jsoup.safety.Cleaner@copySafeNodes(org.jsoup.nodes.Element,org.jsoup.nodes.Element):83:3481:dest.appendChild(destChild); |==> <NO-OP>
+16:STD:<ASSIGN>:<NO-OP>:org.jsoup.safety.Cleaner@copySafeNodes(org.jsoup.nodes.Element,org.jsoup.nodes.Element):85:3531:numDiscarded += meta.numAttribsDiscarded; |==> <NO-OP>
+17:STD:<ASSIGN>:<NO-OP>:org.jsoup.safety.Cleaner@copySafeNodes(org.jsoup.nodes.Element,org.jsoup.nodes.Element):86:3593:numDiscarded += copySafeNodes(sourceEl, destChild); |==> <NO-OP>
+18:STD:<INC>:<NO-OP>:org.jsoup.safety.Cleaner@copySafeNodes(org.jsoup.nodes.Element,org.jsoup.nodes.Element):88:3779:numDiscarded++; |==> <NO-OP>
+19:STD:<ASSIGN>:<NO-OP>:org.jsoup.safety.Cleaner@copySafeNodes(org.jsoup.nodes.Element,org.jsoup.nodes.Element):89:3815:numDiscarded += copySafeNodes(sourceEl, dest); |==> <NO-OP>
+20:STD:<CALL>:<NO-OP>:org.jsoup.safety.Cleaner@copySafeNodes(org.jsoup.nodes.Element,org.jsoup.nodes.Element):94:4116:dest.appendChild(destText); |==> <NO-OP>
+21:LVR:0:POS:org.jsoup.safety.Cleaner@createSafeElement(org.jsoup.nodes.Element):104:4546:0 |==> 1
+22:LVR:0:NEG:org.jsoup.safety.Cleaner@createSafeElement(org.jsoup.nodes.Element):104:4546:0 |==> -1
+23:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.safety.Cleaner@createSafeElement(org.jsoup.nodes.Element):108:4698:whitelist.isSafeAttribute(sourceTag, sourceEl, sourceAttr) |==> false
+24:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.safety.Cleaner@createSafeElement(org.jsoup.nodes.Element):108:4698:whitelist.isSafeAttribute(sourceTag, sourceEl, sourceAttr) |==> true
+25:STD:<CALL>:<NO-OP>:org.jsoup.safety.Cleaner@createSafeElement(org.jsoup.nodes.Element):109:4749:destAttrs.put(sourceAttr); |==> <NO-OP>
+26:STD:<INC>:<NO-OP>:org.jsoup.safety.Cleaner@createSafeElement(org.jsoup.nodes.Element):111:4809:numDiscarded++; |==> <NO-OP>
+27:STD:<CALL>:<NO-OP>:org.jsoup.safety.Cleaner@createSafeElement(org.jsoup.nodes.Element):114:4922:destAttrs.addAll(enforcedAttrs); |==> <NO-OP>
+28:STD:<ASSIGN>:<NO-OP>:org.jsoup.safety.Cleaner$ElementMeta@<init>(org.jsoup.nodes.Element,int):124:5179:this.el = el; |==> <NO-OP>
+29:STD:<ASSIGN>:<NO-OP>:org.jsoup.safety.Cleaner$ElementMeta@<init>(org.jsoup.nodes.Element,int):125:5205:this.numAttribsDiscarded = numAttribsDiscarded; |==> <NO-OP>
