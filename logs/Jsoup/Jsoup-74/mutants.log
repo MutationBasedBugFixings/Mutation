@@ -1,0 +1,189 @@
+1:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.StringUtil@join(java.util.Iterator,java.lang.String):35:1263:strings.hasNext() |==> false
+2:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.StringUtil@join(java.util.Iterator,java.lang.String):35:1263:strings.hasNext() |==> true
+3:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.StringUtil@join(java.util.Iterator,java.lang.String):39:1369:strings.hasNext() |==> false
+4:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.StringUtil@join(java.util.Iterator,java.lang.String):39:1369:strings.hasNext() |==> true
+5:LVR:POS:0:org.jsoup.helper.StringUtil@join(java.util.Iterator,java.lang.String):42:1472:64 |==> 0
+6:LVR:POS:NEG:org.jsoup.helper.StringUtil@join(java.util.Iterator,java.lang.String):42:1472:64 |==> -64
+7:STD:<CALL>:<NO-OP>:org.jsoup.helper.StringUtil@join(java.util.Iterator,java.lang.String):44:1539:sb.append(sep); |==> <NO-OP>
+8:STD:<CALL>:<NO-OP>:org.jsoup.helper.StringUtil@join(java.util.Iterator,java.lang.String):45:1567:sb.append(strings.next()); |==> <NO-OP>
+9:LVR:0:POS:org.jsoup.helper.StringUtil@padding(int):66:2150:0 |==> 1
+10:LVR:0:NEG:org.jsoup.helper.StringUtil@padding(int):66:2150:0 |==> -1
+11:ROR:<(int,int):!=(int,int):org.jsoup.helper.StringUtil@padding(int):66:2142:width < 0 |==> width != 0
+12:ROR:<(int,int):<=(int,int):org.jsoup.helper.StringUtil@padding(int):66:2142:width < 0 |==> width <= 0
+13:ROR:<(int,int):FALSE(int,int):org.jsoup.helper.StringUtil@padding(int):66:2148:width < 0 |==> false
+14:ROR:<(int,int):!=(int,int):org.jsoup.helper.StringUtil@padding(int):69:2235:width < padding.length |==> width != padding.length
+15:ROR:<(int,int):<=(int,int):org.jsoup.helper.StringUtil@padding(int):69:2235:width < padding.length |==> width <= padding.length
+16:ROR:<(int,int):FALSE(int,int):org.jsoup.helper.StringUtil@padding(int):69:2241:width < padding.length |==> false
+17:LVR:0:POS:org.jsoup.helper.StringUtil@padding(int):72:2353:0 |==> 1
+18:LVR:0:NEG:org.jsoup.helper.StringUtil@padding(int):72:2353:0 |==> -1
+19:ROR:<(int,int):!=(int,int):org.jsoup.helper.StringUtil@padding(int):72:2356:i < width |==> i != width
+20:ROR:<(int,int):<=(int,int):org.jsoup.helper.StringUtil@padding(int):72:2356:i < width |==> i <= width
+21:ROR:<(int,int):FALSE(int,int):org.jsoup.helper.StringUtil@padding(int):72:2358:i < width |==> false
+22:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.StringUtil@padding(int):73:2384:out[i] = ' '; |==> <NO-OP>
+23:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.helper.StringUtil@isBlank(java.lang.String):83:2685:string == null |==> false
+24:LVR:0:POS:org.jsoup.helper.StringUtil@isBlank(java.lang.String):83:2715:0 |==> 1
+25:LVR:0:NEG:org.jsoup.helper.StringUtil@isBlank(java.lang.String):83:2715:0 |==> -1
+26:ROR:==(int,int):>=(int,int):org.jsoup.helper.StringUtil@isBlank(java.lang.String):83:2696:string.length() == 0 |==> string.length() >= 0
+27:ROR:==(int,int):FALSE(int,int):org.jsoup.helper.StringUtil@isBlank(java.lang.String):83:2712:string.length() == 0 |==> false
+28:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.helper.StringUtil@isBlank(java.lang.String):83:2678:string == null || string.length() == 0 |==> string == null != (string.length() == 0)
+29:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.StringUtil@isBlank(java.lang.String):83:2678:string == null || string.length() == 0 |==> string == null
+30:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.StringUtil@isBlank(java.lang.String):83:2696:string == null || string.length() == 0 |==> string.length() == 0
+31:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.helper.StringUtil@isBlank(java.lang.String):83:2693:string == null || string.length() == 0 |==> true
+32:LVR:TRUE:FALSE:org.jsoup.helper.StringUtil@isBlank(java.lang.String):84:2737:true |==> false
+33:LVR:0:POS:org.jsoup.helper.StringUtil@isBlank(java.lang.String):87:2798:0 |==> 1
+34:LVR:0:NEG:org.jsoup.helper.StringUtil@isBlank(java.lang.String):87:2798:0 |==> -1
+35:ROR:<(int,int):!=(int,int):org.jsoup.helper.StringUtil@isBlank(java.lang.String):87:2801:i < l |==> i != l
+36:ROR:<(int,int):<=(int,int):org.jsoup.helper.StringUtil@isBlank(java.lang.String):87:2801:i < l |==> i <= l
+37:ROR:<(int,int):FALSE(int,int):org.jsoup.helper.StringUtil@isBlank(java.lang.String):87:2803:i < l |==> false
+38:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.StringUtil@isBlank(java.lang.String):88:2855:StringUtil.isWhitespace(string.codePointAt(i)) |==> false
+39:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.StringUtil@isBlank(java.lang.String):88:2855:StringUtil.isWhitespace(string.codePointAt(i)) |==> true
+40:LVR:FALSE:TRUE:org.jsoup.helper.StringUtil@isBlank(java.lang.String):89:2903:false |==> true
+41:LVR:TRUE:FALSE:org.jsoup.helper.StringUtil@isBlank(java.lang.String):91:2935:true |==> false
+42:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.helper.StringUtil@isNumeric(java.lang.String):100:3237:string == null |==> false
+43:LVR:0:POS:org.jsoup.helper.StringUtil@isNumeric(java.lang.String):100:3267:0 |==> 1
+44:LVR:0:NEG:org.jsoup.helper.StringUtil@isNumeric(java.lang.String):100:3267:0 |==> -1
+45:ROR:==(int,int):>=(int,int):org.jsoup.helper.StringUtil@isNumeric(java.lang.String):100:3248:string.length() == 0 |==> string.length() >= 0
+46:ROR:==(int,int):FALSE(int,int):org.jsoup.helper.StringUtil@isNumeric(java.lang.String):100:3264:string.length() == 0 |==> false
+47:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.helper.StringUtil@isNumeric(java.lang.String):100:3230:string == null || string.length() == 0 |==> string == null != (string.length() == 0)
+48:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.StringUtil@isNumeric(java.lang.String):100:3230:string == null || string.length() == 0 |==> string == null
+49:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.StringUtil@isNumeric(java.lang.String):100:3248:string == null || string.length() == 0 |==> string.length() == 0
+50:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.helper.StringUtil@isNumeric(java.lang.String):100:3245:string == null || string.length() == 0 |==> true
+51:LVR:FALSE:TRUE:org.jsoup.helper.StringUtil@isNumeric(java.lang.String):101:3289:false |==> true
+52:LVR:0:POS:org.jsoup.helper.StringUtil@isNumeric(java.lang.String):104:3351:0 |==> 1
+53:LVR:0:NEG:org.jsoup.helper.StringUtil@isNumeric(java.lang.String):104:3351:0 |==> -1
+54:ROR:<(int,int):!=(int,int):org.jsoup.helper.StringUtil@isNumeric(java.lang.String):104:3354:i < l |==> i != l
+55:ROR:<(int,int):<=(int,int):org.jsoup.helper.StringUtil@isNumeric(java.lang.String):104:3354:i < l |==> i <= l
+56:ROR:<(int,int):FALSE(int,int):org.jsoup.helper.StringUtil@isNumeric(java.lang.String):104:3356:i < l |==> false
+57:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.StringUtil@isNumeric(java.lang.String):105:3402:Character.isDigit(string.codePointAt(i)) |==> false
+58:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.StringUtil@isNumeric(java.lang.String):105:3402:Character.isDigit(string.codePointAt(i)) |==> true
+59:LVR:FALSE:TRUE:org.jsoup.helper.StringUtil@isNumeric(java.lang.String):106:3450:false |==> true
+60:LVR:TRUE:FALSE:org.jsoup.helper.StringUtil@isNumeric(java.lang.String):108:3482:true |==> false
+61:ROR:==(int,int):<=(int,int):org.jsoup.helper.StringUtil@isWhitespace(int):118:3808:c == ' ' |==> c <= ' '
+62:ROR:==(int,int):>=(int,int):org.jsoup.helper.StringUtil@isWhitespace(int):118:3808:c == ' ' |==> c >= ' '
+63:ROR:==(int,int):FALSE(int,int):org.jsoup.helper.StringUtil@isWhitespace(int):118:3810:c == ' ' |==> false
+64:ROR:==(int,int):<=(int,int):org.jsoup.helper.StringUtil@isWhitespace(int):118:3820:c == '\t' |==> c <= '\t'
+65:ROR:==(int,int):>=(int,int):org.jsoup.helper.StringUtil@isWhitespace(int):118:3820:c == '\t' |==> c >= '\t'
+66:ROR:==(int,int):FALSE(int,int):org.jsoup.helper.StringUtil@isWhitespace(int):118:3822:c == '\t' |==> false
+67:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.StringUtil@isWhitespace(int):118:3808:c == ' ' || c == '\t' |==> c == ' '
+68:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.StringUtil@isWhitespace(int):118:3820:c == ' ' || c == '\t' |==> c == '\t'
+69:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.helper.StringUtil@isWhitespace(int):118:3817:c == ' ' || c == '\t' |==> true
+70:ROR:==(int,int):<=(int,int):org.jsoup.helper.StringUtil@isWhitespace(int):118:3833:c == '\n' |==> c <= '\n'
+71:ROR:==(int,int):>=(int,int):org.jsoup.helper.StringUtil@isWhitespace(int):118:3833:c == '\n' |==> c >= '\n'
+72:ROR:==(int,int):FALSE(int,int):org.jsoup.helper.StringUtil@isWhitespace(int):118:3835:c == '\n' |==> false
+73:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.StringUtil@isWhitespace(int):118:3808:c == ' ' || c == '\t' || c == '\n' |==> c == ' ' || c == '\t'
+74:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.StringUtil@isWhitespace(int):118:3833:c == ' ' || c == '\t' || c == '\n' |==> c == '\n'
+75:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.helper.StringUtil@isWhitespace(int):118:3830:c == ' ' || c == '\t' || c == '\n' |==> true
+76:ROR:==(int,int):<=(int,int):org.jsoup.helper.StringUtil@isWhitespace(int):118:3846:c == '\f' |==> c <= '\f'
+77:ROR:==(int,int):>=(int,int):org.jsoup.helper.StringUtil@isWhitespace(int):118:3846:c == '\f' |==> c >= '\f'
+78:ROR:==(int,int):FALSE(int,int):org.jsoup.helper.StringUtil@isWhitespace(int):118:3848:c == '\f' |==> false
+79:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.StringUtil@isWhitespace(int):118:3808:c == ' ' || c == '\t' || c == '\n' || c == '\f' |==> c == ' ' || c == '\t' || c == '\n'
+80:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.StringUtil@isWhitespace(int):118:3846:c == ' ' || c == '\t' || c == '\n' || c == '\f' |==> c == '\f'
+81:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.helper.StringUtil@isWhitespace(int):118:3843:c == ' ' || c == '\t' || c == '\n' || c == '\f' |==> true
+82:ROR:==(int,int):<=(int,int):org.jsoup.helper.StringUtil@isWhitespace(int):118:3859:c == '\r' |==> c <= '\r'
+83:ROR:==(int,int):>=(int,int):org.jsoup.helper.StringUtil@isWhitespace(int):118:3859:c == '\r' |==> c >= '\r'
+84:ROR:==(int,int):FALSE(int,int):org.jsoup.helper.StringUtil@isWhitespace(int):118:3861:c == '\r' |==> false
+85:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.StringUtil@isWhitespace(int):118:3808:c == ' ' || c == '\t' || c == '\n' || c == '\f' || c == '\r' |==> c == ' ' || c == '\t' || c == '\n' || c == '\f'
+86:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.StringUtil@isWhitespace(int):118:3859:c == ' ' || c == '\t' || c == '\n' || c == '\f' || c == '\r' |==> c == '\r'
+87:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.helper.StringUtil@isWhitespace(int):118:3856:c == ' ' || c == '\t' || c == '\n' || c == '\f' || c == '\r' |==> true
+88:ROR:==(int,int):<=(int,int):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4169:c == ' ' |==> c <= ' '
+89:ROR:==(int,int):>=(int,int):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4169:c == ' ' |==> c >= ' '
+90:ROR:==(int,int):FALSE(int,int):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4171:c == ' ' |==> false
+91:ROR:==(int,int):<=(int,int):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4181:c == '\t' |==> c <= '\t'
+92:ROR:==(int,int):>=(int,int):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4181:c == '\t' |==> c >= '\t'
+93:ROR:==(int,int):FALSE(int,int):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4183:c == '\t' |==> false
+94:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4169:c == ' ' || c == '\t' |==> c == ' '
+95:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4181:c == ' ' || c == '\t' |==> c == '\t'
+96:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4178:c == ' ' || c == '\t' |==> true
+97:ROR:==(int,int):<=(int,int):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4194:c == '\n' |==> c <= '\n'
+98:ROR:==(int,int):>=(int,int):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4194:c == '\n' |==> c >= '\n'
+99:ROR:==(int,int):FALSE(int,int):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4196:c == '\n' |==> false
+100:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4169:c == ' ' || c == '\t' || c == '\n' |==> c == ' ' || c == '\t'
+101:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4194:c == ' ' || c == '\t' || c == '\n' |==> c == '\n'
+102:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4191:c == ' ' || c == '\t' || c == '\n' |==> true
+103:ROR:==(int,int):<=(int,int):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4207:c == '\f' |==> c <= '\f'
+104:ROR:==(int,int):>=(int,int):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4207:c == '\f' |==> c >= '\f'
+105:ROR:==(int,int):FALSE(int,int):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4209:c == '\f' |==> false
+106:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4169:c == ' ' || c == '\t' || c == '\n' || c == '\f' |==> c == ' ' || c == '\t' || c == '\n'
+107:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4207:c == ' ' || c == '\t' || c == '\n' || c == '\f' |==> c == '\f'
+108:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4204:c == ' ' || c == '\t' || c == '\n' || c == '\f' |==> true
+109:ROR:==(int,int):<=(int,int):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4220:c == '\r' |==> c <= '\r'
+110:ROR:==(int,int):>=(int,int):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4220:c == '\r' |==> c >= '\r'
+111:ROR:==(int,int):FALSE(int,int):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4222:c == '\r' |==> false
+112:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4169:c == ' ' || c == '\t' || c == '\n' || c == '\f' || c == '\r' |==> c == ' ' || c == '\t' || c == '\n' || c == '\f'
+113:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4220:c == ' ' || c == '\t' || c == '\n' || c == '\f' || c == '\r' |==> c == '\r'
+114:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4217:c == ' ' || c == '\t' || c == '\n' || c == '\f' || c == '\r' |==> true
+115:LVR:POS:0:org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4238:160 |==> 0
+116:LVR:POS:NEG:org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4238:160 |==> -160
+117:ROR:==(int,int):<=(int,int):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4233:c == 160 |==> c <= 160
+118:ROR:==(int,int):>=(int,int):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4233:c == 160 |==> c >= 160
+119:ROR:==(int,int):FALSE(int,int):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4235:c == 160 |==> false
+120:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4169:c == ' ' || c == '\t' || c == '\n' || c == '\f' || c == '\r' || c == 160 |==> c == ' ' || c == '\t' || c == '\n' || c == '\f' || c == '\r'
+121:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4233:c == ' ' || c == '\t' || c == '\n' || c == '\f' || c == '\r' || c == 160 |==> c == 160
+122:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.helper.StringUtil@isActuallyWhitespace(int):127:4230:c == ' ' || c == '\t' || c == '\n' || c == '\f' || c == '\r' || c == 160 |==> true
+123:LVR:FALSE:TRUE:org.jsoup.helper.StringUtil@normaliseWhitespace(java.lang.String):141:4816:false |==> true
+124:STD:<CALL>:<NO-OP>:org.jsoup.helper.StringUtil@normaliseWhitespace(java.lang.String):141:4777:appendNormalisedWhitespace(sb, string, false); |==> <NO-OP>
+125:LVR:FALSE:TRUE:org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):152:5291:false |==> true
+126:LVR:FALSE:TRUE:org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):153:5332:false |==> true
+127:LVR:0:POS:org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):157:5411:0 |==> 1
+128:LVR:0:NEG:org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):157:5411:0 |==> -1
+129:ROR:<(int,int):!=(int,int):org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):157:5414:i < len |==> i != len
+130:ROR:<(int,int):<=(int,int):org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):157:5414:i < len |==> i <= len
+131:ROR:<(int,int):FALSE(int,int):org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):157:5416:i < len |==> false
+132:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):159:5528:isActuallyWhitespace(c) |==> false
+133:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):159:5528:isActuallyWhitespace(c) |==> true
+134:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):160:5556:stripLeading && !reachedNonWhite |==> stripLeading == !reachedNonWhite
+135:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):160:5569:stripLeading && !reachedNonWhite |==> false
+136:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):160:5556:stripLeading && !reachedNonWhite |==> stripLeading
+137:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):160:5572:stripLeading && !reachedNonWhite |==> !reachedNonWhite
+138:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):160:5555:(stripLeading && !reachedNonWhite) || lastWasWhite |==> (stripLeading && !reachedNonWhite) != lastWasWhite
+139:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):160:5555:(stripLeading && !reachedNonWhite) || lastWasWhite |==> (stripLeading && !reachedNonWhite)
+140:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):160:5593:(stripLeading && !reachedNonWhite) || lastWasWhite |==> lastWasWhite
+141:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):160:5590:(stripLeading && !reachedNonWhite) || lastWasWhite |==> true
+142:STD:<CALL>:<NO-OP>:org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):162:5653:accum.append(' '); |==> <NO-OP>
+143:LVR:TRUE:FALSE:org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):163:5703:true |==> false
+144:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):163:5688:lastWasWhite = true; |==> <NO-OP>
+145:STD:<CALL>:<NO-OP>:org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):166:5758:accum.appendCodePoint(c); |==> <NO-OP>
+146:LVR:FALSE:TRUE:org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):167:5815:false |==> true
+147:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):167:5800:lastWasWhite = false; |==> <NO-OP>
+148:LVR:TRUE:FALSE:org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):168:5856:true |==> false
+149:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.StringUtil@appendNormalisedWhitespace(java.lang.StringBuilder,java.lang.String,boolean):168:5838:reachedNonWhite = true; |==> <NO-OP>
+150:LVR:0:POS:org.jsoup.helper.StringUtil@in(java.lang.String,java.lang.String[]):175:6033:0 |==> 1
+151:LVR:0:NEG:org.jsoup.helper.StringUtil@in(java.lang.String,java.lang.String[]):175:6033:0 |==> -1
+152:ROR:<(int,int):!=(int,int):org.jsoup.helper.StringUtil@in(java.lang.String,java.lang.String[]):175:6036:i < len |==> i != len
+153:ROR:<(int,int):<=(int,int):org.jsoup.helper.StringUtil@in(java.lang.String,java.lang.String[]):175:6036:i < len |==> i <= len
+154:ROR:<(int,int):FALSE(int,int):org.jsoup.helper.StringUtil@in(java.lang.String,java.lang.String[]):175:6038:i < len |==> false
+155:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.StringUtil@in(java.lang.String,java.lang.String[]):176:6086:haystack[i].equals(needle) |==> false
+156:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.StringUtil@in(java.lang.String,java.lang.String[]):176:6086:haystack[i].equals(needle) |==> true
+157:LVR:TRUE:FALSE:org.jsoup.helper.StringUtil@in(java.lang.String,java.lang.String[]):177:6115:true |==> false
+158:LVR:FALSE:TRUE:org.jsoup.helper.StringUtil@in(java.lang.String,java.lang.String[]):179:6146:false |==> true
+159:LVR:0:POS:org.jsoup.helper.StringUtil@inSorted(java.lang.String,java.lang.String[]):183:6287:0 |==> 1
+160:LVR:0:NEG:org.jsoup.helper.StringUtil@inSorted(java.lang.String,java.lang.String[]):183:6287:0 |==> -1
+161:ROR:>=(int,int):==(int,int):org.jsoup.helper.StringUtil@inSorted(java.lang.String,java.lang.String[]):183:6246:Arrays.binarySearch(haystack, needle) >= 0 |==> Arrays.binarySearch(haystack, needle) == 0
+162:ROR:>=(int,int):>(int,int):org.jsoup.helper.StringUtil@inSorted(java.lang.String,java.lang.String[]):183:6246:Arrays.binarySearch(haystack, needle) >= 0 |==> Arrays.binarySearch(haystack, needle) > 0
+163:ROR:>=(int,int):TRUE(int,int):org.jsoup.helper.StringUtil@inSorted(java.lang.String,java.lang.String[]):183:6284:Arrays.binarySearch(haystack, needle) >= 0 |==> true
+164:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.StringUtil@resolve(java.net.URL,java.lang.String):195:6905:relUrl.startsWith("?") |==> false
+165:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.StringUtil@resolve(java.net.URL,java.lang.String):195:6905:relUrl.startsWith("?") |==> true
+166:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.StringUtil@resolve(java.net.URL,java.lang.String):196:6924:relUrl = base.getPath() + relUrl; |==> <NO-OP>
+167:LVR:0:POS:org.jsoup.helper.StringUtil@resolve(java.net.URL,java.lang.String):198:7083:0 |==> 1
+168:LVR:0:NEG:org.jsoup.helper.StringUtil@resolve(java.net.URL,java.lang.String):198:7083:0 |==> -1
+169:ROR:==(int,int):<=(int,int):org.jsoup.helper.StringUtil@resolve(java.net.URL,java.lang.String):198:7060:relUrl.indexOf('.') == 0 |==> relUrl.indexOf('.') <= 0
+170:ROR:==(int,int):>=(int,int):org.jsoup.helper.StringUtil@resolve(java.net.URL,java.lang.String):198:7060:relUrl.indexOf('.') == 0 |==> relUrl.indexOf('.') >= 0
+171:ROR:==(int,int):FALSE(int,int):org.jsoup.helper.StringUtil@resolve(java.net.URL,java.lang.String):198:7080:relUrl.indexOf('.') == 0 |==> false
+172:LVR:0:POS:org.jsoup.helper.StringUtil@resolve(java.net.URL,java.lang.String):198:7119:0 |==> 1
+173:LVR:0:NEG:org.jsoup.helper.StringUtil@resolve(java.net.URL,java.lang.String):198:7119:0 |==> -1
+174:ROR:!=(int,int):<(int,int):org.jsoup.helper.StringUtil@resolve(java.net.URL,java.lang.String):198:7088:base.getFile().indexOf('/') != 0 |==> base.getFile().indexOf('/') < 0
+175:ROR:!=(int,int):>(int,int):org.jsoup.helper.StringUtil@resolve(java.net.URL,java.lang.String):198:7088:base.getFile().indexOf('/') != 0 |==> base.getFile().indexOf('/') > 0
+176:ROR:!=(int,int):TRUE(int,int):org.jsoup.helper.StringUtil@resolve(java.net.URL,java.lang.String):198:7116:base.getFile().indexOf('/') != 0 |==> true
+177:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.helper.StringUtil@resolve(java.net.URL,java.lang.String):198:7060:relUrl.indexOf('.') == 0 && base.getFile().indexOf('/') != 0 |==> relUrl.indexOf('.') == 0 == (base.getFile().indexOf('/') != 0)
+178:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.helper.StringUtil@resolve(java.net.URL,java.lang.String):198:7085:relUrl.indexOf('.') == 0 && base.getFile().indexOf('/') != 0 |==> false
+179:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.StringUtil@resolve(java.net.URL,java.lang.String):198:7060:relUrl.indexOf('.') == 0 && base.getFile().indexOf('/') != 0 |==> relUrl.indexOf('.') == 0
+180:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.StringUtil@resolve(java.net.URL,java.lang.String):198:7088:relUrl.indexOf('.') == 0 && base.getFile().indexOf('/') != 0 |==> base.getFile().indexOf('/') != 0
+181:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.StringUtil@resolve(java.net.URL,java.lang.String):199:7136:base = new URL(base.getProtocol(), base.getHost(), base.getPort(), "/" + base.getFile()); |==> <NO-OP>
+182:ROR:>(int,int):!=(int,int):org.jsoup.helper.StringUtil@stringBuilder():233:8592:sb.length() > MaxCachedBuilderSize |==> sb.length() != MaxCachedBuilderSize
+183:ROR:>(int,int):>=(int,int):org.jsoup.helper.StringUtil@stringBuilder():233:8592:sb.length() > MaxCachedBuilderSize |==> sb.length() >= MaxCachedBuilderSize
+184:ROR:>(int,int):FALSE(int,int):org.jsoup.helper.StringUtil@stringBuilder():233:8604:sb.length() > MaxCachedBuilderSize |==> false
+185:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.StringUtil@stringBuilder():234:8642:sb = new StringBuilder(MaxCachedBuilderSize); |==> <NO-OP>
+186:STD:<CALL>:<NO-OP>:org.jsoup.helper.StringUtil@stringBuilder():235:8700:stringLocal.set(sb); |==> <NO-OP>
+187:LVR:0:POS:org.jsoup.helper.StringUtil@stringBuilder():237:8760:0 |==> 1
+188:LVR:0:NEG:org.jsoup.helper.StringUtil@stringBuilder():237:8760:0 |==> -1
+189:STD:<CALL>:<NO-OP>:org.jsoup.helper.StringUtil@stringBuilder():237:8750:sb.delete(0, sb.length()); |==> <NO-OP>

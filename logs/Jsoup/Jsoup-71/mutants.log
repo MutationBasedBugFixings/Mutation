@@ -1,0 +1,527 @@
+1:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.Evaluator$Tag@<init>(java.lang.String):43:1117:this.tagName = tagName; |==> <NO-OP>
+2:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.Evaluator$TagEndsWith@<init>(java.lang.String):65:1644:this.tagName = tagName; |==> <NO-OP>
+3:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.Evaluator$Id@<init>(java.lang.String):86:2121:this.id = id; |==> <NO-OP>
+4:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.Evaluator$Class@<init>(java.lang.String):108:2596:this.className = className; |==> <NO-OP>
+5:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.Evaluator$Attribute@<init>(java.lang.String):130:3102:this.key = key; |==> <NO-OP>
+6:STD:<CALL>:<NO-OP>:org.jsoup.select.Evaluator$AttributeStarting@<init>(java.lang.String):152:3617:Validate.notEmpty(keyPrefix); |==> <NO-OP>
+7:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.Evaluator$AttributeStarting@<init>(java.lang.String):153:3659:this.keyPrefix = lowerCase(keyPrefix); |==> <NO-OP>
+8:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Evaluator$AttributeStarting@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):160:4000:lowerCase(attribute.getKey()).startsWith(keyPrefix) |==> false
+9:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Evaluator$AttributeStarting@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):160:4000:lowerCase(attribute.getKey()).startsWith(keyPrefix) |==> true
+10:LVR:TRUE:FALSE:org.jsoup.select.Evaluator$AttributeStarting@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):161:4040:true |==> false
+11:LVR:FALSE:TRUE:org.jsoup.select.Evaluator$AttributeStarting@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):163:4079:false |==> true
+12:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.select.Evaluator$AttributeWithValue@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):183:4570:element.hasAttr(key) && value.equalsIgnoreCase(element.attr(key).trim()) |==> element.hasAttr(key) == value.equalsIgnoreCase(element.attr(key).trim())
+13:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.select.Evaluator$AttributeWithValue@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):183:4591:element.hasAttr(key) && value.equalsIgnoreCase(element.attr(key).trim()) |==> false
+14:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.Evaluator$AttributeWithValue@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):183:4570:element.hasAttr(key) && value.equalsIgnoreCase(element.attr(key).trim()) |==> element.hasAttr(key)
+15:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.Evaluator$AttributeWithValue@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):183:4594:element.hasAttr(key) && value.equalsIgnoreCase(element.attr(key).trim()) |==> value.equalsIgnoreCase(element.attr(key).trim())
+16:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.select.Evaluator$AttributeWithValueStarting@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):223:5703:element.hasAttr(key) && lowerCase(element.attr(key)).startsWith(value) |==> element.hasAttr(key) == lowerCase(element.attr(key)).startsWith(value)
+17:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.select.Evaluator$AttributeWithValueStarting@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):223:5724:element.hasAttr(key) && lowerCase(element.attr(key)).startsWith(value) |==> false
+18:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.Evaluator$AttributeWithValueStarting@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):223:5703:element.hasAttr(key) && lowerCase(element.attr(key)).startsWith(value) |==> element.hasAttr(key)
+19:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.Evaluator$AttributeWithValueStarting@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):223:5727:element.hasAttr(key) && lowerCase(element.attr(key)).startsWith(value) |==> lowerCase(element.attr(key)).startsWith(value)
+20:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.select.Evaluator$AttributeWithValueEnding@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):243:6321:element.hasAttr(key) && lowerCase(element.attr(key)).endsWith(value) |==> element.hasAttr(key) == lowerCase(element.attr(key)).endsWith(value)
+21:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.select.Evaluator$AttributeWithValueEnding@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):243:6342:element.hasAttr(key) && lowerCase(element.attr(key)).endsWith(value) |==> false
+22:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.Evaluator$AttributeWithValueEnding@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):243:6321:element.hasAttr(key) && lowerCase(element.attr(key)).endsWith(value) |==> element.hasAttr(key)
+23:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.Evaluator$AttributeWithValueEnding@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):243:6345:element.hasAttr(key) && lowerCase(element.attr(key)).endsWith(value) |==> lowerCase(element.attr(key)).endsWith(value)
+24:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.select.Evaluator$AttributeWithValueContaining@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):263:6941:element.hasAttr(key) && lowerCase(element.attr(key)).contains(value) |==> element.hasAttr(key) == lowerCase(element.attr(key)).contains(value)
+25:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.select.Evaluator$AttributeWithValueContaining@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):263:6962:element.hasAttr(key) && lowerCase(element.attr(key)).contains(value) |==> false
+26:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.Evaluator$AttributeWithValueContaining@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):263:6941:element.hasAttr(key) && lowerCase(element.attr(key)).contains(value) |==> element.hasAttr(key)
+27:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.Evaluator$AttributeWithValueContaining@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):263:6965:element.hasAttr(key) && lowerCase(element.attr(key)).contains(value) |==> lowerCase(element.attr(key)).contains(value)
+28:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.Evaluator$AttributeWithValueMatching@<init>(java.lang.String,java.util.regex.Pattern):281:7472:this.key = normalize(key); |==> <NO-OP>
+29:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.Evaluator$AttributeWithValueMatching@<init>(java.lang.String,java.util.regex.Pattern):282:7511:this.pattern = pattern; |==> <NO-OP>
+30:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.select.Evaluator$AttributeWithValueMatching@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):287:7647:element.hasAttr(key) && pattern.matcher(element.attr(key)).find() |==> element.hasAttr(key) == pattern.matcher(element.attr(key)).find()
+31:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.select.Evaluator$AttributeWithValueMatching@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):287:7668:element.hasAttr(key) && pattern.matcher(element.attr(key)).find() |==> false
+32:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.Evaluator$AttributeWithValueMatching@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):287:7647:element.hasAttr(key) && pattern.matcher(element.attr(key)).find() |==> element.hasAttr(key)
+33:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.Evaluator$AttributeWithValueMatching@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):287:7671:element.hasAttr(key) && pattern.matcher(element.attr(key)).find() |==> pattern.matcher(element.attr(key)).find()
+34:STD:<CALL>:<NO-OP>:org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):305:8128:Validate.notEmpty(key); |==> <NO-OP>
+35:STD:<CALL>:<NO-OP>:org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):306:8164:Validate.notEmpty(value); |==> <NO-OP>
+36:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):308:8203:this.key = normalize(key); |==> <NO-OP>
+37:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):309:8246:value.startsWith("\"") && value.endsWith("\"") |==> value.startsWith("\"") == value.endsWith("\"")
+38:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):309:8269:value.startsWith("\"") && value.endsWith("\"") |==> false
+39:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):309:8246:value.startsWith("\"") && value.endsWith("\"") |==> value.startsWith("\"")
+40:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):309:8272:value.startsWith("\"") && value.endsWith("\"") |==> value.endsWith("\"")
+41:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):310:8316:value.startsWith("\'") && value.endsWith("\'") |==> value.startsWith("\'") == value.endsWith("\'")
+42:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):310:8338:value.startsWith("\'") && value.endsWith("\'") |==> false
+43:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):310:8316:value.startsWith("\'") && value.endsWith("\'") |==> value.startsWith("\'")
+44:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):310:8341:value.startsWith("\'") && value.endsWith("\'") |==> value.endsWith("\'")
+45:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):309:8246:value.startsWith("\"") && value.endsWith("\"") || value.startsWith("\'") && value.endsWith("\'") |==> (value.startsWith("\"") && value.endsWith("\"")) != (value.startsWith("\'") && value.endsWith("\'"))
+46:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):309:8246:value.startsWith("\"") && value.endsWith("\"") || value.startsWith("\'") && value.endsWith("\'") |==> value.startsWith("\"") && value.endsWith("\"")
+47:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):310:8316:value.startsWith("\"") && value.endsWith("\"") || value.startsWith("\'") && value.endsWith("\'") |==> value.startsWith("\'") && value.endsWith("\'")
+48:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):310:8313:value.startsWith("\"") && value.endsWith("\"") || value.startsWith("\'") && value.endsWith("\'") |==> true
+49:LVR:POS:0:org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):311:8404:1 |==> 0
+50:LVR:POS:NEG:org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):311:8404:1 |==> -1
+51:LVR:POS:0:org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):311:8422:1 |==> 0
+52:LVR:POS:NEG:org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):311:8422:1 |==> -1
+53:AOR:-(int,int):%(int,int):org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):311:8407:value.length() - 1 |==> value.length() % 1
+54:AOR:-(int,int):*(int,int):org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):311:8407:value.length() - 1 |==> value.length() * 1
+55:AOR:-(int,int):+(int,int):org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):311:8407:value.length() - 1 |==> value.length() + 1
+56:AOR:-(int,int):/(int,int):org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):311:8407:value.length() - 1 |==> value.length() / 1
+57:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):311:8380:value = value.substring(1, value.length() - 1); |==> <NO-OP>
+58:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.Evaluator$AttributeKeyPair@<init>(java.lang.String,java.lang.String):313:8452:this.value = normalize(value); |==> <NO-OP>
+59:LVR:TRUE:FALSE:org.jsoup.select.Evaluator$AllElements@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):324:8728:true |==> false
+60:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.select.Evaluator$IndexLessThan@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):343:9184:root != element |==> true
+61:ROR:<(int,int):!=(int,int):org.jsoup.select.Evaluator$IndexLessThan@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):343:9198:element.elementSiblingIndex() < index |==> element.elementSiblingIndex() != index
+62:ROR:<(int,int):<=(int,int):org.jsoup.select.Evaluator$IndexLessThan@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):343:9198:element.elementSiblingIndex() < index |==> element.elementSiblingIndex() <= index
+63:ROR:<(int,int):FALSE(int,int):org.jsoup.select.Evaluator$IndexLessThan@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):343:9228:element.elementSiblingIndex() < index |==> false
+64:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.select.Evaluator$IndexLessThan@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):343:9179:root != element && element.elementSiblingIndex() < index |==> root != element == element.elementSiblingIndex() < index
+65:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.select.Evaluator$IndexLessThan@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):343:9195:root != element && element.elementSiblingIndex() < index |==> false
+66:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.Evaluator$IndexLessThan@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):343:9179:root != element && element.elementSiblingIndex() < index |==> root != element
+67:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.Evaluator$IndexLessThan@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):343:9198:root != element && element.elementSiblingIndex() < index |==> element.elementSiblingIndex() < index
+68:ROR:>(int,int):!=(int,int):org.jsoup.select.Evaluator$IndexGreaterThan@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):363:9717:element.elementSiblingIndex() > index |==> element.elementSiblingIndex() != index
+69:ROR:>(int,int):>=(int,int):org.jsoup.select.Evaluator$IndexGreaterThan@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):363:9717:element.elementSiblingIndex() > index |==> element.elementSiblingIndex() >= index
+70:ROR:>(int,int):FALSE(int,int):org.jsoup.select.Evaluator$IndexGreaterThan@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):363:9747:element.elementSiblingIndex() > index |==> false
+71:ROR:==(int,int):<=(int,int):org.jsoup.select.Evaluator$IndexEquals@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):383:10215:element.elementSiblingIndex() == index |==> element.elementSiblingIndex() <= index
+72:ROR:==(int,int):>=(int,int):org.jsoup.select.Evaluator$IndexEquals@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):383:10215:element.elementSiblingIndex() == index |==> element.elementSiblingIndex() >= index
+73:ROR:==(int,int):FALSE(int,int):org.jsoup.select.Evaluator$IndexEquals@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):383:10245:element.elementSiblingIndex() == index |==> false
+74:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.select.Evaluator$IsLastChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):400:10657:p != null |==> true
+75:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.select.Evaluator$IsLastChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):400:10655:p != null && !(p instanceof Document) |==> p != null == !(p instanceof Document)
+76:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.select.Evaluator$IsLastChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):400:10665:p != null && !(p instanceof Document) |==> false
+77:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.Evaluator$IsLastChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):400:10655:p != null && !(p instanceof Document) |==> p != null
+78:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.Evaluator$IsLastChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):400:10668:p != null && !(p instanceof Document) |==> !(p instanceof Document)
+79:LVR:POS:0:org.jsoup.select.Evaluator$IsLastChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):400:10749:1 |==> 0
+80:LVR:POS:NEG:org.jsoup.select.Evaluator$IsLastChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):400:10749:1 |==> -1
+81:AOR:-(int,int):%(int,int):org.jsoup.select.Evaluator$IsLastChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):400:10729:p.children().size() - 1 |==> p.children().size() % 1
+82:AOR:-(int,int):*(int,int):org.jsoup.select.Evaluator$IsLastChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):400:10729:p.children().size() - 1 |==> p.children().size() * 1
+83:AOR:-(int,int):+(int,int):org.jsoup.select.Evaluator$IsLastChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):400:10729:p.children().size() - 1 |==> p.children().size() + 1
+84:AOR:-(int,int):/(int,int):org.jsoup.select.Evaluator$IsLastChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):400:10729:p.children().size() - 1 |==> p.children().size() / 1
+85:ROR:==(int,int):<=(int,int):org.jsoup.select.Evaluator$IsLastChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):400:10696:element.elementSiblingIndex() == p.children().size() - 1 |==> element.elementSiblingIndex() <= p.children().size() - 1
+86:ROR:==(int,int):>=(int,int):org.jsoup.select.Evaluator$IsLastChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):400:10696:element.elementSiblingIndex() == p.children().size() - 1 |==> element.elementSiblingIndex() >= p.children().size() - 1
+87:ROR:==(int,int):FALSE(int,int):org.jsoup.select.Evaluator$IsLastChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):400:10726:element.elementSiblingIndex() == p.children().size() - 1 |==> false
+88:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.select.Evaluator$IsLastChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):400:10655:p != null && !(p instanceof Document) && element.elementSiblingIndex() == p.children().size() - 1 |==> (p != null && !(p instanceof Document)) == (element.elementSiblingIndex() == p.children().size() - 1)
+89:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.select.Evaluator$IsLastChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):400:10693:p != null && !(p instanceof Document) && element.elementSiblingIndex() == p.children().size() - 1 |==> false
+90:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.Evaluator$IsLastChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):400:10655:p != null && !(p instanceof Document) && element.elementSiblingIndex() == p.children().size() - 1 |==> p != null && !(p instanceof Document)
+91:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.Evaluator$IsLastChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):400:10696:p != null && !(p instanceof Document) && element.elementSiblingIndex() == p.children().size() - 1 |==> element.elementSiblingIndex() == p.children().size() - 1
+92:LVR:0:POS:org.jsoup.select.Evaluator$IsFirstOfType@<init>():411:10945:0 |==> 1
+93:LVR:0:NEG:org.jsoup.select.Evaluator$IsFirstOfType@<init>():411:10945:0 |==> -1
+94:LVR:POS:0:org.jsoup.select.Evaluator$IsFirstOfType@<init>():411:10947:1 |==> 0
+95:LVR:POS:NEG:org.jsoup.select.Evaluator$IsFirstOfType@<init>():411:10947:1 |==> -1
+96:LVR:0:POS:org.jsoup.select.Evaluator$IsLastOfType@<init>():421:11143:0 |==> 1
+97:LVR:0:NEG:org.jsoup.select.Evaluator$IsLastOfType@<init>():421:11143:0 |==> -1
+98:LVR:POS:0:org.jsoup.select.Evaluator$IsLastOfType@<init>():421:11145:1 |==> 0
+99:LVR:POS:NEG:org.jsoup.select.Evaluator$IsLastOfType@<init>():421:11145:1 |==> -1
+100:LVR:0:POS:org.jsoup.select.Evaluator$CssNthEvaluator@<init>(int):438:11478:0 |==> 1
+101:LVR:0:NEG:org.jsoup.select.Evaluator$CssNthEvaluator@<init>(int):438:11478:0 |==> -1
+102:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):444:11627:p == null |==> false
+103:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):444:11625:p == null || (p instanceof Document) |==> p == null != (p instanceof Document)
+104:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):444:11625:p == null || (p instanceof Document) |==> p == null
+105:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):444:11638:p == null || (p instanceof Document) |==> (p instanceof Document)
+106:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):444:11635:p == null || (p instanceof Document) |==> true
+107:LVR:FALSE:TRUE:org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):444:11670:false |==> true
+108:LVR:0:POS:org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):447:11755:0 |==> 1
+109:LVR:0:NEG:org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):447:11755:0 |==> -1
+110:ROR:==(int,int):<=(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):447:11750:a == 0 |==> a <= 0
+111:ROR:==(int,int):>=(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):447:11750:a == 0 |==> a >= 0
+112:ROR:==(int,int):FALSE(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):447:11752:a == 0 |==> false
+113:ROR:==(int,int):<=(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):447:11765:pos == b |==> pos <= b
+114:ROR:==(int,int):>=(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):447:11765:pos == b |==> pos >= b
+115:ROR:==(int,int):FALSE(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):447:11769:pos == b |==> false
+116:AOR:-(int,int):%(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11796:pos - b |==> pos % b
+117:AOR:-(int,int):*(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11796:pos - b |==> pos * b
+118:AOR:-(int,int):+(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11796:pos - b |==> pos + b
+119:AOR:-(int,int):/(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11796:pos - b |==> pos / b
+120:AOR:*(int,int):%(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11795:(pos - b) * a |==> (pos - b) % a
+121:AOR:*(int,int):+(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11795:(pos - b) * a |==> (pos - b) + a
+122:AOR:*(int,int):-(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11795:(pos - b) * a |==> (pos - b) - a
+123:AOR:*(int,int):/(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11795:(pos - b) * a |==> (pos - b) / a
+124:LVR:0:POS:org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11808:0 |==> 1
+125:LVR:0:NEG:org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11808:0 |==> -1
+126:ROR:>=(int,int):==(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11795:(pos - b) * a >= 0 |==> (pos - b) * a == 0
+127:ROR:>=(int,int):>(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11795:(pos - b) * a >= 0 |==> (pos - b) * a > 0
+128:ROR:>=(int,int):TRUE(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11805:(pos - b) * a >= 0 |==> true
+129:AOR:-(int,int):%(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11814:pos - b |==> pos % b
+130:AOR:-(int,int):*(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11814:pos - b |==> pos * b
+131:AOR:-(int,int):+(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11814:pos - b |==> pos + b
+132:AOR:-(int,int):/(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11814:pos - b |==> pos / b
+133:AOR:%(int,int):*(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11813:(pos - b) % a |==> (pos - b) * a
+134:AOR:%(int,int):+(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11813:(pos - b) % a |==> (pos - b) + a
+135:AOR:%(int,int):-(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11813:(pos - b) % a |==> (pos - b) - a
+136:AOR:%(int,int):/(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11813:(pos - b) % a |==> (pos - b) / a
+137:LVR:0:POS:org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11824:0 |==> 1
+138:LVR:0:NEG:org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11824:0 |==> -1
+139:ROR:==(int,int):<=(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11813:(pos - b) % a == 0 |==> (pos - b) % a <= 0
+140:ROR:==(int,int):>=(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11813:(pos - b) % a == 0 |==> (pos - b) % a >= 0
+141:ROR:==(int,int):FALSE(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11822:(pos - b) % a == 0 |==> false
+142:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11795:(pos - b) * a >= 0 && (pos - b) % a == 0 |==> (pos - b) * a >= 0 == ((pos - b) % a == 0)
+143:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11810:(pos - b) * a >= 0 && (pos - b) % a == 0 |==> false
+144:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11795:(pos - b) * a >= 0 && (pos - b) % a == 0 |==> (pos - b) * a >= 0
+145:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.Evaluator$CssNthEvaluator@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):449:11813:(pos - b) * a >= 0 && (pos - b) % a == 0 |==> (pos - b) % a == 0
+146:LVR:0:POS:org.jsoup.select.Evaluator$CssNthEvaluator@toString():454:11893:0 |==> 1
+147:LVR:0:NEG:org.jsoup.select.Evaluator$CssNthEvaluator@toString():454:11893:0 |==> -1
+148:ROR:==(int,int):<=(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@toString():454:11888:a == 0 |==> a <= 0
+149:ROR:==(int,int):>=(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@toString():454:11888:a == 0 |==> a >= 0
+150:ROR:==(int,int):FALSE(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@toString():454:11890:a == 0 |==> false
+151:LVR:0:POS:org.jsoup.select.Evaluator$CssNthEvaluator@toString():456:11965:0 |==> 1
+152:LVR:0:NEG:org.jsoup.select.Evaluator$CssNthEvaluator@toString():456:11965:0 |==> -1
+153:ROR:==(int,int):<=(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@toString():456:11960:b == 0 |==> b <= 0
+154:ROR:==(int,int):>=(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@toString():456:11960:b == 0 |==> b >= 0
+155:ROR:==(int,int):FALSE(int,int):org.jsoup.select.Evaluator$CssNthEvaluator@toString():456:11962:b == 0 |==> false
+156:LVR:POS:0:org.jsoup.select.Evaluator$IsNthChild@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):478:12578:1 |==> 0
+157:LVR:POS:NEG:org.jsoup.select.Evaluator$IsNthChild@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):478:12578:1 |==> -1
+158:AOR:+(int,int):%(int,int):org.jsoup.select.Evaluator$IsNthChild@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):478:12548:element.elementSiblingIndex() + 1 |==> element.elementSiblingIndex() % 1
+159:AOR:+(int,int):*(int,int):org.jsoup.select.Evaluator$IsNthChild@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):478:12548:element.elementSiblingIndex() + 1 |==> element.elementSiblingIndex() * 1
+160:AOR:+(int,int):-(int,int):org.jsoup.select.Evaluator$IsNthChild@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):478:12548:element.elementSiblingIndex() + 1 |==> element.elementSiblingIndex() - 1
+161:AOR:+(int,int):/(int,int):org.jsoup.select.Evaluator$IsNthChild@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):478:12548:element.elementSiblingIndex() + 1 |==> element.elementSiblingIndex() / 1
+162:AOR:-(int,int):%(int,int):org.jsoup.select.Evaluator$IsNthLastChild@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):499:13001:element.parent().children().size() - element.elementSiblingIndex() |==> element.parent().children().size() % element.elementSiblingIndex()
+163:AOR:-(int,int):*(int,int):org.jsoup.select.Evaluator$IsNthLastChild@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):499:13001:element.parent().children().size() - element.elementSiblingIndex() |==> element.parent().children().size() * element.elementSiblingIndex()
+164:AOR:-(int,int):+(int,int):org.jsoup.select.Evaluator$IsNthLastChild@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):499:13001:element.parent().children().size() - element.elementSiblingIndex() |==> element.parent().children().size() + element.elementSiblingIndex()
+165:AOR:-(int,int):/(int,int):org.jsoup.select.Evaluator$IsNthLastChild@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):499:13001:element.parent().children().size() - element.elementSiblingIndex() |==> element.parent().children().size() / element.elementSiblingIndex()
+166:LVR:0:POS:org.jsoup.select.Evaluator$IsNthOfType@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):518:13449:0 |==> 1
+167:LVR:0:NEG:org.jsoup.select.Evaluator$IsNthOfType@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):518:13449:0 |==> -1
+168:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Evaluator$IsNthOfType@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):521:13583:el.tag().equals(element.tag()) |==> false
+169:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Evaluator$IsNthOfType@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):521:13583:el.tag().equals(element.tag()) |==> true
+170:STD:<INC>:<NO-OP>:org.jsoup.select.Evaluator$IsNthOfType@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):521:13600:pos++; |==> <NO-OP>
+171:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.select.Evaluator$IsNthOfType@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):522:13630:el == element |==> false
+172:LVR:0:POS:org.jsoup.select.Evaluator$IsNthLastOfType@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):541:13996:0 |==> 1
+173:LVR:0:NEG:org.jsoup.select.Evaluator$IsNthLastOfType@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):541:13996:0 |==> -1
+174:ROR:<(int,int):!=(int,int):org.jsoup.select.Evaluator$IsNthLastOfType@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):543:14108:i < family.size() |==> i != family.size()
+175:ROR:<(int,int):<=(int,int):org.jsoup.select.Evaluator$IsNthLastOfType@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):543:14108:i < family.size() |==> i <= family.size()
+176:ROR:<(int,int):FALSE(int,int):org.jsoup.select.Evaluator$IsNthLastOfType@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):543:14110:i < family.size() |==> false
+177:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Evaluator$IsNthLastOfType@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):544:14174:family.get(i).tag().equals(element.tag()) |==> false
+178:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Evaluator$IsNthLastOfType@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):544:14174:family.get(i).tag().equals(element.tag()) |==> true
+179:STD:<INC>:<NO-OP>:org.jsoup.select.Evaluator$IsNthLastOfType@calculatePosition(org.jsoup.nodes.Element,org.jsoup.nodes.Element):544:14191:pos++; |==> <NO-OP>
+180:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.select.Evaluator$IsFirstChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):562:14599:p != null |==> true
+181:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.select.Evaluator$IsFirstChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):562:14597:p != null && !(p instanceof Document) |==> p != null == !(p instanceof Document)
+182:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.select.Evaluator$IsFirstChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):562:14607:p != null && !(p instanceof Document) |==> false
+183:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.Evaluator$IsFirstChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):562:14597:p != null && !(p instanceof Document) |==> p != null
+184:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.Evaluator$IsFirstChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):562:14610:p != null && !(p instanceof Document) |==> !(p instanceof Document)
+185:LVR:0:POS:org.jsoup.select.Evaluator$IsFirstChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):562:14671:0 |==> 1
+186:LVR:0:NEG:org.jsoup.select.Evaluator$IsFirstChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):562:14671:0 |==> -1
+187:ROR:==(int,int):<=(int,int):org.jsoup.select.Evaluator$IsFirstChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):562:14638:element.elementSiblingIndex() == 0 |==> element.elementSiblingIndex() <= 0
+188:ROR:==(int,int):>=(int,int):org.jsoup.select.Evaluator$IsFirstChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):562:14638:element.elementSiblingIndex() == 0 |==> element.elementSiblingIndex() >= 0
+189:ROR:==(int,int):FALSE(int,int):org.jsoup.select.Evaluator$IsFirstChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):562:14668:element.elementSiblingIndex() == 0 |==> false
+190:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.select.Evaluator$IsFirstChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):562:14597:p != null && !(p instanceof Document) && element.elementSiblingIndex() == 0 |==> (p != null && !(p instanceof Document)) == (element.elementSiblingIndex() == 0)
+191:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.select.Evaluator$IsFirstChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):562:14635:p != null && !(p instanceof Document) && element.elementSiblingIndex() == 0 |==> false
+192:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.Evaluator$IsFirstChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):562:14597:p != null && !(p instanceof Document) && element.elementSiblingIndex() == 0 |==> p != null && !(p instanceof Document)
+193:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.Evaluator$IsFirstChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):562:14638:p != null && !(p instanceof Document) && element.elementSiblingIndex() == 0 |==> element.elementSiblingIndex() == 0
+194:LVR:0:POS:org.jsoup.select.Evaluator$IsRoot@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):579:15113:0 |==> 1
+195:LVR:0:NEG:org.jsoup.select.Evaluator$IsRoot@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):579:15113:0 |==> -1
+196:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.select.Evaluator$IsRoot@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):580:15143:element == r |==> false
+197:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.select.Evaluator$IsOnlyChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):592:15421:p != null |==> true
+198:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.select.Evaluator$IsOnlyChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):592:15420:p != null && !(p instanceof Document) |==> p != null == !(p instanceof Document)
+199:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.select.Evaluator$IsOnlyChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):592:15428:p != null && !(p instanceof Document) |==> false
+200:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.Evaluator$IsOnlyChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):592:15420:p != null && !(p instanceof Document) |==> p != null
+201:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.Evaluator$IsOnlyChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):592:15431:p != null && !(p instanceof Document) |==> !(p instanceof Document)
+202:LVR:0:POS:org.jsoup.select.Evaluator$IsOnlyChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):592:15495:0 |==> 1
+203:LVR:0:NEG:org.jsoup.select.Evaluator$IsOnlyChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):592:15495:0 |==> -1
+204:ROR:==(int,int):>=(int,int):org.jsoup.select.Evaluator$IsOnlyChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):592:15459:element.siblingElements().size() == 0 |==> element.siblingElements().size() >= 0
+205:ROR:==(int,int):FALSE(int,int):org.jsoup.select.Evaluator$IsOnlyChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):592:15492:element.siblingElements().size() == 0 |==> false
+206:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.select.Evaluator$IsOnlyChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):592:15420:p != null && !(p instanceof Document) && element.siblingElements().size() == 0 |==> (p != null && !(p instanceof Document)) == (element.siblingElements().size() == 0)
+207:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.select.Evaluator$IsOnlyChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):592:15456:p != null && !(p instanceof Document) && element.siblingElements().size() == 0 |==> false
+208:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.Evaluator$IsOnlyChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):592:15420:p != null && !(p instanceof Document) && element.siblingElements().size() == 0 |==> p != null && !(p instanceof Document)
+209:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.Evaluator$IsOnlyChild@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):592:15459:p != null && !(p instanceof Document) && element.siblingElements().size() == 0 |==> element.siblingElements().size() == 0
+210:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.select.Evaluator$IsOnlyOfType@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):604:15771:p == null |==> false
+211:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.select.Evaluator$IsOnlyOfType@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):604:15770:p == null || p instanceof Document |==> p == null != p instanceof Document
+212:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.Evaluator$IsOnlyOfType@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):604:15770:p == null || p instanceof Document |==> p == null
+213:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.Evaluator$IsOnlyOfType@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):604:15781:p == null || p instanceof Document |==> p instanceof Document
+214:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.select.Evaluator$IsOnlyOfType@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):604:15778:p == null || p instanceof Document |==> true
+215:LVR:FALSE:TRUE:org.jsoup.select.Evaluator$IsOnlyOfType@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):604:15811:false |==> true
+216:LVR:0:POS:org.jsoup.select.Evaluator$IsOnlyOfType@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):606:15835:0 |==> 1
+217:LVR:0:NEG:org.jsoup.select.Evaluator$IsOnlyOfType@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):606:15835:0 |==> -1
+218:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.Evaluator$IsOnlyOfType@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):609:15954:el.tag().equals(element.tag()) |==> false
+219:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.Evaluator$IsOnlyOfType@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):609:15954:el.tag().equals(element.tag()) |==> true
+220:STD:<INC>:<NO-OP>:org.jsoup.select.Evaluator$IsOnlyOfType@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):609:15971:pos++; |==> <NO-OP>
+221:LVR:POS:0:org.jsoup.select.Evaluator$IsOnlyOfType@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):611:16015:1 |==> 0
+222:LVR:POS:NEG:org.jsoup.select.Evaluator$IsOnlyOfType@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):611:16015:1 |==> -1
+223:ROR:==(int,int):<=(int,int):org.jsoup.select.Evaluator$IsOnlyOfType@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):611:16008:pos == 1 |==> pos <= 1
+224:ROR:==(int,int):>=(int,int):org.jsoup.select.Evaluator$IsOnlyOfType@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):611:16008:pos == 1 |==> pos >= 1
+225:ROR:==(int,int):FALSE(int,int):org.jsoup.select.Evaluator$IsOnlyOfType@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):611:16012:pos == 1 |==> false
+226:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.select.Evaluator$IsEmpty@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):624:16350:n instanceof Comment || n instanceof XmlDeclaration |==> n instanceof Comment != n instanceof XmlDeclaration
+227:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.Evaluator$IsEmpty@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):624:16350:n instanceof Comment || n instanceof XmlDeclaration |==> n instanceof Comment
+228:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.Evaluator$IsEmpty@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):624:16374:n instanceof Comment || n instanceof XmlDeclaration |==> n instanceof XmlDeclaration
+229:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.select.Evaluator$IsEmpty@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):624:16371:n instanceof Comment || n instanceof XmlDeclaration |==> true
+230:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.select.Evaluator$IsEmpty@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):624:16350:n instanceof Comment || n instanceof XmlDeclaration || n instanceof DocumentType |==> (n instanceof Comment || n instanceof XmlDeclaration) != n instanceof DocumentType
+231:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.Evaluator$IsEmpty@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):624:16350:n instanceof Comment || n instanceof XmlDeclaration || n instanceof DocumentType |==> n instanceof Comment || n instanceof XmlDeclaration
+232:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.Evaluator$IsEmpty@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):624:16405:n instanceof Comment || n instanceof XmlDeclaration || n instanceof DocumentType |==> n instanceof DocumentType
+233:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.select.Evaluator$IsEmpty@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):624:16402:n instanceof Comment || n instanceof XmlDeclaration || n instanceof DocumentType |==> true
+234:LVR:FALSE:TRUE:org.jsoup.select.Evaluator$IsEmpty@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):624:16440:false |==> true
+235:LVR:TRUE:FALSE:org.jsoup.select.Evaluator$IsEmpty@matches(org.jsoup.nodes.Element,org.jsoup.nodes.Element):626:16477:true |==> false
+236:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.Evaluator$IndexEvaluator@<init>(int):643:16809:this.index = index; |==> <NO-OP>
+237:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.Evaluator$ContainsText@<init>(java.lang.String):654:17087:this.searchText = lowerCase(searchText); |==> <NO-OP>
+238:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.Evaluator$ContainsData@<init>(java.lang.String):675:17673:this.searchText = lowerCase(searchText); |==> <NO-OP>
+239:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.Evaluator$ContainsOwnText@<init>(java.lang.String):696:18253:this.searchText = lowerCase(searchText); |==> <NO-OP>
+240:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.Evaluator$Matches@<init>(java.util.regex.Pattern):717:18842:this.pattern = pattern; |==> <NO-OP>
+241:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.Evaluator$MatchesOwn@<init>(java.util.regex.Pattern):739:19413:this.pattern = pattern; |==> <NO-OP>
+242:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.QueryParser@<init>(java.lang.String):30:802:this.query = query; |==> <NO-OP>
+243:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.QueryParser@<init>(java.lang.String):31:830:this.tq = new TokenQueue(query); |==> <NO-OP>
+244:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@parse():53:1362:tq.consumeWhitespace(); |==> <NO-OP>
+245:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@parse():55:1412:tq.matchesAny(combinators) |==> false
+246:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@parse():55:1412:tq.matchesAny(combinators) |==> true
+247:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@parse():56:1494:evals.add(new StructuralEvaluator.Root()); |==> <NO-OP>
+248:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@parse():57:1549:combinator(tq.consume()); |==> <NO-OP>
+249:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@parse():59:1604:findElements(); |==> <NO-OP>
+250:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@parse():66:1785:tq.matchesAny(combinators) |==> false
+251:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@parse():66:1785:tq.matchesAny(combinators) |==> true
+252:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@parse():67:1818:combinator(tq.consume()); |==> <NO-OP>
+253:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.select.QueryParser@parse():68:1867:seenWhite |==> false
+254:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.select.QueryParser@parse():68:1867:seenWhite |==> true
+255:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@parse():69:1896:combinator(' '); |==> <NO-OP>
+256:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@parse():71:1985:findElements(); |==> <NO-OP>
+257:LVR:POS:0:org.jsoup.select.QueryParser@parse():75:2088:1 |==> 0
+258:LVR:POS:NEG:org.jsoup.select.QueryParser@parse():75:2088:1 |==> -1
+259:ROR:==(int,int):<=(int,int):org.jsoup.select.QueryParser@parse():75:2072:evals.size() == 1 |==> evals.size() <= 1
+260:ROR:==(int,int):>=(int,int):org.jsoup.select.QueryParser@parse():75:2072:evals.size() == 1 |==> evals.size() >= 1
+261:ROR:==(int,int):FALSE(int,int):org.jsoup.select.QueryParser@parse():75:2085:evals.size() == 1 |==> false
+262:LVR:0:POS:org.jsoup.select.QueryParser@parse():76:2120:0 |==> 1
+263:LVR:0:NEG:org.jsoup.select.QueryParser@parse():76:2120:0 |==> -1
+264:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@combinator(char):82:2237:tq.consumeWhitespace(); |==> <NO-OP>
+265:LVR:FALSE:TRUE:org.jsoup.select.QueryParser@combinator(char):88:2630:false |==> true
+266:LVR:POS:0:org.jsoup.select.QueryParser@combinator(char):90:2666:1 |==> 0
+267:LVR:POS:NEG:org.jsoup.select.QueryParser@combinator(char):90:2666:1 |==> -1
+268:ROR:==(int,int):<=(int,int):org.jsoup.select.QueryParser@combinator(char):90:2650:evals.size() == 1 |==> evals.size() <= 1
+269:ROR:==(int,int):>=(int,int):org.jsoup.select.QueryParser@combinator(char):90:2650:evals.size() == 1 |==> evals.size() >= 1
+270:ROR:==(int,int):FALSE(int,int):org.jsoup.select.QueryParser@combinator(char):90:2663:evals.size() == 1 |==> false
+271:LVR:0:POS:org.jsoup.select.QueryParser@combinator(char):91:2718:0 |==> 1
+272:LVR:0:NEG:org.jsoup.select.QueryParser@combinator(char):91:2718:0 |==> -1
+273:ROR:!=(int,int):<(int,int):org.jsoup.select.QueryParser@combinator(char):93:2831:combinator != ',' |==> combinator < ','
+274:ROR:!=(int,int):>(int,int):org.jsoup.select.QueryParser@combinator(char):93:2831:combinator != ',' |==> combinator > ','
+275:ROR:!=(int,int):TRUE(int,int):org.jsoup.select.QueryParser@combinator(char):93:2842:combinator != ',' |==> true
+276:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.select.QueryParser@combinator(char):93:2786:rootEval instanceof CombiningEvaluator.Or && combinator != ',' |==> rootEval instanceof CombiningEvaluator.Or == (combinator != ',')
+277:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.select.QueryParser@combinator(char):93:2828:rootEval instanceof CombiningEvaluator.Or && combinator != ',' |==> false
+278:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.QueryParser@combinator(char):93:2786:rootEval instanceof CombiningEvaluator.Or && combinator != ',' |==> rootEval instanceof CombiningEvaluator.Or
+279:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.QueryParser@combinator(char):93:2831:rootEval instanceof CombiningEvaluator.Or && combinator != ',' |==> combinator != ','
+280:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.QueryParser@combinator(char):94:2868:currentEval = ((CombiningEvaluator.Or)currentEval).rightMostEvaluator(); |==> <NO-OP>
+281:LVR:TRUE:FALSE:org.jsoup.select.QueryParser@combinator(char):95:2977:true |==> false
+282:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.QueryParser@combinator(char):95:2958:replaceRightMost = true; |==> <NO-OP>
+283:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@combinator(char):101:3112:evals.clear(); |==> <NO-OP>
+284:ROR:==(int,int):<=(int,int):org.jsoup.select.QueryParser@combinator(char):104:3246:combinator == '>' |==> combinator <= '>'
+285:ROR:==(int,int):>=(int,int):org.jsoup.select.QueryParser@combinator(char):104:3246:combinator == '>' |==> combinator >= '>'
+286:ROR:==(int,int):FALSE(int,int):org.jsoup.select.QueryParser@combinator(char):104:3257:combinator == '>' |==> false
+287:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.QueryParser@combinator(char):105:3277:currentEval = new CombiningEvaluator.And(newEval, new StructuralEvaluator.ImmediateParent(currentEval)); |==> <NO-OP>
+288:ROR:==(int,int):<=(int,int):org.jsoup.select.QueryParser@combinator(char):106:3399:combinator == ' ' |==> combinator <= ' '
+289:ROR:==(int,int):>=(int,int):org.jsoup.select.QueryParser@combinator(char):106:3399:combinator == ' ' |==> combinator >= ' '
+290:ROR:==(int,int):FALSE(int,int):org.jsoup.select.QueryParser@combinator(char):106:3410:combinator == ' ' |==> false
+291:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.QueryParser@combinator(char):107:3430:currentEval = new CombiningEvaluator.And(newEval, new StructuralEvaluator.Parent(currentEval)); |==> <NO-OP>
+292:ROR:==(int,int):<=(int,int):org.jsoup.select.QueryParser@combinator(char):108:3543:combinator == '+' |==> combinator <= '+'
+293:ROR:==(int,int):>=(int,int):org.jsoup.select.QueryParser@combinator(char):108:3543:combinator == '+' |==> combinator >= '+'
+294:ROR:==(int,int):FALSE(int,int):org.jsoup.select.QueryParser@combinator(char):108:3554:combinator == '+' |==> false
+295:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.QueryParser@combinator(char):109:3574:currentEval = new CombiningEvaluator.And(newEval, new StructuralEvaluator.ImmediatePreviousSibling(currentEval)); |==> <NO-OP>
+296:ROR:==(int,int):<=(int,int):org.jsoup.select.QueryParser@combinator(char):110:3705:combinator == '~' |==> combinator <= '~'
+297:ROR:==(int,int):>=(int,int):org.jsoup.select.QueryParser@combinator(char):110:3705:combinator == '~' |==> combinator >= '~'
+298:ROR:==(int,int):FALSE(int,int):org.jsoup.select.QueryParser@combinator(char):110:3716:combinator == '~' |==> false
+299:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.QueryParser@combinator(char):111:3736:currentEval = new CombiningEvaluator.And(newEval, new StructuralEvaluator.PreviousSibling(currentEval)); |==> <NO-OP>
+300:ROR:==(int,int):<=(int,int):org.jsoup.select.QueryParser@combinator(char):112:3858:combinator == ',' |==> combinator <= ','
+301:ROR:==(int,int):>=(int,int):org.jsoup.select.QueryParser@combinator(char):112:3858:combinator == ',' |==> combinator >= ','
+302:ROR:==(int,int):FALSE(int,int):org.jsoup.select.QueryParser@combinator(char):112:3869:combinator == ',' |==> false
+303:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@combinator(char):116:4068:or.add(newEval); |==> <NO-OP>
+304:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@combinator(char):119:4172:or.add(currentEval); |==> <NO-OP>
+305:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@combinator(char):120:4209:or.add(newEval); |==> <NO-OP>
+306:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.QueryParser@combinator(char):122:4252:currentEval = or; |==> <NO-OP>
+307:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.select.QueryParser@combinator(char):127:4398:replaceRightMost |==> false
+308:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.select.QueryParser@combinator(char):127:4398:replaceRightMost |==> true
+309:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@combinator(char):128:4428:((CombiningEvaluator.Or)rootEval).replaceRightMostEvaluator(currentEval); |==> <NO-OP>
+310:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.QueryParser@combinator(char):129:4516:rootEval = currentEval; |==> <NO-OP>
+311:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@combinator(char):130:4548:evals.add(rootEval); |==> <NO-OP>
+312:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@consumeSubQuery():136:4721:tq.matches("(") |==> false
+313:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@consumeSubQuery():136:4721:tq.matches("(") |==> true
+314:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@consumeSubQuery():137:4744:sq.append("(").append(tq.chompBalanced('(', ')')).append(")"); |==> <NO-OP>
+315:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@consumeSubQuery():138:4838:tq.matches("[") |==> false
+316:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@consumeSubQuery():138:4838:tq.matches("[") |==> true
+317:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@consumeSubQuery():139:4861:sq.append("[").append(tq.chompBalanced('[', ']')).append("]"); |==> <NO-OP>
+318:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@consumeSubQuery():140:4958:tq.matchesAny(combinators) |==> false
+319:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@consumeSubQuery():140:4958:tq.matchesAny(combinators) |==> true
+320:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@consumeSubQuery():143:5029:sq.append(tq.consume()); |==> <NO-OP>
+321:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():149:5160:tq.matchChomp("#") |==> false
+322:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():149:5160:tq.matchChomp("#") |==> true
+323:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():150:5179:byId(); |==> <NO-OP>
+324:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():151:5217:tq.matchChomp(".") |==> false
+325:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():151:5217:tq.matchChomp(".") |==> true
+326:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():152:5236:byClass(); |==> <NO-OP>
+327:COR:||(boolean,boolean):!=(boolean,boolean):org.jsoup.select.QueryParser@findElements():153:5264:tq.matchesWord() || tq.matches("*|") |==> tq.matchesWord() != tq.matches("*|")
+328:COR:||(boolean,boolean):LHS(boolean,boolean):org.jsoup.select.QueryParser@findElements():153:5264:tq.matchesWord() || tq.matches("*|") |==> tq.matchesWord()
+329:COR:||(boolean,boolean):RHS(boolean,boolean):org.jsoup.select.QueryParser@findElements():153:5284:tq.matchesWord() || tq.matches("*|") |==> tq.matches("*|")
+330:COR:||(boolean,boolean):TRUE(boolean,boolean):org.jsoup.select.QueryParser@findElements():153:5281:tq.matchesWord() || tq.matches("*|") |==> true
+331:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():154:5314:byTag(); |==> <NO-OP>
+332:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():155:5350:tq.matches("[") |==> false
+333:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():155:5350:tq.matches("[") |==> true
+334:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():156:5369:byAttribute(); |==> <NO-OP>
+335:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():157:5414:tq.matchChomp("*") |==> false
+336:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():157:5414:tq.matchChomp("*") |==> true
+337:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():158:5433:allElements(); |==> <NO-OP>
+338:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():159:5478:tq.matchChomp(":lt(") |==> false
+339:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():159:5478:tq.matchChomp(":lt(") |==> true
+340:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():160:5500:indexLessThan(); |==> <NO-OP>
+341:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():161:5547:tq.matchChomp(":gt(") |==> false
+342:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():161:5547:tq.matchChomp(":gt(") |==> true
+343:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():162:5569:indexGreaterThan(); |==> <NO-OP>
+344:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():163:5619:tq.matchChomp(":eq(") |==> false
+345:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():163:5619:tq.matchChomp(":eq(") |==> true
+346:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():164:5641:indexEquals(); |==> <NO-OP>
+347:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():165:5683:tq.matches(":has(") |==> false
+348:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():165:5683:tq.matches(":has(") |==> true
+349:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():166:5706:has(); |==> <NO-OP>
+350:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():167:5740:tq.matches(":contains(") |==> false
+351:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():167:5740:tq.matches(":contains(") |==> true
+352:LVR:FALSE:TRUE:org.jsoup.select.QueryParser@findElements():168:5777:false |==> true
+353:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():168:5768:contains(false); |==> <NO-OP>
+354:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():169:5812:tq.matches(":containsOwn(") |==> false
+355:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():169:5812:tq.matches(":containsOwn(") |==> true
+356:LVR:TRUE:FALSE:org.jsoup.select.QueryParser@findElements():170:5852:true |==> false
+357:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():170:5843:contains(true); |==> <NO-OP>
+358:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():171:5886:tq.matches(":containsData(") |==> false
+359:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():171:5886:tq.matches(":containsData(") |==> true
+360:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():172:5918:containsData(); |==> <NO-OP>
+361:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():173:5961:tq.matches(":matches(") |==> false
+362:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():173:5961:tq.matches(":matches(") |==> true
+363:LVR:FALSE:TRUE:org.jsoup.select.QueryParser@findElements():174:5996:false |==> true
+364:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():174:5988:matches(false); |==> <NO-OP>
+365:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():175:6031:tq.matches(":matchesOwn(") |==> false
+366:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():175:6031:tq.matches(":matchesOwn(") |==> true
+367:LVR:TRUE:FALSE:org.jsoup.select.QueryParser@findElements():176:6069:true |==> false
+368:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():176:6061:matches(true); |==> <NO-OP>
+369:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():177:6103:tq.matches(":not(") |==> false
+370:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():177:6103:tq.matches(":not(") |==> true
+371:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():178:6126:not(); |==> <NO-OP>
+372:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():179:6157:tq.matchChomp(":nth-child(") |==> false
+373:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():179:6157:tq.matchChomp(":nth-child(") |==> true
+374:LVR:FALSE:TRUE:org.jsoup.select.QueryParser@findElements():180:6195:false |==> true
+375:LVR:FALSE:TRUE:org.jsoup.select.QueryParser@findElements():180:6202:false |==> true
+376:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():180:6183:cssNthChild(false, false); |==> <NO-OP>
+377:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():181:6240:tq.matchChomp(":nth-last-child(") |==> false
+378:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():181:6240:tq.matchChomp(":nth-last-child(") |==> true
+379:LVR:TRUE:FALSE:org.jsoup.select.QueryParser@findElements():182:6283:true |==> false
+380:LVR:FALSE:TRUE:org.jsoup.select.QueryParser@findElements():182:6289:false |==> true
+381:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():182:6271:cssNthChild(true, false); |==> <NO-OP>
+382:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():183:6327:tq.matchChomp(":nth-of-type(") |==> false
+383:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():183:6327:tq.matchChomp(":nth-of-type(") |==> true
+384:LVR:FALSE:TRUE:org.jsoup.select.QueryParser@findElements():184:6367:false |==> true
+385:LVR:TRUE:FALSE:org.jsoup.select.QueryParser@findElements():184:6374:true |==> false
+386:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():184:6355:cssNthChild(false, true); |==> <NO-OP>
+387:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():185:6411:tq.matchChomp(":nth-last-of-type(") |==> false
+388:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():185:6411:tq.matchChomp(":nth-last-of-type(") |==> true
+389:LVR:TRUE:FALSE:org.jsoup.select.QueryParser@findElements():186:6456:true |==> false
+390:LVR:TRUE:FALSE:org.jsoup.select.QueryParser@findElements():186:6462:true |==> false
+391:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():186:6444:cssNthChild(true, true); |==> <NO-OP>
+392:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():187:6499:tq.matchChomp(":first-child") |==> false
+393:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():187:6499:tq.matchChomp(":first-child") |==> true
+394:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():188:6526:evals.add(new Evaluator.IsFirstChild()); |==> <NO-OP>
+395:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():189:6597:tq.matchChomp(":last-child") |==> false
+396:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():189:6597:tq.matchChomp(":last-child") |==> true
+397:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():190:6623:evals.add(new Evaluator.IsLastChild()); |==> <NO-OP>
+398:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():191:6693:tq.matchChomp(":first-of-type") |==> false
+399:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():191:6693:tq.matchChomp(":first-of-type") |==> true
+400:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():192:6722:evals.add(new Evaluator.IsFirstOfType()); |==> <NO-OP>
+401:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():193:6794:tq.matchChomp(":last-of-type") |==> false
+402:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():193:6794:tq.matchChomp(":last-of-type") |==> true
+403:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():194:6822:evals.add(new Evaluator.IsLastOfType()); |==> <NO-OP>
+404:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():195:6893:tq.matchChomp(":only-child") |==> false
+405:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():195:6893:tq.matchChomp(":only-child") |==> true
+406:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():196:6919:evals.add(new Evaluator.IsOnlyChild()); |==> <NO-OP>
+407:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():197:6989:tq.matchChomp(":only-of-type") |==> false
+408:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():197:6989:tq.matchChomp(":only-of-type") |==> true
+409:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():198:7017:evals.add(new Evaluator.IsOnlyOfType()); |==> <NO-OP>
+410:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():199:7088:tq.matchChomp(":empty") |==> false
+411:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():199:7088:tq.matchChomp(":empty") |==> true
+412:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():200:7109:evals.add(new Evaluator.IsEmpty()); |==> <NO-OP>
+413:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@findElements():201:7175:tq.matchChomp(":root") |==> false
+414:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@findElements():201:7175:tq.matchChomp(":root") |==> true
+415:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@findElements():202:7195:evals.add(new Evaluator.IsRoot()); |==> <NO-OP>
+416:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@byId():210:7473:Validate.notEmpty(id); |==> <NO-OP>
+417:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@byId():211:7504:evals.add(new Evaluator.Id(id)); |==> <NO-OP>
+418:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@byClass():216:7635:Validate.notEmpty(className); |==> <NO-OP>
+419:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@byClass():217:7673:evals.add(new Evaluator.Class(className.trim())); |==> <NO-OP>
+420:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@byTag():223:7820:Validate.notEmpty(tagName); |==> <NO-OP>
+421:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@byTag():226:7958:tagName.startsWith("*|") |==> false
+422:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@byTag():226:7958:tagName.startsWith("*|") |==> true
+423:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@byTag():227:7980:evals.add(new CombiningEvaluator.Or(new Evaluator.Tag(normalize(tagName)), new Evaluator.TagEndsWith(normalize(tagName.replace("*|", ":"))))); |==> <NO-OP>
+424:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@byTag():230:8266:tagName.contains("|") |==> false
+425:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@byTag():230:8266:tagName.contains("|") |==> true
+426:STD:<ASSIGN>:<NO-OP>:org.jsoup.select.QueryParser@byTag():231:8289:tagName = tagName.replace("|", ":"); |==> <NO-OP>
+427:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@byTag():233:8339:evals.add(new Evaluator.Tag(tagName.trim())); |==> <NO-OP>
+428:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@byAttribute():240:8631:Validate.notEmpty(key); |==> <NO-OP>
+429:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@byAttribute():241:8663:cq.consumeWhitespace(); |==> <NO-OP>
+430:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@byAttribute():243:8710:cq.isEmpty() |==> false
+431:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@byAttribute():243:8710:cq.isEmpty() |==> true
+432:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@byAttribute():244:8746:key.startsWith("^") |==> false
+433:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@byAttribute():244:8746:key.startsWith("^") |==> true
+434:LVR:POS:0:org.jsoup.select.QueryParser@byAttribute():245:8825:1 |==> 0
+435:LVR:POS:NEG:org.jsoup.select.QueryParser@byAttribute():245:8825:1 |==> -1
+436:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@byAttribute():245:8769:evals.add(new Evaluator.AttributeStarting(key.substring(1))); |==> <NO-OP>
+437:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@byAttribute():247:8864:evals.add(new Evaluator.Attribute(key)); |==> <NO-OP>
+438:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@byAttribute():249:8951:cq.matchChomp("=") |==> false
+439:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@byAttribute():249:8951:cq.matchChomp("=") |==> true
+440:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@byAttribute():250:8974:evals.add(new Evaluator.AttributeWithValue(key, cq.remainder())); |==> <NO-OP>
+441:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@byAttribute():252:9075:cq.matchChomp("!=") |==> false
+442:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@byAttribute():252:9075:cq.matchChomp("!=") |==> true
+443:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@byAttribute():253:9099:evals.add(new Evaluator.AttributeWithValueNot(key, cq.remainder())); |==> <NO-OP>
+444:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@byAttribute():255:9203:cq.matchChomp("^=") |==> false
+445:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@byAttribute():255:9203:cq.matchChomp("^=") |==> true
+446:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@byAttribute():256:9227:evals.add(new Evaluator.AttributeWithValueStarting(key, cq.remainder())); |==> <NO-OP>
+447:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@byAttribute():258:9336:cq.matchChomp("$=") |==> false
+448:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@byAttribute():258:9336:cq.matchChomp("$=") |==> true
+449:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@byAttribute():259:9360:evals.add(new Evaluator.AttributeWithValueEnding(key, cq.remainder())); |==> <NO-OP>
+450:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@byAttribute():261:9467:cq.matchChomp("*=") |==> false
+451:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@byAttribute():261:9467:cq.matchChomp("*=") |==> true
+452:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@byAttribute():262:9491:evals.add(new Evaluator.AttributeWithValueContaining(key, cq.remainder())); |==> <NO-OP>
+453:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@byAttribute():264:9602:cq.matchChomp("~=") |==> false
+454:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@byAttribute():264:9602:cq.matchChomp("~=") |==> true
+455:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@byAttribute():265:9626:evals.add(new Evaluator.AttributeWithValueMatching(key, Pattern.compile(cq.remainder()))); |==> <NO-OP>
+456:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@allElements():272:9940:evals.add(new Evaluator.AllElements()); |==> <NO-OP>
+457:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@indexLessThan():277:10068:evals.add(new Evaluator.IndexLessThan(consumeIndex())); |==> <NO-OP>
+458:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@indexGreaterThan():281:10177:evals.add(new Evaluator.IndexGreaterThan(consumeIndex())); |==> <NO-OP>
+459:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@indexEquals():285:10284:evals.add(new Evaluator.IndexEquals(consumeIndex())); |==> <NO-OP>
+460:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):297:10837:"odd".equals(argS) |==> false
+461:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):297:10837:"odd".equals(argS) |==> true
+462:LVR:POS:0:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):298:10854:2 |==> 0
+463:LVR:POS:NEG:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):298:10854:2 |==> -2
+464:LVR:POS:0:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):299:10864:1 |==> 0
+465:LVR:POS:NEG:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):299:10864:1 |==> -1
+466:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):300:10893:"even".equals(argS) |==> false
+467:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):300:10893:"even".equals(argS) |==> true
+468:LVR:POS:0:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):301:10910:2 |==> 0
+469:LVR:POS:NEG:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):301:10910:2 |==> -2
+470:LVR:0:POS:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):302:10920:0 |==> 1
+471:LVR:0:NEG:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):302:10920:0 |==> -1
+472:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):303:10947:mAB.matches() |==> false
+473:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):303:10947:mAB.matches() |==> true
+474:LVR:POS:0:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):304:10970:3 |==> 0
+475:LVR:POS:NEG:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):304:10970:3 |==> -3
+476:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):304:10973:mAB.group(3) != null |==> true
+477:LVR:POS:0:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):304:11010:1 |==> 0
+478:LVR:POS:NEG:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):304:11010:1 |==> -1
+479:LVR:POS:0:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):304:11041:1 |==> 0
+480:LVR:POS:NEG:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):304:11041:1 |==> -1
+481:LVR:POS:0:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):305:11061:4 |==> 0
+482:LVR:POS:NEG:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):305:11061:4 |==> -4
+483:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):305:11064:mAB.group(4) != null |==> true
+484:LVR:POS:0:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):305:11101:4 |==> 0
+485:LVR:POS:NEG:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):305:11101:4 |==> -4
+486:LVR:0:POS:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):305:11132:0 |==> 1
+487:LVR:0:NEG:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):305:11132:0 |==> -1
+488:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):306:11158:mB.matches() |==> false
+489:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):306:11158:mB.matches() |==> true
+490:LVR:0:POS:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):307:11171:0 |==> 1
+491:LVR:0:NEG:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):307:11171:0 |==> -1
+492:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):312:11362:ofType |==> false
+493:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):312:11362:ofType |==> true
+494:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):313:11377:backwards |==> false
+495:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):313:11377:backwards |==> true
+496:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):314:11392:evals.add(new Evaluator.IsNthLastOfType(a, b)); |==> <NO-OP>
+497:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):316:11452:evals.add(new Evaluator.IsNthOfType(a, b)); |==> <NO-OP>
+498:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):318:11512:backwards |==> false
+499:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):318:11512:backwards |==> true
+500:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):319:11527:evals.add(new Evaluator.IsNthLastChild(a, b)); |==> <NO-OP>
+501:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@cssNthChild(boolean,boolean):321:11586:evals.add(new Evaluator.IsNthChild(a, b)); |==> <NO-OP>
+502:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@consumeIndex():327:11726:Validate.isTrue(StringUtil.isNumeric(indexS), "Index must be numeric"); |==> <NO-OP>
+503:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@has():333:11911:tq.consume(":has"); |==> <NO-OP>
+504:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@has():335:11993:Validate.notEmpty(subQuery, ":has(el) subselect must not be empty"); |==> <NO-OP>
+505:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@has():336:12070:evals.add(new StructuralEvaluator.Has(parse(subQuery))); |==> <NO-OP>
+506:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.select.QueryParser@contains(boolean):341:12252:own |==> false
+507:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.select.QueryParser@contains(boolean):341:12252:own |==> true
+508:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@contains(boolean):341:12241:tq.consume(own ? ":containsOwn" : ":contains"); |==> <NO-OP>
+509:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@contains(boolean):343:12374:Validate.notEmpty(searchText, ":contains(text) query must not be empty"); |==> <NO-OP>
+510:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.select.QueryParser@contains(boolean):344:12460:own |==> false
+511:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.select.QueryParser@contains(boolean):344:12460:own |==> true
+512:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@contains(boolean):345:12477:evals.add(new Evaluator.ContainsOwnText(searchText)); |==> <NO-OP>
+513:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@contains(boolean):347:12556:evals.add(new Evaluator.ContainsText(searchText)); |==> <NO-OP>
+514:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@containsData():352:12699:tq.consume(":containsData"); |==> <NO-OP>
+515:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@containsData():354:12813:Validate.notEmpty(searchText, ":containsData(text) query must not be empty"); |==> <NO-OP>
+516:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@containsData():355:12899:evals.add(new Evaluator.ContainsData(searchText)); |==> <NO-OP>
+517:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.select.QueryParser@matches(boolean):360:13058:own |==> false
+518:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.select.QueryParser@matches(boolean):360:13058:own |==> true
+519:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@matches(boolean):360:13047:tq.consume(own ? ":matchesOwn" : ":matches"); |==> <NO-OP>
+520:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@matches(boolean):362:13201:Validate.notEmpty(regex, ":matches(regex) query must not be empty"); |==> <NO-OP>
+521:COR:<IDENTIFIER(boolean)>:FALSE:org.jsoup.select.QueryParser@matches(boolean):364:13283:own |==> false
+522:COR:<IDENTIFIER(boolean)>:TRUE:org.jsoup.select.QueryParser@matches(boolean):364:13283:own |==> true
+523:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@matches(boolean):365:13300:evals.add(new Evaluator.MatchesOwn(Pattern.compile(regex))); |==> <NO-OP>
+524:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@matches(boolean):367:13386:evals.add(new Evaluator.Matches(Pattern.compile(regex))); |==> <NO-OP>
+525:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@not():372:13506:tq.consume(":not"); |==> <NO-OP>
+526:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@not():374:13588:Validate.notEmpty(subQuery, ":not(selector) subselect must not be empty"); |==> <NO-OP>
+527:STD:<CALL>:<NO-OP>:org.jsoup.select.QueryParser@not():376:13672:evals.add(new StructuralEvaluator.Not(parse(subQuery))); |==> <NO-OP>
