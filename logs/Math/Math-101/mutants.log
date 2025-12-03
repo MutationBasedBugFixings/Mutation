@@ -1,0 +1,151 @@
+1:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@<init>(java.lang.String,java.text.NumberFormat,java.text.NumberFormat):111:4254:setImaginaryCharacter(imaginaryCharacter); |==> <NO-OP>
+2:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@<init>(java.lang.String,java.text.NumberFormat,java.text.NumberFormat):112:4305:setImaginaryFormat(imaginaryFormat); |==> <NO-OP>
+3:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@<init>(java.lang.String,java.text.NumberFormat,java.text.NumberFormat):113:4350:setRealFormat(realFormat); |==> <NO-OP>
+4:LVR:0:POS:org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):139:5214:0 |==> 1
+5:LVR:0:NEG:org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):139:5214:0 |==> -1
+6:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):139:5196:pos.setBeginIndex(0); |==> <NO-OP>
+7:LVR:0:POS:org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):140:5242:0 |==> 1
+8:LVR:0:NEG:org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):140:5242:0 |==> -1
+9:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):140:5226:pos.setEndIndex(0); |==> <NO-OP>
+10:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):144:5317:formatDouble(re, getRealFormat(), toAppendTo, pos); |==> <NO-OP>
+11:LVR:0:POS:org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):148:5476:0.0 |==> 1.0
+12:LVR:0:NEG:org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):148:5476:0.0 |==> -1.0
+13:ROR:<(double,double):!=(double,double):org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):148:5471:im < 0.0 |==> im != 0.0
+14:ROR:<(double,double):<=(double,double):org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):148:5471:im < 0.0 |==> im <= 0.0
+15:ROR:<(double,double):FALSE(double,double):org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):148:5474:im < 0.0 |==> false
+16:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):149:5495:toAppendTo.append(" - "); |==> <NO-OP>
+17:ORU:-(double):+(double):org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):150:5546:-im |==> +im
+18:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):150:5533:formatDouble(-im, getImaginaryFormat(), toAppendTo, pos); |==> <NO-OP>
+19:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):151:5603:toAppendTo.append(getImaginaryCharacter()); |==> <NO-OP>
+20:LVR:0:POS:org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):152:5671:0.0 |==> 1.0
+21:LVR:0:NEG:org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):152:5671:0.0 |==> -1.0
+22:ROR:>(double,double):!=(double,double):org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):152:5666:im > 0.0 |==> im != 0.0
+23:ROR:>(double,double):>=(double,double):org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):152:5666:im > 0.0 |==> im >= 0.0
+24:ROR:>(double,double):FALSE(double,double):org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):152:5669:im > 0.0 |==> false
+25:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):152:5666:im > 0.0 || Double.isNaN(im) |==> im > 0.0 != Double.isNaN(im)
+26:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):152:5666:im > 0.0 || Double.isNaN(im) |==> im > 0.0
+27:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):152:5678:im > 0.0 || Double.isNaN(im) |==> Double.isNaN(im)
+28:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):152:5675:im > 0.0 || Double.isNaN(im) |==> true
+29:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):153:5710:toAppendTo.append(" + "); |==> <NO-OP>
+30:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):154:5748:formatDouble(im, getImaginaryFormat(), toAppendTo, pos); |==> <NO-OP>
+31:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@format(org.apache.commons.math.complex.Complex,java.lang.StringBuffer,java.text.FieldPosition):155:5817:toAppendTo.append(getImaginaryCharacter()); |==> <NO-OP>
+32:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@format(java.lang.Object,java.lang.StringBuffer,java.text.FieldPosition):180:6836:ret = format((Complex)obj, toAppendTo, pos); |==> <NO-OP>
+33:LVR:0:POS:org.apache.commons.math.complex.ComplexFormat@format(java.lang.Object,java.lang.StringBuffer,java.text.FieldPosition):182:6993:0.0 |==> 1.0
+34:LVR:0:NEG:org.apache.commons.math.complex.ComplexFormat@format(java.lang.Object,java.lang.StringBuffer,java.text.FieldPosition):182:6993:0.0 |==> -1.0
+35:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@format(java.lang.Object,java.lang.StringBuffer,java.text.FieldPosition):182:6938:ret = format(new Complex(((Number)obj).doubleValue(), 0.0), toAppendTo, pos); |==> <NO-OP>
+36:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.math.complex.ComplexFormat@formatDouble(double,java.text.NumberFormat,java.lang.StringBuffer,java.text.FieldPosition):211:8065:Double.isNaN(value) || Double.isInfinite(value) |==> Double.isNaN(value) != Double.isInfinite(value)
+37:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.math.complex.ComplexFormat@formatDouble(double,java.text.NumberFormat,java.lang.StringBuffer,java.text.FieldPosition):211:8065:Double.isNaN(value) || Double.isInfinite(value) |==> Double.isNaN(value)
+38:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.math.complex.ComplexFormat@formatDouble(double,java.text.NumberFormat,java.lang.StringBuffer,java.text.FieldPosition):211:8088:Double.isNaN(value) || Double.isInfinite(value) |==> Double.isInfinite(value)
+39:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.math.complex.ComplexFormat@formatDouble(double,java.text.NumberFormat,java.lang.StringBuffer,java.text.FieldPosition):211:8085:Double.isNaN(value) || Double.isInfinite(value) |==> true
+40:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@formatDouble(double,java.text.NumberFormat,java.lang.StringBuffer,java.text.FieldPosition):212:8129:toAppendTo.append('('); |==> <NO-OP>
+41:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@formatDouble(double,java.text.NumberFormat,java.lang.StringBuffer,java.text.FieldPosition):213:8165:toAppendTo.append(value); |==> <NO-OP>
+42:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@formatDouble(double,java.text.NumberFormat,java.lang.StringBuffer,java.text.FieldPosition):214:8203:toAppendTo.append(')'); |==> <NO-OP>
+43:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@formatDouble(double,java.text.NumberFormat,java.lang.StringBuffer,java.text.FieldPosition):216:8256:format.format(value, toAppendTo, pos); |==> <NO-OP>
+44:LVR:POS:0:org.apache.commons.math.complex.ComplexFormat@getDefaultNumberFormat(java.util.Locale):249:9607:2 |==> 0
+45:LVR:POS:NEG:org.apache.commons.math.complex.ComplexFormat@getDefaultNumberFormat(java.util.Locale):249:9607:2 |==> -2
+46:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@getDefaultNumberFormat(java.util.Locale):249:9579:nf.setMaximumFractionDigits(2); |==> <NO-OP>
+47:LVR:0:POS:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String):304:11162:0 |==> 1
+48:LVR:0:NEG:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String):304:11162:0 |==> -1
+49:LVR:0:POS:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String):306:11261:0 |==> 1
+50:LVR:0:NEG:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String):306:11261:0 |==> -1
+51:ROR:==(int,int):<=(int,int):org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String):306:11233:parsePosition.getIndex() == 0 |==> parsePosition.getIndex() <= 0
+52:ROR:==(int,int):>=(int,int):org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String):306:11233:parsePosition.getIndex() == 0 |==> parsePosition.getIndex() >= 0
+53:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String):306:11258:parsePosition.getIndex() == 0 |==> false
+54:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):324:11809:parseAndIgnoreWhitespace(source, pos); |==> <NO-OP>
+55:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):328:11949:re == null |==> false
+56:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):332:12118:pos.setIndex(initialIndex); |==> <NO-OP>
+57:LVR:0:POS:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):344:12474:0.0 |==> 1.0
+58:LVR:0:NEG:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):344:12474:0.0 |==> -1.0
+59:LVR:NEG:0:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):346:12518:-1 |==> 0
+60:LVR:NEG:POS:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):346:12518:-1 |==> 1
+61:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):346:12511:sign = -1; |==> <NO-OP>
+62:LVR:POS:0:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):349:12579:1 |==> 0
+63:LVR:POS:NEG:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):349:12579:1 |==> -1
+64:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):349:12572:sign = 1; |==> <NO-OP>
+65:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):355:12767:pos.setIndex(initialIndex); |==> <NO-OP>
+66:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):356:12807:pos.setErrorIndex(startIndex); |==> <NO-OP>
+67:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):361:12910:parseAndIgnoreWhitespace(source, pos); |==> <NO-OP>
+68:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):365:13055:im == null |==> false
+69:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):369:13229:pos.setIndex(initialIndex); |==> <NO-OP>
+70:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):375:13388:startIndex = pos.getIndex(); |==> <NO-OP>
+71:AOR:+(int,int):%(int,int):org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):376:13440:startIndex + n |==> startIndex % n
+72:AOR:+(int,int):*(int,int):org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):376:13440:startIndex + n |==> startIndex * n
+73:AOR:+(int,int):-(int,int):org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):376:13440:startIndex + n |==> startIndex - n
+74:AOR:+(int,int):/(int,int):org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):376:13440:startIndex + n |==> startIndex / n
+75:LVR:0:POS:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):379:13571:0 |==> 1
+76:LVR:0:NEG:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):379:13571:0 |==> -1
+77:ROR:!=(int,int):<(int,int):org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):378:13481:source.substring(startIndex, endIndex).compareTo(getImaginaryCharacter()) != 0 |==> source.substring(startIndex, endIndex).compareTo(getImaginaryCharacter()) < 0
+78:ROR:!=(int,int):>(int,int):org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):378:13481:source.substring(startIndex, endIndex).compareTo(getImaginaryCharacter()) != 0 |==> source.substring(startIndex, endIndex).compareTo(getImaginaryCharacter()) > 0
+79:ROR:!=(int,int):TRUE(int,int):org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):379:13568:source.substring(startIndex, endIndex).compareTo(getImaginaryCharacter()) != 0 |==> true
+80:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):382:13703:pos.setIndex(initialIndex); |==> <NO-OP>
+81:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):383:13743:pos.setErrorIndex(startIndex); |==> <NO-OP>
+82:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):386:13817:pos.setIndex(endIndex); |==> <NO-OP>
+83:AOR:*(double,double):%(double,double):org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):388:13887:im.doubleValue() * sign |==> im.doubleValue() % sign
+84:AOR:*(double,double):+(double,double):org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):388:13887:im.doubleValue() * sign |==> im.doubleValue() + sign
+85:AOR:*(double,double):-(double,double):org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):388:13887:im.doubleValue() * sign |==> im.doubleValue() - sign
+86:AOR:*(double,double):/(double,double):org.apache.commons.math.complex.ComplexFormat@parse(java.lang.String,java.text.ParsePosition):388:13887:im.doubleValue() * sign |==> im.doubleValue() / sign
+87:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@parseAndIgnoreWhitespace(java.lang.String,java.text.ParsePosition):399:14298:parseNextCharacter(source, pos); |==> <NO-OP>
+88:LVR:POS:0:org.apache.commons.math.complex.ComplexFormat@parseAndIgnoreWhitespace(java.lang.String,java.text.ParsePosition):400:14369:1 |==> 0
+89:LVR:POS:NEG:org.apache.commons.math.complex.ComplexFormat@parseAndIgnoreWhitespace(java.lang.String,java.text.ParsePosition):400:14369:1 |==> -1
+90:AOR:-(int,int):%(int,int):org.apache.commons.math.complex.ComplexFormat@parseAndIgnoreWhitespace(java.lang.String,java.text.ParsePosition):400:14352:pos.getIndex() - 1 |==> pos.getIndex() % 1
+91:AOR:-(int,int):*(int,int):org.apache.commons.math.complex.ComplexFormat@parseAndIgnoreWhitespace(java.lang.String,java.text.ParsePosition):400:14352:pos.getIndex() - 1 |==> pos.getIndex() * 1
+92:AOR:-(int,int):+(int,int):org.apache.commons.math.complex.ComplexFormat@parseAndIgnoreWhitespace(java.lang.String,java.text.ParsePosition):400:14352:pos.getIndex() - 1 |==> pos.getIndex() + 1
+93:AOR:-(int,int):/(int,int):org.apache.commons.math.complex.ComplexFormat@parseAndIgnoreWhitespace(java.lang.String,java.text.ParsePosition):400:14352:pos.getIndex() - 1 |==> pos.getIndex() / 1
+94:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@parseAndIgnoreWhitespace(java.lang.String,java.text.ParsePosition):400:14339:pos.setIndex(pos.getIndex() - 1); |==> <NO-OP>
+95:LVR:0:POS:org.apache.commons.math.complex.ComplexFormat@parseNextCharacter(java.lang.String,java.text.ParsePosition):413:14784:0 |==> 1
+96:LVR:0:NEG:org.apache.commons.math.complex.ComplexFormat@parseNextCharacter(java.lang.String,java.text.ParsePosition):413:14784:0 |==> -1
+97:ROR:<(int,int):!=(int,int):org.apache.commons.math.complex.ComplexFormat@parseNextCharacter(java.lang.String,java.text.ParsePosition):415:14801:index < n |==> index != n
+98:ROR:<(int,int):<=(int,int):org.apache.commons.math.complex.ComplexFormat@parseNextCharacter(java.lang.String,java.text.ParsePosition):415:14801:index < n |==> index <= n
+99:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.complex.ComplexFormat@parseNextCharacter(java.lang.String,java.text.ParsePosition):415:14807:index < n |==> false
+100:ROR:<(int,int):!=(int,int):org.apache.commons.math.complex.ComplexFormat@parseNextCharacter(java.lang.String,java.text.ParsePosition):419:14949:index < n |==> index != n
+101:ROR:<(int,int):<=(int,int):org.apache.commons.math.complex.ComplexFormat@parseNextCharacter(java.lang.String,java.text.ParsePosition):419:14949:index < n |==> index <= n
+102:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.complex.ComplexFormat@parseNextCharacter(java.lang.String,java.text.ParsePosition):419:14955:index < n |==> false
+103:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.math.complex.ComplexFormat@parseNextCharacter(java.lang.String,java.text.ParsePosition):419:14920:Character.isWhitespace(c) && index < n |==> Character.isWhitespace(c) == index < n
+104:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.math.complex.ComplexFormat@parseNextCharacter(java.lang.String,java.text.ParsePosition):419:14946:Character.isWhitespace(c) && index < n |==> false
+105:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.math.complex.ComplexFormat@parseNextCharacter(java.lang.String,java.text.ParsePosition):419:14920:Character.isWhitespace(c) && index < n |==> Character.isWhitespace(c)
+106:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.math.complex.ComplexFormat@parseNextCharacter(java.lang.String,java.text.ParsePosition):419:14949:Character.isWhitespace(c) && index < n |==> index < n
+107:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@parseNextCharacter(java.lang.String,java.text.ParsePosition):420:14974:pos.setIndex(index); |==> <NO-OP>
+108:ROR:<(int,int):!=(int,int):org.apache.commons.math.complex.ComplexFormat@parseNextCharacter(java.lang.String,java.text.ParsePosition):422:15022:index < n |==> index != n
+109:ROR:<(int,int):<=(int,int):org.apache.commons.math.complex.ComplexFormat@parseNextCharacter(java.lang.String,java.text.ParsePosition):422:15022:index < n |==> index <= n
+110:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.complex.ComplexFormat@parseNextCharacter(java.lang.String,java.text.ParsePosition):422:15028:index < n |==> false
+111:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@parseNextCharacter(java.lang.String,java.text.ParsePosition):423:15052:ret = c; |==> <NO-OP>
+112:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,double,java.text.ParsePosition):443:15652:sb.append('('); |==> <NO-OP>
+113:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,double,java.text.ParsePosition):444:15676:sb.append(value); |==> <NO-OP>
+114:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,double,java.text.ParsePosition):445:15702:sb.append(')'); |==> <NO-OP>
+115:AOR:+(int,int):%(int,int):org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,double,java.text.ParsePosition):449:15820:startIndex + n |==> startIndex % n
+116:AOR:+(int,int):*(int,int):org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,double,java.text.ParsePosition):449:15820:startIndex + n |==> startIndex * n
+117:AOR:+(int,int):-(int,int):org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,double,java.text.ParsePosition):449:15820:startIndex + n |==> startIndex - n
+118:AOR:+(int,int):/(int,int):org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,double,java.text.ParsePosition):449:15820:startIndex + n |==> startIndex / n
+119:ROR:<(int,int):!=(int,int):org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,double,java.text.ParsePosition):450:15848:endIndex < source.length() |==> endIndex != source.length()
+120:ROR:<(int,int):<=(int,int):org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,double,java.text.ParsePosition):450:15848:endIndex < source.length() |==> endIndex <= source.length()
+121:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,double,java.text.ParsePosition):450:15857:endIndex < source.length() |==> false
+122:LVR:0:POS:org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,double,java.text.ParsePosition):451:15961:0 |==> 1
+123:LVR:0:NEG:org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,double,java.text.ParsePosition):451:15961:0 |==> -1
+124:ROR:==(int,int):<=(int,int):org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,double,java.text.ParsePosition):451:15894:source.substring(startIndex, endIndex).compareTo(sb.toString()) == 0 |==> source.substring(startIndex, endIndex).compareTo(sb.toString()) <= 0
+125:ROR:==(int,int):>=(int,int):org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,double,java.text.ParsePosition):451:15894:source.substring(startIndex, endIndex).compareTo(sb.toString()) == 0 |==> source.substring(startIndex, endIndex).compareTo(sb.toString()) >= 0
+126:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,double,java.text.ParsePosition):451:15958:source.substring(startIndex, endIndex).compareTo(sb.toString()) == 0 |==> false
+127:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,double,java.text.ParsePosition):452:15982:ret = new Double(value); |==> <NO-OP>
+128:STD:<CALL>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,double,java.text.ParsePosition):453:16023:pos.setIndex(endIndex); |==> <NO-OP>
+129:ROR:==(int,int):<=(int,int):org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,java.text.NumberFormat,java.text.ParsePosition):476:16846:startIndex == endIndex |==> startIndex <= endIndex
+130:ROR:==(int,int):>=(int,int):org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,java.text.NumberFormat,java.text.ParsePosition):476:16846:startIndex == endIndex |==> startIndex >= endIndex
+131:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,java.text.NumberFormat,java.text.ParsePosition):476:16857:startIndex == endIndex |==> false
+132:LVR:0:POS:org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,java.text.NumberFormat,java.text.ParsePosition):479:17037:0 |==> 1
+133:LVR:0:NEG:org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,java.text.NumberFormat,java.text.ParsePosition):479:17037:0 |==> -1
+134:ROR:<(int,int):<=(int,int):org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,java.text.NumberFormat,java.text.ParsePosition):479:17040:i < special.length |==> i <= special.length
+135:ROR:<(int,int):FALSE(int,int):org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,java.text.NumberFormat,java.text.ParsePosition):479:17042:i < special.length |==> false
+136:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,java.text.NumberFormat,java.text.ParsePosition):480:17083:number = parseNumber(source, special[i], pos); |==> <NO-OP>
+137:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.math.complex.ComplexFormat@parseNumber(java.lang.String,java.text.NumberFormat,java.text.ParsePosition):481:17157:number != null |==> true
+138:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.math.complex.ComplexFormat@setImaginaryCharacter(java.lang.String):508:18008:imaginaryCharacter == null |==> false
+139:LVR:0:POS:org.apache.commons.math.complex.ComplexFormat@setImaginaryCharacter(java.lang.String):508:18050:0 |==> 1
+140:LVR:0:NEG:org.apache.commons.math.complex.ComplexFormat@setImaginaryCharacter(java.lang.String):508:18050:0 |==> -1
+141:ROR:==(int,int):>=(int,int):org.apache.commons.math.complex.ComplexFormat@setImaginaryCharacter(java.lang.String):508:18019:imaginaryCharacter.length() == 0 |==> imaginaryCharacter.length() >= 0
+142:ROR:==(int,int):FALSE(int,int):org.apache.commons.math.complex.ComplexFormat@setImaginaryCharacter(java.lang.String):508:18047:imaginaryCharacter.length() == 0 |==> false
+143:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.math.complex.ComplexFormat@setImaginaryCharacter(java.lang.String):508:17989:imaginaryCharacter == null || imaginaryCharacter.length() == 0 |==> imaginaryCharacter == null != (imaginaryCharacter.length() == 0)
+144:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.math.complex.ComplexFormat@setImaginaryCharacter(java.lang.String):508:17989:imaginaryCharacter == null || imaginaryCharacter.length() == 0 |==> imaginaryCharacter == null
+145:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.math.complex.ComplexFormat@setImaginaryCharacter(java.lang.String):508:18019:imaginaryCharacter == null || imaginaryCharacter.length() == 0 |==> imaginaryCharacter.length() == 0
+146:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.math.complex.ComplexFormat@setImaginaryCharacter(java.lang.String):508:18016:imaginaryCharacter == null || imaginaryCharacter.length() == 0 |==> true
+147:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@setImaginaryCharacter(java.lang.String):512:18188:this.imaginaryCharacter = imaginaryCharacter; |==> <NO-OP>
+148:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.math.complex.ComplexFormat@setImaginaryFormat(java.text.NumberFormat):522:18561:imaginaryFormat == null |==> false
+149:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@setImaginaryFormat(java.text.NumberFormat):526:18691:this.imaginaryFormat = imaginaryFormat; |==> <NO-OP>
+150:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.math.complex.ComplexFormat@setRealFormat(java.text.NumberFormat):536:19023:realFormat == null |==> false
+151:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math.complex.ComplexFormat@setRealFormat(java.text.NumberFormat):540:19148:this.realFormat = realFormat; |==> <NO-OP>
