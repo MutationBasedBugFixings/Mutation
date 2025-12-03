@@ -1,0 +1,42 @@
+1:STD:<CALL>:<NO-OP>:org.jsoup.helper.W3CDom@fromJsoup(org.jsoup.nodes.Document):37:1212:Validate.notNull(in); |==> <NO-OP>
+2:LVR:TRUE:FALSE:org.jsoup.helper.W3CDom@fromJsoup(org.jsoup.nodes.Document):41:1365:true |==> false
+3:STD:<CALL>:<NO-OP>:org.jsoup.helper.W3CDom@fromJsoup(org.jsoup.nodes.Document):41:1339:factory.setNamespaceAware(true); |==> <NO-OP>
+4:STD:<CALL>:<NO-OP>:org.jsoup.helper.W3CDom@fromJsoup(org.jsoup.nodes.Document):44:1486:convert(in, out); |==> <NO-OP>
+5:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.W3CDom@convert(org.jsoup.nodes.Document,org.w3c.dom.Document):59:2032:StringUtil.isBlank(in.location()) |==> false
+6:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.W3CDom@convert(org.jsoup.nodes.Document,org.w3c.dom.Document):59:2032:StringUtil.isBlank(in.location()) |==> true
+7:STD:<CALL>:<NO-OP>:org.jsoup.helper.W3CDom@convert(org.jsoup.nodes.Document,org.w3c.dom.Document):60:2061:out.setDocumentURI(in.location()); |==> <NO-OP>
+8:LVR:0:POS:org.jsoup.helper.W3CDom@convert(org.jsoup.nodes.Document,org.w3c.dom.Document):62:2147:0 |==> 1
+9:LVR:0:NEG:org.jsoup.helper.W3CDom@convert(org.jsoup.nodes.Document,org.w3c.dom.Document):62:2147:0 |==> -1
+10:STD:<CALL>:<NO-OP>:org.jsoup.helper.W3CDom@convert(org.jsoup.nodes.Document,org.w3c.dom.Document):63:2182:NodeTraversor.traverse(new W3CBuilder(out), rootEl); |==> <NO-OP>
+11:STD:<CALL>:<NO-OP>:org.jsoup.helper.W3CDom$W3CBuilder@<init>(org.w3c.dom.Document):79:2766:this.namespacesStack.push(new HashMap<String, String>()); |==> <NO-OP>
+12:STD:<CALL>:<NO-OP>:org.jsoup.helper.W3CDom$W3CBuilder@head(org.jsoup.nodes.Node,int):83:2914:namespacesStack.push(new HashMap<>(namespacesStack.peek())); |==> <NO-OP>
+13:STD:<CALL>:<NO-OP>:org.jsoup.helper.W3CDom$W3CBuilder@head(org.jsoup.nodes.Node,int):93:3449:copyAttributes(sourceEl, el); |==> <NO-OP>
+14:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.jsoup.helper.W3CDom$W3CBuilder@head(org.jsoup.nodes.Node,int):94:3504:dest == null |==> false
+15:STD:<CALL>:<NO-OP>:org.jsoup.helper.W3CDom$W3CBuilder@head(org.jsoup.nodes.Node,int):95:3555:doc.appendChild(el); |==> <NO-OP>
+16:STD:<CALL>:<NO-OP>:org.jsoup.helper.W3CDom$W3CBuilder@head(org.jsoup.nodes.Node,int):97:3621:dest.appendChild(el); |==> <NO-OP>
+17:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.W3CDom$W3CBuilder@head(org.jsoup.nodes.Node,int):99:3677:dest = el; |==> <NO-OP>
+18:STD:<CALL>:<NO-OP>:org.jsoup.helper.W3CDom$W3CBuilder@head(org.jsoup.nodes.Node,int):103:3948:dest.appendChild(text); |==> <NO-OP>
+19:STD:<CALL>:<NO-OP>:org.jsoup.helper.W3CDom$W3CBuilder@head(org.jsoup.nodes.Node,int):107:4224:dest.appendChild(comment); |==> <NO-OP>
+20:STD:<CALL>:<NO-OP>:org.jsoup.helper.W3CDom$W3CBuilder@head(org.jsoup.nodes.Node,int):111:4500:dest.appendChild(node); |==> <NO-OP>
+21:COR:&&(boolean,boolean):==(boolean,boolean):org.jsoup.helper.W3CDom$W3CBuilder@tail(org.jsoup.nodes.Node,int):118:4682:source instanceof org.jsoup.nodes.Element && dest.getParentNode() instanceof Element |==> source instanceof org.jsoup.nodes.Element == dest.getParentNode() instanceof Element
+22:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.jsoup.helper.W3CDom$W3CBuilder@tail(org.jsoup.nodes.Node,int):118:4724:source instanceof org.jsoup.nodes.Element && dest.getParentNode() instanceof Element |==> false
+23:COR:&&(boolean,boolean):LHS(boolean,boolean):org.jsoup.helper.W3CDom$W3CBuilder@tail(org.jsoup.nodes.Node,int):118:4682:source instanceof org.jsoup.nodes.Element && dest.getParentNode() instanceof Element |==> source instanceof org.jsoup.nodes.Element
+24:COR:&&(boolean,boolean):RHS(boolean,boolean):org.jsoup.helper.W3CDom$W3CBuilder@tail(org.jsoup.nodes.Node,int):118:4727:source instanceof org.jsoup.nodes.Element && dest.getParentNode() instanceof Element |==> dest.getParentNode() instanceof Element
+25:STD:<ASSIGN>:<NO-OP>:org.jsoup.helper.W3CDom$W3CBuilder@tail(org.jsoup.nodes.Node,int):119:4786:dest = (Element)dest.getParentNode(); |==> <NO-OP>
+26:STD:<CALL>:<NO-OP>:org.jsoup.helper.W3CDom$W3CBuilder@tail(org.jsoup.nodes.Node,int):121:4876:namespacesStack.pop(); |==> <NO-OP>
+27:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.W3CDom$W3CBuilder@copyAttributes(org.jsoup.nodes.Node,org.w3c.dom.Element):128:5243:key.matches("[a-zA-Z_:][-a-zA-Z0-9_:.]*") |==> false
+28:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.W3CDom$W3CBuilder@copyAttributes(org.jsoup.nodes.Node,org.w3c.dom.Element):128:5243:key.matches("[a-zA-Z_:][-a-zA-Z0-9_:.]*") |==> true
+29:STD:<CALL>:<NO-OP>:org.jsoup.helper.W3CDom$W3CBuilder@copyAttributes(org.jsoup.nodes.Node,org.w3c.dom.Element):129:5295:el.setAttribute(key, attribute.getValue()); |==> <NO-OP>
+30:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.W3CDom$W3CBuilder@updateNamespaces(org.jsoup.nodes.Element):143:5861:key.equals(xmlnsKey) |==> false
+31:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.W3CDom$W3CBuilder@updateNamespaces(org.jsoup.nodes.Element):143:5861:key.equals(xmlnsKey) |==> true
+32:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.jsoup.helper.W3CDom$W3CBuilder@updateNamespaces(org.jsoup.nodes.Element):145:5949:key.startsWith(xmlnsPrefix) |==> false
+33:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.jsoup.helper.W3CDom$W3CBuilder@updateNamespaces(org.jsoup.nodes.Element):145:5949:key.startsWith(xmlnsPrefix) |==> true
+34:STD:<CALL>:<NO-OP>:org.jsoup.helper.W3CDom$W3CBuilder@updateNamespaces(org.jsoup.nodes.Element):150:6121:namespacesStack.peek().put(prefix, attr.getValue()); |==> <NO-OP>
+35:LVR:0:POS:org.jsoup.helper.W3CDom$W3CBuilder@updateNamespaces(org.jsoup.nodes.Element):155:6308:0 |==> 1
+36:LVR:0:NEG:org.jsoup.helper.W3CDom$W3CBuilder@updateNamespaces(org.jsoup.nodes.Element):155:6308:0 |==> -1
+37:ROR:>(int,int):!=(int,int):org.jsoup.helper.W3CDom$W3CBuilder@updateNamespaces(org.jsoup.nodes.Element):155:6302:pos > 0 |==> pos != 0
+38:ROR:>(int,int):>=(int,int):org.jsoup.helper.W3CDom$W3CBuilder@updateNamespaces(org.jsoup.nodes.Element):155:6302:pos > 0 |==> pos >= 0
+39:ROR:>(int,int):FALSE(int,int):org.jsoup.helper.W3CDom$W3CBuilder@updateNamespaces(org.jsoup.nodes.Element):155:6306:pos > 0 |==> false
+40:LVR:0:POS:org.jsoup.helper.W3CDom$W3CBuilder@updateNamespaces(org.jsoup.nodes.Element):155:6335:0 |==> 1
+41:LVR:0:NEG:org.jsoup.helper.W3CDom$W3CBuilder@updateNamespaces(org.jsoup.nodes.Element):155:6335:0 |==> -1
+42:STD:<CALL>:<NO-OP>:org.jsoup.helper.W3CDom@asString(org.w3c.dom.Document):172:6855:transformer.transform(domSource, result); |==> <NO-OP>
