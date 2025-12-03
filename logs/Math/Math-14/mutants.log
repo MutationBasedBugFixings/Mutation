@@ -1,0 +1,38 @@
+1:LVR:0:POS:org.apache.commons.math3.optim.nonlinear.vector.Weight@<init>(double[]):44:1705:0 |==> 1
+2:LVR:0:NEG:org.apache.commons.math3.optim.nonlinear.vector.Weight@<init>(double[]):44:1705:0 |==> -1
+3:ROR:<(int,int):!=(int,int):org.apache.commons.math3.optim.nonlinear.vector.Weight@<init>(double[]):44:1708:i < dim |==> i != dim
+4:ROR:<(int,int):<=(int,int):org.apache.commons.math3.optim.nonlinear.vector.Weight@<init>(double[]):44:1708:i < dim |==> i <= dim
+5:ROR:<(int,int):FALSE(int,int):org.apache.commons.math3.optim.nonlinear.vector.Weight@<init>(double[]):44:1710:i < dim |==> false
+6:STD:<CALL>:<NO-OP>:org.apache.commons.math3.optim.nonlinear.vector.Weight@<init>(double[]):45:1736:weightMatrix.setEntry(i, i, weight[i]); |==> <NO-OP>
+7:ROR:!=(int,int):<(int,int):org.apache.commons.math3.optim.nonlinear.vector.Weight@<init>(org.apache.commons.math3.linear.RealMatrix):55:1983:weight.getColumnDimension() != weight.getRowDimension() |==> weight.getColumnDimension() < weight.getRowDimension()
+8:ROR:!=(int,int):>(int,int):org.apache.commons.math3.optim.nonlinear.vector.Weight@<init>(org.apache.commons.math3.linear.RealMatrix):55:1983:weight.getColumnDimension() != weight.getRowDimension() |==> weight.getColumnDimension() > weight.getRowDimension()
+9:ROR:!=(int,int):TRUE(int,int):org.apache.commons.math3.optim.nonlinear.vector.Weight@<init>(org.apache.commons.math3.linear.RealMatrix):55:2011:weight.getColumnDimension() != weight.getRowDimension() |==> true
+10:AOR:/(double,double):%(double,double):org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@getRMS():92:3685:getChiSquare() / getTargetSize() |==> getChiSquare() % getTargetSize()
+11:AOR:/(double,double):*(double,double):org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@getRMS():92:3685:getChiSquare() / getTargetSize() |==> getChiSquare() * getTargetSize()
+12:AOR:/(double,double):+(double,double):org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@getRMS():92:3685:getChiSquare() / getTargetSize() |==> getChiSquare() + getTargetSize()
+13:AOR:/(double,double):-(double,double):org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@getRMS():92:3685:getChiSquare() / getTargetSize() |==> getChiSquare() - getTargetSize()
+14:AOR:*(double,double):%(double,double):org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@getChiSquare():102:4007:cost * cost |==> cost % cost
+15:AOR:*(double,double):+(double,double):org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@getChiSquare():102:4007:cost * cost |==> cost + cost
+16:AOR:*(double,double):-(double,double):org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@getChiSquare():102:4007:cost * cost |==> cost - cost
+17:AOR:*(double,double):/(double,double):org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@getChiSquare():102:4007:cost * cost |==> cost / cost
+18:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@setCost(double):120:4372:this.cost = cost; |==> <NO-OP>
+19:LVR:0:POS:org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@computeSigma(double[],double):172:6683:0 |==> 1
+20:LVR:0:NEG:org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@computeSigma(double[],double):172:6683:0 |==> -1
+21:ROR:<(int,int):!=(int,int):org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@computeSigma(double[],double):172:6686:i < nC |==> i != nC
+22:ROR:<(int,int):<=(int,int):org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@computeSigma(double[],double):172:6686:i < nC |==> i <= nC
+23:ROR:<(int,int):FALSE(int,int):org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@computeSigma(double[],double):172:6688:i < nC |==> false
+24:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@computeSigma(double[],double):173:6713:sig[i] = FastMath.sqrt(cov[i][i]); |==> <NO-OP>
+25:STD:<CALL>:<NO-OP>:org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@optimize(org.apache.commons.math3.optim.OptimizationData[]):201:7904:parseOptimizationData(optData); |==> <NO-OP>
+26:ROR:!=(int,int):<(int,int):org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@computeResiduals(double[]):223:8786:objectiveValue.length != target.length |==> objectiveValue.length < target.length
+27:ROR:!=(int,int):>(int,int):org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@computeResiduals(double[]):223:8786:objectiveValue.length != target.length |==> objectiveValue.length > target.length
+28:ROR:!=(int,int):TRUE(int,int):org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@computeResiduals(double[]):223:8808:objectiveValue.length != target.length |==> true
+29:LVR:0:POS:org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@computeResiduals(double[]):229:9059:0 |==> 1
+30:LVR:0:NEG:org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@computeResiduals(double[]):229:9059:0 |==> -1
+31:ROR:<(int,int):<=(int,int):org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@computeResiduals(double[]):229:9062:i < target.length |==> i <= target.length
+32:ROR:<(int,int):FALSE(int,int):org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@computeResiduals(double[]):229:9064:i < target.length |==> false
+33:AOR:-(double,double):%(double,double):org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@computeResiduals(double[]):230:9115:target[i] - objectiveValue[i] |==> target[i] % objectiveValue[i]
+34:AOR:-(double,double):*(double,double):org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@computeResiduals(double[]):230:9115:target[i] - objectiveValue[i] |==> target[i] * objectiveValue[i]
+35:AOR:-(double,double):+(double,double):org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@computeResiduals(double[]):230:9115:target[i] - objectiveValue[i] |==> target[i] + objectiveValue[i]
+36:AOR:-(double,double):/(double,double):org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@computeResiduals(double[]):230:9115:target[i] - objectiveValue[i] |==> target[i] / objectiveValue[i]
+37:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@computeResiduals(double[]):230:9100:residuals[i] = target[i] - objectiveValue[i]; |==> <NO-OP>
+38:STD:<ASSIGN>:<NO-OP>:org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer@parseOptimizationData(org.apache.commons.math3.optim.OptimizationData[]):252:9852:weightMatrixSqrt = squareRoot(((Weight)data).getWeight()); |==> <NO-OP>
