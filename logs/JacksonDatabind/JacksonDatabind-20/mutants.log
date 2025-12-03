@@ -1,0 +1,95 @@
+1:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@deepCopy():59:1694:ret._children.put(entry.getKey(), entry.getValue().deepCopy()); |==> <NO-OP>
+2:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.node.ObjectNode@path(java.lang.String):109:2843:n != null |==> true
+3:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.node.ObjectNode@with(java.lang.String):127:3311:n != null |==> true
+4:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@with(java.lang.String):136:3677:_children.put(propertyName, result); |==> <NO-OP>
+5:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.node.ObjectNode@withArray(java.lang.String):144:3880:n != null |==> true
+6:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@withArray(java.lang.String):153:4241:_children.put(propertyName, result); |==> <NO-OP>
+7:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.databind.node.ObjectNode@findValue(java.lang.String):167:4672:fieldName.equals(entry.getKey()) |==> false
+8:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.databind.node.ObjectNode@findValue(java.lang.String):167:4672:fieldName.equals(entry.getKey()) |==> true
+9:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.node.ObjectNode@findValue(java.lang.String):171:4837:value != null |==> true
+10:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.databind.node.ObjectNode@findValues(java.lang.String,java.util.List<com.fasterxml.jackson.databind.JsonNode>):182:5141:fieldName.equals(entry.getKey()) |==> false
+11:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.databind.node.ObjectNode@findValues(java.lang.String,java.util.List<com.fasterxml.jackson.databind.JsonNode>):182:5141:fieldName.equals(entry.getKey()) |==> true
+12:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.node.ObjectNode@findValues(java.lang.String,java.util.List<com.fasterxml.jackson.databind.JsonNode>):183:5192:foundSoFar == null |==> false
+13:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@findValues(java.lang.String,java.util.List<com.fasterxml.jackson.databind.JsonNode>):184:5223:foundSoFar = new ArrayList<JsonNode>(); |==> <NO-OP>
+14:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@findValues(java.lang.String,java.util.List<com.fasterxml.jackson.databind.JsonNode>):186:5297:foundSoFar.add(entry.getValue()); |==> <NO-OP>
+15:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@findValues(java.lang.String,java.util.List<com.fasterxml.jackson.databind.JsonNode>):188:5409:foundSoFar = entry.getValue().findValues(fieldName, foundSoFar); |==> <NO-OP>
+16:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.databind.node.ObjectNode@findValuesAsText(java.lang.String,java.util.List<java.lang.String>):198:5741:fieldName.equals(entry.getKey()) |==> false
+17:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.databind.node.ObjectNode@findValuesAsText(java.lang.String,java.util.List<java.lang.String>):198:5741:fieldName.equals(entry.getKey()) |==> true
+18:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.node.ObjectNode@findValuesAsText(java.lang.String,java.util.List<java.lang.String>):199:5792:foundSoFar == null |==> false
+19:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@findValuesAsText(java.lang.String,java.util.List<java.lang.String>):200:5823:foundSoFar = new ArrayList<String>(); |==> <NO-OP>
+20:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@findValuesAsText(java.lang.String,java.util.List<java.lang.String>):202:5895:foundSoFar.add(entry.getValue().asText()); |==> <NO-OP>
+21:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@findValuesAsText(java.lang.String,java.util.List<java.lang.String>):204:6016:foundSoFar = entry.getValue().findValuesAsText(fieldName, foundSoFar); |==> <NO-OP>
+22:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.databind.node.ObjectNode@findParent(java.lang.String):215:6345:fieldName.equals(entry.getKey()) |==> false
+23:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.databind.node.ObjectNode@findParent(java.lang.String):215:6345:fieldName.equals(entry.getKey()) |==> true
+24:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.node.ObjectNode@findParent(java.lang.String):219:6499:value != null |==> true
+25:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.databind.node.ObjectNode@findParents(java.lang.String,java.util.List<com.fasterxml.jackson.databind.JsonNode>):230:6813:fieldName.equals(entry.getKey()) |==> false
+26:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.databind.node.ObjectNode@findParents(java.lang.String,java.util.List<com.fasterxml.jackson.databind.JsonNode>):230:6813:fieldName.equals(entry.getKey()) |==> true
+27:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.node.ObjectNode@findParents(java.lang.String,java.util.List<com.fasterxml.jackson.databind.JsonNode>):231:6864:foundSoFar == null |==> false
+28:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@findParents(java.lang.String,java.util.List<com.fasterxml.jackson.databind.JsonNode>):232:6895:foundSoFar = new ArrayList<JsonNode>(); |==> <NO-OP>
+29:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@findParents(java.lang.String,java.util.List<com.fasterxml.jackson.databind.JsonNode>):234:6969:foundSoFar.add(this); |==> <NO-OP>
+30:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@findParents(java.lang.String,java.util.List<com.fasterxml.jackson.databind.JsonNode>):236:7069:foundSoFar = entry.getValue().findParents(fieldName, foundSoFar); |==> <NO-OP>
+31:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@serialize(com.fasterxml.jackson.core.JsonGenerator,com.fasterxml.jackson.databind.SerializerProvider):257:7686:jg.writeStartObject(); |==> <NO-OP>
+32:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@serialize(com.fasterxml.jackson.core.JsonGenerator,com.fasterxml.jackson.databind.SerializerProvider):259:7791:jg.writeFieldName(en.getKey()); |==> <NO-OP>
+33:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@serialize(com.fasterxml.jackson.core.JsonGenerator,com.fasterxml.jackson.databind.SerializerProvider):265:8109:((BaseJsonNode)en.getValue()).serialize(jg, provider); |==> <NO-OP>
+34:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@serialize(com.fasterxml.jackson.core.JsonGenerator,com.fasterxml.jackson.databind.SerializerProvider):267:8183:jg.writeEndObject(); |==> <NO-OP>
+35:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@serializeWithType(com.fasterxml.jackson.core.JsonGenerator,com.fasterxml.jackson.databind.SerializerProvider,com.fasterxml.jackson.databind.jsontype.TypeSerializer):275:8408:typeSer.writeTypePrefixForObject(this, jg); |==> <NO-OP>
+36:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@serializeWithType(com.fasterxml.jackson.core.JsonGenerator,com.fasterxml.jackson.databind.SerializerProvider,com.fasterxml.jackson.databind.jsontype.TypeSerializer):277:8534:jg.writeFieldName(en.getKey()); |==> <NO-OP>
+37:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@serializeWithType(com.fasterxml.jackson.core.JsonGenerator,com.fasterxml.jackson.databind.SerializerProvider,com.fasterxml.jackson.databind.jsontype.TypeSerializer):278:8578:((BaseJsonNode)en.getValue()).serialize(jg, provider); |==> <NO-OP>
+38:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@serializeWithType(com.fasterxml.jackson.core.JsonGenerator,com.fasterxml.jackson.databind.SerializerProvider,com.fasterxml.jackson.databind.jsontype.TypeSerializer):280:8652:typeSer.writeTypeSuffixForObject(this, jg); |==> <NO-OP>
+39:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.node.ObjectNode@set(java.lang.String,com.fasterxml.jackson.databind.JsonNode):307:9595:value == null |==> false
+40:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@set(java.lang.String,com.fasterxml.jackson.databind.JsonNode):308:9618:value = nullNode(); |==> <NO-OP>
+41:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@set(java.lang.String,com.fasterxml.jackson.databind.JsonNode):310:9656:_children.put(fieldName, value); |==> <NO-OP>
+42:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.node.ObjectNode@setAll(java.util.Map<java.lang.String,? extends com.fasterxml.jackson.databind.JsonNode>):328:10238:n == null |==> false
+43:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@setAll(java.util.Map<java.lang.String,? extends com.fasterxml.jackson.databind.JsonNode>):329:10265:n = nullNode(); |==> <NO-OP>
+44:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@setAll(java.util.Map<java.lang.String,? extends com.fasterxml.jackson.databind.JsonNode>):331:10307:_children.put(en.getKey(), n); |==> <NO-OP>
+45:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@setAll(com.fasterxml.jackson.databind.node.ObjectNode):348:10741:_children.putAll(other._children); |==> <NO-OP>
+46:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.node.ObjectNode@replace(java.lang.String,com.fasterxml.jackson.databind.JsonNode):366:11300:value == null |==> false
+47:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@replace(java.lang.String,com.fasterxml.jackson.databind.JsonNode):367:11364:value = nullNode(); |==> <NO-OP>
+48:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@without(java.lang.String):382:11720:_children.remove(fieldName); |==> <NO-OP>
+49:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@without(java.util.Collection<java.lang.String>):398:12094:_children.keySet().removeAll(fieldNames); |==> <NO-OP>
+50:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.node.ObjectNode@put(java.lang.String,com.fasterxml.jackson.databind.JsonNode):423:12942:value == null |==> false
+51:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@put(java.lang.String,com.fasterxml.jackson.databind.JsonNode):424:13006:value = nullNode(); |==> <NO-OP>
+52:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@remove(java.util.Collection<java.lang.String>):450:13718:_children.keySet().removeAll(fieldNames); |==> <NO-OP>
+53:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@removeAll():463:14051:_children.clear(); |==> <NO-OP>
+54:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@retain(java.util.Collection<java.lang.String>):507:15358:_children.keySet().retainAll(fieldNames); |==> <NO-OP>
+55:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@putArray(java.lang.String):543:16553:_put(fieldName, n); |==> <NO-OP>
+56:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@putObject(java.lang.String):561:17149:_put(fieldName, n); |==> <NO-OP>
+57:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@putNull(java.lang.String):577:17496:_children.put(fieldName, nullNode()); |==> <NO-OP>
+58:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.node.ObjectNode@put(java.lang.String,java.lang.Short):597:18068:v == null |==> false
+59:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.node.ObjectNode@put(java.lang.String,java.lang.Integer):621:18915:v == null |==> false
+60:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.node.ObjectNode@put(java.lang.String,java.lang.Long):651:20142:v == null |==> false
+61:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.node.ObjectNode@put(java.lang.String,java.lang.Float):671:20727:v == null |==> false
+62:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.node.ObjectNode@put(java.lang.String,java.lang.Double):691:21315:v == null |==> false
+63:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.node.ObjectNode@put(java.lang.String,java.math.BigDecimal):701:21630:v == null |==> false
+64:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.node.ObjectNode@put(java.lang.String,java.lang.String):711:21922:v == null |==> false
+65:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.node.ObjectNode@put(java.lang.String,java.lang.Boolean):731:22493:v == null |==> false
+66:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.node.ObjectNode@put(java.lang.String,byte[]):741:22804:v == null |==> false
+67:LVR:TRUE:FALSE:com.fasterxml.jackson.databind.node.ObjectNode@equals(java.lang.Object):754:23125:true |==> false
+68:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.node.ObjectNode@equals(java.lang.Object):755:23145:o == null |==> false
+69:LVR:FALSE:TRUE:com.fasterxml.jackson.databind.node.ObjectNode@equals(java.lang.Object):755:23161:false |==> true
+70:LVR:FALSE:TRUE:com.fasterxml.jackson.databind.node.ObjectNode@equals(java.lang.Object):759:23283:false |==> true
+71:LVR:POS:0:com.fasterxml.jackson.databind.node.ObjectNode@toString():779:23637:32 |==> 0
+72:LVR:POS:NEG:com.fasterxml.jackson.databind.node.ObjectNode@toString():779:23637:32 |==> -32
+73:LVR:POS:0:com.fasterxml.jackson.databind.node.ObjectNode@toString():779:23653:4 |==> 0
+74:LVR:POS:NEG:com.fasterxml.jackson.databind.node.ObjectNode@toString():779:23653:4 |==> -4
+75:SOR:<<(int,int):>>(int,int):com.fasterxml.jackson.databind.node.ObjectNode@toString():779:23643:size() << 4 |==> size() >> 4
+76:SOR:<<(int,int):>>>(int,int):com.fasterxml.jackson.databind.node.ObjectNode@toString():779:23643:size() << 4 |==> size() >>> 4
+77:AOR:+(int,int):%(int,int):com.fasterxml.jackson.databind.node.ObjectNode@toString():779:23637:32 + (size() << 4) |==> 32 % (size() << 4)
+78:AOR:+(int,int):*(int,int):com.fasterxml.jackson.databind.node.ObjectNode@toString():779:23637:32 + (size() << 4) |==> 32 * (size() << 4)
+79:AOR:+(int,int):-(int,int):com.fasterxml.jackson.databind.node.ObjectNode@toString():779:23637:32 + (size() << 4) |==> 32 - (size() << 4)
+80:AOR:+(int,int):/(int,int):com.fasterxml.jackson.databind.node.ObjectNode@toString():779:23637:32 + (size() << 4) |==> 32 / (size() << 4)
+81:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@toString():780:23666:sb.append("{"); |==> <NO-OP>
+82:LVR:0:POS:com.fasterxml.jackson.databind.node.ObjectNode@toString():781:23702:0 |==> 1
+83:LVR:0:NEG:com.fasterxml.jackson.databind.node.ObjectNode@toString():781:23702:0 |==> -1
+84:LVR:0:POS:com.fasterxml.jackson.databind.node.ObjectNode@toString():783:23799:0 |==> 1
+85:LVR:0:NEG:com.fasterxml.jackson.databind.node.ObjectNode@toString():783:23799:0 |==> -1
+86:ROR:>(int,int):!=(int,int):com.fasterxml.jackson.databind.node.ObjectNode@toString():783:23791:count > 0 |==> count != 0
+87:ROR:>(int,int):>=(int,int):com.fasterxml.jackson.databind.node.ObjectNode@toString():783:23791:count > 0 |==> count >= 0
+88:ROR:>(int,int):FALSE(int,int):com.fasterxml.jackson.databind.node.ObjectNode@toString():783:23797:count > 0 |==> false
+89:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@toString():784:23820:sb.append(","); |==> <NO-OP>
+90:STD:<INC>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@toString():786:23862:++count; |==> <NO-OP>
+91:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@toString():787:23883:TextNode.appendQuoted(sb, en.getKey()); |==> <NO-OP>
+92:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@toString():788:23935:sb.append(':'); |==> <NO-OP>
+93:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@toString():789:23963:sb.append(en.getValue().toString()); |==> <NO-OP>
+94:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@toString():791:24018:sb.append("}"); |==> <NO-OP>
+95:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.node.ObjectNode@_put(java.lang.String,com.fasterxml.jackson.databind.JsonNode):803:24331:_children.put(fieldName, value); |==> <NO-OP>
