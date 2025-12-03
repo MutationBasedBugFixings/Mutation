@@ -1,0 +1,359 @@
+1:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat:91:3079:DATE_FORMAT_RFC1123.setTimeZone(DEFAULT_TIMEZONE); |==> <NO-OP>
+2:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat:93:3231:DATE_FORMAT_ISO8601.setTimeZone(DEFAULT_TIMEZONE); |==> <NO-OP>
+3:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat:95:3387:DATE_FORMAT_ISO8601_Z.setTimeZone(DEFAULT_TIMEZONE); |==> <NO-OP>
+4:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat:97:3537:DATE_FORMAT_PLAIN.setTimeZone(DEFAULT_TIMEZONE); |==> <NO-OP>
+5:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@<init>(java.util.TimeZone,java.util.Locale):140:4777:_timezone = tz; |==> <NO-OP>
+6:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@<init>(java.util.TimeZone,java.util.Locale,java.lang.Boolean):145:4903:_timezone = tz; |==> <NO-OP>
+7:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@<init>(java.util.TimeZone,java.util.Locale,java.lang.Boolean):147:4950:_lenient = lenient; |==> <NO-OP>
+8:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.util.StdDateFormat@withTimeZone(java.util.TimeZone):159:5304:tz == null |==> false
+9:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@withTimeZone(java.util.TimeZone):160:5327:tz = DEFAULT_TIMEZONE; |==> <NO-OP>
+10:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.util.StdDateFormat@withTimeZone(java.util.TimeZone):162:5376:tz == _timezone |==> false
+11:COR:||(boolean,boolean):!=(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@withTimeZone(java.util.TimeZone):162:5372:(tz == _timezone) || tz.equals(_timezone) |==> (tz == _timezone) != tz.equals(_timezone)
+12:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@withTimeZone(java.util.TimeZone):162:5372:(tz == _timezone) || tz.equals(_timezone) |==> (tz == _timezone)
+13:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@withTimeZone(java.util.TimeZone):162:5393:(tz == _timezone) || tz.equals(_timezone) |==> tz.equals(_timezone)
+14:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@withTimeZone(java.util.TimeZone):162:5390:(tz == _timezone) || tz.equals(_timezone) |==> true
+15:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.databind.util.StdDateFormat@withLocale(java.util.Locale):169:5588:loc.equals(_locale) |==> false
+16:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.databind.util.StdDateFormat@withLocale(java.util.Locale):169:5588:loc.equals(_locale) |==> true
+17:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.databind.util.StdDateFormat@setTimeZone(java.util.TimeZone):239:7644:tz.equals(_timezone) |==> false
+18:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.databind.util.StdDateFormat@setTimeZone(java.util.TimeZone):239:7644:tz.equals(_timezone) |==> true
+19:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@setTimeZone(java.util.TimeZone):240:7671:_clearFormats(); |==> <NO-OP>
+20:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@setTimeZone(java.util.TimeZone):241:7700:_timezone = tz; |==> <NO-OP>
+21:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.util.StdDateFormat@isLenient():254:8052:_lenient == null |==> false
+22:LVR:TRUE:FALSE:com.fasterxml.jackson.databind.util.StdDateFormat@isLenient():256:8125:true |==> false
+23:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):270:8447:dateStr = dateStr.trim(); |==> <NO-OP>
+24:LVR:0:POS:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):271:8519:0 |==> 1
+25:LVR:0:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):271:8519:0 |==> -1
+26:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):275:8570:looksLikeISO8601(dateStr) |==> false
+27:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):275:8570:looksLikeISO8601(dateStr) |==> true
+28:LVR:TRUE:FALSE:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):276:8654:true |==> false
+29:LVR:0:POS:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):280:8803:0 |==> 1
+30:LVR:0:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):280:8803:0 |==> -1
+31:ROR:>=(int,int):==(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):280:8796:--i >= 0 |==> --i == 0
+32:ROR:>=(int,int):>(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):280:8796:--i >= 0 |==> --i > 0
+33:ROR:>=(int,int):TRUE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):280:8800:--i >= 0 |==> true
+34:ROR:<(int,int):!=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):282:8873:ch < '0' |==> ch != '0'
+35:ROR:<(int,int):<=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):282:8873:ch < '0' |==> ch <= '0'
+36:ROR:<(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):282:8876:ch < '0' |==> false
+37:ROR:>(int,int):!=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):282:8885:ch > '9' |==> ch != '9'
+38:ROR:>(int,int):>=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):282:8885:ch > '9' |==> ch >= '9'
+39:ROR:>(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):282:8888:ch > '9' |==> false
+40:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):282:8873:ch < '0' || ch > '9' |==> ch < '0'
+41:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):282:8885:ch < '0' || ch > '9' |==> ch > '9'
+42:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):282:8882:ch < '0' || ch > '9' |==> true
+43:LVR:0:POS:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):284:9036:0 |==> 1
+44:LVR:0:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):284:9036:0 |==> -1
+45:ROR:>(int,int):!=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):284:9032:i > 0 |==> i != 0
+46:ROR:>(int,int):>=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):284:9032:i > 0 |==> i >= 0
+47:ROR:>(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):284:9034:i > 0 |==> false
+48:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):284:9041:ch != '-' |==> ch < '-'
+49:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):284:9041:ch != '-' |==> ch > '-'
+50:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):284:9044:ch != '-' |==> true
+51:COR:||(boolean,boolean):!=(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):284:9032:i > 0 || ch != '-' |==> i > 0 != (ch != '-')
+52:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):284:9032:i > 0 || ch != '-' |==> i > 0
+53:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):284:9041:i > 0 || ch != '-' |==> ch != '-'
+54:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):284:9038:i > 0 || ch != '-' |==> true
+55:LVR:0:POS:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):289:9160:0 |==> 1
+56:LVR:0:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):289:9160:0 |==> -1
+57:ROR:<(int,int):!=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):289:9156:i < 0 |==> i != 0
+58:ROR:<(int,int):<=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):289:9156:i < 0 |==> i <= 0
+59:ROR:<(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):289:9158:i < 0 |==> false
+60:LVR:0:POS:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):291:9319:0 |==> 1
+61:LVR:0:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):291:9319:0 |==> -1
+62:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):291:9304:dateStr.charAt(0) == '-' |==> dateStr.charAt(0) <= '-'
+63:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):291:9304:dateStr.charAt(0) == '-' |==> dateStr.charAt(0) >= '-'
+64:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):291:9322:dateStr.charAt(0) == '-' |==> false
+65:LVR:FALSE:TRUE:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):291:9365:false |==> true
+66:COR:||(boolean,boolean):!=(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):291:9304:dateStr.charAt(0) == '-' || NumberInput.inLongRange(dateStr, false) |==> dateStr.charAt(0) == '-' != NumberInput.inLongRange(dateStr, false)
+67:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):291:9304:dateStr.charAt(0) == '-' || NumberInput.inLongRange(dateStr, false) |==> dateStr.charAt(0) == '-'
+68:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):291:9332:dateStr.charAt(0) == '-' || NumberInput.inLongRange(dateStr, false) |==> NumberInput.inLongRange(dateStr, false)
+69:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):291:9329:dateStr.charAt(0) == '-' || NumberInput.inLongRange(dateStr, false) |==> true
+70:COR:&&(boolean,boolean):==(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):289:9155:(i < 0) && (dateStr.charAt(0) == '-' || NumberInput.inLongRange(dateStr, false)) |==> (i < 0) == (dateStr.charAt(0) == '-' || NumberInput.inLongRange(dateStr, false))
+71:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):291:9300:(i < 0) && (dateStr.charAt(0) == '-' || NumberInput.inLongRange(dateStr, false)) |==> false
+72:COR:&&(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):289:9155:(i < 0) && (dateStr.charAt(0) == '-' || NumberInput.inLongRange(dateStr, false)) |==> (i < 0)
+73:COR:&&(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):291:9303:(i < 0) && (dateStr.charAt(0) == '-' || NumberInput.inLongRange(dateStr, false)) |==> (dateStr.charAt(0) == '-' || NumberInput.inLongRange(dateStr, false))
+74:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):298:9601:dt != null |==> true
+75:LVR:0:POS:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):304:9763:0 |==> 1
+76:LVR:0:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):304:9763:0 |==> -1
+77:ROR:>(int,int):>=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):304:9749:sb.length() > 0 |==> sb.length() >= 0
+78:ROR:>(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):304:9761:sb.length() > 0 |==> false
+79:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):305:9784:sb.append("\", \""); |==> <NO-OP>
+80:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):307:9842:sb.append('\"'); |==> <NO-OP>
+81:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):309:9884:sb.append(f); |==> <NO-OP>
+82:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String):311:9916:sb.append('\"'); |==> <NO-OP>
+83:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):320:10255:looksLikeISO8601(dateStr) |==> false
+84:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):320:10255:looksLikeISO8601(dateStr) |==> true
+85:LVR:FALSE:TRUE:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):322:10363:false |==> true
+86:LVR:0:POS:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):329:10632:0 |==> 1
+87:LVR:0:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):329:10632:0 |==> -1
+88:ROR:>=(int,int):==(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):329:10625:--i >= 0 |==> --i == 0
+89:ROR:>=(int,int):>(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):329:10625:--i >= 0 |==> --i > 0
+90:ROR:>=(int,int):TRUE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):329:10629:--i >= 0 |==> true
+91:ROR:<(int,int):!=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):331:10694:ch < '0' |==> ch != '0'
+92:ROR:<(int,int):<=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):331:10694:ch < '0' |==> ch <= '0'
+93:ROR:<(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):331:10697:ch < '0' |==> false
+94:ROR:>(int,int):!=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):331:10706:ch > '9' |==> ch != '9'
+95:ROR:>(int,int):>=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):331:10706:ch > '9' |==> ch >= '9'
+96:ROR:>(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):331:10709:ch > '9' |==> false
+97:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):331:10694:ch < '0' || ch > '9' |==> ch < '0'
+98:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):331:10706:ch < '0' || ch > '9' |==> ch > '9'
+99:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):331:10703:ch < '0' || ch > '9' |==> true
+100:LVR:0:POS:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):333:10849:0 |==> 1
+101:LVR:0:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):333:10849:0 |==> -1
+102:ROR:>(int,int):!=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):333:10845:i > 0 |==> i != 0
+103:ROR:>(int,int):>=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):333:10845:i > 0 |==> i >= 0
+104:ROR:>(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):333:10847:i > 0 |==> false
+105:ROR:!=(int,int):<(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):333:10854:ch != '-' |==> ch < '-'
+106:ROR:!=(int,int):>(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):333:10854:ch != '-' |==> ch > '-'
+107:ROR:!=(int,int):TRUE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):333:10857:ch != '-' |==> true
+108:COR:||(boolean,boolean):!=(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):333:10845:i > 0 || ch != '-' |==> i > 0 != (ch != '-')
+109:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):333:10845:i > 0 || ch != '-' |==> i > 0
+110:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):333:10854:i > 0 || ch != '-' |==> ch != '-'
+111:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):333:10851:i > 0 || ch != '-' |==> true
+112:LVR:0:POS:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):338:10952:0 |==> 1
+113:LVR:0:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):338:10952:0 |==> -1
+114:ROR:<(int,int):!=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):338:10948:i < 0 |==> i != 0
+115:ROR:<(int,int):<=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):338:10948:i < 0 |==> i <= 0
+116:ROR:<(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):338:10950:i < 0 |==> false
+117:LVR:0:POS:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):340:11115:0 |==> 1
+118:LVR:0:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):340:11115:0 |==> -1
+119:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):340:11100:dateStr.charAt(0) == '-' |==> dateStr.charAt(0) <= '-'
+120:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):340:11100:dateStr.charAt(0) == '-' |==> dateStr.charAt(0) >= '-'
+121:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):340:11118:dateStr.charAt(0) == '-' |==> false
+122:LVR:FALSE:TRUE:com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):340:11161:false |==> true
+123:COR:||(boolean,boolean):!=(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):340:11100:dateStr.charAt(0) == '-' || NumberInput.inLongRange(dateStr, false) |==> dateStr.charAt(0) == '-' != NumberInput.inLongRange(dateStr, false)
+124:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):340:11100:dateStr.charAt(0) == '-' || NumberInput.inLongRange(dateStr, false) |==> dateStr.charAt(0) == '-'
+125:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):340:11128:dateStr.charAt(0) == '-' || NumberInput.inLongRange(dateStr, false) |==> NumberInput.inLongRange(dateStr, false)
+126:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parse(java.lang.String,java.text.ParsePosition):340:11125:dateStr.charAt(0) == '-' || NumberInput.inLongRange(dateStr, false) |==> true
+127:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.util.StdDateFormat@format(java.util.Date,java.lang.StringBuffer,java.text.FieldPosition):358:11685:_formatISO8601 == null |==> false
+128:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@format(java.util.Date,java.lang.StringBuffer,java.text.FieldPosition):359:11708:_formatISO8601 = _cloneFormat(DATE_FORMAT_ISO8601, DATE_FORMAT_STR_ISO8601, _timezone, _locale, _lenient); |==> <NO-OP>
+129:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.util.StdDateFormat@toString():375:12242:tz != null |==> true
+130:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@toString():376:12265:str += " (timezone: " + tz + ")"; |==> <NO-OP>
+131:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@toString():378:12313:str += "(locale: " + _locale + ")"; |==> <NO-OP>
+132:LVR:POS:0:com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):394:12761:5 |==> 0
+133:LVR:POS:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):394:12761:5 |==> -5
+134:ROR:>=(int,int):==(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):394:12741:dateStr.length() >= 5 |==> dateStr.length() == 5
+135:ROR:>=(int,int):>(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):394:12741:dateStr.length() >= 5 |==> dateStr.length() > 5
+136:ROR:>=(int,int):TRUE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):394:12758:dateStr.length() >= 5 |==> true
+137:LVR:0:POS:com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):395:12811:0 |==> 1
+138:LVR:0:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):395:12811:0 |==> -1
+139:COR:&&(boolean,boolean):==(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):394:12741:dateStr.length() >= 5 && Character.isDigit(dateStr.charAt(0)) |==> dateStr.length() >= 5 == Character.isDigit(dateStr.charAt(0))
+140:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):395:12775:dateStr.length() >= 5 && Character.isDigit(dateStr.charAt(0)) |==> false
+141:COR:&&(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):394:12741:dateStr.length() >= 5 && Character.isDigit(dateStr.charAt(0)) |==> dateStr.length() >= 5
+142:COR:&&(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):395:12778:dateStr.length() >= 5 && Character.isDigit(dateStr.charAt(0)) |==> Character.isDigit(dateStr.charAt(0))
+143:LVR:POS:0:com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):396:12863:3 |==> 0
+144:LVR:POS:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):396:12863:3 |==> -3
+145:COR:&&(boolean,boolean):==(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):394:12741:dateStr.length() >= 5 && Character.isDigit(dateStr.charAt(0)) && Character.isDigit(dateStr.charAt(3)) |==> (dateStr.length() >= 5 && Character.isDigit(dateStr.charAt(0))) == Character.isDigit(dateStr.charAt(3))
+146:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):396:12827:dateStr.length() >= 5 && Character.isDigit(dateStr.charAt(0)) && Character.isDigit(dateStr.charAt(3)) |==> false
+147:COR:&&(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):394:12741:dateStr.length() >= 5 && Character.isDigit(dateStr.charAt(0)) && Character.isDigit(dateStr.charAt(3)) |==> dateStr.length() >= 5 && Character.isDigit(dateStr.charAt(0))
+148:COR:&&(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):396:12830:dateStr.length() >= 5 && Character.isDigit(dateStr.charAt(0)) && Character.isDigit(dateStr.charAt(3)) |==> Character.isDigit(dateStr.charAt(3))
+149:LVR:POS:0:com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):397:12897:4 |==> 0
+150:LVR:POS:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):397:12897:4 |==> -4
+151:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):397:12882:dateStr.charAt(4) == '-' |==> dateStr.charAt(4) <= '-'
+152:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):397:12882:dateStr.charAt(4) == '-' |==> dateStr.charAt(4) >= '-'
+153:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):397:12900:dateStr.charAt(4) == '-' |==> false
+154:COR:&&(boolean,boolean):==(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):394:12741:dateStr.length() >= 5 && Character.isDigit(dateStr.charAt(0)) && Character.isDigit(dateStr.charAt(3)) && dateStr.charAt(4) == '-' |==> (dateStr.length() >= 5 && Character.isDigit(dateStr.charAt(0)) && Character.isDigit(dateStr.charAt(3))) == (dateStr.charAt(4) == '-')
+155:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):397:12879:dateStr.length() >= 5 && Character.isDigit(dateStr.charAt(0)) && Character.isDigit(dateStr.charAt(3)) && dateStr.charAt(4) == '-' |==> false
+156:COR:&&(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):394:12741:dateStr.length() >= 5 && Character.isDigit(dateStr.charAt(0)) && Character.isDigit(dateStr.charAt(3)) && dateStr.charAt(4) == '-' |==> dateStr.length() >= 5 && Character.isDigit(dateStr.charAt(0)) && Character.isDigit(dateStr.charAt(3))
+157:COR:&&(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):397:12882:dateStr.length() >= 5 && Character.isDigit(dateStr.charAt(0)) && Character.isDigit(dateStr.charAt(3)) && dateStr.charAt(4) == '-' |==> dateStr.charAt(4) == '-'
+158:LVR:TRUE:FALSE:com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):399:12942:true |==> false
+159:LVR:FALSE:TRUE:com.fasterxml.jackson.databind.util.StdDateFormat@looksLikeISO8601(java.lang.String):401:12973:false |==> true
+160:LVR:POS:0:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):416:13569:1 |==> 0
+161:LVR:POS:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):416:13569:1 |==> -1
+162:AOR:-(int,int):%(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):416:13565:len - 1 |==> len % 1
+163:AOR:-(int,int):*(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):416:13565:len - 1 |==> len * 1
+164:AOR:-(int,int):+(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):416:13565:len - 1 |==> len + 1
+165:AOR:-(int,int):/(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):416:13565:len - 1 |==> len / 1
+166:LVR:POS:0:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):421:13685:10 |==> 0
+167:LVR:POS:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):421:13685:10 |==> -10
+168:ROR:<=(int,int):<(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):421:13678:len <= 10 |==> len < 10
+169:ROR:<=(int,int):==(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):421:13678:len <= 10 |==> len == 10
+170:ROR:<=(int,int):TRUE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):421:13682:len <= 10 |==> true
+171:COR:&&(boolean,boolean):==(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):421:13678:len <= 10 && Character.isDigit(c) |==> len <= 10 == Character.isDigit(c)
+172:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):421:13688:len <= 10 && Character.isDigit(c) |==> false
+173:COR:&&(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):421:13678:len <= 10 && Character.isDigit(c) |==> len <= 10
+174:COR:&&(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):421:13691:len <= 10 && Character.isDigit(c) |==> Character.isDigit(c)
+175:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):424:13812:df == null |==> false
+176:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):425:13839:df = _formatPlain = _cloneFormat(DATE_FORMAT_PLAIN, formatStr, _timezone, _locale, _lenient); |==> <NO-OP>
+177:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):428:13990:c == 'Z' |==> c <= 'Z'
+178:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):428:13990:c == 'Z' |==> c >= 'Z'
+179:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):428:13992:c == 'Z' |==> false
+180:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):431:14107:df == null |==> false
+181:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):432:14134:df = _formatISO8601_z = _cloneFormat(DATE_FORMAT_ISO8601_Z, formatStr, _timezone, _locale, _lenient); |==> <NO-OP>
+182:LVR:POS:0:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):436:14366:4 |==> 0
+183:LVR:POS:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):436:14366:4 |==> -4
+184:AOR:-(int,int):%(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):436:14362:len - 4 |==> len % 4
+185:AOR:-(int,int):*(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):436:14362:len - 4 |==> len * 4
+186:AOR:-(int,int):+(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):436:14362:len - 4 |==> len + 4
+187:AOR:-(int,int):/(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):436:14362:len - 4 |==> len / 4
+188:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):436:14347:dateStr.charAt(len - 4) == ':' |==> dateStr.charAt(len - 4) <= ':'
+189:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):436:14347:dateStr.charAt(len - 4) == ':' |==> dateStr.charAt(len - 4) >= ':'
+190:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):436:14369:dateStr.charAt(len - 4) == ':' |==> false
+191:LVR:POS:0:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):438:14472:1 |==> 0
+192:LVR:POS:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):438:14472:1 |==> -1
+193:AOR:-(int,int):%(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):438:14468:len - 1 |==> len % 1
+194:AOR:-(int,int):*(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):438:14468:len - 1 |==> len * 1
+195:AOR:-(int,int):+(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):438:14468:len - 1 |==> len + 1
+196:AOR:-(int,int):/(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):438:14468:len - 1 |==> len / 1
+197:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):438:14458:sb.insert(len - 1, ".000"); |==> <NO-OP>
+198:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):439:14500:dateStr = sb.toString(); |==> <NO-OP>
+199:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):443:14648:hasTimeZone(dateStr) |==> false
+200:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):443:14648:hasTimeZone(dateStr) |==> true
+201:LVR:POS:0:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):444:14700:3 |==> 0
+202:LVR:POS:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):444:14700:3 |==> -3
+203:AOR:-(int,int):%(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):444:14696:len - 3 |==> len % 3
+204:AOR:-(int,int):*(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):444:14696:len - 3 |==> len * 3
+205:AOR:-(int,int):+(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):444:14696:len - 3 |==> len + 3
+206:AOR:-(int,int):/(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):444:14696:len - 3 |==> len / 3
+207:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):444:14677:c = dateStr.charAt(len - 3); |==> <NO-OP>
+208:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):445:14724:c == ':' |==> c <= ':'
+209:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):445:14724:c == ':' |==> c >= ':'
+210:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):445:14726:c == ':' |==> false
+211:LVR:POS:0:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):448:14898:3 |==> 0
+212:LVR:POS:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):448:14898:3 |==> -3
+213:AOR:-(int,int):%(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):448:14894:len - 3 |==> len % 3
+214:AOR:-(int,int):*(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):448:14894:len - 3 |==> len * 3
+215:AOR:-(int,int):+(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):448:14894:len - 3 |==> len + 3
+216:AOR:-(int,int):/(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):448:14894:len - 3 |==> len / 3
+217:LVR:POS:0:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):448:14905:2 |==> 0
+218:LVR:POS:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):448:14905:2 |==> -2
+219:AOR:-(int,int):%(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):448:14901:len - 2 |==> len % 2
+220:AOR:-(int,int):*(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):448:14901:len - 2 |==> len * 2
+221:AOR:-(int,int):+(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):448:14901:len - 2 |==> len + 2
+222:AOR:-(int,int):/(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):448:14901:len - 2 |==> len / 2
+223:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):448:14884:sb.delete(len - 3, len - 2); |==> <NO-OP>
+224:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):449:14929:dateStr = sb.toString(); |==> <NO-OP>
+225:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):450:14981:c == '+' |==> c <= '+'
+226:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):450:14981:c == '+' |==> c >= '+'
+227:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):450:14983:c == '+' |==> false
+228:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):450:14993:c == '-' |==> c <= '-'
+229:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):450:14993:c == '-' |==> c >= '-'
+230:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):450:14995:c == '-' |==> false
+231:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):450:14981:c == '+' || c == '-' |==> c == '+'
+232:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):450:14993:c == '+' || c == '-' |==> c == '-'
+233:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):450:14990:c == '+' || c == '-' |==> true
+234:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):452:15090:dateStr += "00"; |==> <NO-OP>
+235:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):455:15223:len = dateStr.length(); |==> <NO-OP>
+236:AOR:-(int,int):%(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):457:15344:len - dateStr.lastIndexOf('T') |==> len % dateStr.lastIndexOf('T')
+237:AOR:-(int,int):*(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):457:15344:len - dateStr.lastIndexOf('T') |==> len * dateStr.lastIndexOf('T')
+238:AOR:-(int,int):+(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):457:15344:len - dateStr.lastIndexOf('T') |==> len + dateStr.lastIndexOf('T')
+239:AOR:-(int,int):/(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):457:15344:len - dateStr.lastIndexOf('T') |==> len / dateStr.lastIndexOf('T')
+240:LVR:POS:0:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):457:15377:6 |==> 0
+241:LVR:POS:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):457:15377:6 |==> -6
+242:AOR:-(int,int):%(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):457:15344:len - dateStr.lastIndexOf('T') - 6 |==> (len - dateStr.lastIndexOf('T')) % 6
+243:AOR:-(int,int):*(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):457:15344:len - dateStr.lastIndexOf('T') - 6 |==> (len - dateStr.lastIndexOf('T')) * 6
+244:AOR:-(int,int):+(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):457:15344:len - dateStr.lastIndexOf('T') - 6 |==> len - dateStr.lastIndexOf('T') + 6
+245:AOR:-(int,int):/(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):457:15344:len - dateStr.lastIndexOf('T') - 6 |==> (len - dateStr.lastIndexOf('T')) / 6
+246:LVR:POS:0:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):458:15410:12 |==> 0
+247:LVR:POS:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):458:15410:12 |==> -12
+248:ROR:<(int,int):!=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):458:15400:timeLen < 12 |==> timeLen != 12
+249:ROR:<(int,int):<=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):458:15400:timeLen < 12 |==> timeLen <= 12
+250:ROR:<(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):458:15408:timeLen < 12 |==> false
+251:LVR:POS:0:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):459:15485:5 |==> 0
+252:LVR:POS:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):459:15485:5 |==> -5
+253:AOR:-(int,int):%(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):459:15479:len - 5 |==> len % 5
+254:AOR:-(int,int):*(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):459:15479:len - 5 |==> len * 5
+255:AOR:-(int,int):+(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):459:15479:len - 5 |==> len + 5
+256:AOR:-(int,int):/(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):459:15479:len - 5 |==> len / 5
+257:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):463:15685:sb.insert(offset, '0'); |==> <NO-OP>
+258:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):465:15769:sb.insert(offset, "00"); |==> <NO-OP>
+259:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):467:15901:sb.insert(offset, "000"); |==> <NO-OP>
+260:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):469:15986:sb.insert(offset, ".000"); |==> <NO-OP>
+261:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):473:16211:sb.insert(offset, "00.000"); |==> <NO-OP>
+262:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):475:16320:sb.insert(offset, ":00.000"); |==> <NO-OP>
+263:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):477:16392:dateStr = sb.toString(); |==> <NO-OP>
+264:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):481:16560:_formatISO8601 == null |==> false
+265:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):482:16591:df = _formatISO8601 = _cloneFormat(DATE_FORMAT_ISO8601, formatStr, _timezone, _locale, _lenient); |==> <NO-OP>
+266:AOR:-(int,int):%(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):489:16991:len - dateStr.lastIndexOf('T') |==> len % dateStr.lastIndexOf('T')
+267:AOR:-(int,int):*(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):489:16991:len - dateStr.lastIndexOf('T') |==> len * dateStr.lastIndexOf('T')
+268:AOR:-(int,int):+(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):489:16991:len - dateStr.lastIndexOf('T') |==> len + dateStr.lastIndexOf('T')
+269:AOR:-(int,int):/(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):489:16991:len - dateStr.lastIndexOf('T') |==> len / dateStr.lastIndexOf('T')
+270:LVR:POS:0:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):489:17024:1 |==> 0
+271:LVR:POS:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):489:17024:1 |==> -1
+272:AOR:-(int,int):%(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):489:16991:len - dateStr.lastIndexOf('T') - 1 |==> (len - dateStr.lastIndexOf('T')) % 1
+273:AOR:-(int,int):*(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):489:16991:len - dateStr.lastIndexOf('T') - 1 |==> (len - dateStr.lastIndexOf('T')) * 1
+274:AOR:-(int,int):+(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):489:16991:len - dateStr.lastIndexOf('T') - 1 |==> len - dateStr.lastIndexOf('T') + 1
+275:AOR:-(int,int):/(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):489:16991:len - dateStr.lastIndexOf('T') - 1 |==> (len - dateStr.lastIndexOf('T')) / 1
+276:LVR:POS:0:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):490:17057:12 |==> 0
+277:LVR:POS:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):490:17057:12 |==> -12
+278:ROR:<(int,int):!=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):490:17047:timeLen < 12 |==> timeLen != 12
+279:ROR:<(int,int):<=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):490:17047:timeLen < 12 |==> timeLen <= 12
+280:ROR:<(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):490:17055:timeLen < 12 |==> false
+281:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):492:17154:sb.append('0'); |==> <NO-OP>
+282:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):493:17199:sb.append('0'); |==> <NO-OP>
+283:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):494:17243:sb.append('0'); |==> <NO-OP>
+284:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):497:17343:sb.append(".000"); |==> <NO-OP>
+285:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):500:17418:sb.append('Z'); |==> <NO-OP>
+286:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):501:17450:dateStr = sb.toString(); |==> <NO-OP>
+287:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):504:17592:df == null |==> false
+288:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):505:17623:df = _formatISO8601_z = _cloneFormat(DATE_FORMAT_ISO8601_Z, formatStr, _timezone, _locale, _lenient); |==> <NO-OP>
+289:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsISO8601(java.lang.String,java.text.ParsePosition,boolean):512:17913:dt == null |==> false
+290:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.util.StdDateFormat@parseAsRFC1123(java.lang.String,java.text.ParsePosition):523:18315:_formatRFC1123 == null |==> false
+291:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@parseAsRFC1123(java.lang.String,java.text.ParsePosition):524:18338:_formatRFC1123 = _cloneFormat(DATE_FORMAT_RFC1123, DATE_FORMAT_STR_RFC1123, _timezone, _locale, _lenient); |==> <NO-OP>
+292:LVR:POS:0:com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):534:18719:6 |==> 0
+293:LVR:POS:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):534:18719:6 |==> -6
+294:ROR:>=(int,int):==(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):534:18712:len >= 6 |==> len == 6
+295:ROR:>=(int,int):>(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):534:18712:len >= 6 |==> len > 6
+296:ROR:>=(int,int):TRUE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):534:18716:len >= 6 |==> true
+297:LVR:POS:0:com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):535:18760:6 |==> 0
+298:LVR:POS:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):535:18760:6 |==> -6
+299:AOR:-(int,int):%(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):535:18756:len - 6 |==> len % 6
+300:AOR:-(int,int):*(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):535:18756:len - 6 |==> len * 6
+301:AOR:-(int,int):+(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):535:18756:len - 6 |==> len + 6
+302:AOR:-(int,int):/(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):535:18756:len - 6 |==> len / 6
+303:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):536:18780:c == '+' |==> c <= '+'
+304:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):536:18780:c == '+' |==> c >= '+'
+305:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):536:18782:c == '+' |==> false
+306:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):536:18792:c == '-' |==> c <= '-'
+307:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):536:18792:c == '-' |==> c >= '-'
+308:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):536:18794:c == '-' |==> false
+309:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):536:18780:c == '+' || c == '-' |==> c == '+'
+310:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):536:18792:c == '+' || c == '-' |==> c == '-'
+311:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):536:18789:c == '+' || c == '-' |==> true
+312:LVR:TRUE:FALSE:com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):536:18809:true |==> false
+313:LVR:POS:0:com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):537:18846:5 |==> 0
+314:LVR:POS:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):537:18846:5 |==> -5
+315:AOR:-(int,int):%(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):537:18842:len - 5 |==> len % 5
+316:AOR:-(int,int):*(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):537:18842:len - 5 |==> len * 5
+317:AOR:-(int,int):+(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):537:18842:len - 5 |==> len + 5
+318:AOR:-(int,int):/(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):537:18842:len - 5 |==> len / 5
+319:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):537:18827:c = str.charAt(len - 5); |==> <NO-OP>
+320:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):538:18866:c == '+' |==> c <= '+'
+321:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):538:18866:c == '+' |==> c >= '+'
+322:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):538:18868:c == '+' |==> false
+323:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):538:18878:c == '-' |==> c <= '-'
+324:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):538:18878:c == '-' |==> c >= '-'
+325:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):538:18880:c == '-' |==> false
+326:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):538:18866:c == '+' || c == '-' |==> c == '+'
+327:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):538:18878:c == '+' || c == '-' |==> c == '-'
+328:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):538:18875:c == '+' || c == '-' |==> true
+329:LVR:TRUE:FALSE:com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):538:18895:true |==> false
+330:LVR:POS:0:com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):539:18932:3 |==> 0
+331:LVR:POS:NEG:com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):539:18932:3 |==> -3
+332:AOR:-(int,int):%(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):539:18928:len - 3 |==> len % 3
+333:AOR:-(int,int):*(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):539:18928:len - 3 |==> len * 3
+334:AOR:-(int,int):+(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):539:18928:len - 3 |==> len + 3
+335:AOR:-(int,int):/(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):539:18928:len - 3 |==> len / 3
+336:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):539:18913:c = str.charAt(len - 3); |==> <NO-OP>
+337:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):540:18952:c == '+' |==> c <= '+'
+338:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):540:18952:c == '+' |==> c >= '+'
+339:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):540:18954:c == '+' |==> false
+340:ROR:==(int,int):<=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):540:18964:c == '-' |==> c <= '-'
+341:ROR:==(int,int):>=(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):540:18964:c == '-' |==> c >= '-'
+342:ROR:==(int,int):FALSE(int,int):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):540:18966:c == '-' |==> false
+343:COR:||(boolean,boolean):LHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):540:18952:c == '+' || c == '-' |==> c == '+'
+344:COR:||(boolean,boolean):RHS(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):540:18964:c == '+' || c == '-' |==> c == '-'
+345:COR:||(boolean,boolean):TRUE(boolean,boolean):com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):540:18961:c == '+' || c == '-' |==> true
+346:LVR:TRUE:FALSE:com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):540:18981:true |==> false
+347:LVR:FALSE:TRUE:com.fasterxml.jackson.databind.util.StdDateFormat@hasTimeZone(java.lang.String):542:19012:false |==> true
+348:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.fasterxml.jackson.databind.util.StdDateFormat@_cloneFormat(java.text.DateFormat,java.lang.String,java.util.TimeZone,java.util.Locale,java.lang.Boolean):548:19188:loc.equals(DEFAULT_LOCALE) |==> false
+349:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.fasterxml.jackson.databind.util.StdDateFormat@_cloneFormat(java.text.DateFormat,java.lang.String,java.util.TimeZone,java.util.Locale,java.lang.Boolean):548:19188:loc.equals(DEFAULT_LOCALE) |==> true
+350:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@_cloneFormat(java.text.DateFormat,java.lang.String,java.util.TimeZone,java.util.Locale,java.lang.Boolean):549:19220:df = new SimpleDateFormat(format, loc); |==> <NO-OP>
+351:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.util.StdDateFormat@_cloneFormat(java.text.DateFormat,java.lang.String,java.util.TimeZone,java.util.Locale,java.lang.Boolean):550:19291:tz == null |==> false
+352:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@_cloneFormat(java.text.DateFormat,java.lang.String,java.util.TimeZone,java.util.Locale,java.lang.Boolean):550:19272:df.setTimeZone((tz == null) ? DEFAULT_TIMEZONE : tz); |==> <NO-OP>
+353:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@_cloneFormat(java.text.DateFormat,java.lang.String,java.util.TimeZone,java.util.Locale,java.lang.Boolean):552:19355:df = (DateFormat)df.clone(); |==> <NO-OP>
+354:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.fasterxml.jackson.databind.util.StdDateFormat@_cloneFormat(java.text.DateFormat,java.lang.String,java.util.TimeZone,java.util.Locale,java.lang.Boolean):553:19404:tz != null |==> true
+355:STD:<CALL>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@_cloneFormat(java.text.DateFormat,java.lang.String,java.util.TimeZone,java.util.Locale,java.lang.Boolean):554:19431:df.setTimeZone(tz); |==> <NO-OP>
+356:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@_clearFormats():561:19546:_formatRFC1123 = null; |==> <NO-OP>
+357:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@_clearFormats():562:19577:_formatISO8601 = null; |==> <NO-OP>
+358:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@_clearFormats():563:19608:_formatISO8601_z = null; |==> <NO-OP>
+359:STD:<ASSIGN>:<NO-OP>:com.fasterxml.jackson.databind.util.StdDateFormat@_clearFormats():564:19641:_formatPlain = null; |==> <NO-OP>
