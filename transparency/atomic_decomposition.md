@@ -36,3 +36,27 @@ StatementDeletion(break)
 Classification
 Primary: Statement replacement, Statement deletion
 Secondary: Expression modification, Loop-control modification
+
+
+## CLI-34 (Commons CLI)
+
+### Patch
+```diff
+diff --git a/src/main/java/org/apache/commons/cli/Option.java b/src/main/java/org/apache/commons/cli/Option.java
+@@
+- private Class type = String.class;
++ private Class type;
+
+
+diff --git a/src/main/java/org/apache/commons/cli/OptionBuilder.java b/src/main/java/org/apache/commons/cli/OptionBuilder.java
+@@
+- type = String.class;
++ type = null;
+
+Atomic Decomposition
+InitializerRemoval(= String.class)
+ConstantReplacement(String.class → null)
+StatementReplacement(type = String.class → type = null)
+Classification
+Primary: Constant replacement, Null/default initialization change
+Secondary: Statement replacement, Initializer removal
