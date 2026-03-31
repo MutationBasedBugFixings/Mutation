@@ -44,52 +44,39 @@ Secondary: Expression modification, Loop-control modification
 
 ### Patch
 ```diff
-diff --git a/src/main/java/org/apache/commons/cli/Option.java b/src/main/java/org/apache/commons/cli/Option.java
-@@
 - private Class type = String.class;
 + private Class type;
-
-
-diff --git a/src/main/java/org/apache/commons/cli/OptionBuilder.java b/src/main/java/org/apache/commons/cli/OptionBuilder.java
-@@
 - type = String.class;
 + type = null;
 
+
 Atomic Decomposition
-InitializerRemoval(= String.class)
-ConstantReplacement(String.class → null)
-StatementReplacement(type = String.class → type = null)
+VA (Variable Assignment → String.class → null)
+DTR (Data Type Replacement → implicit default instead of explicit type)
+CR (Constant Replacement → String.class → null)
 Classification
-Primary: Constant replacement, Null/default initialization change
-Secondary: Statement replacement, Initializer removal
+Primary: VA, DTR
+Secondary: CR
 
 
-## Gson-15 (Gson)
-
-### Patch
-```diff
-diff --git a/gson/src/main/java/com/google/gson/stream/JsonWriter.java b/gson/src/main/java/com/google/gson/stream/JsonWriter.java
-@@
+Gson-15 (Gson)
+Patch
 - if (!lenient && (Double.isNaN(value) || Double.isInfinite(value))) {
 + if (Double.isNaN(value) || Double.isInfinite(value)) {
 
 
+
 Atomic Decomposition
-ConditionalRefinement
-GuardRemoval(!lenient)
-SubconditionDeletion(!lenient &&)
-ExpressionSimplification
+DOC (Deletion of Condition → !lenient removed)
+MOCS (Modification of Conditional Statement)
+LOR (Logical Operator Replacement → removal of && dependency)
 Classification
-Primary: Conditional refinement
-Secondary: Guard removal, Expression simplification
+Primary: DOC, MOCS
+Secondary: LOR
 
 
-## Gson-10 (Gson)
-
-### Patch
-```diff
-diff --git a/gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java b/gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java
-@@
+Gson-10 (Gson)
+Patch
 - TypeAdapter t = jsonAdapterPresent ? typeAdapter
 -     : new TypeAdapterRuntimeTypeWrapper(context, typeAdapter, fieldType.getType());
 + TypeAdapter t =
@@ -97,30 +84,43 @@ diff --git a/gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdap
 
 
 Atomic Decomposition
-ConditionalRemoval(jsonAdapterPresent ? ... : ...)
-StatementReplacement(conditional assignment → direct assignment)
-APICallNormalization(always use TypeAdapterRuntimeTypeWrapper)
+DOC (Deletion of conditional expression)
+MOCS (Modification of Conditional Statement → ternary removed)
+MCR (Method Call Replacement → enforced wrapper usage)
 Classification
-Primary: Statement replacement
-Secondary: Conditional removal, API call refinement
+Primary: MCR
+Secondary: DOC, MOCS
 
 
-
-## CSV-1 (Commons CSV)
-
-### Patch
-```diff
-diff --git a/src/main/java/org/apache/commons/csv/ExtendedBufferedReader.java b/src/main/java/org/apache/commons/csv/ExtendedBufferedReader.java
-@@
+CSV-1 (Commons CSV)
+Patch
 - if (current == '\r' || (current == '\n' && lastChar != '\r')) {
 + if (current == '\n') {
 
 
 Atomic Decomposition
-ConditionalRefinement
-SubconditionDeletion(current == '\r')
-SubconditionDeletion((current == '\n' && lastChar != '\r') → simplified)
-ExpressionSimplification
+MOCS (Modification of Conditional Statement)
+LOR (Logical Operator Replacement → OR condition removed)
+DOC (Deletion of condition parts → '\r' and lastChar dependency)
 Classification
-Primary: Conditional refinement
-Secondary: Subcondition deletion, Expression simplification
+Primary: MOCS
+Secondary: LOR, DOC
+
+## JacksonXML-3 (Jackson XML)
+
+### Patch
+```diff
+case XmlTokenStream.XML_ATTRIBUTE_VALUE:
++ _currText = _xmlTokens.getText();
+  _currToken = JsonToken.VALUE_STRING;
+- return (_currText = _xmlTokens.getText());
++ break;
+
+
+
+Atomic Decomposition
+SD (Statement Deletion → removal of return statement)
+SI (Statement Insertion → assignment moved before token setting)
+CFSM (Control Flow Mutation → return → break)
+VA (Variable Assignment → explicit assignment separated from return)
+
