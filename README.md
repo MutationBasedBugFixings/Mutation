@@ -236,6 +236,9 @@ to see the available options in your current version.
 ```
 Mutation/
 │
+├── transparency/
+│   ├── atomic_decomposition.md       <-- Detailed breakdown of diffs to operators
+│   └── manual_mapping_master.csv     <-- The full 835 bug analysis + 300 BugInPy bugs
 ├── scripts/
 │   ├── run_one_project_both_final.py     # Run MAJOR + PIT mutation analysis
 │   ├── export_dev_patches.py             # Export developer patches (diffs)
@@ -271,5 +274,11 @@ Mutation/
 │
 └── (optional) d4j_work_diff/              # Used by export_dev_patches.py
 ```
+
+## Data Transparency & Reproducibility
+This study analyzes the full **Defects4J v2.0.1 dataset (835 bugs).
+- **803 Bugs:** Analyzed for mutant operator expressiveness.
+- **32 Bugs:** Excluded due to benchmark depletion (dependency/test failures).
+- **Manual Mapping:** See `/transparency/atomic_decomposition.md` for the logic used to decompose developer patches into atomic mutant operators.
 
 [![DOI](https://zenodo.org/badge/1092212208.svg)](https://doi.org/10.5281/zenodo.19347021)
