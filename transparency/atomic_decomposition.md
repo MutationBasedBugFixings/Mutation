@@ -147,3 +147,51 @@ SI (Statement Insertion → assignment moved before token setting)
 CFSM (Control Flow Mutation → return → break)
 VA (Variable Assignment → explicit assignment separated from return)
 
+
+## JacksonDatabind-101 (Jackson Databind)
+
+### Patch
+```diff
+while (t == JsonToken.FIELD_NAME) {
+    // NOTE: do NOT skip name as it needs to be copied; `copyCurrentStructure` does that
++   p.nextToken();
+    tokens.copyCurrentStructure(p);
+    t = p.nextToken();
+}
+...
+- if (t != JsonToken.END_OBJECT) {
+-     ctxt.reportWrongTokenException(this, JsonToken.END_OBJECT, 
+-             "Attempted to unwrap '%s' value",
+-             handledType().getName());
+- }
+tokens.writeEndObject();
+
+
+
+Atomic Decomposition
+SI (Statement Insertion → p.nextToken();)
+SD (Statement Deletion → removal of sanity-check if block)
+DOC (Condition Deletion / Insertion → deletion of if (t != JsonToken.END_OBJECT))
+MCR (Method Call Replacement / Removal → removal of ctxt.reportWrongTokenException(...))
+CFSM (Control Flow Mutation → exception path removed, normal flow continues)
+
+
+## JacksonCore-14 (Jackson Core)
+
+### Patch
+```diff
+- if ((toRelease != src) && (toRelease.length < src.length)) { throw wrongBuf(); }
++ if ((toRelease != src) && (toRelease.length <= src.length)) { throw wrongBuf(); }
+- return new IllegalArgumentException("Trying to release buffer smaller than original");
++ return new IllegalArgumentException("Trying to release buffer not owned by the context");
+
+
+
+Atomic Decomposition
+ROR (Relational Operator Replacement → < → <=)
+MOCS (Modification of Condition Statement → boundary condition updated)
+SM (String Modification → error message changed)
+Classification
+Primary: ROR
+Secondary: MOCS, SM
+
