@@ -271,3 +271,5 @@ Mutation/
 │
 └── (optional) d4j_work_diff/              # Used by export_dev_patches.py
 ```
+
+[![DOI](https://zenodo.org/badge/1092212208.svg)](https://doi.org/10.5281/zenodo.19347021)
