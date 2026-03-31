@@ -6,18 +6,41 @@ This file provides atomic transformations for selected bugs using a unified data
 
 ## Taxonomy
 
-- Statement insertion  
-- Statement deletion  
-- Statement replacement  
-- Conditional refinement  
-- API call replacement / refinement  
-- Expression modification  
-- Argument replacement / relocation  
-- Control-flow restructuring  
-- Early return insertion / deletion  
-- Guard insertion / removal  
-- Constant replacement  
-- Null/default initialization change  
+## Taxonomy (Aligned with Mutant Operators)
+
+- CI  : Condition Insertion / Removal  
+- MCR : Method Call Replacement / Removal  
+- MRV : Modification of Return Value  
+- LOR : Logical Operator Replacement  
+- VA  : Variable Assignment / Removal  
+- ROR : Relational Operator Replacement  
+- MPM : Method Parameter Modification  
+- MOCS: Modification of Condition Statement  
+- DOC : Condition Deletion / Insertion  
+- SD  : Statement Deletion / Insertion  
+- MA  : Method Addition / Removal  
+- AIS : Import Statement Addition / Deletion  
+- DTR : Data Type Replacement  
+- CR  : Constant Replacement  
+- SR  : Statement Reordering  
+- EII : Else-If Insertion  
+- VR  : Variable Replacement  
+- CFSM: Control Flow Mutation  
+- SI  : Statement Insertion  
+- BCO : Boundary Condition Operator  
+- EI  : Exception Insertion  
+- FLI : For Loop Insertion  
+- WLI : While Loop Insertion  
+- CASEI: Case Insertion  
+- AA  : Annotation Addition  
+- SM  : String Modification  
+- ElseI: Else Insertion  
+- BR  : Bracket Reordering  
+- AOR : Arithmetic Operator Replacement  
+- DIS : Import Statement Deletion  
+- BWO : Bitwise Operator Replacement  
+- RAR : Reference Assignment Replacement  
+- CN  : Condition Negation  
 
 ---
 
