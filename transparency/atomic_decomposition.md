@@ -4,6 +4,33 @@ This file provides atomic transformations for selected bugs using a unified data
 
 ---
 
+## Example: Extracting Patch for a Defects4J Bug
+
+### Step 1: Checkout Buggy Version
+```bash
+defects4j checkout -p Cli -v 2b -w Cli_2_buggy
+
+
+Step 2: Checkout Fixed Version
+defects4j checkout -p Cli -v 2f -w Cli_2_fixed
+
+
+Step 3: Generate Patch (Diff)
+git diff --no-index Cli_2_buggy Cli_2_fixed > Cli_2.patch
+
+
+Output
+
+The file Cli_2.patch contains the full patch (difference between buggy and fixed versions).
+
+
+
+Notes
+b = buggy version
+f = fixed version
+Works for all Defects4J projects by changing project name and bug ID
+
+
 ## Taxonomy
 
 ## Taxonomy (Aligned with Mutant Operators)
