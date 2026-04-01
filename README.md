@@ -282,4 +282,4 @@ This study analyzes the full **Defects4J v2.0.1 dataset (835 bugs).
 - **32 Bugs:** Excluded due to benchmark depletion (dependency/test failures).
 - **Manual Mapping:** See `/transparency/atomic_decomposition.md` for the logic used to decompose developer patches into atomic mutant operators.
 
-[![DOI](https://zenodo.org/badge/1092212208.svg)](https://doi.org/10.5281/zenodo.19347021)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19362997.svg)](https://doi.org/10.5281/zenodo.19362997)
