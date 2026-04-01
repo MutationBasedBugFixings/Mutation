@@ -238,7 +238,8 @@ Mutation/
 │
 ├── transparency/
 │   ├── atomic_decomposition.md       <-- Detailed breakdown of diffs to operators
-│   └── manual_mapping_master.csv     <-- The full 835 bug analysis + 300 BugInPy bugs
+│   └── defects4j.csv     <-- The full 835 bug analysis 
+|   └── BugsInPy.xlsx     <-- The 300 bugs analysis 
 ├── scripts/
 │   ├── run_one_project_both_final.py     # Run MAJOR + PIT mutation analysis
 │   ├── export_dev_patches.py             # Export developer patches (diffs)
