@@ -1,56 +1,80 @@
 import pandas as pd
 import numpy as np
+import math
 
-def calculate_dataset_stats(csv_path, confidence_z=1.96):
+def calculate_sampling_and_ci(file_path, N, n, seed=20260322):
     """
-    Calculates the Proportion, Standard Error, and Confidence Intervals 
-    for each Mutant Operator in the dataset.
-    
-    Args:
-        csv_path: Path to the CSV file.
-        confidence_z: Z-score (1.96 for 95%, 2.576 for 99% as per your link).
+    Performs random sampling and calculates 95% CI with Finite Population Correction.
     """
-    df = pd.read_csv(csv_path)
+    # 1. Load the dataset
+    df = pd.read_csv(file_path)
     
-    # Standardize column names (handling trailing spaces and typos)
+    # Clean column names (handle trailing spaces/typos like 'Munatnt')
     df.columns = [col.strip() for col in df.columns]
-    col = 'Munatnt Operator'
+    op_col = 'Munatnt Operator'
     
-    # Filter out non-mutant entries ('no')
-    mutants = df[df[col].astype(str).str.lower() != 'no'].copy()
+    # 2. Generate random numbers for sampling (Step 3 & 4 of methodology)
+    np.random.seed(seed)
+    df['Random_Number'] = np.random.rand(len(df))
+    df_sorted = df.sort_values(by='Random_Number')
     
-    # Total count of valid mutated samples (N)
-    N = len(mutants)
+    # 3. Select the first n rows as the random sample (Step 5)
+    sample = df_sorted.head(n).copy()
     
-    # Calculate counts and proportions
-    counts = mutants[col].value_counts()
+    # 4. Infer Repairable status (Step 6)
+    # Yes if operator is not blank and not 'no'
+    def infer_repairable(val):
+        val = str(val).strip().lower()
+        if val == 'nan' or val == '' or val == 'no':
+            return 'No'
+        return 'Yes'
     
-    results = []
-    for operator, count in counts.items():
-        p = count / N  # Observed proportion
-        
-        # Formula for Margin of Error (MOE): Z * sqrt( p*(1-p) / N )
-        # This matches the logic of the sample size calculator provided
-        se = np.sqrt((p * (1 - p)) / N)
-        moe = confidence_z * se
-        
-        results.append({
-            'Operator': str(operator).strip(),
-            'Count': count,
-            'Proportion': f"{p:.2%}",
-            'Margin of Error': f"{moe:.2%}",
-            '95% CI Lower': f"{max(0, p - moe):.2%}",
-            '95% CI Upper': f"{min(1, p + moe):.2%}"
-        })
+    sample['Repairable_inferred'] = sample[op_col].apply(infer_repairable)
     
-    return pd.DataFrame(results), N
+    # 5. Statistical Calculations (Step 7)
+    x = len(sample[sample['Repairable_inferred'] == 'Yes'])
+    p = x / n
+    
+    # Standard error for proportion
+    standard_error = math.sqrt((p * (1 - p)) / n)
+    
+    # Finite Population Correction (FPC) factor
+    fpc = math.sqrt((N - n) / (N - 1))
+    
+    # Margin of Error for 95% Confidence (Z = 1.96)
+    margin_of_error = 1.96 * standard_error * fpc
+    
+    lower_bound = p - margin_of_error
+    upper_bound = p + margin_of_error
+    
+    return {
+        'Population_N': N,
+        'Sample_n': n,
+        'Repairable_Count_x': x,
+        'Proportion_p': p,
+        'Margin_of_Error': margin_of_error,
+        'CI_Lower': lower_bound,
+        'CI_Upper': upper_bound,
+        'Sampled_Data': sample
+    }
 
-# Example Execution
-bip_stats, bip_n = calculate_dataset_stats('BugInPy.xlsx - Sheet1.csv')
-d4j_stats, d4j_n = calculate_dataset_stats('Defects4j.csv')
+# --- Execution for your datasets ---
 
-print(f"BugInPy (N={bip_n}) Statistical Summary:\n", bip_stats.head())
-print(f"\nDefects4j (N={d4j_n}) Statistical Summary:\n", d4j_stats.head())
+# Parameters from your Summary.csv
+# Python: N=300, n=169
+# Java: N=803, n=260
 
-# To save the results:
-# bip_stats.to_csv('BugInPy_Statistical_Analysis.csv', index=False)
+python_results = calculate_sampling_and_ci('BugInPy.xlsx - Sheet1.csv', N=300, n=169)
+java_results = calculate_sampling_and_ci('Defects4j.csv', N=803, n=260)
+
+# Display Results
+for name, res in [("Python (BugInPy)", python_results), ("Java (Defects4j)", java_results)]:
+    print(f"--- Results for {name} ---")
+    print(f"Sample Proportion (p): {res['Proportion_p']:.4f}")
+    print(f"Margin of Error (95%): {res['Margin_of_Error']:.4f}")
+    print(f"95% CI: [{res['CI_Lower']:.4f}, {res['CI_Upper']:.4f}]")
+    print("-" * 30)
+
+# Save the sampled data to match your 'sampled.csv' files
+# python_results['Sampled_Data'].to_csv('Python_sampled_generated.csv', index=False)
+# java_results['Sampled_Data'].to_csv('Java_sampled_generated.csv', index=False)
