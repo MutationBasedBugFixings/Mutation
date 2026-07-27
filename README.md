@@ -273,15 +273,17 @@ Mutation/
 │   ├── Lang-1-buggy/
 │   └── ...
 │
-└── (optional) d4j_work_diff/              # Used by export_dev_patches.py
-rq5/prapr_comparison/
-├── README.md
-├── prapr_published_mutator_frequencies.csv
-├── prapr_mapping_audit.csv
-├── prapr_mapped_ranking.csv
-├── strict_java_bug_operator_mappings.csv
-├── run_prapr_comparison.py
-└── prapr_supplementary_comparison.csv
+└── (optional) d4j_work_diff/
+|              # Used by export_dev_patches.py
+└──RQ5/
+|   |__prapr_comparison/
+|   ├── README.md
+|   ├── prapr_published_mutator_frequencies.csv
+|   ├── prapr_mapping_audit.csv
+|   ├── prapr_mapped_ranking.csv
+|   ├── strict_java_bug_operator_mappings.csv
+|   ├── run_prapr_comparison.py
+|   └── prapr_supplementary_comparison.csv
 ```
 
 ## Data Transparency & Reproducibility
