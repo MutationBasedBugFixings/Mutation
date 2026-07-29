@@ -1,169 +1,135 @@
-RQ5 Replication Package
+Mutant Operator Study Replication Package
 
-This package reproduces two supplementary evaluations reported in RQ5 of An Empirical Study of Mutant Operators for Injecting and Fixing Real-World Defects:
+This repository contains the replication package for:
 
-Supplementary cross-abstraction comparison with PraPR
+An Empirical Study of Mutant Operators for Injecting and Fixing Real-World Defects
 
-Cost-aware mutant-operator selection under proxy-cost budgets
+The repository is organized by research question and supplementary analysis.
 
-The two evaluations use complete-fix coverage: a bug is covered only when every operator family required by its developer patch is included in the selected operator set.
+Repository Structure
 
-1. Supplementary Cross-Abstraction Comparison with PraPR
+Mutant-Operator-Study-Replication/
+├── 1-RQ1-RQ2-Manual-Mapping/
+├── 2-RQ3-Complexity-Analysis/
+├── 3-RQ4-Dynamic-Validation/
+├── 4-RQ5-Operator-Selection/
+├── 5-PraPR-Supplementary-Comparison/
+├── LICENSE
+└── README.md
 
-Scope
+Contents
 
-PraPR ranks concrete JVM bytecode-level mutators using frequencies mined from the HD-Repair corpus. The paper studies unified source-level semantic operator families. Therefore, this package does not treat PraPR as a direct source-level baseline.
+1-RQ1-RQ2-Manual-Mapping
 
-The analysis maps PraPR's published mutator priorities to the unified source-level taxonomy and evaluates the mapped ranking on the same 619 strict Java bug-to-operator mappings used in RQ5.
+Contains the manually validated bug-to-operator mappings used to evaluate:
 
-This package does not run PraPR, generate bytecode mutants, or measure end-to-end APR success. It computes complete-fix representability under a mapped operator-family budget.
+theoretical operator expressiveness;
 
-Metric
+repairability across Java, Python, and JavaScript;
 
-For a selected top-(k) family set (S_k), a Java fix is covered only when all operator families required by its developer patch are contained in (S_k).
+transformation-level reversibility; and
 
-[\mathrm{Coverage@}k =\frac{\text{covered fixes}}{619}]
+single- and multi-operator fixes.
 
-Mapping and ranking procedure
+2-RQ3-Complexity-Analysis
 
-Read the published PraPR mutator frequencies from:
+Contains the operator complexity classification and supporting data used to assign each operator to one of four search-space complexity tiers:
 
-data/prapr_published_mutator_frequencies.csv
+Low
 
-Apply the documented mutator-to-family mapping in:
+Moderate
 
-mapping/prapr_mapping_audit.csv
+High
 
-Consolidate mutators mapped to the same unified family by summing their published frequencies.
+Extremely High
 
-Rank the resulting families by aggregated frequency in descending order.
+These tiers are also used as structural proxy costs in the RQ5 cost-aware evaluation.
 
-Break frequency ties by:
+3-RQ4-Dynamic-Validation
 
-earliest published PraPR rank; then
+Contains the Java dynamic-validation experiment for the sampled Defects4J bugs, including mutant generation, validation outputs, and semantic assessment results.
 
-family label.
+4-RQ5-Operator-Selection
 
-Evaluate the mapped top-(k) order for:
+Contains the source-level operator-selection experiments under:
 
-k = 1, 3, 5, 10
+fixed operator-count budgets; and
 
-The resulting top-ten family order is:
+proxy-cost budgets.
 
-MCR, VR, ROR, CR, CI, MPM, AOR, MRV, DTR, VA
+The RQ5 package evaluates:
+
+frequency-based selection;
+
+composition-aware selection;
+
+frequency-per-cost selection;
+
+exact cost-aware selection;
+
+cheap-first selection; and
+
+random no-ranking baselines.
+
+5-PraPR-Supplementary-Comparison
+
+Contains the supplementary cross-abstraction comparison with PraPR. PraPR's published bytecode-level mutator priorities are mapped to the study's unified source-level operator taxonomy and evaluated using complete-fix coverage.
+
+This analysis does not run PraPR or reproduce end-to-end APR execution.
+
+RQ5 Operator-Selection Reproduction
+
+The following instructions reproduce the experiments in:
+
+4-RQ5-Operator-Selection/
+
+Recommended Folder Structure
+
+4-RQ5-Operator-Selection/
+├── README.md
+├── requirements.txt
+├── data/
+│   └── strict_bug_operator_mappings.csv
+├── scripts/
+│   ├── run_operator_count_selection.py
+│   └── cost_aware_operator_selection.py
+├── results/
+│   └── operator_count/
+└── cost_aware_results/
 
 Requirements
 
 Python 3.10 or later
 
-pandas 2.x
+pandas
 
-Install the dependencies with:
+NumPy
 
-python -m pip install -r requirements.txt
+SciPy
 
-or create the Conda environment:
+scikit-learn
 
-conda env create -f environment.yml
-conda activate prapr-supplementary-replication
+Matplotlib
 
-Run
+Install the dependencies from the repository root:
 
-From the package root:
+python -m pip install -r 4-RQ5-Operator-Selection/requirements.txt
 
-bash run.sh
+Input Data
 
-or:
+The cost-aware experiment reads:
 
-python scripts/run_prapr_comparison.py
+4-RQ5-Operator-Selection/data/strict_bug_operator_mappings.csv
 
-Expected results
+Required columns:
 
-(k)
+language, project, operators
 
-Selected families
+The operators column contains semicolon-separated canonical operator codes.
 
-Covered fixes
+An optional bug_id column may also be included.
 
-Coverage
-
-1
-
-MCR
-
-54 / 619
-
-8.72%
-
-3
-
-MCR, VR, ROR
-
-76 / 619
-
-12.28%
-
-5
-
-MCR, VR, ROR, CR, CI
-
-180 / 619
-
-29.08%
-
-10
-
-MCR, VR, ROR, CR, CI, MPM, AOR, MRV, DTR, VA
-
-333 / 619
-
-53.80%
-
-Output files
-
-results/prapr_mapped_ranking.csv
-
-results/prapr_supplementary_comparison.csv
-
-results/coverage_membership_by_bug.csv
-
-results/run_metadata.json
-
-Input and code files
-
-data/strict_java_bug_operator_mappings.csvThe 619 eligible Java developer fixes and their complete required operator-family sets.
-
-data/prapr_published_mutator_frequencies.csvPraPR mutator frequencies used to derive the published priority order.
-
-mapping/prapr_mapping_audit.csvDirect and approximate mapping decisions with their rationales.
-
-scripts/run_prapr_comparison.pySelf-contained reproduction script.
-
-run.shConvenience launcher.
-
-requirements.txt and environment.ymlSoftware dependencies.
-
-Interpretation
-
-The results represent complete-fix coverage after cross-abstraction taxonomy mapping. They must not be interpreted as:
-
-the number of bugs repaired by PraPR;
-
-a reproduction of PraPR's complete APR pipeline; or
-
-end-to-end evidence that one ranking method outperforms another.
-
-PraPR reference
-
-A. Ghanbari, S. Benton, and L. Zhang, “Practical Program Repair via Bytecode Mutation,” Proceedings of the 28th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA), 2019, pp. 19–30.
-
-2. Cost-Aware Mutant-Operator Selection
-
-Scope
-
-This experiment evaluates whether the RQ3 search-space complexity tiers can improve operator selection when empirical repair relevance and proxy cost are considered jointly.
-
-The evaluation uses the same 925 eligible bug-to-operator mappings:
+The evaluation uses 925 eligible mappings:
 
 Java: 619
 
@@ -171,38 +137,29 @@ Python: 178
 
 JavaScript: 128
 
-Projects are evaluated using project-level held-out folds. In each fold, operator portfolios are constructed from the training projects and evaluated only on the held-out projects.
+Fixed Operator-Count Evaluation
 
-Input file
+The fixed-count experiment compares frequency-based, composition-aware, and random no-ranking selection under:
 
-The script expects:
+k = 1, 3, 5, 10
 
-strict_bug_operator_mappings.csv
+A fix is covered only when all operator families required by its developer patch are included in the selected top-(k) operator set.
 
-with the following required columns:
+Run from the repository root:
 
-language, project, operators
+python 4-RQ5-Operator-Selection/scripts/run_operator_count_selection.py
 
-The operators column must contain semicolon-separated canonical operator codes.
+The generated files should be written under:
 
-An optional bug_id column may also be supplied. When it is absent, the script creates row-based identifiers.
+4-RQ5-Operator-Selection/results/operator_count/
 
-The script checks these locations:
+Cost-Aware Operator Selection
 
-/home1/furqan/my_mutation_experiments/scripts/rq5_results/strict_bug_operator_mappings.csv
-/home1/furqan/my_mutation_experiments/scripts/strict_bug_operator_mappings.csv
+The cost-aware experiment evaluates whether the RQ3 complexity tiers can improve operator selection when repair relevance and structural proxy cost are considered jointly.
 
-The base directory is configured in the script as:
+Proxy-Cost Schemes
 
-BASE_DIR = Path("/home1/furqan/my_mutation_experiments/scripts").resolve()
-
-Place the input file in one of the expected locations or update BASE_DIR before running the script.
-
-Proxy-cost schemes
-
-Each canonical operator is assigned a cost according to its RQ3 complexity tier.
-
-Primary exponential mapping
+The primary exponential mapping is:
 
 Complexity tier
 
@@ -224,129 +181,61 @@ Extremely High
 
 8
 
-Sensitivity mappings
+Sensitivity mappings:
 
 Linear: (1, 2, 3, 4)
 
 Steep: (1, 3, 6, 10)
 
-The evaluated budget fractions are:
+Evaluated budget fractions:
 
 10%, 20%, 30%, 40%, 50%
 
-Each budget is calculated as a fraction of the total cost of all canonical operator families under the selected cost scheme.
+Evaluated Strategies
 
-Selection strategies
+Frequency: operators are ranked by training-fix frequency.
 
-The script evaluates five strategies under the same proxy-cost budget:
+Frequency-per-cost: operators are ranked by frequency divided by proxy cost.
 
-FrequencyOperators are ranked by their occurrence frequency in the training fixes.
+Exact cost-aware: a mixed-integer linear program selects the cost-feasible portfolio that maximizes training complete-fix coverage.
 
-Frequency-per-costOperators are ranked by training frequency divided by proxy cost.
+Cheap-first: operators are ranked by increasing proxy cost, with frequency used for tie-breaking.
 
-Cheap-firstOperators are ranked by increasing proxy cost, with frequency used for tie-breaking.
+Random: 1,000 randomly generated cost-feasible portfolios form the no-ranking baseline.
 
-Exact cost-awareA mixed-integer linear program selects the cost-feasible portfolio that maximizes complete-fix coverage on the training projects.
+Evaluation Settings
 
-RandomThe no-ranking baseline uses 1,000 randomly generated cost-feasible portfolios.
-
-For the ranking-based strategies, operators are traversed in ranked order and selected whenever their cost fits within the remaining budget.
-
-Exact cost-aware objective
-
-For a selected operator portfolio (S):
-
-[\mathrm{Cost}(S)=\sum_{o\in S}c(o)]
-
-The exact cost-aware strategy solves:
-
-[S_C^* =\arg\max_{S\subseteq\mathcal{O}}\sum_{b\in B_{\mathrm{train}}}\mathbb{I}[R_b\subseteq S]]
-
-subject to:
-
-[\sum_{o\in S}c(o)\leq C]
-
-where:
-
-(R_b) is the complete operator set required by fix (b);
-
-(c(o)) is the assigned proxy cost of operator (o); and
-
-(C) is the available proxy-cost budget.
-
-Held-out evaluation settings
-
-The supplied script uses:
-
-Five project-level folds
-1,000 random portfolios per condition
-5,000 paired bootstrap iterations
+Project-level folds: 5
+Random portfolios per condition: 1,000
+Paired bootstrap iterations: 5,000
 Random seed: 20260322
-
-The primary cost scheme is:
-
-exponential
-
-Requirements
-
-Install the libraries imported by the supplied script:
-
-python -m pip install pandas numpy scipy scikit-learn matplotlib
-
-The exact cost-aware strategy uses:
-
-scipy.optimize.milp
+Primary cost scheme: exponential
 
 Run
 
-Save the supplied cost-aware script as:
+From the repository root:
 
-cost_aware_operator_selection.py
+python 4-RQ5-Operator-Selection/scripts/cost_aware_operator_selection.py
 
-Place it under:
+The script writes outputs to:
 
-/home1/furqan/my_mutation_experiments/scripts/
+4-RQ5-Operator-Selection/cost_aware_results/
 
-Then run:
+Expected files:
 
-cd /home1/furqan/my_mutation_experiments/scripts
-python cost_aware_operator_selection.py
-
-Output directory
-
-The script writes all outputs to:
-
-/home1/furqan/my_mutation_experiments/scripts/cost_aware_results/
-
-Output files
-
-operator_cost_table.csvCost assigned to each operator under every evaluated cost scheme.
-
-heldout_results.csvFold-level coverage, selected-operator counts, and selected costs.
-
-heldout_summary.csvWeighted held-out summary for each language, cost scheme, budget, and strategy.
-
-selected_portfolios.csvOperators selected in each held-out fold.
-
-out_of_fold_predictions.csvBug-level coverage outcomes for each deterministic strategy and coverage probabilities for the random baseline.
-
-paired_comparisons.csvPaired bootstrap differences and 95% confidence intervals.
-
-primary_scheme_summary.csvSummary for the primary exponential cost mapping.
-
-README_RESULTS.txtHuman-readable summary of the primary results and paired comparisons.
-
+operator_cost_table.csv
+heldout_results.csv
+heldout_summary.csv
+selected_portfolios.csv
+out_of_fold_predictions.csv
+paired_comparisons.csv
+primary_scheme_summary.csv
+README_RESULTS.txt
 coverage_java.svg
-
 coverage_python.svg
-
 coverage_javascript.svg
 
-The script also attempts to export PNG versions of the three figures.
-
-Headline primary-scheme results
-
-Under the exponential mapping and a 30% proxy-cost budget:
+Primary Results at a 30% Proxy-Cost Budget
 
 Language
 
@@ -404,58 +293,115 @@ Python: 7.87 percentage points
 
 JavaScript: 17.19 percentage points
 
-Across all 45 combinations of language, budget, and proxy-cost mapping:
+Across all 45 combinations of language, budget, and proxy mapping:
 
 frequency-per-cost is better than frequency in 12 comparisons;
 
 frequency-per-cost is worse in 3 comparisons;
 
-the remaining 30 comparisons are inconclusive;
+30 comparisons are inconclusive;
 
 exact cost-aware is better in 9 comparisons and worse in 6; and
 
 frequency outperforms cheap-first in 35 comparisons.
 
-Optional measured-cost evaluation
+Important Limitation
 
-When this file exists:
+The default cost values are structural proxies derived from the RQ3 complexity tiers. They are not measured execution times, candidate counts, mutant counts, or validation costs.
 
-/home1/furqan/my_mutation_experiments/scripts/operator_runtime_costs.csv
+The results must therefore be interpreted as complete-fix coverage under proxy-cost budgets, not as evidence of wall-clock runtime reduction.
 
-the script also evaluates a measured-cost scheme.
+PraPR Supplementary Comparison
 
-The file must contain:
+The following instructions reproduce the analysis in:
 
-operator,cost
+5-PraPR-Supplementary-Comparison/
 
-It must include every canonical operator, and every cost must be finite and greater than zero. The script normalizes measured costs by the minimum supplied cost.
+Recommended Folder Structure
 
-Important limitation
+5-PraPR-Supplementary-Comparison/
+├── README.md
+├── requirements.txt
+├── data/
+│   ├── strict_java_bug_operator_mappings.csv
+│   └── prapr_published_mutator_frequencies.csv
+├── mapping/
+│   └── prapr_mapping_audit.csv
+├── scripts/
+│   └── run_prapr_comparison.py
+└── results/
 
-The default linear, exponential, and steep costs are structural proxies derived from the RQ3 complexity tiers. They are not measured execution times, mutant counts, candidate counts, or validation costs.
+Run
 
-The results must therefore be interpreted as complete-fix coverage under structural proxy-cost budgets, not as evidence of wall-clock runtime reduction.
+From the repository root:
 
-3. Recommended Reproduction Order
+python 5-PraPR-Supplementary-Comparison/scripts/run_prapr_comparison.py
 
-Run the two analyses independently:
+Expected result files:
 
-Step 1: PraPR supplementary comparison
+5-PraPR-Supplementary-Comparison/results/prapr_mapped_ranking.csv
+5-PraPR-Supplementary-Comparison/results/prapr_supplementary_comparison.csv
+5-PraPR-Supplementary-Comparison/results/coverage_membership_by_bug.csv
+5-PraPR-Supplementary-Comparison/results/run_metadata.json
 
-python scripts/run_prapr_comparison.py
+Expected PraPR-Mapped Results
 
-Verify:
+(k)
 
-results/prapr_supplementary_comparison.csv
+Selected families
 
-Step 2: Cost-aware operator selection
+Covered fixes
 
-python cost_aware_operator_selection.py
+Coverage
 
-Verify:
+1
 
-cost_aware_results/primary_scheme_summary.csv
-cost_aware_results/paired_comparisons.csv
-cost_aware_results/README_RESULTS.txt
+MCR
 
-The generated tables and figures reproduce the RQ5 supplementary PraPR comparison and cost-aware operator-selection results.
+54 / 619
+
+8.72%
+
+3
+
+MCR, VR, ROR
+
+76 / 619
+
+12.28%
+
+5
+
+MCR, VR, ROR, CR, CI
+
+180 / 619
+
+29.08%
+
+10
+
+MCR, VR, ROR, CR, CI, MPM, AOR, MRV, DTR, VA
+
+333 / 619
+
+53.80%
+
+Interpretation
+
+The PraPR results represent complete-fix coverage after cross-abstraction taxonomy mapping.
+
+They must not be described as:
+
+the number of bugs repaired by PraPR;
+
+a direct source-level baseline;
+
+a reproduction of PraPR's full repair pipeline; or
+
+end-to-end evidence that one APR system outperforms another.
+
+Reproducibility Notes
+
+All paths in this README are repository-relative. No machine-specific directory is required.
+
+Run all commands from the repository root unless stated otherwise. Generated outputs are deterministic under the documented random seed, subject to compatible library versions and solver behavior.
