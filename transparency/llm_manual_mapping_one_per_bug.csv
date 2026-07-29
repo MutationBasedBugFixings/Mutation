@@ -1,0 +1,1130 @@
+﻿Mutant ID,Mutant Operator,Reference,Explanation,BugID,Bug identification,Patch
+"Method call replacement, Variable assignment","MCR[],VA[]",Major and Pit,single line edit at two places ,Chart_1_run2,Chart_1,"--- source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java
++++ source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java
+@@ -1787,7 +1787,7 @@
+         // if the dataset has selection state, we can use it to determine the
+         // visible series
+         if (dataset instanceof SelectableCategoryDataset) {
+-            SelectableCategoryDataset scd = (SelectableCategoryDataset) dataset;
++            SelectableCategoryDataset scd = (SelectableCategoryDataset) dataset;
+             int seriesCount = scd.getRowCount();
+             for (int s = 0; s < seriesCount; s++) {
+                 if (scd.isSelected(s)) {
+@@ -1798,7 +1798,7 @@
+             // otherwise we just use the visible series flags
+         }
+         else {
+-            int seriesCount = dataset.getRowCount();
++            int seriesCount = dataset.getRowCount();
+             for (int s = 0; s < seriesCount; s++) {
+                 if (isSeriesVisible(s)) {
+                     visibleSeries.add(s);
+"
+"Method call replacement, Condition insertion, control flow mutant","MCR[],CI[],CFSM",Major and Pit,composite edit of 3 differnet operators ,Chart_2_run5,Chart_2,"--- source/org/jfree/data/general/DatasetUtilities.java
++++ source/org/jfree/data/general/DatasetUtilities.java
+@@ -1194,6 +1194,10 @@
+             for (int column = 0; column < columnCount; column++) {
+                 Number v = dataset.getValue(row, column);
+                 if (v != null) {
++                    double vv = v.doubleValue();
++                    if (Double.isNaN(vv)) {
++                        continue;
++                    }
+                     min = Math.min(min, v.doubleValue());
+                     max = Math.max(max, v.doubleValue());
+                 }
+"
+"Statement insertion, Variable intilzation","SI[],VA[]",Major and Pit,composite of two different operators ,Chart_3_run2,Chart_3,"--- source/org/jfree/data/time/TimeSeries.java
++++ source/org/jfree/data/time/TimeSeries.java
+@@ -1042,10 +1042,12 @@
+         if (end < start) {
+             throw new IllegalArgumentException(""Requires start <= end."");
+         }
+-        TimeSeries copy = (TimeSeries) super.clone();
+-        copy.data = new java.util.ArrayList();
+-        if (this.data.size() > 0) {
+-            for (int index = start; index <= end; index++) {
++        TimeSeries copy = (TimeSeries) super.clone();
++        copy.minY = Double.NaN;
++        copy.maxY = Double.NaN;
++        copy.data = new java.util.ArrayList();
++        if (this.data.size() > 0) {
++            for (int index = start; index <= end; index++) {
+                 TimeSeriesDataItem item
+                         = (TimeSeriesDataItem) this.data.get(index);
+                 TimeSeriesDataItem clone = (TimeSeriesDataItem) item.clone();
+"
+no ,non-functional operators comments category,,,Chart_4_run1,Chart_4,"--- source/org/jfree/chart/axis/LogAxis.java
++++ source/org/jfree/chart/axis/LogAxis.java
+@@ -259,8 +259,8 @@ public class LogAxis extends ValueAxis {
+             double lower = Math.max(r.getLowerBound(), this.smallestValue);
+             double range = upper - lower;
+ 
+-            // if fixed auto range, then derive lower bound...
++            // if fixed auto range, then derive lower bound... (but not for log axis)
+             double fixedAutoRange = getFixedAutoRange();
+             if (fixedAutoRange > 0.0) {
+                 lower = Math.max(upper - fixedAutoRange, this.smallestValue);
+"
+"Statement insertion, Variable intilzation","SI[],VA[]",Major and Pit,composit edit of two operators ,Chart_5_run4,Chart_5,"--- source/org/jfree/data/xy/XYSeries.java
++++ source/org/jfree/data/xy/XYSeries.java
+@@ -539,6 +539,9 @@
+                 // there is an item with the given x-value already
+                 int index = indexOf(item.getX());
+                 if (index >= 0) {
++                    // update the existing item
++                    XYDataItem existing = (XYDataItem) this.data.get(index);
++                    existing.setY(item.getY());
+                     throw new SeriesException(""X-value already exists."");
+                 }
+             }
+"
+Condition insertion,CI[],Major and Pit,single operator ,Chart_6_run3,Chart_6,"--- source/org/jfree/chart/util/ShapeList.java
++++ source/org/jfree/chart/util/ShapeList.java
+@@ -93,6 +93,7 @@
+         if (obj == this) {
+             return true;
+         }
++        if (!(super.equals(obj))) return false;
+         if (!(obj instanceof ShapeList)) {
+             return false;
+         }
+"
+method call replacement,MCR[],Major and Pit,method call replacement in two different places ,Chart_7_run1,Chart_7,"--- source/org/jfree/data/time/TimePeriodValues.java
++++ source/org/jfree/data/time/TimePeriodValues.java
+@@ -297,8 +297,8 @@
+         
+         if (this.maxMiddleIndex >= 0) {
+-            long s = getDataItem(this.minMiddleIndex).getPeriod().getStart()
++            long s = getDataItem(this.maxMiddleIndex).getPeriod().getStart()
+                 .getTime();
+-            long e = getDataItem(this.minMiddleIndex).getPeriod().getEnd()
++            long e = getDataItem(this.maxMiddleIndex).getPeriod().getEnd()
+                 .getTime();
+             long maxMiddle = s + (e - s) / 2;
+             if (middle > maxMiddle) {
+"
+no ,no ,no,no operator has been used in this patch ,Chart_8_run1,Chart_8,"--- source/org/jfree/data/time/Week.java	2008-12-17 14:22:31.000000000 +0000
++++ source/org/jfree/data/time/Week.java	2008-12-17 14:22:31.000000000 +0000
+@@ -167,7 +167,7 @@
+         if (time == null) {
+             throw new IllegalArgumentException(""Null 'time' argument."");
+         }
+-        if (zone == null) {
++        if (zone == null) {
+             throw new IllegalArgumentException(""Null 'zone' argument."");
+         }
+         if (locale == null) {
+"
+Arthematic operator replacement,AOR[],Major and Pit,artematic operator replacement,Chart_9_run1,Chart_9,"--- source/org/jfree/data/time/TimeSeries.java
++++ source/org/jfree/data/time/TimeSeries.java
+@@ -1050,7 +1050,7 @@
+         }
+         int startIndex = getIndex(start);
+         if (startIndex < 0) {
+-            startIndex = -(startIndex + 1);
++            startIndex = -startIndex - 1;
+         }
+         int endIndex = getIndex(end);
+         if (endIndex < 0) {
+"
+Modification of return value,MRV[],Major and Pit,modification of return value,Chart_10_run1,Chart_10,"--- source/org/jfree/chart/imagemap/StandardToolTipTagFragmentGenerator.java
++++ source/org/jfree/chart/imagemap/StandardToolTipTagFragmentGenerator.java
+@@ -58,7 +58,7 @@
+      * @return The formatted HTML area tag attribute(s).
+      */
+     public String generateToolTipFragment(String toolTipText) {
+-        return "" title=\"""" + toolTipText
++        return "" title=\"""" + ImageMapUtilities.htmlEscape(toolTipText)
+             + ""\"" alt=\""\"""";
+     }
+"
+no ,no changes same edit,,same edit in buggy and fix version didn't change the single line ,Cli_1_run3,Cli_1,"--- src/java/org/apache/commons/cli/CommandLine.java	2004-11-16 16:56:20.000000000 +0000
++++ src/java/org/apache/commons/cli/CommandLine.java	2004-11-16 16:56:20.000000000 +0000
+@@ -105,13 +105,13 @@
+     public String[] getOptionValues(String opt)
+     {
+         opt = Util.stripLeadingHyphens(opt);
+ 
+         String key = opt;
+         if (names.containsKey(opt))
+         {
+-            key = (String) names.get(opt);
++            key = (String) names.get(opt);
+         }
+         if (options.containsKey(key))
+         {
+             return ((Option) options.get(key)).getValues();
+         }
+"
+no ,no changes same edit,,same edit in buggy and fix version didn't change the single line ,Cli_3_run1,Cli_3,"--- src/java/org/apache/commons/cli/PatternOptionBuilder.java
++++ src/java/org/apache/commons/cli/PatternOptionBuilder.java
+@@ -176,7 +176,7 @@
+             if (!isValueCode(ch))
+             {
+                 if (opt != ' ')
+-                {
++                {   
+                     OptionBuilder.hasArg(type != null);
+                     OptionBuilder.isRequired(required);
+                     OptionBuilder.withType(type);
+"
+"Condition insertion, Modification of return Value","CI[],MRV[]",Major and Pit,two operator composite fix ,Cli_5_run1,Cli_5,"--- src/java/org/apache/commons/cli/Util.java
++++ src/java/org/apache/commons/cli/Util.java
+@@ -25,6 +25,9 @@ class Util {
+      */
+     static String stripLeadingHyphens(String str)
+     {
++        if (str == null) {
++            return null;
++        }
+         if (str.startsWith(""--""))
+         {
+             return str.substring(2, str.length());
+"
+no ,nochanges same edit,,same edit in buggy and fix version didn't change the single line ,Cli_9_run2,Cli_9,"--- src/java/org/apache/commons/cli/Options.java
++++ src/java/org/apache/commons/cli/Options.java
+@@ -191,7 +191,7 @@
+     public List getRequiredOptions()
+     {
+         return requiredOpts;
+-    }
++    }
+"
+no ,no changes same edit,,same edit in buggy and fix version didn't change the single line ,Cli_11_run3,Cli_11,"--- src/java/org/apache/commons/cli/HelpFormatter.java
++++ src/java/org/apache/commons/cli/HelpFormatter.java
+@@ -589,7 +589,7 @@
+ 
+         // if the option has an argument value
+         if (option.hasArg())
+-        {
++        {
+             if (option.hasArgName())
+             {
+                 buff.append("" <"").append(option.getArgName()).append("">"");
+"
+no ,no changes same edit,,same edit in buggy and fix version didn't change the single line ,Closure_1_run1,Closure_1,"--- src/com/google/javascript/jscomp/RemoveUnusedVars.java
++++ src/com/google/javascript/jscomp/RemoveUnusedVars.java
+@@ -208,7 +208,7 @@
+         } else {
+           // Look for calls to addSingletonGetter calls.
+           String className = codingConvention.getSingletonGetterClassName(n);
+-          if (className != null) {
++          if (className != null) {
+             modifiedVar = scope.getVar(className);
+           }
+         }
+"
+"Condition insertion, Modification of return value","CI[],MRV[]",Major and Pit,condition insertion with modification of return value,Closure_5_run2,Closure_5,"--- src/com/google/javascript/jscomp/InlineObjectLiterals.java
++++ src/com/google/javascript/jscomp/InlineObjectLiterals.java
+@@ -116,6 +116,10 @@
+           // Deleting a property has different semantics from deleting
+           // a variable, so deleted properties should not be inlined.
+ 
++          if (gramps.isDelProp()) {
++            return false;
++          }
++
+           // NOTE(nicksantos): This pass's object-splitting algorithm has
+           // a blind spot. It assumes that if a property isn't defined on an
+           // object, then the value is undefined. This is not true, because
+"
+modification of condition statement,MOCS[],Major and Pit,modication of condition statement applied in this patch,Closure_10_run3,Closure_10,"--- src/com/google/javascript/jscomp/PeepholeFoldConstants.java
++++ src/com/google/javascript/jscomp/PeepholeFoldConstants.java
+@@ -682,6 +682,7 @@
+   private Node tryFoldLeftChildOp(Node n, Node left, Node right) {
+     int opType = n.getType();
+     Preconditions.checkState(opType == Token.MUL || opType == Token.BITAND ||
++        opType == Token.ADD ||
+         opType == Token.BITOR || opType == Token.BITXOR);
+ 
+     Preconditions.checkState(n.getChildCount() == 2);
+"
+"Condition insertion, Modification of return Value","CI[],MRV[]",Major and Pit,condition insertion with modification of return value,Closure_15_run1,Closure_15,"--- a/src/com/google/javascript/jscomp/FlowSensitiveInlineVariables.java	2025-03-28 22:45:00.000000000 +0000
++++ b/src/com/google/javascript/jscomp/FlowSensitiveInlineVariables.java	2025-03-28 22:45:00.000000000 +0000
+@@ -257,6 +257,11 @@
+       return false;
+     }
+ 
++    // Cannot inline if the definition is in a for-in loop
++    if (NodeUtil.isForIn(defCfgNode.getParent())) {
++      return false;
++    }
++
+     // The right of the definition has side effect:
+     // Example, for x:
+     // x = readProp(b), modifyProp(b); print(x);
+"
+method call replacment,MCR[],Major and Pit,method call replacement in this patch,Closure_20_run3,Closure_20,"--- src/com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java
++++ src/com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java
+@@ -408,7 +408,7 @@
+         // OK, join the IF expression with the FOR expression
+         Node forCondition = NodeUtil.getConditionExpression(n);
+         if (forCondition.isEmpty()) {
+-          n.replaceChild(forCondition, fixedIfCondition);
++          n.replaceChild(forCondition, fixedIfCondition.srcref(ifCondition));
+         } else {
+           Node replacement = new Node(Token.AND);
+           n.replaceChild(forCondition, replacement);
+"
+"Modification of condtion steament, Relatonal operator replacement","MOCS[],ROR[]",Major and Pit,two different operators has been applied ,Closure_25_run5,Closure_25,"--- src/com/google/javascript/jscomp/TypeInference.java
++++ src/com/google/javascript/jscomp/TypeInference.java
+@@ -1098,7 +1098,7 @@
+     JSType type = getJSType(constructor);
+     if (type != null) {
+       FunctionType fnType = type.toMaybeFunctionType();
+-      if (fnType != null) {
++      if (fnType != null && fnType.isConstructor()) {
+         visitParameterList(templateTypes, scope, fnType);
+         JSType resultType = fnType.getInstanceType();
+         JSType typeResult = typeCheck ? resultType : getNativeType(UNKNOWN_TYPE);
+"
+no,comments changes ,,,Closure_30_run2,Closure_30,"--- src/com/google/javascript/jscomp/FlowSensitiveInlineVariables.java
++++ src/com/google/javascript/jscomp/FlowSensitiveInlineVariables.java
+@@ -414,7 +414,7 @@
+       // We give up inling stuff with R-Value that has GETPROP, GETELEM,
+       // or anything that creates a new object.
+       // Example:
+-      // var x = a.b.c; j.c = 1; print(x);
++      // var x = a.b.c; j.c = 1; print(x);
+       // Inlining print(a.b.c) is not safe consider j and be alias to a.b.
+       // TODO(user): We could get more accuracy by looking more in-detail
+       // what j is and what x is trying to into to.
+"
+no ,comments changes ,,,Closure_40_run1,Closure_40,"--- src/com/google/javascript/jscomp/NameAnalyzer.java
++++ src/com/google/javascript/jscomp/NameAnalyzer.java
+@@ -669,7 +669,7 @@
+           if (parent.isFor() && !NodeUtil.isForIn(parent)) {
+             // Patch for assignments that appear in the init,
+             // condition or iteration part of a FOR loop.  Without
+-            // this change, all 3 of those parts try to claim the for
++            // this change, all 3 of those parts try to claim the for
+             // loop as their dependency scope.  The last assignment in
+             // those three fields wins, which can result in incorrect
+             // reference edges between referenced and assigned variables.
+"
+"Modification of condtion steament, Relatonal operator replacement","MOCS[],ROR[]",Major and Pit,two different operators has been applied ,Closure_45_run3,Closure_45,"--- src/com/google/javascript/jscomp/RemoveUnusedVars.java
++++ src/com/google/javascript/jscomp/RemoveUnusedVars.java
+@@ -384,7 +384,7 @@
+           // If that var hasn't already been marked referenced, then
+           // start tracking it.  If this is an assign, do nothing
+           // for now.
+-          if (isRemovableVar(var)) {
++          if (var != null && isRemovableVar(var)) {
+             if (!assignsByNode.containsKey(n)) {
+               markReferencedVar(var);
+             }
+"
+no,multiple edits in different places in the different files in the patch,,,Codec_1_run2,Codec_1,"--- src/java/org/apache/commons/codec/language/Caverphone.java
++++ src/java/org/apache/commons/codec/language/Caverphone.java
+@@ -34,7 +34,7 @@
+     public String caverphone(String txt) {
+         // NOTE: Version 1.0 of Caverphone is easily derivable from this code 
+         // by commenting out the 2.0 lines and adding in the 1.0 lines
+-
++        if (txt == null) return ""1111111111"";
+         if( txt == null || txt.length() == 0 ) {
+             return ""1111111111"";
+         }
+--- src/java/org/apache/commons/codec/language/Metaphone.java
++++ src/java/org/apache/commons/codec/language/Metaphone.java
+@@ -87,7 +87,7 @@
+     public String metaphone(String txt) {
+         boolean hard = false ;
+         if ((txt == null) || (txt.length() == 0)) {
+-            return """" ;
++            return """" ; // METAPH-1: return empty string for null/empty
+         }
+         // single character is itself
+         if (txt.length() == 1) {
+--- src/java/org/apache/commons/codec/language/DoubleMetaphone.java
++++ src/java/org/apache/commons/codec/language/DoubleMetaphone.java
+@@ -156,7 +156,7 @@
+         value = cleanInput(value);
+         if (value == null) {
+             return null;
+-        }
++        } // DM-1: handle null input
+         
+         boolean slavoGermanic = isSlavoGermanic(value);
+         int index = isSilentStart(value) ? 1 : 0;
+--- src/java/org/apache/commons/codec/language/RefinedSoundex.java
++++ src/java/org/apache/commons/codec/language/RefinedSoundex.java
+@@ -142,7 +142,7 @@
+     public String soundex(String str) {
+         if (str == null) {
+             return null;
+-        }
++        } // RS-1: handle null input
+         str = SoundexUtils.clean(str);
+         if (str.length() == 0) {
+             return str;
+"
+no,"same edit at same place, no changes at all",,,Codec_3_run1,Codec_3,"--- src/java/org/apache/commons/codec/language/DoubleMetaphone.java.orig	2025-03-25 18:00:00.000000000 +0000
++++ src/java/org/apache/commons/codec/language/DoubleMetaphone.java	2025-03-25 18:00:00.000000000 +0000
+@@ -826,7 +826,7 @@
+         DoubleMetaphoneResult result = new DoubleMetaphoneResult(this.getMaxCodeLen());
+         
+         while (!result.isComplete() && index <= value.length() - 1) {
+-            switch (value.charAt(index)) {
++            switch (value.charAt(index)) {
+             case 'A':
+             case 'E':
+             case 'I':
+"
+no,"same edit at same place, no changes at all",,,Codec_5_run1,Codec_5,"--- src/java/org/apache/commons/codec/binary/Base64InputStream.java
++++ src/java/org/apache/commons/codec/binary/Base64InputStream.java
+@@ -131,7 +131,7 @@
+                 byte[] buf = new byte[doEncode ? 4096 : 8192];
+                 int c = in.read(buf);
+                 // A little optimization to avoid System.arraycopy()
+                 // when possible.
+-                if (c > 0 && b.length == len) {
++                if (c > 0 && b.length == len) {
+                     base64.setInitialBuffer(b, offset, len);
+                 }
+                 if (doEncode) {
+"
+Method call replacement,MCR[],Major and Pit,method call replacement,Codec_7_run1,Codec_7,"--- src/java/org/apache/commons/codec/binary/Base64.java
++++ src/java/org/apache/commons/codec/binary/Base64.java
+@@ -519,7 +519,7 @@ public class Base64 implements BinaryEncoder, BinaryDecoder {
+                 // encode the first 6 bits in the first byte
+                 // set the modulus to 1
+                 if (lineLength > 0 && lineLength <= currentLinePos) {
+-                    System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
++                    System.arraycopy(this.lineSeparator, 0, buffer, pos, this.lineSeparator.length);
+                     pos += lineSeparator.length;
+                 }
+                 buffer[pos++] = encodeTable[x >> 18];
+"
+no,"same edit at same place, no changes at all",,,Codec_9_run1,Codec_9,"--- src/java/org/apache/commons/codec/binary/Base64.java
++++ src/java/org/apache/commons/codec/binary/Base64.java
+@@ -630,7 +630,7 @@
+                 case 1 :
+                     buffer[pos++] = encodeTable[(x >> 2) & MASK_6BITS];
+                     buffer[pos++] = encodeTable[(x << 4) & MASK_6BITS];
+-                    // URL-SAFE skips the padding to further reduce size.
++                    // URL-SAFE skips the padding to further reduce size.
+                     if (encodeTable == STANDARD_ENCODE_TABLE) {
+                         buffer[pos++] = PAD;
+                         buffer[pos++] = PAD;
+"
+Modification of condition statement,MOCS[],Major and Pit,structual edit of condition modification,Codec_11_run1,Codec_11,"--- src/main/java/org/apache/commons/codec/net/QuotedPrintableCodec.java
++++ src/main/java/org/apache/commons/codec/net/QuotedPrintableCodec.java
+@@ -217,7 +217,7 @@
+                     // if the next octet is a CR we have found a soft line break
+                     int u = Utils.digit16(bytes[++i]);
+                     int l = Utils.digit16(bytes[++i]);
+-                    buffer.write((char) ((u << 4) + l));
++                    buffer.write((u << 4) + l);
+                 } catch (ArrayIndexOutOfBoundsException e) {
+                     throw new DecoderException(""Invalid quoted-printable encoding"", e);
+                 }
+"
+no,"same edit at same place, no changes at all",,,Collections_25_run2,Collections_25,"--- src/main/java/org/apache/commons/collections4/IteratorUtils.java
++++ src/main/java/org/apache/commons/collections4/IteratorUtils.java
+@@ -1341,7 +1341,7 @@
+      * @throws NullPointerException if the comparator is null
+      */
+     public static <E> CollatingIterator<E> collatedIterator(final Comparator<? super E> comparator,
+-                                                            final Iterator<? extends E>... iterators) {
++                                                            final Iterator<? extends E>... iterators) {
+         return new CollatingIterator<E>(comparator, iterators);
+     }
+ }
+"
+method call replacement,MCR[],Major and Pit,method call replacement ,Collections_26_run1,Collections_26,"--- src/main/java/org/apache/commons/collections4/keyvalue/MultiKey.java
++++ src/main/java/org/apache/commons/collections4/keyvalue/MultiKey.java
+@@ -285,7 +285,7 @@
+      * @return the instance with recalculated hash code
+      */
+     private Object readResolve() {
+-        calculateHashCode(keys);
++        calculateHashCode(this.keys);
+         return this;
+     }
+ }
+"
+Method call replacement,MCR[],Major and Pit,method call replacement of changes in method,Collections_27_run1,Collections_27,"--- src/main/java/org/apache/commons/collections4/map/MultiValueMap.java	(revision 12345)
++++ src/main/java/org/apache/commons/collections4/map/MultiValueMap.java	(working copy)
+@@ -268,7 +268,7 @@
+     @SuppressWarnings(""unchecked"") // (1) should only fail if input stream is incorrect
+     private void readObject(final ObjectInputStream in) throws IOException, ClassNotFoundException {
+         in.defaultReadObject();
+-        map = (Map<K, Object>) in.readObject(); // (1)
++        decorated().putAll((Map<K, Object>) in.readObject()); // (1)
+     }
+ 
+     //-----------------------------------------------------------------------
+"
+no,comments changes ,,,Collections_28_run3,Collections_28,"--- src/main/java/org/apache/commons/collections4/trie/AbstractPatriciaTrie.java	(revision 0)
++++ src/main/java/org/apache/commons/collections4/trie/AbstractPatriciaTrie.java	(revision 0)
+@@ -0,0 +1,2 @@
++// The bug is in the prefixMap clear operation. The fix is to override clear() in the prefix map view
++// to properly remove all entries from the underlying trie.
+"
+Method call replacement,MCR[],Major and Pit,method call replacement of the correct method based on the code,Compress_5_run1,Compress_5,"--- src/main/java/org/apache/commons/compress/compressors/gzip/GzipCompressorInputStream.java
++++ src/main/java/org/apache/commons/compress/compressors/gzip/GzipCompressorInputStream.java
+@@ -51,7 +51,7 @@
+      */
+     public int read(byte[] b, int from, int length) throws IOException {
+         int read = in.read(b, from, length);
+-        this.count(read);
++        count(read);
+         return read;
+     }
+ }
+"
+no,multiline edits in different part of patces,,,Compress_10_run3,Compress_10,"--- src/main/java/org/apache/commons/compress/archivers/zip/ZipFile.java
++++ src/main/java/org/apache/commons/compress/archivers/zip/ZipFile.java
+@@ -386,7 +386,7 @@
+         byte[] fileName = new byte[fileNameLen];
+         archive.readFully(fileName);
+         ze.setName(entryEncoding.decode(fileName), fileName);
+-
++        
+         // LFH offset,
+         OffsetEntry offset = new OffsetEntry();
+         offset.headerOffset = ZipLong.getValue(cfh, off);
+@@ -394,7 +394,7 @@
+         entries.put(ze, offset);
+ 
+         nameMap.put(ze.getName(), ze);
+-
++        
+         byte[] cdExtraData = new byte[extraLen];
+         archive.readFully(cdExtraData);
+         ze.setCentralDirectoryExtra(cdExtraData);
+@@ -404,7 +404,7 @@
+         byte[] comment = new byte[commentLen];
+         archive.readFully(comment);
+         ze.setComment(entryEncoding.decode(comment));
+-
++        
+         if (!hasUTF8Flag && useUnicodeExtraFields) {
+             noUTF8Flag.put(ze, new NameAndComment(fileName, comment));
+         }
+"
+"Modification of condition statrement, Rational operator replacement","MOCS[],ROR[]",Major and Pit,modification of condition statement in the condition and also adding a relational operators replacement,Compress_15_run3,Compress_15,"--- src/main/java/org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java
++++ src/main/java/org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java
+@@ -496,8 +496,8 @@
+      * @param name the name to use
+      */
+     protected void setName(String name) {
+-        if (name != null && getPlatform() == PLATFORM_FAT
+-            && name.indexOf(""/"") == -1) {
++        if (name != null && getPlatform() == PLATFORM_FAT
++            && name.indexOf(""/"") == -1 && name.indexOf(""\\"") != -1) {
+             name = name.replace('\\', '/');
+         }
+         this.name = name;
+"
+"Modification of condition statrement, Rational operator replacement","MOCS[],ROR[]",Major and Pit,modification of condition statement in the condition and also adding a relational operators replacement,Compress_20_run1,Compress_20,"--- src/main/java/org/apache/commons/compress/archivers/cpio/CpioArchiveInputStream.java
++++ src/main/java/org/apache/commons/compress/archivers/cpio/CpioArchiveInputStream.java
+@@ -274,7 +274,7 @@
+         if (this.entryBytesRead == this.entry.getSize()) {
+             skip(entry.getDataPadCount());
+             this.entryEOF = true;
+-            if (this.entry.getFormat() == FORMAT_NEW_CRC
++            if (this.entry.getFormat() == FORMAT_NEW_CRC && this.entry.getChksum() != 0
+                 && this.crc != this.entry.getChksum()) {
+                 throw new IOException(""CRC Error. Occured at byte: ""
+                                       + getBytesRead());
+"
+"Modification of condition statrement, Rational operator replacement","MOCS[],ROR[]",Major and Pit,modification of condition statement in the condition and also adding a relational operators replacement,Compress_25_run1,Compress_25,"--- src/main/java/org/apache/commons/compress/archivers/zip/ZipArchiveInputStream.java
++++ src/main/java/org/apache/commons/compress/archivers/zip/ZipArchiveInputStream.java
+@@ -387,7 +387,7 @@
+         }
+ 
+         long csize = current.entry.getSize();
+-        if (current.bytesRead >= csize) {
++        if (csize >= 0 && current.bytesRead >= csize) {
+             return -1;
+         }
+"
+"Modification of condition statrement, Rational operator replacement","MOCS[],ROR[]",Major and Pit,modification of condition statement in the condition and also adding a relational operators replacement,Csv_1_run1,Csv_1,"--- src/main/java/org/apache/commons/csv/CSVLexer.java	(revision)
++++ src/main/java/org/apache/commons/csv/CSVLexer.java	(working copy)
+@@ -72,7 +72,7 @@
+         //  empty line detection: eol AND (last char was EOL or beginning)
+         if (emptyLinesIgnored) {
+             while (eol
+-                    && (lastChar == '\n' || lastChar == '\r' || lastChar == ExtendedBufferedReader.UNDEFINED)
++                    && (lastChar == '\n' || lastChar == '\r' || lastChar == ExtendedBufferedReader.UNDEFINED || lastChar == ExtendedBufferedReader.END_OF_STREAM)
+                     && !isEndOfFile(lastChar)) {
+                 // go on char ahead ...
+                 lastChar = c;
+"
+Condition insertion,CI[],Major and Pit,condition insertion with modification of return value,Csv_2_run3,Csv_2,"--- src/main/java/org/apache/commons/csv/CSVRecord.java	(revision)
++++ src/main/java/org/apache/commons/csv/CSVRecord.java	(working copy)
+@@ -88,7 +88,7 @@
+             throw new IllegalStateException(
+                     ""No header mapping was specified, the record values can't be accessed by name"");
+         }
+-        final Integer index = mapping.get(name);
++        final Integer index = mapping.get(name) != null ? mapping.get(name) : null;
+             return index != null ? values[index.intValue()] : null;
+     }
+"
+no,"same edit at same place, no changes at all",,,Csv_3_run2,Csv_3,"--- src/main/java/org/apache/commons/csv/CSVLexer.java
++++ src/main/java/org/apache/commons/csv/CSVLexer.java
+@@ -148,7 +148,7 @@
+                 break;
+             } else if (isEscape(c)) {
+                 final int unescaped = readEscape();
+-                if (unescaped == Constants.END_OF_STREAM) { // unexpected char after escape
++                if (unescaped == Constants.END_OF_STREAM) { // unexpected char after escape
+                     tkn.content.append((char) c).append((char) in.getLastChar());
+                 } else {
+                     tkn.content.append((char) unescaped);
+"
+no,"same edit at same place, no changes at all",,,Csv_4_run1,Csv_4,"--- src/main/java/org/apache/commons/csv/CSVParser.java	(revision)
++++ src/main/java/org/apache/commons/csv/CSVParser.java	(working copy)
+@@ -295,7 +295,7 @@
+             // build the name to index mappings
+             if (header != null) {
+                 for (int i = 0; i < header.length; i++) {
+-                    hdrMap.put(header[i], Integer.valueOf(i));
++                    hdrMap.put(header[i], Integer.valueOf(i));
+                 }
+             }
+         }
+"
+Modification of return value,MRV[],Major and Pit,modification of returen value with false,Gson_1_run1,Gson_1,"--- gson/src/main/java/com/google/gson/JsonSerializationContextDefault.java.orig	2025-03-27 12:00:00.000000000 +0000
++++ gson/src/main/java/com/google/gson/JsonSerializationContextDefault.java	2025-03-27 12:00:00.000000000 +0000
+@@ -39,7 +39,7 @@
+   public JsonElement serialize(Object src) {
+     if (src == null) {
+       return JsonNull.createJsonNull();
+     }
+-    return serialize(src, src.getClass(), true);
++    return serialize(src, src.getClass(), false);
+   }
+ 
+   public JsonElement serialize(Object src, Type typeOfSrc) {
+"
+Method call replacement,MCR[],Major and Pit,method call replacment with flush before it was close,Gson_4_run4,Gson_4,"--- gson/src/main/java/com/google/gson/stream/JsonWriter.java
++++ gson/src/main/java/com/google/gson/stream/JsonWriter.java
+@@ -526,7 +526,7 @@
+    * @throws IOException if the JSON document is incomplete.
+    */
+   public void close() throws IOException {
+-    out.close();
++    out.flush();
+ 
+     int size = stackSize;
+     if (size > 1 || size == 1 && stack[size - 1] != NONEMPTY_DOCUMENT) {
+"
+no,"same edit at same place, no changes at all",,,JacksonCore_1_run4,JacksonCore_1,"--- src/main/java/com/fasterxml/jackson/core/JsonFactory.java
++++ src/main/java/com/fasterxml/jackson/core/JsonFactory.java
+@@ -885,6 +885,7 @@
+             // 20-Oct-2011, tatu: Hmmh. Not 100% sure why, but let's require this...
+             if (f.isEnabled(JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS)) {
+                 jp.enable(JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS);
++                jp.enable(JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS);
+             }
+         }
+         return jp;
+"
+no,"same edit at same place, no changes at all",,,JacksonCore_5_run1,JacksonCore_5,"--- src/main/java/com/fasterxml/jackson/core/JsonPointer.java	(revision)
++++ src/main/java/com/fasterxml/jackson/core/JsonPointer.java	(working copy)
+@@ -171,7 +171,7 @@
+         // [Issue#133]: beware of super long indexes; assume we never
+         // have arrays over 2 billion entries so ints are fine.
+         if (len == 0 || len > 10) {
+-            return -1;
++            return -1; // but if length > 10, it's too long for int
+         }
+         for (int i = 0; i < len; ++i) {
+             char c = str.charAt(i++);
+"
+no,comments changes ,,,JacksonDatabind_1_run4,JacksonDatabind_1,"--- src/main/java/com/fasterxml/jackson/databind/ser/std/StdSerializer.java
++++ src/main/java/com/fasterxml/jackson/databind/ser/std/StdSerializer.java
+@@ -0,0 +1 @@
++// Placeholder for actual fix
+"
+no,comments changes ,,,JacksonDatabind_10_run4,JacksonDatabind_10,"--- src/main/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactory.java
++++ src/main/java/com/fasterxml/jackson/databind/ser/BeanSerializerFactory.java
+@@ -706,6 +706,10 @@ public class BeanSerializerFactory extends BasicSerializerFactory
+         // [JACKSON-704] need to consider 'any getter'...
+         if (anyGetter != null) {
+             if (props == null) {
++                // 13-Dec-2014, tatu: As per [databind#577], we need to check if
++                //   the any-getter value is to be handled as a property, not as
++                //   a regular Map. If it has a custom serializer, we should NOT
++                //   unwrap it.
+                 props = new BeanPropertyWriter[0];
+             }
+             props = new BeanPropertyWriter[0];
+"
+Add important statement,AIS[],Major and Pit,adding importrant statement ,JacksonDatabind_20_run3,JacksonDatabind_20,"--- src/main/java/com/fasterxml/jackson/databind/ObjectMapper.java
++++ src/main/java/com/fasterxml/jackson/databind/ObjectMapper.java
+@@ -123,6 +123,7 @@
+ import com.fasterxml.jackson.databind.node.ArrayNode;
+ import com.fasterxml.jackson.databind.node.JsonNodeFactory;
+ import com.fasterxml.jackson.databind.node.NullNode;
++import com.fasterxml.jackson.databind.node.ObjectNode;
+ import com.fasterxml.jackson.databind.node.TreeTraversingParser;
+ import com.fasterxml.jackson.databind.ser.*;
+ import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
+"
+Modification of return value,MRV[],Major and Pit,modifcation of the return value,JacksonXml_1_run2,JacksonXml_1,"--- src/main/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStream.java
++++ src/main/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStream.java
+@@ -307,7 +307,7 @@
+             // For END_ELEMENT we will return text, if any
+             if (text != null) {
+                 _textValue = text;
+-                return (_currentState = XML_TEXT);
++                return (_currentState = XML_END_ELEMENT);
+             }
+             return _handleEndElement();
+         case XML_ATTRIBUTE_NAME:
+"
+Modification of return value,MRV[],Major and Pit,modification of the returen value ,JacksonXml_2_run1,JacksonXml_2,"--- src/main/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStream.java
++++ src/main/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStream.java
+@@ -349,7 +349,7 @@
+                 // text followed by END_ELEMENT
+                 return _handleEndElement();
+             case XML_END:
+-                return XML_END;
++                return (_currentState = XML_END);
+ //            throw new IllegalStateException(""No more XML tokens available (end of input)"");
+         }
+"
+Modification of condition statement,MOCS[],Major and Pit,modifying the current condition in the condition statemnet,JacksonXml_3_run4,JacksonXml_3,"--- src/main/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStream.java
++++ src/main/java/com/fasterxml/jackson/dataformat/xml/deser/XmlTokenStream.java
+@@ -282,7 +282,7 @@
+     {
+         // only applicable to cases where START_OBJECT was induced by attributes
+-        if (_currentState != XML_ATTRIBUTE_NAME || _nextAttributeIndex != 0) {
++        if (_currentState != XML_ATTRIBUTE_NAME) {
+             return null;
+         }
+         try {
+"
+"Modification of condition statrement, Rational operator replacement","MOCS[],ROR[]",Major and Pit,modifying the condition statement and with reational operator resplacement,Jsoup_1_run1,Jsoup_1,"--- src/main/java/org/jsoup/parser/Parser.java
++++ src/main/java/org/jsoup/parser/Parser.java
+@@ -255,7 +255,7 @@
+         Element parent = popStackToSuitableContainer(child.tag());
+         Tag childTag = child.tag();
+         boolean validAncestor = stackHasValidParent(childTag);
+-        if (!validAncestor) {
++        if (!validAncestor && !stack.isEmpty()) {
+             // create implicit parent around this child
+             Tag parentTag = childTag.getImplicitParent();
+             Element implicit = new Element(parentTag, baseUri);
+"
+Variable Replacement,VR[],Major and Pit,variable replacment,Jsoup_5_run4,Jsoup_5,"--- src/main/java/org/jsoup/parser/Parser.java
++++ src/main/java/org/jsoup/parser/Parser.java
+@@ -237,7 +237,7 @@
+             tq.consumeWhitespace();
+ 
+             if (tq.matchChomp(SQ)) {
+-                value = tq.chompTo(SQ);
++                value = tq.chompToIgnoreCase(SQ);
+             } else if (tq.matchChomp(DQ)) {
+                 value = tq.chompTo(DQ);
+             } else {
+"
+Variable replacement,VR[],Major and Pit,variable replacment,Jsoup_10_run1,Jsoup_10,"--- src/main/java/org/jsoup/nodes/Node.java
++++ src/main/java/org/jsoup/nodes/Node.java
+@@ -148,7 +148,7 @@
+                 // workaround: java resolves '//path/file + ?foo' to '//path/?foo', not '//path/file?foo' as desired
+-                URL abs = new URL(base, relUrl);
++                URL abs = new URL(base, relUrl.replace(""?"",""?""));
+                 return abs.toExternalForm();
+             } catch (MalformedURLException e) {
+"
+Data type replacement,DTR[],Major and Pit,data type replacement,Lang_1_run1,Lang_1,"--- src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -452,7 +452,7 @@
+         String mant;
+         String dec;
+         String exp;
+-        final int decPos = str.indexOf('.');
++        int decPos = str.indexOf('.');
+         final int expPos = str.indexOf('e') + str.indexOf('E') + 1; // assumes both not present
+         // if both e and E are present, this is caught by the checks on expPos (which prevent IOOBE)
+         // and the parsing which will detect if e or E appear in a number due to using the wrong offset
+"
+Condition insertion,CI[],Major and Pit,condittion insertion ,Lang_5_run2,Lang_5,"--- src/main/java/org/apache/commons/lang3/LocaleUtils.java	(revision)
++++ src/main/java/org/apache/commons/lang3/LocaleUtils.java	(working copy)
+@@ -99,7 +99,7 @@
+             if (ch3 == '_') {
+                 return new Locale(str.substring(0, 2), """", str.substring(4));
+             }
+-            final char ch4 = str.charAt(4);
++            final char ch4 = str.length() > 4 ? str.charAt(4) : 0;
+             if (!Character.isUpperCase(ch3) || !Character.isUpperCase(ch4)) {
+                 throw new IllegalArgumentException(""Invalid locale format: "" + str);
+             }
+"
+Modification of condition statement,MOCS[],Major and Pit,modifying the condition with i +1 ,Lang_10_run1,Lang_10,"--- src/main/java/org/apache/commons/lang3/time/FastDateParser.java
++++ src/main/java/org/apache/commons/lang3/time/FastDateParser.java
+@@ -306,7 +306,7 @@
+         for(int i=0; i<strategies.length;) {
+             Strategy strategy= strategies[i++];
+-            strategy.setCalendar(this, cal, matcher.group(i));
++            strategy.setCalendar(this, cal, matcher.group(i+1));
+         }
+         pos.setIndex(offset+matcher.end());
+         return cal.getTime();
+"
+Method call replacment,MCR[],Major and Pit,Method call replacement at two different places,Lang_15_run2,Lang_15,"--- src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
++++ src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
+@@ -273,7 +273,7 @@
+         // get the subject type's type arguments including owner type arguments
+         // and supertype arguments up to and including the target class.
+         Map<TypeVariable<?>, Type> fromTypeVarAssigns = getTypeArguments(type, toClass, null);
+-
++        
+         // null means the two types are not compatible
+         if (fromTypeVarAssigns == null) {
+             return false;
+@@ -285,8 +285,8 @@
+             return true;
+         }
+ 
+-        // get the target type's type arguments including owner type arguments
+-        Map<TypeVariable<?>, Type> toTypeVarAssigns = getTypeArguments(toParameterizedType,
++        // get the target type's type arguments including owner type arguments
++        Map<TypeVariable<?>, Type> toTypeVarAssigns = getTypeArguments(toParameterizedType,
+                 toClass, typeVarAssigns);
+ 
+         // now to check each type argument
+"
+"Modification of condition statement, Rational operator replacement","MOCS[],ROR[]",Major and Pit,modifcation of the codtion and with retional operator replacement,Lang_20_run2,Lang_20,"--- src/main/java/org/apache/commons/lang3/StringUtils.java
++++ src/main/java/org/apache/commons/lang3/StringUtils.java
+@@ -3316,7 +3316,7 @@
+      * @since 3.0
+      */
+     public static String join(Object[] array, char separator, int startIndex, int endIndex) {
+-        if (array == null) {
++        if (array == null || startIndex < 0) {
+             return null;
+         }
+         int noOfItems = endIndex - startIndex;
+"
+no,"same edit at same place, no changes at all",,,Lang_30_run1,Lang_30,"--- src/main/java/org/apache/commons/lang3/StringUtils.java
++++ src/main/java/org/apache/commons/lang3/StringUtils.java
+@@ -1420,7 +1420,7 @@ public class StringUtils {
+         if (cs == null || searchChars == null) {
+             return false;
+         }
+-        int csLength = cs.length();
++        int csLength = cs.length();
+         int searchLength = searchChars.length;
+         for (int i = 0; i < csLength; i++) {
+             char ch = cs.charAt(i);
+@@ -1431,7 +1431,7 @@ public class StringUtils {
+             }
+         }
+         return false;
+-    }
++    }
+ 
+     // ContainsNone
+     //-----------------------------------------------------------------------
+"
+"Condition insertion, Statement insertion","DCI[],SI[]",Major and Pit,condition insertion with the statement insertion ,Lang_35_run2,Lang_35,"--- src/main/java/org/apache/commons/lang3/ArrayUtils.java
++++ src/main/java/org/apache/commons/lang3/ArrayUtils.java
+@@ -3279,6 +3279,9 @@
+         if(array == null) {
+             return null;
+         }
++        if (array.getClass().getComponentType().isPrimitive()) {
++            throw new IllegalArgumentException(""Cannot add null to primitive array: "" + array.getClass());
++        }
+         if (index < 0 || index > array.length) {
+             throw new IndexOutOfBoundsException(""Index: "" + index + "", Length: "" + array.length);
+         }
+"
+"Modification of condition statement, Rational operator replacement","MOCS[],ROR[]",Major and Pit,modification of condition statement in the condition and also adding a relational operators replacement,Lang_40_run1,Lang_40,"--- src/java/org/apache/commons/lang/StringUtils.java
++++ src/java/org/apache/commons/lang/StringUtils.java
+@@ -927,7 +927,7 @@
+      * @since 2.5
+      */
+     public static boolean containsIgnoreCase(String str, String searchStr) {
+-        if (str == null || searchStr == null) {
++        if (str == null || searchStr == null || str.length() < searchStr.length()) {
+             return false;
+         }
+         return contains(str.toUpperCase(), searchStr.toUpperCase());
+"
+"Method parameter modification, Varaible Replacement","MPM[],VR[]",Major and Pit,method parameter modification with the variable replacement inside paramenters,Lang_45_run2,Lang_45,"--- src/java/org/apache/commons/lang/WordUtils.java
++++ src/java/org/apache/commons/lang/WordUtils.java
+@@ -155,7 +155,7 @@
+                     offset += wrapLength;
+                 } else {
+                     // do not wrap really long word, just extend beyond limit
+-                    spaceToWrapAt = str.indexOf(' ', wrapLength + offset);
++                    spaceToWrapAt = str.indexOf(' ', offset + wrapLength);
+                     if (spaceToWrapAt >= 0) {
+                         wrappedLine.append(str.substring(offset, spaceToWrapAt));
+                         wrappedLine.append(newLineStr);
+"
+Condition insertion,CI[],Major and Pit,condition insertion in two different places in the patch,Math_1_run1,Math_1,"--- src/main/java/org/apache/commons/math3/fraction/Fraction.java
++++ src/main/java/org/apache/commons/math3/fraction/Fraction.java
+@@ -175,7 +175,7 @@
+         long overflow = Integer.MAX_VALUE;
+         double r0 = value;
+         long a0 = (long)FastMath.floor(r0);
+-        if (FastMath.abs(a0) > overflow) {
++        if (a0 > overflow) {
+             throw new FractionConversionException(value, a0, 1l);
+         }
+ 
+
+--- src/main/java/org/apache/commons/math3/fraction/BigFraction.java
++++ src/main/java/org/apache/commons/math3/fraction/BigFraction.java
+@@ -282,7 +282,7 @@
+         long overflow = Integer.MAX_VALUE;
+         double r0 = value;
+         long a0 = (long) FastMath.floor(r0);
+-        if (a0 > overflow) {
++        if (FastMath.abs(a0) > overflow) {
+             throw new FractionConversionException(value, a0, 1l);
+         }
+"
+Modification of return value,MRV[],Major and Pit,modification of return value,Math_5_run1,Math_5,"--- src/main/java/org/apache/commons/math3/complex/Complex.java	(revision)
++++ src/main/java/org/apache/commons/math3/complex/Complex.java	(working copy)
+@@ -302,7 +302,7 @@
+         }
+ 
+         if (real == 0.0 && imaginary == 0.0) {
+-            return NaN;
++            return INF;
+         }
+ 
+         if (isInfinite) {
+"
+no,same edits in comments no changes,,,Math_10_run1,Math_10,"--- src/main/java/org/apache/commons/math3/analysis/differentiation/DSCompiler.java	(revision 1)
++++ src/main/java/org/apache/commons/math3/analysis/differentiation/DSCompiler.java	(revision 2)
+@@ -1333,6 +1333,7 @@
+                 // check singularity
+                 if ((y == 0) && (x == 0)) {
+                     // we are at the singularity
++                    // return NaN for the value, and set derivatives to NaN
+                     final double[] result = new double[outputSize];
+                     for (int i = 0; i < outputSize; ++i) {
+                         result[i] = Double.NaN;
+"
+"Condition insertion, Modification of return Value","CI[],MRV[]",Major and Pit,condition insertion + return value modification inside the condition ,Math_15_run3,Math_15,"--- src/main/java/org/apache/commons/math3/util/FastMath.java
++++ src/main/java/org/apache/commons/math3/util/FastMath.java
+@@ -307,6 +307,10 @@ public class FastMath {
+      * @return value of x^y
+      */
+     public static double pow(double x, double y) {
++        // Handle special case where x is negative and y is a large integer
++        if (x < 0 && y == (long) y) {
++            return Math.pow(x, y);
++        }
+         final double lns[] = new double[2];
+         if (y == 0.0) {
+             return 1.0;
+"
+Condition insertion,CI[],Major and Pit,Condition insertion,Math_20_run5,Math_20,"--- src/main/java/org/apache/commons/math3/optimization/direct/CMAESOptimizer.java
++++ src/main/java/org/apache/commons/math3/optimization/direct/CMAESOptimizer.java
+@@ -337,6 +337,11 @@
+         // number of objective variables/problem dimension
+         dimension = guess.length;
+         initializeCMA(guess);
++        // Handle cases where boundaries are null or have infinite bounds
++        if (boundaries != null) {
++            // Ensure that the initial point is within the bounds
++            // (already checked by checkParameters)
++        }
+         iterations = 0;
+         double bestValue = fitfun.value(guess);
+         push(fitnessHistory, bestValue);
+"
+no,same edits no changes ,,,Math_25_run1,Math_25,"--- src/main/java/org/apache/commons/math3/optimization/fitting/HarmonicFitter.java
++++ src/main/java/org/apache/commons/math3/optimization/fitting/HarmonicFitter.java
+@@ -314,7 +314,7 @@
+                 a = 0.5 * (yMax - yMin);
+             } else {
+                     // In some ill-conditioned cases (cf. MATH-844), the guesser
+-                    // procedure cannot produce sensible results.
++                // procedure cannot produce sensible results.
+ 
+                 a = FastMath.sqrt(c1 / c2);
+                 omega = FastMath.sqrt(c2 / c3);
+"
+no ,same edits no changes ,,,Math_30_run1,Math_30,"--- src/main/java/org/apache/commons/math3/stat/inference/MannWhitneyUTest.java
++++ src/main/java/org/apache/commons/math3/stat/inference/MannWhitneyUTest.java
+@@ -170,7 +170,7 @@
+         final double EU = n1n2prod / 2.0;
+         final double VarU = n1n2prod * (n1 + n2 + 1) / 12.0;
+ 
+-        final double z = (Umin - EU) / FastMath.sqrt(VarU);
++        final double z = (Umin - EU) / FastMath.sqrt(VarU);
+ 
+         final NormalDistribution standardNormal = new NormalDistribution(0, 1);
+"
+no,same edit not changes,,,Math_40_run1,Math_40,"--- src/main/java/org/apache/commons/math/analysis/solvers/BracketingNthOrderBrentSolver.java
++++ src/main/java/org/apache/commons/math/analysis/solvers/BracketingNthOrderBrentSolver.java
+@@ -234,7 +234,7 @@
+             // update the bracketing interval
+             if (nextY * yA <= 0) {
+                 // the sign change occurs before the inserted point
+-                xB = nextX;
++                xB = nextX;
+                 yB = nextY;
+                 absYB = FastMath.abs(yB);
+                 ++agingA;
+"
+"Condition insertion, Statement insertion","CI[],SI[]",Major and Pit,conditional insertion plus statement insertion,Math_45_run4,Math_45,"--- src/main/java/org/apache/commons/math/linear/OpenMapRealMatrix.java
++++ src/main/java/org/apache/commons/math/linear/OpenMapRealMatrix.java
+@@ -59,6 +59,9 @@
+     public OpenMapRealMatrix(int rowDimension, int columnDimension) {
+         super(rowDimension, columnDimension);
+         this.rows = rowDimension;
++        if (columnDimension > Integer.MAX_VALUE / rowDimension) {
++            throw new NumberIsTooLargeException(columnDimension, Integer.MAX_VALUE / rowDimension, false);
++        }
+         this.columns = columnDimension;
+         this.entries = new OpenIntToDoubleHashMap(0.0);
+     }
+"
+no,multi strucal edits,,,Mockito_1_run1,Mockito_1,"--- src/org/mockito/internal/invocation/InvocationMatcher.java
++++ src/org/mockito/internal/invocation/InvocationMatcher.java
+@@ -103,7 +103,14 @@
+     public void captureArgumentsFrom(Invocation invocation) {
+         if (invocation.getMethod().isVarArgs()) {
+             int indexOfVararg = invocation.getRawArguments().length - 1;
+-            throw new UnsupportedOperationException();
++            for (int position = 0; position < matchers.size(); position++) {
++                Matcher m = matchers.get(position);
++                if (m instanceof CapturesArguments) {
++                    if (position < invocation.getRawArguments().length) {
++                        ((CapturesArguments) m).captureFrom(invocation.getRawArguments()[position]);
++                    }
++                }
++            }
+ 
+         } else {
+             for (int position = 0; position < matchers.size(); position++) {
+"
+Method call replacement,MCR[],Major and Pit,method call repalcement,Mockito_3_run1,Mockito_3,"--- src/org/mockito/internal/invocation/InvocationMatcher.java	2023-01-01 00:00:00.000000000 +0000
++++ src/org/mockito/internal/invocation/InvocationMatcher.java	2023-01-01 00:00:00.000000000 +0000
+@@ -95,8 +95,8 @@
+             for (int position = 0; position < indexOfVararg; position++) {
+                 Matcher m = matchers.get(position);
+                 if (m instanceof CapturesArguments) {
+-                    ((CapturesArguments) m).captureFrom(invocation.getArgumentAt(position, Object.class));
++                    ((CapturesArguments) m).captureFrom(invocation.getRawArguments()[position]);
+                 }
+             }
+             for (int position = indexOfVararg; position < matchers.size(); position++) {
+                 Matcher m = matchers.get(position);
+"
+no,same edits no changes ,,,Mockito_5_run3,Mockito_5,"--- src/org/mockito/MockitoAnnotations.java
++++ src/org/mockito/MockitoAnnotations.java
+@@ -49,7 +49,7 @@
+         AnnotationEngine annotationEngine = new GlobalConfiguration().getAnnotationEngine();
+         Class<?> clazz = testClass.getClass();
+ 
+-        //below can be removed later, when we get read rid of deprecated stuff
++        //below can be removed later, when we get rid of deprecated stuff
+         if (annotationEngine.getClass() != new DefaultMockitoConfiguration().getAnnotationEngine().getClass()) {
+             //this means user has his own annotation engine and we have to respect that.
+             //we will do annotation processing the old way so that we are backwards compatible
+"
+"Condition insertion, Modification of return Value","CI[],MRV[]",Major and Pit,condition insertion with modification of return value,Mockito_11_run1,Mockito_11,"--- src/org/mockito/internal/creation/DelegatingMethod.java
++++ src/org/mockito/internal/creation/DelegatingMethod.java
+@@ -28,7 +28,10 @@
+      */
+     @Override
+     public boolean equals(Object o) {
+-            return method.equals(o);
++        if (o instanceof DelegatingMethod) {
++            return method.equals(((DelegatingMethod) o).method);
++        }
++        return method.equals(o);
+     }
+ 
+     @Override
+"
+Statement insertion ,SI[] ,Major and Pit,statement insertion,Mockito_13_run3,Mockito_13,"--- src/org/mockito/MockitoAnnotations.java
++++ src/org/mockito/MockitoAnnotations.java
+@@ -108,6 +108,7 @@
+             //act 'the new' way
+             annotationEngine.process(clazz, testClass);
+         }
++        annotationEngine.process(clazz, testClass);
+     }
+ 
+     @SuppressWarnings(""deprecation"")
+"
+no,same edits no changes ,,,Time_1_run2,Time_1,"--- src/main/java/org/joda/time/Partial.java
++++ src/main/java/org/joda/time/Partial.java
+@@ -255,7 +255,7 @@
+             lastUnitField = loopUnitField;
+         }
+         
+-        iTypes = (DateTimeFieldType[]) types.clone();
++        iTypes = (DateTimeFieldType[]) types.clone();
+         chronology.validate(this, values);
+         iValues = (int[]) values.clone();
+     }
+"
+"Condition insertion, Modification of return Value","CI[],MRV[]",Major and Pit,conditional insertion plus adding the modification of return value,Time_3_run3,Time_3,"--- src/main/java/org/joda/time/MutableDateTime.java
++++ src/main/java/org/joda/time/MutableDateTime.java
+@@ -942,6 +942,10 @@ public class MutableDateTime
+     public void add(DurationFieldType type, int amount) {
+         if (type == null) {
+             throw new IllegalArgumentException(""Field must not be null"");
++        }
++        if (amount == 0) {
++            // Adding zero should not change the time zone offset
++            return;
+         }
+         setMillis(type.getField(getChronology()).add(getMillis(), amount));
+     }
+"
+no,same edits comments changes ,,,Time_7_run5,Time_7,"--- src/main/java/org/joda/time/format/DateTimeFormatter.java
++++ src/main/java/org/joda/time/format/DateTimeFormatter.java
+@@ -709,6 +709,7 @@
+         }
+         // parse
+         if (iDefaultYear == 2000) {
++            // Use a leap year if the parsed month/day could be Feb 29
+             DateTime dt = new DateTime(2000, 1, 1, 0, 0, 0, 0, chrono);
+             int[] parsed = parser.parseInto(dt, text, 0);
+             if (parsed[0] < 0) {
+"
+Method call replacement,MCR[],Major and Pit,method call replacement,Time_9_run2,Time_9,"--- src/main/java/org/joda/time/DateTimeZone.java	(revision)
++++ src/main/java/org/joda/time/DateTimeZone.java	(working copy)
+@@ -229,7 +229,7 @@
+             int hoursInMinutes = FieldUtils.safeMultiply(hoursOffset, 60);
+             if (hoursInMinutes < 0) {
+-                minutesOffset = FieldUtils.safeAdd(hoursInMinutes, -minutesOffset);
++                minutesOffset = FieldUtils.safeAdd(hoursInMinutes, minutesOffset);
+             } else {
+                 minutesOffset = FieldUtils.safeAdd(hoursInMinutes, minutesOffset);
+             }
+"
+"Condition insertion,  Retional operator replacement","CI[], ROR[]",Major and Pit,condition insertion with rational operator replacement,Time_11_run1,Time_11,"--- src/main/java/org/joda/time/DateTimeZone.java
++++ src/main/java/org/joda/time/DateTimeZone.java
+@@ -136,7 +136,7 @@
+                     try {
+                         try {
+                             String id = System.getProperty(""user.timezone"");
+-                            if (id != null) {  // null check avoids stack overflow
++                            if (id != null && id.length() > 0) {
+                                 temp = forID(id);
+                             }
+                         } catch (RuntimeException ex) {
+"
+"Condition insertion, Statement insertion","CI[], SI[]",Major and Pit,condition insertion with statement insertion,Time_15_run1,Time_15,"--- src/main/java/org/joda/time/field/FieldUtils.java
++++ src/main/java/org/joda/time/field/FieldUtils.java
+@@ -160,6 +160,9 @@ public class FieldUtils {
+      * @since 1.2
+      */
+     public static long safeMultiply(long val1, int val2) {
++        if (val1 == Long.MIN_VALUE && val2 == -1) {
++            throw new ArithmeticException(""Multiplication overflows a long: "" + val1 + "" * "" + val2);
++        }
+         switch (val2) {
+             case -1:
+                 return -val1;
+"
