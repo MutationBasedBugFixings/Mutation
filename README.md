@@ -287,7 +287,7 @@ Mutation/
 ```
 
 ## Data Transparency & Reproducibility
-This study analyzes the full **Defects4J v2.0.1 dataset (835 bugs).
+This study analyzes the full Defects4J v2.0.1 dataset (835 bugs).
 - **803 Bugs:** Analyzed for mutant operator expressiveness.
 - **32 Bugs:** Excluded due to benchmark depletion (dependency/test failures).
 - **Manual Mapping:** See `/transparency/atomic_decomposition.md` for the logic used to decompose developer patches into atomic mutant operators.
