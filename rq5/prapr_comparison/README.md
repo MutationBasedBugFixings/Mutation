@@ -1,3 +1,4 @@
+```text
 RQ5: Operator Selection and Supplementary Comparisons
 
 This folder contains the replication materials for RQ5 of:
