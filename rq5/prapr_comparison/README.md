@@ -8,6 +8,7 @@ RQ5 evaluates source-level mutant-operator selection under fixed operator-count 
 
 Folder Structure
 
+```text
 RQ5/
 ├── README.md
 ├── strict_bug_operator_mappings.csv
