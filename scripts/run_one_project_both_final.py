@@ -15,7 +15,7 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 # ============================================================
 # CONFIG
 # ============================================================
-D4J_HOME   = os.environ.get("D4J_HOME", "/home1/furqan/tools_and_libs/defects4j")
+D4J_HOME   = os.environ.get("D4J_HOME", "/cd to directory/tools_and_libs/defects4j")
 DEFECTS4J  = f"{D4J_HOME}/framework/bin/defects4j"
 EXPROOT    = os.environ.get("EXPERIMENT_ROOT", "/home1/furqan/my_mutation_experiments")
 
