@@ -63,7 +63,7 @@ plt.rcParams.update({
 # 1. CONFIGURATION
 # ---------------------------------------------------------------------
 
-BASE_DIR = Path("/home1/furqan/my_mutation_experiments/scripts").resolve()
+BASE_DIR = Path("path to directory/scripts").resolve()
 INPUT_CANDIDATES = (
     BASE_DIR / "rq5_results" / "strict_bug_operator_mappings.csv",
     BASE_DIR / "strict_bug_operator_mappings.csv",
