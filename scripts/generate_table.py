@@ -21,7 +21,7 @@ from typing import Tuple, Dict, List
 # ============================================================
 # CONFIGURATION
 # ============================================================
-EXPROOT = os.environ.get("EXPERIMENT_ROOT", "/home1/furqan/my_mutation_experiments")
+EXPROOT = os.environ.get("EXPERIMENT_ROOT", "Cd to directory")
 LOGS_ROOT = Path(EXPROOT) / "logs"
 RESULTS_ROOT = Path(EXPROOT) / "results"
 
