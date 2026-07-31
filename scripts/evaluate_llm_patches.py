@@ -5,7 +5,7 @@ import shutil
 import subprocess
 from pathlib import Path
 
-ROOT = Path("/home1/directory to /scripts")
+ROOT = Path("/directory to /scripts")
 
 PATCH_DIR = ROOT / "patches_deepseek"
 if not PATCH_DIR.exists():
