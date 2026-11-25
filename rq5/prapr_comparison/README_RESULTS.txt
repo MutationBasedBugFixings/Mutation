@@ -20,31 +20,31 @@ Supply operator_runtime_costs.csv to evaluate measured costs.
 PRIMARY-SCHEME SUMMARY
 --------------------------------------------
   language  budget_fraction           strategy  coverage_percent  mean_selected_count  mean_selected_cost
-      Java             0.10        cheap_first             10.18                 7.00                7.00
-      Java             0.10   exact_cost_aware             19.71                 3.00                7.00
-      Java             0.10          frequency             21.81                 3.00                7.00
-      Java             0.10 frequency_per_cost             21.81                 3.00                7.00
-      Java             0.10             random              4.88                 4.38                7.00
-      Java             0.20        cheap_first             11.79                14.00               14.00
-      Java             0.20   exact_cost_aware             43.46                 4.00               15.00
-      Java             0.20          frequency             43.46                 4.00               15.00
-      Java             0.20 frequency_per_cost             33.28                 8.40               15.00
-      Java             0.20             random             10.68                 7.47               15.00
-      Java             0.30        cheap_first             22.29                18.00               22.00
-      Java             0.30   exact_cost_aware             59.45                 9.20               23.00
-      Java             0.30          frequency             48.79                 5.80               23.00
-      Java             0.30 frequency_per_cost             58.97                 9.40               23.00
-      Java             0.30             random             17.09                10.71               23.00
-      Java             0.40        cheap_first             25.36                22.00               30.00
-      Java             0.40   exact_cost_aware             65.59                13.00               31.00
-      Java             0.40          frequency             65.75                10.00               31.00
-      Java             0.40 frequency_per_cost             65.59                13.80               31.00
-      Java             0.40             random             24.94                14.10               31.00
-      Java             0.50        cheap_first             28.59                26.00               38.00
-      Java             0.50   exact_cost_aware             70.76                16.40               39.00
-      Java             0.50          frequency             69.95                11.40               39.00
-      Java             0.50 frequency_per_cost             69.95                15.80               39.00
-      Java             0.50             random             33.46                17.30               39.00
+      Java             0.10        cheap_first             11.06                 7.00                7.00
+      Java             0.10   exact_cost_aware             18.17                 3.20                7.00
+      Java             0.10          frequency             20.85                 3.00                7.00
+      Java             0.10 frequency_per_cost             20.85                 3.00                7.00
+      Java             0.10             random              5.01                 4.38                7.00
+      Java             0.20        cheap_first             12.80                14.00               14.00
+      Java             0.20   exact_cost_aware             41.86                 4.00               15.00
+      Java             0.20          frequency             41.86                 4.00               15.00
+      Java             0.20 frequency_per_cost             33.18                 8.80               15.00
+      Java             0.20             random             10.94                 7.47               15.00
+      Java             0.30        cheap_first             23.06                18.00               22.00
+      Java             0.30   exact_cost_aware             58.61                 9.40               23.00
+      Java             0.30          frequency             46.29                 5.80               23.00
+      Java             0.30 frequency_per_cost             57.66                 9.80               23.00
+      Java             0.30             random             17.55                10.71               23.00
+      Java             0.40        cheap_first             27.80                22.00               30.00
+      Java             0.40   exact_cost_aware             65.09                13.00               31.00
+      Java             0.40          frequency             64.61                10.00               31.00
+      Java             0.40 frequency_per_cost             64.61                13.40               31.00
+      Java             0.40             random             25.48                14.10               31.00
+      Java             0.50        cheap_first             30.49                26.00               38.00
+      Java             0.50   exact_cost_aware             69.19                16.40               39.00
+      Java             0.50          frequency             69.35                11.00               39.00
+      Java             0.50 frequency_per_cost             67.93                15.60               39.00
+      Java             0.50             random             34.00                17.30               39.00
 JavaScript             0.10        cheap_first             14.84                 7.00                7.00
 JavaScript             0.10   exact_cost_aware             18.75                 6.00                7.00
 JavaScript             0.10          frequency             14.84                 3.00                7.00
@@ -70,55 +70,55 @@ JavaScript             0.50   exact_cost_aware             60.16                
 JavaScript             0.50          frequency             69.53                10.20               39.00
 JavaScript             0.50 frequency_per_cost             64.84                15.80               39.00
 JavaScript             0.50             random             39.80                17.39               39.00
-    Python             0.10        cheap_first              1.69                 7.00                7.00
-    Python             0.10   exact_cost_aware             29.78                 3.00                7.00
-    Python             0.10          frequency             29.78                 3.00                7.00
-    Python             0.10 frequency_per_cost             29.78                 3.00                7.00
-    Python             0.10             random              4.83                 4.39                7.00
-    Python             0.20        cheap_first              2.25                14.00               14.00
-    Python             0.20   exact_cost_aware             42.70                 4.80               15.00
-    Python             0.20          frequency             47.75                 4.00               15.00
-    Python             0.20 frequency_per_cost             43.82                 8.00               15.00
-    Python             0.20             random             11.35                 7.48               15.00
-    Python             0.30        cheap_first             19.66                18.00               22.00
-    Python             0.30   exact_cost_aware             68.54                 9.00               23.00
-    Python             0.30          frequency             61.24                 5.00               23.00
-    Python             0.30 frequency_per_cost             69.10                 9.00               23.00
-    Python             0.30             random             19.32                10.77               23.00
-    Python             0.40        cheap_first             24.16                22.00               30.00
-    Python             0.40   exact_cost_aware             84.83                10.00               31.00
-    Python             0.40          frequency             77.53                 8.80               31.00
-    Python             0.40 frequency_per_cost             84.83                10.00               31.00
-    Python             0.40             random             27.64                14.09               31.00
-    Python             0.50        cheap_first             24.16                26.00               38.00
-    Python             0.50   exact_cost_aware             89.33                14.40               38.80
-    Python             0.50          frequency             92.13                13.00               39.00
-    Python             0.50 frequency_per_cost             90.45                13.80               39.00
-    Python             0.50             random             37.76                17.31               39.00
+    Python             0.10        cheap_first              2.58                 7.00                7.00
+    Python             0.10   exact_cost_aware             27.84                 3.00                7.00
+    Python             0.10          frequency             27.84                 3.00                7.00
+    Python             0.10 frequency_per_cost             27.84                 3.00                7.00
+    Python             0.10             random              4.71                 4.39                7.00
+    Python             0.20        cheap_first              3.09                14.00               14.00
+    Python             0.20   exact_cost_aware             40.21                 4.80               15.00
+    Python             0.20          frequency             44.33                 4.00               15.00
+    Python             0.20 frequency_per_cost             43.30                 8.00               15.00
+    Python             0.20             random             10.89                 7.48               15.00
+    Python             0.30        cheap_first             21.13                18.00               22.00
+    Python             0.30   exact_cost_aware             66.49                 9.00               23.00
+    Python             0.30          frequency             54.64                 5.60               23.00
+    Python             0.30 frequency_per_cost             66.49                 9.00               23.00
+    Python             0.30             random             18.59                10.77               23.00
+    Python             0.40        cheap_first             24.23                22.00               30.00
+    Python             0.40   exact_cost_aware             80.41                10.20               31.00
+    Python             0.40          frequency             75.26                 9.40               31.00
+    Python             0.40 frequency_per_cost             74.74                10.60               31.00
+    Python             0.40             random             26.76                14.09               31.00
+    Python             0.50        cheap_first             24.23                26.00               38.00
+    Python             0.50   exact_cost_aware             87.63                14.00               39.00
+    Python             0.50          frequency             79.38                10.40               39.00
+    Python             0.50 frequency_per_cost             87.11                13.80               39.00
+    Python             0.50             random             36.53                17.31               39.00
 
 PAIRED BOOTSTRAP COMPARISONS
 --------------------------------------------
   language cost_scheme  budget_fraction         strategy_a         strategy_b  paired_bugs  difference_percentage_points  ci_95_low  ci_95_high
-      Java exponential             0.10   exact_cost_aware          frequency          619                         -2.10      -3.55       -0.65
-      Java exponential             0.10   exact_cost_aware frequency_per_cost          619                         -2.10      -3.55       -0.65
-      Java exponential             0.10          frequency        cheap_first          619                         11.63       8.07       15.35
-      Java exponential             0.10 frequency_per_cost          frequency          619                          0.00       0.00        0.00
-      Java exponential             0.20   exact_cost_aware          frequency          619                          0.00       0.00        0.00
-      Java exponential             0.20   exact_cost_aware frequency_per_cost          619                         10.18       5.65       14.54
-      Java exponential             0.20          frequency        cheap_first          619                         31.66      26.97       36.35
-      Java exponential             0.20 frequency_per_cost          frequency          619                        -10.18     -14.54       -5.65
-      Java exponential             0.30   exact_cost_aware          frequency          619                         10.66       7.59       13.73
-      Java exponential             0.30   exact_cost_aware frequency_per_cost          619                          0.48      -0.48        1.45
-      Java exponential             0.30          frequency        cheap_first          619                         26.49      21.32       31.18
-      Java exponential             0.30 frequency_per_cost          frequency          619                         10.18       7.11       13.25
-      Java exponential             0.40   exact_cost_aware          frequency          619                         -0.16      -2.75        2.26
-      Java exponential             0.40   exact_cost_aware frequency_per_cost          619                          0.00      -1.13        1.13
-      Java exponential             0.40          frequency        cheap_first          619                         40.39      35.38       45.40
-      Java exponential             0.40 frequency_per_cost          frequency          619                         -0.16      -2.75        2.42
-      Java exponential             0.50   exact_cost_aware          frequency          619                          0.81      -2.26        4.04
-      Java exponential             0.50   exact_cost_aware frequency_per_cost          619                          0.81      -0.97        2.58
-      Java exponential             0.50          frequency        cheap_first          619                         41.36      36.03       46.53
-      Java exponential             0.50 frequency_per_cost          frequency          619                          0.00      -2.75        2.91
+      Java exponential             0.10   exact_cost_aware          frequency          633                         -2.69      -4.27       -1.11
+      Java exponential             0.10   exact_cost_aware frequency_per_cost          633                         -2.69      -4.27       -1.11
+      Java exponential             0.10          frequency        cheap_first          633                          9.79       6.00       13.59
+      Java exponential             0.10 frequency_per_cost          frequency          633                          0.00       0.00        0.00
+      Java exponential             0.20   exact_cost_aware          frequency          633                          0.00       0.00        0.00
+      Java exponential             0.20   exact_cost_aware frequency_per_cost          633                          8.69       4.26       12.95
+      Java exponential             0.20          frequency        cheap_first          633                         29.07      24.33       33.65
+      Java exponential             0.20 frequency_per_cost          frequency          633                         -8.69     -12.95       -4.26
+      Java exponential             0.30   exact_cost_aware          frequency          633                         12.32       9.32       15.48
+      Java exponential             0.30   exact_cost_aware frequency_per_cost          633                          0.95      -0.63        2.53
+      Java exponential             0.30          frequency        cheap_first          633                         23.22      18.01       28.12
+      Java exponential             0.30 frequency_per_cost          frequency          633                         11.37       8.37       14.38
+      Java exponential             0.40   exact_cost_aware          frequency          633                          0.47      -2.05        3.00
+      Java exponential             0.40   exact_cost_aware frequency_per_cost          633                          0.47      -0.79        1.74
+      Java exponential             0.40          frequency        cheap_first          633                         36.81      31.60       41.86
+      Java exponential             0.40 frequency_per_cost          frequency          633                          0.00      -2.53        2.53
+      Java exponential             0.50   exact_cost_aware          frequency          633                         -0.16      -3.48        3.32
+      Java exponential             0.50   exact_cost_aware frequency_per_cost          633                          1.26      -0.63        3.32
+      Java exponential             0.50          frequency        cheap_first          633                         38.86      33.33       44.23
+      Java exponential             0.50 frequency_per_cost          frequency          633                         -1.42      -4.42        1.74
 JavaScript exponential             0.10   exact_cost_aware          frequency          128                          3.91      -3.91       11.72
 JavaScript exponential             0.10   exact_cost_aware frequency_per_cost          128                          0.00      -3.12        3.12
 JavaScript exponential             0.10          frequency        cheap_first          128                          0.00      -9.38        8.59
@@ -139,23 +139,23 @@ JavaScript exponential             0.50   exact_cost_aware          frequency   
 JavaScript exponential             0.50   exact_cost_aware frequency_per_cost          128                         -4.69      -8.59       -1.56
 JavaScript exponential             0.50          frequency        cheap_first          128                         34.38      21.09       46.88
 JavaScript exponential             0.50 frequency_per_cost          frequency          128                         -4.69     -14.06        4.69
-    Python exponential             0.10   exact_cost_aware          frequency          178                          0.00       0.00        0.00
-    Python exponential             0.10   exact_cost_aware frequency_per_cost          178                          0.00       0.00        0.00
-    Python exponential             0.10          frequency        cheap_first          178                         28.09      21.35       35.39
-    Python exponential             0.10 frequency_per_cost          frequency          178                          0.00       0.00        0.00
-    Python exponential             0.20   exact_cost_aware          frequency          178                         -5.06      -8.43       -2.25
-    Python exponential             0.20   exact_cost_aware frequency_per_cost          178                         -1.12      -8.99        6.18
-    Python exponential             0.20          frequency        cheap_first          178                         45.51      37.64       53.37
-    Python exponential             0.20 frequency_per_cost          frequency          178                         -3.93     -12.36        4.49
-    Python exponential             0.30   exact_cost_aware          frequency          178                          7.30      -1.12       15.73
-    Python exponential             0.30   exact_cost_aware frequency_per_cost          178                         -0.56      -1.69        0.00
-    Python exponential             0.30          frequency        cheap_first          178                         41.57      31.46       51.69
-    Python exponential             0.30 frequency_per_cost          frequency          178                          7.87      -0.56       16.85
-    Python exponential             0.40   exact_cost_aware          frequency          178                          7.30       3.37       11.24
-    Python exponential             0.40   exact_cost_aware frequency_per_cost          178                          0.00      -1.69        1.69
-    Python exponential             0.40          frequency        cheap_first          178                         53.37      43.82       62.92
-    Python exponential             0.40 frequency_per_cost          frequency          178                          7.30       3.37       11.24
-    Python exponential             0.50   exact_cost_aware          frequency          178                         -2.81      -6.18        0.56
-    Python exponential             0.50   exact_cost_aware frequency_per_cost          178                         -1.12      -3.93        1.69
-    Python exponential             0.50          frequency        cheap_first          178                         67.98      60.11       75.28
-    Python exponential             0.50 frequency_per_cost          frequency          178                         -1.69      -3.93        0.00
+    Python exponential             0.10   exact_cost_aware          frequency          194                          0.00       0.00        0.00
+    Python exponential             0.10   exact_cost_aware frequency_per_cost          194                          0.00       0.00        0.00
+    Python exponential             0.10          frequency        cheap_first          194                         25.26      19.07       31.96
+    Python exponential             0.10 frequency_per_cost          frequency          194                          0.00       0.00        0.00
+    Python exponential             0.20   exact_cost_aware          frequency          194                         -4.12      -7.73       -0.52
+    Python exponential             0.20   exact_cost_aware frequency_per_cost          194                         -3.09     -10.31        4.12
+    Python exponential             0.20          frequency        cheap_first          194                         41.24      33.51       48.97
+    Python exponential             0.20 frequency_per_cost          frequency          194                         -1.03      -9.28        7.22
+    Python exponential             0.30   exact_cost_aware          frequency          194                         11.86       5.15       18.57
+    Python exponential             0.30   exact_cost_aware frequency_per_cost          194                          0.00       0.00        0.00
+    Python exponential             0.30          frequency        cheap_first          194                         33.51      24.23       42.78
+    Python exponential             0.30 frequency_per_cost          frequency          194                         11.86       5.15       18.57
+    Python exponential             0.40   exact_cost_aware          frequency          194                          5.15       1.55        8.76
+    Python exponential             0.40   exact_cost_aware frequency_per_cost          194                          5.67       2.06        9.79
+    Python exponential             0.40          frequency        cheap_first          194                         51.03      42.27       59.79
+    Python exponential             0.40 frequency_per_cost          frequency          194                         -0.52      -5.15        4.12
+    Python exponential             0.50   exact_cost_aware          frequency          194                          8.25       2.58       13.92
+    Python exponential             0.50   exact_cost_aware frequency_per_cost          194                          0.52      -1.55        3.09
+    Python exponential             0.50          frequency        cheap_first          194                         55.15      45.88       63.92
+    Python exponential             0.50 frequency_per_cost          frequency          194                          7.73       2.06       13.40
