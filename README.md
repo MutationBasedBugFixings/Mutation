@@ -792,7 +792,7 @@ The mapping procedure:
 The input and mapping audit are retained in:
 
 ```text
-rq5/prapr_comparison/prapr_published_mutator_frequencies.csv
+rq5/prapr_comparison/prapr_supplementary_comparison.csv
 rq5/prapr_comparison/prapr_mapping_audit.csv
 rq5/prapr_comparison/prapr_mapped_ranking.csv
 ```
