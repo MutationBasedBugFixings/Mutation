@@ -421,94 +421,230 @@ This study analyses the full **Defects4J v2.0.1** dataset containing 835 bugs.
 ## 7. RQ5: Operator Selection and Supplementary Comparisons
 
 RQ5 evaluates source-level mutant-operator selection under fixed operator-count
-and structural proxy-cost budgets.
+and structural proxy-cost budgets. It also examines cross-language transfer
+and includes two supplementary analyses: the relationship between operator
+complexity and popularity, and a cross-abstraction comparison with PraPR.
 
-It also includes:
-
-- the complexity–popularity analysis used to support the search-space
-  interpretation; and
-- a supplementary cross-abstraction comparison with PraPR.
-
-The RQ5 replication materials are located in:
+The replication materials are stored in the lowercase repository directory:
 
 ```text
-RQ5/
+rq5/
 ```
+
+All paths below are relative to the repository root.
 
 ---
 
-### 7.1 Input Data
+### 7.1 Input Data and Final Mapping Cohort
 
-The operator-selection experiment uses:
+The RQ5 analyses use three manually annotated benchmark datasets:
+
+| Language | Original annotation records | Final eligible mappings |
+|---|---:|---:|
+| Java (Defects4J) | 835 | 633 |
+| Python (BugsInPy) | 300 | 194 |
+| JavaScript (BugsJS) | 219 | 128 |
+| **Total** | **1,354** | **955** |
+
+The final cohort contains 955 eligible bug-to-operator mappings. The final
+mapping file has no duplicate `language`–`project`–`bug_id` identities.
+
+The canonical input is:
 
 ```text
-RQ5/strict_bug_operator_mappings.csv
+rq5/strict_bug_operator_mappings.csv
 ```
 
-Required columns:
+The file contains the language, project, bug identifier, and semicolon-separated
+canonical operator-family codes. The `operators` field represents the complete
+set of operator families assigned to the corresponding developer patch.
 
-- `language`
-- `project`
-- `operators`
+The source annotation files are retained for traceability:
 
-The `operators` column contains semicolon-separated canonical operator codes.
-An optional `bug_id` column may also be included.
-
-The cleaned dataset contains 925 eligible bug-to-operator mappings:
-
-| Language | Eligible mappings |
-|---|---:|
-| Java | 619 |
-| Python | 178 |
-| JavaScript | 128 |
-| **Total** | **925** |
+```text
+rq5/data/Defects4j_full.xlsx
+rq5/data/BugInPy.xlsx
+rq5/data/bugjs_manual(1).csv
+```
 
 A fix is counted as covered only when **all operator families required by its
-developer patch** are included in the selected operator set.
+developer patch** are included in the selected operator set. Therefore, the
+reported metric is complete-fix representability under an operator-set budget;
+it is not a count of patches generated or bugs automatically repaired.
+
+The source-level cleaning audit is retained in:
+
+```text
+rq5/rq5_results_corrected_audit/cleaning_audit_all_rows.csv
+rq5/rq5_results_corrected_audit/rows_requiring_manual_review.csv
+rq5/rq5_results_corrected_audit/dataset_count_audit.csv
+rq5/rq5_results_corrected_audit/project_fold_audit.csv
+```
+
+The audit files preserve the original records, eligibility decisions, project
+identities, and fold assignments.
 
 ---
 
-### 7.2 GitHub-Relative Path Configuration
+### 7.2 Package Layout and Portable Paths
 
-The RQ5 replication scripts should not contain machine-specific paths.
+The RQ5 package is organised as follows:
 
-In `RQ5/cost_aware_operator_selection.py`, configure the script directory as:
+```text
+rq5/
+├── README.md
+├── data/
+│   ├── Defects4j_full.xlsx
+│   ├── BugInPy.xlsx
+│   ├── bugjs_manual(1).csv
+│   └── prapr_mapped_ranking.csv
+├── strict_bug_operator_mappings.csv
+├── rq5_source_level_portfolio_analysis_corrected.py
+├── cost_aware_operator_selection.py
+├── complexity_popularity.py
+├── rq5_results_corrected_audit/
+│   ├── cleaning_audit_all_rows.csv
+│   ├── rows_requiring_manual_review.csv
+│   ├── strict_bug_operator_mappings.csv
+│   ├── dataset_count_audit.csv
+│   ├── project_fold_audit.csv
+│   ├── selected_portfolios_within_language.csv
+│   ├── within_language_project_cv_folds.csv
+│   ├── within_language_project_cv_summary.csv
+│   ├── cross_language_transfer.csv
+│   └── prapr_supplementary_comparison.csv
+├── cost_aware_results/
+│   ├── operator_cost_table.csv
+│   ├── heldout_results.csv
+│   ├── heldout_summary.csv
+│   ├── selected_portfolios.csv
+│   ├── out_of_fold_predictions.csv
+│   ├── paired_comparisons.csv
+│   ├── primary_scheme_summary.csv
+│   ├── README_RESULTS.txt
+│   ├── coverage_java.svg
+│   ├── coverage_python.svg
+│   └── coverage_javascript.svg
+└── prapr_comparison/
+    ├── prapr_published_mutator_frequencies.csv
+    ├── prapr_mapping_audit.csv
+    ├── prapr_mapped_ranking.csv
+    └── README.md
+```
+
+Only include files that are present in the final release. In particular, the
+three SVG filenames above are the names produced by the current server run.
+The generated audit and result directories should be committed after the
+corresponding experiments have been rerun on the final 955-mapping input.
+
+#### Portable configuration: source-level script
+
+The source-level script must use paths relative to its own location rather
+than the original research-server directory. Its configuration should follow
+this pattern:
 
 ```python
-from pathlib import Path
-
 BASE_DIR = Path(__file__).resolve().parent
-OUTPUT_DIR = BASE_DIR / "cost_aware_results"
-MEASURED_COST_FILE = BASE_DIR / "operator_runtime_costs.csv"
+DATA_DIR = BASE_DIR / "data"
+
+JAVA_FILE = DATA_DIR / "Defects4j_full.xlsx"
+PYTHON_FILE = DATA_DIR / "BugInPy.xlsx"
+JAVASCRIPT_FILE = DATA_DIR / "bugjs_manual(1).csv"
+
+OUTPUT_DIR = BASE_DIR / "rq5_results_corrected_audit"
+SOURCE_BASELINE_FILE = DATA_DIR / "source_level_baselines.csv"
+PRAPR_FILE = BASE_DIR / "prapr_comparison" / "prapr_mapped_ranking.csv"
+```
+
+#### Portable configuration: cost-aware script
+
+The cost-aware script should load the final mapping from the package and write
+its outputs inside the package:
+
+```python
+BASE_DIR = Path(__file__).resolve().parent
 
 INPUT_CANDIDATES = (
     BASE_DIR / "strict_bug_operator_mappings.csv",
+    BASE_DIR / "rq5_results_corrected_audit" / "strict_bug_operator_mappings.csv",
 )
+
+OUTPUT_DIR = BASE_DIR / "cost_aware_results"
+MEASURED_COST_FILE = BASE_DIR / "operator_runtime_costs.csv"
 ```
 
-With this configuration, the experiment can be executed directly after cloning
-the repository.
+If `operator_runtime_costs.csv` is not supplied, the experiment uses the
+structural proxy-cost schemes described below. The scripts must not retain
+machine-specific paths such as `/home1/furqan/...`.
 
 ---
 
-### 7.3 Cost-Aware Operator Selection
+### 7.3 Fixed Operator-Count Selection and Cross-Language Evaluation
 
-The cost-aware experiment evaluates whether the search-space complexity tiers
-identified in RQ3 improve operator selection when repair relevance and
-structural proxy cost are considered jointly.
+The source-level evaluation compares three operator-selection strategies:
 
-#### Proxy-Cost Schemes
+- **Frequency-based:** ranks operator families by the number of training fixes
+  in which each family occurs and selects the top \(k\).
+- **Composition-aware:** selects a size-\(k\) operator set that maximises
+  complete-fix coverage on the training folds. Operator frequency is used as
+  a secondary objective when multiple sets achieve the same coverage.
+- **No-ranking:** uniformly samples 1,000 size-\(k\) operator sets and reports
+  their mean held-out coverage.
 
-The primary exponential mapping is:
+The evaluated operator budgets are:
 
-| Complexity tier | Proxy cost |
-|---|---:|
-| Low | 1 |
-| Moderate | 2 |
-| High | 4 |
-| Extremely High | 8 |
+```text
+k = 1, 3, 5, and 10
+```
 
-Two additional mappings are evaluated as sensitivity checks:
+For each language, projects are divided into five folds. Four folds are used
+to construct the operator sets and the remaining fold is held out for
+evaluation. Coverage is pooled across the held-out projects from all folds.
+
+The source-level experiment uses a fixed random seed of `42` and 1,000 random
+portfolios for the no-ranking baseline.
+
+The script is:
+
+```text
+rq5/rq5_source_level_portfolio_analysis_corrected.py
+```
+
+Run it from the repository root:
+
+```bash
+python rq5/rq5_source_level_portfolio_analysis_corrected.py
+```
+
+The main outputs are:
+
+| Output | Description |
+|---|---|
+| `within_language_project_cv_summary.csv` | Aggregated within-language results |
+| `within_language_project_cv_folds.csv` | Fold-level within-language results |
+| `selected_portfolios_within_language.csv` | Selected operator sets |
+| `cross_language_transfer.csv` | Cross-language transfer results |
+| `strict_bug_operator_mappings.csv` | Final eligible mapping cohort |
+| `cleaning_audit_all_rows.csv` | Audit of all 1,354 source records |
+| `dataset_count_audit.csv` | Per-language eligibility counts |
+| `project_fold_audit.csv` | Project-to-fold assignments |
+| `prapr_supplementary_comparison.csv` | Supplementary mapped PraPR results, when the ranking input is available |
+
+The cross-language analysis constructs an operator set from the source language
+and transfers it unchanged to the target language. The generated
+`cross_language_transfer.csv` is the authoritative source for the reported
+cross-language values.
+
+---
+
+### 7.4 Cost-Aware Operator Selection
+
+The cost-aware experiment evaluates whether the RQ3 search-space complexity
+tiers can guide operator selection under structural proxy-cost budgets.
+
+#### Proxy-cost schemes
+
+Three mappings are evaluated:
 
 | Scheme | Low | Moderate | High | Extremely High |
 |---|---:|---:|---:|---:|
@@ -516,46 +652,44 @@ Two additional mappings are evaluated as sensitivity checks:
 | Exponential | 1 | 2 | 4 | 8 |
 | Steep | 1 | 3 | 6 | 10 |
 
-The evaluated budget fractions are:
+The primary scheme is exponential. The evaluated budget fractions are:
 
 ```text
 10%, 20%, 30%, 40%, and 50%
 ```
 
-Each budget is calculated as a fraction of the total proxy cost of the
-canonical operator set.
+Each budget is a fraction of the total cost of the 33 canonical operator
+families under the corresponding scheme.
 
-#### Evaluated Strategies
+#### Evaluated strategies
 
-The experiment compares five strategies under the same proxy-cost budget:
+Five strategies are compared under the same cost budget:
 
-- **Frequency** – operators are ranked by their occurrence frequency in the
-  training fixes.
-- **Frequency-per-cost** – operators are ranked by training frequency divided
-  by proxy cost.
-- **Exact cost-aware** – a mixed-integer linear program selects the
+- **Frequency:** ranks operators by their occurrence frequency in the training
+  fixes.
+- **Frequency-per-cost:** ranks operators by training frequency divided by
+  proxy cost.
+- **Exact cost-aware:** uses a mixed-integer linear program to select a
   cost-feasible portfolio that maximises complete-fix coverage on the training
   projects.
-- **Cheap-first** – operators are ranked by increasing proxy cost, with
-  frequency used for tie-breaking.
-- **Random** – a no-ranking baseline based on 1,000 randomly generated
-  cost-feasible operator portfolios.
+- **Cheap-first:** ranks operators by increasing proxy cost, using frequency
+  to break ties.
+- **Random:** samples 1,000 cost-feasible operator portfolios.
 
-For ranking-based strategies, operators are considered in ranked order and
+For the ranking-based strategies, operators are considered in ranked order and
 selected whenever their cost fits within the remaining budget.
 
-#### Exact Cost-Aware Objective
-
-For an operator set \(S\), the total proxy cost is:
+For an operator set \(S\), its total proxy cost is:
 
 \[
-\mathrm{Cost}(S)=\sum_{o\in S}c(o)
+\operatorname{Cost}(S)=\sum_{o\in S}c(o).
 \]
 
 The exact cost-aware strategy selects:
 
 \[
-S_C^*=\arg\max_{S\subseteq\mathcal{O}}
+S_C^* =
+\arg\max_{S\subseteq\mathcal{O}}
 \sum_{b\in B_{\mathrm{train}}}
 \mathbb{I}[R_b\subseteq S]
 \]
@@ -563,16 +697,13 @@ S_C^*=\arg\max_{S\subseteq\mathcal{O}}
 subject to:
 
 \[
-\sum_{o\in S}c(o)\leq C
+\sum_{o\in S}c(o)\leq C.
 \]
 
-where:
+Here, \(R_b\) is the complete operator set required by fix \(b\), \(c(o)\) is
+the proxy cost of operator \(o\), and \(C\) is the available budget.
 
-- \(R_b\) is the complete operator set required by fix \(b\);
-- \(c(o)\) is the proxy cost of operator \(o\); and
-- \(C\) is the available budget.
-
-#### Evaluation Settings
+#### Evaluation settings
 
 | Setting | Value |
 |---|---:|
@@ -581,81 +712,59 @@ where:
 | Paired bootstrap iterations | 5,000 |
 | Random seed | 20260322 |
 | Primary proxy-cost scheme | Exponential |
+| Canonical operator families | 33 |
 
-#### Run
+The script is:
 
-From the repository root:
-
-```bash
-python RQ5/cost_aware_operator_selection.py
+```text
+rq5/cost_aware_operator_selection.py
 ```
 
-#### Generated Outputs
+Run it from the repository root after the final mapping file has been
+generated or copied to `rq5/strict_bug_operator_mappings.csv`:
 
-The script writes the following files to `RQ5/cost_aware_results/`:
+```bash
+python rq5/cost_aware_operator_selection.py
+```
 
-- `operator_cost_table.csv` – complexity tier and assigned cost for every
-  operator and cost scheme
-- `heldout_results.csv` – fold-level coverage and selected-portfolio
-  statistics
-- `heldout_summary.csv` – aggregated held-out results by language, cost scheme,
-  budget, and strategy
-- `selected_portfolios.csv` – operators selected in every fold and condition
-- `out_of_fold_predictions.csv` – bug-level held-out coverage outcomes
-- `paired_comparisons.csv` – paired-bootstrap differences and 95% confidence
-  intervals
-- `primary_scheme_summary.csv` – summary for the primary exponential mapping
-- `README_RESULTS.txt` – human-readable result summary
-- `coverage_java.svg` – Java coverage figure
-- `coverage_python.svg` – Python coverage figure
-- `coverage_javascript.svg` – JavaScript coverage figure
+The script writes:
 
-#### Primary Results at the 30% Proxy-Cost Budget
+- `operator_cost_table.csv` – assigned operator costs under each scheme;
+- `heldout_results.csv` – fold-level coverage and portfolio statistics;
+- `heldout_summary.csv` – aggregated results by language, scheme, budget, and strategy;
+- `selected_portfolios.csv` – selected operators for each fold and condition;
+- `out_of_fold_predictions.csv` – bug-level held-out coverage outcomes;
+- `paired_comparisons.csv` – paired-bootstrap differences and 95% confidence intervals;
+- `primary_scheme_summary.csv` – results for the primary exponential scheme;
+- `README_RESULTS.txt` – human-readable summary; and
+- `coverage_java.svg`, `coverage_python.svg`, and `coverage_javascript.svg` – coverage figures.
 
-| Language | Frequency | Frequency-per-cost | Exact cost-aware | Cheap-first | Random |
-|---|---:|---:|---:|---:|---:|
-| Java | 48.79% | 58.97% | 59.45% | 22.29% | 17.09% |
-| Python | 61.24% | 69.10% | 68.54% | 19.66% | 19.32% |
-| JavaScript | 30.47% | 47.66% | 38.28% | 33.59% | 21.89% |
+**Result-integrity requirement:** the cost-aware results must be generated from
+the final 955-mapping file. Before publishing the result directory, verify that
+the `paired_bugs` column in `paired_comparisons.csv` reports 633 Java, 194
+Python, and 128 JavaScript bugs. Do not reuse a previous 925-mapping summary
+or its hard-coded percentages.
 
-At the 30% budget, frequency-per-cost improves over frequency by:
+The CSV files generated by the final run are the authoritative source for
+numerical results. The README intentionally does not duplicate a 30% budget
+summary or statistical significance counts that have not been checked against
+the final 955-mapping output.
 
-- **Java:** 10.18 percentage points
-- **Python:** 7.87 percentage points
-- **JavaScript:** 17.19 percentage points
-
-Across all 45 combinations of language, budget, and proxy-cost mapping:
-
-- frequency-per-cost performs better than frequency in 12 comparisons;
-- frequency-per-cost performs worse in 3 comparisons;
-- 30 comparisons are inconclusive;
-- exact cost-aware performs better in 9 comparisons and worse in 6; and
-- frequency outperforms cheap-first in 35 comparisons.
-
-#### Interpretation Limitation
+#### Interpretation limitation
 
 The linear, exponential, and steep costs are structural proxies derived from
-the RQ3 complexity tiers.
-
-They are not:
-
-- measured execution times;
-- mutant counts;
-- generated-candidate counts; or
-- validation costs.
-
-The results therefore represent complete-fix coverage under structural
-proxy-cost budgets. They must not be interpreted as evidence of wall-clock
-runtime reduction.
+the RQ3 complexity tiers. They are not measured execution times, mutant counts,
+generated-candidate counts, or validation costs. The results therefore
+represent complete-fix coverage under structural proxy-cost budgets and must
+not be interpreted as evidence of wall-clock runtime reduction.
 
 ---
 
-### 7.4 Complexity–Popularity Correlation
+### 7.5 Complexity–Popularity Correlation
 
-This analysis examines the relationship between operator popularity and
-search-space complexity across the 33 canonical operators.
-
-#### Complexity Encoding
+This supplementary analysis examines the relationship between operator
+popularity and search-space complexity across the 33 canonical operator
+families.
 
 The ordinal complexity tiers are encoded as:
 
@@ -666,208 +775,176 @@ The ordinal complexity tiers are encoded as:
 | High | 3 |
 | Extremely High | 4 |
 
-Operator popularity is the percentage of the 955 representable fixes whose
-developer patches contain the operator.
+Operator popularity is calculated as the percentage of the final eligible
+mappings whose developer patches contain the corresponding operator family.
 
-#### Run
+The script is:
 
-From the repository root:
+```text
+rq5/complexity_popularity.py
+```
+
+Run:
 
 ```bash
-python RQ5/complexity_popularity.py
+python rq5/complexity_popularity.py
 ```
 
-#### Expected Output
+The generated correlation CSV is the authoritative source for the Spearman
+and Kendall statistics:
 
 ```text
-Number of operators: 33
-Spearman rho: 0.5723
-Spearman p-value: 0.000501
-Kendall tau-b: 0.4863
-Kendall p-value: 0.000437
+rq5/complexity_popularity_correlation.csv
 ```
 
-The script also writes:
-
-```text
-RQ5/complexity_popularity_correlation.csv
-```
-
-#### Interpretation
-
-Spearman's rank correlation shows a statistically significant positive
-association between operator popularity and search-space complexity:
-
-```text
-rho = 0.5723
-p = 0.000501
-n = 33
-```
-
-More frequently required operators generally tend to have larger search
-spaces, although the relationship is not uniform.
-
-For example, `VA` and `MOCS` belong to the **Extremely High** complexity tier,
-but each appears in only 7.1% of representable fixes.
-
-The Kendall tau-b result is included as a robustness check.
+The correlation script and its output must be checked against the final
+955-mapping cohort before its numerical statistics are quoted. Values from an
+earlier cohort should not be carried forward without rerunning the analysis.
 
 ---
 
-### 7.5 Supplementary Cross-Abstraction Comparison with PraPR
-
-The PraPR comparison is located in:
-
-```text
-RQ5/prapr_comparison/
-```
+### 7.6 Supplementary Cross-Abstraction Comparison with PraPR
 
 PraPR ranks JVM bytecode-level mutators using published frequencies, whereas
 this study evaluates unified source-level semantic operator families.
+Accordingly, PraPR is treated as a **supplementary cross-abstraction
+reference**, not as a direct source-level baseline.
 
-PraPR is therefore treated as a **supplementary cross-abstraction reference**
-rather than a direct source-level baseline.
+The mapping procedure:
 
-The analysis maps PraPR's published mutator priorities to the unified taxonomy
-and evaluates the resulting family ranking on the same 619 strict Java
-mappings.
+1. Reads the published PraPR mutator frequencies.
+2. Applies the documented mutator-to-family mapping.
+3. Aggregates frequencies for mutators mapped to the same canonical family.
+4. Ranks the unified families by aggregated frequency.
+5. Breaks ties using the earliest published PraPR rank and then the family label.
+6. Evaluates complete-fix coverage at \(k=1,3,5,10\) on the final 633 Java mappings.
 
-This analysis does **not**:
-
-- run PraPR;
-- generate bytecode mutants;
-- reproduce PraPR's full APR pipeline; or
-- measure end-to-end repair success.
-
-#### PraPR Mapping Procedure
-
-1. Read the published mutator frequencies from:
-
-   ```text
-   RQ5/prapr_comparison/prapr_published_mutator_frequencies.csv
-   ```
-
-2. Apply the documented mutator-to-family mapping in:
-
-   ```text
-   RQ5/prapr_comparison/prapr_mapping_audit.csv
-   ```
-
-3. Consolidate mutators mapped to the same unified family by summing their
-   published frequencies.
-4. Rank the resulting families by aggregated frequency in descending order.
-5. Break ties by the earliest published PraPR rank and then by family label.
-6. Evaluate complete-fix coverage for `k = 1, 3, 5, and 10`.
-
-The mapped top-ten family order is:
+The input and mapping audit are retained in:
 
 ```text
-MCR, VR, ROR, CR, CI, MPM, AOR, MRV, DTR, VA
+rq5/prapr_comparison/prapr_published_mutator_frequencies.csv
+rq5/prapr_comparison/prapr_mapping_audit.csv
+rq5/prapr_comparison/prapr_mapped_ranking.csv
 ```
 
-#### Run
+The updated coverage output is:
 
-From the repository root:
-
-```bash
-python RQ5/prapr_comparison/run_prapr_comparison.py
+```text
+rq5/rq5_results_corrected_audit/prapr_supplementary_comparison.csv
 ```
 
-#### Expected Results
+The output generated from the final 633 Java mappings must be used for the
+reported denominator and coverage values. The previous 619-Java-mapping
+figures are obsolete and should not be retained.
 
-| k | Selected families | Covered fixes | Coverage |
-|---:|---|---:|---:|
-| 1 | MCR | 54 / 619 | 8.72% |
-| 3 | MCR, VR, ROR | 76 / 619 | 12.28% |
-| 5 | MCR, VR, ROR, CR, CI | 180 / 619 | 29.08% |
-| 10 | MCR, VR, ROR, CR, CI, MPM, AOR, MRV, DTR, VA | 333 / 619 | 53.80% |
-
-#### Output Files
-
-- `prapr_mapped_ranking.csv` – consolidated source-level family ranking
-- `prapr_supplementary_comparison.csv` – coverage values reported in the
-  manuscript
-- `strict_java_bug_operator_mappings.csv` – the 619 eligible Java mappings
-- `prapr_mapping_audit.csv` – mapping decisions and rationales
-
-#### Interpretation
-
-The PraPR results represent complete-fix coverage after cross-abstraction
-taxonomy mapping.
-
-They must not be described as:
-
-- the number of bugs repaired by PraPR;
-- a reproduction of PraPR;
-- a direct source-level baseline; or
-- end-to-end evidence that one APR system outperforms another.
+This analysis does **not** run PraPR, generate bytecode mutants, reproduce
+PraPR's full APR pipeline, or measure end-to-end repair success. It measures
+complete-fix coverage after mapping published bytecode-level priorities to
+the source-level taxonomy.
 
 ---
 
-### 7.6 Recommended RQ5 Reproduction Order
+### 7.7 Recommended Reproduction Order
 
-Run the analyses independently from the repository root.
+Run the analyses from the repository root.
 
-#### Step 1 – Complexity–Popularity Correlation
+#### Step 1 – Generate the final source-level mappings and operator-count results
 
 ```bash
-python RQ5/complexity_popularity.py
+python rq5/rq5_source_level_portfolio_analysis_corrected.py
+```
+
+Verify the final mapping counts:
+
+```text
+Java: 633
+Python: 194
+JavaScript: 128
+Total: 955
+```
+
+Copy the generated canonical mapping to the package root for the cost-aware
+script:
+
+```bash
+cp rq5/rq5_results_corrected_audit/strict_bug_operator_mappings.csv \
+   rq5/strict_bug_operator_mappings.csv
+```
+
+#### Step 2 – Run cost-aware operator selection
+
+```bash
+python rq5/cost_aware_operator_selection.py
 ```
 
 Verify:
 
 ```text
-RQ5/complexity_popularity_correlation.csv
+rq5/cost_aware_results/primary_scheme_summary.csv
+rq5/cost_aware_results/paired_comparisons.csv
+rq5/cost_aware_results/README_RESULTS.txt
 ```
 
-#### Step 2 – Cost-Aware Operator Selection
+Check that the paired-comparison denominators are 633, 194, and 128.
+
+#### Step 3 – Run the complexity–popularity analysis
 
 ```bash
-python RQ5/cost_aware_operator_selection.py
+python rq5/complexity_popularity.py
 ```
 
-Verify:
+Verify that its input is the final 955-mapping cohort and inspect:
 
 ```text
-RQ5/cost_aware_results/primary_scheme_summary.csv
-RQ5/cost_aware_results/paired_comparisons.csv
-RQ5/cost_aware_results/README_RESULTS.txt
+rq5/complexity_popularity_correlation.csv
 ```
 
-#### Step 3 – PraPR Supplementary Comparison
+#### Step 4 – Verify the PraPR supplementary comparison
 
-```bash
-python RQ5/prapr_comparison/run_prapr_comparison.py
-```
-
-Verify:
+Verify that the output was generated from the final 633 Java mappings:
 
 ```text
-RQ5/prapr_comparison/prapr_mapped_ranking.csv
-RQ5/prapr_comparison/prapr_supplementary_comparison.csv
+rq5/rq5_results_corrected_audit/prapr_supplementary_comparison.csv
 ```
 
 ---
 
 ## 8. Reproducibility Notes
 
-- All RQ5 paths documented in this README are repository-relative.
-- No user-specific or machine-specific directory is required for the RQ5
-  analyses.
-- The documented random seed makes the random baseline and paired-bootstrap
-  procedure reproducible, subject to compatible Python, library, and solver
-  versions.
-- The MAJOR and PIT experiments depend on the configured Java versions,
-  Defects4J installation, project dependencies, and benchmark availability.
-- RQ5 proxy costs represent structural complexity tiers rather than measured
-  runtime or candidate-generation cost.
-- The PraPR analysis is a taxonomy-mapped supplementary comparison rather than
-  a full execution or reproduction of PraPR.
+- The final RQ5 cohort contains 955 unique language–project–bug mappings:
+  633 Java, 194 Python, and 128 JavaScript.
+- The original annotation corpus contains 1,354 records: 835 Java, 300 Python,
+  and 219 JavaScript.
+- The source-level operator-count analysis uses five project-level folds,
+  \(k\in\{1,3,5,10\}\), 1,000 random portfolios, and random seed `42`.
+- The cost-aware analysis uses five project-level folds, 1,000 random
+  portfolios, 5,000 paired-bootstrap iterations, and random seed `20260322`.
+- The 33-family taxonomy and its complexity tiers are defined in the
+  replication scripts and should be kept consistent with the manuscript.
+- RQ5 proxy costs represent structural complexity tiers, not measured runtime
+  or candidate-generation cost.
+- The PraPR analysis is a taxonomy-mapped supplementary comparison rather
+  than a full execution or reproduction of PraPR.
+- A published source-level baseline is not included in the current run unless
+  a corresponding `source_level_baselines.csv` input is supplied. A generated
+  template is not an experimental baseline result.
+- Reproduction may depend on compatible Python, pandas, NumPy, SciPy,
+  scikit-learn, Matplotlib, and solver versions. Record the versions used for
+  the archived run.
 
 ---
 
 ## 9. Archival Package
 
-The replication package is archived on Zenodo:
+The GitHub repository is the public source for the RQ5 replication materials:
+
+```text
+https://github.com/MutationBasedBugFixings/Mutation
+```
+
+A Zenodo DOI should be added here after the final, versioned replication
+package has been deposited. Do not claim a Zenodo archive until the DOI is
+available.
+
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19362997.svg)](https://doi.org/10.5281/zenodo.19362997)
