@@ -366,35 +366,46 @@ Mutation/
 │
 ├── d4j_work_diff/
 │   └── ...
-│
-└── RQ5/
-    ├── README.md
-    ├── strict_bug_operator_mappings.csv
-    ├── cost_aware_operator_selection.py
-    ├── complexity_popularity.py
-    ├── complexity_popularity_correlation.csv
-    │
-    ├── cost_aware_results/
-    │   ├── operator_cost_table.csv
-    │   ├── heldout_results.csv
-    │   ├── heldout_summary.csv
-    │   ├── selected_portfolios.csv
-    │   ├── out_of_fold_predictions.csv
-    │   ├── paired_comparisons.csv
-    │   ├── primary_scheme_summary.csv
-    │   ├── README_RESULTS.txt
-    │   ├── coverage_java.svg
-    │   ├── coverage_python.svg
-    │   └── coverage_javascript.svg
-    │
-    └── prapr_comparison/
-        ├── README.md
-        ├── prapr_published_mutator_frequencies.csv
-        ├── prapr_mapping_audit.csv
-        ├── prapr_mapped_ranking.csv
-        ├── strict_java_bug_operator_mappings.csv
-        ├── run_prapr_comparison.py
-        └── prapr_supplementary_comparison.csv
+|
+rq5/
+├── README.md
+├── data/
+│   ├── Defects4j_full.xlsx
+│   ├── BugInPy.xlsx
+│   ├── bugjs_manual(1).csv
+│   └── prapr_mapped_ranking.csv
+├── strict_bug_operator_mappings.csv
+├── rq5_source_level_portfolio_analysis_corrected.py
+├── cost_aware_operator_selection.py
+├── complexity_popularity.py
+├── rq5_results_corrected_audit/
+│   ├── cleaning_audit_all_rows.csv
+│   ├── rows_requiring_manual_review.csv
+│   ├── strict_bug_operator_mappings.csv
+│   ├── dataset_count_audit.csv
+│   ├── project_fold_audit.csv
+│   ├── selected_portfolios_within_language.csv
+│   ├── within_language_project_cv_folds.csv
+│   ├── within_language_project_cv_summary.csv
+│   ├── cross_language_transfer.csv
+│   └── prapr_supplementary_comparison.csv
+├── cost_aware_results/
+│   ├── operator_cost_table.csv
+│   ├── heldout_results.csv
+│   ├── heldout_summary.csv
+│   ├── selected_portfolios.csv
+│   ├── out_of_fold_predictions.csv
+│   ├── paired_comparisons.csv
+│   ├── primary_scheme_summary.csv
+│   ├── README_RESULTS.txt
+│   ├── coverage_java.svg
+│   ├── coverage_python.svg
+│   └── coverage_javascript.svg
+└── prapr_comparison/
+    ├── prapr_published_mutator_frequencies.csv
+    ├── prapr_mapping_audit.csv
+    ├── prapr_mapped_ranking.csv
+    └── README.md
 ```
 
 The `logs/`, `results/`, `d4j_work/`, and `d4j_work_diff/` directories are
@@ -486,51 +497,10 @@ identities, and fold assignments.
 
 ---
 
-### 7.2 Package Layout and Portable Paths
 
-The RQ5 package is organised as follows:
 
-```text
-rq5/
-├── README.md
-├── data/
-│   ├── Defects4j_full.xlsx
-│   ├── BugInPy.xlsx
-│   ├── bugjs_manual(1).csv
-│   └── prapr_mapped_ranking.csv
-├── strict_bug_operator_mappings.csv
-├── rq5_source_level_portfolio_analysis_corrected.py
-├── cost_aware_operator_selection.py
-├── complexity_popularity.py
-├── rq5_results_corrected_audit/
-│   ├── cleaning_audit_all_rows.csv
-│   ├── rows_requiring_manual_review.csv
-│   ├── strict_bug_operator_mappings.csv
-│   ├── dataset_count_audit.csv
-│   ├── project_fold_audit.csv
-│   ├── selected_portfolios_within_language.csv
-│   ├── within_language_project_cv_folds.csv
-│   ├── within_language_project_cv_summary.csv
-│   ├── cross_language_transfer.csv
-│   └── prapr_supplementary_comparison.csv
-├── cost_aware_results/
-│   ├── operator_cost_table.csv
-│   ├── heldout_results.csv
-│   ├── heldout_summary.csv
-│   ├── selected_portfolios.csv
-│   ├── out_of_fold_predictions.csv
-│   ├── paired_comparisons.csv
-│   ├── primary_scheme_summary.csv
-│   ├── README_RESULTS.txt
-│   ├── coverage_java.svg
-│   ├── coverage_python.svg
-│   └── coverage_javascript.svg
-└── prapr_comparison/
-    ├── prapr_published_mutator_frequencies.csv
-    ├── prapr_mapping_audit.csv
-    ├── prapr_mapped_ranking.csv
-    └── README.md
-```
+
+
 
 Only include files that are present in the final release. In particular, the
 three SVG filenames above are the names produced by the current server run.
