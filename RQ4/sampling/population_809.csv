@@ -1,0 +1,811 @@
+project,bug_id,operator_stratum,primary_operator,Mutant ID ,Munatnt Operator ,source_row
+Cli,2,Others,CR,"CR[6],CFSM[27]","""Scalar variable replacement"",""Control Flow Statement Modification""",2
+Cli,3,MCR,MCR,"MCR[2],CI[36]","""MethodCallReplacement"",""Condition Insertion""",3
+Cli,4,Others,SM,SM[30],"""SubString Modification""",4
+Cli,5,CI,CI,"CI[36],MRV[145]","""Condition Insertion"",""Return Value Modification""",5
+Cli,7,Others,DTR,DTR[5],"""DataTypeReplacement""",6
+Cli,8,Others,CR,CR[6],Constant Replacement,7
+Cli,9,Others,SI,SI[77],Statement insertion,8
+Cli,10,Others,RAR,"RAR[8],MCR[2]"," ""Reference Assignment Replacement"",""MethodCallReplacement""",9
+Cli,11,Others,AOR,"AOR[9],ROR[70],SD[28],SI[77]","Arithmetic operator replacement (e.g., changing + to -) Conditional operator replacement (e.g., changing && to ||) Reference assignment replacement (e.g., changing an assignment from x = y to x = new Object()) Statement deletion (e.g., removing a statement entirely) Statement insertion (e.g., adding a statement that has no effect on the program)
+",10
+Cli,12,ROR,ROR,"ROR[70],CR[6],EII[?]","""Relational operator replacement"",""Constant Replacement"",""Else If Insertion""",11
+Cli,13,Others,Others,no,no ,12
+Cli,14,Others,DOC,"DOC[16],CFSM[27],CI[36]","""Deletation of code"",""Control Flow Statement Modification"",""Condition Insertion""",13
+Cli,15,Others,BCO,"BCO[17],FLI[205],MCR[2]","""Boundary Condition operator"",""For Loop Insertion"",""Method CallReplacement""",14
+Cli,16,Others,Others,no,no,15
+Cli,17,Others,CFSM,CFSM[27],"""Control Flow Statement Modification""",16
+Cli,18,MCR,MCR,"MCR[2],DOM[?]","""MethodCallReplacement"",""Deletion of void Method""",17
+Cli,19,Others,MOCS,"MOCS[20],VA[200],VR[26],ROR[70]  ","""Modification Of Conditional Statement"",""Variable Initialzation"",""Variable Assignment"",""Rational Operator Replacement""",18
+Cli,20,MCR,MCR,"MCR[2],MOCS[20],CI[36]","""Method Call Replacement"",""Modification of Conditional Statement"",Condition Insertion""",19
+Cli,21,Others,Others,no,no ,20
+Cli,22,Others,Others,no,no,21
+Cli,23,Others,SD,"SD[28],CI[36],MCR[2]","""Statement Deletion."",""Condition Insertion"",""MethodCallReplacement""",22
+Cli,24,VA,VA,VA[200],"""Variable Assignment""",23
+Cli,25,VA,VA,VA[200],"""Variable Assignment""",24
+Cli,26,Others,VR,"VR[26],EI[38],MCR[2]","""Variable Declaration"",""Exception Insertion"",""MethodCallReplcement""",25
+Cli,27,MCR,MCR,MCR[2],"""MethodCallReplacement""",26
+Cli,28,Others,CFSM,CFSM[27],Control Flow Statement Modification.,27
+Cli,29,Others,DOC,"DOC[16],MOCS[20],SM[30],ROR[70]","""Deletion Of If Statement"", ""Condition Modification."",""Substring Modification."",""Rational Operator Replacement""",28
+Cli,30,Others,CN,"CN[31],MCR[2],CI[36]","""Condition Negation"",""MethodCallReplacement"",""Condition Insertion""",29
+Cli,31,Others,Others,no,no,30
+Cli,32,Others,LD,LD[33],"""While Loop Deletion.""",31
+Cli,33,Others,Others,no,no,32
+Cli,34,VA,VA,"VA[200],DTR[5]","""Variable Assignment"",""DataTypeReplacement""",33
+Cli,35,CI,CI,"CI[36],MRV[145]","""Condition Insertion"",""Modification of Return Value""",34
+Cli,36,Others,AIS,"AIS[218],MCR[2]","""Add Import Statement"",""MethodCallReplacement""",35
+Cli,37,CI,CI,"CI[36],LOR[58],MRV[145]","""Condition Insertion"" ,""Logical Operator Modification."",""Return Value Modification""",36
+Cli,38,CI,CI,"CI[36],LOR[58],MRV[145]","""Condition Insertion"", ""Logical Operator Modification."",""Return Value Modification""",37
+Cli,39,Others,Others,no,no,38
+Cli,40,Others,SI,SI[77],"""Statement Insertion""",39
+Cli,41,VA,VA,"VA[200],EII[?],VR[26]","""Variable Assignment"",""Else if Insertion"",""Variable Initialzation""",40
+Cli,42,CI,CI,"CI[36],SI[77]","""Condition Insertion"",""Statement Insertion""",41
+Csv,1,Others,MOCS,"MOCS[20],LOR[58]","""Condition Modification."",""Logical Operator Replacement""",42
+Csv,2,Others,EI,EI[38],"""Exception Insertion""",43
+Csv,3,CI,CI,"CI[36],MRV[145],LOR[58]","""Condition Insertion"",""Modification of Return Value"",""Logical Operator Replacement""",44
+Csv,4,CI,CI,"CI[36],LOR[58],MRV[145],MCR[2]","""Condition Insertion"",""Logical operator Replacement"",""Modification of Return Value"",""MethodCallReplacement""",45
+Csv,5,CI,CI,CI[36],"""Condition Insertion/Modification.""",46
+Csv,6,CI,CI,CI[36],"""Condition Insertion/Modification.""",47
+Csv,7,Others,AIS,"AIS[218],CI[36]","""Add Import Statement"",""Condition Insertion""",48
+Csv,8,CI,CI,"CI[36],MCR[2],FLI[205],SI[77],DOM[?]","""Condition Insertion"",""MethodCallReplacement"",""Statement Insertion"",""For Loop Insertion"",""Deletion of Method""",49
+Csv,9,Others,AONC,"AONC[42],CI[36]","""Addition Of A Null Check""",50
+Csv,10,Others,RE,"RE[196],CI[36],MCR[2]","""Remove Expection"",""Condition Insertion"",""MethodCallReplacement""",51
+Csv,11,Others,AONC,"AONC[42],LOR[58]","""Addition of null check"",""Logical Operator Replacement""",52
+Csv,12,MCR,MCR,MCR[2],"""MethodcallReplacement"". Modification ",53
+Csv,13,MCR,MCR,"MCR[2],CI[36]","""Null Method Call"",""Condition Insertion""",54
+Csv,14,LOR,LOR,LOR[58] ,"""Logical Operator Replacement""",55
+Csv,15,CI,CI,CI[36],"""Condition Insertion""",56
+Csv,16,MCR,MCR,"MCR[2],VR[26],MRV[145]","""MethodcalledReplacement"",""Variable Declaration"",""Modification Of Return Value""",57
+Csv,17,MRV,MRV,MRV[145],"""Return Value Modifcation""",58
+Codec,1,MRV,MRV,"MRV[145],MCR[2]","""Modification Of Return Value"",""MethodCallReplacement""",59
+Codec,2,Others,MOCS,"MOCS[20],LOR[58]","""Modification of condition"",""Logical Operator Replacement""",60
+Codec,3,Others,CR,"CR[6],SD[28],El[?]","""Scalar Variable Replacement."",""Statement Deletion"",""Else Insertion""",61
+Codec,4,Others,CR,CR[6],"""Scalar Variable Replacement.""",62
+Codec,5,CI,CI,CI[36],"""Conditional Insertion."" ",63
+Codec,6,Others,WLI,"WLI[205],VA[200],MRV[145],MCR[2]","""Variable Assignment"",""While Loop Insertion"",""Modification of Return Value"",""MethodCallReplacement""",64
+Codec,7,MRV,MRV,MRV[145],"""Modification Of Return Value""",65
+Codec,8,Others,DOM,DOM[?],"""Removal Of Method""",66
+Codec,9,CI,CI,"CI[36],MPM[93]","Condition Insertion"",""Method Parameter Modification""",67
+Codec,10,Others,SMRO,SMRO[52],"""String Manipulation Replacement operator""",68
+Codec,11,Others,Others,no,no,69
+Codec,12,Others,Others,no,no,70
+Codec,13,Others,Others,no,no,71
+Codec,14,Others,Others,no,no,72
+Codec,15,Others,FLI,"FLI[205],MCR[2],CI[36]","""For Loop Insertion"",""MethodCallReplacement"",""Condition Insertion""",73
+Codec,16,Others,DS,DS[28],"""Delete Statement""",74
+Codec,17,MCR,MCR,MCR[2],"""MethodCallReplacement""",75
+Codec,18,LOR,LOR,"LOR[58],MPM[93]","""Logical Operator Replacement"",""MethodParameterModification""",76
+Codec,19,MCR,MCR,"MCR[2],DS[28]","""MethodCallReplacement"",""Deletion of Statement""",77
+Gson,1,CI,CI,CI[36],"""Condition Insertion""",78
+Gson,2,CI,CI,"CI[36],CASEI[?]","""Condition Insertion"",""Case Insertion""",79
+Gson,3,CI,CI,CI[36],"""Condition Insertion""",80
+Gson,4,LOR,LOR,"LOR[58],CI[36]","""Logical Operator Replacement"",""Conditional Insertion""",81
+Gson,5,LOR,LOR,"LOR[58],CI[36],SR[183]","""Logical Operator Replacement"",""Conditional Insertion"",""Statement Reordering""",82
+Gson,6,CI,CI,"CI[36],MCR[2],MRV[145]","""Conditional Insertion."",""MethodCallReplacement"",""Modification of  Return Value""",83
+Gson,7,CI,CI,"CI[36],MCR[2]","""Conditional Insertion"",""MethodCallReplacement""",84
+Gson,8,Others,DS,DS[28],"""Delete Statement""",85
+Gson,9,LOR,LOR,"LOR[58],DS[28]","""Logical Operator Replacementk"",""Delete Statement""",86
+Gson,10,Others,SR,"SR[183],DS[28]","""Statement Reordering"",""Delete Statement""",87
+Gson,11,Others,Others,no,no,88
+Gson,12,Others,Others,no,no,89
+Gson,13,Others,Others,no,no,90
+Gson,14,MCR,MCR,"MCR[2],MPM[93]","""MethodCallReplacement"",""Method Parameters Modification""",91
+Gson,15,Others,Others,no,no,92
+Gson,16,Others,Others,no,no,93
+Gson,17,Others,Others,no,no,94
+Gson,18,CI,CI,"CI[36],MCR[2],MRV[145]","""Condition Insertion"",""MethodCallReplacement"",""modification of Return Value""",95
+Gson,19,Others,Others,no,no,96
+Gson,20,MCR,MCR,MCR[2],"""MethodCallInsertion""",97
+Gson,21,Others,Others,no,no,98
+Gson,22,Others,Others,no,no,99
+Gson,23,Others,Others,no,no,100
+Gson,24,Others,Others,no,no,101
+Gson,25,Others,Others,no,no,102
+Collections,25,Others,Others,no,no,129
+Collections,26,Others,VR,VR[26],"""Variable Assignmenrt""",130
+Collections,27,Others,Others,no,no,131
+Collections,28,Others,Others,no,no,132
+Collections,29,Others,SR,SR[183],"""Statement Reordering""",133
+Collections,30,MCR,MCR,"MCR[2],MRV[145]","""MethodCallReplacement"",""Modification Of Return Value""",134
+Collections,31,Others,SR,SR[183],"""Statement Reordering""",135
+Closure,1,Others,BCO,BCO[17],"""Boundary Condition Operator""",136
+Closure,2,CI,CI,"CI[36],MCR[2]","""Condition Insertion"",""MethodCallReplacement""",137
+Closure,3,Others,Others,no,no,138
+Closure,4,Others,MNM,MNM[94],"""Method Name Modification.""",139
+Closure,5,CI,CI,"CI[36],MRV[145]","""Condition Insertion"",""Modification of Return Value""",140
+Closure,6,Others,DOC,DOC[16],"""IF Else Condition Deletion""",141
+Closure,7,Others,EII,"EII[?],MRV[145]","""Else if Insertion"",""Modification of Return Value""",142
+Closure,8,Others,MA,"MA[39],LOR[58]","""Method Addition."",""Logical Operator Replacement""",143
+Closure,9,MCR,MCR,MCR[2],"""MethodCallReplacement""",144
+Closure,10,MCR,MCR,MCR[2],"""MethodCallReplacement.""",145
+Closure,11,Others,DOC,DOC[16],"""Deletion of Condition""",146
+Closure,12,Others,Others,no,no,147
+Closure,13,Others,SR,SR[183],"""Statement Reordering""",148
+Closure,14,Others,CR,CR[6],"""Constant Replacement Mutator.""",149
+Closure,15,Others,BCO,"BCO[17],MRV[145]","""Conditional Boundary Operator."",""Modification of Return Value""",150
+Closure,16,Others,Others,no,no,151
+Closure,17,Others,Others,no,no,152
+Closure,18,LOR,LOR,LOR[58],"""Logical Operator Replacement""",153
+Closure,19,CI,CI,"CI[?],CFSM[27]","""Case Insertion"",""Control Flow Statement Mutator""",154
+Closure,20,ROR,ROR,ROR[70],"""Relational Operator Replacement.""",155
+Closure,21,Others,Others,no,no,156
+Closure,22,Others,Others,no,no,157
+Closure,23,Others,Others,no,no,158
+Closure,24,LOR,LOR,"LOR[58],EII[?]","Logical Operator Insertion (AND),""Else If Insertion""",159
+Closure,25,Others,SR,"SR[183],DOL[?],MCR[2]","""Statement Reordering"",""Deletion of Loop"",""MethodCallReplacement""",160
+Closure,26,MCR,MCR,"MCR[2],CI[36],MRV[145]","""MethodCallReplacement"",""Condition Insertion"",""Modification of Return Value""",161
+Closure,27,Others,MA,"MA[39],MCR[2]","""Method Addition"",""MethodCallReplacement""",162
+Closure,28,Others,MA,"MA[39],AA[214]","""Method Addition"",""Add Annotation""",163
+Closure,29,Others,Others,no,no,164
+Closure,30,Others,Others,no,no,165
+Closure,31,Others,DOC,DOC[16],Romovel of condition ,166
+Closure,32,Others,Others,no,no,167
+Closure,33,CI,CI,"CI[36],MRV[145]","""Condition Insertion"",""Modification of Return Value""",168
+Closure,34,Others,MPM,"MPM[93],LOR[58],CI[36]","""Method Parameters Modification"",""LogicalOperator Replacement"",""Condition Insertion""",169
+Closure,35,CI,CI,"CI[36],MCR[2]","""Condition Insertion"",""MethodCallReplacement""",170
+Closure,36,CI,CI,"CI[36],MRV[145]","""Condition Insertion"",""Modification Of Return Value""",171
+Closure,37,Others,Others,no,no,172
+Closure,38,LOR,LOR,LOR[58],"""logical operator replacement""",173
+Closure,39,Others,MPM,"MPM[93],ROR[70],MRV[145]","""Method parameters modification"",""Rational Operator Replacement"",""Modification of Return Value""",174
+Closure,40,Others,MPM,MPM[93],"""Method Parameters Modification""",175
+Closure,41,Others,Others,no,no,176
+Closure,42,Others,Others,no,no,177
+Closure,43,Others,Others,no,no,178
+Closure,44,Others,EII,"EII[?],LOR[58],SI[77]","""Else If Insertion"",""Logical Operator Replacement"",""MethodCallReplacement""",179
+Closure,45,Others,Others,no,no,180
+Closure,46,Others,Others,no,no,181
+Closure,47,Others,Others,no,no,182
+Closure,48,LOR,LOR,"LOR[58],EII[?]","""Logical Operator Replacement"",""Else If Insertion""",183
+Closure,49,Others,Others,no,no,184
+Closure,50,LOR,LOR,"LOR[58],CI[36]","""Logical Operator Replacement"",""Condition Insertion""",185
+Closure,51,LOR,LOR,"LOR[58],MA[39],MRV[145]","""Logical Operator Replacement"",""Method Addition"",""Modificatiion of Return Value""",186
+Closure,52,LOR,LOR,LOR[58],"""Logical Operator Replacement""",187
+Closure,53,CI,CI,"CI[36],MCR[2]","""Condition Insertion"",""MethodCallReplacement""",188
+Closure,54,Others,Others,no,no,189
+Closure,55,LOR,LOR,"LOR[58],MCR[2]","""Logical Operator Replacement"",""MethodCallReplacement""",190
+Closure,56,Others,BCO,BCO[17],"""Conditional Boundary""",191
+Closure,57,LOR,LOR,LOR[58],"""Logical Operator Replacement""",192
+Closure,58,CI,CI,CI[36],"""Condition Insertion""",193
+Closure,59,LOR,LOR,"LOR[58],CI[36]","""Logical Operator Replacement"",""Condition Insertion""",194
+Closure,60,CI,CI,"CI[?],CFSM[27],CI[36],MRV[145]","""Case Insertion"",""Control Flow Statement Mutator"",""Condition Insertion"",""Modification of Return Value""",195
+Closure,61,Others,Others,no,no,196
+Closure,62,Others,BCO,"BCO[17],LOR[58]","""Boundary Condition Operator"",""Logical Operator Replacement""",197
+Closure,64,Others,MPM,"MPM[93],MRV[145],LOR[58]","""Method Parameter Modification"",""Modifcation of Return Value"",""Logical Operator Replacement""",198
+Closure,65,Others,CR,CR[6],"""Constant Replacement Mutator.""",199
+Closure,66,Others,EI,"EI[?],MCR2]","""Else Insertion"",""MethodCallReplacement""",200
+Closure,67,ROR,ROR,ROR[70],"""Relational Operator Replacement""",201
+Closure,68,Others,BR,"BR[140],MCR[2]","""Brace Reordering"", ""MethodCallReplacement""",202
+Closure,69,CI,CI,"CI[36],LOR[58],MCR[2]","""Condition Insertion"",""Logical operator Replacement"",""MethodCallReplacement""",203
+Closure,70,MCR,MCR,MCR[2],"""MethodCallReplacement""",204
+Closure,71,LOR,LOR,"LOR[58],MCR[2]","""MethodCallReplacement"",""Logical Operator Rplacement""",205
+Closure,72,MCR,MCR,"MCR[2],LOR[58]","""MethodCallReplacement"",""Logical Operator Rplacement""",206
+Closure,73,ROR,ROR,ROR[70],"""Rational Operator Replacement""",207
+Closure,74,Others,Others,no,no,208
+Closure,75,CI,CI,"CI[36],MCR[2]","Condition Insertion"",""Modifcation of Return Value""",209
+Closure,76,Others,Others,no,no,210
+Closure,77,CI,CI,CI[?],"""Case Insertion""",211
+Closure,78,Others,SD,SD[28],"""Statement Deletion""",212
+Closure,79,Others,MPM,"MPM[93],MCR[2]","""Method Parameters Modification"",""MethodCallReplacement""",213
+Closure,80,CI,CI,CI[?],"""Case Insertion""",214
+Closure,81,Others,Others,no,no,215
+Closure,82,LOR,LOR,LOR[58],"""Logical Operator Replacement""",216
+Closure,83,VA,VA,"VA[200],EI[38]","""Variable Assignment"",""Exception Insertion""",217
+Closure,84,Others,Others,no,no,218
+Closure,85,Others,Others,no,no,219
+Closure,86,MRV,MRV,MRV[145],"""Modification of Return Value""",220
+Closure,87,Others,Others,no,no,221
+Closure,88,Others,Others,no,no,222
+Closure,89,CI,CI,"CI[36],MCR[2],ROR[70]","""Condition Insertion"",""MethodCallReplacement"",""Rational Operator Replacement""",223
+Closure,90,CI,CI,"CI[36],MCR[2]","""Condition Insertion"",""MethodCallReplacement""",224
+Closure,91,Others,Others,no,no,225
+Closure,92,MCR,MCR,MCR[2],"""MethodCallReplacement""",226
+Closure,94,Others,Others,no,no,227
+Closure,95,CI,CI,"CI[36],MCR[2]","""Conditional Insertion"",""MethodCallReplacement""",228
+Closure,96,LOR,LOR,"LOR[58],CI[36] ","""Logical Operator Replacement"",""Conditional Insertion""",229
+Closure,97,VA,VA,"VA[200],DTR[5]","""Variable Assignment"",""DataTypeReplacement""",230
+Closure,98,Others,Others,no,no,231
+Closure,99,Others,Others,no,no,232
+Closure,100,VA,VA,"VA[200],CI[36],LOR[58], MRV[145]","""Variable Assignment"",""Conditional Insertion"",""Logical Operator Replacement"", ""Return Value Modification""",233
+Closure,101,VA,VA,VA[200],"""Variable Assignment""",234
+Closure,102,Others,SR,SR[183],"""Statement Reordering.""",235
+Closure,103,Others,Others,no,no,236
+Closure,104,Others,MOCS,MOCS[20],"""Modification of Condition Statement"" ",237
+Closure,105,VA,VA,"VA[200],CI[36],MCR[2]","""Varaible Assignment"",""Condition Insertion"",""MethodCallReplacement""",238
+Closure,106,MCR,MCR,"MCR[2],CI[36],MRV[145],DOC[16]","""MethodCallReplacement"",""Condition Insertion"",""Modification of Return Value"",""Deletion of Condition""",239
+Closure,107,MCR,MCR,MCR[2],"""MethodCallReplacement""",240
+Closure,108,MCR,MCR,"MCR[2],LOR[58]","""MethodCallReplacement"",""Logical Operator Rplacement""",241
+Closure,109,CI,CI,"CI[36],MRV[145]","""Condition Insertion"",""Modification of Return Value""",242
+Closure,110,Others,Others,no,no,243
+Closure,111,CI,CI,"CI[36],MRV[145]","""Condition Insertion"",""Modification of Return Value""",244
+Closure,112,Others,Others,no,no,245
+Closure,113,LOR,LOR,LOR[58],"""Logical Operator Replacement""",246
+Closure,114,LOR,LOR,"LOR[58],EII[?]","""Logical Operator Replacement"",""Else If Insertion""",247
+Closure,115,Others,Others,no,no,248
+Closure,116,Others,Others,no,no,249
+Closure,117,Others,Others,no,no,250
+Closure,118,CI,CI,"CI[36],CFSM[27]","Conditional Insertion"",""Control flow statement mutator""",251
+Closure,119,CI,CI,CI[?],"""Case Insertion""",252
+Closure,120,CI,CI,"CI[36],MRV[145]","""Conditional Insertion"",""Modification of Return Value""",253
+Closure,121,LOR,LOR,LOR[58],"""Logical Operator Replacement""",254
+Closure,122,CI,CI,"CI[36],VA[200],DTR[5],MCR[2]","""Condition Insertion"",""Variable Assignment"",""DatatypeReplacement"",""MethodCallReplacement""",255
+Closure,123,MCR,MCR,MCR[2],"""MethodCallReplacement""",256
+Closure,124,Others,WLI,WLI[205],"""While Condition insertion""",257
+Closure,125,LOR,LOR,LOR[58],"""Logical Operator Replacement""",258
+Closure,126,Others,DOC,DOC[16],"""Deletion of Condition""",259
+Closure,127,Others,Others,no,no,260
+Closure,128,CI,CI,"CI[36], MRV[145],LOR[58]","""Condition Insertion"", ""Modification of Return value"",""Logical Operator Replacement""",261
+Closure,129,Others,WLI,WLI[205],"""While Loop Insertion""",262
+Closure,130,Others,MOCS,"MOCS[20],LOR[58}","""Modification Of Conditional Statement"",""Logical Operator Replacement""",263
+Closure,131,Others,MOCS,"MOCS[20],LOR[58}","""Modification Of Conditional Statement"",""Logical Operator Replacement""",264
+Closure,132,Others,MOCS,"MOCS[20],LOR[58}","""Modification Of Conditional Statement"",""Logical Operator Replacement""",265
+Closure,133,Others,SI,SI[77],"""Statement Insertion""",266
+Closure,134,Others,Others,no,no,267
+Closure,135,Others,Others,no,no,268
+Closure,136,Others,Others,no,no,269
+Closure,137,Others,Others,no,no,270
+Closure,138,Others,Others,no,no,271
+Closure,139,Others,Others,no,no,272
+Closure,140,Others,Others,no,no,273
+Closure,141,Others,Others,no,no,274
+Closure,142,CI,CI,"CI[36],MCR[2],LOR[58],BR[140]","""Condition Insertion"",""Logical operator Replacement"",""MethodCallReplacement"",""Braket Reordering""",275
+Closure,143,LOR,LOR,LOR[58],"""Logical Operator Replacement""",276
+Closure,144,Others,Others,no,no,277
+Closure,145,Others,Others,no,no,278
+Closure,146,MCR,MCR,"MCR[2],MRV[145]","""MethodCallReplacement"",""Modification Of Return Value""",279
+Closure,147,Others,Others,no,no,280
+Closure,148,Others,Others,no,no,281
+Closure,149,Others,Others,no,no,282
+Closure,150,MCR,MCR,"MCR[2],DOC[16]","""Switch Deletion"", ""Method Called Replacemet"" ",283
+Closure,151,Others,Others,no,no,284
+Closure,152,MCR,MCR,"MCR[2],CI[36]","""MethodCallReplacement"",""Condition Insertion""",285
+Closure,153,Others,Others,no,no,286
+Closure,154,Others,Others,no,no,287
+Closure,155,Others,Others,no,no,288
+Closure,156,Others,Others,no,no,289
+Closure,157,Others,Others,no,no,290
+Closure,158,Others,Others,no,no,291
+Closure,159,CI,CI,"CI[36],MCR[2]","Condition Insertion"",""MethodCallReplacement""",292
+Closure,160,MCR,MCR,"MCR[2],LOR[58]","""MethodCallReplacement"",""Logical Operator Rplacement""",293
+Closure,161,CI,CI,CI[36] ,"""Condition Insertion"", ",294
+Closure,162,Others,Others,no,no,295
+Closure,163,Others,Others,no,no,296
+Closure,164,Others,Others,no,no,297
+Closure,165,Others,Others,no,no,298
+Closure,166,Others,Others,no,no,299
+Closure,167,Others,Others,no,no,300
+Closure,168,Others,MOCS,"MOCS[20],CR[6]","""Modification of Condition Statement"",""Constant Replacement Mutator.""",301
+Closure,169,Others,Others,no,no,302
+Closure,170,Others,Others,no,no,303
+Closure,171,LOR,LOR,"LOR[58],CI[36]","""Condition Insertion"",""Condition Insertion""",304
+Closure,172,Others,Others,no,no,305
+Closure,173,Others,Others,no,no,306
+Closure,174,Others,Others,no,no,307
+Closure,175,Others,Others,no,no,308
+Closure,176,Others,Others,no,no,309
+Compress,1,MCR,MCR,MCR[2],"""MethodCallReplacement"" ",310
+Compress,2,Others,Others,No operator ,no,311
+Compress,3,VA,VA,"VA[200],CI[36]","""Variable Assignment"",""Condition Insertion""",312
+Compress,4,Others,MOD,"MOD[?],MCR[2]","""Method Call Deletion"",""MethodCallReplacement""",313
+Compress,5,Others,MOCS,"MOCS[20],LOR[58]","""Modification of Conditional Statement"",""Logical Operator Replacement""",314
+Compress,6,Others,MOCS,"MOCS[20],MCR[2]","""Modification of Conditional Statement"",""MethodCallReplacement""",315
+Compress,7,Others,MOCS,"MOCS[20],DTR[5],MCR[2]","""Modification of Variable"" , ""DataTypeReplacement"",""MethodCallReplacement""",316
+Compress,8,Others,Others,no,no,317
+Compress,9,Others,Others,no,no,318
+Compress,10,MCR,MCR,"MCR[2],FLI[205]","""MethodCallReplacement"",""For Loop Insertion""",319
+Compress,11,CI,CI,CI[36] ,"""Condition Insertion"", ",320
+Compress,12,Others,EI,EI[38],"""Exception Insertion(try & catch)""",321
+Compress,13,CI,CI,"CI[36],MCR[2]","""Condition Insertion"", ",322
+Compress,14,Others,MOCS,MOCS[20],"""Modification of Conditional Statement""",323
+Compress,15,Others,SI,"SI[77],MOCS[20],ROR[70]","""Statement Insertion"",""Modification of Condition Statemenet"",""Relational Operator Replacement""",324
+Compress,16,MCR,MCR,"MCR[2],CI[36]","""Method Called Replacement"" , "" Condition Insertion""",325
+Compress,17,Others,WLI,WLI[205],"""While Condition insertion""",326
+Compress,18,Others,WLI,"WLI[205],MCR[2]","""While Condition insertion"",""MethodCallReplacement""",327
+Compress,19,ROR,ROR,ROR[70],"""Relational Operator Replacement""",328
+Compress,20,Others,COR,COR[10],"""Conditional operator Replacement""",329
+Compress,21,Others,COR,COR[10],"""Conditional Operator Replacement""",330
+Compress,22,Others,SD,"SD[28],MRV[145]","""Statement Deletion"",""Modification Of Return Value""",331
+Compress,23,Others,BWO,"BWO[186],DTR[5]","""BitWise Operator"",""DatatypeReplacement""",332
+Compress,24,Others,WLI,WLI[205],"""While Condition insertion""",333
+Compress,25,Others,WLI,"WLI[205],LOR[58],CI[36],MCR[2],MPM[93]","""While Loop Insertion"",""Logical Operator Replacement"",""Condition Insertion"",""MethodCallReplacement"",""Modification of Method Parameter""",334
+Compress,26,MCR,MCR,MCR[2],"""MethodCallReplacement""",335
+Compress,27,Others,DOC,DOC[16],"""Deletion of Condition""",336
+Compress,28,CI,CI,"CI[36],SR[183]","""Condition Insertion"",""Reordering Statement""",337
+Compress,29,Others,Others,no,no,338
+Compress,30,CI,CI,CI[36],"""Condition Insertion""",339
+Compress,31,Others,DOC,DOC[16],"""Deletion of Condition""",340
+Compress,32,Others,DTR,DTR[5],"""Data type change operator""",341
+Compress,33,Others,Others,no,no,342
+Compress,34,MCR,MCR,"MCR[2],MRV[145],MD[?]","""MethodCallReplacemet"",""Modification of Return Value"",""Method Deletion""",343
+Compress,35,MCR,MCR,"MCR[2],DOC[16]","""MethodCallReplacement"",""Deletion of Condition""",344
+Compress,36,CI,CI,"CI[36],MRV[145]","""Condition Insertion"",""Modification of Return Value""",345
+Compress,37,Others,COR,COR[10],"""Conditional operator Replacement""",346
+Compress,38,LOR,LOR,LOR[58],"""Logical Operator Replacement""",347
+Compress,39,Others,Others,no,no,348
+Compress,40,Others,Others,no,no,349
+Compress,41,Others,SR,"SR[183],MCR[2]","""Reordering Statements"",""MethodCallReplacement""",350
+Compress,42,VA,VA,"VA[200],MRV[145]","""Variable Assignment"",""Modification of Return Value""",351
+Compress,43,Others,MPM,MPM[93],"""Method Parameter Modification""",352
+Compress,44,CI,CI,CI[36],"""Condition Insertion""",353
+Compress,45,Others,EI,"EI[?],SR[183]","""Else Insertion"",""Statement Reordering""",354
+Compress,46,LOR,LOR,"LOR[58],COR[10]","""Logical Operator Replacement"",""Conditional operator Replacement""",355
+Compress,47,Others,Others,no,no,356
+Compress,48,Others,MPM,MPM[93],"""Method Parameter Modification""",357
+Compress,50,Others,Others,no,no,358
+Compress,52,Others,MPM,"MPM[93],MCR[2]","""Method Parameter Modification"",""MethodCallReplacement""",359
+Compress,53,MRV,MRV,MRV[145],"""Modification of Return Value""",360
+JacksonCore,1,Others,Others,no,no,361
+JacksonCore,2,Others,Others,no,no,362
+JacksonCore,3,VA,VA,VA[200],"""Variable Assignment""",363
+JacksonCore,4,Others,AOR,AOR[9],Arithmetic operator replacement,364
+JacksonCore,5,Others,IOR,IOR[199],Increment/Decrement operator replacement,365
+JacksonCore,6,CI,CI,"CI[36], VA[200]","""Condition Insertion"","" variable assignment""",366
+JacksonCore,7,LOR,LOR,LOR[58],Logical operator replacement,367
+JacksonCore,8,Others,BCO,"BCO[17],LOR[58]","""Boundary conditional operator"",""Logical Operator Replacement""",368
+JacksonCore,9,Others,Others,no,no,369
+JacksonCore,10,LOR,LOR,"LOR[58], BWO[186]","""Logical operator replacement"",""Bitwise """,370
+JacksonCore,11,MCR,MCR,MCR[2],"""MethodCallReplacement""",371
+JacksonCore,12,Others,Others,no,no,372
+JacksonCore,13,Others,Others,no,no,373
+JacksonCore,14,ROR,ROR,"ROR[70],MRV[145]","""Relational Operator Replacement"",""Modification of Return Value""",374
+JacksonCore,15,Others,Others,no,no,375
+JacksonCore,16,Others,Others,no,no,376
+JacksonCore,17,Others,Others,no,no,377
+JacksonCore,18,Others,Others,no,no,378
+JacksonCore,19,CI,CI,CI[36],"""Condition Insertion""",379
+JacksonCore,20,CI,CI,"CI[36],MCR[2],MPM[93]","""Condition Insertion"",""MethodCallReplacement"",""Method Parameter Modification""",380
+JacksonCore,21,CI,CI,CI[36] ,"""Condition Insertion"", ",381
+JacksonCore,22,ROR,ROR,"ROR[58],CI[36],MA[39]","""Condition Insertion"", ""RAtional Operator Replacement"",""Method Addition""",382
+JacksonCore,23,CI,CI,"CI[36],MCR[2] ","""Condition Insertion"",""MethodCallReplacement""",383
+JacksonCore,24,Others,Others,no,no,384
+JacksonCore,25,ROR,ROR,ROR[70],"""Relational Operator Replacement"".",385
+JacksonCore,26,VA,VA,VA[200],"""Variable Initialzation""",386
+JacksonCore,28,CI,CI,CI[36] ,"""Condition Insertion"", ",387
+JacksonCore,29,VA,VA,VA[200],"""Variable Assigment""",388
+JacksonCore,30,Others,AOR,AOR[9],"""Arithmetic Operator Removal"".",389
+JacksonCore,31,CI,CI,"CI[36],MCR[2]","""Condition Insertion"",""MethodCallReplacement""",390
+JacksonDatabind,1,MRV,MRV,MRV[145],"""Modification of Return Value""",391
+JacksonDatabind,2,Others,Others,no,no,392
+JacksonDatabind,3,MCR,MCR,"MCR[2],VA[200]","""MethodcallReolacement"",""Variable Assignment""",393
+JacksonDatabind,4,Others,EI,EI[38],"""Exception Insertion""",394
+JacksonDatabind,5,MCR,MCR,"MCR[2],CI[36] ","""MethodCallReplacement"",""Condition Insertion""",395
+JacksonDatabind,6,Others,Others,no,no,396
+JacksonDatabind,7,Others,Others,no,no,397
+JacksonDatabind,8,Others,Others,no,no,398
+JacksonDatabind,9,MCR,MCR,"MCR[2],DTR[5],CI[36],EII[?]","""MethodCallReplacement"",""DataTypeReplacement"",""Condition Insertion"",""Else If Insertion""",399
+JacksonDatabind,10,Others,Others,no,no,400
+JacksonDatabind,11,MCR,MCR,MCR[2],"""MethodCallReplacemet""",401
+JacksonDatabind,12,ROR,ROR,"ROR[70],MRV[145]","""Rational Operator Replacement"",""Meodification of Return Value""",402
+JacksonDatabind,13,CI,CI,CI[36] ,"""Condition Insertion""",403
+JacksonDatabind,14,Others,Others,no,no,404
+JacksonDatabind,15,Others,Others,no,no,405
+JacksonDatabind,16,LOR,LOR,LOR[58],"""Logical Operator Replacement""",406
+JacksonDatabind,17,LOR,LOR,LOR[58],"""Logical Operator Replacement""",407
+JacksonDatabind,18,Others,Others,no,no,408
+JacksonDatabind,19,CI,CI,"CI[36],MCR[2]","""Condition Insertion"",""MethodCallReplacement""",409
+JacksonDatabind,20,Others,AA,"AA[214],AIS[218]","""Annotation Addition."",""Add Import Statement""",410
+JacksonDatabind,21,Others,Others,no,no,411
+JacksonDatabind,22,Others,Others,no,no,412
+JacksonDatabind,23,Others,Others,no,no,413
+JacksonDatabind,24,Others,DOC,"DOC[16],MRV[145]","""Deletion of Condition"",""Modification of Return Value""",414
+JacksonDatabind,25,MCR,MCR,"MCR[2],MRV[145]","""MethodCallReplacemet"",""Modification of Return Value""",415
+JacksonDatabind,26,Others,AIS,"AIS[218],VA[200]","""Add Import Statement"",""Variable Assignment""",416
+JacksonDatabind,27,Others,MOCS,MOCS[20],"""Modification of Condition Statement""",417
+JacksonDatabind,28,Others,BCO,"BCO[17],LOR[58],MRV[145]","""Boundary Condition Operator"",""Logical Operator Replacement"",""Modification of Return Value""",418
+JacksonDatabind,29,CI,CI,"CI[36],MCR[2],MRV[145]","""Condition Insertion"",""MethodCallReplacement"",""Modification of Return Value""",419
+JacksonDatabind,30,Others,Others,no,no,420
+JacksonDatabind,31,Others,Others,no,no,421
+JacksonDatabind,32,MRV,MRV,"MRV[145],CI[?]","""Retern Value Modification"", ""Modification of Condition Statement""",422
+JacksonDatabind,33,LOR,LOR,"LOR[58],MCR[2]","""Logical Operator Replacement"",""MethodCallReplacement""",423
+JacksonDatabind,34,Others,MPM,"MPM[93],DTR[5]","""Method Parameter Modification"",""DatatypeReplacement""",424
+JacksonDatabind,35,CI,CI,"CI[36],MCR[2],EII[?]","""Condition Insertion"",""MethodCallReplacement"",""Else IF Insertion""",425
+JacksonDatabind,36,Others,Others,no,no,426
+JacksonDatabind,37,MRV,MRV,MRV[145],"""Modification of Return Value""",427
+JacksonDatabind,38,Others,Others,no,no,428
+JacksonDatabind,39,Others,Others,no,no,429
+JacksonDatabind,40,Others,Others,no,no,430
+JacksonDatabind,41,MCR,MCR,"MCR[2],MRV[145]","""MethodCallReplacemet"",Modification of Return Value""",431
+JacksonDatabind,42,CI,CI,CI[36] ,"""Condition Insertion"", ",432
+JacksonDatabind,43,Others,AIS,"AIS[218],SR[183],CI[36]","""Reordering Statements"",""Add Important Statement"",""Condition Insertion""",433
+JacksonDatabind,44,Others,Others,no,no,434
+JacksonDatabind,45,LOR,LOR,LOR[58],"""Logical Operator Replacement""",435
+JacksonDatabind,46,MCR,MCR,MCR[2],"""MethodCallReplacemet""",436
+JacksonDatabind,47,Others,Others,no,no,437
+JacksonDatabind,48,CI,CI,CI[36] ,"""Condition Insertion"", ",438
+JacksonDatabind,49,CI,CI,CI[36] ,"""Condition Insertion"", ",439
+JacksonDatabind,50,Others,Others,no,no,440
+JacksonDatabind,51,CI,CI,CI[36] ,"""Condition Insertion"", ",441
+JacksonDatabind,52,Others,Others,no,no,442
+JacksonDatabind,53,Others,Others,no,no,443
+JacksonDatabind,54,Others,MOCS,MOCS[20,"""Modification of Condition Statement""",444
+JacksonDatabind,55,Others,Others,no,no,445
+JacksonDatabind,56,Others,Others,no,no,446
+JacksonDatabind,57,MRV,MRV,MRV[145],"""Modification of Return Value""",447
+JacksonDatabind,58,CI,CI,CI[36] ,"""Condition Insertion"", ",448
+JacksonDatabind,59,Others,Others,no,no,449
+JacksonDatabind,60,Others,Others,no,no,450
+JacksonDatabind,61,CI,CI,CI[36] ,"""Condition Insertion"", ",451
+JacksonDatabind,62,Others,Others,no,no,452
+JacksonDatabind,63,Others,DIS,"DIS[?],SD[28],WLI[205],VA[200]","""Removal of Import Statement"", ""Delete Statement"", ""While Insertion"",""Variable Assignment""",453
+JacksonDatabind,64,VA,VA,"VA[200],LOR[58]","""Variable Initialization"", ""Logical Operator Replacement""",454
+JacksonDatabind,65,MRV,MRV,"MRV[145],LOR[58],CI[36]","""Modification Of Return Value"",""Logical Operator Replacement"",""Condition Insertion""",455
+JacksonDatabind,66,Others,AIS,"AIS[218],MCR[2],VA[200]","""Add import statement"", ""MethodCallReplacement"",""Variable Assignment""",456
+JacksonDatabind,67,MCR,MCR,"MCR[2],SR[183],EI[?]","""MethodCallReplacement"",""Reordering Statements"",""Else Insertion""",457
+JacksonDatabind,68,Others,Others,no,no,458
+JacksonDatabind,69,CI,CI,"CI[36],MRV[145],SD[28],MRTC[?]","""Condition insertion"",""Modification of Return Value"",""Statement Deletion"",""MethodReturn type Change""",459
+JacksonDatabind,70,ROR,ROR,ROR[70],"""Rational Operator Replacement""",460
+JacksonDatabind,71,LOR,LOR,LOR[58],"""Logical Operator Replacement""",461
+JacksonDatabind,72,Others,MA,"MA[39],AA[214],MRV[145]","""Add Annotation"", ""Method Addition"",""Modification of Return Value""",462
+JacksonDatabind,73,CI,CI,"CI[36],AIS[218],MCR[2],MRV[145]","""Condition Insertion"", ""Add Import statement"",""Modification of ReturnValue"",""MethodCallReplacement""",463
+JacksonDatabind,74,Others,EII,"EII[?],MCR[2],MRV[145]","""Else If Insertion"",""MethodCallReplacement"",""Modification of Return Value""",464
+JacksonDatabind,75,Others,MPM,"MPM[93],MRV[145]","""Method Parameter Modifiation"",""Modification of Return Value""",465
+JacksonDatabind,76,Others,DOC,"DOC[16],MCR[2]","""Deletion of Condition"",""MethodCallReplacement""",466
+JacksonDatabind,77,Others,Others,no,no,467
+JacksonDatabind,78,Others,Others,no,no,468
+JacksonDatabind,79,CI,CI,"CI[36],MCR[2],MRV[145],MA[39],MPM[93]","""Condition Insertion"",""MethodCallReplacement"",""Modification of Return Value"",""Method Addition"",""Method Parameter Modification""",469
+JacksonDatabind,80,CI,CI,CI[36] ,"""Condition Insertion"", ",470
+JacksonDatabind,81,Others,Others,no,no,471
+JacksonDatabind,82,MCR,MCR,MCR[2],"""MethodCallReplacement""",472
+JacksonDatabind,83,Others,DOC,DOC[16],"""Removal of Condition Statement""",473
+JacksonDatabind,84,Others,MA,"MA[39],AA[214]","""Add Annotation"", ""Method Addition""",474
+JacksonDatabind,85,Others,Others,no,no,475
+JacksonDatabind,87,VA,VA,"VA[200],MCR[2],SR[183],SD[28],MPM[93]","""Variable Assignment"",""MethodCallReplacement"",""Statement Reordering"",""Statement Deletion"",""Method Parameter Modification""",476
+JacksonDatabind,88,Others,EI,"EI[38],CI[36]","""Exception Insertion"",""Condition Insertion""",477
+JacksonDatabind,89,Others,MA,MA[98],"""Method Addition"",""Modification Return Value""",478
+JacksonDatabind,90,ROR,ROR,"ROR[70],MRV[145],AA[214],MA[39]","""Rational Operator Replacement"",""Modification of Return Value"",""Add Annotation"",""Method Addition""",479
+JacksonDatabind,91,CI,CI,"CI[36],MRV[145],MCR[2]","""Condition Insertion"",""Return Value Modification"",""MethodCallReplacement""",480
+JacksonDatabind,92,Others,MA,MA[98],"""Method Addition"",""Modification Return Value""",481
+JacksonDatabind,93,ROR,ROR,ROR[70],"""Rational Operator Replacement""",482
+JacksonDatabind,94,Others,CR,"CR[6],EII[?],CI[36]","""Constant Addition/Replacement"",""Else If Insertion"",""Condition Insertion""",483
+JacksonDatabind,95,MCR,MCR,"MCR[2],MRV[145]","""MethodCallReplacemet"",""Modification Of Return Value""",484
+JacksonDatabind,96,MCR,MCR,MCR[2],"""MethodCallReplacemet""",485
+JacksonDatabind,97,MCR,MCR,MCR[2],"""MethodCallReplacemet""",486
+JacksonDatabind,98,Others,Others,no,no,487
+JacksonDatabind,99,MCR,MCR,MCR[2],"""MethodCallReplacement""",488
+JacksonDatabind,100,CI,CI,"CI[36],MRV[145]","""Condition Insertion"",""Modification of Return Value""",489
+JacksonDatabind,101,Others,SD,"SD[28],CI[36],MCR[2]","""Statement Deletion"", ""Condition Insertion"",""MethodCallReplacement""",490
+JacksonDatabind,102,Others,DOC,DOC[16],"""Removal of Condition Statement""",491
+JacksonDatabind,103,Others,Others,no,no,492
+JacksonDatabind,104,Others,Others,no,no,493
+JacksonDatabind,105,CI,CI,"CI[36],MA[39]","""Condition Insertion"",""Method Addition""",494
+JacksonDatabind,106,CI,CI,CI[36] ,"""Condition Insertion"", ",495
+JacksonDatabind,107,MRV,MRV,MRV[145],"""Modification of Return Value""",496
+JacksonDatabind,108,Others,Others,no,no,497
+JacksonDatabind,109,Others,Others,no,no,498
+JacksonDatabind,110,VA,VA,"VA[200],ROR[70],MCR[2]","""Variable Assignment"",""Retional Operator Replacement"",""MethodCallReplacement""",499
+JacksonDatabind,111,CI,CI,"CI[36],MRV[145]","""Condition Insertion"",""Modification of Return Value""",500
+JacksonDatabind,112,MCR,MCR,"MCR[2],EII[?]","""MethodcallReplacemet"",""Else If Insertion""",501
+JacksonDatabind,121,MRV,MRV,MRV[145],"""Modification Of Return Value""",502
+JacksonDatabind,122,Others,MA,"MA[39],MRV[145]","""Method Addition"",""Modification Return Value""",503
+JacksonDatabind,123,CI,CI,CI[36] ,"""Condition Insertion"", ",504
+JacksonDatabind,124,MRV,MRV,"MRV[145],DOM[?]","""MethodCallReplacemet"", ""Deletion Of Method""",505
+JacksonDatabind,125,Others,SM,SM[30],"""String Modification""",506
+JacksonDatabind,126,Others,AIS,"AIS[218],DIS[?],DTR[5],VA[200],MPM[93],MCR[2]","""Add import Statement"", ""DataTypeReplacement"",""Variable Assignemnt"",""Method Parameter Modification"",""MethodCallReplacement"",""Delete Import Statement""",507
+JacksonDatabind,128,LOR,LOR,LOR[58],"""Logical Operator Replacement""",508
+JacksonDatabind,129,MRV,MRV,"MRV[145],DIS[?]","""Modification of Return Value"", ""Deletion Of Import Statement""",509
+JacksonDatabind,131,Others,AA,"AA[214],AIS[218]","""Add Annotation"", ""Add Import Statement""",510
+JacksonDatabind,132,CI,CI,CI[36] ,"""Condition Insertion"", ",511
+JacksonDatabind,133,Others,Others,no,no,512
+JacksonDatabind,135,CI,CI,"CI[36],MRV[145]","""condition Insertion"",""Modification Of Return Value""",513
+JacksonDatabind,136,MRV,MRV,MRV[145],"""Return Value Modification""",514
+JacksonDatabind,137,CI,CI,"CI[36],MCR[2],MRV[145]","""Condition Insertion"",""MethodCallReplacement"",""Modification of Return Value""",515
+JacksonDatabind,138,CI,CI,"CI[36],MRV[145]","""Condition Insertion"",""Modification of Return Value""",516
+JacksonDatabind,139,Others,MOCS,MOCS[20],"""Modification OF Condition""",517
+JacksonDatabind,140,Others,CR,CR[6],"""Constant Addition""",518
+JacksonDatabind,141,MCR,MCR,MCR[2],"""MethodCallReplacement""",519
+JacksonDatabind,142,MCR,MCR,"MCR[2],MRV[145],AA[214]",""" variable assignment"",""Add Annotation""",520
+JacksonDatabind,143,MCR,MCR,"MCR[2],LOR[58]","""Logical Operator Replacement""",521
+JacksonDatabind,144,LOR,LOR,LOR[58],"""Logical Operator Replacement""",522
+JacksonDatabind,145,ROR,ROR,ROR[70],"""Rational Operator Replacement""",523
+JacksonDatabind,146,Others,DTR,DTR[5],"""DataTypeReplacement""",524
+JacksonDatabind,147,ROR,ROR,ROR[70],"""Rational Operator Replacement""",525
+JacksonDatabind,148,MCR,MCR,"MCR[2],SD[28]","""MethodCallReplacemet"", ""Statement Deletion""",526
+JacksonDatabind,149,Others,SM,SM[30],"""String Concatination Modification""",527
+JacksonDatabind,150,LOR,LOR,LOR[58],"""Logical Operator Replacement""",528
+JacksonDatabind,151,CI,CI,CI[36] ,"""Condition Insertion""",529
+JacksonXml,1,CI,CI,"CI[36],MCR[2],VA[200],MRV[145]","""Condition Insertion"", ""MethodCallReplacement"",""Variable Assignment"",""Modification of Return value""",530
+JacksonXml,2,Others,Others,no,no,531
+JacksonXml,3,Others,SD,"SD[28],MCR[2]","""Statement Deletion"",""MethodCallReplacement""",532
+JacksonXml,4,VA,VA,"VA[200],CI[36],MCR[2]","""Variable Assignment"",Condition Insertion"",""MethodCallReplacement""",533
+JacksonXml,5,MCR,MCR,MCR[2],"""MethodCallReplacement""",534
+JacksonXml,6,Others,Others,no,no,535
+JxPath,1,MRV,MRV,"MRV[145],LOR[58]","""Return Value Modification"",""Logical operator Replacement""",536
+JxPath,2,Others,AIS,"AIS[218],CI[36],MRV[145]"," ""Add Import Statement"",""Condition Insertion"",""Modification Of Return Value""",537
+JxPath,3,Others,Others,no,no,538
+JxPath,4,Others,Others,no,no,539
+JxPath,5,MRV,MRV,MRV[145],"""Return Value Modification""",540
+JxPath,6,CI,CI,"CI[36],MCR[2]","""Condition Insertion"",""MethodCallReplacement""",541
+JxPath,7,Others,Others,no,no,542
+JxPath,8,CI,CI,CI[36] ,"""Condition Insertion""",543
+JxPath,9,Others,Others,no,no,544
+JxPath,10,MRV,MRV,MRV[145],"""Return Value Modification""",545
+JxPath,11,Others,Others,no,no,546
+JxPath,12,MRV,MRV,"MRV[145],ROR[70]","""Return Value Modification"",""Relation operator Replacement""",547
+JxPath,13,Others,Others,no,no,548
+JxPath,14,CI,CI,"CI[36],LOR[58]","""Condition Insertion"",""Logical Operator Replacement""",549
+JxPath,15,Others,AIS,"AIS[218],SD[28],MCR[2],FLI[205]","""Add import statement"",""Statement Deletion"",""MethodCallReplacement"",""For Loop Insertion""",550
+JxPath,16,MRV,MRV,MRV[145],"""Return Value Modification""",551
+JxPath,17,Others,BCO,"BCO[17],LOR[58],MRV[145],DOC[16]","""Boundary Condition Operator"",""Logical Operator Replacement"",""Modification of Return Value"",""Deletion of Condition""",552
+JxPath,18,Others,Others,no,no,553
+JxPath,19,Others,Others,no,no,554
+JxPath,20,Others,Others,no,no,555
+JxPath,21,MRV,MRV,"MRV[145],MCR[2]","""Return Value Modification"",""MethodCallReplacement""",556
+JxPath,22,MCR,MCR,"MCR[2],MRV[145],CFSM[27]","""MethodCallReplacement"",""Return Value Modification"",""Control Flow Statement Mutant""",557
+Lang,1,Others,Others,no,no,558
+Lang,3,CI,CI,"CI[36],VA[200],VR[26]","""Variable Assignment"",Condition Insertion"",""Variable initialzation""",559
+Lang,4,Others,DTR,"DTR[5],MCR[2]","""DataTypeReplacement"",""MethodCallReplacement""",560
+Lang,5,Others,Others,no,no,561
+Lang,6,Others,MPM,MPM[93],"""Method Parameters Modification""",562
+Lang,7,CI,CI,"CI[36],DOC[16]","""Deletion of Condition"",""Condition Insertion""",563
+Lang,8,Others,SD,"SD[28],MCR[2]","""Statement Deletion"",""MethodCallReplacement""",564
+Lang,9,CI,CI,CI[36],"""Condition Insertion""",565
+Lang,10,Others,SD,"SD[28],DOC[16]","""Statement Deletion"",""deletion of Condition""",566
+Lang,11,Others,EII,EII[?],"""Else If Insertion""",567
+Lang,12,CI,CI,CI[36] ,"""Condition Insertion""",568
+Lang,13,Others,Others,no,no,569
+Lang,14,CI,CI,"CI[36],MRV[145]","""Condition Insertion"",""Return Value Modification""",570
+Lang,15,MCR,MCR,"MCR[2],LOR[58]","""Return Value Modification"",""Logical operator Replacement""",571
+Lang,16,LOR,LOR,LOR[58],"""Logical Operator Replacement""",572
+Lang,17,VA,VA,"VA[200],COR[10]CFSM[27],DOC[16]","""Variable Assignment"",""Conditional Operator Insertion"",""Condtyrol Flow Statement"",""Doction of Condition""",573
+Lang,18,ROR,ROR,"ROR[70],MCR[2]","""Rational Operator Replacement"",""MethodCallReplacement""",574
+Lang,19,Others,CR,"CR[6],CI[36],MCR[2],ROR[70]","""Constant Addition"",""Condition Insertion"",""MethodCallReplacement"",""Retional Operator Replacement""",575
+Lang,20,MCR,MCR,MCR[2],"""MethodCallReplacemet""",576
+Lang,21,MCR,MCR,MCR[2],"""MethodCallReplacemet""",577
+Lang,22,CI,CI,"CI[36],ROR[70]","""Condition Insertion"",""Rational Operator Replacement""",578
+Lang,23,Others,Others,no,no,579
+Lang,24,MRV,MRV,"MRV[145],ROR[70]","""Return Value Modification"",""Relation operator Replacement""",580
+Lang,25,Others,DTR,DTR[5],"""DataTypeReplacement""",581
+Lang,26,MCR,MCR,MCR[2],"""MethodCallReplacemet""",582
+Lang,27,LOR,LOR,"LOR[58],CI[36]","""Logical Operator Replacement"",""Conditional Insertion""",583
+Lang,28,CI,CI,CI[36] ,"""Condition Insertion""",584
+Lang,29,Others,DTR,DTR[5],"""DataTypeReplacement""",585
+Lang,30,Others,Others,no,no,586
+Lang,31,VA,VA,"VA[200],BCO[17]","""Variable Assignment"",""Boundary Condition Operator""",587
+Lang,32,MCR,MCR,"MCR[2],MRV[145],MA[39],CI[36]","""MethodCallReplacemet"",""Modification Returen Value"",""Method Addition"",""Condition Insertion""",588
+Lang,33,LOR,LOR,LOR[58],"""Logical Operator Replacement""",589
+Lang,35,Others,SI,SI[77],"""Statement Insertion""",590
+Lang,36,LOR,LOR,"LOR[58],CI[36]","""Logical Operator Replacement"",""Conditional Insertion""",591
+Lang,37,Others,EI,EI[38],"""Exception Insertion""",592
+Lang,38,MCR,MCR,MCR[2],"""MethodCallReplacement""",593
+Lang,39,CI,CI,CI[36]  ,"""Condition Insertion""",594
+Lang,40,VA,VA,"VA[200],MCR[2],BCO[17],CI[36]","""Variable Assignment"",""Boundary Condition Operator"",""MethodCallReplacement"",""Condition Insertion""",595
+Lang,41,Others,Others,no,no,596
+Lang,42,Others,DTR,"DTR[5],CI[36],MCR[2]","""DataTypeReplacement"",""Condition Insertion"",""MethodCallReplacement""",597
+Lang,43,Others,MA,MA[39],"""Method Addition""",598
+Lang,44,CI,CI,CI[36] ,"""Condition Insertion""",599
+Lang,45,CI,CI,CI[36] ,"""Condition Insertion""",600
+Lang,46,MCR,MCR,"MCR[2],MRV[145],MPM[93],CI[36]","""MethodCallReplacement"",""Modification Return Vlaue"",""Method Parameters Modification"",""Condition Insertion""",601
+Lang,47,CI,CI,CI[36] ,"""Condition Insertion""",602
+Lang,48,CI,CI,CI[36] ,"""Condition Insertion""",603
+Lang,49,CI,CI,CI[36] ,"""Condition Insertion""",604
+Lang,50,LOR,LOR,"LOR[58],MCR[2],DOC[16],SR[183]","""Logical Operator Replacement"" ,""Removal of Condition Statement"",""MethodCallReplacement"",""Reordering Statement""",605
+Lang,51,MRV,MRV,MRV[145],"""Return Value Modification""",606
+Lang,52,CI,CI,"CI[?],CFSM[?] ","""Case Insertion"",""Condtrol Flow statement Mutant""",607
+Lang,53,Others,BR,BR[140,"""Brace Reordering""",608
+Lang,54,CI,CI,CI[36] ,"""Condition Insertion""",609
+Lang,55,CI,CI,CI[36] ,"""Condition Insertion""",610
+Lang,56,Others,VR,"VR[26],MA[39]","""Variable Intialzation"",""Method Addition""",611
+Lang,57,MRV,MRV,MRV[145],"""Modification Return Value""",612
+Lang,58,LOR,LOR,LOR[58],"""Logical Operator Replacement"" ",613
+Lang,59,Others,MPM,MPM[93],"""Method Parameter Modification""",614
+Lang,60,Others,BCO,BCO[17],"""Boundary Condition Operator""",615
+Lang,61,VA,VA,"VA[200],CR[6]","""Variable Assignment"",""Constant Replacement""",616
+Lang,62,CI,CI,"CI[36],CFSM[27]","""Condition Insertion"",""Control Flow Statement Mutant""",617
+Lang,63,Others,Others,no,no,618
+Lang,64,Others,Others,no,no,619
+Lang,65,Others,Others,no,no,620
+Lang,69,Others,SI,SI[77],"""Statement Insertion""",621
+Lang,71,Others,SR,SR[183],"""Reordering Statement""",622
+Lang,73,CI,CI,"CI[36],CFSM[27]","""Condition Insertion"",Control Flow Statement Mutant""",623
+Lang,76,MCR,MCR,"MCR[2],BCO[17]","""MethodCallReplacement"",""Boundary Condition Operator""",624
+Lang,80,CI,CI,CI[36] ,"""Condition Insertion""",625
+Lang,81,MCR,MCR,"MCR[2],VA[200],MPM[93]","""Variable Assignment"",""MethodCallReplacement"",""Method Parameter Modification""",626
+Lang,82,ROR,ROR,"ROR[70],CI[36]","""Rational Operator Replacement"" ,""Condition Insertion""",627
+Lang,83,CI,CI,CI[36],"""Condition Insertion""",628
+Lang,84,MRV,MRV,MRV[145],"""Modification Return Value""",629
+Math,1,CI,CI,CI[36] ,"""Condition Insrertion"" ",630
+Math,2,MRV,MRV,MRV[145],"""Modification Return Value""",631
+Math,3,CI,CI,CI[36] ,"""Condition Insertion""",632
+Math,4,CI,CI,CI[36] ,"""Condition Insertion""",633
+Math,5,MRV,MRV,MRV[145],"""Modification Return Value""",634
+Math,6,MCR,MCR,"MCR[2],SD[28],CI[36],","""MethodCallReplacement"".""Statement Deletion"",""Condition Insertion""",635
+Math,7,Others,FLI,"FLI[205],VA[200],DOC[16]","""For loop Insertion"",""Variable Assignment"",""Deletion of Condition""",636
+Math,8,MCR,MCR,"MCR[2],MPM[93]","""MethodCallReplacement"",""Method Parameter Modification""",637
+Math,9,MCR,MCR,MCR[2],"""MethodCallReplacemet""",638
+Math,10,MCR,MCR,MCR[2],"""MethodCallReplacement""",639
+Math,11,MRV,MRV,MRV[145],"""Modification Return Value""",640
+Math,12,Others,AIS,"AIS[218],MA[39],VA[200]","""Add Import Statement"",""Variable Assignment"",""Method Addition""",641
+Math,13,Others,Others,no,no,642
+Math,14,Others,Others,no,no,643
+Math,15,Others,MOCS,"MOCS[20],VA[200]","""Varaiable Assignment"",""Modifcation of Conditional Statement""",644
+Math,16,Others,Others,no,no,645
+Math,17,CI,CI,CI[36] ,"""Condition Insertion""",646
+Math,18,MCR,MCR,"MCR[2],MOCS[20],VA[200]","""MethodCallReplacement"",""Variable assignment"",""Modification of conditional Statement""",647
+Math,19,Others,Others,no,no,648
+Math,20,MRV,MRV,"MRV[145],ROR[70]","""Modification Return Value"",""Retional Operator Replacement""",649
+Math,21,Others,SD,"SD[28],VA[200],CI[36],MCR[2]","""Statement Deletion"",""Variable Assiganment"",""Condition Insertion"",""MethodCallReplacement""",650
+Math,22,MRV,MRV,MRV[145],"""Modification Return Value""",651
+Math,23,VA,VA,"VA[200],MCR[2],MRV[145]","""Variable Assignment"",""MethodCallReplacement"",""Modification Return Value""",652
+Math,24,MRV,MRV,MRV[145],"""Modification Return Value""",653
+Math,25,MCR,MCR,"MCR[2],CI[36]","""MethodCallReplacement"",""Condition Insertion""",654
+Math,26,Others,MOCS,"MOCS[20],ROR[70]","""Modification of Conditional Statement"",""Retional Operator Replacement""",655
+Math,27,MRV,MRV,MRV[145],"""Modification Return Value""",656
+Math,28,CI,CI,CI[36] ,"""Condition Insertion""",657
+Math,29,Others,Others,no,no,658
+Math,30,Others,DTR,DTR[5] ,"""DataTypeReplacement"" ",659
+Math,31,Others,SD,"SD[28],VA[200],CI[36]","""Statement Deletion"",""Variable Assiganment"",""Condition Insertion""",660
+Math,32,Others,MOCS,"MOCS[20],ROR[70]","""Modification of Conditional Statement"",""Retional Operator Replacement""",661
+Math,33,Others,MOCS,MOCS[20] ,"""Modification of Conditional Statement""",662
+Math,34,MRV,MRV,MRV[145],"""Modification Return Value""",663
+Math,35,MCR,MCR,MCR[2],"""MethodCallReplacemet""",664
+Math,36,Others,Others,no,no,665
+Math,37,Others,Others,no,no,666
+Math,38,MCR,MCR,"MCR[2],VA[200],CR[6]","""MethodCallReplacemet"",""Variable Assignment"",""Constant Replacement""",667
+Math,39,CI,CI,CI[36] ,"""Condition Insertion""",668
+Math,40,VA,VA,"VA[200],MCR[2] ","""Variable Assiganment"",""MethodCallReplacement""",669
+Math,41,Others,MOCS,MOCS[20,"""Modification Of Condition Statement""",670
+Math,42,CI,CI,CI[36] ,"""Condition Insertion""",671
+Math,43,ROR,ROR,ROR[70]  ,"""Rational Operator Replacement"" ",672
+Math,44,Others,SD,"SD[28],FLI205]","""Statement Deletion"",""For Loop Insertion""",673
+Math,45,VA,VA,"VA[200],CI[36]","""Variable Assignment"",""Condition Insertion""",674
+Math,46,MRV,MRV,MRV[145],"""Modification Return Value""",675
+Math,47,VA,VA,"VA[200],LOR[58],MRV[145],","""Variable Assignment"",""Logical Operator Replacement"",""Modification Return Value""",676
+Math,48,CI,CI,CI[36] ,"""Condition Insertion""",677
+Math,49,MCR,MCR,MCR[2],"""MethodCallReplacemet""",678
+Math,50,Others,DOC,DOC[16],"""Deletion Of Condition""",679
+Math,51,CI,CI,"CI[?],MCR[2],CFSM[27]","""Case Insertion"",""MethodCallReplacement"",""Control Flow statement Mutant""",680
+Math,52,VA,VA,"VA[200],MOCS[20],ROR[70]","""Variable Assignment"",""Modification of Conditional Statement"",""Rational Operator Replacment""",681
+Math,53,CI,CI,CI[36] ,"""Condition Insertion"" ",682
+Math,54,CI,CI,"CI[36],VA[200]","""Condition Insertion"",""Variable Assignment""",683
+Math,55,VA,VA,"VA[200],MCR[2],CI[36],MRV[145]","""Variable Assignment"",""MethodCallReplacement"",""Condition Insertion"",""Modification Return Value""",684
+Math,56,MCR,MCR,MCR[2],"""MethodCallReplacement""",685
+Math,57,Others,DTR,DTR[5] ,"""DataTypeReplacement"" ",686
+Math,58,MRV,MRV,MRV[145],"""Modification Return Value""",687
+Math,59,MRV,MRV,MRV[145],"""Modification Return Value""",688
+Math,60,CI,CI,CI[36] ,"""Condition insertion""",689
+Math,61,Others,AIS,"AIS[218]],MCR[2]","""Add Import Statement"",""MethodCallReplacement""",690
+Math,62,MCR,MCR,"MCR[2],MRV[145]","""MethodCallReplacement"",""Modification Return Value""",691
+Math,63,MRV,MRV,MRV[145],"""Modifcation Return Value""",692
+Math,64,VA,VA,"VA[200],FLI[205],MCR[2],CI[36],MPM[93]","""Varaible Assignment"",""For Loop Insertion"",""MethodCallReplacement"",""Condition Insertion"",""Method Parameter Modification""",693
+Math,65,MCR,MCR,"MCR[2],MRV[145]","""MethodCallReplacement"",""Modification Return Value""",694
+Math,66,MCR,MCR,"MCR[2],MRV[145],SD[28],MOCS[20],CI[36],WLI[205],MPM[93]","""MethodCallReplacement"",""Modification Return Value"",""Statement Deletion""",695
+Math,67,MRV,MRV,MRV[145],"""Modification Return Value""",696
+Math,68,MCR,MCR,"MCR[2],VA[200],MRV[145],CI[36]","""MethodCallReplacement"",""Variable assignment"",""Modification Return Value"",Condition Insertion""",697
+Math,69,MCR,MCR,MCR[2],"""MethodCallReplacement""",698
+Math,70,MRV,MRV,MRV[145],"""Modification Return Value""",699
+Math,71,MCR,MCR,"MCR[2],VR[26] ","""MethodCallReplacement"",""Variable Initiazation"" ",700
+Math,72,MCR,MCR,MCR[2],"""MethodCallReplacement""",701
+Math,73,CI,CI,"CI[36],MCR[2]","""Condition Insertion"",""MethodCallReplacement""",702
+Math,74,VA,VA,"VA[200],FLI[205],MCR[2]","""Variable Assignment"",""For Loop Insertion"",""MethodCallReplacement""",703
+Math,75,MRV,MRV,MRV[145],"""Modification Return Value""",704
+Math,76,MCR,MCR,"MCR[2],MOCS[20],CI[36]","""MethodCallReplacement"",""Modification of Conditional Statement"",""Condition Insertion""",705
+Math,77,MCR,MCR,"MCR[2],MD[?]","""MethodCallReplacement"",""Method Deletion""",706
+Math,78,Others,Others,no,no,707
+Math,79,Others,DTR,DTR[5] ,"""DataTypeReplacement"" ",708
+Math,80,MCR,MCR,MCR[2],"""MethodCallReplacement""",709
+Math,81,MCR,MCR,"MCR[2],MOCS[20],LOR[58],CI[36],CR[6]","""MethodCallReplacement"",""Mofication of Conditional Statement"",""Logical Operator Replacement"",""Condition Insertion"",""Constant Replacement""",710
+Math,82,ROR,ROR,ROR[70],"""Retional Operator Replacemete""",711
+Math,83,MCR,MCR,"MCR[2],CI[36]","""MethodCallReplacement"",""Condition Insertion""",712
+Math,84,MCR,MCR,"MCR[2],MRV[145],VA[200],CI[36],FLI[205]","""MethodCallReplacement"",""Modification Return Value"",""Variable Assignment"",""Condition Insertion"",""For Loop Insertion""",713
+Math,85,ROR,ROR,ROR[70],"""Retional Operator Replacement""",714
+Math,86,Others,DOC,"DOC[16],SD[28],CI[36]","""Deletion of Condition"",""Statement Deletion"",""Condition Insertion""",715
+Math,87,LOR,LOR,"LOR[58],CI[36]","""Logical Operator Replacement"",""Condition Insertion""",716
+Math,88,VA,VA,"VA[200],CI[36],MCR[2],DOC[16]","""Variable assignment"",""Condition Insertion"",""MethodCallReplacement"",""Deletion of Condition""",717
+Math,89,CI,CI,CI[36] ,"""Condition insertion""",718
+Math,90,MCR,MCR,"MCR[2],MA[39]","""MethodCallReplacement"",""Method Addition""",719
+Math,91,Others,DTR,"DTR[5],MCR[2]","""DataTypeReplacement"",""MethodCallReplacement""",720
+Math,92,Others,Others,no,no,721
+Math,93,CI,CI,"CI[36],MRV[145],MCR[2]","""condition Insertion"",""Modification Return Value"",""MethodCallReplacement""",722
+Math,94,LOR,LOR,LOR[58],"""Logical Operator Replacement""",723
+Math,95,Others,VR,"VR[26],CI[36]","""Variable Initialzation"",""Condition Insertion""",724
+Math,96,MCR,MCR,MCR[2],"""MethodCallReplacement""",725
+Math,97,ROR,ROR,"ROR[70],CI[36]","""Modification Of Condition Statement"",""Condition Insertion""",726
+Math,98,MCR,MCR,MCR[2],"""MethodCallReplacement""",727
+Math,99,CI,CI,CI[36] ,"""Condition Insertion""",728
+Math,100,MCR,MCR,MCR[2],"""MethodCallReplacement""",729
+Math,101,LOR,LOR,"LOR[58],CI[36]","""Logical Operator Replacement"",""Condition Insertion""",730
+Math,102,Others,Others,no,no,731
+Math,103,Others,EI,EI[38],"""Exception Insertion""",732
+Math,104,VA,VA,VA[200],"""Variable Assignment""",733
+Math,105,MRV,MRV,MRV[145],"""Modification Return Value""",734
+Math,106,CI,CI,CI[36] ,"""Condition Insertion""",735
+Mockito,1,Others,Others,no,no,736
+Mockito,2,Others,Others,no,no,737
+Mockito,3,Others,Others,no,no,738
+Mockito,4,MCR,MCR,"MCR[2],CI[36]","""MethodCallReplacement"",""Condition Insertion""",739
+Mockito,5,Others,EI,EI[38],"""Exception Insertion""",740
+Mockito,6,MRV,MRV,MRV[145],"""Modification Return Value""",741
+Mockito,7,MCR,MCR,MCR[2],"""MethodCallReplacement"" ",742
+Mockito,8,Others,EII,EII[?],"""Else If Insertion""",743
+Mockito,9,Others,AIS,"AIS[218],CI[36]","""Add Import Statement"",""Condition Insertion""",744
+Mockito,10,Others,AIS,"AIS[218],MCR[2],MA[39],MRV[145]","""Add Import Statement"",""MethodCallReplacement"" ",745
+Mockito,11,CI,CI,"CI[36],MRV[145]","""Condition Insertion"",""Modification Return Value"",""Method Addition""",746
+Mockito,12,CI,CI,"CI[36],MRV[145]","""Condition Insertion""",747
+Mockito,13,LOR,LOR,"LOR[58],MCR[2]","""Logical Operator Replacement"",""MethodCallReplacement""",748
+Mockito,14,Others,AIS,"AIS[218],CI[36],MCR[2]","""Add Import Statement"",""Condition Insertion"",""MethodCallReplacement""",749
+Mockito,15,Others,AIS,"AIS[218],CI[36]","""Add Import Statement"",""Condition Insertion""",750
+Mockito,16,MRV,MRV,"MRV[145],MPM[93],CI[36]","""Modification Return Value"",""Method Parameter Modification"",""Condition Insertion""",751
+Mockito,17,VA,VA,"VA[200],MCR[2],MRV[145],CI[36]","""Condition Insertion"",""Variable Assignment"",""MethodCallReplacement"",""Modification Return Value""",752
+Mockito,18,Others,EII,"EII[?],MRV[145]","""Else If Insertion"",""Modification Return Value"" ",753
+Mockito,19,Others,Others,no,no,754
+Mockito,20,MCR,MCR,"MCR[2],MPM[93]","""MethodCallReplacement"",""Method Parameter Modification""",755
+Mockito,21,Others,Others,no,no,756
+Mockito,22,CI,CI,"CI[36],MRV[145],LOR[58]","""Condition Insertion"",""Modification Return Value"",""Logical Operator Replacement""",757
+Mockito,23,Others,VR,"VR[26],MCR[2],MA[39],MRV[145]","""Variable intialzation"", ""MethodCallReplacement"",""Method Addition"",""Modification Of Return Value""",758
+Mockito,24,MRV,MRV,"MRV[145],ROR[70]","""Modification Return Value"",""Retional Operator Replacement""",759
+Mockito,25,Others,Others,no,no,760
+Mockito,26,Others,CR,CR[6],"""Constant Replacement Mutator.""",761
+Mockito,27,MCR,MCR,MCR[2],"""MethodCallReplacement""",762
+Mockito,28,MCR,MCR,MCR[2],"""MethodCallReplacement""",763
+Mockito,29,CI,CI,"CI[36],ROR[70]","""Condition Insertion"",""Rational Operator Replacement""",764
+Mockito,30,Others,MPM,"MPM[93],MCR[2]","""Method Parameter Modification"",""MethodCallReplacement""",765
+Mockito,31,Others,AIS,"AIS[218],MCR[2],MRV[145]","""Add Import statement"",""Modification Return Value"",""MethodCallReplacement""",766
+Mockito,32,Others,AIS,"AIS[218],MCR[2]","""Add Import statement"",""MethodCallReplacement""",767
+Mockito,33,Others,Others,no,no,768
+Mockito,34,LOR,LOR,LOR[58],"""Logical Operator Replacement""",769
+Mockito,35,MRV,MRV,MRV[145],"""Modification Return Value""",770
+Mockito,36,Others,AIS,"AIS[218],CI[36],MCR[2]","""Add Import Statement"",""Condition Insertion"",""MethodCallReplacement""",771
+Time,1,Others,Others,no,no,772
+Time,2,Others,MOCS,"MOCS[20],CI[36]","""Modification of Conditional Statement"",""Condition Insertion""",773
+Time,3,CI,CI,CI[36] ,"""Condition Insertion""",774
+Time,4,Others,MPM,MPM[93],"""Method Parameter Modification""",775
+Time,5,Others,Others,no,no,776
+Time,6,Others,Others,no,no,777
+Time,7,MCR,MCR,"MCR[2],SR[183]","""MethodCallReplacement"",""Statement Reordering""",778
+Time,8,MCR,MCR,"MCR[2],CI[36],MOCS[20],CR[6]","""MethodCallReplacement"",""Modification of Condtional Statement"",""Condition Insertion"",""Constant Replacement""",779
+Time,9,VA,VA,"VA[200],VR[26],CI[36],MCR[2]","""Variable Assignment"",""Variable initialzation"",""Condition Insertion"",""MethodCallReplacement""",780
+Time,10,VA,VA,"VA[200],MPM[93]","""Variable Assignment"",""Method Parameters Modification""",781
+Time,11,Others,MA,"MA[39],MRV[145],MCR[2]","""MethodCallReplacement"",""Method Addition"",""Modification Return Value""",782
+Time,12,MCR,MCR,"MCR[2],MRV[145],MPM[93],CI[36]","""MethodCallReplacement"",""Modification Return Value"",""Method Parameter Modification"",Condition Insertion""",783
+Time,13,MCR,MCR,"MCR[2],CI[36],VR[26]","""MethodCallReplacement"",""Variable Initalzation"",""Condition Insertion""",784
+Time,14,CI,CI,"CI[36],MCR[2],MRV[145],VR[26]","""Condition Insertion"",""MethodCallReplacement"",""Modification Of Return Value"",""Variable Initialzation""",785
+Time,15,CI,CI,"CI[36],MCR[2]","""MethodCallReplacement"",""Condition Insertion""",786
+Time,16,Others,MPM,MPM[93],"""Method Parameter Modification""",787
+Time,17,MCR,MCR,"MCR[2],CI[36],MRV[145],LOR[58],ROR[70]","""MethodCallReplacement"",""Condition Insertion"",""Modification Of Return Value""",788
+Time,18,Others,EI,EI[38],"""Exception Insertion""",789
+Time,19,ROR,ROR,ROR[70],"""Rational Operator Replacement""",790
+Time,20,Others,VR,"VR[26],CI[36]","""Variable Intialzation"",""Condition Insertion""",791
+Time,22,MCR,MCR,MCR[2],"""MethodCallReplacement""",792
+Time,23,MCR,MCR,"MCR[2],MPM[93]","""MethodCallReplacement"",""Modification Parameter Method""",793
+Time,24,CI,CI,CI[36] ,"""Condition Insertion""",794
+Time,25,Others,EII,EII[?],"""Else If Insertion""",795
+Time,26,Others,MA,"MA[38],MRV[145]","""Method Addition"",""Modification Return Value""",796
+Time,27,CI,CI,CI[36] ,"""Condition Insertion""",797
+Cli,1,Others,Others,no,no,798
+JacksonDatabind,152,MRV,MRV,MRV[145],"""MethodCallReplacement""",799
+JacksonDatabind,153,CI,CI,CI[36] ,"""Condition Insertion""",800
+JacksonDatabind,154,MCR,MCR,"MCR[2],CI[36]","""MethodCallReplacement"",""Condition Insertion""",801
+JacksonDatabind,155,MCR,MCR,"MCR[2],MPM[93]","""MethodCallReplacement"",""Method Parameter Modification""",802
+JacksonDatabind,156,Others,MOCS,MOCS[20] ,"""Modification of Conditional Statement""",803
+Collections,35,Others,SR,SR[183],"""Reordering Statement""",804
+Jsoup,1,MCR,MCR,MCR[],"""Method call replacement"" ",805
+Jsoup,10,Others,DOC,DOC[],Deletion of Condition,806
+Jsoup,15,Others,MOCS,MOCS[],Modification of condition statement,807
+Jsoup,17,Others,CR,CR[],Constant replacement,808
+Jsoup,18,Others,CR,CR[],Constant Insertion,809
+Jsoup,19,Others,DOC,DOC[],Deletion of Condition,810
+Jsoup,2,Others,SD,SD[],Statement deletion,811
+Jsoup,20,Others,DOC,DOC[],Condition deletion,812
+Jsoup,24,Others,SI,SI[],Statement insertion,813
+Jsoup,25,Others,VR,VR[],Variable replacement,814
+Jsoup,26,Others,DOC,DOC[],Deletion of Condition,815
+Jsoup,27,Others,DOC,"DOC[],MRV[]",Deletion of Condition and modification of return value,816
+Jsoup,29,MRV,MRV,"MRV[],DIS[]",Modification of return value and deletion of import statement,817
+Jsoup,32,MCR,MCR,MCR[],Method call replacement,818
+Jsoup,33,Others,SD,SD[],Statement deletion,819
+Jsoup,34,Others,MOCS,MOCS[],Modification of condition statement,820
+Jsoup,35,Others,SD,SD[],Stetement deletion,821
+Jsoup,37,MRV,MRV,MRV[] ,Modification of return value and deletion of import statement,822
+Jsoup,38,Others,DOC,DOC[],Condition deletion,823
+Jsoup,39,Others,SD,SD[],Stetement deletion,824
+Jsoup,40,Others,SI,SI[],Statement insertion,825
+Jsoup,41,MRV,MRV,MRV[],Modification of return value and deletion of import statement,826
+Jsoup,42,Others,MOCS,"MOCS[],CD[]",Condition deletion and Modification of condition,827
+Jsoup,43,Others,MOCS,MOCS[],Modifcication of condition statement,828
+Jsoup,45,Others,MOCS,MOCS[],Modification of condition statement,829
+Jsoup,46,Others,CR,CR[],Constant replacement,830
+Jsoup,47,Others,MOCS,MOCS[],Modification of condition statement,831
+Jsoup,49,Others,SI,SI[],Statement insertion,832
+Jsoup,5,Others,SI,"SI[],DOC[]","Statement insertion, deletion of condition",833
+Jsoup,51,Others,MOCS,MOCS[],Modification of condition statement,834
+Jsoup,54,Others,DOC,DOC[],Deletion of condition,835
+Jsoup,55,Others,SD,SD[],Statement deletion,836
