@@ -348,36 +348,9 @@ The patch is the original evidence artifact. The atomic-mapping record is the ma
 
 ---
 
-## 10. Suggested archive structure for the manual-mapping dataset
 
-```text
-manual_mapping/
-└── defects4j/
-    ├── patches/
-    │   ├── Cli-1/
-    │   │   ├── Cli-1.patch
-    │   │   └── metadata.txt
-    │   ├── Chart-3/
-    │   │   ├── Chart-3.patch
-    │   │   └── metadata.txt
-    │   └── Jsoup-17/
-    │       ├── Jsoup-17.patch
-    │       └── metadata.txt
-    ├── manual_operator_mapping.xlsx
-    └── patch_manifest.csv
-```
 
-The patch manifest should contain one row per bug and at least:
-
-```text
-benchmark,project,bug_id,buggy_tag,fixed_tag,
-buggy_commit,fixed_commit,patch_path,changed_files,
-extraction_status,manual_mapping_status
-```
-
----
-
-## 11. Reproducibility checks
+## 10. Reproducibility checks
 
 For each mapped bug, verify the following:
 
