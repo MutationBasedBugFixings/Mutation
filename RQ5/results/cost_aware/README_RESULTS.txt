@@ -91,7 +91,7 @@ JavaScript             0.50             random             39.80                
     Python             0.40 frequency_per_cost             74.74                10.60               31.00
     Python             0.40             random             26.76                14.09               31.00
     Python             0.50        cheap_first             24.23                26.00               38.00
-    Python             0.50   exact_cost_aware             87.11                14.00               39.00
+    Python             0.50   exact_cost_aware             87.63                14.00               39.00
     Python             0.50          frequency             79.38                10.40               39.00
     Python             0.50 frequency_per_cost             87.11                13.80               39.00
     Python             0.50             random             36.53                17.31               39.00
@@ -155,7 +155,7 @@ JavaScript exponential             0.50 frequency_per_cost          frequency   
     Python exponential             0.40   exact_cost_aware frequency_per_cost          194                          5.67       2.06        9.79
     Python exponential             0.40          frequency        cheap_first          194                         51.03      42.27       59.79
     Python exponential             0.40 frequency_per_cost          frequency          194                         -0.52      -5.15        4.12
-    Python exponential             0.50   exact_cost_aware          frequency          194                          7.73       2.06       13.40
-    Python exponential             0.50   exact_cost_aware frequency_per_cost          194                          0.00      -2.06        2.06
+    Python exponential             0.50   exact_cost_aware          frequency          194                          8.25       2.58       13.92
+    Python exponential             0.50   exact_cost_aware frequency_per_cost          194                          0.52      -1.55        3.09
     Python exponential             0.50          frequency        cheap_first          194                         55.15      45.88       63.92
     Python exponential             0.50 frequency_per_cost          frequency          194                          7.73       2.06       13.40
